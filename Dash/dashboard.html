@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Plataforma de Riders</title>
+<meta name="description" content="Dashboard financiero interactivo para gestión de plataforma de riders">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-card: rgba(17, 24, 39, 0.7);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.08);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+  --accent-cyan: #06b6d4;
+  --gradient-blue: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --gradient-emerald: linear-gradient(135deg, #10b981, #06b6d4);
+  --gradient-amber: linear-gradient(135deg, #f59e0b, #f97316);
+  --gradient-rose: linear-gradient(135deg, #f43f5e, #ec4899);
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --radius: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 50%, rgba(59,130,246,0.06) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(139,92,246,0.06) 0%, transparent 50%),
+              radial-gradient(circle at 50% 80%, rgba(16,185,129,0.04) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+}
+
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-logo {
+  font-weight: 800;
+  font-size: 1.25rem;
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo span { font-size: 1.5rem; }
+
+.nav-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-glass);
+  border-radius: 12px;
+  padding: 4px;
+  border: 1px solid var(--border);
+}
+
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-tab:hover { color: var(--text-primary); }
+
+.nav-tab.active {
+  background: var(--gradient-blue);
+  color: white;
+  box-shadow: 0 2px 12px rgba(59,130,246,0.4);
+}
+
+.btn-save {
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-emerald);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-save:hover {
+  background: var(--accent-emerald);
+  color: white;
+  box-shadow: 0 2px 16px rgba(16,185,129,0.4);
+}
+
+.btn-save.saved {
+  background: var(--accent-emerald);
+  color: white;
+}
+
+/* MAIN */
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 88px 2rem 2rem;
+}
+
+.section { display: none; animation: fadeIn 0.4s ease; }
+.section.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CARDS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.card.blue::before { background: var(--gradient-blue); }
+.card.emerald::before { background: var(--gradient-emerald); }
+.card.amber::before { background: var(--gradient-amber); }
+.card.rose::before { background: var(--gradient-rose); }
+
+.card:hover {
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.card-icon.blue { background: rgba(59,130,246,0.15); }
+.card-icon.emerald { background: rgba(16,185,129,0.15); }
+.card-icon.amber { background: rgba(245,158,11,0.15); }
+.card-icon.rose { background: rgba(244,63,94,0.15); }
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.card-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* FLOW DIAGRAM */
+.flow-container {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.flow-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flow-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.flow-node {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  min-width: 140px;
+  transition: all 0.3s ease;
+}
+
+.flow-node:hover {
+  border-color: var(--accent-blue);
+  transform: scale(1.03);
+}
+
+.flow-node-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.flow-node-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.flow-arrow {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+/* SLIDERS */
+.param-group {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.param-group-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.param-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.param-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  min-width: 180px;
+}
+
+.param-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.1);
+  outline: none;
+}
+
+.param-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.4);
+  transition: transform 0.2s;
+}
+
+.param-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+.param-value {
+  min-width: 80px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent-blue);
+}
+
+/* LAYERS */
+.layers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.layer-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.layer-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.layer-card.l1::before { background: var(--gradient-blue); }
+.layer-card.l2::before { background: var(--gradient-emerald); }
+.layer-card.l3::before { background: var(--gradient-amber); }
+
+.layer-number {
+  font-size: 3rem;
+  font-weight: 900;
+  opacity: 0.08;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.layer-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.layer-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.layer-stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.layer-stat-label { color: var(--text-secondary); }
+.layer-stat-value { font-weight: 700; }
+
+/* TABLE */
+.table-container {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.table-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-glass);
+}
+
+td {
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:hover td { background: var(--bg-glass); }
+
+.chart-container {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.section-sub {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 0 1rem; }
+  .nav-tabs { display: none; }
+  main { padding: 80px 1rem 1rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .flow-row { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
+  .param-row { flex-direction: column; align-items: flex-start; }
+  .param-slider { width: 100%; }
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent-emerald);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 24px rgba(16,185,129,0.4);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 200;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"><span>⚡</span> RiderDash</div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('resumen')" id="tab-resumen">📊 Resumen</button>
+      <button class="nav-tab" onclick="showSection('plataforma')" id="tab-plataforma">⚙️ Plataforma</button>
+      <button class="nav-tab" onclick="showSection('riders')" id="tab-riders">🏍️ Riders</button>
+      <button class="nav-tab" onclick="showSection('proyeccion')" id="tab-proyeccion">📈 Proyección</button>
+    </div>
+    <button class="btn-save" onclick="saveSettings()" id="btn-save">💾 Guardar ajustes</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- RESUMEN -->
+  <div class="section active" id="sec-resumen">
+    <h1 class="section-title">Resumen General</h1>
+    <p class="section-sub">Vista rápida del estado financiero de la plataforma</p>
+
+    <div class="cards-grid" id="summary-cards">
+      <div class="card blue">
+        <div class="card-header">
+          <span class="card-label">Ingresos Brutos / Mes</span>
+          <div class="card-icon blue">💰</div>
+        </div>
+        <div class="card-value" id="c-ingresos">$0</div>
+        <div class="card-sub">Total facturado por la plataforma</div>
+      </div>
+      <div class="card emerald">
+        <div class="card-header">
+          <span class="card-label">Ganancia Neta / Mes</span>
+          <div class="card-icon emerald">📈</div>
+        </div>
+        <div class="card-value" id="c-ganancia">$0</div>
+        <div class="card-sub">Después de pagos e incentivos</div>
+      </div>
+      <div class="card amber">
+        <div class="card-header">
+          <span class="card-label">Riders Activos</span>
+          <div class="card-icon amber">🏍️</div>
+        </div>
+        <div class="card-value" id="c-riders">0</div>
+        <div class="card-sub">Conductores en la plataforma</div>
+      </div>
+      <div class="card rose">
+        <div class="card-header">
+          <span class="card-label">Ingreso Promedio / Rider</span>
+          <div class="card-icon rose">👤</div>
+        </div>
+        <div class="card-value" id="c-ingRider">$0</div>
+        <div class="card-sub">Ingreso mensual por conductor</div>
+      </div>
+    </div>
+
+    <div class="flow-container">
+      <div class="flow-title">🔄 Flujo de Dinero</div>
+      <div class="flow-row">
+        <div class="flow-node">
+          <div class="flow-node-label">Cliente paga</div>
+          <div class="flow-node-value" id="f-cliente">$0</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node">
+          <div class="flow-node-label">Comisión plataforma</div>
+          <div class="flow-node-value" id="f-comision">$0</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node">
+          <div class="flow-node-label">Pago al rider</div>
+          <div class="flow-node-value" id="f-rider">$0</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node">
+          <div class="flow-node-label">Incentivos</div>
+          <div class="flow-node-value" id="f-incentivos">$0</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node" style="border-color: var(--accent-emerald);">
+          <div class="flow-node-label">Ganancia neta</div>
+          <div class="flow-node-value" style="color: var(--accent-emerald);" id="f-neta">$0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="chart-container">
+        <div class="chart-title">📊 Distribución de Ingresos</div>
+        <canvas id="chart-dist" height="250"></canvas>
+      </div>
+      <div class="chart-container">
+        <div class="chart-title">📈 Margen de Rentabilidad</div>
+        <canvas id="chart-margin" height="250"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLATAFORMA -->
+  <div class="section" id="sec-plataforma">
+    <h1 class="section-title">Parámetros de Plataforma</h1>
+    <p class="section-sub">Ajusta los parámetros operativos y observa el impacto en tiempo real</p>
+
+    <div class="param-group">
+      <div class="param-group-title">💵 Parámetros Financieros</div>
+      <div class="param-row">
+        <span class="param-label">Valor promedio por viaje ($)</span>
+        <input type="range" class="param-slider" id="p-valorViaje" min="3" max="30" step="0.5" value="8">
+        <span class="param-value" id="pv-valorViaje">$8.00</span>
+      </div>
+      <div class="param-row">
+        <span class="param-label">Comisión de plataforma (%)</span>
+        <input type="range" class="param-slider" id="p-comision" min="5" max="40" step="1" value="20">
+        <span class="param-value" id="pv-comision">20%</span>
+      </div>
+      <div class="param-row">
+        <span class="param-label">Costos operativos mensuales ($)</span>
+        <input type="range" class="param-slider" id="p-costos" min="500" max="20000" step="500" value="3000">
+        <span class="param-value" id="pv-costos">$3,000</span>
+      </div>
+    </div>
+
+    <div class="param-group">
+      <div class="param-group-title">🏍️ Parámetros de Riders</div>
+      <div class="param-row">
+        <span class="param-label">Número de riders activos</span>
+        <input type="range" class="param-slider" id="p-numRiders" min="10" max="1000" step="10" value="100">
+        <span class="param-value" id="pv-numRiders">100</span>
+      </div>
+      <div class="param-row">
+        <span class="param-label">Viajes promedio por rider / día</span>
+        <input type="range" class="param-slider" id="p-viajesDia" min="1" max="20" step="1" value="8">
+        <span class="param-value" id="pv-viajesDia">8</span>
+      </div>
+      <div class="param-row">
+        <span class="param-label">Días activos por mes</span>
+        <input type="range" class="param-slider" id="p-diasMes" min="15" max="30" step="1" value="25">
+        <span class="param-value" id="pv-diasMes">25</span>
+      </div>
+    </div>
+
+    <div class="param-group">
+      <div class="param-group-title">📈 Crecimiento</div>
+      <div class="param-row">
+        <span class="param-label">Tasa de crecimiento mensual (%)</span>
+        <input type="range" class="param-slider" id="p-crecimiento" min="0" max="30" step="1" value="10">
+        <span class="param-value" id="pv-crecimiento">10%</span>
+      </div>
+      <div class="param-row">
+        <span class="param-label">Tasa de retención de riders (%)</span>
+        <input type="range" class="param-slider" id="p-retencion" min="50" max="100" step="1" value="85">
+        <span class="param-value" id="pv-retencion">85%</span>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card blue">
+        <div class="card-header"><span class="card-label">Viajes Totales / Mes</span></div>
+        <div class="card-value" id="s-viajes">0</div>
+      </div>
+      <div class="card emerald">
+        <div class="card-header"><span class="card-label">Facturación Bruta</span></div>
+        <div class="card-value" id="s-facturacion">$0</div>
+      </div>
+      <div class="card amber">
+        <div class="card-header"><span class="card-label">Comisión Total</span></div>
+        <div class="card-value" id="s-comisionTotal">$0</div>
+      </div>
+      <div class="card rose">
+        <div class="card-header"><span class="card-label">Ganancia Operativa</span></div>
+        <div class="card-value" id="s-gananciaOp">$0</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIDERS -->
+  <div class="section" id="sec-riders">
+    <h1 class="section-title">Sistema de Incentivos para Riders</h1>
+    <p class="section-sub">3 capas de ingresos para maximizar retención y captación</p>
+
+    <div class="layers-grid">
+      <div class="layer-card l1">
+        <div class="layer-number">1</div>
+        <div class="layer-title">🏍️ Capa 1 — Ingresos Directos</div>
+        <div class="layer-desc">Ganancia por cada viaje completado. El rider recibe un porcentaje del valor del viaje después de la comisión de la plataforma.</div>
+        <div class="param-row" style="margin-top:1rem">
+          <span class="param-label">% para el rider</span>
+          <input type="range" class="param-slider" id="p-pctRider" min="50" max="95" step="1" value="80">
+          <span class="param-value" id="pv-pctRider">80%</span>
+        </div>
+        <div class="layer-stat">
+          <span class="layer-stat-label">Ingreso por viaje</span>
+          <span class="layer-stat-value" id="l1-porViaje">$0</span>
+        </div>
+        <div class="layer-stat">
+          <span class="layer-stat-label">Ingreso diario estimado</span>
+          <span class="layer-stat-value" id="l1-diario">$0</span>
+        </div>
+        <div class="layer-stat">
+          <span class="layer-stat-label">Ingreso mensual estimado</span>
+          <span class="layer-stat-value" id="l1-mensual">$0</span>
+        </div>
+      </div>
+
+      <div class="layer-card l2">
+        <div class="layer-number">2</div>
+        <div class="layer-title">🤝 Capa 2 — Bonos por Referidos</div>
+        <div class="layer-desc">Bono único por cada nuevo rider referido que complete un mínimo de viajes en su primer mes.</div>
+        <div class="param-row" style="margin-top:1rem">
+          <span class="param-label">Bono por referido ($)</span>
+          <input type="range" class="param-slider" id="p-bonoRef" min="5" max="100" step="5" value="25">
+          <span class="param-value" id="pv-bonoRef">$25</span>
+        </div>
+        <div class="param-row">
+          <span class="param-label">Referidos promedio / rider / mes</span>
+          <input type="range" class="param-slider" id="p-refsXmes" min="0" max="5" step="0.5" value="1">
+          <span class="param-value" id="pv-refsXmes">1.0</span>
+        </div>
+        <div class="layer-stat">
+          <span class="layer-stat-label">Ingreso por referidos / mes</span>
+          <span class="layer-stat-value" id="l2-mensual">$0</span>
+        </div>
+        <div class="layer-stat">
+          <span class="layer-stat-label">Costo total referidos / plataforma</span>
+          <span class="layer-stat-value" id="l2-costoPlat">$0</span>
+        </div>
+      </div>
+
+      <div class="layer-card l3">
+        <div class="layer-number">3</div>
+        <div class="layer-title">💎 Capa 3 — Ingreso Residual</div>
+        <div class="layer-desc">Porcentaje sobre la actividad de riders referidos. Ingreso pasivo continuo mientras los referidos permanezcan activos.</div>
+        <div class="param-row" style="margin-top:1rem">
+          <span class="param-label">% residual sobre referidos</span>
+          <input type="range" class="param-slider" id="p-pctResidual" min="0" max="10" step="0.5" value="3">
+          <span class="param-value" id="pv-pctResidual">3.0%</span>
+        </div>
+        <div class="param-row">
+          <span class="param-label">Referidos activos acumulados</span>
+          <input type="range" class="param-slider" id="p-refsActivos" min="0" max="20" step="1" value="5">
+          <span class="param-value" id="pv-refsActivos">5</span>
+        </div>
+        <div class="layer-stat">
+          <span class="layer-stat-label">Ingreso residual / mes</span>
+          <span class="layer-stat-value" id="l3-mensual">$0</span>
+        </div>
+        <div class="layer-stat">
+          <span class="layer-stat-label">Impacto en margen plataforma</span>
+          <span class="layer-stat-value" id="l3-impacto">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card blue">
+        <div class="card-header"><span class="card-label">Ingreso Total Rider / Mes</span></div>
+        <div class="card-value" id="r-totalRider">$0</div>
+        <div class="card-sub">Capa 1 + Capa 2 + Capa 3</div>
+      </div>
+      <div class="card emerald">
+        <div class="card-header"><span class="card-label">Costo Total Incentivos</span></div>
+        <div class="card-value" id="r-costoInc">$0</div>
+        <div class="card-sub">Gasto mensual de la plataforma en incentivos</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROYECCION -->
+  <div class="section" id="sec-proyeccion">
+    <h1 class="section-title">Proyección a 12 Meses</h1>
+    <p class="section-sub">Crecimiento proyectado con captación creciente e ingreso residual</p>
+
+    <div class="cards-grid">
+      <div class="chart-container" style="grid-column: 1 / -1;">
+        <div class="chart-title">📈 Proyección de Ingresos y Riders</div>
+        <canvas id="chart-proyeccion" height="100"></canvas>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <div class="table-header">📋 Detalle Mes a Mes</div>
+      <div style="overflow-x: auto;">
+        <table id="tabla-proyeccion">
+          <thead>
+            <tr>
+              <th>Mes</th>
+              <th>Riders</th>
+              <th>Viajes</th>
+              <th>Facturación</th>
+              <th>Comisión Plat.</th>
+              <th>Incentivos</th>
+              <th>Ganancia Neta</th>
+              <th>Ing. Rider Prom.</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-proyeccion"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="toast" id="toast">✅ Ajustes guardados correctamente</div>
+
+<script>
+// ===== PARAMS =====
+const paramIds = [
+  'p-valorViaje','p-comision','p-costos','p-numRiders','p-viajesDia','p-diasMes',
+  'p-crecimiento','p-retencion','p-pctRider','p-bonoRef','p-refsXmes',
+  'p-pctResidual','p-refsActivos'
+];
+
+function getParams() {
+  return {
+    valorViaje: parseFloat(el('p-valorViaje').value),
+    comisionPct: parseFloat(el('p-comision').value) / 100,
+    costosOp: parseFloat(el('p-costos').value),
+    numRiders: parseInt(el('p-numRiders').value),
+    viajesDia: parseInt(el('p-viajesDia').value),
+    diasMes: parseInt(el('p-diasMes').value),
+    crecimiento: parseFloat(el('p-crecimiento').value) / 100,
+    retencion: parseFloat(el('p-retencion').value) / 100,
+    pctRider: parseFloat(el('p-pctRider').value) / 100,
+    bonoRef: parseFloat(el('p-bonoRef').value),
+    refsXmes: parseFloat(el('p-refsXmes').value),
+    pctResidual: parseFloat(el('p-pctResidual').value) / 100,
+    refsActivos: parseInt(el('p-refsActivos').value),
+  };
+}
+
+function el(id) { return document.getElementById(id); }
+function fmt(n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }); }
+function fmt2(n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+function fmtN(n) { return n.toLocaleString('en-US'); }
+
+// ===== NAVIGATION =====
+function showSection(name) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  el('sec-' + name).classList.add('active');
+  el('tab-' + name).classList.add('active');
+  if (name === 'proyeccion') updateProjectionChart();
+}
+
+// ===== UPDATE DISPLAY VALUES =====
+function updateSliderDisplays() {
+  const p = getParams();
+  el('pv-valorViaje').textContent = fmt2(p.valorViaje);
+  el('pv-comision').textContent = Math.round(p.comisionPct * 100) + '%';
+  el('pv-costos').textContent = fmt(p.costosOp);
+  el('pv-numRiders').textContent = fmtN(p.numRiders);
+  el('pv-viajesDia').textContent = p.viajesDia;
+  el('pv-diasMes').textContent = p.diasMes;
+  el('pv-crecimiento').textContent = Math.round(p.crecimiento * 100) + '%';
+  el('pv-retencion').textContent = Math.round(p.retencion * 100) + '%';
+  el('pv-pctRider').textContent = Math.round(p.pctRider * 100) + '%';
+  el('pv-bonoRef').textContent = fmt(p.bonoRef);
+  el('pv-refsXmes').textContent = p.refsXmes.toFixed(1);
+  el('pv-pctResidual').textContent = (p.pctResidual * 100).toFixed(1) + '%';
+  el('pv-refsActivos').textContent = p.refsActivos;
+}
+
+// ===== CALCULATE =====
+function calculate() {
+  const p = getParams();
+
+  const viajesMes = p.numRiders * p.viajesDia * p.diasMes;
+  const facturacionBruta = viajesMes * p.valorViaje;
+  const comisionTotal = facturacionBruta * p.comisionPct;
+  const pagoRiders = facturacionBruta * (1 - p.comisionPct);
+
+  // Layer 1
+  const l1PorViaje = p.valorViaje * (1 - p.comisionPct) * p.pctRider;
+  const l1Diario = l1PorViaje * p.viajesDia;
+  const l1Mensual = l1Diario * p.diasMes;
+
+  // Layer 2
+  const l2Mensual = p.bonoRef * p.refsXmes;
+  const l2CostoPlat = l2Mensual * p.numRiders;
+
+  // Layer 3
+  const refGananciaMes = p.viajesDia * p.diasMes * p.valorViaje * (1 - p.comisionPct);
+  const l3Mensual = p.pctResidual * refGananciaMes * p.refsActivos;
+  const l3CostoPlat = l3Mensual * p.numRiders;
+  const l3Impacto = comisionTotal > 0 ? (l3CostoPlat / comisionTotal * 100) : 0;
+
+  const totalIncentivos = l2CostoPlat + l3CostoPlat;
+  const totalRider = l1Mensual + l2Mensual + l3Mensual;
+  const gananciaNeta = comisionTotal - p.costosOp - totalIncentivos;
+
+  // Summary cards
+  el('c-ingresos').textContent = fmt(facturacionBruta);
+  el('c-ganancia').textContent = fmt(gananciaNeta);
+  el('c-ganancia').style.color = gananciaNeta >= 0 ? 'var(--accent-emerald)' : 'var(--accent-rose)';
+  el('c-riders').textContent = fmtN(p.numRiders);
+  el('c-ingRider').textContent = fmt(totalRider);
+
+  // Flow
+  el('f-cliente').textContent = fmt(facturacionBruta);
+  el('f-comision').textContent = fmt(comisionTotal);
+  el('f-rider').textContent = fmt(pagoRiders);
+  el('f-incentivos').textContent = fmt(totalIncentivos);
+  el('f-neta').textContent = fmt(gananciaNeta);
+
+  // Platform scenario
+  el('s-viajes').textContent = fmtN(viajesMes);
+  el('s-facturacion').textContent = fmt(facturacionBruta);
+  el('s-comisionTotal').textContent = fmt(comisionTotal);
+  el('s-gananciaOp').textContent = fmt(gananciaNeta);
+
+  // Riders layers
+  el('l1-porViaje').textContent = fmt2(l1PorViaje);
+  el('l1-diario').textContent = fmt2(l1Diario);
+  el('l1-mensual').textContent = fmt(l1Mensual);
+  el('l2-mensual').textContent = fmt(l2Mensual);
+  el('l2-costoPlat').textContent = fmt(l2CostoPlat);
+  el('l3-mensual').textContent = fmt(l3Mensual);
+  el('l3-impacto').textContent = l3Impacto.toFixed(1) + '%';
+  el('r-totalRider').textContent = fmt(totalRider);
+  el('r-costoInc').textContent = fmt(totalIncentivos);
+
+  // Charts
+  updateDistChart(pagoRiders, comisionTotal - p.costosOp - totalIncentivos, totalIncentivos, p.costosOp);
+  updateMarginChart(comisionTotal, p.costosOp, totalIncentivos);
+  updateProjectionTable(p);
+}
+
+// ===== CHARTS =====
+let distChart, marginChart, projChart;
+
+function updateDistChart(riders, ganancia, incentivos, costos) {
+  const ctx = el('chart-dist').getContext('2d');
+  const data = [Math.max(0, riders), Math.max(0, ganancia), Math.max(0, incentivos), Math.max(0, costos)];
+  if (distChart) { distChart.data.datasets[0].data = data; distChart.update(); return; }
+  distChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Pago Riders', 'Ganancia Neta', 'Incentivos', 'Costos Op.'],
+      datasets: [{ data, backgroundColor: ['#3b82f6','#10b981','#f59e0b','#f43f5e'], borderWidth: 0, borderRadius: 4 }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom', labels: { color: '#94a3b8', padding: 16, font: { family: 'Inter' } } }
+      },
+      cutout: '65%'
+    }
+  });
+}
+
+function updateMarginChart(comision, costos, incentivos) {
+  const ctx = el('chart-margin').getContext('2d');
+  const neta = comision - costos - incentivos;
+  const data = [comision, costos, incentivos, Math.max(0, neta)];
+  if (marginChart) { marginChart.data.datasets[0].data = data; marginChart.update(); return; }
+  marginChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Comisión', 'Costos', 'Incentivos', 'Neta'],
+      datasets: [{ data, backgroundColor: ['#3b82f6','#f43f5e','#f59e0b','#10b981'], borderRadius: 8, borderSkipped: false }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: '#94a3b8', font: { family: 'Inter' } }, grid: { display: false } },
+        y: { ticks: { color: '#64748b', font: { family: 'Inter' }, callback: v => '$' + (v/1000).toFixed(0) + 'k' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+      }
+    }
+  });
+}
+
+function updateProjectionChart() {
+  const p = getParams();
+  const ctx = el('chart-proyeccion').getContext('2d');
+  const labels = [], ridersData = [], ingresos = [], ganancias = [];
+  let r = p.numRiders;
+  for (let m = 1; m <= 12; m++) {
+    labels.push('Mes ' + m);
+    ridersData.push(Math.round(r));
+    const v = r * p.viajesDia * p.diasMes;
+    const fac = v * p.valorViaje;
+    const com = fac * p.comisionPct;
+    const l2c = p.bonoRef * p.refsXmes * r;
+    const refG = p.viajesDia * p.diasMes * p.valorViaje * (1 - p.comisionPct);
+    const l3c = p.pctResidual * refG * Math.min(p.refsActivos * m / 6, p.refsActivos) * r;
+    const net = com - p.costosOp - l2c - l3c;
+    ingresos.push(Math.round(fac));
+    ganancias.push(Math.round(net));
+    r = Math.round(r * (1 + p.crecimiento) * p.retencion + r * p.refsXmes * p.crecimiento);
+    r = Math.min(r, 100000);
+  }
+  if (projChart) { projChart.destroy(); }
+  projChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Facturación', data: ingresos, borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)', fill: true, tension: 0.4, borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#3b82f6', yAxisID: 'y' },
+        { label: 'Ganancia Neta', data: ganancias, borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)', fill: true, tension: 0.4, borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#10b981', yAxisID: 'y' },
+        { label: 'Riders', data: ridersData, borderColor: '#f59e0b', borderDash: [5,5], tension: 0.4, borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#f59e0b', yAxisID: 'y1' }
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { labels: { color: '#94a3b8', font: { family: 'Inter' }, padding: 20 } } },
+      scales: {
+        x: { ticks: { color: '#94a3b8', font: { family: 'Inter' } }, grid: { color: 'rgba(255,255,255,0.05)' } },
+        y: { position: 'left', ticks: { color: '#64748b', font: { family: 'Inter' }, callback: v => '$' + (v/1000).toFixed(0) + 'k' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+        y1: { position: 'right', ticks: { color: '#f59e0b', font: { family: 'Inter' } }, grid: { display: false } }
+      }
+    }
+  });
+}
+
+function updateProjectionTable(p) {
+  let r = p.numRiders;
+  let html = '';
+  for (let m = 1; m <= 12; m++) {
+    const v = r * p.viajesDia * p.diasMes;
+    const fac = v * p.valorViaje;
+    const com = fac * p.comisionPct;
+    const l1m = p.valorViaje * (1 - p.comisionPct) * p.pctRider * p.viajesDia * p.diasMes;
+    const l2m = p.bonoRef * p.refsXmes;
+    const refG = p.viajesDia * p.diasMes * p.valorViaje * (1 - p.comisionPct);
+    const refsAcum = Math.min(p.refsActivos * m / 6, p.refsActivos);
+    const l3m = p.pctResidual * refG * refsAcum;
+    const totalRider = l1m + l2m + l3m;
+    const l2c = l2m * r;
+    const l3c = l3m * r;
+    const inc = l2c + l3c;
+    const net = com - p.costosOp - inc;
+    const color = net >= 0 ? 'var(--accent-emerald)' : 'var(--accent-rose)';
+    html += `<tr>
+      <td style="font-weight:600">Mes ${m}</td>
+      <td>${fmtN(Math.round(r))}</td>
+      <td>${fmtN(Math.round(v))}</td>
+      <td>${fmt(Math.round(fac))}</td>
+      <td>${fmt(Math.round(com))}</td>
+      <td>${fmt(Math.round(inc))}</td>
+      <td style="color:${color};font-weight:700">${fmt(Math.round(net))}</td>
+      <td>${fmt(Math.round(totalRider))}</td>
+    </tr>`;
+    r = Math.round(r * (1 + p.crecimiento) * p.retencion + r * p.refsXmes * p.crecimiento);
+    r = Math.min(r, 100000);
+  }
+  el('tbody-proyeccion').innerHTML = html;
+}
+
+// ===== SAVE / LOAD =====
+function saveSettings() {
+  const values = {};
+  paramIds.forEach(id => { values[id] = document.getElementById(id).value; });
+  localStorage.setItem('riderDash_settings', JSON.stringify(values));
+  const toast = el('toast');
+  toast.classList.add('show');
+  const btn = el('btn-save');
+  btn.classList.add('saved');
+  btn.textContent = '✅ Guardado';
+  setTimeout(() => { toast.classList.remove('show'); btn.classList.remove('saved'); btn.textContent = '💾 Guardar ajustes'; }, 2500);
+}
+
+function loadSettings() {
+  const saved = localStorage.getItem('riderDash_settings');
+  if (saved) {
+    const values = JSON.parse(saved);
+    Object.keys(values).forEach(id => {
+      const elem = document.getElementById(id);
+      if (elem) elem.value = values[id];
+    });
+  }
+}
+
+// ===== INIT =====
+loadSettings();
+paramIds.forEach(id => {
+  document.getElementById(id).addEventListener('input', () => {
+    updateSliderDisplays();
+    calculate();
+  });
+});
+updateSliderDisplays();
+calculate();
+</script>
+
+</body>
+</html>

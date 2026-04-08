@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparto Justo | Delivery sin comisiones</title>
+  <meta name="description" content="Plataforma de delivery que conecta negocios con repartidores. Sin comisiones por venta, solo pagas por la entrega. Más ganancia para tu negocio.">
+  <meta property="og:title" content="Reparto Justo | Delivery sin comisiones">
+  <meta property="og:description" content="Tu negocio vende, nosotros entregamos. Sin comisiones por venta.">
+  <meta property="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0F6E56;
+      --teal-bg: #E1F5EE;
+      --teal-mid: #1D9E75;
+      --teal-dark: #085041;
+      --purple: #3C3489;
+      --purple-bg: #EEEDFE;
+      --purple-mid: #7F77DD;
+      --amber: #854F0B;
+      --amber-bg: #FAEEDA;
+      --amber-mid: #EF9F27;
+      --blue: #185FA5;
+      --blue-bg: #E6F1FB;
+      --blue-mid: #378ADD;
+      --coral: #993C1D;
+      --coral-bg: #FAECE7;
+      --coral-mid: #D85A30;
+      --text: #1a1a18;
+      --text2: #6b6b66;
+      --text3: #9a9a94;
+      --bg: #f5f5f3;
+      --bg2: #ffffff;
+      --border: rgba(0,0,0,0.10);
+      --border2: rgba(0,0,0,0.18);
+      --r: 10px;
+      --r-sm: 6px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--bg2);
+      border-bottom: 0.5px solid var(--border2);
+      padding: 0 1.5rem;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .nav-logo span { font-size: 1.5rem; }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text2);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal); }
+
+    .nav-cta {
+      padding: 10px 22px;
+      background: var(--teal);
+      border: none;
+      border-radius: var(--r-sm);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-cta:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 1.5rem 60px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--teal-bg) 0%, var(--bg) 100%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 18px;
+      background: var(--bg2);
+      border: 0.5px solid var(--border2);
+      border-radius: 99px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    .hero h1 span {
+      color: var(--teal);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text2);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: var(--r-sm);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      border: none;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--bg2);
+      border: 0.5px solid var(--border2);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    /* SECTIONS */
+    section {
+      position: relative;
+      padding: 80px 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--text2);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+      font-size: 1rem;
+    }
+
+    /* PROBLEMA */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 2rem;
+    }
+
+    .problem-card {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .problem-card.bad {
+      border-color: var(--coral);
+      background: var(--coral-bg);
+    }
+
+    .problem-card.good {
+      border-color: var(--teal);
+      background: var(--teal-bg);
+    }
+
+    .problem-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .problem-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .problem-card p {
+      color: var(--text2);
+      font-size: 0.9rem;
+    }
+
+    .commission-bar {
+      background: var(--bg2);
+      height: 10px;
+      border-radius: 5px;
+      margin: 1rem 0;
+      overflow: hidden;
+    }
+
+    .commission-fill {
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    .commission-fill.high {
+      width: 35%;
+      background: var(--coral-mid);
+    }
+
+    .commission-fill.low {
+      width: 5%;
+      background: var(--teal);
+    }
+
+    .commission-text {
+      font-size: 0.8rem;
+      color: var(--text3);
+    }
+
+    /* CÓMO FUNCIONA */
+    .steps {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+
+    .step {
+      text-align: center;
+      max-width: 240px;
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.5rem 1rem;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 auto 1rem;
+    }
+
+    .step-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .step h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .step p {
+      color: var(--text2);
+      font-size: 0.85rem;
+    }
+
+    .step-arrow {
+      font-size: 1.75rem;
+      color: var(--text3);
+      align-self: center;
+    }
+
+    /* BENEFICIOS */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .benefit-card {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit-card.negocios::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--blue);
+    }
+
+    .benefit-card.riders::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--teal);
+    }
+
+    .benefit-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .benefit-icon.blue { background: var(--blue-bg); }
+    .benefit-icon.emerald { background: var(--teal-bg); }
+
+    .benefit-card h3 {
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    .benefit-list {
+      list-style: none;
+    }
+
+    .benefit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 0.5px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .benefit-list li:last-child {
+      border-bottom: none;
+    }
+
+    .benefit-list li span:first-child {
+      color: var(--teal);
+      font-size: 1rem;
+    }
+
+    /* CALCULADORA */
+    .calculator {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .calc-tabs {
+      display: flex;
+      gap: 4px;
+      background: var(--bg);
+      border-radius: var(--r-sm);
+      padding: 4px;
+      margin-bottom: 1.5rem;
+    }
+
+    .calc-tab {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background: transparent;
+      color: var(--text2);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: var(--r-sm);
+      transition: all 0.2s;
+    }
+
+    .calc-tab.active {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .calc-input {
+      margin-bottom: 1.25rem;
+    }
+
+    .calc-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .calc-label span:last-child {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .calc-slider {
+      width: 100%;
+      -webkit-appearance: none;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--border);
+      outline: none;
+    }
+
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--teal);
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .calc-result {
+      text-align: center;
+      background: var(--bg);
+      padding: 12px;
+      border-radius: var(--r-sm);
+    }
+
+    .calc-result-value {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--teal);
+    }
+
+    .calc-result-label {
+      font-size: 0.75rem;
+      color: var(--text2);
+      margin-top: 2px;
+    }
+
+    /* TESTIMONIOS */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .testimonial {
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.5rem;
+    }
+
+    .testimonial-quote {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-style: italic;
+      color: var(--text2);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--teal-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: var(--text3);
+    }
+
+    /* CTA FINAL */
+    .cta-section {
+      text-align: center;
+      padding: 60px 1.5rem;
+      background: var(--teal-bg);
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .cta-section p {
+      color: var(--text2);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FORM */
+    .contact-form {
+      max-width: 420px;
+      margin: 0 auto;
+      background: var(--bg2);
+      border: 0.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--bg);
+      border: 0.5px solid var(--border2);
+      border-radius: var(--r-sm);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--teal);
+    }
+
+    .form-group select {
+      cursor: pointer;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--teal);
+      border: none;
+      border-radius: var(--r-sm);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover {
+      background: var(--teal-dark);
+    }
+
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 1rem;
+      padding: 14px;
+      background: #25D366;
+      border: none;
+      border-radius: var(--r-sm);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 32px 1.5rem;
+      border-top: 0.5px solid var(--border);
+      color: var(--text3);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+
+      .hero { padding-top: 80px; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+
+      .step-arrow { display: none; }
+      .steps { flex-direction: column; align-items: center; }
+      .step { max-width: 100%; }
+
+      section { padding: 50px 1rem; }
+
+      .calculator { padding: 1.25rem; }
+
+      .calc-results { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--bg2);
+      padding: 1rem;
+      border-bottom: 0.5px solid var(--border2);
+      z-index: 99;
+    }
+
+    .mobile-menu.active { display: block; }
+
+    .mobile-menu a {
+      display: block;
+      padding: 10px 0;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .mobile-menu .btn {
+      margin-top: 0.75rem;
+      width: 100%;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><span>🏍️</span> RepartoJusto</a>
+      <ul class="nav-links">
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#calculadora">Calculadora</a></li>
+      </ul>
+      <a href="#contacto" class="nav-cta">Unirme ahora</a>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#problema" onclick="toggleMenu()">Problema</a>
+    <a href="#como-funciona" onclick="toggleMenu()">Cómo funciona</a>
+    <a href="#beneficios" onclick="toggleMenu()">Beneficios</a>
+    <a href="#calculadora" onclick="toggleMenu()">Calculadora</a>
+    <a href="#contacto" class="btn btn-primary" onclick="toggleMenu()">Unirme ahora</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🚀 Nuevo modelo de delivery</div>
+      <h1>Delivery <span>sin comisiones</span></h1>
+      <p>Tu negocio vende directamente al cliente. Nosotros solo hacemos la entrega. Sin intermediarios, sin perder margen.</p>
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn btn-primary" onclick="setFormType('negocio')">🏪 Soy Negocio</a>
+        <a href="#contacto" class="btn btn-secondary" onclick="setFormType('rider')">🏍️ Soy Rider</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section id="problema">
+    <h2 class="section-title">El problema de las apps tradicionales</h2>
+    <p class="section-sub">PedidosYa, Uber Eats y similares cobran comisiones que matan tu margen.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card bad">
+        <div class="problem-icon">😰</div>
+        <h3>Apps tradicionales</h3>
+        <p>Cobran entre 20% y 40% por cada venta</p>
+        <div class="commission-bar">
+          <div class="commission-fill high"></div>
+        </div>
+        <div class="commission-text">De cada $10.000, te quitan $3.500</div>
+      </div>
+
+      <div class="problem-card good">
+        <div class="problem-icon">😊</div>
+        <h3>Reparto Justo</h3>
+        <p>Solo cobras por la entrega, no por la venta</p>
+        <div class="commission-bar">
+          <div class="commission-fill low"></div>
+        </div>
+        <div class="commission-text">0% comisión. Solo $500 por pedido</div>
+      </div>
+
+      <div class="problem-card bad">
+        <div class="problem-icon">💸</div>
+        <h3>Lo que pierdes</h3>
+        <p>Con 50 pedidos/semana y 30% comisión:</p>
+        <div style="font-size: 1.75rem; font-weight: 800; color: var(--coral); margin: 0.75rem 0;">$150.000/semana</div>
+        <div class="commission-text">Dinero que se queda en la app</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona">
+    <h2 class="section-title">¿Cómo funciona?</h2>
+    <p class="section-sub">Simple, rápido y sin complicaciones.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-icon">📱</div>
+        <h3>El cliente compra</h3>
+        <p>Directamente a tu negocio por WhatsApp, Instagram o mostrador</p>
+      </div>
+
+      <div class="step-arrow">→</div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-icon">📦</div>
+        <h3>Solicitas el rider</h3>
+        <p>Pides un repartidor cuando tengas el pedido listo</p>
+      </div>
+
+      <div class="step-arrow">→</div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-icon">🏍️</div>
+        <h3>Se realiza la entrega</h3>
+        <p>Un rider cercano lleva el pedido y cobra el delivery</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios">
+    <h2 class="section-title">Beneficios para todos</h2>
+    <p class="section-sub">Un modelo que funciona porque todos ganan.</p>
+
+    <div class="benefits-grid">
+      <div class="benefit-card negocios">
+        <div class="benefit-header">
+          <div class="benefit-icon blue">🏪</div>
+          <h3>Para Negocios</h3>
+        </div>
+        <ul class="benefit-list">
+          <li><span>✓</span> Sin comisión por venta (0%)</li>
+          <li><span>✓</span> Mantienes relación directa con el cliente</li>
+          <li><span>✓</span> No necesitas subir precios para compensar</li>
+          <li><span>✓</span> Mayor margen de ganancia</li>
+          <li><span>✓</span> Sin exclusividad: usa otras apps también</li>
+        </ul>
+      </div>
+
+      <div class="benefit-card riders">
+        <div class="benefit-header">
+          <div class="benefit-icon emerald">🏍️</div>
+          <h3>Para Riders</h3>
+        </div>
+        <ul class="benefit-list">
+          <li><span>✓</span> Cobras por km recorrido ($650/km)</li>
+          <li><span>✓</span> Menos tiempos muertos entre pedidos</li>
+          <li><span>✓</span> Sistema de 3 capas de ingresos</li>
+          <li><span>✓</span> Gana extra por captar comercios (residual)</li>
+          <li><span>✓</span> Bonos por referir otros riders</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 1.5rem;">
+      <p style="color: var(--text2); font-size: 0.9rem;">
+        <strong style="color: var(--teal);">Diferencia clave:</strong> En Reparto Justo, el rider gana mientras el comercio que él trajo siga activo. Ingreso pasivo real por captación.
+      </p>
+    </div>
+  </section>
+
+  <!-- CALCULADORA -->
+  <section id="calculadora">
+    <h2 class="section-title">Calcula tus ganancias</h2>
+    <p class="section-sub">Mueve los controles y descubre cuánto puedes ganar o ahorrar.</p>
+
+    <div class="calculator">
+      <div class="calc-tabs">
+        <button class="calc-tab active" onclick="switchCalc('rider')">🏍️ Soy Rider</button>
+        <button class="calc-tab" onclick="switchCalc('negocio')">🏪 Soy Negocio</button>
+      </div>
+
+      <!-- RIDER CALC -->
+      <div id="calc-rider">
+        <div class="calc-input">
+          <div class="calc-label">
+            <span>Pedidos por día</span>
+            <span id="pedidos-val">8</span>
+          </div>
+          <input type="range" class="calc-slider" id="pedidos" min="1" max="20" value="8" oninput="updateCalc()">
+        </div>
+
+        <div class="calc-input">
+          <div class="calc-label">
+            <span>Km promedio por pedido</span>
+            <span id="km-val">3</span>
+          </div>
+          <input type="range" class="calc-slider" id="km" min="1" max="10" value="3" oninput="updateCalc()">
+        </div>
+
+        <div class="calc-input">
+          <div class="calc-label">
+            <span>Días trabajados por mes</span>
+            <span id="dias-val">25</span>
+          </div>
+          <input type="range" class="calc-slider" id="dias" min="10" max="30" value="25" oninput="updateCalc()">
+        </div>
+
+        <div class="calc-input">
+          <div class="calc-label">
+            <span>Comercios captados (residual)</span>
+            <span id="comercios-val">3</span>
+          </div>
+          <input type="range" class="calc-slider" id="comercios" min="0" max="10" value="3" oninput="updateCalc()">
+        </div>
+
+        <div class="calc-results">
+          <div class="calc-result">
+            <div class="calc-result-value" id="ingreso-directo">$156.000</div>
+            <div class="calc-result-label">Ingreso directo/mes</div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-value" id="ingreso-residual">$60.000</div>
+            <div class="calc-result-label">Ingreso residual/mes</div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-value" id="ingreso-total">$216.000</div>
+            <div class="calc-result-label">Total mensual</div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-value" id="por-hora">$1.080</div>
+            <div class="calc-result-label">Por hora aprox.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEGOCIO CALC -->
+      <div id="calc-negocio" style="display: none;">
+        <div class="calc-input">
+          <div class="calc-label">
+            <span>Pedidos por semana</span>
+            <span id="pedidos-neg-val">50</span>
+          </div>
+          <input type="range" class="calc-slider" id="pedidos-neg" min="10" max="200" value="50" oninput="updateCalcNeg()">
+        </div>
+
+        <div class="calc-input">
+          <div class="calc-label">
+            <span>Valor promedio por pedido</span>
+            <span id="valor-pedido-val">$8.000</span>
+          </div>
+          <input type="range" class="calc-slider" id="valor-pedido" min="2000" max="30000" step="1000" value="8000" oninput="updateCalcNeg()">
+        </div>
+
+        <div class="calc-results">
+          <div class="calc-result">
+            <div class="calc-result-value" id="pierdes-otros">$120.000</div>
+            <div class="calc-result-label">Pierdes/semana con otras apps</div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-value" id="pagas-nosotros">$25.000</div>
+            <div class="calc-result-label">Pagas/semana con nosotros</div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-value" id="ahorro">$95.000</div>
+            <div class="calc-result-label">Ahorro semanal</div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-result-value" id="ahorro-mes">$380.000</div>
+            <div class="calc-result-label">Ahorro mensual</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios">
+    <h2 class="section-title">Lo que dicen de nosotros</h2>
+    <p class="section-sub">Negocios y riders que ya están usando Reparto Justo.</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="testimonial-quote">"Desde que uso Reparto Justo, no tengo que subir mis precios para compensar comisiones. Mis clientes están más contentos."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">🏪</div>
+          <div>
+            <div class="testimonial-name">Restaurante El Sabor</div>
+            <div class="testimonial-role">Comida rápida</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-quote">"Gano más por hora que con PedidosYa porque no espero tanto entre pedidos. Además capté 2 comercios y ahora tengo ingreso extra."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">🏍️</div>
+          <div>
+            <div class="testimonial-name">Carlos M.</div>
+            <div class="testimonial-role">Rider desde hace 3 meses</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-quote">"Muy simple de usar. Pido el rider cuando tengo el pedido listo y listo. Sin complicaciones."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">🛒</div>
+          <div>
+            <div class="testimonial-name">MiniMarket La Esquina</div>
+            <div class="testimonial-role">Minimarket</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL + CONTACTO -->
+  <section id="contacto" class="cta-section">
+    <h2>¿Listo para empezar?</h2>
+    <p>Únete ahora y sé parte del cambio en el delivery local.</p>
+
+    <div class="contact-form">
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="nombre">Tu nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">¿Qué eres?</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="negocio">🏪 Negocio/Comercio</option>
+            <option value="rider">🏍️ Rider/Repartidor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contacto">WhatsApp o email</label>
+          <input type="text" id="contacto" name="contacto" placeholder="+56 9 1234 5678 o tu@email.com" required>
+        </div>
+
+        <button type="submit" class="form-submit">🚀 Quiero unirme</button>
+      </form>
+
+      <a href="https://wa.me/56912345678?text=Hola!%20Quiero%20saber%20más%20sobre%20Reparto%20Justo" target="_blank" class="whatsapp-btn">
+        💬 Contactar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 Reparto Justo. Delivery sin comisiones.</p>
+    <p style="margin-top: 6px;">
+      <a href="#">Términos</a> · <a href="#">Privacidad</a> · <a href="#">Contacto</a>
+    </p>
+  </footer>
+
+  <script>
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('active');
+    }
+
+    // Set form type from hero buttons
+    function setFormType(type) {
+      document.getElementById('tipo').value = type;
+    }
+
+    // Calculator tabs
+    function switchCalc(type) {
+      document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+
+      document.getElementById('calc-rider').style.display = type === 'rider' ? 'block' : 'none';
+      document.getElementById('calc-negocio').style.display = type === 'negocio' ? 'block' : 'none';
+    }
+
+    // Rider calculator
+    function updateCalc() {
+      const pedidos = parseInt(document.getElementById('pedidos').value);
+      const km = parseInt(document.getElementById('km').value);
+      const dias = parseInt(document.getElementById('dias').value);
+      const comercios = parseInt(document.getElementById('comercios').value);
+
+      document.getElementById('pedidos-val').textContent = pedidos;
+      document.getElementById('km-val').textContent = km;
+      document.getElementById('dias-val').textContent = dias;
+      document.getElementById('comercios-val').textContent = comercios;
+
+      // Cálculos rider
+      const tarifaKm = 650;
+      const ingresoDirecto = pedidos * km * tarifaKm * dias;
+      const pedidosPorComercio = 5;
+      const ingresoResidual = comercios * pedidosPorComercio * 40 * dias;
+      const total = ingresoDirecto + ingresoResidual;
+      const horasTrabajadas = pedidos * 0.5 * dias;
+      const porHora = horasTrabajadas > 0 ? Math.round(total / horasTrabajadas) : 0;
+
+      document.getElementById('ingreso-directo').textContent = '$' + ingresoDirecto.toLocaleString('es-CL');
+      document.getElementById('ingreso-residual').textContent = '$' + ingresoResidual.toLocaleString('es-CL');
+      document.getElementById('ingreso-total').textContent = '$' + total.toLocaleString('es-CL');
+      document.getElementById('por-hora').textContent = '$' + porHora.toLocaleString('es-CL');
+    }
+
+    // Negocio calculator
+    function updateCalcNeg() {
+      const pedidos = parseInt(document.getElementById('pedidos-neg').value);
+      const valorPedido = parseInt(document.getElementById('valor-pedido').value);
+
+      document.getElementById('pedidos-neg-val').textContent = pedidos;
+      document.getElementById('valor-pedido-val').textContent = '$' + valorPedido.toLocaleString('es-CL');
+
+      const comisionOtros = 0.30;
+      const costoNosotros = 500;
+
+      const pierdesOtros = Math.round(pedidos * valorPedido * comisionOtros);
+      const pagasNosotros = pedidos * costoNosotros;
+      const ahorro = pierdesOtros - pagasNosotros;
+      const ahorroMes = ahorro * 4;
+
+      document.getElementById('pierdes-otros').textContent = '$' + pierdesOtros.toLocaleString('es-CL');
+      document.getElementById('pagas-nosotros').textContent = '$' + pagasNosotros.toLocaleString('es-CL');
+      document.getElementById('ahorro').textContent = '$' + ahorro.toLocaleString('es-CL');
+      document.getElementById('ahorro-mes').textContent = '$' + ahorroMes.toLocaleString('es-CL');
+    }
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const tipo = document.getElementById('tipo').value;
+      const contacto = document.getElementById('contacto').value;
+
+      alert(`¡Gracias ${nombre}! Te contactaremos pronto. Tipo: ${tipo}`);
+    }
+
+    // Init calculators
+    updateCalc();
+    updateCalcNeg();
+  </script>
+
+</body>
+</html>
