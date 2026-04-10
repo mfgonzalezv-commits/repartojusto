@@ -312,10 +312,36 @@ router.put('/usuarios/:id', auth, solo('admin'), async (req, res, next) => {
 // ── DELETE /api/admin/usuarios/:id — eliminar usuario y datos relacionados ──
 router.delete('/usuarios/:id', auth, solo('admin'), async (req, res, next) => {
   try {
-    await db(
-      `DELETE FROM usuarios WHERE id = $1 AND rol != 'admin'`,
-      [req.params.id]
-    );
+    const { transaction } = require('../config/database');
+    await transaction(async (client) => {
+      const { rows: [u] } = await client.query(
+        `SELECT id, rol FROM usuarios WHERE id = $1 AND rol != 'admin'`, [req.params.id]
+      );
+      if (!u) throw Object.assign(new Error('Usuario no encontrado o protegido'), { status: 404 });
+
+      if (u.rol === 'negocio') {
+        // Borrar pedidos del negocio y luego el negocio
+        const { rows: [neg] } = await client.query(`SELECT id FROM negocios WHERE usuario_id = $1`, [u.id]);
+        if (neg) {
+          await client.query(`DELETE FROM clientes WHERE negocio_id = $1`, [neg.id]);
+          await client.query(`UPDATE pedidos SET rider_id = NULL WHERE negocio_id = $1`, [neg.id]);
+          await client.query(`DELETE FROM pagos WHERE pedido_id IN (SELECT id FROM pedidos WHERE negocio_id = $1)`, [neg.id]);
+          await client.query(`DELETE FROM pedidos WHERE negocio_id = $1`, [neg.id]);
+          await client.query(`DELETE FROM negocios WHERE id = $1`, [neg.id]);
+        }
+      }
+
+      if (u.rol === 'rider') {
+        const { rows: [rider] } = await client.query(`SELECT id FROM riders WHERE usuario_id = $1`, [u.id]);
+        if (rider) {
+          await client.query(`UPDATE pedidos SET rider_id = NULL WHERE rider_id = $1`, [rider.id]);
+          await client.query(`DELETE FROM liquidaciones WHERE rider_id = $1`, [rider.id]);
+          await client.query(`DELETE FROM riders WHERE id = $1`, [rider.id]);
+        }
+      }
+
+      await client.query(`DELETE FROM usuarios WHERE id = $1`, [u.id]);
+    });
     res.json({ ok: true });
   } catch (err) { next(err); }
 });
