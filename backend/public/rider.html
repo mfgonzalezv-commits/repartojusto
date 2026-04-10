@@ -224,7 +224,8 @@
 
 <!-- ═══════════════════ LOGIN ═══════════════════ -->
 <div id="auth-screen">
-  <div class="auth-card">
+  <!-- LOGIN -->
+  <div class="auth-card" id="form-login">
     <div class="auth-logo">Reparto Justo</div>
     <div class="auth-sub">App para Riders</div>
     <form id="login-form" onsubmit="loginRider(event)">
@@ -239,6 +240,48 @@
       <p id="login-error" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none"></p>
       <button type="submit" class="btn btn-primary btn-full" id="btn-login">Entrar</button>
     </form>
+    <p style="text-align:center;font-size:13px;color:rgba(255,255,255,.4);margin-top:16px">
+      ¿No tienes cuenta? <a href="#" id="link-registro-rider" style="color:var(--amarillo);font-weight:600">Regístrate</a>
+    </p>
+  </div>
+
+  <!-- REGISTRO -->
+  <div class="auth-card" id="form-registro" style="display:none;max-height:90vh;overflow-y:auto">
+    <div class="auth-logo">Reparto Justo</div>
+    <div class="auth-sub">Crear cuenta de Rider</div>
+    <div class="field">
+      <label>Nombre completo *</label>
+      <input type="text" id="reg-nombre" placeholder="Tu nombre y apellido">
+    </div>
+    <div class="field">
+      <label>Email *</label>
+      <input type="email" id="reg-email" placeholder="rider@ejemplo.cl" inputmode="email">
+    </div>
+    <div class="field">
+      <label>Teléfono *</label>
+      <input type="tel" id="reg-telefono" placeholder="+56912345678" inputmode="tel">
+    </div>
+    <div class="field">
+      <label>Contraseña * (mín. 6 caracteres)</label>
+      <input type="password" id="reg-password" placeholder="••••••••">
+    </div>
+    <div class="field">
+      <label>Vehículo *</label>
+      <select id="reg-vehiculo" style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:#2a2a2a;color:white;font-size:14px">
+        <option value="moto">Moto</option>
+        <option value="bicicleta">Bicicleta</option>
+        <option value="auto">Auto</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Código de referido <span style="color:rgba(255,255,255,.4);font-size:11px">(opcional)</span></label>
+      <input type="text" id="reg-referido" placeholder="Ej: REF-12345" style="text-transform:uppercase" autocomplete="off">
+    </div>
+    <p id="reg-error" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none"></p>
+    <button class="btn btn-primary btn-full" id="btn-registrar-rider">Crear cuenta</button>
+    <p style="text-align:center;font-size:13px;color:rgba(255,255,255,.4);margin-top:16px">
+      ¿Ya tienes cuenta? <a href="#" id="link-login-rider" style="color:var(--amarillo);font-weight:600">Inicia sesión</a>
+    </p>
   </div>
 </div>
 
@@ -431,6 +474,67 @@ function loginRider(e) {
     btn.disabled = false;
   });
 }
+
+// Toggle login ↔ registro
+document.getElementById('link-registro-rider').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('form-login').style.display = 'none';
+  document.getElementById('form-registro').style.display = 'block';
+});
+document.getElementById('link-login-rider').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('form-registro').style.display = 'none';
+  document.getElementById('form-login').style.display = 'block';
+});
+
+// Registro rider
+document.getElementById('btn-registrar-rider').addEventListener('click', function() {
+  var nombre   = document.getElementById('reg-nombre').value.trim();
+  var email    = document.getElementById('reg-email').value.trim();
+  var telefono = document.getElementById('reg-telefono').value.trim();
+  var password = document.getElementById('reg-password').value;
+  var vehiculo = document.getElementById('reg-vehiculo').value;
+  var referido = document.getElementById('reg-referido').value.trim();
+  var errEl    = document.getElementById('reg-error');
+  var btn      = document.getElementById('btn-registrar-rider');
+  var _isLocal = location.hostname === 'localhost' || /^192\.168\./.test(location.hostname) || /^10\./.test(location.hostname);
+  var base     = (_isLocal ? location.protocol + '//' + location.hostname + ':3000' : location.protocol + '//' + location.hostname) + '/api';
+
+  errEl.style.display = 'none';
+  if (!nombre || !email || !telefono || !password) {
+    errEl.textContent = 'Completa todos los campos obligatorios (*)';
+    errEl.style.display = 'block'; return;
+  }
+  if (password.length < 6) {
+    errEl.textContent = 'La contraseña debe tener al menos 6 caracteres';
+    errEl.style.display = 'block'; return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Creando cuenta...';
+
+  var body = { nombre: nombre, email: email, telefono: telefono, password: password, vehiculo_tipo: vehiculo };
+  if (referido) body.codigo_referido = referido.toUpperCase();
+
+  fetch(base + '/auth/registro/rider', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  })
+  .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
+  .then(function(r) {
+    if (!r.ok) throw new Error(r.data.error || 'Error del servidor');
+    localStorage.setItem('rj_rider_token', r.data.token);
+    localStorage.setItem('rj_rider_usuario', JSON.stringify(r.data.usuario));
+    location.reload();
+  })
+  .catch(function(err) {
+    errEl.textContent = err.message;
+    errEl.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Crear cuenta';
+  });
+});
 </script>
 
 <script>

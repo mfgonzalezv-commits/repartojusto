@@ -316,6 +316,10 @@
         <option value="otra">Otra</option>
       </select>
     </div>
+    <div class="field">
+      <label>Código de referido <span style="color:var(--text3);font-size:11px">(opcional)</span></label>
+      <input type="text" id="reg-referido" placeholder="Ej: REF-12345" style="text-transform:uppercase" autocomplete="off">
+    </div>
     <p id="reg-error" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none"></p>
     <button class="btn btn-primary btn-full" id="btn-registrar">Crear cuenta</button>
     <p style="text-align:center;font-size:13px;color:var(--text3);margin-top:16px">
@@ -381,7 +385,7 @@
       </div>
 
       <!-- Tab: Mi Cuenta -->
-      <div id="tab-cuenta" style="display:none">
+      <div id="tab-cuenta" style="display:none;overflow-y:auto;height:100%">
         <div class="card">
           <div class="card-header"><h3>Mi cuenta</h3><button class="btn btn-outline btn-sm" id="btn-editar-perfil">Editar</button></div>
           <div class="card-body">
@@ -402,6 +406,9 @@
             <div class="cuenta-section">
               <h4>Últimos pagos</h4>
               <div id="cuenta-pagos-lista"><p style="color:var(--text3);font-size:13px">Cargando...</p></div>
+            </div>
+            <div class="cuenta-section" style="padding-top:8px;border-top:1px solid var(--border)">
+              <button class="btn btn-danger btn-full" id="btn-logout-cuenta">Cerrar sesión</button>
             </div>
           </div>
         </div>
@@ -726,12 +733,14 @@ $('btn-registrar').addEventListener('click', async () => {
   }
 });
 
-$('btn-logout').addEventListener('click', () => {
+const doLogout = () => {
   localStorage.removeItem('rj_token');
   localStorage.removeItem('rj_usuario');
   if (socket) socket.disconnect();
   location.reload();
-});
+};
+$('btn-logout').addEventListener('click', doLogout);
+$('btn-logout-cuenta').addEventListener('click', doLogout);
 
 // ══════════════════════════════════════════════════════════════
 // APP
