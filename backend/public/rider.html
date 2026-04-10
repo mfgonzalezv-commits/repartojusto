@@ -681,24 +681,39 @@ function getCurrentPos() {
   });
 }
 
+let gpsInterval = null;
+
+async function enviarUbicacion(lat, lng) {
+  try {
+    await apiFetch('/riders/ubicacion', { method: 'PUT', body: JSON.stringify({ lat, lng }) });
+    if (socket) socket.emit('rider:ubicacion', { lat, lng });
+    if (mapaNav && markerMiPos) markerMiPos.setLatLng([lat, lng]);
+  } catch {}
+}
+
 function iniciarGPS() {
   if (!navigator.geolocation) return;
-  watchId = navigator.geolocation.watchPosition(async (pos) => {
-    const lat = pos.coords.latitude;
-    const lng = pos.coords.longitude;
-    try {
-      await apiFetch('/riders/ubicacion', { method: 'PUT', body: JSON.stringify({ lat, lng }) });
-      if (socket) socket.emit('rider:ubicacion', { lat, lng });
-      // Mover marker en mapa de navegación
-      if (mapaNav && markerMiPos) {
-        markerMiPos.setLatLng([lat, lng]);
-      }
-    } catch {}
-  }, null, { enableHighAccuracy: true, maximumAge: 5000 });
+
+  // watchPosition: envía cada vez que el GPS detecta cambio
+  watchId = navigator.geolocation.watchPosition(
+    pos => enviarUbicacion(pos.coords.latitude, pos.coords.longitude),
+    null,
+    { enableHighAccuracy: true, maximumAge: 0, timeout: 8000 }
+  );
+
+  // Intervalo forzado cada 5s para asegurar actualización aunque no haya movimiento
+  gpsInterval = setInterval(() => {
+    navigator.geolocation.getCurrentPosition(
+      pos => enviarUbicacion(pos.coords.latitude, pos.coords.longitude),
+      null,
+      { enableHighAccuracy: true, maximumAge: 0, timeout: 8000 }
+    );
+  }, 5000);
 }
 
 function detenerGPS() {
   if (watchId !== null) { navigator.geolocation.clearWatch(watchId); watchId = null; }
+  if (gpsInterval !== null) { clearInterval(gpsInterval); gpsInterval = null; }
 }
 
 // ══════════ RUTA OSRM ══════════
