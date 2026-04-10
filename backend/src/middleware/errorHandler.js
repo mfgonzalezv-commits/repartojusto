@@ -21,10 +21,8 @@ module.exports = (err, req, res, next) => {
     return res.status(400).json({ error: 'Referencia inválida' });
   }
 
-  // Cualquier otro error
-  if (config.NODE_ENV !== 'production') {
-    console.error('❌ Error:', err);
-  }
+  // Siempre loguear para Railway
+  console.error('❌ Error:', err.message, err.stack);
 
   res.status(err.status || 500).json({
     error: config.NODE_ENV === 'production' ? 'Error interno del servidor' : err.message
