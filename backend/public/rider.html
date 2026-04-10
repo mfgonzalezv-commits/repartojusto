@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparto Justo — App Rider</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    :root {
+      --teal: #FFCC00; --teal-mid: #FFD740; --teal-bg: #FFFBEA; --teal-dark: #0F172A;
+      --amber: #854F0B; --amber-bg: #FAEEDA; --amber-mid: #EF9F27;
+      --red: #DC2626; --red-bg: #FEE2E2;
+      --blue: #0F172A; --blue-bg: #E8EAF0; --blue-mid: #378ADD;
+      --purple-bg: #EDE9FE; --purple: #5B21B6;
+      --green-bg: #FFFBEA; --green: #1C1C1C;
+      --text: #1C1C1C; --text2: #6b6b66; --text3: #9a9a94;
+      --bg: #F9F9F9; --bg2: #ffffff; --border: rgba(0,0,0,0.10);
+      --r: 14px; --r-sm: 10px;
+      --negro: #1C1C1C; --navy: #0F172A; --amarillo: #FFCC00;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* ── AUTH ── */
+    #auth-screen {
+      min-height: 100vh; display: flex; align-items: flex-start; justify-content: center;
+      background: linear-gradient(135deg, #1C1C1C 0%, #0F172A 100%);
+      overflow-y: auto; padding: 40px 16px 40px;
+    }
+    .auth-card {
+      background: white; border-radius: 20px; padding: 32px 28px;
+      width: 100%; max-width: 400px; box-shadow: 0 20px 60px rgba(0,0,0,.4);
+      flex-shrink: 0;
+    }
+    .auth-logo { font-size: 24px; font-weight: 800; color: var(--amarillo); margin-bottom: 4px; font-family: 'Montserrat', sans-serif; }
+    .auth-sub { color: var(--text2); font-size: 13px; margin-bottom: 20px; }
+
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-size: 13px; font-weight: 500; color: var(--text2); margin-bottom: 6px; }
+    .field input, .field select {
+      width: 100%; padding: 11px 14px; border: 1.5px solid var(--border);
+      border-radius: var(--r-sm); font-size: 14px; font-family: inherit;
+      transition: border-color .2s; color: var(--text);
+    }
+    .field input:focus { outline: none; border-color: var(--teal-mid); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 20px; border-radius: var(--r-sm); font-size: 14px;
+      font-weight: 600; cursor: pointer; border: none; transition: all .2s; font-family: inherit;
+    }
+    .btn-primary { background: var(--amarillo); color: var(--negro); }
+    .btn-primary:hover { background: #e6b800; }
+    .btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+    .btn-full { width: 100%; }
+    .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+    .btn-danger { background: var(--red-bg); color: var(--red); }
+    .btn-success { background: var(--teal-bg); color: var(--teal); }
+    .btn-lg { padding: 16px 24px; font-size: 15px; border-radius: var(--r); }
+    .btn-sm { padding: 7px 14px; font-size: 13px; }
+
+    /* ── TOPBAR ── */
+    #app { display: none; min-height: 100vh; }
+    .topbar {
+      background: var(--negro); padding: 0 20px; height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .topbar-brand { font-size: 18px; font-weight: 800; color: var(--amarillo); font-family: 'Montserrat', sans-serif; }
+    .topbar-right { display: flex; align-items: center; gap: 12px; }
+    .rider-badge { font-size: 13px; color: #aaa; font-weight: 500; }
+
+    /* ── DISPONIBILIDAD TOGGLE ── */
+    .switch-wrap {
+      display: flex; align-items: center; gap: 10px;
+      background: #2a2a2a; border-radius: 30px; padding: 6px 16px;
+    }
+    .switch-label { font-size: 12px; font-weight: 600; color: #aaa; }
+    .switch-label.on { color: var(--teal-mid); }
+    .switch {
+      position: relative; width: 42px; height: 24px; cursor: pointer;
+    }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute; inset: 0; background: #444; border-radius: 24px; transition: .3s;
+    }
+    .slider:before {
+      content: ''; position: absolute; width: 18px; height: 18px;
+      left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: .3s;
+    }
+    input:checked + .slider { background: var(--teal-mid); }
+    input:checked + .slider:before { transform: translateX(18px); }
+
+    /* ── LAYOUT ── */
+    .content { padding: 20px; max-width: 600px; margin: 0 auto; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px;
+    }
+    .stat-card {
+      background: white; border-radius: var(--r-sm); padding: 14px 16px;
+      border: 1px solid var(--border); text-align: center;
+    }
+    .stat-value { font-size: 22px; font-weight: 800; color: var(--teal); }
+    .stat-label { font-size: 11px; color: var(--text3); margin-top: 2px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; }
+
+    /* ── PEDIDO DISPONIBLE (card grande) ── */
+    .pedido-disponible {
+      background: white; border-radius: var(--r); border: 2px solid var(--teal-mid);
+      overflow: hidden; margin-bottom: 12px; box-shadow: 0 4px 20px rgba(15,110,86,.15);
+      animation: pop .3s ease;
+    }
+    .pd-bloqueado { border-color: var(--border); opacity: .6; box-shadow: none; }
+    @keyframes pop { from { transform: scale(.97); opacity: .5; } to { transform: none; opacity: 1; } }
+    .pd-header { background: var(--teal); padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .pd-header-title { color: white; font-weight: 700; font-size: 15px; }
+    .pd-tarifa { background: white; color: var(--teal); font-weight: 800; font-size: 18px; padding: 4px 14px; border-radius: 20px; }
+    .pd-body { padding: 20px; }
+    .pd-route { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+    .pd-point { display: flex; align-items: flex-start; gap: 10px; }
+    .pd-dot { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 1px; }
+    .pd-dot.origen { background: var(--amber-bg); }
+    .pd-dot.destino { background: var(--red-bg); }
+    .pd-addr { font-size: 14px; line-height: 1.4; }
+    .pd-addr strong { font-weight: 600; display: block; }
+    .pd-addr span { font-size: 12px; color: var(--text2); }
+    .pd-meta { display: flex; gap: 16px; margin-bottom: 20px; }
+    .pd-meta-item { font-size: 13px; color: var(--text2); display: flex; align-items: center; gap: 4px; }
+    .pd-meta-item strong { color: var(--text); }
+    .pd-actions { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }
+
+    /* ── PEDIDO ACTIVO (en progreso) ── */
+    .pedido-activo {
+      background: white; border-radius: var(--r); border: 1px solid var(--border);
+      overflow: hidden; margin-bottom: 16px;
+    }
+    .pa-header { background: #1a1a18; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .pa-header-title { color: white; font-weight: 700; font-size: 14px; }
+    .pa-estado { padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .pa-body { padding: 20px; }
+
+    .estado-badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+    .estado-asignado  { background: var(--blue-bg); color: var(--blue); }
+    .estado-retiro    { background: var(--purple-bg); color: var(--purple); }
+    .estado-en_camino { background: var(--teal-bg); color: var(--teal); }
+    .estado-entregado { background: var(--green-bg); color: var(--green); }
+
+    .avanzar-btn {
+      background: var(--teal); color: white; border: none; border-radius: var(--r-sm);
+      padding: 14px; font-size: 15px; font-weight: 700; width: 100%; cursor: pointer;
+      font-family: inherit; margin-top: 16px; transition: all .2s;
+    }
+    .avanzar-btn:hover { background: var(--teal-dark); }
+    .avanzar-btn:disabled { background: var(--text3); cursor: not-allowed; }
+
+    /* ── LISTA DISPONIBLES ── */
+    .card { background: white; border-radius: var(--r); border: 1px solid var(--border); overflow: hidden; margin-bottom: 16px; }
+    .card-header { padding: 14px 18px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .card-header h3 { font-size: 14px; font-weight: 700; }
+    .card-body { padding: 16px; }
+    .pedido-mini { padding: 12px; border: 1.5px solid var(--border); border-radius: var(--r-sm); margin-bottom: 10px; cursor: pointer; transition: all .2s; }
+    .pedido-mini:hover { border-color: var(--teal-mid); }
+    .pedido-mini:last-child { margin-bottom: 0; }
+    .pm-top { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .pm-negocio { font-weight: 600; font-size: 13px; }
+    .pm-tarifa { font-weight: 800; font-size: 14px; color: var(--teal); }
+    .pm-dir { font-size: 12px; color: var(--text2); }
+
+    /* ── EMPTY ── */
+    .empty { text-align: center; padding: 40px 20px; color: var(--text3); }
+    .empty-icon { font-size: 36px; margin-bottom: 10px; }
+    .empty-text { font-size: 13px; }
+
+    /* ── HISTORIAL ── */
+    .hist-item { padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .hist-item:last-child { border-bottom: none; }
+    .hist-left { font-size: 13px; }
+    .hist-negocio { font-weight: 600; margin-bottom: 2px; }
+    .hist-dir { color: var(--text2); font-size: 12px; }
+    .hist-right { text-align: right; }
+    .hist-tarifa { font-weight: 700; font-size: 14px; color: var(--teal); }
+    .hist-fecha { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+    /* ── TOAST ── */
+    #toast-container { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 9999; display: flex; flex-direction: column; gap: 8px; width: 90%; max-width: 400px; }
+    .toast { background: #1a1a18; color: white; padding: 12px 20px; border-radius: var(--r-sm); font-size: 13px; font-weight: 500; animation: slideUp .3s ease; box-shadow: 0 4px 20px rgba(0,0,0,.4); text-align: center; }
+    .toast.success { background: var(--teal); }
+    .toast.error { background: var(--red); }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+    /* ── MAPA NAVEGACIÓN ── */
+    #mapa-navegacion { height: 240px; border-radius: var(--r-sm); overflow: hidden; margin-bottom: 14px; }
+
+    /* ── GANANCIAS ── */
+    .ganancia-card { background: white; border-radius: var(--r-sm); padding: 16px; border: 1px solid var(--border); margin-bottom: 12px; }
+    .ganancia-header { display: flex; justify-content: space-between; margin-bottom: 12px; }
+    .ganancia-titulo { font-size: 13px; font-weight: 600; color: var(--text2); }
+    .ganancia-valor { font-size: 22px; font-weight: 800; color: var(--teal); }
+    .ganancia-row { display: flex; justify-content: space-between; font-size: 13px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .ganancia-row:last-child { border-bottom: none; }
+
+    /* ── REFERIDOS ── */
+    .ref-code { background: var(--teal-bg); border-radius: var(--r-sm); padding: 20px; text-align: center; margin-bottom: 16px; }
+    .ref-code-val { font-size: 28px; font-weight: 800; color: var(--teal); letter-spacing: .1em; margin: 8px 0; }
+    .ref-code-label { font-size: 12px; color: var(--text2); }
+    .ref-paso { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .ref-paso:last-child { border-bottom: none; }
+    .ref-num { width: 26px; height: 26px; border-radius: 50%; background: var(--teal); color: white; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ref-texto { font-size: 13px; line-height: 1.4; }
+    .ref-texto strong { display: block; font-weight: 600; margin-bottom: 2px; }
+
+    /* ── TABS ── */
+    .bottom-tabs { position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid var(--border); display: flex; z-index: 50; }
+    .b-tab { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 4px; font-size: 10px; font-weight: 600; color: var(--text3); cursor: pointer; border: none; background: none; font-family: inherit; gap: 4px; transition: color .2s; }
+    .b-tab .icon { font-size: 20px; }
+    .b-tab.active { color: var(--teal); }
+    .page-content { padding-bottom: 80px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ LOGIN ═══════════════════ -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="auth-logo">Reparto Justo</div>
+    <div class="auth-sub">App para Riders</div>
+    <form id="login-form" onsubmit="loginRider(event)">
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="login-email" placeholder="rider@ejemplo.cl" autocomplete="email" inputmode="email">
+      </div>
+      <div class="field">
+        <label>Contraseña</label>
+        <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password">
+      </div>
+      <p id="login-error" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none"></p>
+      <button type="submit" class="btn btn-primary btn-full" id="btn-login">Entrar</button>
+    </form>
+  </div>
+</div>
+
+<!-- ═══════════════════ APP ═══════════════════ -->
+<div id="app" style="display:none">
+  <div class="topbar">
+    <div class="topbar-brand">🏍️ RJ Rider</div>
+    <div class="topbar-right">
+      <span id="turno-timer" style="display:none;font-size:11px;color:var(--teal-mid);font-weight:600;background:#2d2d2a;padding:4px 10px;border-radius:20px"></span>
+      <div class="switch-wrap">
+        <span class="switch-label" id="switch-label">Offline</span>
+        <label class="switch">
+          <input type="checkbox" id="toggle-disponible">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="content page-content">
+
+    <!-- ── STATS ── -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-entregas">0</div>
+        <div class="stat-label">Entregas hoy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-saldo">$0</div>
+        <div class="stat-label">Saldo pend.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-rating">5.0</div>
+        <div class="stat-label">Rating</div>
+      </div>
+    </div>
+
+    <!-- ── PÁGINAS ── -->
+    <div id="page-inicio">
+
+      <!-- Pedido activo en curso -->
+      <div id="pedido-activo-wrap" style="display:none"></div>
+
+      <!-- Pedidos disponibles -->
+      <div class="card" id="card-disponibles">
+        <div class="card-header">
+          <h3>📦 Pedidos disponibles</h3>
+          <button class="btn btn-outline btn-sm" id="btn-refresh-dis">↻</button>
+        </div>
+        <div class="card-body" id="lista-disponibles">
+          <div class="empty"><div class="empty-icon">💤</div><div class="empty-text">Actívate para ver pedidos</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="page-historial" style="display:none">
+      <div class="card">
+        <div class="card-header"><h3>📋 Mis entregas</h3></div>
+        <div class="card-body" id="lista-historial">
+          <div class="empty"><div class="empty-icon">📋</div><div class="empty-text">Sin entregas aún</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Mis Ganancias ── -->
+    <div id="page-ganancias" style="display:none">
+      <div class="ganancia-card">
+        <div class="ganancia-header">
+          <span class="ganancia-titulo">💰 Saldo pendiente de cobro</span>
+        </div>
+        <div class="ganancia-valor" id="gan-saldo">$0</div>
+      </div>
+      <div class="ganancia-card">
+        <div class="ganancia-header"><span class="ganancia-titulo">📊 Resumen del mes</span></div>
+        <div class="ganancia-row"><span>Entregas este mes</span><strong id="gan-mes-entregas">0</strong></div>
+        <div class="ganancia-row"><span>Ganado por entregas</span><strong id="gan-mes-monto" style="color:var(--teal)">$0</strong></div>
+        <div class="ganancia-row"><span>Residual acumulado</span><strong id="gan-residual" style="color:var(--blue)">$0</strong></div>
+        <div class="ganancia-row"><span>Total del mes</span><strong id="gan-total-mes" style="color:var(--teal);font-size:16px">$0</strong></div>
+      </div>
+      <div class="ganancia-card">
+        <div class="ganancia-header"><span class="ganancia-titulo">📋 Últimas liquidaciones</span></div>
+        <div id="gan-liquidaciones"><p style="font-size:13px;color:var(--text3)">Sin liquidaciones aún</p></div>
+      </div>
+      <div class="ganancia-card">
+        <div class="ganancia-header"><span class="ganancia-titulo">🧾 Detalle por entrega</span></div>
+        <div id="gan-detalle-lista"><p style="font-size:13px;color:var(--text3)">Cargando...</p></div>
+      </div>
+    </div>
+
+    <!-- ── Captar Comercio ── -->
+    <div id="page-referidos" style="display:none">
+      <div class="ref-code">
+        <div class="ref-code-label">Tu código de referido</div>
+        <div class="ref-code-val" id="ref-codigo">—</div>
+        <button onclick="copiarCodigo()" style="background:var(--teal);color:white;border:none;border-radius:8px;padding:8px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:8px">Copiar código</button>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>💡 ¿Cómo funciona?</h3></div>
+        <div class="card-body">
+          <div class="ref-paso">
+            <div class="ref-num">1</div>
+            <div class="ref-texto"><strong>Comparte tu código</strong>Envíalo a dueños de negocios que aún no usan Reparto Justo</div>
+          </div>
+          <div class="ref-paso">
+            <div class="ref-num">2</div>
+            <div class="ref-texto"><strong>El negocio se registra</strong>Usan tu código al crear su cuenta en la plataforma</div>
+          </div>
+          <div class="ref-paso">
+            <div class="ref-num">3</div>
+            <div class="ref-texto"><strong>Ganas un residual</strong>Recibes un % de cada pedido que ese negocio genera — para siempre</div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="card-header"><h3>🏪 Comercios referidos</h3></div>
+        <div class="card-body" id="ref-lista">
+          <div class="empty"><div class="empty-icon">🏪</div><div class="empty-text">Aún no has referido comercios</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-perfil" style="display:none">
+      <div class="card">
+        <div class="card-header"><h3>👤 Mi perfil</h3></div>
+        <div class="card-body" id="perfil-body">
+          <div class="empty"><div class="empty-icon">⏳</div><div class="empty-text">Cargando...</div></div>
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <button class="btn btn-outline btn-full" id="btn-logout">Cerrar sesión</button>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- Bottom tabs -->
+  <div class="bottom-tabs">
+    <button class="b-tab active" data-page="inicio"><span class="icon">🏠</span>Inicio</button>
+    <button class="b-tab" data-page="historial"><span class="icon">📋</span>Historial</button>
+    <button class="b-tab" data-page="ganancias"><span class="icon">💰</span>Ganancias</button>
+    <button class="b-tab" data-page="referidos"><span class="icon">🏪</span>Referidos</button>
+    <button class="b-tab" data-page="perfil"><span class="icon">👤</span>Perfil</button>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<!-- Script mínimo de login — sintaxis ES5 pura para máxima compatibilidad móvil -->
+<script>
+window.onerror = function(msg, src, line) {
+  var el = document.getElementById('login-error');
+  if (el) { el.textContent = 'Error JS: ' + msg + ' (L' + line + ')'; el.style.display = 'block'; }
+};
+
+
+function loginRider(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  var errEl = document.getElementById('login-error');
+  var btn   = document.getElementById('btn-login');
+  var email = document.getElementById('login-email').value.trim();
+  var pass  = document.getElementById('login-pass').value;
+  var base  = location.protocol + '//' + location.hostname + ':3000/api';
+
+  if (!errEl) { alert('Error interno'); return; }
+
+  errEl.textContent = 'Conectando...';
+  errEl.style.color = '#185FA5';
+  errEl.style.display = 'block';
+  btn.disabled = true;
+
+  fetch(base + '/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, password: pass })
+  })
+  .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
+  .then(function(r) {
+    if (!r.ok) throw new Error(r.data.error || 'Error del servidor');
+    if (r.data.usuario.rol !== 'rider') throw new Error('Esta cuenta no es de rider');
+    localStorage.setItem('rj_rider_token', r.data.token);
+    localStorage.setItem('rj_rider_usuario', JSON.stringify(r.data.usuario));
+    location.reload();
+  })
+  .catch(function(err) {
+    errEl.textContent = err.message;
+    errEl.style.color = '#DC2626';
+    errEl.style.display = 'block';
+    btn.disabled = false;
+  });
+}
+</script>
+
+<script>
+const API = location.protocol + '//' + location.hostname + ':3000/api';
+let token = localStorage.getItem('rj_rider_token');
+let usuario = JSON.parse(localStorage.getItem('rj_rider_usuario') || 'null');
+let socket = null;
+let disponible = false;
+let pedidoActivo = null;
+let watchId = null;
+let mapaNav = null;
+let markerMiPos = null;
+let turnoInicio = null;
+let turnoTimer = null;
+
+const $ = id => document.getElementById(id);
+const toast = (msg, type = '') => {
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.textContent = msg;
+  $('toast-container').appendChild(el);
+  setTimeout(() => el.remove(), 3500);
+};
+const fmt = n => '$' + parseInt(n).toLocaleString('es-CL');
+const timeAgo = d => {
+  const m = Math.floor((Date.now() - new Date(d)) / 60000);
+  if (m < 1) return 'hace un momento';
+  if (m < 60) return `hace ${m} min`;
+  const h = Math.floor(m / 60);
+  return h < 24 ? `hace ${h}h` : new Date(d).toLocaleDateString('es-CL');
+};
+const ESTADO_LABEL = { pendiente:'Pendiente', asignado:'Asignado', retiro:'En retiro', en_camino:'En camino', entregado:'Entregado', cancelado:'Cancelado' };
+const SIGUIENTE_ESTADO = { asignado:'retiro', retiro:'en_camino', en_camino:'entregado' };
+const SIGUIENTE_BTN = { asignado:'🏪 Llegué al negocio', retiro:'🚀 Salí con el pedido', en_camino:'✅ Entregué el pedido' };
+
+async function apiFetch(path, opts = {}) {
+  try {
+    const res = await fetch(API + path, {
+      ...opts,
+      headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}), ...(opts.headers || {}) }
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'Error del servidor');
+    return data;
+  } catch (e) {
+    if (e.message === 'Failed to fetch' || e.message.includes('NetworkError') || e.message.includes('fetch')) {
+      throw new Error(`Sin conexión con el servidor (${API})`);
+    }
+    throw e;
+  }
+}
+
+// ══════════ AUTH ══════════ (loginRider definido en script anterior)
+
+// El submit del form maneja Enter automáticamente — no se necesita keydown extra
+
+$('btn-logout').addEventListener('click', () => {
+  localStorage.removeItem('rj_rider_token');
+  localStorage.removeItem('rj_rider_usuario');
+  localStorage.removeItem('rj_disponible');
+  if (socket) socket.disconnect();
+  location.reload();
+});
+
+// ══════════ APP ══════════
+async function iniciarApp() {
+  $('auth-screen').style.display = 'none';
+  $('app').style.display = 'block';
+
+  // Restaurar estado online/offline guardado
+  const eraDisponible = localStorage.getItem('rj_disponible') === 'true';
+  if (eraDisponible) {
+    disponible = true;
+    $('toggle-disponible').checked = true;
+    $('switch-label').textContent = 'Online';
+    $('switch-label').className = 'switch-label on';
+    iniciarTurno();
+  }
+
+  conectarSocket();
+  cargarStats();
+  cargarPedidoActivo();
+  if (eraDisponible) cargarDisponibles();
+}
+
+// ══════════ SOCKET ══════════
+function conectarSocket() {
+  if (typeof io === 'undefined') return;
+  socket = io(`${location.protocol}//${location.hostname}:3000`, { auth: { token } });
+  socket.on('connect', () => {
+    console.log('🔌 Socket rider conectado');
+    if (disponible) socket.emit('rider:pedir_disponibles');
+  });
+  socket.on('pedido:nuevo', () => {
+    if (disponible && !pedidoActivo) {
+      socket.emit('rider:pedir_disponibles');
+      toast('📦 Nuevo pedido disponible!');
+    }
+  });
+  socket.on('pedidos:disponibles', (pedidos) => {
+    renderDisponibles(pedidos);
+  });
+}
+
+// ══════════ DISPONIBILIDAD ══════════
+$('toggle-disponible').addEventListener('change', async (e) => {
+  disponible = e.target.checked;
+  localStorage.setItem('rj_disponible', disponible);
+  const label = $('switch-label');
+  label.textContent = disponible ? 'Online' : 'Offline';
+  label.className = disponible ? 'switch-label on' : 'switch-label';
+
+  try {
+    const pos = await getCurrentPos().catch(() => null);
+    await apiFetch('/riders/disponibilidad', {
+      method: 'PUT',
+      body: JSON.stringify({ disponible, lat: pos ? pos.lat : null, lng: pos ? pos.lng : null })
+    });
+
+    if (disponible) {
+      iniciarGPS();
+      cargarDisponibles();
+      iniciarTurno();
+      toast('¡Estás online! Buscando pedidos...', 'success');
+    } else {
+      detenerGPS();
+      detenerTurno();
+      $('lista-disponibles').innerHTML = '<div class="empty"><div class="empty-icon">💤</div><div class="empty-text">Actívate para ver pedidos</div></div>';
+      toast('Offline');
+    }
+  } catch (e) { toast(e.message, 'error'); e.target.checked = !e.target.checked; }
+});
+
+// ══════════ GPS ══════════
+function getCurrentPos() {
+  return new Promise((resolve, reject) => {
+    if (!navigator.geolocation) return reject(new Error('GPS no disponible'));
+    navigator.geolocation.getCurrentPosition(
+      p => resolve({ lat: p.coords.latitude, lng: p.coords.longitude }),
+      reject, { enableHighAccuracy: true, timeout: 8000 }
+    );
+  });
+}
+
+function iniciarGPS() {
+  if (!navigator.geolocation) return;
+  watchId = navigator.geolocation.watchPosition(async (pos) => {
+    const lat = pos.coords.latitude;
+    const lng = pos.coords.longitude;
+    try {
+      await apiFetch('/riders/ubicacion', { method: 'PUT', body: JSON.stringify({ lat, lng }) });
+      if (socket) socket.emit('rider:ubicacion', { lat, lng });
+      // Mover marker en mapa de navegación
+      if (mapaNav && markerMiPos) {
+        markerMiPos.setLatLng([lat, lng]);
+      }
+    } catch {}
+  }, null, { enableHighAccuracy: true, maximumAge: 5000 });
+}
+
+function detenerGPS() {
+  if (watchId !== null) { navigator.geolocation.clearWatch(watchId); watchId = null; }
+}
+
+// ══════════ RUTA OSRM ══════════
+async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash) {
+  color  = color  || '#0F6E56';
+  weight = weight || 4;
+  try {
+    const url = `https://router.project-osrm.org/route/v1/driving/${lng1},${lat1};${lng2},${lat2}?overview=full&geometries=geojson`;
+    const r = await fetch(url);
+    const d = await r.json();
+    if (d.code === 'Ok' && d.routes && d.routes[0]) {
+      const coords = d.routes[0].geometry.coordinates.map(([ln, lt]) => [lt, ln]);
+      const opts = { color: color, weight: weight, opacity: 0.8 };
+      if (dash) opts.dashArray = dash;
+      L.polyline(coords, opts).addTo(mapa);
+      const distKm = (d.routes[0].distance / 1000).toFixed(1);
+      const durMin = Math.round(d.routes[0].duration / 60);
+      return { distKm, durMin };
+    }
+  } catch {}
+  // Fallback: línea recta punteada
+  const fbOpts = { color: color, weight: weight - 1 || 3, opacity: 0.5, dashArray: dash || '8,8' };
+  L.polyline([[lat1, lng1],[lat2, lng2]], fbOpts).addTo(mapa);
+  return null;
+}
+
+// ══════════ TURNO (SHIFT TIMER) ══════════
+function iniciarTurno() {
+  turnoInicio = Date.now();
+  actualizarTurnoDisplay();
+  turnoTimer = setInterval(actualizarTurnoDisplay, 60000);
+}
+
+function detenerTurno() {
+  if (turnoTimer) { clearInterval(turnoTimer); turnoTimer = null; }
+  turnoInicio = null;
+  $('turno-timer').style.display = 'none';
+}
+
+function actualizarTurnoDisplay() {
+  if (!turnoInicio) return;
+  const min = Math.floor((Date.now() - turnoInicio) / 60000);
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  const texto = h > 0 ? `${h}h ${m}min` : `${m}min`;
+  const el = $('turno-timer');
+  el.textContent = `⏱ ${texto}`;
+  el.style.display = 'inline-block';
+}
+
+// ══════════ STATS ══════════
+async function cargarStats() {
+  apiFetch('/riders/perfil').then(p => {
+    $('stat-entregas').textContent = p.entregas_hoy || 0;
+    $('stat-rating').textContent = parseFloat(p.rating || 5).toFixed(1);
+  }).catch(() => {});
+
+  apiFetch('/pagos/saldo').then(s => {
+    $('stat-saldo').textContent = fmt(s.saldo_pendiente || 0);
+  }).catch(() => {});
+}
+
+// ══════════ PEDIDO ACTIVO ══════════
+async function cargarPedidoActivo() {
+  try {
+    const pedidos = await apiFetch('/riders/pedidos?estado=asignado&limit=1');
+    const enCamino = await apiFetch('/riders/pedidos?estado=en_camino&limit=1');
+    const retiro = await apiFetch('/riders/pedidos?estado=retiro&limit=1');
+    const activo = [...pedidos, ...retiro, ...enCamino][0];
+
+    if (activo) {
+      pedidoActivo = activo;
+      renderPedidoActivo(activo);
+    }
+  } catch {}
+}
+
+function renderPedidoActivo(p) {
+  const wrap = $('pedido-activo-wrap');
+  const siguiente = SIGUIENTE_ESTADO[p.estado];
+  wrap.style.display = 'block';
+  wrap.innerHTML = `
+    <div class="pedido-activo">
+      <div class="pa-header">
+        <div class="pa-header-title">Pedido en curso #${p.id.substring(0,8)}</div>
+        <span class="estado-badge estado-${p.estado}">${ESTADO_LABEL[p.estado]}</span>
+      </div>
+      <div class="pa-body">
+        <div id="mapa-navegacion"></div>
+        <div style="margin-bottom:12px">
+          <div style="font-size:11px;color:var(--text3);margin-bottom:4px;font-weight:600;text-transform:uppercase">🏪 Retiro</div>
+          <div style="font-weight:600;font-size:14px">${p.nombre_comercial}</div>
+          <div style="font-size:13px;color:var(--text2)">${p.direccion_retiro}</div>
+        </div>
+        <div style="margin-bottom:12px">
+          <div style="font-size:11px;color:var(--text3);margin-bottom:4px;font-weight:600;text-transform:uppercase">📍 Entrega</div>
+          <div style="font-size:14px">${p.direccion_entrega}</div>
+        </div>
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--text2);margin-bottom:4px">
+          <span>💰 <strong style="color:var(--teal)">${fmt(p.tarifa_entrega)}</strong></span>
+          <span>📏 ${p.distancia_km} km</span>
+        </div>
+        ${siguiente ? `<button class="avanzar-btn" id="btn-avanzar">${SIGUIENTE_BTN[p.estado]}</button>` : '<div style="margin-top:16px;text-align:center;color:var(--teal);font-weight:700;padding:14px;background:var(--teal-bg);border-radius:10px">✅ ¡Pedido entregado!</div>'}
+      </div>
+    </div>
+  `;
+
+  // Iniciar mapa de navegación
+  if (mapaNav) { mapaNav.remove(); mapaNav = null; markerMiPos = null; }
+  setTimeout(() => {
+    const centro = p.neg_lat && p.neg_lng ? [p.neg_lat, p.neg_lng]
+                 : p.lat_entrega && p.lng_entrega ? [p.lat_entrega, p.lng_entrega]
+                 : [-33.45, -70.65];
+    mapaNav = L.map('mapa-navegacion').setView(centro, 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' }).addTo(mapaNav);
+
+    // Marker negocio (punto de retiro)
+    if (p.neg_lat && p.neg_lng) {
+      const iconNeg = L.divIcon({ html: '<div style="background:#854F0B;width:20px;height:20px;border-radius:4px;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:10px">🏪</div>', iconSize:[20,20], iconAnchor:[10,10] });
+      L.marker([p.neg_lat, p.neg_lng], { icon: iconNeg }).addTo(mapaNav).bindPopup(`🏪 ${p.nombre_comercial}<br><small>Punto de retiro</small>`);
+    }
+
+    // Marker destino entrega
+    if (p.lat_entrega && p.lng_entrega) {
+      const iconDest = L.divIcon({ html: '<div style="background:#DC2626;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:10px">📍</div>', iconSize:[20,20], iconAnchor:[10,10] });
+      L.marker([p.lat_entrega, p.lng_entrega], { icon: iconDest }).addTo(mapaNav).bindPopup(`📍 Destino entrega<br><small>${p.direccion_entrega}</small>`);
+    }
+
+    // Mostrar mi posición y dibujar ruta según estado
+    if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(gpos) {
+      const myLat = gpos.coords.latitude, myLng = gpos.coords.longitude;
+      const iconMe = L.divIcon({ html: '<div style="background:#0F6E56;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px">🏍</div>', iconSize:[24,24], iconAnchor:[12,12] });
+      markerMiPos = L.marker([myLat, myLng], { icon: iconMe }).addTo(mapaNav).bindPopup('Tu posición');
+
+      // Ruta según estado:
+      // asignado  → rider va al negocio (rider→negocio, + contexto negocio→destino punteado)
+      // retiro    → rider ya está en el negocio, va al destino (negocio→destino)
+      // en_camino → rider lleva el pedido hacia el destino (rider→destino)
+      const puntos = [[myLat, myLng]];
+      if (p.neg_lat && p.neg_lng) puntos.push([p.neg_lat, p.neg_lng]);
+      if (p.lat_entrega && p.lng_entrega) puntos.push([p.lat_entrega, p.lng_entrega]);
+      mapaNav.fitBounds(puntos, { padding: [40, 40] });
+
+      if (p.estado === 'asignado' && p.neg_lat && p.neg_lng) {
+        // Rider → negocio (ruta principal, amarillo sólido)
+        dibujarRutaOSRM(mapaNav, myLat, myLng, p.neg_lat, p.neg_lng, '#FFCC00', 5);
+        // Negocio → destino (contexto, gris punteado)
+        if (p.lat_entrega && p.lng_entrega)
+          dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#aaa', 3, '6,8');
+      } else if (p.estado === 'retiro' && p.neg_lat && p.neg_lng && p.lat_entrega && p.lng_entrega) {
+        // Negocio → destino (amarillo sólido)
+        dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#FFCC00', 5);
+      } else if (p.lat_entrega && p.lng_entrega) {
+        // en_camino: rider → destino (amarillo sólido)
+        dibujarRutaOSRM(mapaNav, myLat, myLng, p.lat_entrega, p.lng_entrega, '#FFCC00', 5);
+      }
+    }, function() {
+      // Sin GPS: mostrar ruta negocio→destino de todas formas
+      if (p.neg_lat && p.neg_lng && p.lat_entrega && p.lng_entrega) {
+        dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#FFCC00', 4);
+        mapaNav.fitBounds([[p.neg_lat, p.neg_lng],[p.lat_entrega, p.lng_entrega]], { padding: [40, 40] });
+      }
+    });
+  }, 100);
+
+  if (siguiente) {
+    $('btn-avanzar').addEventListener('click', async () => {
+      $('btn-avanzar').disabled = true;
+      $('btn-avanzar').textContent = 'Actualizando...';
+      try {
+        const actualizado = await apiFetch(`/pedidos/${p.id}/estado`, { method: 'PUT' });
+        pedidoActivo = actualizado;
+        if (actualizado.estado === 'entregado') {
+          pedidoActivo = null;
+          if (mapaNav) { mapaNav.remove(); mapaNav = null; }
+          toast('🎉 ¡Pedido entregado!', 'success');
+          $('pedido-activo-wrap').style.display = 'none';
+          cargarStats();
+          if (disponible) cargarDisponibles();
+        } else {
+          renderPedidoActivo(actualizado);
+          toast(`Estado: ${ESTADO_LABEL[actualizado.estado]}`, 'success');
+        }
+      } catch (e) { toast(e.message, 'error'); $('btn-avanzar').disabled = false; }
+    });
+  }
+}
+
+// ══════════ DISPONIBLES ══════════
+async function cargarDisponibles() {
+  try {
+    const data = await apiFetch('/riders/pedidos/disponibles');
+    renderDisponibles(data);
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+const COMPAT_LABEL = {
+  libre:       { txt: 'Disponible',    bg: '#E1F5EE', color: '#0F6E56' },
+  mismo_local: { txt: '🏪 Mismo local — retiro conjunto', bg: '#E6F1FB', color: '#185FA5' },
+  ruta_cercana:{ txt: '📍 Destino cercano a tu ruta', bg: '#FAEEDA', color: '#854F0B' },
+};
+
+function renderDisponibles(pedidos) {
+  const container = $('lista-disponibles');
+  if (!pedidos.length) {
+    container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">Sin pedidos disponibles ahora</div></div>';
+    return;
+  }
+
+  // Separar: compatibles primero, sin compatibilidad al fondo (no se pueden tomar)
+  const compatibles = pedidos.filter(p => p.compatibilidad !== null);
+  const incompatibles = pedidos.filter(p => p.compatibilidad === null);
+
+  const renderCard = (p, bloqueado = false) => {
+    const compat = COMPAT_LABEL[p.compatibilidad] || null;
+    return `
+    <div class="pedido-disponible${bloqueado ? ' pd-bloqueado' : ''}" data-id="${p.id}">
+      ${compat ? `<div style="font-size:11px;font-weight:600;padding:5px 12px;background:${compat.bg};color:${compat.color};border-radius:6px 6px 0 0">${compat.txt}</div>` : ''}
+      <div class="pd-header">
+        <div class="pd-header-title">📦 ${p.nombre_comercial}</div>
+        <div class="pd-tarifa">${fmt(p.tarifa_entrega)}</div>
+      </div>
+      <div class="pd-body">
+        <div class="pd-route">
+          <div class="pd-point">
+            <div class="pd-dot origen">🏪</div>
+            <div class="pd-addr"><strong>Retiro</strong><span>${p.direccion_retiro}</span></div>
+          </div>
+          <div class="pd-point">
+            <div class="pd-dot destino">📍</div>
+            <div class="pd-addr"><strong>Entrega</strong><span>${p.direccion_entrega}</span></div>
+          </div>
+        </div>
+        <div class="pd-meta">
+          <div class="pd-meta-item">📏 <strong>${p.distancia_km} km</strong></div>
+          <div class="pd-meta-item">⏱ ${timeAgo(p.created_at)}</div>
+        </div>
+        ${bloqueado
+          ? `<div style="font-size:12px;color:#9a9a94;text-align:center;padding:6px">Fuera de tu ruta actual</div>`
+          : `<div class="pd-actions">
+               <button class="btn btn-outline btn-sm" onclick="this.closest('.pedido-disponible').remove()">Rechazar</button>
+               <button class="btn btn-primary" onclick="aceptarPedido('${p.id}', this)">✅ Aceptar</button>
+             </div>`
+        }
+      </div>
+    </div>`;
+  };
+
+  container.innerHTML =
+    compatibles.map(p => renderCard(p, false)).join('') +
+    (incompatibles.length ? `<div style="font-size:11px;color:#9a9a94;text-align:center;padding:8px 0;border-top:1px solid rgba(0,0,0,.08);margin-top:8px">Fuera de ruta — completa tus entregas actuales</div>` : '') +
+    incompatibles.map(p => renderCard(p, true)).join('');
+}
+
+async function aceptarPedido(id, btn) {
+  btn.disabled = true; btn.textContent = 'Aceptando...';
+  try {
+    const pedido = await apiFetch(`/pedidos/${id}/aceptar`, { method: 'POST' });
+    toast('¡Pedido aceptado!', 'success');
+    await cargarPedidoActivo();
+    await cargarDisponibles(); // refrescar lista con nueva compatibilidad
+  } catch (e) {
+    toast(e.message, 'error');
+    btn.disabled = false; btn.textContent = '✅ Aceptar';
+  }
+}
+
+$('btn-refresh-dis').addEventListener('click', () => { if (disponible) cargarDisponibles(); });
+
+// ══════════ HISTORIAL ══════════
+async function cargarHistorial() {
+  try {
+    const data = await apiFetch('/riders/pedidos?estado=entregado&limit=30');
+    const container = $('lista-historial');
+    if (!data.length) {
+      container.innerHTML = '<div class="empty"><div class="empty-icon">📋</div><div class="empty-text">Sin entregas aún</div></div>';
+      return;
+    }
+    container.innerHTML = data.map(p => {
+      const durMin = (p.retiro_at && p.entregado_at)
+        ? Math.max(0, Math.round((new Date(p.entregado_at) - new Date(p.retiro_at)) / 60000))
+        : null;
+      return `
+        <div class="hist-item">
+          <div class="hist-left">
+            <div class="hist-negocio">${p.nombre_comercial}</div>
+            <div class="hist-dir">${p.direccion_entrega}</div>
+            ${durMin !== null ? `<div style="font-size:11px;color:var(--teal-mid);margin-top:2px;font-weight:500">⏱ ${durMin} min · ${p.distancia_km} km</div>` : ''}
+          </div>
+          <div class="hist-right">
+            <div class="hist-tarifa">${fmt(p.tarifa_entrega)}</div>
+            <div class="hist-fecha">${timeAgo(p.entregado_at || p.created_at)}</div>
+          </div>
+        </div>`;
+    }).join('');
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+// ══════════ PERFIL ══════════
+async function cargarPerfil() {
+  try {
+    const p = await apiFetch('/riders/perfil');
+    $('perfil-body').innerHTML = `
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--teal);color:white;font-size:28px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px">${p.nombre[0]}</div>
+        <div style="font-size:18px;font-weight:700">${p.nombre}</div>
+        <div style="font-size:13px;color:var(--text2)">${p.email}</div>
+      </div>
+      <div style="display:grid;gap:12px">
+        <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Teléfono</span><strong>${p.telefono || '—'}</strong></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Vehículo</span><strong>${p.vehiculo_tipo || '—'}</strong></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Total entregas</span><strong>${p.total_entregas}</strong></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Rating</span><strong>⭐ ${parseFloat(p.rating || 5).toFixed(1)}</strong></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Saldo pendiente</span><strong style="color:var(--teal)">${fmt(p.saldo_pendiente || 0)}</strong></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Miembro desde</span><strong>${new Date(p.created_at).toLocaleDateString('es-CL')}</strong></div>
+      </div>
+    `;
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+// ══════════ GANANCIAS ══════════
+async function cargarGanancias() {
+  try {
+    const [saldo, historial, liquidaciones] = await Promise.all([
+      apiFetch('/pagos/saldo'),
+      apiFetch('/riders/pedidos?estado=entregado&limit=100'),
+      apiFetch('/pagos/liquidaciones')
+    ]);
+
+    $('gan-saldo').textContent = fmt(saldo.saldo_pendiente || 0);
+
+    const ahora = new Date();
+    const esMes = p => {
+      const d = new Date(p.created_at);
+      return d.getMonth() === ahora.getMonth() && d.getFullYear() === ahora.getFullYear();
+    };
+    const estesMes = historial.filter(esMes);
+    const montoMes = estesMes.reduce((s, p) => s + parseInt(p.tarifa_entrega || 0), 0);
+    const RESIDUAL_PCT = 8;
+    const residual = Math.round(montoMes * RESIDUAL_PCT / 100);
+
+    $('gan-mes-entregas').textContent = estesMes.length;
+    $('gan-mes-monto').textContent    = fmt(montoMes);
+    $('gan-residual').textContent     = fmt(residual);
+    $('gan-total-mes').textContent    = fmt(montoMes + residual);
+
+    $('gan-liquidaciones').innerHTML = liquidaciones.length
+      ? liquidaciones.map(l => `
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)">
+            <div>
+              <div style="font-size:13px;font-weight:600">${new Date(l.fecha_desde).toLocaleDateString('es-CL')} – ${new Date(l.fecha_hasta).toLocaleDateString('es-CL')}</div>
+              <div style="font-size:11px;color:var(--text3)">${l.pedidos_count} entregas</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-weight:700;color:var(--teal)">${fmt(l.monto_total)}</div>
+              <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${l.estado==='pagada'?'var(--teal-bg)':'var(--amber-bg)'};color:${l.estado==='pagada'?'var(--teal)':'var(--amber)'}">${l.estado==='pagada'?'Pagada':'Pendiente'}</span>
+            </div>
+          </div>
+        `).join('')
+      : '<p style="font-size:13px;color:var(--text3)">Sin liquidaciones aún</p>';
+
+    // Lista detallada por entrega
+    const ganDetalle = $('gan-detalle-lista');
+    if (ganDetalle) {
+      if (!historial.length) {
+        ganDetalle.innerHTML = '<p style="font-size:13px;color:var(--text3)">Sin entregas registradas</p>';
+      } else {
+        ganDetalle.innerHTML = historial.slice(0, 30).map(p => {
+          const durMin = (p.retiro_at && p.entregado_at)
+            ? Math.max(0, Math.round((new Date(p.entregado_at) - new Date(p.retiro_at)) / 60000))
+            : null;
+          return `
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)">
+              <div style="flex:1;min-width:0">
+                <div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.nombre_comercial}</div>
+                <div style="font-size:11px;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.direccion_entrega}</div>
+                <div style="font-size:11px;color:var(--text3);margin-top:1px">${new Date(p.entregado_at || p.created_at).toLocaleDateString('es-CL', {day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'})}${durMin !== null ? ' · ' + durMin + ' min' : ''}</div>
+              </div>
+              <div style="text-align:right;margin-left:12px;flex-shrink:0">
+                <div style="font-weight:700;color:var(--teal);font-size:14px">${fmt(p.tarifa_entrega)}</div>
+                <div style="font-size:11px;color:var(--text3)">${p.distancia_km} km</div>
+              </div>
+            </div>`;
+        }).join('');
+      }
+    }
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+// ══════════ REFERIDOS ══════════
+async function cargarReferidos() {
+  try {
+    const perfil = await apiFetch('/riders/perfil');
+    // Código de referido basado en el ID del rider (primeros 8 chars en mayúscula)
+    const codigo = 'RJ-' + (perfil.id || '').substring(0,6).toUpperCase();
+    $('ref-codigo').textContent = codigo;
+    localStorage.setItem('rj_ref_codigo', codigo);
+    // Por ahora mostramos vacío — en el futuro se conecta a tabla de referidos
+    $('ref-lista').innerHTML = '<div class="empty"><div class="empty-icon">🏪</div><div class="empty-text">Aún no has referido comercios</div></div>';
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+function copiarCodigo() {
+  const codigo = $('ref-codigo').textContent;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(codigo).then(() => toast('¡Código copiado!', 'success'));
+  } else {
+    const el = document.createElement('textarea');
+    el.value = codigo;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    el.remove();
+    toast('¡Código copiado!', 'success');
+  }
+}
+
+// ══════════ BOTTOM TABS ══════════
+document.querySelectorAll('.b-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.b-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    ['inicio','historial','ganancias','referidos','perfil'].forEach(p => {
+      $(`page-${p}`).style.display = tab.dataset.page === p ? 'block' : 'none';
+    });
+    if (tab.dataset.page === 'historial')  cargarHistorial();
+    if (tab.dataset.page === 'ganancias')  cargarGanancias();
+    if (tab.dataset.page === 'referidos')  cargarReferidos();
+    if (tab.dataset.page === 'perfil')     cargarPerfil();
+  });
+});
+
+// ══════════ INIT ══════════
+if (token && usuario && usuario.rol === 'rider') {
+  iniciarApp();
+}
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

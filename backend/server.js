@@ -49,15 +49,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Servir archivos estáticos — sin caché para HTML
-app.use(express.static(path.join(__dirname, '..'), {
+// Primero busca en public/ (producción), luego en el directorio padre (desarrollo local)
+const staticDirs = [
+  path.join(__dirname, 'public'),
+  path.join(__dirname, '..')
+];
+const staticOpts = {
   etag: false,
   lastModified: false,
   setHeaders: (res, filePath) => {
-    if (filePath.endsWith('.html')) {
-      res.set('Cache-Control', 'no-store');
-    }
+    if (filePath.endsWith('.html')) res.set('Cache-Control', 'no-store');
   }
-}));
+};
+staticDirs.forEach(dir => app.use(express.static(dir, staticOpts)));
 
 // Health check
 app.get('/health', (req, res) => {

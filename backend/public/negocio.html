@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparto Justo — Panel Negocio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --teal: #FFCC00;
+      --teal-mid: #FFD740;
+      --teal-bg: #FFFBEA;
+      --teal-dark: #0F172A;
+      --amber: #854F0B;
+      --amber-bg: #FAEEDA;
+      --amber-mid: #EF9F27;
+      --red: #DC2626;
+      --red-bg: #FEE2E2;
+      --blue: #0F172A;
+      --blue-bg: #E8EAF0;
+      --text: #1C1C1C;
+      --text2: #6b6b66;
+      --text3: #9a9a94;
+      --bg: #F9F9F9;
+      --bg2: #ffffff;
+      --border: rgba(0,0,0,0.10);
+      --r: 12px;
+      --r-sm: 8px;
+      --negro: #1C1C1C;
+      --navy: #0F172A;
+      --amarillo: #FFCC00;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* ── AUTH ── */
+    #auth-screen {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-mid) 100%);
+    }
+    .auth-card {
+      background: white;
+      border-radius: 20px;
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+    .auth-logo { font-size: 28px; font-weight: 800; color: var(--teal); margin-bottom: 8px; }
+    .auth-sub { color: var(--text2); font-size: 14px; margin-bottom: 32px; }
+    .auth-card h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+
+    /* ── INPUTS ── */
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-size: 13px; font-weight: 500; color: var(--text2); margin-bottom: 6px; }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: 11px 14px; border: 1.5px solid var(--border);
+      border-radius: var(--r-sm); font-size: 14px; font-family: inherit;
+      transition: border-color .2s; background: white; color: var(--text);
+    }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none; border-color: var(--teal-mid);
+    }
+    .field textarea { resize: vertical; min-height: 80px; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 20px; border-radius: var(--r-sm); font-size: 14px;
+      font-weight: 600; cursor: pointer; border: none; transition: all .2s;
+      font-family: inherit;
+    }
+    .btn-primary { background: var(--amarillo); color: var(--negro); }
+    .btn-primary:hover { background: #e6b800; }
+    .btn-primary:disabled { background: var(--text3); cursor: not-allowed; }
+    .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+    .btn-outline:hover { border-color: var(--teal-mid); color: var(--teal); }
+    .btn-danger { background: var(--red-bg); color: var(--red); }
+    .btn-danger:hover { background: var(--red); color: white; }
+    .btn-sm { padding: 7px 14px; font-size: 13px; }
+    .btn-full { width: 100%; justify-content: center; }
+
+    /* ── APP SHELL ── */
+    #app { display: none; height: 100vh; overflow: hidden; }
+    .topbar {
+      background: var(--negro); border-bottom: none;
+      padding: 0 20px; height: 56px;
+      display: flex; align-items: center; gap: 20px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .topbar-brand { font-size: 17px; font-weight: 800; color: var(--amarillo); white-space: nowrap; font-family: 'Montserrat', sans-serif; letter-spacing: -.3px; }
+    .topbar-tabs { display: flex; gap: 3px; flex: 1; }
+    .topbar-info { display: flex; align-items: center; gap: 12px; margin-left: auto; white-space: nowrap; }
+    .negocio-name { font-weight: 600; font-size: 13px; color: #ccc; }
+    .badge-abierto {
+      padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      cursor: pointer; transition: all .2s;
+    }
+    .badge-abierto.open { background: var(--amarillo); color: var(--negro); }
+    .badge-abierto.closed { background: var(--red-bg); color: var(--red); }
+
+    .main { padding: 16px; max-width: 1600px; margin: 0 auto; height: calc(100vh - 56px); overflow: hidden; }
+
+    /* ── TABS (ahora en topbar) ── */
+    .tab {
+      padding: 6px 14px; border-radius: var(--r-sm); font-size: 13px; font-weight: 500;
+      cursor: pointer; border: none; background: transparent; color: #888;
+      transition: all .2s; font-family: inherit;
+    }
+    .tab.active { background: var(--amarillo); color: var(--negro); font-weight: 700; }
+    .tab-nuevo-btn { font-size: 13px; font-weight: 700; background: rgba(255,204,0,.15); color: var(--amarillo); border: 1.5px solid rgba(255,204,0,.4); }
+    .tab-nuevo-btn.active { background: var(--amarillo); color: var(--negro); border-color: var(--amarillo); }
+
+    /* ── CARDS ── */
+    .card { background: white; border-radius: var(--r); border: 1px solid var(--border); overflow: hidden; }
+    .card-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .card-header h3 { font-size: 15px; font-weight: 600; }
+    .card-body { padding: 20px; }
+
+    /* ── PEDIDOS ── */
+    .pedido-list { display: flex; flex-direction: column; gap: 12px; }
+    .pedido-item {
+      border: 1.5px solid var(--border); border-radius: var(--r-sm);
+      padding: 16px; cursor: pointer; transition: all .2s;
+    }
+    .pedido-item:hover { border-color: var(--teal-mid); }
+    .pedido-item.selected { border-color: var(--teal); background: var(--teal-bg); }
+    .pedido-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+    .pedido-id { font-size: 12px; color: var(--text3); font-family: monospace; }
+    .estado-badge {
+      padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase;
+    }
+    .estado-pendiente  { background: var(--amber-bg); color: var(--amber); }
+    .estado-asignado   { background: var(--blue-bg); color: var(--blue); }
+    .estado-retiro     { background: #EDE9FE; color: #5B21B6; }
+    .estado-en_camino  { background: var(--teal-bg); color: var(--teal); }
+    .estado-entregado  { background: #D1FAE5; color: #065F46; }
+    .estado-cancelado  { background: var(--red-bg); color: var(--red); }
+
+    .pedido-cliente { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .pedido-dir { font-size: 13px; color: var(--text2); }
+    .pedido-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+    .pedido-tarifa { font-size: 14px; font-weight: 700; color: var(--teal); }
+    .pedido-time { font-size: 12px; color: var(--text3); }
+
+    /* ── FORMULARIO NUEVO PEDIDO ── */
+    .section-title { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .calc-box {
+      background: var(--teal-bg); border-radius: var(--r-sm); padding: 16px;
+      margin-top: 8px; margin-bottom: 16px;
+    }
+    .calc-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--teal-dark); margin-bottom: 4px; }
+    .calc-total { font-size: 16px; font-weight: 800; color: var(--teal); border-top: 1px solid rgba(15,110,86,.2); padding-top: 8px; margin-top: 4px; }
+
+    /* ── DETALLE PEDIDO ── */
+    .detalle-section { margin-bottom: 20px; }
+    .detalle-label { font-size: 12px; font-weight: 500; color: var(--text3); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+    .detalle-value { font-size: 14px; color: var(--text); }
+    .detalle-value strong { font-weight: 700; }
+    .timeline { list-style: none; }
+    .timeline li {
+      display: flex; align-items: flex-start; gap: 12px; padding-bottom: 16px;
+      position: relative;
+    }
+    .timeline li:not(:last-child)::before {
+      content: ''; position: absolute; left: 11px; top: 24px;
+      bottom: 0; width: 2px; background: var(--border);
+    }
+    .tl-dot {
+      width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 11px;
+    }
+    .tl-dot.done { background: var(--teal); color: white; }
+    .tl-dot.pending { background: var(--border); color: var(--text3); }
+    .tl-text { padding-top: 2px; font-size: 13px; color: var(--text2); }
+    .tl-text strong { font-weight: 600; color: var(--text); }
+
+    /* ── RIDER TRACKER ── */
+    .rider-card {
+      background: var(--teal-bg); border-radius: var(--r-sm); padding: 16px;
+      display: flex; align-items: center; gap: 14px; margin-bottom: 16px;
+    }
+    .rider-avatar {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--teal);
+      color: white; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 18px; flex-shrink: 0;
+    }
+    .rider-info { flex: 1; }
+    .rider-name { font-weight: 700; font-size: 14px; }
+    .rider-veh { font-size: 12px; color: var(--text2); }
+
+    /* ── EMPTY ── */
+    .empty { text-align: center; padding: 48px 24px; color: var(--text3); }
+    .empty-icon { font-size: 40px; margin-bottom: 12px; }
+    .empty-text { font-size: 14px; }
+
+    /* ── TOAST ── */
+    #toast-container { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; flex-direction: column; gap: 8px; }
+    .toast {
+      background: #1a1a18; color: white; padding: 12px 20px; border-radius: var(--r-sm);
+      font-size: 13px; font-weight: 500; max-width: 320px;
+      animation: slideIn .3s ease; box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    }
+    .toast.success { background: var(--teal); }
+    .toast.error   { background: var(--red); }
+    @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: none; opacity: 1; } }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.5);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000; padding: 24px;
+    }
+    .modal { background: white; border-radius: var(--r); width: 100%; max-width: 500px; overflow: hidden; }
+    .modal-header { padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .modal-header h3 { font-size: 16px; font-weight: 700; }
+    .modal-close { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--text2); }
+    .modal-body { padding: 24px; }
+    .modal-footer { padding: 16px 24px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 8px; }
+
+    .live-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--teal-mid);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    /* ── MAPA ── */
+    #mapa-seguimiento { height: 220px; border-radius: var(--r-sm); overflow: hidden; margin-bottom: 16px; border: 1px solid var(--border); }
+
+    /* ── MI CUENTA ── */
+    .cuenta-section { margin-bottom: 24px; }
+    .cuenta-section h4 { font-size: 13px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px; }
+    .info-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .info-row:last-child { border-bottom: none; }
+    .info-row span:first-child { color: var(--text2); }
+    .info-row strong { color: var(--text); }
+    .pago-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; border: 1px solid var(--border); border-radius: var(--r-sm); margin-bottom: 8px; }
+    .pago-monto { font-weight: 700; font-size: 15px; color: var(--teal); }
+    .pago-estado { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 20px; }
+    .pago-pagado { background: var(--teal-bg); color: var(--teal); }
+    .pago-pendiente { background: var(--amber-bg); color: var(--amber); }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ LOGIN -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="auth-logo">Reparto Justo</div>
+    <div class="auth-sub">Panel de Negocio</div>
+    <h2>Iniciar sesión</h2>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" id="login-email" placeholder="tu@negocio.cl" autocomplete="email">
+    </div>
+    <div class="field">
+      <label>Contraseña</label>
+      <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <p id="login-error" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none"></p>
+    <button class="btn btn-primary btn-full" id="btn-login">Entrar</button>
+    <p style="text-align:center;font-size:13px;color:var(--text3);margin-top:16px">
+      ¿No tienes cuenta? <a href="#" id="link-registro" style="color:var(--teal);font-weight:600">Regístrate</a>
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ APP -->
+<div id="app">
+  <div class="topbar">
+    <div class="topbar-brand">🏍️ Reparto Justo</div>
+    <div class="topbar-tabs">
+      <button class="tab tab-nuevo-btn" data-tab="nuevo">+ Nuevo pedido</button>
+      <button class="tab active" data-tab="pedidos">Pedidos activos</button>
+      <button class="tab" data-tab="historial">Historial</button>
+      <button class="tab" data-tab="cuenta">Mi cuenta</button>
+    </div>
+    <div class="topbar-info">
+      <div class="live-dot" title="Conectado en tiempo real"></div>
+      <span class="negocio-name" id="topbar-nombre">—</span>
+      <span class="badge-abierto closed" id="btn-toggle-abierto">● Cerrado</span>
+      <button class="btn btn-outline btn-sm" id="btn-logout">Salir</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- Contenido full-width sin columna derecha -->
+    <div style="height:100%">
+
+      <!-- Tab: Pedidos activos -->
+      <div id="tab-pedidos">
+        <div class="card">
+          <div class="card-header">
+            <h3>Pedidos en curso</h3>
+            <button class="btn btn-outline btn-sm" id="btn-refresh">↻ Actualizar</button>
+          </div>
+          <div class="card-body">
+            <div id="list-activos" class="pedido-list">
+              <div class="empty"><div class="empty-icon">📦</div><div class="empty-text">No hay pedidos activos</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Historial -->
+      <div id="tab-historial" style="display:none">
+        <div class="card">
+          <div class="card-header">
+            <h3>Historial de pedidos</h3>
+            <select id="filtro-estado" style="font-size:13px;padding:6px 10px;border:1px solid var(--border);border-radius:6px;font-family:inherit">
+              <option value="">Todos</option>
+              <option value="entregado">Entregados</option>
+              <option value="cancelado">Cancelados</option>
+            </select>
+          </div>
+          <div class="card-body">
+            <div id="list-historial" class="pedido-list">
+              <div class="empty"><div class="empty-icon">📋</div><div class="empty-text">Sin historial aún</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Mi Cuenta -->
+      <div id="tab-cuenta" style="display:none">
+        <div class="card">
+          <div class="card-header"><h3>Mi cuenta</h3><button class="btn btn-outline btn-sm" id="btn-editar-perfil">Editar</button></div>
+          <div class="card-body">
+            <div class="cuenta-section">
+              <h4>Perfil del negocio</h4>
+              <div class="info-row"><span>Nombre comercial</span><strong id="cuenta-nombre">—</strong></div>
+              <div class="info-row"><span>Categoría</span><strong id="cuenta-categoria">—</strong></div>
+              <div class="info-row"><span>Dirección</span><strong id="cuenta-direccion">—</strong></div>
+              <div class="info-row"><span>Email</span><strong id="cuenta-email">—</strong></div>
+              <div class="info-row"><span>Teléfono</span><strong id="cuenta-telefono">—</strong></div>
+            </div>
+            <div class="cuenta-section">
+              <h4>Resumen de actividad</h4>
+              <div class="info-row"><span>Total pedidos</span><strong id="cuenta-total-pedidos">—</strong></div>
+              <div class="info-row"><span>Pedidos este mes</span><strong id="cuenta-mes-pedidos">—</strong></div>
+              <div class="info-row"><span>Gasto en entregas (mes)</span><strong id="cuenta-gasto-mes">—</strong></div>
+            </div>
+            <div class="cuenta-section">
+              <h4>Últimos pagos</h4>
+              <div id="cuenta-pagos-lista"><p style="color:var(--text3);font-size:13px">Cargando...</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Nuevo pedido -->
+      <div id="tab-nuevo" style="display:none;height:100%">
+        <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:100%">
+
+          <!-- ── COLUMNA IZQUIERDA: formulario (ocupa ambas filas) -->
+          <div class="card" style="grid-row:1/3;overflow:hidden;display:flex;flex-direction:column">
+            <div class="card-body" style="overflow-y:auto;flex:1">
+              <div class="section-title">Nuevo pedido</div>
+
+              <!-- PASO 1: Teléfono del cliente -->
+              <div id="paso-telefono">
+                <div style="background:var(--teal-bg);border-radius:var(--r-sm);padding:12px 16px;margin-bottom:16px;font-size:13px;color:var(--teal-dark)">
+                  <strong>Paso 1:</strong> Ingresa el teléfono del cliente para buscarlo o registrarlo
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-end">
+                  <div class="field" style="flex:1;margin-bottom:0">
+                    <label>Teléfono del cliente *</label>
+                    <input type="tel" id="np-telefono" placeholder="+56912345678" autocomplete="off">
+                  </div>
+                  <button class="btn btn-primary" id="btn-buscar-cliente" style="flex-shrink:0">Buscar</button>
+                </div>
+                <div id="cliente-sugerencia" style="display:none;margin-top:8px;padding:12px;background:white;border:1.5px solid var(--teal-mid);border-radius:var(--r-sm);cursor:pointer">
+                  <div style="font-size:12px;color:var(--teal);font-weight:600;margin-bottom:4px">✓ Cliente encontrado</div>
+                  <div id="cliente-sug-nombre" style="font-weight:600;font-size:14px"></div>
+                  <div id="cliente-sug-dir" style="font-size:12px;color:var(--text2)"></div>
+                </div>
+              </div>
+
+              <!-- PASO 2: Datos del pedido -->
+              <div id="paso-pedido" style="display:none;margin-top:16px">
+                <div style="background:var(--teal-bg);border-radius:var(--r-sm);padding:12px 16px;margin-bottom:16px;font-size:13px;color:var(--teal-dark)">
+                  <strong>Paso 2:</strong> Completa los datos y marca el destino en el mapa
+                </div>
+
+                <div class="field">
+                  <label>Nombre del cliente *</label>
+                  <input type="text" id="np-nombre" placeholder="Juan Pérez">
+                </div>
+
+                <div class="field">
+                  <label>Dirección de entrega *</label>
+                  <input type="text" id="np-direccion" placeholder="Escribe o haz clic en el mapa">
+                </div>
+
+                <div class="field">
+                  <label>Notas para el rider</label>
+                  <input type="text" id="np-notas" placeholder="Ej: dejar en portería, 3er piso">
+                </div>
+
+                <div class="field">
+                  <label>Valor del producto *</label>
+                  <input type="number" id="np-valor-producto" placeholder="Ej: 15000" min="0" step="100"
+                    oninput="actualizarCalculo(parseFloat($('calc-distancia-raw')?.value) || 0)">
+                  <div style="font-size:11px;color:var(--text3);margin-top:3px">Monto cobrado al cliente por el pedido</div>
+                </div>
+                <input type="hidden" id="calc-distancia-raw">
+
+                <div style="display:flex;gap:8px;margin-top:8px">
+                  <button class="btn btn-outline" id="btn-volver-paso1" style="flex-shrink:0">← Volver</button>
+                  <button class="btn btn-primary btn-full" id="btn-crear-pedido">Crear pedido</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── CUARTO SUPERIOR DERECHO: mapa -->
+          <div class="card" style="overflow:hidden;display:flex;flex-direction:column">
+            <div class="card-body" style="padding:12px;flex:1;display:flex;flex-direction:column">
+              <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:6px">📍 Destino de entrega — haz clic para marcar</div>
+              <div id="mapa-selector" style="flex:1;border-radius:var(--r-sm);overflow:hidden;border:1.5px solid var(--border);min-height:0"></div>
+            </div>
+          </div>
+
+          <!-- ── CUARTO INFERIOR DERECHO: resumen cobro + gráfico actividad -->
+          <div class="card" style="overflow:hidden;display:flex;flex-direction:column">
+            <div class="card-body" style="padding:12px;flex:1;display:flex;flex-direction:column;gap:10px">
+
+              <!-- Resumen del cobro (compacto) -->
+              <div>
+                <div style="font-size:11px;font-weight:600;color:var(--text2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">💰 Resumen del cobro</div>
+                <div id="calc-box" style="color:var(--text3);font-size:12px">Selecciona el destino en el mapa</div>
+                <div id="calc-box-contenido" style="display:none;font-size:13px">
+                  <div class="calc-row"><span>Distancia</span><span id="calc-distancia">—</span></div>
+                  <div class="calc-row"><span>Producto</span><span id="calc-valor-prod">—</span></div>
+                  <div class="calc-row"><span>Envío</span><span id="calc-envio-total">—</span></div>
+                  <div class="calc-row" style="font-weight:700;color:var(--teal)"><span>Total cliente paga</span><span id="calc-cliente-total">—</span></div>
+                  <div style="font-size:11px;color:var(--text3);margin-top:4px">Hasta 1 km: $1.250 · luego +$65 c/100 m · <span style="color:var(--amber)">Multa $1.000 si cancelas en 5 min</span></div>
+                </div>
+              </div>
+
+              <!-- Gráfico de actividad -->
+              <div style="flex:1;min-height:0;border-top:1px solid var(--border);padding-top:10px;display:flex;flex-direction:column">
+                <div style="font-size:11px;font-weight:600;color:var(--text2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">📈 Actividad últimos 7 días</div>
+                <div style="flex:1;min-height:0;position:relative">
+                  <canvas id="chart-actividad" style="position:absolute;inset:0;width:100%!important;height:100%!important"></canvas>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── MODAL: DETALLE DEL PEDIDO ─────────────────────────────────── -->
+<div id="modal-detalle" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1500;display:none;align-items:center;justify-content:center;padding:24px">
+  <div style="background:white;border-radius:16px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.25)">
+    <div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:white;z-index:1">
+      <div style="display:flex;align-items:center;gap:10px">
+        <h3 style="font-size:15px;font-weight:600">Detalle del pedido</h3>
+        <span id="detalle-estado-badge" class="estado-badge"></span>
+      </div>
+      <button onclick="cerrarModalDetalle()" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--text2);line-height:1">✕</button>
+    </div>
+    <div id="mapa-seguimiento" style="display:none"></div>
+    <div class="card-body" id="detalle-body">
+      <div class="empty"><div class="empty-icon">👆</div><div class="empty-text">Cargando...</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div id="toast-container"></div>
+
+<!-- ── MODAL: EDITAR PERFIL NEGOCIO ──────────────────────────── -->
+<div id="modal-perfil" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;overflow-y:auto;padding:24px 16px">
+  <div style="background:white;border-radius:16px;max-width:520px;margin:0 auto;overflow:hidden">
+    <div style="padding:20px 24px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+      <h3 style="font-size:17px;font-weight:700">Editar perfil del negocio</h3>
+      <button onclick="cerrarModalPerfil()" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--text2)">✕</button>
+    </div>
+    <div style="padding:20px 24px">
+      <div class="field">
+        <label>Nombre comercial</label>
+        <input type="text" id="ep-nombre" placeholder="Ej: Sushi Tanaka">
+      </div>
+      <div class="field">
+        <label>Categoría</label>
+        <input type="text" id="ep-categoria" placeholder="Ej: japonesa, italiana, general">
+      </div>
+      <div class="field">
+        <label>Descripción</label>
+        <textarea id="ep-descripcion" style="min-height:64px" placeholder="Breve descripción de tu negocio"></textarea>
+      </div>
+      <div class="field">
+        <label>Dirección del local</label>
+        <input type="text" id="ep-direccion" placeholder="Ej: Freire 489, Villa Alemana" autocomplete="off">
+        <div style="font-size:11px;color:var(--text3);margin-top:4px">Escribe la dirección y se ubicará en el mapa, o haz clic directo en el mapa</div>
+      </div>
+      <div style="border-radius:var(--r-sm);overflow:hidden;border:1.5px solid var(--border);margin-bottom:16px">
+        <div id="mapa-perfil" style="height:240px;width:100%"></div>
+      </div>
+      <div id="ep-coords-info" style="font-size:12px;color:var(--text3);margin-bottom:16px;display:none">
+        📍 <span id="ep-coords-txt"></span>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-primary" id="btn-guardar-perfil" style="flex:1" onclick="guardarPerfil()">Guardar cambios</button>
+        <button class="btn btn-outline" onclick="cerrarModalPerfil()" style="flex-shrink:0">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = `${location.protocol}//${location.hostname}:3000/api`;
+let token = localStorage.getItem('rj_token');
+let usuario = JSON.parse(localStorage.getItem('rj_usuario') || 'null');
+let socket = null;
+let pedidoSeleccionado = null;
+let pedidosActivos = [];
+let mapaInstance = null;
+let markerRider = null;
+let markerDestino = null;
+
+// ══════════════════════════════════════════════════════════════
+// UTILS
+// ══════════════════════════════════════════════════════════════
+const $ = id => document.getElementById(id);
+const toast = (msg, type = '') => {
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.textContent = msg;
+  $('toast-container').appendChild(el);
+  setTimeout(() => el.remove(), 3500);
+};
+
+const fmt = n => '$' + parseInt(n).toLocaleString('es-CL');
+const timeAgo = d => {
+  const diff = Date.now() - new Date(d);
+  const m = Math.floor(diff / 60000);
+  if (m < 1) return 'hace un momento';
+  if (m < 60) return `hace ${m} min`;
+  const h = Math.floor(m / 60);
+  return h < 24 ? `hace ${h}h` : new Date(d).toLocaleDateString('es-CL');
+};
+
+const ESTADO_LABEL = {
+  pendiente: 'Pendiente',
+  asignado: 'Asignado',
+  retiro: 'En retiro',
+  en_camino: 'En camino',
+  entregado: 'Entregado',
+  cancelado: 'Cancelado'
+};
+
+async function apiFetch(path, opts = {}) {
+  const res = await fetch(API + path, {
+    ...opts,
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...(opts.headers || {})
+    }
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    const detalle = data.detalles ? ' · ' + data.detalles.map(d => d.path + ': ' + d.msg).join(', ') : '';
+    throw new Error((data.error || 'Error del servidor') + detalle);
+  }
+  return data;
+}
+
+// ══════════════════════════════════════════════════════════════
+// AUTH
+// ══════════════════════════════════════════════════════════════
+$('btn-login').addEventListener('click', async () => {
+  const email = $('login-email').value.trim();
+  const pass  = $('login-pass').value;
+  $('login-error').style.display = 'none';
+  $('btn-login').disabled = true;
+  $('btn-login').textContent = 'Entrando...';
+
+  try {
+    const data = await apiFetch('/auth/login', {
+      method: 'POST',
+      body: JSON.stringify({ email, password: pass })
+    });
+    if (data.usuario.rol !== 'negocio') {
+      throw new Error('Esta cuenta no es de negocio');
+    }
+    token = data.token;
+    usuario = data.usuario;
+    localStorage.setItem('rj_token', token);
+    localStorage.setItem('rj_usuario', JSON.stringify(usuario));
+    iniciarApp();
+  } catch (e) {
+    $('login-error').textContent = e.message;
+    $('login-error').style.display = 'block';
+  } finally {
+    $('btn-login').disabled = false;
+    $('btn-login').textContent = 'Entrar';
+  }
+});
+
+$('login-pass').addEventListener('keydown', e => { if (e.key === 'Enter') $('btn-login').click(); });
+
+$('btn-logout').addEventListener('click', () => {
+  localStorage.removeItem('rj_token');
+  localStorage.removeItem('rj_usuario');
+  if (socket) socket.disconnect();
+  location.reload();
+});
+
+// ══════════════════════════════════════════════════════════════
+// APP
+// ══════════════════════════════════════════════════════════════
+async function iniciarApp() {
+  $('auth-screen').style.display = 'none';
+  $('app').style.display = 'block';
+
+  // Cargar perfil negocio
+  try {
+    const perfil = await apiFetch('/negocios/perfil');
+    $('topbar-nombre').textContent = perfil.nombre_comercial;
+    const btnAbierto = $('btn-toggle-abierto');
+    if (perfil.activo) {
+      btnAbierto.textContent = '● Abierto';
+      btnAbierto.className = 'badge-abierto open';
+    }
+  } catch {}
+
+  conectarSocket();
+  cargarPedidosActivos();
+  cargarCoordsNegocio();
+  // Cargar gráfico con pedidos históricos
+  apiFetch('/negocios/pedidos?limit=200').then(pedidos => iniciarGrafico(pedidos)).catch(() => {});
+}
+
+// ══════════════════════════════════════════════════════════════
+// SOCKET.IO
+// ══════════════════════════════════════════════════════════════
+function conectarSocket() {
+  if (typeof io === 'undefined') return;
+  socket = io(`${location.protocol}//${location.hostname}:3000`, { auth: { token } });
+
+  socket.on('connect', () => console.log('🔌 Socket conectado'));
+  socket.on('connect_error', e => console.warn('Socket error:', e.message));
+
+  socket.on('pedido:nuevo', (data) => {
+    toast(`📦 Nuevo pedido recibido — ${fmt(data.tarifa_entrega)}`, 'success');
+    cargarPedidosActivos();
+  });
+
+  socket.on('pedido:actualizado', (data) => {
+    const label = ESTADO_LABEL[data.estado] || data.estado;
+    toast(`🔄 Pedido actualizado: ${label}`);
+    cargarPedidosActivos();
+    if (pedidoSeleccionado?.id === data.id && $('modal-detalle').style.display !== 'none') {
+      cargarDetalle(data.id);
+    }
+  });
+
+  socket.on('rider:ubicacion', (data) => {
+    if (pedidoSeleccionado?.id === data.pedido_id && mapaInstance) {
+      const pos = [data.lat, data.lng];
+      if (markerRider) {
+        markerRider.setLatLng(pos);
+      } else {
+        const iconRider = L.divIcon({ html: '<div style="background:#0F6E56;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.4)">🏍</div>', iconSize:[20,20], iconAnchor:[10,10] });
+        markerRider = L.marker(pos, { icon: iconRider }).addTo(mapaInstance);
+      }
+    }
+  });
+}
+
+// ══════════════════════════════════════════════════════════════
+// TABS
+// ══════════════════════════════════════════════════════════════
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    ['pedidos', 'historial', 'nuevo', 'cuenta'].forEach(name => {
+      $(`tab-${name}`).style.display = tab.dataset.tab === name ? 'block' : 'none';
+    });
+    if (tab.dataset.tab === 'historial') cargarHistorial();
+    if (tab.dataset.tab === 'cuenta') cargarMiCuenta();
+  });
+});
+
+// ══════════════════════════════════════════════════════════════
+// PEDIDOS ACTIVOS
+// ══════════════════════════════════════════════════════════════
+async function cargarPedidosActivos() {
+  try {
+    const data = await apiFetch('/negocios/pedidos?limit=50');
+    pedidosActivos = data.filter(p => !['entregado','cancelado'].includes(p.estado));
+    renderLista('list-activos', pedidosActivos);
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+async function cargarHistorial() {
+  const estado = $('filtro-estado').value;
+  try {
+    const params = estado ? `?estado=${estado}` : '?limit=50';
+    const data = await apiFetch(`/negocios/pedidos${params}`);
+    const hist = data.filter(p => ['entregado','cancelado'].includes(p.estado));
+    renderLista('list-historial', hist.length ? hist : []);
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+$('filtro-estado').addEventListener('change', cargarHistorial);
+$('btn-refresh').addEventListener('click', cargarPedidosActivos);
+
+function renderLista(containerId, pedidos) {
+  const container = $(containerId);
+  if (!pedidos.length) {
+    container.innerHTML = `<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">No hay pedidos aquí</div></div>`;
+    return;
+  }
+  container.innerHTML = pedidos.map(p => `
+    <div class="pedido-item ${pedidoSeleccionado?.id === p.id ? 'selected' : ''}" data-id="${p.id}">
+      <div class="pedido-header">
+        <span class="pedido-id">#${p.id.substring(0,8)}</span>
+        <span class="estado-badge estado-${p.estado}">${ESTADO_LABEL[p.estado]}</span>
+      </div>
+      <div class="pedido-cliente">${p.cliente_nombre}</div>
+      <div class="pedido-dir">📍 ${p.direccion_entrega}</div>
+      <div class="pedido-footer">
+        <span class="pedido-tarifa">${fmt(p.tarifa_entrega)}</span>
+        <span class="pedido-time">${timeAgo(p.created_at)}</span>
+      </div>
+    </div>
+  `).join('');
+
+  container.querySelectorAll('.pedido-item').forEach(el => {
+    el.addEventListener('click', () => {
+      pedidoSeleccionado = pedidos.find(p => p.id === el.dataset.id);
+      abrirModalDetalle(el.dataset.id);
+    });
+  });
+}
+
+// ══════════════════════════════════════════════════════════════
+// DETALLE PEDIDO
+// ══════════════════════════════════════════════════════════════
+async function cargarDetalle(id) {
+  try {
+    const p = await apiFetch(`/negocios/pedidos/${id}`);
+    pedidoSeleccionado = p;
+
+    if (socket) socket.emit('pedido:seguir', { pedido_id: id });
+
+    const badge = $('detalle-estado-badge');
+    badge.textContent = ESTADO_LABEL[p.estado];
+    badge.className = `estado-badge estado-${p.estado}`;
+
+    const PASOS = ['pendiente','asignado','retiro','en_camino','entregado'];
+    const idx = PASOS.indexOf(p.estado);
+
+    const enMovimiento = ['asignado','retiro','en_camino'].includes(p.estado);
+    const riderHtml = p.rider_nombre ? `
+      <div class="rider-card">
+        <div class="rider-avatar">${p.rider_nombre[0]}</div>
+        <div class="rider-info">
+          <div class="rider-name">${p.rider_nombre}</div>
+          <div class="rider-veh">🏍️ ${p.vehiculo_tipo || 'Vehículo'} · ${p.rider_telefono || '—'}</div>
+          ${enMovimiento ? '<div style="font-size:11px;color:var(--teal);margin-top:3px;font-weight:600">● Ubicación en tiempo real</div>' : ''}
+        </div>
+      </div>
+    ` : '<p style="font-size:13px;color:var(--text3);margin-bottom:16px">Esperando rider disponible...</p>';
+
+    const cancelBtn = !['entregado','cancelado'].includes(p.estado)
+      ? `<button class="btn btn-danger btn-sm" id="btn-cancelar">Cancelar pedido</button>` : '';
+
+    $('detalle-body').innerHTML = `
+      ${riderHtml}
+      <div class="detalle-section">
+        <div class="detalle-label">Cliente</div>
+        <div class="detalle-value"><strong>${p.cliente_nombre}</strong>${p.cliente_telefono ? ' · ' + p.cliente_telefono : ''}</div>
+      </div>
+      <div class="detalle-section">
+        <div class="detalle-label">Dirección de entrega</div>
+        <div class="detalle-value">${p.direccion_entrega}</div>
+      </div>
+      <div class="detalle-section">
+        <div class="detalle-label">Distancia · Tarifa entrega</div>
+        <div class="detalle-value">${p.distancia_km} km · <strong>${fmt(p.tarifa_entrega)}</strong></div>
+      </div>
+      ${p.notas ? `<div class="detalle-section"><div class="detalle-label">Notas</div><div class="detalle-value">${p.notas}</div></div>` : ''}
+      <div class="detalle-section">
+        <div class="detalle-label">Link de seguimiento</div>
+        <div style="display:flex;gap:8px;align-items:center;margin-top:4px">
+          <a href="${location.protocol}//${location.hostname}:3000/seguimiento.html?id=${p.id}" target="_blank"
+             style="font-size:12px;color:var(--teal);text-decoration:none;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+            🔗 Ver seguimiento
+          </a>
+          <button onclick="copiarLink('${p.id}')" style="padding:5px 12px;border:1.5px solid var(--border);border-radius:8px;background:white;font-size:12px;cursor:pointer;font-family:inherit;color:var(--text2)">
+            Copiar
+          </button>
+        </div>
+      </div>
+      <div class="detalle-section">
+        <div class="detalle-label">Progreso</div>
+        <ul class="timeline">
+          ${(() => {
+            const fmtTs = ts => ts ? new Date(ts).toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit'}) : '';
+            const diffMin = (a,b) => (a && b) ? Math.max(0, Math.round((new Date(b)-new Date(a))/60000)) : null;
+            const PASO_TS = { pendiente:p.created_at, asignado:p.asignado_at, retiro:p.retiro_at, en_camino:null, entregado:p.entregado_at };
+            const d1 = diffMin(p.created_at, p.asignado_at);
+            const d2 = diffMin(p.asignado_at, p.retiro_at);
+            const d3 = diffMin(p.retiro_at, p.entregado_at);
+            const PASO_DUR = {
+              pendiente: null,
+              asignado:  d1 !== null ? `tomado en ${d1} min` : null,
+              retiro:    d2 !== null ? `${d2} min desde asignación` : null,
+              en_camino: null,
+              entregado: d3 !== null ? `${d3} min en camino` : null
+            };
+            return PASOS.map((paso, i) => {
+              const ts = PASO_TS[paso];
+              const dur = PASO_DUR[paso];
+              return `
+                <li>
+                  <div class="tl-dot ${i <= idx ? 'done' : 'pending'}">${i < idx ? '✓' : i === idx ? '●' : '○'}</div>
+                  <div class="tl-text">
+                    <strong>${ESTADO_LABEL[paso]}</strong>
+                    ${(ts && i <= idx) ? `<span style="color:var(--text3);font-size:11px;display:block;margin-top:2px">${fmtTs(ts)}${dur ? ' · <em style=\'font-style:normal;color:var(--teal-mid)\'>' + dur + '</em>' : ''}</span>` : ''}
+                  </div>
+                </li>`;
+            }).join('');
+          })()}
+        </ul>
+      </div>
+      ${cancelBtn}
+    `;
+
+    if (cancelBtn) $('btn-cancelar').addEventListener('click', () => cancelarPedido(p.id));
+
+    // ── MAPA ──
+    const mapaEl = $('mapa-seguimiento');
+    const tieneDestino = p.lat_entrega && p.lng_entrega;
+    if (enMovimiento || tieneDestino) {
+      mapaEl.style.display = 'block';
+      if (mapaInstance) { mapaInstance.remove(); mapaInstance = null; }
+      setTimeout(() => {
+        const centro = tieneDestino ? [p.lat_entrega, p.lng_entrega] : [-33.45, -70.65];
+        mapaInstance = L.map('mapa-seguimiento').setView(centro, 14);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap'
+        }).addTo(mapaInstance);
+
+        // Marker destino
+        if (tieneDestino) {
+          const iconDestino = L.divIcon({ html: '<div style="background:#DC2626;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.4)"></div>', iconSize:[16,16], iconAnchor:[8,8] });
+          markerDestino = L.marker([p.lat_entrega, p.lng_entrega], { icon: iconDestino })
+            .addTo(mapaInstance)
+            .bindPopup(`📍 Entrega: ${p.direccion_entrega}`);
+        }
+
+        // Marker rider si tiene ubicación
+        if (p.rider_lat && p.rider_lng) {
+          const iconRider = L.divIcon({ html: '<div style="background:#0F6E56;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;font-size:10px">🏍</div>', iconSize:[20,20], iconAnchor:[10,10] });
+          markerRider = L.marker([p.rider_lat, p.rider_lng], { icon: iconRider })
+            .addTo(mapaInstance)
+            .bindPopup(`🏍️ ${p.rider_nombre}`);
+          if (tieneDestino) {
+            mapaInstance.fitBounds([[p.lat_entrega, p.lng_entrega],[p.rider_lat, p.rider_lng]], { padding: [30,30] });
+          }
+        }
+      }, 100);
+    } else {
+      mapaEl.style.display = 'none';
+      if (mapaInstance) { mapaInstance.remove(); mapaInstance = null; }
+    }
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+async function cancelarPedido(id) {
+  if (!confirm('¿Estás seguro de cancelar este pedido?')) return;
+  try {
+    await apiFetch(`/pedidos/${id}/cancelar`, { method: 'PUT', body: JSON.stringify({ motivo: 'Cancelado por el negocio' }) });
+    toast('Pedido cancelado', 'success');
+    cargarPedidosActivos();
+    $('detalle-body').innerHTML = '<div class="empty"><div class="empty-icon">❌</div><div class="empty-text">Pedido cancelado</div></div>';
+    pedidoSeleccionado = null;
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+// ══════════════════════════════════════════════════════════════
+// NUEVO PEDIDO — flujo en 2 pasos con mapa y distancia automática
+// ══════════════════════════════════════════════════════════════
+// Estructura de tarifas:
+//   0 – 1 km         → $1.250 tarifa plana
+//   > 1 km           → $1.250 + $65 por cada 100 m sobre el primer km
+const TARIFA_BASE_CLP     = 1250;  // tarifa plana 0-1 km
+const TARIFA_BASE_KM      = 1;     // km incluidos en la base
+const TARIFA_TRAMO_METROS = 100;   // granularidad
+const TARIFA_TRAMO_CLP    = 65;    // $/tramo adicional
+const APP_FEE    = 500;   // uso plataforma por pedido (cobrado al negocio)
+const CANCEL_FEE = 1000;  // multa por cancelación dentro del periodo
+
+function calcularTarifaEnvio(km) {
+  if (km <= TARIFA_BASE_KM) return TARIFA_BASE_CLP;
+  const metrosExtra = (km - TARIFA_BASE_KM) * 1000;
+  const tramos = Math.ceil(metrosExtra / TARIFA_TRAMO_METROS);
+  return TARIFA_BASE_CLP + tramos * TARIFA_TRAMO_CLP;
+}
+
+let negocioLat = null, negocioLng = null;
+let destinoLat = null, destinoLng = null;
+let mapaSelector = null;
+let markerSelector = null;
+let clienteActual = null;
+
+// Cargar coordenadas del negocio al iniciar
+async function cargarCoordsNegocio() {
+  try {
+    const p = await apiFetch('/negocios/perfil');
+    negocioLat = parseFloat(p.lat);
+    negocioLng = parseFloat(p.lng);
+  } catch {}
+}
+
+// Haversine como fallback
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.asin(Math.sqrt(a));
+}
+
+// Distancia real por ruta vial (OSRM — gratuito, sin API key)
+async function calcularDistanciaRuta(lat1, lng1, lat2, lng2) {
+  try {
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 5000);
+    const url = `https://router.project-osrm.org/route/v1/driving/${lng1},${lat1};${lng2},${lat2}?overview=false`;
+    const r = await fetch(url, { signal: ctrl.signal });
+    clearTimeout(tid);
+    const d = await r.json();
+    if (d.code === 'Ok' && d.routes?.[0]?.distance > 0) {
+      return Math.round(d.routes[0].distance / 100) / 10;
+    }
+  } catch {}
+  return haversineKm(lat1, lng1, lat2, lng2);
+}
+
+function actualizarCalculo(km) {
+  if (!Number.isFinite(km) || km <= 0) {
+    $('calc-box-contenido').style.display = 'none';
+    $('calc-box').style.display = 'block';
+    return;
+  }
+  const envio = calcularTarifaEnvio(km);
+  const valorProd = parseInt($('np-valor-producto')?.value) || 0;
+
+  if ($('calc-distancia-raw')) $('calc-distancia-raw').value = km;
+  $('calc-distancia').textContent     = km.toFixed(1) + ' km';
+  $('calc-valor-prod').textContent    = valorProd > 0 ? fmt(valorProd) : '—';
+  $('calc-envio-total').textContent   = fmt(envio);
+  $('calc-cliente-total').textContent = valorProd > 0 ? fmt(valorProd + envio) : fmt(envio);
+  $('calc-envio-ref').textContent     = fmt(envio);
+  $('calc-box').style.display = 'none';
+  $('calc-box-contenido').style.display = 'block';
+}
+
+// ── Validación teléfono chileno ────────────────────────────────────────────
+function normalizarTelCL(tel) {
+  const d = tel.replace(/\D/g, '');
+  if (d.startsWith('569') && d.length === 11) return d;
+  if (d.startsWith('9') && d.length === 9) return '56' + d;
+  if (d.startsWith('09') && d.length === 10) return '56' + d.slice(1);
+  if (d.startsWith('56') && d.length === 11) return d; // fijo u otros
+  return null;
+}
+
+function formatearTelCL(normalized) {
+  if (!normalized || normalized.length < 11) return normalized;
+  return `+56 ${normalized[2]} ${normalized.substring(3,7)} ${normalized.substring(7)}`;
+}
+
+// PASO 1: Buscar cliente por teléfono
+$('btn-buscar-cliente').addEventListener('click', async () => {
+  const raw = $('np-telefono').value.trim();
+  const telNorm = normalizarTelCL(raw);
+
+  if (!telNorm) {
+    // Formato inválido — intentar búsqueda fuzzy para sugerir
+    if (raw.replace(/\D/g, '').length >= 7) {
+      try {
+        const sugerencias = await apiFetch(`/clientes?q=${encodeURIComponent(raw.replace(/\D/g, ''))}`);
+        if (sugerencias?.length) {
+          const s = sugerencias[0];
+          toast(`¿Quisiste decir ${formatearTelCL(s.telefono)} (${s.nombre})?`, '');
+          $('np-telefono').value = formatearTelCL(s.telefono);
+          return;
+        }
+      } catch {}
+    }
+    toast('Teléfono inválido. Formato chileno: 9 XXXX XXXX', 'error');
+    return;
+  }
+
+  // Normalizar el campo con el formato limpio
+  $('np-telefono').value = formatearTelCL(telNorm);
+
+  try {
+    const cliente = await apiFetch(`/clientes?telefono=${encodeURIComponent(telNorm)}`);
+    if (cliente) {
+      clienteActual = cliente;
+      $('cliente-sug-nombre').textContent = cliente.nombre;
+      $('cliente-sug-dir').textContent = cliente.direccion || 'Sin dirección guardada';
+      $('cliente-sugerencia').style.display = 'block';
+      $('np-nombre').value = cliente.nombre;
+      if (cliente.direccion) $('np-direccion').value = cliente.direccion;
+      if (cliente.lat && cliente.lng) {
+        destinoLat = parseFloat(cliente.lat);
+        destinoLng = parseFloat(cliente.lng);
+      }
+    } else {
+      clienteActual = null;
+      $('cliente-sugerencia').style.display = 'none';
+      $('np-nombre').value = '';
+    }
+    // Avanzar al paso 2
+    $('paso-telefono').style.display = 'none';
+    $('paso-pedido').style.display = 'block';
+    iniciarMapaSelector();
+  } catch (e) { toast(e.message, 'error'); }
+});
+
+$('np-telefono').addEventListener('keydown', e => { if (e.key === 'Enter') $('btn-buscar-cliente').click(); });
+
+// Clic en sugerencia de cliente
+$('cliente-sugerencia').addEventListener('click', () => {
+  if (clienteActual?.lat && clienteActual?.lng && mapaSelector) {
+    const ll = [parseFloat(clienteActual.lat), parseFloat(clienteActual.lng)];
+    if (markerSelector) markerSelector.setLatLng(ll);
+    else {
+      const icon = L.divIcon({ html: '<div style="background:#DC2626;width:18px;height:18px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.4)"></div>', iconSize:[18,18], iconAnchor:[9,9] });
+      markerSelector = L.marker(ll, { icon }).addTo(mapaSelector);
+    }
+    mapaSelector.setView(ll, 15);
+    destinoLat = ll[0]; destinoLng = ll[1];
+    if (negocioLat) {
+      $('calc-distancia').textContent = 'Calculando...';
+      $('calc-box').style.display = 'none';
+      $('calc-box-contenido').style.display = 'block';
+      calcularDistanciaRuta(negocioLat, negocioLng, ll[0], ll[1]).then(actualizarCalculo);
+    }
+  }
+});
+
+$('btn-volver-paso1').addEventListener('click', () => {
+  $('paso-pedido').style.display = 'none';
+  $('paso-telefono').style.display = 'block';
+  $('cliente-sugerencia').style.display = 'none';
+  $('calc-box').style.display = 'block';
+  $('calc-box-contenido').style.display = 'none';
+});
+
+function iniciarMapaSelector() {
+  setTimeout(() => {
+    if (mapaSelector) { mapaSelector.remove(); mapaSelector = null; markerSelector = null; }
+    const centro = destinoLat && destinoLng ? [destinoLat, destinoLng]
+      : (negocioLat ? [negocioLat, negocioLng] : [-33.45, -70.65]);
+    mapaSelector = L.map('mapa-selector').setView(centro, 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' }).addTo(mapaSelector);
+
+    // Marker negocio
+    if (negocioLat) {
+      const iconNeg = L.divIcon({ html: '<div style="background:#0F6E56;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,.4)">🏪</div>', iconSize:[16,16], iconAnchor:[8,8] });
+      L.marker([negocioLat, negocioLng], { icon: iconNeg }).addTo(mapaSelector).bindPopup('🏪 Tu negocio');
+    }
+
+    // Marker destino si ya existe
+    if (destinoLat && destinoLng) {
+      const icon = L.divIcon({ html: '<div style="background:#DC2626;width:18px;height:18px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.4)"></div>', iconSize:[18,18], iconAnchor:[9,9] });
+      markerSelector = L.marker([destinoLat, destinoLng], { icon }).addTo(mapaSelector);
+      if (negocioLat) {
+        $('calc-distancia').textContent = 'Calculando...';
+        $('calc-box').style.display = 'none';
+        $('calc-box-contenido').style.display = 'block';
+        calcularDistanciaRuta(negocioLat, negocioLng, destinoLat, destinoLng).then(actualizarCalculo);
+      }
+    }
+
+    // Geocodificación directa al escribir la dirección
+    let geoTimer = null;
+    const inputDir = $('np-direccion');
+    const geocodificarDireccion = async () => {
+      const dir = inputDir.value.trim();
+      if (dir.length < 6) return;
+      try {
+        const q = encodeURIComponent(dir + ', Chile');
+        const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=cl`);
+        const d = await r.json();
+        if (d[0]) {
+          const lat = parseFloat(d[0].lat), lng = parseFloat(d[0].lon);
+          destinoLat = lat; destinoLng = lng;
+          const icon = L.divIcon({ html: '<div style="background:#DC2626;width:18px;height:18px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.4)"></div>', iconSize:[18,18], iconAnchor:[9,9] });
+          if (markerSelector) markerSelector.setLatLng([lat, lng]);
+          else markerSelector = L.marker([lat, lng], { icon }).addTo(mapaSelector);
+          mapaSelector.setView([lat, lng], 16);
+          if (negocioLat) {
+            $('calc-distancia').textContent = 'Calculando...';
+            $('calc-box').style.display = 'none';
+            $('calc-box-contenido').style.display = 'block';
+            calcularDistanciaRuta(negocioLat, negocioLng, lat, lng).then(actualizarCalculo);
+          }
+        }
+      } catch {}
+    };
+    inputDir.addEventListener('input', () => {
+      clearTimeout(geoTimer);
+      geoTimer = setTimeout(geocodificarDireccion, 700);
+    });
+    inputDir.addEventListener('blur', geocodificarDireccion);
+
+    // Si el cliente ya tenía dirección pre-llenada, geocodificar al abrir el mapa
+    if (inputDir.value.trim().length > 5 && !(destinoLat && destinoLng)) {
+      setTimeout(geocodificarDireccion, 300);
+    }
+
+    // Clic en mapa para seleccionar destino
+    mapaSelector.on('click', async (e) => {
+      const { lat, lng } = e.latlng;
+      destinoLat = lat; destinoLng = lng;
+      const icon = L.divIcon({ html: '<div style="background:#DC2626;width:18px;height:18px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.4)"></div>', iconSize:[18,18], iconAnchor:[9,9] });
+      if (markerSelector) markerSelector.setLatLng([lat, lng]);
+      else markerSelector = L.marker([lat, lng], { icon }).addTo(mapaSelector);
+
+      if (negocioLat) {
+        $('calc-distancia').textContent = 'Calculando...';
+        $('calc-box').style.display = 'none';
+        $('calc-box-contenido').style.display = 'block';
+        const km = await calcularDistanciaRuta(negocioLat, negocioLng, lat, lng);
+        actualizarCalculo(km);
+      }
+
+      // Geocodificación inversa con Nominatim (gratuito)
+      try {
+        const r = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`);
+        const d = await r.json();
+        if (d.display_name && !$('np-direccion').value) {
+          $('np-direccion').value = d.display_name.split(',').slice(0,3).join(', ');
+        }
+      } catch {}
+    });
+  }, 100);
+}
+
+$('btn-crear-pedido').addEventListener('click', async () => {
+  const nombre   = $('np-nombre').value.trim();
+  const rawTel   = $('np-telefono').value.trim();
+  const telefono = normalizarTelCL(rawTel) || rawTel;
+  const direccion = $('np-direccion').value.trim();
+  const notas    = $('np-notas').value.trim();
+
+  const valorProducto = parseInt($('np-valor-producto').value);
+  if (!nombre || !telefono || !direccion) {
+    toast('Nombre, teléfono y dirección son obligatorios', 'error'); return;
+  }
+  if (!valorProducto || valorProducto <= 0) {
+    toast('Ingresa el valor del producto', 'error');
+    $('np-valor-producto').focus(); return;
+  }
+  if (!normalizarTelCL(rawTel)) {
+    toast('Teléfono inválido. Formato chileno: 9 XXXX XXXX', 'error'); return;
+  }
+  if (!destinoLat || !destinoLng) {
+    // Intentar geocodificar la dirección escrita antes de bloquear
+    const dir = $('np-direccion').value.trim();
+    if (dir.length > 5) {
+      try {
+        const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(dir + ', Chile')}&format=json&limit=1&countrycodes=cl`);
+        const d = await r.json();
+        if (d[0]) { destinoLat = parseFloat(d[0].lat); destinoLng = parseFloat(d[0].lon); }
+      } catch {}
+    }
+    if (!destinoLat || !destinoLng) {
+      toast('No se pudo ubicar la dirección. Haz clic en el mapa para marcarla.', 'error'); return;
+    }
+  }
+
+  const kmRaw = await calcularDistanciaRuta(negocioLat || -33.45, negocioLng || -70.65, destinoLat, destinoLng);
+  const km = parseFloat((kmRaw || 0).toFixed(1));
+  console.log('[RJ] distancia calculada:', kmRaw, '→', km, '| negocio:', negocioLat, negocioLng, '| destino:', destinoLat, destinoLng);
+  if (!Number.isFinite(km) || km < 0.1) {
+    toast(`Distancia inválida (${km} km). Marca el punto de entrega en el mapa.`, 'error'); return;
+  }
+  if (km > 80) {
+    const ok = confirm(`La distancia calculada es ${km} km — ¿es correcto? Si el mapa no tiene la ubicación de tu negocio puede dar valores incorrectos.`);
+    if (!ok) return;
+  }
+
+  const btn = $('btn-crear-pedido');
+  btn.disabled = true; btn.textContent = 'Creando...';
+
+  try {
+    // Guardar/actualizar cliente
+    await apiFetch('/clientes', {
+      method: 'POST',
+      body: JSON.stringify({ nombre, telefono, direccion, lat: destinoLat, lng: destinoLng, notas: notas || undefined })
+    });
+
+    // Crear pedido
+    const pedido = await apiFetch('/pedidos', {
+      method: 'POST',
+      body: JSON.stringify({
+        cliente_nombre: nombre, cliente_telefono: telefono,
+        direccion_entrega: direccion, lat_entrega: destinoLat, lng_entrega: destinoLng,
+        distancia_km: km, valor_producto: valorProducto, notas: notas || undefined
+      })
+    });
+
+    // Generar link de seguimiento
+    const linkSeguimiento = `${location.origin}/seguimiento.html?id=${pedido.id}`;
+
+    toast('¡Pedido creado! Copiando link de seguimiento...', 'success');
+    navigator.clipboard?.writeText(linkSeguimiento).catch(() => {});
+
+    // Mostrar modal con link
+    mostrarLinkSeguimiento(pedido.id, linkSeguimiento);
+
+    // Limpiar form
+    $('paso-pedido').style.display = 'none';
+    $('paso-telefono').style.display = 'block';
+    ['np-nombre','np-telefono','np-direccion','np-notas','np-valor-producto'].forEach(id => $(id).value = '');
+    $('cliente-sugerencia').style.display = 'none';
+    $('calc-box').style.display = 'block';
+    $('calc-box-contenido').style.display = 'none';
+    destinoLat = null; destinoLng = null; clienteActual = null;
+    if (mapaSelector) { mapaSelector.remove(); mapaSelector = null; markerSelector = null; }
+
+    document.querySelector('[data-tab="pedidos"]').click();
+    cargarPedidosActivos();
+    setTimeout(() => abrirModalDetalle(pedido.id), 600);
+  } catch (e) { toast(e.message, 'error'); }
+  finally { btn.disabled = false; btn.textContent = 'Crear pedido'; }
+});
+
+function mostrarLinkSeguimiento(pedidoId, link) {
+  // Crear overlay temporal
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px';
+  overlay.innerHTML = `
+    <div style="background:white;border-radius:16px;padding:28px;max-width:440px;width:100%">
+      <div style="font-size:24px;text-align:center;margin-bottom:8px">🔗</div>
+      <h3 style="text-align:center;margin-bottom:4px;font-size:16px">Link de seguimiento para el cliente</h3>
+      <p style="text-align:center;font-size:13px;color:#6b6b66;margin-bottom:16px">Comparte este link con el cliente para que siga su pedido en tiempo real</p>
+      <div style="background:#f5f5f3;border-radius:8px;padding:12px;font-size:12px;word-break:break-all;color:#1a1a18;margin-bottom:16px;font-family:monospace">${link}</div>
+      <div style="display:flex;gap:8px">
+        <button onclick="navigator.clipboard?.writeText('${link}');this.textContent='¡Copiado!'" style="flex:1;padding:10px;background:#0F6E56;color:white;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit">📋 Copiar link</button>
+        <button onclick="this.closest('[style*=fixed]').remove()" style="flex:1;padding:10px;background:#f5f5f3;color:#1a1a18;border:1px solid rgba(0,0,0,.1);border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit">Cerrar</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+}
+
+// ══════════════════════════════════════════════════════════════
+// TOGGLE ABIERTO
+// ══════════════════════════════════════════════════════════════
+$('btn-toggle-abierto').addEventListener('click', async () => {
+  const btn = $('btn-toggle-abierto');
+  const esAbierto = btn.classList.contains('open');
+  try {
+    await apiFetch('/negocios/perfil', {
+      method: 'PUT',
+      body: JSON.stringify({ activo: !esAbierto })
+    });
+    if (esAbierto) {
+      btn.textContent = '● Cerrado'; btn.className = 'badge-abierto closed';
+    } else {
+      btn.textContent = '● Abierto'; btn.className = 'badge-abierto open';
+    }
+  } catch (e) { toast(e.message, 'error'); }
+});
+
+// ══════════════════════════════════════════════════════════════
+// MI CUENTA
+// ══════════════════════════════════════════════════════════════
+async function cargarMiCuenta() {
+  try {
+    const [perfil, pedidosTodos] = await Promise.all([
+      apiFetch('/negocios/perfil'),
+      apiFetch('/negocios/pedidos?limit=100')
+    ]);
+
+    $('cuenta-nombre').textContent      = perfil.nombre_comercial || '—';
+    $('cuenta-categoria').textContent   = perfil.categoria || '—';
+    $('cuenta-direccion').textContent   = perfil.direccion || '—';
+    $('cuenta-email').textContent       = perfil.email || '—';
+    $('cuenta-telefono').textContent    = perfil.telefono || '—';
+    $('cuenta-total-pedidos').textContent = pedidosTodos.length;
+
+    const ahora = new Date();
+    const pedidosMes = pedidosTodos.filter(p => {
+      const d = new Date(p.created_at);
+      return d.getMonth() === ahora.getMonth() && d.getFullYear() === ahora.getFullYear();
+    });
+    const gastoMes = pedidosMes
+      .filter(p => p.estado === 'entregado')
+      .reduce((sum, p) => sum + parseInt(p.tarifa_entrega || 0), 0);
+
+    $('cuenta-mes-pedidos').textContent = pedidosMes.length;
+    $('cuenta-gasto-mes').textContent   = fmt(gastoMes);
+
+    // Últimos pagos (últimos 5 pedidos entregados)
+    const entregados = pedidosTodos.filter(p => p.estado === 'entregado').slice(0, 5);
+    $('cuenta-pagos-lista').innerHTML = entregados.length
+      ? entregados.map(p => `
+          <div class="pago-item">
+            <div>
+              <div style="font-size:13px;font-weight:600">${p.cliente_nombre}</div>
+              <div style="font-size:11px;color:var(--text3)">${new Date(p.created_at).toLocaleDateString('es-CL')}</div>
+            </div>
+            <div style="text-align:right">
+              <div class="pago-monto">${fmt(p.tarifa_entrega)}</div>
+              <span class="pago-estado pago-pagado">Entregado</span>
+            </div>
+          </div>
+        `).join('')
+      : '<p style="color:var(--text3);font-size:13px">Sin pagos aún</p>';
+
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+// ══════════════════════════════════════════════════════════════
+// EDITAR PERFIL NEGOCIO
+// ══════════════════════════════════════════════════════════════
+let mapaPerfil = null, markerPerfil = null;
+let epLat = null, epLng = null;
+let epGeoTimer = null;
+
+function abrirModalPerfil() {
+  const modal = $('modal-perfil');
+  modal.style.display = 'block';
+
+  // Rellenar con datos actuales
+  apiFetch('/negocios/perfil').then(p => {
+    $('ep-nombre').value      = p.nombre_comercial || '';
+    $('ep-categoria').value   = p.categoria || '';
+    $('ep-descripcion').value = p.descripcion || '';
+    $('ep-direccion').value   = p.direccion || '';
+    epLat = p.lat ? parseFloat(p.lat) : null;
+    epLng = p.lng ? parseFloat(p.lng) : null;
+
+    // Inicializar mapa (esperar que el div sea visible)
+    setTimeout(() => {
+      if (!mapaPerfil) {
+        const centro = (epLat && epLng) ? [epLat, epLng] : [-33.45, -70.65];
+        mapaPerfil = L.map('mapa-perfil').setView(centro, epLat ? 15 : 11);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap'
+        }).addTo(mapaPerfil);
+
+        mapaPerfil.on('click', e => {
+          epLat = e.latlng.lat;
+          epLng = e.latlng.lng;
+          colocarMarkerPerfil(epLat, epLng);
+          // Reverse geocode para actualizar el campo dirección
+          fetch(`https://nominatim.openstreetmap.org/reverse?lat=${epLat}&lon=${epLng}&format=json`)
+            .then(r => r.json())
+            .then(d => {
+              if (d.display_name) {
+                // Extraer dirección legible
+                const a = d.address || {};
+                const partes = [
+                  a.road ? (a.house_number ? `${a.road} ${a.house_number}` : a.road) : null,
+                  a.suburb || a.neighbourhood || null,
+                  a.city || a.town || a.village || null,
+                  a.state || null
+                ].filter(Boolean);
+                if (partes.length) $('ep-direccion').value = partes.join(', ');
+              }
+            }).catch(() => {});
+        });
+      } else {
+        mapaPerfil.invalidateSize();
+      }
+
+      if (epLat && epLng) {
+        colocarMarkerPerfil(epLat, epLng);
+        mapaPerfil.setView([epLat, epLng], 15);
+      }
+    }, 100);
+
+  }).catch(e => toast(e.message, 'error'));
+}
+
+function colocarMarkerPerfil(lat, lng) {
+  if (markerPerfil) markerPerfil.remove();
+  markerPerfil = L.marker([lat, lng], {
+    icon: L.divIcon({
+      className: '',
+      html: '<div style="background:#0F6E56;width:14px;height:14px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,.4)"></div>',
+      iconAnchor: [7, 7]
+    })
+  }).addTo(mapaPerfil);
+  $('ep-coords-txt').textContent = `${lat.toFixed(5)}, ${lng.toFixed(5)}`;
+  $('ep-coords-info').style.display = 'block';
+}
+
+function cerrarModalPerfil() {
+  $('modal-perfil').style.display = 'none';
+}
+
+// Auto-geocodificar dirección del perfil
+async function geocodificarDirPerfil() {
+  const dir = $('ep-direccion').value.trim();
+  if (dir.length < 6) return;
+  try {
+    const q = encodeURIComponent(dir + ', Chile');
+    const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=cl`);
+    const d = await r.json();
+    if (d[0]) {
+      epLat = parseFloat(d[0].lat);
+      epLng = parseFloat(d[0].lon);
+      colocarMarkerPerfil(epLat, epLng);
+      mapaPerfil?.setView([epLat, epLng], 15);
+    }
+  } catch {}
+}
+
+$('ep-direccion').addEventListener('input', () => {
+  clearTimeout(epGeoTimer);
+  epGeoTimer = setTimeout(geocodificarDirPerfil, 700);
+});
+$('ep-direccion').addEventListener('blur', geocodificarDirPerfil);
+
+async function guardarPerfil() {
+  const btn = $('btn-guardar-perfil');
+  btn.disabled = true;
+  btn.textContent = 'Guardando...';
+  try {
+    const body = {
+      nombre_comercial: $('ep-nombre').value.trim() || undefined,
+      categoria:        $('ep-categoria').value.trim() || undefined,
+      descripcion:      $('ep-descripcion').value.trim() || undefined,
+      direccion:        $('ep-direccion').value.trim() || undefined,
+    };
+    if (epLat !== null) body.lat = epLat;
+    if (epLng !== null) body.lng = epLng;
+
+    await apiFetch('/negocios/perfil', { method: 'PUT', body: JSON.stringify(body) });
+    toast('Perfil actualizado', 'ok');
+    cerrarModalPerfil();
+    cargarMiCuenta(); // refrescar datos en la pestaña Mi Cuenta
+  } catch (e) {
+    toast(e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Guardar cambios';
+  }
+}
+
+$('btn-editar-perfil').addEventListener('click', abrirModalPerfil);
+
+// ══════════════════════════════════════════════════════════════
+// MODAL DETALLE PEDIDO
+// ══════════════════════════════════════════════════════════════
+function abrirModalDetalle(id) {
+  const modal = $('modal-detalle');
+  modal.style.display = 'flex';
+  cargarDetalle(id);
+}
+function cerrarModalDetalle() {
+  $('modal-detalle').style.display = 'none';
+}
+function copiarLink(pedidoId) {
+  const url = location.protocol + '//' + location.hostname + ':3000/seguimiento.html?id=' + pedidoId;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => toast('Link copiado', 'success'));
+  } else {
+    prompt('Copia este link:', url);
+  }
+}
+$('modal-detalle').addEventListener('click', e => {
+  if (e.target === $('modal-detalle')) cerrarModalDetalle();
+});
+
+// ══════════════════════════════════════════════════════════════
+// GRÁFICO ACTIVIDAD
+// ══════════════════════════════════════════════════════════════
+let chartActividad = null;
+
+function iniciarGrafico(pedidos) {
+  const ctx = $('chart-actividad');
+  if (!ctx) return;
+
+  // Últimos 7 días
+  const dias = [];
+  const counts = [];
+  const ingresos = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    d.setHours(0, 0, 0, 0);
+    const label = d.toLocaleDateString('es-CL', { weekday: 'short', day: 'numeric' });
+    dias.push(label);
+    const del_dia = pedidos.filter(p => {
+      const pd = new Date(p.created_at);
+      pd.setHours(0, 0, 0, 0);
+      return pd.getTime() === d.getTime();
+    });
+    counts.push(del_dia.length);
+    ingresos.push(del_dia.filter(p => p.estado === 'entregado').reduce((s, p) => s + parseInt(p.tarifa_entrega || 0), 0));
+  }
+
+  if (chartActividad) chartActividad.destroy();
+  chartActividad = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: dias,
+      datasets: [
+        {
+          label: 'Pedidos',
+          data: counts,
+          backgroundColor: 'rgba(15,110,86,0.15)',
+          borderColor: '#0F6E56',
+          borderWidth: 2,
+          borderRadius: 4,
+          yAxisID: 'y'
+        },
+        {
+          label: 'Ingresos envío ($)',
+          data: ingresos,
+          type: 'line',
+          borderColor: '#EF9F27',
+          backgroundColor: 'rgba(239,159,39,0.1)',
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0.3,
+          fill: true,
+          yAxisID: 'y2'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      resizeDelay: 0,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12 } },
+        tooltip: {
+          callbacks: {
+            label: ctx => ctx.datasetIndex === 1
+              ? `$${parseInt(ctx.raw).toLocaleString('es-CL')}`
+              : `${ctx.raw} pedidos`
+          }
+        }
+      },
+      scales: {
+        y:  { position: 'left',  beginAtZero: true, ticks: { stepSize: 1, font: { size: 10 } }, grid: { color: 'rgba(0,0,0,.05)' } },
+        y2: { position: 'right', beginAtZero: true, ticks: { font: { size: 10 }, callback: v => '$' + (v/1000).toFixed(0) + 'k' }, grid: { drawOnChartArea: false } },
+        x:  { ticks: { font: { size: 10 } } }
+      }
+    }
+  });
+}
+
+// ══════════════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════════════
+if (token && usuario?.rol === 'negocio') {
+  iniciarApp();
+}
+</script>
+
+<!-- Socket.io client (se carga desde el servidor) -->
+<script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

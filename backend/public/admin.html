@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparto Justo — Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --teal:#FFCC00; --teal-mid:#FFD740; --teal-bg:#FFFBEA; --teal-dark:#0F172A;
+      --amber:#854F0B; --amber-bg:#FAEEDA; --amber-mid:#EF9F27;
+      --red:#DC2626; --red-bg:#FEE2E2;
+      --blue:#0F172A; --blue-bg:#E8EAF0;
+      --text:#1C1C1C; --text2:#6b6b66; --text3:#9a9a94;
+      --bg:#F9F9F9; --bg2:#ffffff; --border:rgba(0,0,0,.10);
+      --r:14px; --r-sm:10px;
+      --nav-w:220px;
+      --negro:#1C1C1C; --navy:#0F172A; --amarillo:#FFCC00;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+
+    /* ── AUTH ── */
+    #auth-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a18 0%,#2d2d2a 100%);}
+    .auth-card{background:white;border-radius:20px;padding:48px 40px;width:100%;max-width:400px;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+    .auth-logo{font-size:26px;font-weight:800;color:var(--teal);margin-bottom:4px;}
+    .auth-sub{color:var(--text2);font-size:14px;margin-bottom:28px;}
+    .field{margin-bottom:16px;}
+    .field label{display:block;font-size:13px;font-weight:500;color:var(--text2);margin-bottom:6px;}
+    .field input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:14px;font-family:inherit;color:var(--text);}
+    .field input:focus{outline:none;border-color:var(--teal-mid);}
+
+    /* ── LAYOUT ── */
+    #app{display:none;min-height:100vh;display:none;}
+    .layout{display:flex;min-height:100vh;}
+
+    /* ── SIDEBAR ── */
+    .sidebar{width:var(--nav-w);background:var(--negro);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100;}
+    .sidebar-logo{padding:24px 20px 20px;font-size:18px;font-weight:800;color:var(--amarillo);font-family:'Montserrat',sans-serif;}
+    .sidebar-badge{font-size:10px;font-weight:600;background:var(--teal-dark);color:var(--teal-mid);padding:2px 8px;border-radius:20px;margin-left:8px;vertical-align:middle;}
+    .nav-section{padding:8px 12px 4px;font-size:10px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:.8px;}
+    .nav-item{display:flex;align-items:center;gap:10px;padding:10px 16px;margin:2px 8px;border-radius:10px;font-size:13px;font-weight:500;color:#aaa;cursor:pointer;transition:all .2s;}
+    .nav-item:hover{background:#2d2d2a;color:white;}
+    .nav-item.active{background:var(--amarillo);color:var(--negro);font-weight:700;}
+    .nav-icon{font-size:16px;width:20px;text-align:center;}
+    .sidebar-footer{margin-top:auto;padding:16px;}
+    .btn-logout-side{width:100%;padding:10px;background:#2d2d2a;border:none;border-radius:10px;color:#aaa;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;}
+    .btn-logout-side:hover{background:#3d3d3a;color:white;}
+
+    /* ── MAIN ── */
+    .main{margin-left:var(--nav-w);flex:1;padding:28px;min-height:100vh;}
+    .page{display:none;}
+    .page.active{display:block;}
+    .page-header{margin-bottom:24px;}
+    .page-title{font-size:22px;font-weight:800;color:var(--text);}
+    .page-sub{font-size:13px;color:var(--text2);margin-top:4px;}
+
+    /* ── BOTONES ── */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 18px;border-radius:var(--r-sm);font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;transition:all .2s;}
+    .btn-primary{background:var(--amarillo);color:var(--negro);}
+    .btn-primary:hover{background:#e6b800;}
+    .btn-danger{background:var(--red-bg);color:var(--red);}
+    .btn-sm{padding:6px 12px;font-size:12px;}
+    .btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text);}
+    .btn-success{background:var(--teal-bg);color:var(--teal);}
+    .btn-amber{background:var(--amber-bg);color:var(--amber);}
+    .btn:disabled{opacity:.5;cursor:not-allowed;}
+
+    /* ── KPI CARDS ── */
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:28px;}
+    .kpi-card{background:white;border-radius:var(--r);padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+    .kpi-label{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+    .kpi-value{font-size:28px;font-weight:800;color:var(--text);}
+    .kpi-value.green{color:#1C7C54;}
+    .kpi-value.amber{color:var(--amber);}
+    .kpi-value.red{color:var(--red);}
+    .kpi-sub{font-size:12px;color:var(--text3);margin-top:4px;}
+
+    /* ── CARD ── */
+    .card{background:white;border-radius:var(--r);box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:20px;overflow:hidden;}
+    .card-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    .card-header h3{font-size:15px;font-weight:700;}
+    .card-body{padding:0;}
+
+    /* ── TABLA ── */
+    .tabla{width:100%;border-collapse:collapse;font-size:13px;}
+    .tabla th{padding:10px 16px;text-align:left;font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);background:#fafafa;}
+    .tabla td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:middle;}
+    .tabla tr:last-child td{border-bottom:none;}
+    .tabla tr:hover td{background:#fafff9;}
+
+    /* ── BADGES ── */
+    .badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;}
+    .badge-green{background:var(--teal-bg);color:var(--teal);}
+    .badge-red{background:var(--red-bg);color:var(--red);}
+    .badge-amber{background:var(--amber-bg);color:var(--amber);}
+    .badge-blue{background:var(--blue-bg);color:var(--blue);}
+    .badge-gray{background:#f0f0ee;color:var(--text3);}
+
+    /* ── FILTROS ── */
+    .filtros{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+    .filtros select,.filtros input{padding:8px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit;color:var(--text);background:white;}
+    .filtros select:focus,.filtros input:focus{outline:none;border-color:var(--teal-mid);}
+
+    /* ── CHART ── */
+    .chart-wrap{padding:20px;height:280px;position:relative;}
+
+    /* ── MODAL ── */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;align-items:center;justify-content:center;}
+    .modal-overlay.open{display:flex;}
+    .modal{background:white;border-radius:var(--r);padding:28px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;}
+    .modal h3{font-size:17px;font-weight:700;margin-bottom:20px;}
+    .modal-footer{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;}
+
+    /* ── TOAST ── */
+    #toast-container{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:8px;}
+    .toast{background:#1a1a18;color:white;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:500;box-shadow:0 4px 20px rgba(0,0,0,.3);}
+    .toast.success{background:var(--teal);}
+    .toast.error{background:var(--red);}
+
+    /* ── EMPTY ── */
+    .empty{padding:48px;text-align:center;color:var(--text3);font-size:14px;}
+
+    /* ── LOADING ── */
+    .loading{padding:32px;text-align:center;color:var(--text3);font-size:13px;}
+  </style>
+</head>
+<body>
+
+<!-- ═══ LOGIN ═══ -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="auth-logo">Reparto Justo</div>
+    <div class="auth-sub">Panel de Administración</div>
+    <form onsubmit="loginAdmin(event)">
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="login-email" placeholder="admin@repartojusto.cl" autocomplete="email">
+      </div>
+      <div class="field">
+        <label>Contraseña</label>
+        <input type="password" id="login-pass" placeholder="••••••••">
+      </div>
+      <p id="login-error" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none"></p>
+      <button type="submit" class="btn btn-primary" style="width:100%;padding:12px">Ingresar</button>
+    </form>
+  </div>
+</div>
+
+<!-- ═══ APP ═══ -->
+<div id="app">
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">RepartoJusto <span class="sidebar-badge">ADMIN</span></div>
+      <div class="nav-section">Principal</div>
+      <div class="nav-item active" data-page="dashboard"><span class="nav-icon">📊</span> Dashboard</div>
+      <div class="nav-item" data-page="pedidos"><span class="nav-icon">📦</span> Pedidos</div>
+      <div class="nav-section">Usuarios</div>
+      <div class="nav-item" data-page="riders"><span class="nav-icon">🏍</span> Riders</div>
+      <div class="nav-item" data-page="negocios"><span class="nav-icon">🏪</span> Negocios</div>
+      <div class="nav-item" data-page="usuarios"><span class="nav-icon">👤</span> Usuarios</div>
+      <div class="sidebar-footer">
+        <button class="btn-logout-side" id="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- ── DASHBOARD ── -->
+      <div class="page active" id="page-dashboard">
+        <div class="page-header">
+          <div class="page-title">Dashboard</div>
+          <div class="page-sub" id="dash-fecha"></div>
+        </div>
+        <div class="kpi-grid" id="kpi-grid">
+          <div class="kpi-card"><div class="kpi-label">Pedidos hoy</div><div class="kpi-value" id="kpi-hoy">—</div></div>
+          <div class="kpi-card"><div class="kpi-label">En curso</div><div class="kpi-value amber" id="kpi-en-curso">—</div></div>
+          <div class="kpi-card"><div class="kpi-label">Entregados total</div><div class="kpi-value green" id="kpi-entregados">—</div></div>
+          <div class="kpi-card"><div class="kpi-label">Cancelados</div><div class="kpi-value red" id="kpi-cancelados">—</div></div>
+          <div class="kpi-card"><div class="kpi-label">Riders online</div><div class="kpi-value green" id="kpi-riders">—</div><div class="kpi-sub" id="kpi-riders-sub"></div></div>
+          <div class="kpi-card"><div class="kpi-label">Negocios activos</div><div class="kpi-value" id="kpi-negocios">—</div></div>
+          <div class="kpi-card"><div class="kpi-label">App fee acumulado</div><div class="kpi-value green" id="kpi-fee">—</div></div>
+          <div class="kpi-card"><div class="kpi-label">Dist. promedio</div><div class="kpi-value" id="kpi-dist">—</div><div class="kpi-sub">km por entrega</div></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>📈 Ingresos últimos 30 días</h3></div>
+          <div class="chart-wrap"><canvas id="chart-ingresos"></canvas></div>
+        </div>
+      </div>
+
+      <!-- ── PEDIDOS ── -->
+      <div class="page" id="page-pedidos">
+        <div class="page-header">
+          <div class="page-title">Pedidos</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="filtros">
+              <select id="filtro-estado">
+                <option value="">Todos los estados</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="asignado">Asignado</option>
+                <option value="retiro">En retiro</option>
+                <option value="en_camino">En camino</option>
+                <option value="entregado">Entregado</option>
+                <option value="cancelado">Cancelado</option>
+              </select>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="cargarPedidos()">🔄 Actualizar</button>
+          </div>
+          <div class="card-body">
+            <div id="tabla-pedidos-wrap"><div class="loading">Cargando...</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RIDERS ── -->
+      <div class="page" id="page-riders">
+        <div class="page-header">
+          <div class="page-title">Riders</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Lista de riders</h3>
+            <button class="btn btn-outline btn-sm" onclick="cargarRiders()">🔄 Actualizar</button>
+          </div>
+          <div class="card-body">
+            <div id="tabla-riders-wrap"><div class="loading">Cargando...</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── NEGOCIOS ── -->
+      <div class="page" id="page-negocios">
+        <div class="page-header">
+          <div class="page-title">Negocios</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Comercios registrados</h3>
+            <button class="btn btn-outline btn-sm" onclick="cargarNegocios()">🔄 Actualizar</button>
+          </div>
+          <div class="card-body">
+            <div id="tabla-negocios-wrap"><div class="loading">Cargando...</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── USUARIOS ── -->
+      <div class="page" id="page-usuarios">
+        <div class="page-header">
+          <div class="page-title">Usuarios</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="filtros">
+              <select id="filtro-rol">
+                <option value="">Todos los roles</option>
+                <option value="negocio">Negocio</option>
+                <option value="rider">Rider</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="cargarUsuarios()">🔄 Actualizar</button>
+          </div>
+          <div class="card-body">
+            <div id="tabla-usuarios-wrap"><div class="loading">Cargando...</div></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- Modal liquidar rider -->
+<div class="modal-overlay" id="modal-liquidar">
+  <div class="modal">
+    <h3>💰 Generar liquidación</h3>
+    <input type="hidden" id="liq-rider-id">
+    <div class="field" style="margin-bottom:14px">
+      <label>Rider</label>
+      <input type="text" id="liq-rider-nombre" disabled style="background:#fafafa">
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+      <div class="field" style="margin:0">
+        <label>Desde</label>
+        <input type="date" id="liq-desde">
+      </div>
+      <div class="field" style="margin:0">
+        <label>Hasta</label>
+        <input type="date" id="liq-hasta">
+      </div>
+    </div>
+    <p id="liq-error" style="color:var(--red);font-size:13px;display:none;margin-bottom:10px"></p>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="cerrarModalLiquidar()">Cancelar</button>
+      <button class="btn btn-primary" onclick="confirmarLiquidar()">Generar liquidación</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<script>
+const API = location.protocol + '//' + location.hostname + ':3000/api';
+let token = localStorage.getItem('rj_admin_token');
+let chartIngresos = null;
+
+const $ = id => document.getElementById(id);
+const fmt = n => '$' + parseInt(n || 0).toLocaleString('es-CL');
+
+function toast(msg, type) {
+  const el = document.createElement('div');
+  el.className = 'toast' + (type ? ' ' + type : '');
+  el.textContent = msg;
+  $('toast-container').appendChild(el);
+  setTimeout(() => el.remove(), 3500);
+}
+
+async function apiFetch(path, opts) {
+  opts = opts || {};
+  const res = await fetch(API + path, Object.assign({}, opts, {
+    headers: Object.assign({ 'Content-Type': 'application/json', Authorization: 'Bearer ' + token }, opts.headers || {})
+  }));
+  const data = await res.json().catch(function() { return {}; });
+  if (!res.ok) throw new Error(data.error || 'Error del servidor');
+  return data;
+}
+
+// ══ AUTH ══
+function loginAdmin(e) {
+  e.preventDefault();
+  const errEl = $('login-error');
+  const email = $('login-email').value.trim();
+  const pass  = $('login-pass').value;
+  errEl.style.display = 'none';
+
+  fetch(API + '/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password: pass })
+  })
+  .then(r => r.json().then(d => ({ ok: r.ok, data: d })))
+  .then(r => {
+    if (!r.ok) throw new Error(r.data.error || 'Error');
+    if (r.data.usuario.rol !== 'admin') throw new Error('Esta cuenta no es de administrador');
+    localStorage.setItem('rj_admin_token', r.data.token);
+    token = r.data.token;
+    iniciarApp();
+  })
+  .catch(err => {
+    errEl.textContent = err.message;
+    errEl.style.display = 'block';
+  });
+}
+
+$('btn-logout').addEventListener('click', function() {
+  localStorage.removeItem('rj_admin_token');
+  location.reload();
+});
+
+// ══ NAV ══
+document.querySelectorAll('.nav-item').forEach(function(item) {
+  item.addEventListener('click', function() {
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    item.classList.add('active');
+    const page = item.dataset.page;
+    $('page-' + page).classList.add('active');
+    if (page === 'pedidos')   cargarPedidos();
+    if (page === 'riders')    cargarRiders();
+    if (page === 'negocios')  cargarNegocios();
+    if (page === 'usuarios')  cargarUsuarios();
+  });
+});
+
+$('filtro-estado').addEventListener('change', cargarPedidos);
+$('filtro-rol').addEventListener('change', cargarUsuarios);
+
+// ══ APP INIT ══
+function iniciarApp() {
+  $('auth-screen').style.display = 'none';
+  $('app').style.display = 'block';
+  $('dash-fecha').textContent = new Date().toLocaleDateString('es-CL', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+  cargarDashboard();
+}
+
+// ══ DASHBOARD ══
+async function cargarDashboard() {
+  try {
+    const [m, ingresos] = await Promise.all([
+      apiFetch('/admin/metricas'),
+      apiFetch('/admin/metricas/ingresos')
+    ]);
+
+    $('kpi-hoy').textContent       = m.pedidos.ultimas_24h;
+    $('kpi-en-curso').textContent  = parseInt(m.pedidos.pendientes) + parseInt(m.pedidos.en_camino);
+    $('kpi-entregados').textContent = m.pedidos.entregados;
+    $('kpi-cancelados').textContent = m.pedidos.cancelados;
+    $('kpi-riders').textContent    = m.riders.disponibles;
+    $('kpi-riders-sub').textContent = 'de ' + m.riders.total + ' registrados';
+    $('kpi-negocios').textContent  = m.negocios.activos;
+    $('kpi-fee').textContent       = fmt(m.ingresos.app_fee_total);
+    $('kpi-dist').textContent      = parseFloat(m.ingresos.distancia_promedio || 0).toFixed(1);
+
+    // Chart
+    const labels  = ingresos.map(r => { const d = new Date(r.fecha); return d.getDate() + '/' + (d.getMonth()+1); });
+    const pedData = ingresos.map(r => parseInt(r.pedidos));
+    const feeData = ingresos.map(r => parseInt(r.ingreso_app));
+
+    if (chartIngresos) chartIngresos.destroy();
+    chartIngresos = new Chart($('chart-ingresos'), {
+      data: {
+        labels,
+        datasets: [
+          { type:'bar',  label:'Pedidos', data: pedData, backgroundColor:'rgba(15,110,86,.15)', borderColor:'#0F6E56', borderWidth:2, yAxisID:'y' },
+          { type:'line', label:'App fee ($)', data: feeData, borderColor:'#EF9F27', backgroundColor:'rgba(239,159,39,.1)', borderWidth:2, tension:.3, fill:true, yAxisID:'y2', pointRadius:3 }
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 } } } },
+        scales:{
+          y:  { position:'left',  grid:{ color:'rgba(0,0,0,.05)' }, ticks:{ font:{size:11} } },
+          y2: { position:'right', grid:{ drawOnChartArea:false },   ticks:{ font:{size:11}, callback: v => '$'+v.toLocaleString('es-CL') } }
+        }
+      }
+    });
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+// ══ PEDIDOS ══
+const ESTADO_LABEL = { pendiente:'Pendiente', asignado:'Asignado', retiro:'En retiro', en_camino:'En camino', entregado:'Entregado', cancelado:'Cancelado' };
+const ESTADO_BADGE = { pendiente:'badge-blue', asignado:'badge-amber', retiro:'badge-amber', en_camino:'badge-amber', entregado:'badge-green', cancelado:'badge-red' };
+
+async function cargarPedidos() {
+  const estado = $('filtro-estado').value;
+  const wrap = $('tabla-pedidos-wrap');
+  wrap.innerHTML = '<div class="loading">Cargando...</div>';
+  try {
+    const rows = await apiFetch('/admin/pedidos' + (estado ? '?estado=' + estado : ''));
+    if (!rows.length) { wrap.innerHTML = '<div class="empty">Sin pedidos</div>'; return; }
+    wrap.innerHTML = `
+      <table class="tabla">
+        <thead><tr>
+          <th>ID</th><th>Negocio</th><th>Destino</th><th>Rider</th>
+          <th>Distancia</th><th>Tarifa</th><th>Estado</th><th>Fecha</th>
+        </tr></thead>
+        <tbody>
+          ${rows.map(p => `
+            <tr>
+              <td style="font-size:11px;font-family:monospace;color:var(--text3)">${p.id.substring(0,8)}</td>
+              <td style="font-weight:600">${p.nombre_comercial}</td>
+              <td style="max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;color:var(--text2)">${p.direccion_entrega}</td>
+              <td style="font-size:12px">${p.rider_nombre || '<span style="color:var(--text3)">Sin asignar</span>'}</td>
+              <td>${p.distancia_km ? p.distancia_km + ' km' : '—'}</td>
+              <td style="font-weight:700;color:var(--teal)">${fmt(p.tarifa_entrega)}</td>
+              <td><span class="badge ${ESTADO_BADGE[p.estado] || 'badge-gray'}">${ESTADO_LABEL[p.estado]}</span></td>
+              <td style="font-size:12px;color:var(--text3)">${new Date(p.created_at).toLocaleDateString('es-CL',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'})}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>`;
+  } catch (e) { wrap.innerHTML = '<div class="empty">' + e.message + '</div>'; }
+}
+
+// ══ RIDERS ══
+async function cargarRiders() {
+  const wrap = $('tabla-riders-wrap');
+  wrap.innerHTML = '<div class="loading">Cargando...</div>';
+  try {
+    const rows = await apiFetch('/admin/riders');
+    if (!rows.length) { wrap.innerHTML = '<div class="empty">Sin riders</div>'; return; }
+    wrap.innerHTML = `
+      <table class="tabla">
+        <thead><tr>
+          <th>Nombre</th><th>Email</th><th>Teléfono</th>
+          <th>Entregas</th><th>Rating</th><th>Saldo pend.</th><th>Estado</th><th>Acciones</th>
+        </tr></thead>
+        <tbody>
+          ${rows.map(r => `
+            <tr>
+              <td style="font-weight:600">${r.nombre}</td>
+              <td style="font-size:12px;color:var(--text2)">${r.email}</td>
+              <td style="font-size:12px">${r.telefono || '—'}</td>
+              <td>${r.total_entregas}</td>
+              <td>⭐ ${parseFloat(r.rating || 5).toFixed(1)}</td>
+              <td style="font-weight:700;color:${parseInt(r.saldo_pendiente)>0?'var(--teal)':'var(--text3)'}">${fmt(r.saldo_pendiente)}</td>
+              <td>
+                <span class="badge ${r.disponible ? 'badge-green' : 'badge-gray'}">${r.disponible ? 'Online' : 'Offline'}</span>
+                ${!r.activo ? '<span class="badge badge-red" style="margin-left:4px">Bloqueado</span>' : ''}
+              </td>
+              <td>
+                <div style="display:flex;gap:6px;flex-wrap:wrap">
+                  ${parseInt(r.saldo_pendiente) > 0 ? `<button class="btn btn-success btn-sm" onclick="abrirModalLiquidar('${r.id}','${r.nombre.replace(/'/g,"\\'")}')">💰 Liquidar</button>` : ''}
+                  <button class="btn btn-sm ${r.activo ? 'btn-danger' : 'btn-outline'}" onclick="toggleUsuarioActivo('${r.usuario_id || r.id}',${!r.activo},'riders')">
+                    ${r.activo ? 'Bloquear' : 'Activar'}
+                  </button>
+                </div>
+              </td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>`;
+  } catch (e) { wrap.innerHTML = '<div class="empty">' + e.message + '</div>'; }
+}
+
+// ══ NEGOCIOS ══
+async function cargarNegocios() {
+  const wrap = $('tabla-negocios-wrap');
+  wrap.innerHTML = '<div class="loading">Cargando...</div>';
+  try {
+    const rows = await apiFetch('/admin/negocios');
+    if (!rows.length) { wrap.innerHTML = '<div class="empty">Sin negocios</div>'; return; }
+    wrap.innerHTML = `
+      <table class="tabla">
+        <thead><tr>
+          <th>Comercio</th><th>Email</th><th>Categoría</th>
+          <th>Pedidos</th><th>Entregados</th><th>App fee</th><th>Estado</th><th>Acciones</th>
+        </tr></thead>
+        <tbody>
+          ${rows.map(n => `
+            <tr>
+              <td style="font-weight:600">${n.nombre_comercial}</td>
+              <td style="font-size:12px;color:var(--text2)">${n.email}</td>
+              <td style="font-size:12px">${n.categoria || '—'}</td>
+              <td>${n.total_pedidos}</td>
+              <td>${n.pedidos_entregados}</td>
+              <td style="font-weight:700;color:var(--teal)">${fmt(n.app_fee_generado)}</td>
+              <td><span class="badge ${n.activo ? 'badge-green' : 'badge-red'}">${n.activo ? 'Activo' : 'Inactivo'}</span></td>
+              <td>
+                <button class="btn btn-sm ${n.activo ? 'btn-danger' : 'btn-success'}" onclick="toggleNegocioActivo('${n.id}',${!n.activo})">
+                  ${n.activo ? 'Desactivar' : 'Activar'}
+                </button>
+              </td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>`;
+  } catch (e) { wrap.innerHTML = '<div class="empty">' + e.message + '</div>'; }
+}
+
+// ══ USUARIOS ══
+const ROL_BADGE = { admin:'badge-blue', negocio:'badge-amber', rider:'badge-green' };
+
+async function cargarUsuarios() {
+  const rol  = $('filtro-rol').value;
+  const wrap = $('tabla-usuarios-wrap');
+  wrap.innerHTML = '<div class="loading">Cargando...</div>';
+  try {
+    const rows = await apiFetch('/admin/usuarios' + (rol ? '?rol=' + rol : ''));
+    if (!rows.length) { wrap.innerHTML = '<div class="empty">Sin usuarios</div>'; return; }
+    wrap.innerHTML = `
+      <table class="tabla">
+        <thead><tr>
+          <th>Nombre</th><th>Email</th><th>Rol</th><th>Teléfono</th><th>Registro</th><th>Estado</th><th>Acciones</th>
+        </tr></thead>
+        <tbody>
+          ${rows.map(u => `
+            <tr>
+              <td style="font-weight:600">${u.nombre}</td>
+              <td style="font-size:12px;color:var(--text2)">${u.email}</td>
+              <td><span class="badge ${ROL_BADGE[u.rol] || 'badge-gray'}">${u.rol}</span></td>
+              <td style="font-size:12px">${u.telefono || '—'}</td>
+              <td style="font-size:12px;color:var(--text3)">${new Date(u.created_at).toLocaleDateString('es-CL')}</td>
+              <td><span class="badge ${u.activo ? 'badge-green' : 'badge-red'}">${u.activo ? 'Activo' : 'Bloqueado'}</span></td>
+              <td>
+                ${u.rol !== 'admin' ? `<button class="btn btn-sm ${u.activo ? 'btn-danger' : 'btn-outline'}" onclick="toggleUsuarioActivo('${u.id}',${!u.activo},'usuarios')">
+                  ${u.activo ? 'Bloquear' : 'Activar'}
+                </button>` : '—'}
+              </td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>`;
+  } catch (e) { wrap.innerHTML = '<div class="empty">' + e.message + '</div>'; }
+}
+
+// ══ ACCIONES ══
+async function toggleUsuarioActivo(id, activo, recarga) {
+  try {
+    await apiFetch('/admin/usuarios/' + id + '/activo', { method:'PUT', body: JSON.stringify({ activo }) });
+    toast(activo ? 'Usuario activado' : 'Usuario bloqueado', 'success');
+    if (recarga === 'riders')   cargarRiders();
+    if (recarga === 'usuarios') cargarUsuarios();
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+async function toggleNegocioActivo(id, activo) {
+  try {
+    await apiFetch('/admin/negocios/' + id + '/activo', { method:'PUT', body: JSON.stringify({ activo }) });
+    toast(activo ? 'Negocio activado' : 'Negocio desactivado', 'success');
+    cargarNegocios();
+  } catch (e) { toast(e.message, 'error'); }
+}
+
+// ══ LIQUIDAR ══
+function abrirModalLiquidar(riderId, nombre) {
+  $('liq-rider-id').value = riderId;
+  $('liq-rider-nombre').value = nombre;
+  $('liq-error').style.display = 'none';
+  // Default: mes actual
+  const hoy = new Date();
+  const primero = new Date(hoy.getFullYear(), hoy.getMonth(), 1).toISOString().split('T')[0];
+  const ultimo  = hoy.toISOString().split('T')[0];
+  $('liq-desde').value = primero;
+  $('liq-hasta').value = ultimo;
+  $('modal-liquidar').classList.add('open');
+}
+
+function cerrarModalLiquidar() {
+  $('modal-liquidar').classList.remove('open');
+}
+
+async function confirmarLiquidar() {
+  const errEl = $('liq-error');
+  errEl.style.display = 'none';
+  try {
+    await apiFetch('/admin/liquidar', {
+      method: 'POST',
+      body: JSON.stringify({
+        rider_id:    $('liq-rider-id').value,
+        fecha_desde: $('liq-desde').value,
+        fecha_hasta: $('liq-hasta').value
+      })
+    });
+    cerrarModalLiquidar();
+    toast('Liquidación generada', 'success');
+    cargarRiders();
+  } catch (e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  }
+}
+
+$('modal-liquidar').addEventListener('click', function(e) {
+  if (e.target === $('modal-liquidar')) cerrarModalLiquidar();
+});
+
+// ══ INIT ══
+if (token) {
+  iniciarApp();
+}
+</script>
+</body>
+</html>
