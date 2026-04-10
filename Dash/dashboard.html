@@ -537,6 +537,7 @@ tr:hover td { background: var(--bg-glass); }
   <div class="nav-inner">
     <div class="nav-logo"><span>⚡</span> RiderDash</div>
     <div class="nav-tabs">
+      <button class="nav-tab" onclick="showSection('live')" id="tab-live">🔴 En Vivo</button>
       <button class="nav-tab active" onclick="showSection('resumen')" id="tab-resumen">📊 Resumen</button>
       <button class="nav-tab" onclick="showSection('plataforma')" id="tab-plataforma">⚙️ Plataforma</button>
       <button class="nav-tab" onclick="showSection('riders')" id="tab-riders">🏍️ Riders</button>
@@ -799,6 +800,119 @@ tr:hover td { background: var(--bg-glass); }
     </div>
   </div>
 
+  <!-- EN VIVO (datos reales del API) -->
+  <div class="section" id="sec-live">
+    <h1 class="section-title">Métricas en Vivo</h1>
+    <p class="section-sub">Datos reales desde el backend — se actualizan cada 30 segundos</p>
+
+    <div id="live-login-msg" style="background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);border-radius:12px;padding:20px 24px;margin-bottom:24px;display:flex;align-items:center;gap:16px">
+      <span style="font-size:24px">🔐</span>
+      <div>
+        <div style="font-weight:600;margin-bottom:6px">Autenticación requerida</div>
+        <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">Ingresa las credenciales de admin para ver datos reales</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <input type="email" id="live-email" placeholder="admin@repartojusto.cl" value="admin@repartojusto.cl"
+            style="padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:white;font-size:13px;font-family:inherit;width:220px">
+          <input type="password" id="live-pass" placeholder="contraseña" value="admin1234"
+            style="padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:white;font-size:13px;font-family:inherit;width:160px">
+          <button onclick="liveLogin()" style="padding:8px 18px;background:#3b82f6;color:white;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Conectar</button>
+        </div>
+        <p id="live-error" style="color:#f43f5e;font-size:12px;margin-top:8px;display:none"></p>
+      </div>
+    </div>
+
+    <div id="live-data" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:8px;height:8px;border-radius:50%;background:#10b981;animation:pulse 1.5s infinite"></div>
+          <span style="font-size:13px;color:var(--text-secondary)">Conectado · última actualización: <span id="live-last-update">—</span></span>
+        </div>
+        <button onclick="cargarMetricasLive()" style="padding:6px 14px;background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.15);border-radius:8px;font-size:12px;cursor:pointer;font-family:inherit">↻ Actualizar</button>
+      </div>
+
+      <!-- KPIs principales -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px">
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:32px;font-weight:800;color:#3b82f6" id="kpi-total">—</div>
+          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">Total pedidos</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:32px;font-weight:800;color:#f59e0b" id="kpi-pendientes">—</div>
+          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">Pendientes</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:32px;font-weight:800;color:#10b981" id="kpi-entregados">—</div>
+          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">Entregados</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:32px;font-weight:800;color:#8b5cf6" id="kpi-en-camino">—</div>
+          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">En camino</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:32px;font-weight:800;color:#06b6d4" id="kpi-riders-dis">—</div>
+          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">Riders online</div>
+        </div>
+        <div class="card" style="text-align:center;padding:20px">
+          <div style="font-size:32px;font-weight:800;color:#10b981" id="kpi-app-fee">—</div>
+          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">App fee total</div>
+        </div>
+      </div>
+
+      <!-- Gráfico ingresos por día -->
+      <div class="chart-container" style="margin-bottom:24px">
+        <div class="chart-title">💰 Ingresos por día (últimos 30 días)</div>
+        <canvas id="chart-live-ingresos" height="80"></canvas>
+      </div>
+
+      <!-- Tablas riders y pedidos recientes -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+        <div class="table-container">
+          <div class="table-header" style="display:flex;justify-content:space-between;align-items:center">
+            <span>🏍️ Riders</span>
+            <button onclick="mostrarModalIncentivo()" style="padding:4px 12px;background:#3b82f6;color:white;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit">+ Incentivo</button>
+          </div>
+          <div style="overflow-x:auto"><table><thead><tr><th>Nombre</th><th>Entregas</th><th>Saldo</th><th>Estado</th></tr></thead><tbody id="tbody-riders-live"></tbody></table></div>
+        </div>
+        <div class="table-container">
+          <div class="table-header">📦 Pedidos recientes</div>
+          <div style="overflow-x:auto"><table><thead><tr><th>ID</th><th>Negocio</th><th>Tarifa</th><th>Estado</th></tr></thead><tbody id="tbody-pedidos-live"></tbody></table></div>
+        </div>
+      </div>
+
+      <!-- Tabla comercios -->
+      <div class="table-container">
+        <div class="table-header" style="display:flex;justify-content:space-between;align-items:center">
+          <span>🏪 Gestión de Comercios</span>
+          <button onclick="cargarComerciosLive()" style="padding:4px 12px;background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.15);border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">↻</button>
+        </div>
+        <div style="overflow-x:auto"><table><thead><tr><th>Comercio</th><th>Categoría</th><th>Pedidos</th><th>App Fee</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="tbody-comercios-live"></tbody></table></div>
+      </div>
+
+      <!-- Modal incentivo -->
+      <div id="modal-incentivo" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;display:none;align-items:center;justify-content:center">
+        <div style="background:#1a2235;border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:28px;width:100%;max-width:400px">
+          <h3 style="margin-bottom:20px;font-size:16px">💰 Agregar incentivo a rider</h3>
+          <div style="margin-bottom:12px">
+            <label style="font-size:12px;color:#94a3b8;display:block;margin-bottom:6px">Rider</label>
+            <select id="inc-rider" style="width:100%;padding:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;color:white;font-family:inherit;font-size:13px"></select>
+          </div>
+          <div style="margin-bottom:12px">
+            <label style="font-size:12px;color:#94a3b8;display:block;margin-bottom:6px">Monto (CLP)</label>
+            <input type="number" id="inc-monto" placeholder="5000" style="width:100%;padding:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;color:white;font-family:inherit;font-size:13px">
+          </div>
+          <div style="margin-bottom:20px">
+            <label style="font-size:12px;color:#94a3b8;display:block;margin-bottom:6px">Motivo</label>
+            <input type="text" id="inc-motivo" placeholder="Bono por desempeño" style="width:100%;padding:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;color:white;font-family:inherit;font-size:13px">
+          </div>
+          <div style="display:flex;gap:10px">
+            <button onclick="cerrarModalIncentivo()" style="flex:1;padding:10px;background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.15);border-radius:8px;cursor:pointer;font-family:inherit">Cancelar</button>
+            <button onclick="enviarIncentivo()" style="flex:2;padding:10px;background:#3b82f6;color:white;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-family:inherit">Agregar incentivo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- PROYECCION -->
   <div class="section" id="sec-proyeccion">
     <h1 class="section-title">Proyección a 12 Meses</h1>
@@ -875,6 +989,7 @@ function showSection(name) {
   el('sec-' + name).classList.add('active');
   el('tab-' + name).classList.add('active');
   if (name === 'proyeccion') updateProjectionChart();
+  if (name === 'live') cargarMetricasLive();
 }
 
 // ===== UPDATE DISPLAY VALUES =====
@@ -1117,6 +1232,195 @@ paramIds.forEach(id => {
 });
 updateSliderDisplays();
 calculate();
+
+// ═══════════════════════════════════════════════════════════════
+// SECCIÓN EN VIVO — datos reales del API
+// ═══════════════════════════════════════════════════════════════
+const API_URL = 'http://localhost:3000/api';
+let liveToken = null;
+let liveChartInstance = null;
+let liveInterval = null;
+
+async function liveLogin() {
+  const email = document.getElementById('live-email').value.trim();
+  const pass  = document.getElementById('live-pass').value;
+  const errEl = document.getElementById('live-error');
+  errEl.style.display = 'none';
+
+  try {
+    const res = await fetch(`${API_URL}/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password: pass })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Error de login');
+    if (data.usuario.rol !== 'admin') throw new Error('Se requiere cuenta de admin');
+
+    liveToken = data.token;
+    document.getElementById('live-login-msg').style.display = 'none';
+    document.getElementById('live-data').style.display = 'block';
+    await cargarMetricasLive();
+    liveInterval = setInterval(cargarMetricasLive, 30000);
+  } catch (e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  }
+}
+
+async function liveFetch(path) {
+  const res = await fetch(API_URL + path, {
+    headers: { Authorization: `Bearer ${liveToken}` }
+  });
+  return res.json();
+}
+
+async function cargarMetricasLive() {
+  if (!liveToken) return;
+  try {
+    const [metricas, ingresos, riders, pedidos] = await Promise.all([
+      liveFetch('/admin/metricas'),
+      liveFetch('/admin/metricas/ingresos'),
+      liveFetch('/admin/riders'),
+      liveFetch('/admin/pedidos?limit=10')
+    ]);
+
+    // KPIs
+    const fmtCLP = n => '$' + parseInt(n || 0).toLocaleString('es-CL');
+    document.getElementById('kpi-total').textContent      = metricas.pedidos.total || 0;
+    document.getElementById('kpi-pendientes').textContent = metricas.pedidos.pendientes || 0;
+    document.getElementById('kpi-entregados').textContent = metricas.pedidos.entregados || 0;
+    document.getElementById('kpi-en-camino').textContent  = metricas.pedidos.en_camino || 0;
+    document.getElementById('kpi-riders-dis').textContent = metricas.riders.disponibles || 0;
+    document.getElementById('kpi-app-fee').textContent    = fmtCLP(metricas.ingresos.app_fee_total);
+    document.getElementById('live-last-update').textContent = new Date().toLocaleTimeString('es-CL');
+
+    // Gráfico ingresos
+    const labels = ingresos.map(r => new Date(r.fecha).toLocaleDateString('es-CL', { day:'2-digit', month:'2-digit' }));
+    const vals   = ingresos.map(r => parseInt(r.ingreso_app || 0));
+
+    if (liveChartInstance) liveChartInstance.destroy();
+    const ctx = document.getElementById('chart-live-ingresos').getContext('2d');
+    liveChartInstance = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'App Fee (CLP)',
+          data: vals,
+          backgroundColor: 'rgba(59,130,246,.7)',
+          borderColor: '#3b82f6',
+          borderWidth: 1,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: '#94a3b8', font: { size: 11 } }, grid: { color: 'rgba(255,255,255,.05)' } },
+          y: { ticks: { color: '#94a3b8', font: { size: 11 }, callback: v => '$' + v.toLocaleString('es-CL') }, grid: { color: 'rgba(255,255,255,.05)' } }
+        }
+      }
+    });
+
+    // Tabla riders
+    const ESTADO_LABEL = { pendiente:'Pendiente', asignado:'Asignado', retiro:'En retiro', en_camino:'En camino', entregado:'Entregado', cancelado:'Cancelado' };
+    document.getElementById('tbody-riders-live').innerHTML = riders.slice(0,8).map(r => `
+      <tr>
+        <td>${r.nombre}</td>
+        <td>${r.total_entregas}</td>
+        <td>${fmtCLP(r.saldo_pendiente)}</td>
+        <td><span style="padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600;background:${r.disponible ? 'rgba(16,185,129,.2)' : 'rgba(148,163,184,.15)'};color:${r.disponible ? '#10b981' : '#94a3b8'}">${r.disponible ? 'Online' : 'Offline'}</span></td>
+      </tr>
+    `).join('') || '<tr><td colspan="4" style="text-align:center;color:#64748b">Sin riders aún</td></tr>';
+
+    // Tabla pedidos
+    document.getElementById('tbody-pedidos-live').innerHTML = pedidos.slice(0,8).map(p => `
+      <tr>
+        <td style="font-family:monospace;font-size:11px">#${p.id.substring(0,8)}</td>
+        <td>${p.nombre_comercial}</td>
+        <td>${fmtCLP(p.tarifa_entrega)}</td>
+        <td><span style="padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600;background:rgba(59,130,246,.2);color:#93c5fd">${ESTADO_LABEL[p.estado] || p.estado}</span></td>
+      </tr>
+    `).join('') || '<tr><td colspan="4" style="text-align:center;color:#64748b">Sin pedidos aún</td></tr>';
+
+    // Cargar comercios también
+    await cargarComerciosLive();
+
+  } catch (e) {
+    console.error('Error cargando métricas live:', e);
+  }
+}
+
+// ── COMERCIOS ──────────────────────────────────────────────────────────────
+async function cargarComerciosLive() {
+  if (!liveToken) return;
+  try {
+    const negocios = await liveFetch('/admin/negocios');
+    const fmtCLP = n => '$' + parseInt(n || 0).toLocaleString('es-CL');
+    document.getElementById('tbody-comercios-live').innerHTML = negocios.map(n => `
+      <tr>
+        <td>
+          <div style="font-weight:600">${n.nombre_comercial}</div>
+          <div style="font-size:11px;color:#94a3b8">${n.email}</div>
+        </td>
+        <td>${n.categoria || '—'}</td>
+        <td>${n.total_pedidos}</td>
+        <td>${fmtCLP(n.app_fee_generado)}</td>
+        <td><span style="padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600;background:${n.activo ? 'rgba(16,185,129,.2)' : 'rgba(244,63,94,.2)'};color:${n.activo ? '#10b981' : '#f43f5e'}">${n.activo ? 'Activo' : 'Inactivo'}</span></td>
+        <td><button onclick="toggleNegocio('${n.id}', ${n.activo})" style="padding:3px 10px;background:${n.activo ? 'rgba(244,63,94,.2)' : 'rgba(16,185,129,.2)'};color:${n.activo ? '#f43f5e' : '#10b981'};border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit">${n.activo ? 'Desactivar' : 'Activar'}</button></td>
+      </tr>
+    `).join('') || '<tr><td colspan="6" style="text-align:center;color:#64748b">Sin comercios</td></tr>';
+  } catch (e) { console.error('Error cargando comercios:', e); }
+}
+
+async function toggleNegocio(id, activo) {
+  try {
+    await fetch(`${API_URL}/admin/negocios/${id}/activo`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${liveToken}` },
+      body: JSON.stringify({ activo: !activo })
+    });
+    await cargarComerciosLive();
+  } catch (e) { console.error(e); }
+}
+
+// ── INCENTIVOS ─────────────────────────────────────────────────────────────
+let ridersLiveCache = [];
+
+async function mostrarModalIncentivo() {
+  const modal = document.getElementById('modal-incentivo');
+  modal.style.display = 'flex';
+  try {
+    const riders = await liveFetch('/admin/riders');
+    ridersLiveCache = riders;
+    document.getElementById('inc-rider').innerHTML = riders.map(r =>
+      `<option value="${r.id}">${r.nombre} — ${r.total_entregas} entregas</option>`
+    ).join('');
+  } catch (e) { console.error(e); }
+}
+
+function cerrarModalIncentivo() {
+  document.getElementById('modal-incentivo').style.display = 'none';
+}
+
+async function enviarIncentivo() {
+  const rider_id = document.getElementById('inc-rider').value;
+  const monto    = parseInt(document.getElementById('inc-monto').value);
+  const motivo   = document.getElementById('inc-motivo').value.trim();
+  if (!rider_id || !monto || !motivo) { alert('Completa todos los campos'); return; }
+  try {
+    await fetch(`${API_URL}/admin/riders/${rider_id}/incentivo`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${liveToken}` },
+      body: JSON.stringify({ monto, motivo })
+    });
+    cerrarModalIncentivo();
+    await cargarMetricasLive();
+    alert('✅ Incentivo agregado correctamente');
+  } catch (e) { alert('Error: ' + e.message); }
+}
 </script>
 
 </body>

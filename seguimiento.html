@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguimiento de tu pedido — Reparto Justo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    :root {
+      --teal: #FFCC00; --teal-mid: #FFD740; --teal-bg: #FFFBEA; --teal-dark: #0F172A;
+      --amber: #854F0B; --amber-bg: #FAEEDA;
+      --red: #DC2626; --red-bg: #FEE2E2;
+      --blue: #0F172A; --blue-bg: #E8EAF0;
+      --text: #1C1C1C; --text2: #6b6b66; --text3: #9a9a94;
+      --bg: #F9F9F9; --border: rgba(0,0,0,0.10); --r: 14px; --r-sm: 10px;
+      --negro: #1C1C1C; --navy: #0F172A; --amarillo: #FFCC00;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    .topbar {
+      background: var(--negro); padding: 0 20px; height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .topbar-brand { font-size: 18px; font-weight: 800; color: var(--amarillo); font-family: 'Montserrat', sans-serif; }
+    .live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,.8); }
+    .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    #mapa { height: 280px; }
+
+    .content { padding: 20px; max-width: 520px; margin: 0 auto; }
+
+    /* Estado principal */
+    .estado-hero {
+      background: white; border-radius: var(--r); padding: 24px; margin-bottom: 16px;
+      border: 1px solid var(--border); text-align: center;
+    }
+    .estado-icon { font-size: 48px; margin-bottom: 12px; }
+    .estado-titulo { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+    .estado-sub { font-size: 14px; color: var(--text2); }
+    .eta-badge {
+      display: inline-block; background: var(--teal-bg); color: var(--teal);
+      font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; margin-top: 12px;
+    }
+
+    /* Timeline */
+    .timeline-card { background: white; border-radius: var(--r); border: 1px solid var(--border); padding: 20px; margin-bottom: 16px; }
+    .timeline-title { font-size: 13px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 16px; }
+    .tl { list-style: none; }
+    .tl li { display: flex; gap: 14px; padding-bottom: 18px; position: relative; }
+    .tl li:not(:last-child)::before { content: ''; position: absolute; left: 13px; top: 28px; bottom: 0; width: 2px; background: var(--border); }
+    .tl-dot { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; border: 2px solid transparent; }
+    .tl-dot.done { background: var(--negro); color: var(--amarillo); border-color: var(--negro); }
+    .tl-dot.active { background: var(--amarillo); color: var(--negro); border-color: var(--amarillo); animation: ring 1.5s infinite; }
+    .tl-dot.pending { background: #f1f1ef; color: var(--text3); border-color: var(--border); }
+    @keyframes ring { 0%,100% { box-shadow: 0 0 0 0 rgba(29,158,117,.4); } 50% { box-shadow: 0 0 0 6px rgba(29,158,117,0); } }
+    .tl-info { padding-top: 3px; flex: 1; }
+    .tl-label { font-size: 14px; font-weight: 600; }
+    .tl-time { font-size: 12px; color: var(--text3); margin-top: 2px; }
+    .tl-dur { font-size: 11px; color: var(--teal); font-weight: 600; margin-top: 2px; }
+
+    /* Rider card */
+    .rider-card {
+      background: white; border-radius: var(--r); border: 1px solid var(--border);
+      padding: 16px 20px; margin-bottom: 16px; display: flex; align-items: center; gap: 14px;
+    }
+    .rider-av { width: 48px; height: 48px; border-radius: 50%; background: var(--amarillo); color: var(--negro); font-size: 20px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .rider-info { flex: 1; }
+    .rider-name { font-weight: 700; font-size: 15px; }
+    .rider-veh { font-size: 13px; color: var(--text2); margin-top: 2px; }
+    .rider-rating { font-size: 12px; color: var(--amber); font-weight: 600; margin-top: 2px; }
+
+    /* Info entrega */
+    .info-card { background: white; border-radius: var(--r); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: 16px; }
+    .info-row { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .info-label { font-size: 11px; color: var(--text3); font-weight: 500; text-transform: uppercase; letter-spacing: .04em; }
+    .info-val { font-size: 14px; font-weight: 500; margin-top: 2px; }
+
+    .branding { text-align: center; padding: 20px; font-size: 12px; color: var(--text3); }
+    .branding strong { color: var(--teal); }
+
+    /* Error / loading */
+    .state-screen { min-height: 60vh; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; text-align: center; padding: 40px; }
+    .state-icon { font-size: 48px; }
+    .state-title { font-size: 18px; font-weight: 700; }
+    .state-sub { font-size: 14px; color: var(--text2); }
+
+    .badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .badge-pendiente { background: var(--amber-bg); color: var(--amber); }
+    .badge-asignado  { background: var(--blue-bg); color: var(--blue); }
+    .badge-retiro    { background: #EDE9FE; color: #5B21B6; }
+    .badge-en_camino { background: var(--teal-bg); color: var(--teal); }
+    .badge-entregado { background: #D1FAE5; color: #065F46; }
+    .badge-cancelado { background: var(--red-bg); color: var(--red); }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">🏍️ Reparto Justo</div>
+  <div class="live-badge"><div class="live-dot"></div>En vivo</div>
+</div>
+
+<div id="mapa"></div>
+
+<div id="main-content">
+  <div class="state-screen">
+    <div class="state-icon">⏳</div>
+    <div class="state-title">Cargando tu pedido...</div>
+  </div>
+</div>
+
+<script>
+const API = location.protocol + '//' + location.hostname + ':3000/api';
+const params = new URLSearchParams(location.search);
+const pedidoId = params.get('id');
+
+const ESTADO_ICON = {
+  pendiente: '⏳', asignado: '🏍️', retiro: '🏪', en_camino: '🚀', entregado: '✅', cancelado: '❌'
+};
+const ESTADO_LABEL = {
+  pendiente: 'Buscando repartidor', asignado: 'Repartidor en camino al negocio',
+  retiro: 'Retirando tu pedido', en_camino: '¡Tu pedido viene en camino!',
+  entregado: '¡Pedido entregado!', cancelado: 'Pedido cancelado'
+};
+const ESTADO_SUB = {
+  pendiente: 'Estamos asignando un repartidor para tu pedido',
+  asignado: 'El repartidor se dirige al negocio a buscar tu pedido',
+  retiro: 'El repartidor está retirando tu pedido del local',
+  en_camino: 'Tu pedido está en camino, pronto llegará',
+  entregado: 'Tu pedido fue entregado exitosamente. ¡Buen provecho!',
+  cancelado: 'Lo sentimos, este pedido fue cancelado'
+};
+
+const PASOS = [
+  { estado: 'pendiente', label: 'Pedido recibido',     icon: '📦' },
+  { estado: 'asignado',  label: 'Repartidor asignado', icon: '🏍️' },
+  { estado: 'retiro',    label: 'Retirando pedido',    icon: '🏪' },
+  { estado: 'en_camino', label: 'En camino',           icon: '🚀' },
+  { estado: 'entregado', label: 'Entregado',           icon: '✅' },
+];
+
+let mapa = null;
+let markerRider = null;
+let socket = null;
+let pedidoData = null;
+
+function fmtTime(d) {
+  if (!d) return null;
+  return new Date(d).toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
+}
+function diffMin(a, b) {
+  if (!a || !b) return null;
+  return Math.round((new Date(b) - new Date(a)) / 60000);
+}
+
+async function cargarPedido() {
+  if (!pedidoId) {
+    mostrarError('Link inválido', 'No se encontró el ID del pedido en el link.');
+    return;
+  }
+  try {
+    const res = await fetch(`${API}/seguimiento/${pedidoId}`);
+    if (!res.ok) throw new Error('Pedido no encontrado');
+    const p = await res.json();
+    pedidoData = p;
+    renderPedido(p);
+    conectarSocket(p);
+  } catch (e) {
+    mostrarError('Pedido no encontrado', 'Este link de seguimiento no es válido o el pedido ya no existe.');
+  }
+}
+
+function renderPedido(p) {
+  const idxActual = PASOS.findIndex(paso => paso.estado === p.estado);
+  const esCancelado = p.estado === 'cancelado';
+
+  // Inicializar mapa
+  if (!mapa) {
+    const centro = p.lat_entrega && p.lng_entrega
+      ? [p.lat_entrega, p.lng_entrega] : [-33.45, -70.65];
+    mapa = L.map('mapa').setView(centro, 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' }).addTo(mapa);
+
+    // Marker destino
+    if (p.lat_entrega && p.lng_entrega) {
+      const iconDest = L.divIcon({ html: '<div style="background:#DC2626;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>', iconSize:[20,20], iconAnchor:[10,10] });
+      L.marker([p.lat_entrega, p.lng_entrega], { icon: iconDest }).addTo(mapa).bindPopup('📍 Tu dirección');
+    }
+  }
+
+  // Marker rider
+  if (p.rider_lat && p.rider_lng) {
+    const iconRider = L.divIcon({ html: '<div style="background:#0F6E56;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px">🏍</div>', iconSize:[24,24], iconAnchor:[12,12] });
+    if (markerRider) {
+      markerRider.setLatLng([p.rider_lat, p.rider_lng]);
+    } else {
+      markerRider = L.marker([p.rider_lat, p.rider_lng], { icon: iconRider }).addTo(mapa).bindPopup('🏍️ Tu repartidor');
+      if (p.lat_entrega && p.lng_entrega) {
+        mapa.fitBounds([[p.lat_entrega, p.lng_entrega],[p.rider_lat, p.rider_lng]], { padding: [30,30] });
+      }
+    }
+  }
+
+  // Calcular tiempos
+  const tiempoRetiro = diffMin(p.asignado_at, p.retiro_at);
+  const tiempoEntrega = diffMin(p.retiro_at, p.entregado_at);
+
+  document.getElementById('main-content').innerHTML = `
+    <div class="content">
+
+      <!-- Hero estado -->
+      <div class="estado-hero">
+        <div class="estado-icon">${ESTADO_ICON[p.estado]}</div>
+        <div class="estado-titulo">${ESTADO_LABEL[p.estado]}</div>
+        <div class="estado-sub">${ESTADO_SUB[p.estado]}</div>
+        ${p.estado === 'en_camino' ? '<div class="eta-badge">🕐 Llegando pronto</div>' : ''}
+        ${p.estado === 'entregado' ? '<div class="eta-badge" style="background:#D1FAE5;color:#065F46">✅ Entregado</div>' : ''}
+      </div>
+
+      <!-- Rider -->
+      ${p.rider_nombre ? `
+        <div class="rider-card">
+          <div class="rider-av">${p.rider_nombre[0]}</div>
+          <div class="rider-info">
+            <div class="rider-name">${p.rider_nombre}</div>
+            <div class="rider-veh">🏍️ ${p.vehiculo_tipo || 'Vehículo'}</div>
+            <div class="rider-rating">⭐ ${parseFloat(p.rider_rating || 5).toFixed(1)}</div>
+          </div>
+          <span class="badge badge-${p.estado}">${p.estado === 'en_camino' ? 'En camino' : p.estado === 'retiro' ? 'En retiro' : 'Asignado'}</span>
+        </div>
+      ` : ''}
+
+      <!-- Timeline -->
+      <div class="timeline-card">
+        <div class="timeline-title">Progreso del pedido</div>
+        <ul class="tl">
+          ${PASOS.map((paso, i) => {
+            const done   = i < idxActual;
+            const active = i === idxActual && !esCancelado;
+            const pend   = i > idxActual || esCancelado;
+            let timeStr = '';
+            let durStr  = '';
+            if (paso.estado === 'pendiente') timeStr = fmtTime(p.created_at);
+            if (paso.estado === 'asignado')  timeStr = fmtTime(p.asignado_at);
+            if (paso.estado === 'retiro')    { timeStr = fmtTime(p.retiro_at); if (tiempoRetiro) durStr = `${tiempoRetiro} min desde asignación`; }
+            if (paso.estado === 'entregado') { timeStr = fmtTime(p.entregado_at); if (tiempoEntrega) durStr = `${tiempoEntrega} min de entrega`; }
+            return `
+              <li>
+                <div class="tl-dot ${done ? 'done' : active ? 'active' : 'pending'}">${done ? '✓' : paso.icon}</div>
+                <div class="tl-info">
+                  <div class="tl-label">${paso.label}</div>
+                  ${timeStr ? `<div class="tl-time">${timeStr}</div>` : ''}
+                  ${durStr  ? `<div class="tl-dur">⏱ ${durStr}</div>` : ''}
+                </div>
+              </li>`;
+          }).join('')}
+        </ul>
+      </div>
+
+      <!-- Info entrega -->
+      <div class="info-card">
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Dirección de entrega</div>
+            <div class="info-val">${p.direccion_entrega}</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏪</div>
+          <div>
+            <div class="info-label">Negocio</div>
+            <div class="info-val">${p.nombre_comercial}</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📏</div>
+          <div>
+            <div class="info-label">Distancia · Tarifa</div>
+            <div class="info-val">${p.distancia_km} km · <strong style="color:var(--teal)">$${parseInt(p.tarifa_entrega).toLocaleString('es-CL')}</strong></div>
+          </div>
+        </div>
+        ${p.notas ? `
+        <div class="info-row">
+          <div class="info-icon">📝</div>
+          <div>
+            <div class="info-label">Notas</div>
+            <div class="info-val">${p.notas}</div>
+          </div>
+        </div>` : ''}
+      </div>
+
+      <div class="branding">Powered by <strong>Reparto Justo</strong> — Delivery sin comisiones</div>
+    </div>
+  `;
+}
+
+function conectarSocket(p) {
+  if (typeof io === 'undefined') return;
+  socket = io(location.protocol + '//' + location.hostname + ':3000');
+  socket.on('connect', () => {
+    socket.emit('pedido:seguir', { pedido_id: p.id });
+  });
+  socket.on('pedido:actualizado', (data) => {
+    if (data.id === pedidoId) cargarPedido();
+  });
+  socket.on('rider:ubicacion', (data) => {
+    if (data.pedido_id === pedidoId && mapa) {
+      const pos = [data.lat, data.lng];
+      if (markerRider) {
+        markerRider.setLatLng(pos);
+      }
+    }
+  });
+}
+
+function mostrarError(titulo, sub) {
+  document.getElementById('main-content').innerHTML = `
+    <div class="state-screen">
+      <div class="state-icon">😕</div>
+      <div class="state-title">${titulo}</div>
+      <div class="state-sub">${sub}</div>
+    </div>
+  `;
+}
+
+cargarPedido();
+// Refrescar cada 30s
+setInterval(cargarPedido, 30000);
+</script>
+<script src="/socket.io/socket.io.js"></script>
+</body>
+</html>
