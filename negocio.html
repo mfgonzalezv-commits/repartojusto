@@ -1586,6 +1586,9 @@ async function guardarPerfil() {
     if (epLng !== null) body.lng = epLng;
 
     await apiFetch('/negocios/perfil', { method: 'PUT', body: JSON.stringify(body) });
+    // Actualizar coords en memoria para cálculo de distancias
+    if (epLat !== null) negocioLat = epLat;
+    if (epLng !== null) negocioLng = epLng;
     toast('Perfil actualizado', 'ok');
     cerrarModalPerfil();
     cargarMiCuenta(); // refrescar datos en la pestaña Mi Cuenta
