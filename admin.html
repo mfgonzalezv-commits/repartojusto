@@ -277,6 +277,36 @@
   </div>
 </div>
 
+<!-- Modal editar usuario -->
+<div class="modal-overlay" id="modal-editar" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:3000;display:none;align-items:center;justify-content:center">
+  <div class="modal" style="width:100%;max-width:420px">
+    <h3>✏️ Editar usuario</h3>
+    <input type="hidden" id="edit-id">
+    <input type="hidden" id="edit-tipo">
+    <div class="field" style="margin-bottom:14px">
+      <label>Nombre</label>
+      <input type="text" id="edit-nombre" placeholder="Nombre completo">
+    </div>
+    <div class="field" style="margin-bottom:14px">
+      <label>Email</label>
+      <input type="email" id="edit-email" placeholder="email@ejemplo.cl">
+    </div>
+    <div class="field" style="margin-bottom:14px">
+      <label>Teléfono</label>
+      <input type="tel" id="edit-telefono" placeholder="+56912345678">
+    </div>
+    <div class="field" style="margin-bottom:14px">
+      <label>Nueva contraseña <span style="color:#999;font-size:11px">(dejar vacío para no cambiar)</span></label>
+      <input type="password" id="edit-password" placeholder="••••••••">
+    </div>
+    <p id="edit-error" style="color:#dc2626;font-size:13px;margin-bottom:12px;display:none"></p>
+    <div style="display:flex;gap:10px">
+      <button class="btn btn-primary" style="flex:1" onclick="guardarEdicion()">Guardar</button>
+      <button class="btn btn-outline" onclick="cerrarModalEditar()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
 <!-- Modal liquidar rider -->
 <div class="modal-overlay" id="modal-liquidar">
   <div class="modal">
@@ -500,9 +530,11 @@ async function cargarRiders() {
               <td>
                 <div style="display:flex;gap:6px;flex-wrap:wrap">
                   ${parseInt(r.saldo_pendiente) > 0 ? `<button class="btn btn-success btn-sm" onclick="abrirModalLiquidar('${r.id}','${r.nombre.replace(/'/g,"\\'")}')">💰 Liquidar</button>` : ''}
+                  <button class="btn btn-sm btn-outline" onclick="abrirModalEditar('usuario','${r.usuario_id}','${r.nombre.replace(/'/g,"\\'")}','${r.email}','${r.telefono||''}')">✏️</button>
                   <button class="btn btn-sm ${r.activo ? 'btn-danger' : 'btn-outline'}" onclick="toggleUsuarioActivo('${r.usuario_id || r.id}',${!r.activo},'riders')">
                     ${r.activo ? 'Bloquear' : 'Activar'}
                   </button>
+                  <button class="btn btn-sm btn-danger" onclick="eliminarUsuario('${r.usuario_id}','${r.nombre.replace(/'/g,"\\'")}','riders')">🗑️</button>
                 </div>
               </td>
             </tr>
@@ -536,9 +568,13 @@ async function cargarNegocios() {
               <td style="font-weight:700;color:var(--teal)">${fmt(n.app_fee_generado)}</td>
               <td><span class="badge ${n.activo ? 'badge-green' : 'badge-red'}">${n.activo ? 'Activo' : 'Inactivo'}</span></td>
               <td>
-                <button class="btn btn-sm ${n.activo ? 'btn-danger' : 'btn-success'}" onclick="toggleNegocioActivo('${n.id}',${!n.activo})">
-                  ${n.activo ? 'Desactivar' : 'Activar'}
-                </button>
+                <div style="display:flex;gap:6px;flex-wrap:wrap">
+                  <button class="btn btn-sm btn-outline" onclick="abrirModalEditar('usuario','${n.usuario_id}','${n.nombre_propietario||n.email}','${n.email}','${n.telefono||''}')">✏️</button>
+                  <button class="btn btn-sm ${n.activo ? 'btn-danger' : 'btn-success'}" onclick="toggleNegocioActivo('${n.id}',${!n.activo})">
+                    ${n.activo ? 'Desactivar' : 'Activar'}
+                  </button>
+                  <button class="btn btn-sm btn-danger" onclick="eliminarUsuario('${n.usuario_id}','${n.nombre_comercial.replace(/'/g,"\\'")}','negocios')">🗑️</button>
+                </div>
               </td>
             </tr>
           `).join('')}
@@ -572,9 +608,14 @@ async function cargarUsuarios() {
               <td style="font-size:12px;color:var(--text3)">${new Date(u.created_at).toLocaleDateString('es-CL')}</td>
               <td><span class="badge ${u.activo ? 'badge-green' : 'badge-red'}">${u.activo ? 'Activo' : 'Bloqueado'}</span></td>
               <td>
-                ${u.rol !== 'admin' ? `<button class="btn btn-sm ${u.activo ? 'btn-danger' : 'btn-outline'}" onclick="toggleUsuarioActivo('${u.id}',${!u.activo},'usuarios')">
-                  ${u.activo ? 'Bloquear' : 'Activar'}
-                </button>` : '—'}
+                ${u.rol !== 'admin' ? `
+                  <div style="display:flex;gap:6px;flex-wrap:wrap">
+                    <button class="btn btn-sm btn-outline" onclick="abrirModalEditar('usuario','${u.id}','${u.nombre.replace(/'/g,"\\'")}','${u.email}','${u.telefono||''}')">✏️</button>
+                    <button class="btn btn-sm ${u.activo ? 'btn-danger' : 'btn-outline'}" onclick="toggleUsuarioActivo('${u.id}',${!u.activo},'usuarios')">
+                      ${u.activo ? 'Bloquear' : 'Activar'}
+                    </button>
+                    <button class="btn btn-sm btn-danger" onclick="eliminarUsuario('${u.id}','${u.nombre.replace(/'/g,"\\'")}','usuarios')">🗑️</button>
+                  </div>` : '—'}
               </td>
             </tr>
           `).join('')}
@@ -643,6 +684,61 @@ async function confirmarLiquidar() {
 $('modal-liquidar').addEventListener('click', function(e) {
   if (e.target === $('modal-liquidar')) cerrarModalLiquidar();
 });
+
+// ══ EDITAR USUARIO ══
+function abrirModalEditar(tipo, id, nombre, email, telefono) {
+  $('edit-id').value       = id;
+  $('edit-tipo').value     = tipo;
+  $('edit-nombre').value   = nombre;
+  $('edit-email').value    = email;
+  $('edit-telefono').value = telefono;
+  $('edit-password').value = '';
+  $('edit-error').style.display = 'none';
+  $('modal-editar').style.display = 'flex';
+}
+function cerrarModalEditar() {
+  $('modal-editar').style.display = 'none';
+}
+$('modal-editar').addEventListener('click', e => { if (e.target === $('modal-editar')) cerrarModalEditar(); });
+
+async function guardarEdicion() {
+  const id       = $('edit-id').value;
+  const nombre   = $('edit-nombre').value.trim();
+  const email    = $('edit-email').value.trim();
+  const telefono = $('edit-telefono').value.trim();
+  const password = $('edit-password').value;
+  const errEl    = $('edit-error');
+  errEl.style.display = 'none';
+
+  if (!nombre || !email) {
+    errEl.textContent = 'Nombre y email son obligatorios';
+    errEl.style.display = 'block'; return;
+  }
+  const body = { nombre, email, telefono: telefono || undefined };
+  if (password) body.password = password;
+
+  try {
+    await apiFetch('/admin/usuarios/' + id, { method: 'PUT', body: JSON.stringify(body) });
+    toast('Usuario actualizado', 'success');
+    cerrarModalEditar();
+    cargarUsuarios(); cargarRiders(); cargarNegocios();
+  } catch (e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  }
+}
+
+// ══ ELIMINAR USUARIO ══
+async function eliminarUsuario(id, nombre, recarga) {
+  if (!confirm(`¿Eliminar a "${nombre}"? Esta acción no se puede deshacer.`)) return;
+  try {
+    await apiFetch('/admin/usuarios/' + id, { method: 'DELETE' });
+    toast('Usuario eliminado', 'success');
+    if (recarga === 'riders')   cargarRiders();
+    if (recarga === 'negocios') cargarNegocios();
+    if (recarga === 'usuarios') cargarUsuarios();
+  } catch (e) { toast(e.message, 'error'); }
+}
 
 // ══ INIT ══
 if (token) {

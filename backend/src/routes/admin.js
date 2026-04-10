@@ -286,4 +286,38 @@ router.get('/metricas/ingresos', async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+// ── PUT /api/admin/usuarios/:id — editar nombre, email, teléfono, password ──
+router.put('/usuarios/:id', auth, solo('admin'), async (req, res, next) => {
+  const { nombre, email, telefono, password } = req.body;
+  try {
+    let passwordHash = null;
+    if (password) {
+      const bcrypt = require('bcryptjs');
+      passwordHash = await bcrypt.hash(password, 10);
+    }
+    const { rows: [u] } = await db(
+      `UPDATE usuarios SET
+         nombre   = COALESCE($1, nombre),
+         email    = COALESCE($2, email),
+         telefono = COALESCE($3, telefono),
+         password = COALESCE($4, password)
+       WHERE id = $5 RETURNING id, nombre, email, rol`,
+      [nombre || null, email || null, telefono || null, passwordHash, req.params.id]
+    );
+    if (!u) return res.status(404).json({ error: 'Usuario no encontrado' });
+    res.json(u);
+  } catch (err) { next(err); }
+});
+
+// ── DELETE /api/admin/usuarios/:id — eliminar usuario y datos relacionados ──
+router.delete('/usuarios/:id', auth, solo('admin'), async (req, res, next) => {
+  try {
+    await db(
+      `DELETE FROM usuarios WHERE id = $1 AND rol != 'admin'`,
+      [req.params.id]
+    );
+    res.json({ ok: true });
+  } catch (err) { next(err); }
+});
+
 module.exports = router;
