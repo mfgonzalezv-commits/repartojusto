@@ -1050,6 +1050,11 @@ async function cargarCoordsNegocio() {
     const p = await apiFetch('/negocios/perfil');
     negocioLat = parseFloat(p.lat);
     negocioLng = parseFloat(p.lng);
+    // Si no tiene coordenadas, mostrar aviso para configurar ubicación
+    if (!negocioLat || !negocioLng || isNaN(negocioLat) || isNaN(negocioLng)) {
+      negocioLat = null; negocioLng = null;
+      toast('⚠️ Configura la ubicación de tu negocio en "Mi cuenta → Editar" para calcular distancias correctamente', 'error');
+    }
   } catch {}
 }
 
@@ -1316,7 +1321,10 @@ $('btn-crear-pedido').addEventListener('click', async () => {
     }
   }
 
-  const kmRaw = await calcularDistanciaRuta(negocioLat || -33.45, negocioLng || -70.65, destinoLat, destinoLng);
+  if (!negocioLat || !negocioLng) {
+    toast('Primero configura la ubicación de tu negocio en Mi cuenta → Editar', 'error'); return;
+  }
+  const kmRaw = await calcularDistanciaRuta(negocioLat, negocioLng, destinoLat, destinoLng);
   const km = parseFloat((kmRaw || 0).toFixed(1));
   console.log('[RJ] distancia calculada:', kmRaw, '→', km, '| negocio:', negocioLat, negocioLng, '| destino:', destinoLat, destinoLng);
   if (!Number.isFinite(km) || km < 0.1) {
