@@ -205,14 +205,14 @@ router.get('/negocios', async (req, res, next) => {
   try {
     const { rows } = await db(
       `SELECT n.id, n.nombre_comercial, n.categoria, n.direccion, n.activo, n.created_at,
-              u.email, u.telefono,
+              u.id AS usuario_id, u.nombre AS nombre_propietario, u.email, u.telefono,
               COUNT(p.id) AS total_pedidos,
               COUNT(p.id) FILTER (WHERE p.estado = 'entregado') AS pedidos_entregados,
               COALESCE(SUM(p.app_fee) FILTER (WHERE p.estado = 'entregado'), 0) AS app_fee_generado
        FROM negocios n
        JOIN usuarios u ON u.id = n.usuario_id
        LEFT JOIN pedidos p ON p.negocio_id = n.id
-       GROUP BY n.id, u.email, u.telefono
+       GROUP BY n.id, u.id, u.nombre, u.email, u.telefono
        ORDER BY total_pedidos DESC`
     );
     res.json(rows);
