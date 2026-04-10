@@ -252,7 +252,8 @@
 
 <!-- ═══════════════════════════════════════════════════════════ LOGIN -->
 <div id="auth-screen">
-  <div class="auth-card">
+  <!-- FORM LOGIN -->
+  <div class="auth-card" id="form-login">
     <div class="auth-logo">Reparto Justo</div>
     <div class="auth-sub">Panel de Negocio</div>
     <h2>Iniciar sesión</h2>
@@ -267,7 +268,58 @@
     <p id="login-error" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none"></p>
     <button class="btn btn-primary btn-full" id="btn-login">Entrar</button>
     <p style="text-align:center;font-size:13px;color:var(--text3);margin-top:16px">
-      ¿No tienes cuenta? <a href="#" id="link-registro" style="color:var(--teal);font-weight:600">Regístrate</a>
+      ¿No tienes cuenta? <a href="#" id="link-registro" style="color:var(--amarillo);font-weight:600">Regístrate</a>
+    </p>
+  </div>
+
+  <!-- FORM REGISTRO -->
+  <div class="auth-card" id="form-registro" style="display:none;max-height:90vh;overflow-y:auto">
+    <div class="auth-logo">Reparto Justo</div>
+    <div class="auth-sub">Crear cuenta de negocio</div>
+    <h2>Registro</h2>
+    <div class="field">
+      <label>Nombre del local *</label>
+      <input type="text" id="reg-nombre-comercial" placeholder="Ej: Sushi Tanaka">
+    </div>
+    <div class="field">
+      <label>Tu nombre *</label>
+      <input type="text" id="reg-nombre" placeholder="Nombre y apellido">
+    </div>
+    <div class="field">
+      <label>Email *</label>
+      <input type="email" id="reg-email" placeholder="tu@negocio.cl">
+    </div>
+    <div class="field">
+      <label>Teléfono</label>
+      <input type="tel" id="reg-telefono" placeholder="+56912345678">
+    </div>
+    <div class="field">
+      <label>Contraseña * (mín. 6 caracteres)</label>
+      <input type="password" id="reg-password" placeholder="••••••••">
+    </div>
+    <div class="field">
+      <label>Dirección del local *</label>
+      <input type="text" id="reg-direccion" placeholder="Av. Providencia 1234, Santiago">
+    </div>
+    <div class="field">
+      <label>Categoría</label>
+      <select id="reg-categoria" style="width:100%;padding:10px 12px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);color:var(--text);font-size:14px">
+        <option value="">Selecciona una categoría</option>
+        <option value="comida_rapida">Comida rápida</option>
+        <option value="japonesa">Japonesa</option>
+        <option value="italiana">Italiana</option>
+        <option value="americana">Americana</option>
+        <option value="chilena">Chilena</option>
+        <option value="mexicana">Mexicana</option>
+        <option value="pizzeria">Pizzería</option>
+        <option value="cafeteria">Cafetería</option>
+        <option value="otra">Otra</option>
+      </select>
+    </div>
+    <p id="reg-error" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none"></p>
+    <button class="btn btn-primary btn-full" id="btn-registrar">Crear cuenta</button>
+    <p style="text-align:center;font-size:13px;color:var(--text3);margin-top:16px">
+      ¿Ya tienes cuenta? <a href="#" id="link-login" style="color:var(--amarillo);font-weight:600">Inicia sesión</a>
     </p>
   </div>
 </div>
@@ -616,6 +668,63 @@ $('btn-login').addEventListener('click', async () => {
 });
 
 $('login-pass').addEventListener('keydown', e => { if (e.key === 'Enter') $('btn-login').click(); });
+
+// ── Toggle login ↔ registro ───────────────────────────────────────────────
+$('link-registro').addEventListener('click', e => {
+  e.preventDefault();
+  $('form-login').style.display = 'none';
+  $('form-registro').style.display = 'block';
+});
+$('link-login').addEventListener('click', e => {
+  e.preventDefault();
+  $('form-registro').style.display = 'none';
+  $('form-login').style.display = 'block';
+});
+
+// ── Registro negocio ─────────────────────────────────────────────────────
+$('btn-registrar').addEventListener('click', async () => {
+  const nombre_comercial = $('reg-nombre-comercial').value.trim();
+  const nombre           = $('reg-nombre').value.trim();
+  const email            = $('reg-email').value.trim();
+  const telefono         = $('reg-telefono').value.trim();
+  const password         = $('reg-password').value;
+  const direccion        = $('reg-direccion').value.trim();
+  const categoria        = $('reg-categoria').value;
+
+  $('reg-error').style.display = 'none';
+
+  if (!nombre_comercial || !nombre || !email || !password || !direccion) {
+    $('reg-error').textContent = 'Completa todos los campos obligatorios (*)';
+    $('reg-error').style.display = 'block';
+    return;
+  }
+  if (password.length < 6) {
+    $('reg-error').textContent = 'La contraseña debe tener al menos 6 caracteres';
+    $('reg-error').style.display = 'block';
+    return;
+  }
+
+  $('btn-registrar').disabled = true;
+  $('btn-registrar').textContent = 'Creando cuenta...';
+
+  try {
+    const data = await apiFetch('/auth/registro/negocio', {
+      method: 'POST',
+      body: JSON.stringify({ nombre_comercial, nombre, email, telefono: telefono || undefined, password, direccion, categoria: categoria || undefined })
+    });
+    token = data.token;
+    usuario = data.usuario;
+    localStorage.setItem('rj_token', token);
+    localStorage.setItem('rj_usuario', JSON.stringify(usuario));
+    iniciarApp();
+  } catch (e) {
+    $('reg-error').textContent = e.message;
+    $('reg-error').style.display = 'block';
+  } finally {
+    $('btn-registrar').disabled = false;
+    $('btn-registrar').textContent = 'Crear cuenta';
+  }
+});
 
 $('btn-logout').addEventListener('click', () => {
   localStorage.removeItem('rj_token');
