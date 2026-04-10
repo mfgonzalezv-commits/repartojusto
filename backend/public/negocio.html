@@ -523,7 +523,9 @@
 </div>
 
 <script>
-const API = `${location.protocol}//${location.hostname}:3000/api`;
+const IS_LOCAL = location.hostname === 'localhost' || /^192\.168\./.test(location.hostname) || /^10\./.test(location.hostname);
+const BASE_URL = IS_LOCAL ? `${location.protocol}//${location.hostname}:3000` : `${location.protocol}//${location.hostname}`;
+const API = BASE_URL + '/api';
 let token = localStorage.getItem('rj_token');
 let usuario = JSON.parse(localStorage.getItem('rj_usuario') || 'null');
 let socket = null;
@@ -652,7 +654,7 @@ async function iniciarApp() {
 // ══════════════════════════════════════════════════════════════
 function conectarSocket() {
   if (typeof io === 'undefined') return;
-  socket = io(`${location.protocol}//${location.hostname}:3000`, { auth: { token } });
+  socket = io(BASE_URL, { auth: { token } });
 
   socket.on('connect', () => console.log('🔌 Socket conectado'));
   socket.on('connect_error', e => console.warn('Socket error:', e.message));
@@ -802,7 +804,7 @@ async function cargarDetalle(id) {
       <div class="detalle-section">
         <div class="detalle-label">Link de seguimiento</div>
         <div style="display:flex;gap:8px;align-items:center;margin-top:4px">
-          <a href="${location.protocol}//${location.hostname}:3000/seguimiento.html?id=${p.id}" target="_blank"
+          <a href="${BASE_URL}/seguimiento.html?id=${p.id}" target="_blank"
              style="font-size:12px;color:var(--teal);text-decoration:none;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
             🔗 Ver seguimiento
           </a>
@@ -1483,7 +1485,7 @@ function cerrarModalDetalle() {
   $('modal-detalle').style.display = 'none';
 }
 function copiarLink(pedidoId) {
-  const url = location.protocol + '//' + location.hostname + ':3000/seguimiento.html?id=' + pedidoId;
+  const url = BASE_URL + '/seguimiento.html?id=' + pedidoId;
   if (navigator.clipboard) {
     navigator.clipboard.writeText(url).then(() => toast('Link copiado', 'success'));
   } else {

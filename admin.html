@@ -307,7 +307,9 @@
 <div id="toast-container"></div>
 
 <script>
-const API = location.protocol + '//' + location.hostname + ':3000/api';
+const IS_LOCAL = location.hostname === 'localhost' || /^192\.168\./.test(location.hostname) || /^10\./.test(location.hostname);
+const BASE_URL = IS_LOCAL ? location.protocol + '//' + location.hostname + ':3000' : location.protocol + '//' + location.hostname;
+const API = BASE_URL + '/api';
 let token = localStorage.getItem('rj_admin_token');
 let chartIngresos = null;
 
