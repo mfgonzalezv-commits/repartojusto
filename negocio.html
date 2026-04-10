@@ -210,6 +210,7 @@
     }
     .toast.success { background: var(--teal); }
     .toast.error   { background: var(--red); }
+    .toast.info    { background: #2563eb; }
     @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: none; opacity: 1; } }
 
     /* ── MODAL ── */
@@ -762,7 +763,15 @@ async function iniciarApp() {
 
   conectarSocket();
   cargarPedidosActivos();
-  cargarCoordsNegocio();
+  // Cargar coords y si no tiene, abrir modal de perfil automáticamente
+  cargarCoordsNegocio().then(() => {
+    if (!negocioLat || !negocioLng) {
+      setTimeout(() => {
+        toast('👋 Bienvenido — primero configura la ubicación de tu negocio', 'info');
+        abrirModalPerfil();
+      }, 800);
+    }
+  });
   // Cargar gráfico con pedidos históricos
   apiFetch('/negocios/pedidos?limit=200').then(pedidos => iniciarGrafico(pedidos)).catch(() => {});
 }
