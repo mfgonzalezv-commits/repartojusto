@@ -99,7 +99,7 @@ router.get('/pedidos', auth, solo('rider'), async (req, res, next) => {
     }
 
     const { rows } = await db(
-      `SELECT p.id, p.cliente_nombre, p.direccion_entrega, p.estado,
+      `SELECT p.id, p.cliente_nombre, p.cliente_telefono, p.notas, p.direccion_entrega, p.estado,
               p.tarifa_entrega, p.distancia_km, p.created_at, p.entregado_at,
               p.asignado_at, p.retiro_at, p.lat_entrega, p.lng_entrega,
               n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng

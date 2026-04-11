@@ -7,8 +7,12 @@ const { query: db } = require('../config/database');
  *  - negocio:{negocio_id}   → el negocio ve actualizaciones de sus pedidos
  *  - rider:{rider_id}       → el rider recibe asignaciones
  *  - admin                  → panel admin ve todo
- *  - pedido:{pedido_id}     → cualquiera con acceso ve el tracking del pedido
+ *  - pedido:{pedido_id}     → tracking + chat del pedido
  */
+
+// Chat en memoria: pedido_id → [{desde, nombre, texto, hora}]
+const chatHistory = new Map();
+const MAX_CHAT_MSG = 50;
 
 module.exports = (io) => {
   // ── Autenticación por JWT en handshake ──────────────────────────────────
@@ -125,6 +129,28 @@ module.exports = (io) => {
       } catch (err) {
         console.error('❌ Error al obtener disponibles:', err.message);
       }
+    });
+
+    // ── Chat: unirse a sala de un pedido y recibir historial ─────────────
+    socket.on('chat:unirse', ({ pedido_id }) => {
+      if (!pedido_id) return;
+      socket.join(`pedido:${pedido_id}`);
+      const hist = chatHistory.get(pedido_id) || [];
+      socket.emit('chat:historial', hist);
+    });
+
+    // ── Chat: enviar mensaje ───────────────────────────────────────────────
+    socket.on('chat:enviar', ({ pedido_id, texto }) => {
+      if (!pedido_id || !texto || !String(texto).trim()) return;
+      const desde = rol === 'rider' ? 'rider' : 'negocio';
+      const msg = { desde, nombre, texto: String(texto).trim(), hora: new Date().toISOString() };
+
+      if (!chatHistory.has(pedido_id)) chatHistory.set(pedido_id, []);
+      const hist = chatHistory.get(pedido_id);
+      hist.push(msg);
+      if (hist.length > MAX_CHAT_MSG) hist.shift();
+
+      io.to(`pedido:${pedido_id}`).emit('chat:mensaje', msg);
     });
 
     // ── Desconexión ───────────────────────────────────────────────────────
