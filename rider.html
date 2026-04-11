@@ -935,24 +935,42 @@ function fmtDist(m) {
   return m < 1000 ? `${Math.round(m / 10) * 10} m` : `${(m / 1000).toFixed(1)} km`;
 }
 
+// Servidores OSRM públicos (se intentan en orden)
+const OSRM_SERVERS = [
+  'https://router.project-osrm.org',
+  'https://routing.openstreetmap.de/routed-car',
+];
+
+async function fetchConTimeout(url, ms) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), ms);
+  try {
+    const r = await fetch(url, { signal: ctrl.signal });
+    clearTimeout(timer);
+    return r;
+  } catch(e) {
+    clearTimeout(timer);
+    throw e;
+  }
+}
+
 async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash, esRutaPrincipal) {
   color  = color  || '#FFCC00';
   weight = weight || 5;
-  // Validar que las coordenadas sean números válidos
-  if ([lat1,lng1,lat2,lng2].some(v => isNaN(parseFloat(v)))) {
-    console.error('OSRM: coordenadas inválidas', {lat1,lng1,lat2,lng2});
-    return null;
-  }
+  if ([lat1,lng1,lat2,lng2].some(v => isNaN(parseFloat(v)))) return null;
   lat1=parseFloat(lat1); lng1=parseFloat(lng1); lat2=parseFloat(lat2); lng2=parseFloat(lng2);
-  try {
-    const withSteps = esRutaPrincipal ? '&steps=true' : '';
-    const url = `https://router.project-osrm.org/route/v1/driving/${lng1},${lat1};${lng2},${lat2}?overview=full&geometries=geojson${withSteps}`;
-    const dbgEl = document.getElementById('debug-panel');
-    if (dbgEl) dbgEl.innerHTML += `<br>🛣 OSRM llamando...`;
-    const r = await fetch(url);
-    const d = await r.json();
-    if (dbgEl) dbgEl.innerHTML += ` → ${d.code} (${d.routes?.length||0} rutas)`;
-    if (d.code === 'Ok' && d.routes && d.routes[0]) {
+
+  const dbgEl = document.getElementById('debug-panel');
+
+  for (const srv of OSRM_SERVERS) {
+    try {
+      const withSteps = esRutaPrincipal ? '&steps=true' : '';
+      const url = `${srv}/route/v1/driving/${lng1},${lat1};${lng2},${lat2}?overview=full&geometries=geojson${withSteps}`;
+      if (dbgEl) dbgEl.innerHTML += `<br>🛣 ${srv.includes('openstreetmap') ? 'OSM' : 'OSRM'}...`;
+      const r = await fetchConTimeout(url, 8000);
+      const d = await r.json();
+      if (dbgEl) dbgEl.innerHTML += ` → ${d.code}`;
+      if (d.code === 'Ok' && d.routes && d.routes[0]) {
       const route = d.routes[0];
       const coords = route.geometry.coordinates.map(([ln, lt]) => [lt, ln]);
       const opts = { color, weight, opacity: 0.9 };
@@ -988,12 +1006,15 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
       }
 
       return { distKm, durMin };
+      } // end if Ok
+    } catch(e) {
+      if (dbgEl) dbgEl.innerHTML += ` ❌ ${e.name === 'AbortError' ? 'timeout' : e.message}`;
+      continue; // intentar siguiente servidor
     }
-  } catch(e) {
-    const dbgEl = document.getElementById('debug-panel');
-    if (dbgEl) dbgEl.innerHTML += `<br>❌ OSRM error: ${e.message}`;
-  }
-  // Fallback: línea recta
+  } // end for servers
+
+  // Fallback: línea recta si todos los servidores fallaron
+  if (dbgEl) dbgEl.innerHTML += '<br>↩ Usando línea recta';
   L.polyline([[lat1, lng1],[lat2, lng2]], { color, weight: weight - 1 || 4, opacity: 0.7, dashArray: '12,8' }).addTo(mapa);
   return null;
 }
