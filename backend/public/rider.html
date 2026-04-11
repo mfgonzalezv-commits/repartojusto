@@ -936,13 +936,21 @@ function fmtDist(m) {
 }
 
 async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash, esRutaPrincipal) {
-  color  = color  || '#0F6E56';
-  weight = weight || 4;
+  color  = color  || '#FFCC00';
+  weight = weight || 5;
+  // Validar que las coordenadas sean números válidos
+  if ([lat1,lng1,lat2,lng2].some(v => isNaN(parseFloat(v)))) {
+    console.error('OSRM: coordenadas inválidas', {lat1,lng1,lat2,lng2});
+    return null;
+  }
+  lat1=parseFloat(lat1); lng1=parseFloat(lng1); lat2=parseFloat(lat2); lng2=parseFloat(lng2);
   try {
     const withSteps = esRutaPrincipal ? '&steps=true' : '';
     const url = `https://router.project-osrm.org/route/v1/driving/${lng1},${lat1};${lng2},${lat2}?overview=full&geometries=geojson${withSteps}`;
-    const r = await fetch(url);
+    console.log('🛣 OSRM request:', url);
+    const r = await fetch(url, { signal: AbortSignal.timeout ? AbortSignal.timeout(10000) : undefined });
     const d = await r.json();
+    console.log('🛣 OSRM response code:', d.code, 'rutas:', d.routes?.length);
     if (d.code === 'Ok' && d.routes && d.routes[0]) {
       const route = d.routes[0];
       const coords = route.geometry.coordinates.map(([ln, lt]) => [lt, ln]);
@@ -980,10 +988,10 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
 
       return { distKm, durMin };
     }
-  } catch(e) { console.warn('OSRM error:', e); }
-  // Fallback: línea recta punteada
-  const fbOpts = { color, weight: weight - 1 || 3, opacity: 0.5, dashArray: dash || '8,8' };
-  L.polyline([[lat1, lng1],[lat2, lng2]], fbOpts).addTo(mapa);
+  } catch(e) { console.warn('OSRM error:', e.message); }
+  // Fallback: línea recta sólida si OSRM falla
+  console.warn('OSRM falló, usando línea recta');
+  L.polyline([[lat1, lng1],[lat2, lng2]], { color, weight: weight - 1 || 4, opacity: 0.7, dashArray: '12,8' }).addTo(mapa);
   return null;
 }
 
@@ -1193,48 +1201,65 @@ function renderPedidoActivo(p) {
       L.marker([p.lat_entrega, p.lng_entrega], { icon: iconDest }).addTo(mapaNav).bindPopup(`📍 Destino entrega<br><small>${p.direccion_entrega}</small>`);
     }
 
-    // Dibujar línea directa inmediatamente (sin esperar GPS ni OSRM)
-    if (p.neg_lat && p.neg_lng && p.lat_entrega && p.lng_entrega) {
-      const ptA = p.estado === 'asignado' ? null : [p.neg_lat, p.neg_lng]; // sin GPS tomamos negocio como origen
-      const ptB = [p.lat_entrega, p.lng_entrega];
-      if (p.neg_lat && p.neg_lng) {
-        L.polyline([[p.neg_lat, p.neg_lng], [p.lat_entrega, p.lng_entrega]], { color: '#FFCC002a', weight: 5, dashArray: '10,8' }).addTo(mapaNav);
-      }
-      const bounds = [];
-      if (p.neg_lat && p.neg_lng) bounds.push([p.neg_lat, p.neg_lng]);
-      if (p.lat_entrega && p.lng_entrega) bounds.push([p.lat_entrega, p.lng_entrega]);
-      if (bounds.length > 1) mapaNav.fitBounds(bounds, { padding: [60, 40] });
+    // Convertir a número (pueden venir como string desde la DB)
+    const nLat = parseFloat(p.neg_lat), nLng = parseFloat(p.neg_lng);
+    const dLat = parseFloat(p.lat_entrega), dLng = parseFloat(p.lng_entrega);
+    const tieneNeg  = !isNaN(nLat) && !isNaN(nLng);
+    const tieneDest = !isNaN(dLat) && !isNaN(dLng);
+
+    console.log('🗺 Coords pedido:', { negocio:[nLat,nLng], destino:[dLat,dLng], estado:p.estado });
+
+    // Línea guía inmediata negocio→destino
+    if (tieneNeg && tieneDest) {
+      L.polyline([[nLat, nLng], [dLat, dLng]], { color: '#FFCC00', weight: 4, opacity: 0.35, dashArray: '10,10' }).addTo(mapaNav);
+      mapaNav.fitBounds([[nLat, nLng], [dLat, dLng]], { padding: [60, 40] });
+    } else if (tieneNeg) {
+      mapaNav.setView([nLat, nLng], 15);
+    } else if (tieneDest) {
+      mapaNav.setView([dLat, dLng], 15);
     }
 
     // Resetear pasos
     navSteps = []; navStepIdx = 0;
 
-    // GPS + OSRM async
-    if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(gpos) {
-      const myLat = gpos.coords.latitude, myLng = gpos.coords.longitude;
+    // GPS → luego OSRM
+    const dibujarConGPS = (myLat, myLng) => {
+      console.log('📍 GPS obtenido:', myLat, myLng);
       const iconMe = L.divIcon({ html: '<div style="background:#0F6E56;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px">🏍</div>', iconSize:[24,24], iconAnchor:[12,12] });
       markerMiPos = L.marker([myLat, myLng], { icon: iconMe }).addTo(mapaNav).bindPopup('Tu posición');
 
       const puntos = [[myLat, myLng]];
-      if (p.neg_lat && p.neg_lng) puntos.push([p.neg_lat, p.neg_lng]);
-      if (p.lat_entrega && p.lng_entrega) puntos.push([p.lat_entrega, p.lng_entrega]);
-      mapaNav.fitBounds(puntos, { padding: [60, 40] });
+      if (tieneNeg)  puntos.push([nLat, nLng]);
+      if (tieneDest) puntos.push([dLat, dLng]);
+      if (puntos.length > 1) mapaNav.fitBounds(puntos, { padding: [60, 40] });
 
-      if (p.estado === 'asignado' && p.neg_lat && p.neg_lng) {
-        dibujarRutaOSRM(mapaNav, myLat, myLng, p.neg_lat, p.neg_lng, '#FFCC00', 6, null, true);
-        if (p.lat_entrega && p.lng_entrega)
-          dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#aaa', 3, '6,8', false);
-      } else if (p.estado === 'retiro' && p.neg_lat && p.neg_lng && p.lat_entrega && p.lng_entrega) {
-        dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#FFCC00', 6, null, true);
-      } else if (p.lat_entrega && p.lng_entrega) {
-        dibujarRutaOSRM(mapaNav, myLat, myLng, p.lat_entrega, p.lng_entrega, '#FFCC00', 6, null, true);
+      if (p.estado === 'asignado' && tieneNeg) {
+        dibujarRutaOSRM(mapaNav, myLat, myLng, nLat, nLng, '#FFCC00', 6, null, true);
+        if (tieneDest)
+          dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#aaa', 3, '6,8', false);
+      } else if (p.estado === 'retiro' && tieneNeg && tieneDest) {
+        dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#FFCC00', 6, null, true);
+      } else if (tieneDest) {
+        dibujarRutaOSRM(mapaNav, myLat, myLng, dLat, dLng, '#FFCC00', 6, null, true);
       }
-    }, function() {
-      // Sin GPS: OSRM negocio→destino
-      if (p.neg_lat && p.neg_lng && p.lat_entrega && p.lng_entrega) {
-        dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#FFCC00', 6, null, true);
+    };
+
+    const sinGPS = () => {
+      console.warn('⚠️ Sin GPS, usando coordenadas del pedido');
+      if (tieneNeg && tieneDest) {
+        dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#FFCC00', 6, null, true);
       }
-    }, { enableHighAccuracy: true, timeout: 6000 });
+    };
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        gpos => dibujarConGPS(gpos.coords.latitude, gpos.coords.longitude),
+        sinGPS,
+        { enableHighAccuracy: true, timeout: 8000, maximumAge: 10000 }
+      );
+    } else {
+      sinGPS();
+    }
   }, 100);
 
   // Iniciar chat para este pedido
