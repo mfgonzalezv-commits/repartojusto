@@ -619,10 +619,66 @@ async function iniciarApp() {
   conectarSocket();
   cargarStats();
   cargarPedidoActivo();
-  if (eraDisponible) cargarDisponibles();
+  if (eraDisponible) {
+    cargarDisponibles();
+    iniciarPolling();
+    pedirPermisoNotif();
+  }
+}
+
+// ══════════ NOTIFICACIONES ══════════
+let notifPermiso = false;
+let audioCtx = null;
+
+function pedirPermisoNotif() {
+  if (!('Notification' in window)) return;
+  if (Notification.permission === 'granted') { notifPermiso = true; return; }
+  if (Notification.permission !== 'denied') {
+    Notification.requestPermission().then(p => { notifPermiso = p === 'granted'; });
+  }
+}
+
+function notificarPedido(tarifa) {
+  // Sonido beep
+  try {
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    [0, 150, 300].forEach(delay => {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain); gain.connect(audioCtx.destination);
+      osc.frequency.value = 880;
+      gain.gain.setValueAtTime(0.3, audioCtx.currentTime + delay/1000);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + delay/1000 + 0.2);
+      osc.start(audioCtx.currentTime + delay/1000);
+      osc.stop(audioCtx.currentTime + delay/1000 + 0.2);
+    });
+  } catch {}
+
+  // Notificación push del navegador
+  if (notifPermiso) {
+    new Notification('🛵 Nuevo pedido disponible', {
+      body: tarifa ? `Tarifa: $${parseInt(tarifa).toLocaleString('es-CL')}` : 'Hay un pedido esperando',
+      icon: '/favicon.ico',
+      tag: 'pedido-nuevo',
+      renotify: true
+    });
+  }
 }
 
 // ══════════ SOCKET ══════════
+let pollingInterval = null;
+
+function iniciarPolling() {
+  if (pollingInterval) clearInterval(pollingInterval);
+  pollingInterval = setInterval(() => {
+    if (disponible && !pedidoActivo) cargarDisponibles();
+  }, 8000); // cada 8 segundos
+}
+
+function detenerPolling() {
+  if (pollingInterval) { clearInterval(pollingInterval); pollingInterval = null; }
+}
+
 function conectarSocket() {
   if (typeof io === 'undefined') return;
   socket = io(BASE_URL, { auth: { token } });
@@ -630,10 +686,11 @@ function conectarSocket() {
     console.log('🔌 Socket rider conectado');
     if (disponible) socket.emit('rider:pedir_disponibles');
   });
-  socket.on('pedido:nuevo', () => {
+  socket.on('pedido:nuevo', (data) => {
     if (disponible && !pedidoActivo) {
       socket.emit('rider:pedir_disponibles');
-      toast('📦 Nuevo pedido disponible!');
+      toast('📦 ¡Nuevo pedido disponible!', 'success');
+      notificarPedido(data && data.tarifa_entrega);
     }
   });
   socket.on('pedidos:disponibles', (pedidos) => {
@@ -660,10 +717,13 @@ $('toggle-disponible').addEventListener('change', async (e) => {
       iniciarGPS();
       cargarDisponibles();
       iniciarTurno();
+      iniciarPolling();
+      pedirPermisoNotif();
       toast('¡Estás online! Buscando pedidos...', 'success');
     } else {
       detenerGPS();
       detenerTurno();
+      detenerPolling();
       $('lista-disponibles').innerHTML = '<div class="empty"><div class="empty-icon">💤</div><div class="empty-text">Actívate para ver pedidos</div></div>';
       toast('Offline');
     }
