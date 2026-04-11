@@ -947,10 +947,11 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
   try {
     const withSteps = esRutaPrincipal ? '&steps=true' : '';
     const url = `https://router.project-osrm.org/route/v1/driving/${lng1},${lat1};${lng2},${lat2}?overview=full&geometries=geojson${withSteps}`;
-    console.log('🛣 OSRM request:', url);
-    const r = await fetch(url, { signal: AbortSignal.timeout ? AbortSignal.timeout(10000) : undefined });
+    const dbgEl = document.getElementById('debug-panel');
+    if (dbgEl) dbgEl.innerHTML += `<br>🛣 OSRM llamando...`;
+    const r = await fetch(url);
     const d = await r.json();
-    console.log('🛣 OSRM response code:', d.code, 'rutas:', d.routes?.length);
+    if (dbgEl) dbgEl.innerHTML += ` → ${d.code} (${d.routes?.length||0} rutas)`;
     if (d.code === 'Ok' && d.routes && d.routes[0]) {
       const route = d.routes[0];
       const coords = route.geometry.coordinates.map(([ln, lt]) => [lt, ln]);
@@ -988,9 +989,11 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
 
       return { distKm, durMin };
     }
-  } catch(e) { console.warn('OSRM error:', e.message); }
-  // Fallback: línea recta sólida si OSRM falla
-  console.warn('OSRM falló, usando línea recta');
+  } catch(e) {
+    const dbgEl = document.getElementById('debug-panel');
+    if (dbgEl) dbgEl.innerHTML += `<br>❌ OSRM error: ${e.message}`;
+  }
+  // Fallback: línea recta
   L.polyline([[lat1, lng1],[lat2, lng2]], { color, weight: weight - 1 || 4, opacity: 0.7, dashArray: '12,8' }).addTo(mapa);
   return null;
 }
@@ -1207,7 +1210,23 @@ function renderPedidoActivo(p) {
     const tieneNeg  = !isNaN(nLat) && !isNaN(nLng);
     const tieneDest = !isNaN(dLat) && !isNaN(dLng);
 
-    console.log('🗺 Coords pedido:', { negocio:[nLat,nLng], destino:[dLat,dLng], estado:p.estado });
+    // Panel de debug visible en pantalla
+    const dbg = document.createElement('div');
+    dbg.id = 'debug-panel';
+    dbg.style.cssText = 'background:#1a1a18;color:#0f0;font-size:11px;padding:8px 12px;border-radius:8px;margin-bottom:8px;font-family:monospace;line-height:1.6';
+    dbg.innerHTML = `<b style="color:#FFCC00">DEBUG MAPA</b><br>
+      Negocio coords: ${tieneNeg ? nLat.toFixed(5)+', '+nLng.toFixed(5) : '❌ sin coords'}<br>
+      Destino coords: ${tieneDest ? dLat.toFixed(5)+', '+dLng.toFixed(5) : '❌ sin coords'}<br>
+      Estado pedido: ${p.estado}<br>
+      GPS: esperando...<br>
+      OSRM: esperando...`;
+    const navWrapEl = document.getElementById('nav-instruccion');
+    if (navWrapEl && navWrapEl.parentNode) navWrapEl.parentNode.insertBefore(dbg, navWrapEl);
+
+    const dbgLog = (linea) => {
+      const el = document.getElementById('debug-panel');
+      if (el) el.innerHTML += '<br>' + linea;
+    };
 
     // Línea guía inmediata negocio→destino
     if (tieneNeg && tieneDest) {
@@ -1224,7 +1243,7 @@ function renderPedidoActivo(p) {
 
     // GPS → luego OSRM
     const dibujarConGPS = (myLat, myLng) => {
-      console.log('📍 GPS obtenido:', myLat, myLng);
+      dbgLog(`📍 GPS OK: ${myLat.toFixed(5)}, ${myLng.toFixed(5)}`);
       const iconMe = L.divIcon({ html: '<div style="background:#0F6E56;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px">🏍</div>', iconSize:[24,24], iconAnchor:[12,12] });
       markerMiPos = L.marker([myLat, myLng], { icon: iconMe }).addTo(mapaNav).bindPopup('Tu posición');
 
@@ -1245,7 +1264,7 @@ function renderPedidoActivo(p) {
     };
 
     const sinGPS = () => {
-      console.warn('⚠️ Sin GPS, usando coordenadas del pedido');
+      dbgLog('⚠️ GPS falló — usando coords del pedido');
       if (tieneNeg && tieneDest) {
         dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#FFCC00', 6, null, true);
       }
