@@ -791,6 +791,19 @@ function conectarSocket() {
     cargarPedidosActivos();
   });
 
+  socket.on('chat:historial', (msgs) => {
+    renderChatMensajesNeg(msgs);
+  });
+
+  socket.on('chat:mensaje', (msg) => {
+    agregarMensajeChatNeg(msg);
+    if (!chatNegAbierto && msg.desde !== 'negocio') {
+      const badge = $('chat-badge-neg');
+      if (badge) { badge.style.display = 'inline-flex'; }
+      toast('💬 Mensaje del rider', 'success');
+    }
+  });
+
   socket.on('pedido:actualizado', (data) => {
     const label = ESTADO_LABEL[data.estado] || data.estado;
     toast(`🔄 Pedido actualizado: ${label}`);
@@ -973,9 +986,27 @@ async function cargarDetalle(id) {
         </ul>
       </div>
       ${cancelBtn}
+      ${p.rider_nombre && !['entregado','cancelado'].includes(p.estado) ? `
+      <div style="margin-top:16px;border-top:1px solid var(--border);padding-top:14px">
+        <button id="btn-toggle-chat-neg" onclick="toggleChatNeg()" style="width:100%;background:#E8EAF0;color:#0F172A;border:none;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:space-between">
+          <span>💬 Chat con el rider</span><span id="chat-badge-neg" style="display:none;background:#DC2626;color:white;border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;align-items:center;justify-content:center">!</span>
+        </button>
+        <div id="chat-wrap-neg" style="display:none;margin-top:10px">
+          <div id="chat-mensajes-neg" style="height:160px;overflow-y:auto;border:1px solid rgba(0,0,0,.1);border-radius:8px;padding:10px;font-size:13px;background:#F9F9F9"></div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <input id="chat-input-neg" placeholder="Escribe un mensaje..." style="flex:1;padding:9px 12px;border:1.5px solid rgba(0,0,0,.1);border-radius:8px;font-size:13px;font-family:inherit" onkeydown="if(event.key==='Enter')enviarChatNeg()">
+            <button onclick="enviarChatNeg()" style="background:#FFCC00;color:#1C1C1C;border:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Enviar</button>
+          </div>
+        </div>
+      </div>` : ''}
     `;
 
     if (cancelBtn) $('btn-cancelar').addEventListener('click', () => cancelarPedido(p.id));
+
+    // Unirse a sala de chat del pedido
+    if (socket && p.rider_nombre && !['entregado','cancelado'].includes(p.estado)) {
+      socket.emit('chat:unirse', { pedido_id: p.id });
+    }
 
     // ── MAPA ──
     const mapaEl = $('mapa-seguimiento');
@@ -1014,6 +1045,68 @@ async function cargarDetalle(id) {
       if (mapaInstance) { mapaInstance.remove(); mapaInstance = null; }
     }
   } catch (e) { toast(e.message, 'error'); }
+}
+
+// ══════════ CHAT NEGOCIO ══════════
+let chatNegAbierto = false;
+
+function toggleChatNeg() {
+  const wrap = $('chat-wrap-neg');
+  if (!wrap) return;
+  chatNegAbierto = !chatNegAbierto;
+  wrap.style.display = chatNegAbierto ? 'block' : 'none';
+  if (chatNegAbierto) {
+    const badge = $('chat-badge-neg');
+    if (badge) badge.style.display = 'none';
+    const input = $('chat-input-neg');
+    if (input) input.focus();
+    const mensajes = $('chat-mensajes-neg');
+    if (mensajes) mensajes.scrollTop = mensajes.scrollHeight;
+  }
+}
+
+function burbujaMensajeNeg(msg) {
+  const esMio = msg.desde === 'negocio';
+  const hora = new Date(msg.hora).toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
+  return `
+    <div style="display:flex;flex-direction:column;align-items:${esMio ? 'flex-end' : 'flex-start'};margin-bottom:8px">
+      <div style="max-width:80%;background:${esMio ? '#FFCC00' : 'white'};color:#1C1C1C;border-radius:${esMio ? '12px 12px 2px 12px' : '12px 12px 12px 2px'};padding:8px 12px;border:1px solid rgba(0,0,0,.1);font-size:13px;line-height:1.4">
+        ${!esMio ? `<div style="font-size:10px;font-weight:600;color:#9a9a94;margin-bottom:3px">${msg.nombre || 'Rider'}</div>` : ''}
+        ${msg.texto}
+      </div>
+      <div style="font-size:10px;color:#9a9a94;margin-top:2px">${hora}</div>
+    </div>`;
+}
+
+function renderChatMensajesNeg(msgs) {
+  const container = $('chat-mensajes-neg');
+  if (!container) return;
+  if (!msgs.length) {
+    container.innerHTML = '<div style="text-align:center;color:#9a9a94;padding:20px 0;font-size:12px">Sin mensajes — escríbele al rider 👋</div>';
+    return;
+  }
+  container.innerHTML = msgs.map(m => burbujaMensajeNeg(m)).join('');
+  container.scrollTop = container.scrollHeight;
+}
+
+function agregarMensajeChatNeg(msg) {
+  const container = $('chat-mensajes-neg');
+  if (!container) return;
+  const vacio = container.querySelector('div[style*="Sin mensajes"]');
+  if (vacio) vacio.remove();
+  container.insertAdjacentHTML('beforeend', burbujaMensajeNeg(msg));
+  container.scrollTop = container.scrollHeight;
+}
+
+function enviarChatNeg() {
+  const input = $('chat-input-neg');
+  if (!input || !pedidoSeleccionado) return;
+  const texto = input.value.trim();
+  if (!texto) return;
+  if (!socket) { toast('Sin conexión', 'error'); return; }
+  socket.emit('chat:enviar', { pedido_id: pedidoSeleccionado.id, texto });
+  input.value = '';
+  input.focus();
 }
 
 async function cancelarPedido(id) {

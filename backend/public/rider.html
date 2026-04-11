@@ -551,6 +551,8 @@ let mapaNav = null;
 let markerMiPos = null;
 let turnoInicio = null;
 let turnoTimer = null;
+let chatAbierto = false;
+let chatPedidoId = null;
 
 const $ = id => document.getElementById(id);
 const toast = (msg, type = '') => {
@@ -696,6 +698,81 @@ function conectarSocket() {
   socket.on('pedidos:disponibles', (pedidos) => {
     renderDisponibles(pedidos);
   });
+
+  socket.on('chat:historial', (msgs) => {
+    renderChatMensajes(msgs);
+  });
+
+  socket.on('chat:mensaje', (msg) => {
+    agregarMensajeChat(msg);
+    if (!chatAbierto && msg.desde !== 'rider') {
+      const badge = $('chat-badge');
+      if (badge) { badge.style.display = 'inline-flex'; }
+      notificarPedido(null); // sonido de alerta
+    }
+  });
+}
+
+// ══════════ CHAT ══════════
+function toggleChat() {
+  const wrap = $('chat-wrap');
+  if (!wrap) return;
+  chatAbierto = !chatAbierto;
+  wrap.style.display = chatAbierto ? 'block' : 'none';
+  if (chatAbierto) {
+    const badge = $('chat-badge');
+    if (badge) badge.style.display = 'none';
+    const input = $('chat-input');
+    if (input) input.focus();
+    // Scroll al fondo
+    const mensajes = $('chat-mensajes');
+    if (mensajes) mensajes.scrollTop = mensajes.scrollHeight;
+  }
+}
+
+function renderChatMensajes(msgs) {
+  const container = $('chat-mensajes');
+  if (!container) return;
+  if (!msgs.length) {
+    container.innerHTML = '<div style="text-align:center;color:var(--text3);padding:20px 0;font-size:12px">Sin mensajes aún — di hola 👋</div>';
+    return;
+  }
+  container.innerHTML = msgs.map(m => burbujaMensaje(m)).join('');
+  container.scrollTop = container.scrollHeight;
+}
+
+function burbujaMensaje(msg) {
+  const esMio = msg.desde === 'rider';
+  const hora = new Date(msg.hora).toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
+  return `
+    <div style="display:flex;flex-direction:column;align-items:${esMio ? 'flex-end' : 'flex-start'};margin-bottom:8px">
+      <div style="max-width:80%;background:${esMio ? 'var(--teal)' : 'white'};color:${esMio ? 'var(--negro)' : 'var(--text)'};border-radius:${esMio ? '12px 12px 2px 12px' : '12px 12px 12px 2px'};padding:8px 12px;border:1px solid var(--border);font-size:13px;line-height:1.4">
+        ${!esMio ? `<div style="font-size:10px;font-weight:600;color:var(--text3);margin-bottom:3px">${msg.nombre || 'Negocio'}</div>` : ''}
+        ${msg.texto}
+      </div>
+      <div style="font-size:10px;color:var(--text3);margin-top:2px">${hora}</div>
+    </div>`;
+}
+
+function agregarMensajeChat(msg) {
+  const container = $('chat-mensajes');
+  if (!container) return;
+  // Remover mensaje vacío si hay
+  const vacio = container.querySelector('div[style*="Sin mensajes"]');
+  if (vacio) vacio.remove();
+  container.insertAdjacentHTML('beforeend', burbujaMensaje(msg));
+  container.scrollTop = container.scrollHeight;
+}
+
+function enviarChat() {
+  const input = $('chat-input');
+  if (!input || !chatPedidoId) return;
+  const texto = input.value.trim();
+  if (!texto) return;
+  if (!socket) { toast('Sin conexión', 'error'); return; }
+  socket.emit('chat:enviar', { pedido_id: chatPedidoId, texto });
+  input.value = '';
+  input.focus();
 }
 
 // ══════════ DISPONIBILIDAD ══════════
@@ -863,6 +940,19 @@ function renderPedidoActivo(p) {
       </div>
       <div class="pa-body">
         <div id="mapa-navegacion"></div>
+
+        <!-- Datos del cliente -->
+        <div style="background:var(--teal-bg);border-radius:var(--r-sm);padding:12px 14px;margin-bottom:12px">
+          <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;margin-bottom:6px">👤 Cliente</div>
+          <div style="font-weight:700;font-size:15px;margin-bottom:4px">${p.cliente_nombre || 'Sin nombre'}</div>
+          ${p.cliente_telefono ? `
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <span style="font-size:13px;color:var(--text2)">${p.cliente_telefono}</span>
+            <a href="tel:${p.cliente_telefono}" style="display:inline-flex;align-items:center;gap:5px;background:var(--teal);color:var(--negro);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap">📞 Llamar</a>
+          </div>` : ''}
+          ${p.notas ? `<div style="font-size:12px;color:var(--amber);margin-top:6px;font-weight:500">📝 ${p.notas}</div>` : ''}
+        </div>
+
         <div style="margin-bottom:12px">
           <div style="font-size:11px;color:var(--text3);margin-bottom:4px;font-weight:600;text-transform:uppercase">🏪 Retiro</div>
           <div style="font-weight:600;font-size:14px">${p.nombre_comercial}</div>
@@ -876,6 +966,21 @@ function renderPedidoActivo(p) {
           <span>💰 <strong style="color:var(--teal)">${fmt(p.tarifa_entrega)}</strong></span>
           <span>📏 ${p.distancia_km} km</span>
         </div>
+
+        <!-- Chat con el negocio -->
+        <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:12px">
+          <button id="btn-toggle-chat" onclick="toggleChat()" style="width:100%;background:var(--blue-bg);color:var(--blue);border:none;border-radius:var(--r-sm);padding:10px 14px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:space-between">
+            <span>💬 Chat con el negocio</span><span id="chat-badge" style="display:none;background:var(--red);color:white;border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;display:none;align-items:center;justify-content:center">!</span>
+          </button>
+          <div id="chat-wrap" style="display:none;margin-top:10px">
+            <div id="chat-mensajes" style="height:160px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--r-sm);padding:10px;font-size:13px;background:var(--bg)"></div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <input id="chat-input" placeholder="Escribe un mensaje..." style="flex:1;padding:9px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit" onkeydown="if(event.key==='Enter')enviarChat()">
+              <button onclick="enviarChat()" style="background:var(--teal);color:var(--negro);border:none;border-radius:var(--r-sm);padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Enviar</button>
+            </div>
+          </div>
+        </div>
+
         ${siguiente ? `<button class="avanzar-btn" id="btn-avanzar">${SIGUIENTE_BTN[p.estado]}</button>` : '<div style="margin-top:16px;text-align:center;color:var(--teal);font-weight:700;padding:14px;background:var(--teal-bg);border-radius:10px">✅ ¡Pedido entregado!</div>'}
       </div>
     </div>
@@ -938,6 +1043,12 @@ function renderPedidoActivo(p) {
       }
     });
   }, 100);
+
+  // Iniciar chat para este pedido
+  chatPedidoId = p.id;
+  if (socket) {
+    socket.emit('chat:unirse', { pedido_id: p.id });
+  }
 
   if (siguiente) {
     $('btn-avanzar').addEventListener('click', async () => {
