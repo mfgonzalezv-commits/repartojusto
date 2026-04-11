@@ -430,6 +430,9 @@
 
 <div id="toast-container"></div>
 
+<!-- Socket.io debe cargarse ANTES que el script principal -->
+<script src="/socket.io/socket.io.js"></script>
+
 <!-- Script mínimo de login — sintaxis ES5 pura para máxima compatibilidad móvil -->
 <script>
 window.onerror = function(msg, src, line) {
@@ -1323,6 +1326,5 @@ if (token && usuario && usuario.rol === 'rider') {
 }
 </script>
 
-<script src="/socket.io/socket.io.js"></script>
 </body>
 </html>
