@@ -192,30 +192,30 @@
     @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
 
     /* ── MAPA NAVEGACIÓN ── */
-    #nav-wrap { position: relative; margin-bottom: 14px; border-radius: var(--r-sm); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
-    #mapa-navegacion { height: 320px; }
+    #mapa-navegacion { height: 280px; border-radius: 0 0 var(--r-sm) var(--r-sm); overflow: hidden; }
 
-    /* ── BARRA DE MANIOBRA (estilo Waze) ── */
+    /* ── BARRA DE MANIOBRA (estilo Waze) — encima del mapa, en el flujo normal ── */
     #nav-instruccion {
-      position: absolute; top: 0; left: 0; right: 0; z-index: 1000;
       background: linear-gradient(135deg, #0F172A 0%, #1a2744 100%);
-      padding: 10px 14px; display: flex; align-items: center; gap: 12px;
+      border-radius: var(--r-sm) var(--r-sm) 0 0;
+      padding: 12px 14px; display: flex; align-items: center; gap: 12px;
+      margin-bottom: 0;
     }
-    #nav-flecha { font-size: 32px; line-height: 1; flex-shrink: 0; filter: drop-shadow(0 2px 4px rgba(0,0,0,.5)); }
+    #nav-flecha { font-size: 34px; line-height: 1; flex-shrink: 0; }
     #nav-texto { flex: 1; min-width: 0; }
     #nav-accion { font-size: 11px; font-weight: 500; color: #8fa8c8; text-transform: uppercase; letter-spacing: .05em; }
     #nav-calle  { font-size: 15px; font-weight: 700; color: white; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
-    #nav-dist-paso { background: var(--teal); color: var(--negro); font-size: 13px; font-weight: 800; padding: 4px 10px; border-radius: 20px; flex-shrink: 0; }
+    #nav-dist-paso { background: var(--teal); color: var(--negro); font-size: 14px; font-weight: 800; padding: 5px 12px; border-radius: 20px; flex-shrink: 0; }
 
-    /* ── INFO INFERIOR DEL MAPA ── */
+    /* ── INFO BAR debajo del mapa ── */
     #nav-info-bar {
-      position: absolute; bottom: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(15,23,42,.85); backdrop-filter: blur(4px);
-      display: flex; justify-content: space-between; padding: 8px 16px;
+      background: #0F172A; border-radius: 0 0 var(--r-sm) var(--r-sm);
+      display: flex; justify-content: space-around; padding: 10px 16px;
+      margin-bottom: 12px;
     }
     .nav-info-item { text-align: center; }
     .nav-info-val  { font-size: 16px; font-weight: 800; color: var(--teal); }
-    .nav-info-lbl  { font-size: 10px; color: #8fa8c8; font-weight: 500; text-transform: uppercase; margin-top: 1px; }
+    .nav-info-lbl  { font-size: 10px; color: #8fa8c8; font-weight: 500; text-transform: uppercase; margin-top: 2px; }
 
     /* ── PASOS SIGUIENTES ── */
     #nav-pasos { margin-bottom: 12px; background: white; border-radius: var(--r-sm); border: 1px solid var(--border); overflow: hidden; }
@@ -1103,22 +1103,20 @@ function renderPedidoActivo(p) {
         <span class="estado-badge estado-${p.estado}">${ESTADO_LABEL[p.estado]}</span>
       </div>
       <div class="pa-body">
-        <!-- Mapa con overlay estilo Waze -->
-        <div id="nav-wrap">
-          <div id="nav-instruccion">
-            <div id="nav-flecha">🛣️</div>
-            <div id="nav-texto">
-              <div id="nav-accion">Calculando ruta...</div>
-              <div id="nav-calle">—</div>
-            </div>
-            <div id="nav-dist-paso">—</div>
+        <!-- Nav estilo Waze: instrucción → mapa → info bar (flujo normal, sin overlays) -->
+        <div id="nav-instruccion">
+          <div id="nav-flecha">🧭</div>
+          <div id="nav-texto">
+            <div id="nav-accion">${p.estado === 'asignado' ? 'Ve a retirar el pedido' : p.estado === 'retiro' ? 'Ve al destino de entrega' : 'Entrega el pedido'}</div>
+            <div id="nav-calle">${p.estado === 'asignado' ? p.nombre_comercial : p.direccion_entrega}</div>
           </div>
-          <div id="mapa-navegacion"></div>
-          <div id="nav-info-bar">
-            <div class="nav-info-item"><div class="nav-info-val" id="nav-eta">—</div><div class="nav-info-lbl">Llegada</div></div>
-            <div class="nav-info-item"><div class="nav-info-val" id="nav-dist-total">—</div><div class="nav-info-lbl">Distancia</div></div>
-            <div class="nav-info-item"><div class="nav-info-val" id="nav-tiempo">—</div><div class="nav-info-lbl">Tiempo</div></div>
-          </div>
+          <div id="nav-dist-paso">${p.distancia_km} km</div>
+        </div>
+        <div id="mapa-navegacion"></div>
+        <div id="nav-info-bar">
+          <div class="nav-info-item"><div class="nav-info-val" id="nav-eta">—</div><div class="nav-info-lbl">Llegada</div></div>
+          <div class="nav-info-item"><div class="nav-info-val" id="nav-dist-total">${p.distancia_km} km</div><div class="nav-info-lbl">Distancia</div></div>
+          <div class="nav-info-item"><div class="nav-info-val" id="nav-tiempo">~${Math.round(p.distancia_km / 0.5)} min</div><div class="nav-info-lbl">Tiempo</div></div>
         </div>
 
         <!-- Pasos de la ruta -->
@@ -1195,44 +1193,48 @@ function renderPedidoActivo(p) {
       L.marker([p.lat_entrega, p.lng_entrega], { icon: iconDest }).addTo(mapaNav).bindPopup(`📍 Destino entrega<br><small>${p.direccion_entrega}</small>`);
     }
 
-    // Mostrar mi posición y dibujar ruta según estado
+    // Dibujar línea directa inmediatamente (sin esperar GPS ni OSRM)
+    if (p.neg_lat && p.neg_lng && p.lat_entrega && p.lng_entrega) {
+      const ptA = p.estado === 'asignado' ? null : [p.neg_lat, p.neg_lng]; // sin GPS tomamos negocio como origen
+      const ptB = [p.lat_entrega, p.lng_entrega];
+      if (p.neg_lat && p.neg_lng) {
+        L.polyline([[p.neg_lat, p.neg_lng], [p.lat_entrega, p.lng_entrega]], { color: '#FFCC002a', weight: 5, dashArray: '10,8' }).addTo(mapaNav);
+      }
+      const bounds = [];
+      if (p.neg_lat && p.neg_lng) bounds.push([p.neg_lat, p.neg_lng]);
+      if (p.lat_entrega && p.lng_entrega) bounds.push([p.lat_entrega, p.lng_entrega]);
+      if (bounds.length > 1) mapaNav.fitBounds(bounds, { padding: [60, 40] });
+    }
+
+    // Resetear pasos
+    navSteps = []; navStepIdx = 0;
+
+    // GPS + OSRM async
     if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(gpos) {
       const myLat = gpos.coords.latitude, myLng = gpos.coords.longitude;
       const iconMe = L.divIcon({ html: '<div style="background:#0F6E56;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px">🏍</div>', iconSize:[24,24], iconAnchor:[12,12] });
       markerMiPos = L.marker([myLat, myLng], { icon: iconMe }).addTo(mapaNav).bindPopup('Tu posición');
 
-      // Ruta según estado:
-      // asignado  → rider va al negocio (rider→negocio, + contexto negocio→destino punteado)
-      // retiro    → rider ya está en el negocio, va al destino (negocio→destino)
-      // en_camino → rider lleva el pedido hacia el destino (rider→destino)
       const puntos = [[myLat, myLng]];
       if (p.neg_lat && p.neg_lng) puntos.push([p.neg_lat, p.neg_lng]);
       if (p.lat_entrega && p.lng_entrega) puntos.push([p.lat_entrega, p.lng_entrega]);
-      mapaNav.fitBounds(puntos, { padding: [40, 40] });
-
-      // Resetear pasos
-      navSteps = []; navStepIdx = 0;
+      mapaNav.fitBounds(puntos, { padding: [60, 40] });
 
       if (p.estado === 'asignado' && p.neg_lat && p.neg_lng) {
-        // Rider → negocio (ruta principal con pasos)
         dibujarRutaOSRM(mapaNav, myLat, myLng, p.neg_lat, p.neg_lng, '#FFCC00', 6, null, true);
-        // Negocio → destino (contexto gris punteado)
         if (p.lat_entrega && p.lng_entrega)
           dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#aaa', 3, '6,8', false);
       } else if (p.estado === 'retiro' && p.neg_lat && p.neg_lng && p.lat_entrega && p.lng_entrega) {
-        // Desde negocio (donde está el rider) → destino
         dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#FFCC00', 6, null, true);
       } else if (p.lat_entrega && p.lng_entrega) {
-        // en_camino: rider → destino
         dibujarRutaOSRM(mapaNav, myLat, myLng, p.lat_entrega, p.lng_entrega, '#FFCC00', 6, null, true);
       }
     }, function() {
-      // Sin GPS: mostrar ruta negocio→destino de todas formas
+      // Sin GPS: OSRM negocio→destino
       if (p.neg_lat && p.neg_lng && p.lat_entrega && p.lng_entrega) {
         dibujarRutaOSRM(mapaNav, p.neg_lat, p.neg_lng, p.lat_entrega, p.lng_entrega, '#FFCC00', 6, null, true);
-        mapaNav.fitBounds([[p.neg_lat, p.neg_lng],[p.lat_entrega, p.lng_entrega]], { padding: [40, 40] });
       }
-    });
+    }, { enableHighAccuracy: true, timeout: 6000 });
   }, 100);
 
   // Iniciar chat para este pedido
