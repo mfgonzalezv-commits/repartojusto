@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const config = require('../config');
 const { query: db } = require('../config/database');
+const { aceptarOferta, rechazarOferta } = require('./asignacion');
 
 /**
  * Rooms utilizados:
@@ -110,6 +111,28 @@ module.exports = (io) => {
     socket.on('pedido:dejar_seguir', ({ pedido_id }) => {
       if (!pedido_id) return;
       socket.leave(`pedido:${pedido_id}`);
+    });
+
+    // ── Rider: aceptar oferta de cascada ─────────────────────────────────
+    socket.on('pedido:aceptar_oferta', async ({ pedido_id }) => {
+      if (rol !== 'rider' || !socket.rider_id) return;
+      try {
+        const result = await aceptarOferta(pedido_id, socket.rider_id, io);
+        socket.emit('pedido:oferta_resultado', result);
+        if (result.ok) socket.join(`pedido:${pedido_id}`);
+      } catch (err) {
+        socket.emit('pedido:oferta_resultado', { ok: false, error: err.message });
+      }
+    });
+
+    // ── Rider: rechazar oferta de cascada ─────────────────────────────────
+    socket.on('pedido:rechazar_oferta', async ({ pedido_id }) => {
+      if (rol !== 'rider' || !socket.rider_id) return;
+      try {
+        await rechazarOferta(pedido_id, socket.rider_id, io);
+      } catch (err) {
+        console.error('❌ Error al rechazar oferta:', err.message);
+      }
     });
 
     // ── Rider: solicitar lista de pedidos disponibles ─────────────────────

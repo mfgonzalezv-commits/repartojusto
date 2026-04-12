@@ -3,6 +3,7 @@ const { body, validationResult } = require('express-validator');
 const { query: db, transaction } = require('../config/database');
 const { auth, solo } = require('../middleware/auth');
 const config = require('../config');
+const { iniciarCascada, cancelarCascada } = require('../sockets/asignacion');
 
 const validar = (req, res, next) => {
   const errores = validationResult(req);
@@ -74,21 +75,12 @@ router.post('/',
          valor_producto ? parseInt(valor_producto) : null, notas]
       );
 
-      // ── Motor de asignación: notificar a todos los riders disponibles ──
+      // ── Motor de asignación: cascada al rider más cercano ────────────────
       const io = req.app.get('io');
       if (io) {
-        const payload = {
-          id: pedido.id,
-          negocio_id: negocio.id,
-          nombre_comercial: negocio.nombre_comercial || '',
-          direccion_retiro: negocio.direccion || '',
-          direccion_entrega,
-          tarifa_entrega,
-          distancia_km,
-          created_at: pedido.created_at
-        };
-        // Emitir a sala 'riders_disponibles' — todos los riders online la escuchan
-        io.emit('pedido:nuevo', payload);
+        iniciarCascada(pedido.id, io).catch(err =>
+          console.error('❌ Error cascada asignación:', err.message)
+        );
       }
 
       res.status(201).json(pedido);
@@ -148,6 +140,9 @@ router.post('/:id/aceptar', auth, solo('rider'), async (req, res, next) => {
       }
     }
 
+    // Cancelar cascada si estaba corriendo para este pedido
+    cancelarCascada(req.params.id);
+
     const pedido = await transaction(async (client) => {
       const { rows } = await client.query(
         `UPDATE pedidos SET estado = 'asignado', rider_id = $1, asignado_at = NOW()
@@ -203,6 +198,17 @@ router.put('/:id/estado', auth, solo('rider', 'admin'), async (req, res, next) =
       `UPDATE pedidos SET estado = $1 ${extras} WHERE id = $2 RETURNING *`,
       [nuevoEstado, pedido.id]
     );
+
+    // Acreditar saldo al rider cuando entrega
+    if (nuevoEstado === 'entregado' && pedido.rider_id) {
+      await db(
+        `UPDATE riders
+         SET saldo_pendiente = saldo_pendiente + $1,
+             total_entregas  = total_entregas  + 1
+         WHERE id = $2`,
+        [pedido.tarifa_entrega, pedido.rider_id]
+      );
+    }
 
     req.app.get('io')?.to(`negocio:${pedido.negocio_id}`).emit('pedido:actualizado', {
       id: actualizado.id, estado: actualizado.estado

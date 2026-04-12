@@ -142,6 +142,25 @@
     .pa-estado { padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
     .pa-body { padding: 20px; }
 
+    /* ── Tarjetas de info progresiva ── */
+    .pa-info-card {
+      background: var(--bg); border: 1.5px solid var(--border);
+      border-radius: var(--r-sm); padding: 12px 14px; margin-bottom: 10px;
+    }
+    .pa-info-card--negocio { border-left: 4px solid var(--amber-mid); }
+    .pa-info-card--cliente { background: var(--teal-bg); border: 1.5px solid var(--teal-mid); border-left: 4px solid var(--teal-mid); }
+    .pa-info-label { font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+    .pa-info-val { font-size: 15px; font-weight: 700; color: var(--negro); }
+    .pa-info-sub { font-size: 13px; color: var(--text2); margin-top: 2px; }
+    .pa-tarifa-row { display: flex; gap: 16px; font-size: 13px; padding: 8px 0; border-bottom: 1px solid var(--border); margin-bottom: 10px; }
+
+    /* ── Bloqueado (estado bloqueante) ── */
+    .pa-bloqueado-aviso {
+      background: var(--purple-bg); border-radius: var(--r-sm); padding: 10px 14px;
+      font-size: 12px; color: var(--purple); font-weight: 500; text-align: center;
+      margin-bottom: 10px;
+    }
+
     .estado-badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
     .estado-asignado  { background: var(--blue-bg); color: var(--blue); }
     .estado-retiro    { background: var(--purple-bg); color: var(--purple); }
@@ -242,6 +261,60 @@
     .b-tab .icon { font-size: 20px; }
     .b-tab.active { color: var(--teal); }
     .page-content { padding-bottom: 80px; }
+
+    /* ── MODAL OFERTA ── */
+    #oferta-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,.65); backdrop-filter: blur(4px);
+      align-items: flex-end; justify-content: center;
+    }
+    #oferta-overlay.visible { display: flex; }
+    #oferta-card {
+      background: white; border-radius: 24px 24px 0 0;
+      width: 100%; max-width: 480px;
+      padding: 24px 24px 36px; animation: slideUp .35s ease;
+    }
+    @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+    .oferta-header {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;
+    }
+    .oferta-titulo { font-size: 16px; font-weight: 700; color: var(--negro); }
+    /* ── Anillo de countdown ── */
+    .oferta-ring-wrap {
+      position: relative; width: 56px; height: 56px; flex-shrink: 0;
+    }
+    .oferta-ring-wrap svg { transform: rotate(-90deg); }
+    .oferta-ring-bg { fill: none; stroke: #f0f0f0; stroke-width: 4; }
+    .oferta-ring-fg {
+      fill: none; stroke: var(--amarillo); stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 138.2; /* 2π×22 */
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear, stroke .3s;
+    }
+    .oferta-ring-num {
+      position: absolute; inset: 0; display: flex; align-items: center;
+      justify-content: center; font-size: 15px; font-weight: 700; color: var(--negro);
+    }
+    /* Ruta visual */
+    .oferta-ruta { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .oferta-punto { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; }
+    .oferta-dot {
+      width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 12px; margin-top: 1px;
+    }
+    .oferta-dot.origen { background: #FFF3CD; }
+    .oferta-dot.destino { background: #D1FAE5; }
+    .oferta-addr strong { display: block; font-size: 11px; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
+    .oferta-addr span { color: var(--text); line-height: 1.35; }
+    .oferta-meta {
+      display: flex; gap: 12px; margin-bottom: 20px;
+      background: var(--teal-bg); border-radius: 10px; padding: 10px 14px;
+    }
+    .oferta-meta-item { font-size: 13px; font-weight: 600; color: var(--negro); }
+    .oferta-meta-item span { font-weight: 400; color: var(--text2); }
+    .oferta-tarifa { font-size: 22px; font-weight: 800; color: var(--negro); margin-bottom: 20px; }
+    .oferta-btns { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }
   </style>
 </head>
 <body>
@@ -311,6 +384,47 @@
 
 <!-- ═══════════════════ APP ═══════════════════ -->
 <div id="app" style="display:none">
+
+  <!-- ── Modal oferta de pedido ── -->
+  <div id="oferta-overlay">
+    <div id="oferta-card">
+      <div class="oferta-header">
+        <div>
+          <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Nuevo pedido para ti</div>
+          <div class="oferta-titulo" id="oferta-negocio">—</div>
+        </div>
+        <div class="oferta-ring-wrap">
+          <svg width="56" height="56" viewBox="0 0 56 56">
+            <circle class="oferta-ring-bg" cx="28" cy="28" r="22"/>
+            <circle class="oferta-ring-fg" id="oferta-ring" cx="28" cy="28" r="22"/>
+          </svg>
+          <div class="oferta-ring-num" id="oferta-seg">30</div>
+        </div>
+      </div>
+
+      <div class="oferta-ruta">
+        <div class="oferta-punto">
+          <div class="oferta-dot origen">🏪</div>
+          <div class="oferta-addr"><strong>Retiro</strong><span id="oferta-retiro">—</span></div>
+        </div>
+        <div class="oferta-punto">
+          <div class="oferta-dot destino" style="background:#E8EAF0;color:#9a9a94">📍</div>
+          <div class="oferta-addr"><strong>Destino</strong><span style="color:var(--text3)">Visible al aceptar y salir del local</span></div>
+        </div>
+      </div>
+
+      <div class="oferta-meta">
+        <div class="oferta-meta-item">📏 <span id="oferta-km">—</span></div>
+        <div class="oferta-meta-item" id="oferta-tarifa-lbl">💵 —</div>
+      </div>
+
+      <div class="oferta-btns">
+        <button class="btn btn-danger btn-lg" onclick="rechazarOfertaRider()">✕ Rechazar</button>
+        <button class="btn btn-primary btn-lg" onclick="aceptarOfertaRider()">✅ Aceptar pedido</button>
+      </div>
+    </div>
+  </div>
+
   <div class="topbar">
     <div class="topbar-brand">🏍️ RJ Rider</div>
     <div class="topbar-right">
@@ -726,6 +840,23 @@ function conectarSocket() {
     renderDisponibles(pedidos);
   });
 
+  // ── Oferta de cascada ──────────────────────────────────────────────────
+  socket.on('pedido:oferta', (data) => {
+    mostrarOferta(data);
+  });
+  socket.on('pedido:oferta_expirada', ({ pedido_id }) => {
+    if (ofertaActual && ofertaActual.pedido_id === pedido_id) cerrarOferta();
+  });
+  socket.on('pedido:oferta_resultado', async (result) => {
+    if (result.ok) {
+      toast('¡Pedido aceptado!', 'success');
+      await cargarPedidoActivo();
+      await cargarDisponibles();
+    } else {
+      toast(result.error || 'No se pudo aceptar', 'error');
+    }
+  });
+
   socket.on('chat:historial', (msgs) => {
     renderChatMensajes(msgs);
   });
@@ -738,6 +869,71 @@ function conectarSocket() {
       notificarPedido(null); // sonido de alerta
     }
   });
+}
+
+// ══════════ OFERTA EN CASCADA ══════════
+let ofertaActual = null;   // { pedido_id, ... }
+let ofertaTimer  = null;   // setInterval del countdown
+const OFERTA_TOTAL_SEG = 30;
+const RING_CIRCUNF = 138.2; // 2π×22
+
+function mostrarOferta(data) {
+  ofertaActual = data;
+
+  // Rellenar datos
+  $('oferta-negocio').textContent  = data.nombre_comercial || '—';
+  $('oferta-retiro').textContent   = data.direccion_retiro  || '—';
+  $('oferta-entrega').textContent  = data.direccion_entrega || '—';
+  $('oferta-km').textContent       = `${parseFloat(data.distancia_km).toFixed(1)} km`;
+  $('oferta-tarifa-lbl').textContent = `💵 ${fmt(data.tarifa_entrega)}`;
+
+  // Iniciar anillo
+  let seg = OFERTA_TOTAL_SEG;
+  _actualizarAnillo(seg);
+
+  clearInterval(ofertaTimer);
+  ofertaTimer = setInterval(() => {
+    seg--;
+    _actualizarAnillo(seg);
+    if (seg <= 0) cerrarOferta();
+  }, 1000);
+
+  // Mostrar overlay
+  $('oferta-overlay').classList.add('visible');
+
+  // Sonido + vibración
+  notificarPedido(data.tarifa_entrega);
+  if (navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 400]);
+}
+
+function _actualizarAnillo(seg) {
+  $('oferta-seg').textContent = Math.max(seg, 0);
+  const pct = Math.max(seg, 0) / OFERTA_TOTAL_SEG;
+  const offset = RING_CIRCUNF * (1 - pct);
+  const ring = $('oferta-ring');
+  ring.style.strokeDashoffset = offset;
+  ring.style.stroke = seg <= 10 ? '#DC2626' : seg <= 20 ? '#EF9F27' : 'var(--amarillo)';
+}
+
+function cerrarOferta() {
+  clearInterval(ofertaTimer);
+  ofertaTimer = null;
+  ofertaActual = null;
+  $('oferta-overlay').classList.remove('visible');
+}
+
+function aceptarOfertaRider() {
+  if (!ofertaActual || !socket) return;
+  const pid = ofertaActual.pedido_id;
+  cerrarOferta();
+  socket.emit('pedido:aceptar_oferta', { pedido_id: pid });
+}
+
+function rechazarOfertaRider() {
+  if (!ofertaActual || !socket) return;
+  const pid = ofertaActual.pedido_id;
+  cerrarOferta();
+  socket.emit('pedido:rechazar_oferta', { pedido_id: pid });
 }
 
 // ══════════ CHAT ══════════
@@ -1034,19 +1230,59 @@ function renderPedidoActivo(p) {
   const wrap = $('pedido-activo-wrap');
   const siguiente = SIGUIENTE_ESTADO[p.estado];
   wrap.style.display = 'block';
+
+  // ── Qué muestra cada etapa ─────────────────────────────────────────────
+  const enCamino   = p.estado === 'en_camino';
+  const enNegocio  = p.estado === 'asignado' || p.estado === 'retiro';
+
+  // Nav: texto e ícono según etapa
+  const navCfg = {
+    asignado:  { accion: 'Dirígete al negocio',        calle: p.nombre_comercial,   flecha: '🧭' },
+    retiro:    { accion: 'Recogiendo pedido',           calle: p.nombre_comercial,   flecha: '🏪' },
+    en_camino: { accion: 'Entrega el pedido',           calle: p.direccion_entrega,  flecha: '📍' },
+  };
+  const nav = navCfg[p.estado] || { accion: '—', calle: '—', flecha: '📦' };
+
+  // ── Tarjeta negocio (siempre visible) ─────────────────────────────────
+  const cardNegocio = `
+    <div class="pa-info-card pa-info-card--negocio">
+      <div class="pa-info-label">🏪 Punto de retiro</div>
+      <div class="pa-info-val">${p.nombre_comercial}</div>
+      <div class="pa-info-sub">${p.direccion_retiro || ''}</div>
+    </div>`;
+
+  // ── Tarjeta cliente (solo en_camino) ──────────────────────────────────
+  const cardCliente = enCamino ? `
+    <div class="pa-info-card pa-info-card--cliente">
+      <div class="pa-info-label">👤 Cliente</div>
+      <div class="pa-info-val">${p.cliente_nombre || '—'}</div>
+      ${p.cliente_telefono ? `
+      <div style="display:flex;gap:10px;align-items:center;margin-top:6px;flex-wrap:wrap">
+        <span style="font-size:13px;color:var(--text2)">${p.cliente_telefono}</span>
+        <a href="tel:${p.cliente_telefono}" style="display:inline-flex;align-items:center;gap:5px;background:var(--teal);color:var(--negro);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap">📞 Llamar</a>
+      </div>` : ''}
+      <div class="pa-info-label" style="margin-top:10px">📍 Dirección de entrega</div>
+      <div style="font-size:14px;font-weight:600;margin-top:3px">${p.direccion_entrega}</div>
+      ${p.notas ? `<div style="font-size:12px;color:var(--amber);margin-top:6px;font-weight:500">📝 ${p.notas}</div>` : ''}
+    </div>` : `
+    <div class="pa-bloqueado-aviso">
+      🔒 Dirección de entrega visible al salir del negocio
+    </div>`;
+
   wrap.innerHTML = `
     <div class="pedido-activo">
       <div class="pa-header">
-        <div class="pa-header-title">Pedido en curso #${p.id.substring(0,8)}</div>
+        <div class="pa-header-title">Pedido #${p.id.substring(0,8)}</div>
         <span class="estado-badge estado-${p.estado}">${ESTADO_LABEL[p.estado]}</span>
       </div>
       <div class="pa-body">
-        <!-- Nav estilo Waze: instrucción → mapa → info bar (flujo normal, sin overlays) -->
+
+        <!-- Barra de instrucción + Mapa + Info bar -->
         <div id="nav-instruccion">
-          <div id="nav-flecha">🧭</div>
+          <div id="nav-flecha">${nav.flecha}</div>
           <div id="nav-texto">
-            <div id="nav-accion">${p.estado === 'asignado' ? 'Ve a retirar el pedido' : p.estado === 'retiro' ? 'Ve al destino de entrega' : 'Entrega el pedido'}</div>
-            <div id="nav-calle">${p.estado === 'asignado' ? p.nombre_comercial : p.direccion_entrega}</div>
+            <div id="nav-accion">${nav.accion}</div>
+            <div id="nav-calle">${nav.calle}</div>
           </div>
           <div id="nav-dist-paso">${p.distancia_km} km</div>
         </div>
@@ -1057,36 +1293,23 @@ function renderPedidoActivo(p) {
           <div class="nav-info-item"><div class="nav-info-val" id="nav-tiempo">~${Math.round(p.distancia_km / 0.5)} min</div><div class="nav-info-lbl">Tiempo</div></div>
         </div>
 
-        <!-- Datos del cliente -->
-        <div style="background:var(--teal-bg);border-radius:var(--r-sm);padding:12px 14px;margin-bottom:12px">
-          <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;margin-bottom:6px">👤 Cliente</div>
-          <div style="font-weight:700;font-size:15px;margin-bottom:4px">${p.cliente_nombre || 'Sin nombre'}</div>
-          ${p.cliente_telefono ? `
-          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-            <span style="font-size:13px;color:var(--text2)">${p.cliente_telefono}</span>
-            <a href="tel:${p.cliente_telefono}" style="display:inline-flex;align-items:center;gap:5px;background:var(--teal);color:var(--negro);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap">📞 Llamar</a>
-          </div>` : ''}
-          ${p.notas ? `<div style="font-size:12px;color:var(--amber);margin-top:6px;font-weight:500">📝 ${p.notas}</div>` : ''}
+        <!-- Tarjeta negocio (siempre) -->
+        ${cardNegocio}
+
+        <!-- Tarjeta cliente (solo en_camino) o aviso bloqueado -->
+        ${cardCliente}
+
+        <!-- Tarifa (siempre) -->
+        <div class="pa-tarifa-row">
+          <span>💰 <strong style="color:var(--negro)">${fmt(p.tarifa_entrega)}</strong></span>
+          <span style="color:var(--text2)">📏 ${p.distancia_km} km</span>
         </div>
 
-        <div style="margin-bottom:12px">
-          <div style="font-size:11px;color:var(--text3);margin-bottom:4px;font-weight:600;text-transform:uppercase">🏪 Retiro</div>
-          <div style="font-weight:600;font-size:14px">${p.nombre_comercial}</div>
-          <div style="font-size:13px;color:var(--text2)">${p.direccion_retiro}</div>
-        </div>
-        <div style="margin-bottom:12px">
-          <div style="font-size:11px;color:var(--text3);margin-bottom:4px;font-weight:600;text-transform:uppercase">📍 Entrega</div>
-          <div style="font-size:14px">${p.direccion_entrega}</div>
-        </div>
-        <div style="display:flex;gap:16px;font-size:13px;color:var(--text2);margin-bottom:4px">
-          <span>💰 <strong style="color:var(--teal)">${fmt(p.tarifa_entrega)}</strong></span>
-          <span>📏 ${p.distancia_km} km</span>
-        </div>
-
-        <!-- Chat con el negocio -->
-        <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:12px">
+        <!-- Chat con el negocio (siempre disponible) -->
+        <div>
           <button id="btn-toggle-chat" onclick="toggleChat()" style="width:100%;background:var(--blue-bg);color:var(--blue);border:none;border-radius:var(--r-sm);padding:10px 14px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:space-between">
-            <span>💬 Chat con el negocio</span><span id="chat-badge" style="display:none;background:var(--red);color:white;border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;display:none;align-items:center;justify-content:center">!</span>
+            <span>💬 Chat con el negocio</span>
+            <span id="chat-badge" style="display:none;background:var(--red);color:white;border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;align-items:center;justify-content:center">!</span>
           </button>
           <div id="chat-wrap" style="display:none;margin-top:10px">
             <div id="chat-mensajes" style="height:160px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--r-sm);padding:10px;font-size:13px;background:var(--bg)"></div>
@@ -1097,7 +1320,10 @@ function renderPedidoActivo(p) {
           </div>
         </div>
 
-        ${siguiente ? `<button class="avanzar-btn" id="btn-avanzar">${SIGUIENTE_BTN[p.estado]}</button>` : '<div style="margin-top:16px;text-align:center;color:var(--teal);font-weight:700;padding:14px;background:var(--teal-bg);border-radius:10px">✅ ¡Pedido entregado!</div>'}
+        ${siguiente
+          ? `<button class="avanzar-btn" id="btn-avanzar">${SIGUIENTE_BTN[p.estado]}</button>`
+          : '<div style="margin-top:16px;text-align:center;color:var(--teal);font-weight:700;padding:14px;background:var(--teal-bg);border-radius:10px">✅ ¡Pedido entregado!</div>'
+        }
       </div>
     </div>
   `;
@@ -1250,8 +1476,8 @@ function renderDisponibles(pedidos) {
             <div class="pd-addr"><strong>Retiro</strong><span>${p.direccion_retiro}</span></div>
           </div>
           <div class="pd-point">
-            <div class="pd-dot destino">📍</div>
-            <div class="pd-addr"><strong>Entrega</strong><span>${p.direccion_entrega}</span></div>
+            <div class="pd-dot destino" style="background:#E8EAF0">📍</div>
+            <div class="pd-addr"><strong>Destino</strong><span style="color:var(--text3)">Visible al aceptar y salir</span></div>
           </div>
         </div>
         <div class="pd-meta">
