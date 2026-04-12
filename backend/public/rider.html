@@ -217,18 +217,6 @@
     .nav-info-val  { font-size: 16px; font-weight: 800; color: var(--teal); }
     .nav-info-lbl  { font-size: 10px; color: #8fa8c8; font-weight: 500; text-transform: uppercase; margin-top: 2px; }
 
-    /* ── PASOS SIGUIENTES ── */
-    #nav-pasos { margin-bottom: 12px; background: white; border-radius: var(--r-sm); border: 1px solid var(--border); overflow: hidden; }
-    #nav-pasos-toggle { width: 100%; background: #0F172A; color: #8fa8c8; border: none; padding: 9px 14px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; justify-content: space-between; align-items: center; }
-    #nav-pasos-lista { display: none; max-height: 200px; overflow-y: auto; }
-    .nav-paso { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 13px; }
-    .nav-paso:last-child { border-bottom: none; }
-    .nav-paso-icon { font-size: 18px; flex-shrink: 0; }
-    .nav-paso-info { flex: 1; }
-    .nav-paso-nombre { font-weight: 500; color: var(--text); }
-    .nav-paso-dist { font-size: 11px; color: var(--text3); margin-top: 1px; }
-    .nav-paso.activo { background: var(--teal-bg); }
-    .nav-paso.activo .nav-paso-nombre { font-weight: 700; color: var(--teal); }
 
     /* ── GANANCIAS ── */
     .ganancia-card { background: white; border-radius: var(--r-sm); padding: 16px; border: 1px solid var(--border); margin-bottom: 12px; }
@@ -896,20 +884,12 @@ function detenerGPS() {
 }
 
 // ══════════ RUTA OSRM ══════════
-let navSteps = [];      // pasos de la ruta activa
-let navStepIdx = 0;     // paso actual
-let navPolyline = null; // línea de ruta activa
-
-function fmtDist(m) {
-  return m < 1000 ? `${Math.round(m / 10) * 10} m` : `${(m / 1000).toFixed(1)} km`;
-}
+let navPolyline = null;
 
 // ── OpenRouteService (motor de rutas) ────────────────────────────────────────
 const ORS_KEY = 'eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjZmZWE5MWE2OWQ1MTRmZWE5NjllYmI1ZTMyNmYxZjI5IiwiaCI6Im11cm11cjY0In0=';
 const ORS_URL = 'https://api.openrouteservice.org/v2/directions/driving-car';
 
-// Íconos por tipo de maniobra ORS (0-13)
-const ORS_ICON = ['↰','↱','⬅','➡','↖','↗','⬆','🔄','🔄','↩','🏁','🚦','↙','↘'];
 
 async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash, esRutaPrincipal) {
   color  = color  || '#FFCC00';
@@ -917,8 +897,6 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
   if ([lat1,lng1,lat2,lng2].some(v => isNaN(parseFloat(v)))) return null;
   lat1=parseFloat(lat1); lng1=parseFloat(lng1); lat2=parseFloat(lat2); lng2=parseFloat(lng2);
 
-  const dbgEl = document.getElementById('debug-panel');
-  if (dbgEl) dbgEl.innerHTML += '<br>🛣 ORS calculando ruta...';
 
   try {
     const url = `${ORS_URL}?api_key=${ORS_KEY}&start=${lng1},${lat1}&end=${lng2},${lat2}&language=es`;
@@ -928,14 +906,13 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
       throw new Error(`HTTP ${r.status}: ${err.error?.message || r.statusText}`);
     }
     const d = await r.json();
-    if (dbgEl) dbgEl.innerHTML += ' ✅ OK';
 
     const feature = d.features && d.features[0];
     if (!feature) throw new Error('Sin ruta en respuesta');
 
     // Dibujar polilínea
     const coords = feature.geometry.coordinates.map(([ln, lt]) => [lt, ln]);
-    const opts = { color, weight, opacity: 0.9 };
+    const opts = { color, weight, opacity: esRutaPrincipal ? 0.55 : 0.3 };
     if (dash) opts.dashArray = dash;
     const poly = L.polyline(coords, opts).addTo(mapa);
     if (esRutaPrincipal) navPolyline = poly;
@@ -953,83 +930,21 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
       if (el('nav-dist-total')) el('nav-dist-total').textContent = `${distKm} km`;
       if (el('nav-tiempo'))     el('nav-tiempo').textContent     = durMin < 60 ? `${durMin} min` : `${Math.floor(durMin/60)}h ${durMin%60}m`;
 
-      // Pasos
-      const steps = feature.properties.segments?.[0]?.steps || [];
-      navSteps = steps.map(s => ({
-        icon:     ORS_ICON[s.type] || '⬆',
-        accion:   s.instruction || 'Continúa',
-        calle:    s.name && s.name !== '-' ? s.name : '',
-        distancia: s.distance,
-        location: coords[s.way_points?.[0] || 0]  // [lat, lng] ya convertido
-      }));
-      navStepIdx = 0;
-      renderNavStep(0);
-      renderPasosLista();
     }
 
     return { distKm, durMin };
 
   } catch(e) {
-    if (dbgEl) dbgEl.innerHTML += ` ❌ ${e.message}`;
     // Fallback: línea recta
-    if (dbgEl) dbgEl.innerHTML += '<br>↩ Línea recta (sin ruta)';
-    L.polyline([[lat1,lng1],[lat2,lng2]], { color, weight: weight-1||4, opacity:0.6, dashArray:'12,8' }).addTo(mapa);
+    L.polyline([[lat1,lng1],[lat2,lng2]], { color, weight: weight-1||4, opacity:0.5, dashArray:'12,8' }).addTo(mapa);
     return null;
   }
 }
 
-function renderNavStep(idx) {
-  const step = navSteps[idx];
-  if (!step) return;
-  const el = id => document.getElementById(id);
-  if (el('nav-flecha'))    el('nav-flecha').textContent    = step.icon;
-  if (el('nav-accion'))    el('nav-accion').textContent    = step.accion;
-  if (el('nav-calle'))     el('nav-calle').textContent     = step.calle || 'Continúa';
-  if (el('nav-dist-paso')) el('nav-dist-paso').textContent = fmtDist(step.distancia);
-}
-
-function renderPasosLista() {
-  const lista = document.getElementById('nav-pasos-lista');
-  if (!lista || !navSteps.length) return;
-  lista.innerHTML = navSteps.map((s, i) => `
-    <div class="nav-paso ${i === navStepIdx ? 'activo' : ''}">
-      <div class="nav-paso-icon">${s.icon}</div>
-      <div class="nav-paso-info">
-        <div class="nav-paso-nombre">${s.accion}</div>
-        ${s.calle ? `<div class="nav-paso-dist">${s.calle} · ${fmtDist(s.distancia)}</div>` : `<div class="nav-paso-dist">${fmtDist(s.distancia)}</div>`}
-      </div>
-    </div>`).join('');
-}
-
-function togglePasos() {
-  const lista = document.getElementById('nav-pasos-lista');
-  const arrow = document.getElementById('nav-pasos-arrow');
-  if (!lista) return;
-  const abierto = lista.style.display === 'block';
-  lista.style.display = abierto ? 'none' : 'block';
-  if (arrow) arrow.textContent = abierto ? '▼' : '▲';
-}
-
-// Actualizar paso según posición del rider
+// Re-centrar mapa cuando el rider se mueve
 function actualizarPasoNavegacion(lat, lng) {
-  if (!navSteps.length || !mapaNav) return;
-
-  // Re-centrar mapa suavemente
+  if (!mapaNav) return;
   mapaNav.setView([lat, lng], mapaNav.getZoom(), { animate: true, duration: 0.5 });
-
-  // Buscar el siguiente paso más cercano al frente
-  for (let i = navStepIdx; i < navSteps.length; i++) {
-    const paso = navSteps[i];
-    const dLat = paso.location[0] - lat;
-    const dLng = paso.location[1] - lng;
-    const dist = Math.sqrt(dLat*dLat + dLng*dLng) * 111000; // metros aprox
-    if (dist < 30 && i + 1 < navSteps.length) {
-      navStepIdx = i + 1;
-      renderNavStep(navStepIdx);
-      renderPasosLista();
-      break;
-    }
-  }
 }
 
 // ══════════ TURNO (SHIFT TIMER) ══════════
@@ -1110,14 +1025,6 @@ function renderPedidoActivo(p) {
           <div class="nav-info-item"><div class="nav-info-val" id="nav-tiempo">~${Math.round(p.distancia_km / 0.5)} min</div><div class="nav-info-lbl">Tiempo</div></div>
         </div>
 
-        <!-- Pasos de la ruta -->
-        <div id="nav-pasos">
-          <button id="nav-pasos-toggle" onclick="togglePasos()">
-            <span>📋 Instrucciones paso a paso</span><span id="nav-pasos-arrow">▼</span>
-          </button>
-          <div id="nav-pasos-lista"></div>
-        </div>
-
         <!-- Datos del cliente -->
         <div style="background:var(--teal-bg);border-radius:var(--r-sm);padding:12px 14px;margin-bottom:12px">
           <div style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;margin-bottom:6px">👤 Cliente</div>
@@ -1190,24 +1097,6 @@ function renderPedidoActivo(p) {
     const tieneNeg  = !isNaN(nLat) && !isNaN(nLng);
     const tieneDest = !isNaN(dLat) && !isNaN(dLng);
 
-    // Panel de debug visible en pantalla
-    const dbg = document.createElement('div');
-    dbg.id = 'debug-panel';
-    dbg.style.cssText = 'background:#1a1a18;color:#0f0;font-size:11px;padding:8px 12px;border-radius:8px;margin-bottom:8px;font-family:monospace;line-height:1.6';
-    dbg.innerHTML = `<b style="color:#FFCC00">DEBUG MAPA</b><br>
-      Negocio coords: ${tieneNeg ? nLat.toFixed(5)+', '+nLng.toFixed(5) : '❌ sin coords'}<br>
-      Destino coords: ${tieneDest ? dLat.toFixed(5)+', '+dLng.toFixed(5) : '❌ sin coords'}<br>
-      Estado pedido: ${p.estado}<br>
-      GPS: esperando...<br>
-      OSRM: esperando...`;
-    const navWrapEl = document.getElementById('nav-instruccion');
-    if (navWrapEl && navWrapEl.parentNode) navWrapEl.parentNode.insertBefore(dbg, navWrapEl);
-
-    const dbgLog = (linea) => {
-      const el = document.getElementById('debug-panel');
-      if (el) el.innerHTML += '<br>' + linea;
-    };
-
     // Línea guía inmediata negocio→destino
     if (tieneNeg && tieneDest) {
       L.polyline([[nLat, nLng], [dLat, dLng]], { color: '#FFCC00', weight: 4, opacity: 0.35, dashArray: '10,10' }).addTo(mapaNav);
@@ -1218,12 +1107,8 @@ function renderPedidoActivo(p) {
       mapaNav.setView([dLat, dLng], 15);
     }
 
-    // Resetear pasos
-    navSteps = []; navStepIdx = 0;
-
-    // GPS → luego OSRM
+    // GPS → luego ORS
     const dibujarConGPS = (myLat, myLng) => {
-      dbgLog(`📍 GPS OK: ${myLat.toFixed(5)}, ${myLng.toFixed(5)}`);
       const iconMe = L.divIcon({ html: '<div style="background:#0F6E56;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px">🏍</div>', iconSize:[24,24], iconAnchor:[12,12] });
       markerMiPos = L.marker([myLat, myLng], { icon: iconMe }).addTo(mapaNav).bindPopup('Tu posición');
 
@@ -1233,20 +1118,19 @@ function renderPedidoActivo(p) {
       if (puntos.length > 1) mapaNav.fitBounds(puntos, { padding: [60, 40] });
 
       if (p.estado === 'asignado' && tieneNeg) {
-        dibujarRutaOSRM(mapaNav, myLat, myLng, nLat, nLng, '#FFCC00', 6, null, true);
+        dibujarRutaOSRM(mapaNav, myLat, myLng, nLat, nLng, '#38B6FF', 7, null, true);
         if (tieneDest)
           dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#aaa', 3, '6,8', false);
       } else if (p.estado === 'retiro' && tieneNeg && tieneDest) {
-        dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#FFCC00', 6, null, true);
+        dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#38B6FF', 7, null, true);
       } else if (tieneDest) {
-        dibujarRutaOSRM(mapaNav, myLat, myLng, dLat, dLng, '#FFCC00', 6, null, true);
+        dibujarRutaOSRM(mapaNav, myLat, myLng, dLat, dLng, '#38B6FF', 7, null, true);
       }
     };
 
     const sinGPS = () => {
-      dbgLog('⚠️ GPS falló — usando coords del pedido');
       if (tieneNeg && tieneDest) {
-        dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#FFCC00', 6, null, true);
+        dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#38B6FF', 7, null, true);
       }
     };
 
