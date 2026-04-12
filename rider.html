@@ -1257,9 +1257,10 @@ function renderPedidoActivo(p) {
       <div class="pa-info-label">👤 Cliente</div>
       <div class="pa-info-val">${p.cliente_nombre || '—'}</div>
       ${p.cliente_telefono ? `
-      <div style="display:flex;gap:10px;align-items:center;margin-top:6px;flex-wrap:wrap">
-        <span style="font-size:13px;color:var(--text2)">${p.cliente_telefono}</span>
-        <a href="tel:${p.cliente_telefono}" style="display:inline-flex;align-items:center;gap:5px;background:var(--teal);color:var(--negro);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap">📞 Llamar</a>
+      <div style="font-size:13px;color:var(--text2);margin-top:4px;margin-bottom:8px">${p.cliente_telefono}</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a href="tel:${p.cliente_telefono}" style="display:inline-flex;align-items:center;gap:5px;background:var(--blue-bg);color:var(--blue);border-radius:20px;padding:7px 16px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap">📞 Llamar</a>
+        <a href="https://wa.me/56${p.cliente_telefono.replace(/\D/g,'')}" target="_blank" style="display:inline-flex;align-items:center;gap:5px;background:#25D366;color:white;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap">💬 WhatsApp</a>
       </div>` : ''}
       <div class="pa-info-label" style="margin-top:10px">📍 Dirección de entrega</div>
       <div style="font-size:14px;font-weight:600;margin-top:3px">${p.direccion_entrega}</div>
