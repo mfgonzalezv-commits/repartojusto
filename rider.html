@@ -900,59 +900,16 @@ let navSteps = [];      // pasos de la ruta activa
 let navStepIdx = 0;     // paso actual
 let navPolyline = null; // línea de ruta activa
 
-// Íconos de maniobra → emoji
-const MANEUVER_ICON = {
-  'turn:left':          '↰', 'turn:right':         '↱',
-  'turn:slight left':   '↖', 'turn:slight right':  '↗',
-  'turn:sharp left':    '⬅', 'turn:sharp right':   '➡',
-  'turn:uturn':         '↩', 'continue:straight':  '⬆',
-  'merge:left':         '↙', 'merge:right':        '↘',
-  'on ramp:left':       '↖', 'on ramp:right':      '↗',
-  'off ramp:left':      '↙', 'off ramp:right':     '↘',
-  'roundabout:':        '🔄','rotary:':             '🔄',
-  'depart:':            '🚦','arrive:':             '🏁',
-};
-function maneuverIcon(type, modifier) {
-  const key = `${type}:${modifier || ''}`;
-  return MANEUVER_ICON[key] || MANEUVER_ICON[`${type}:`] || '⬆';
-}
-function maneuverText(type, modifier, name) {
-  const dir = { left:'izquierda', right:'derecha', 'slight left':'levemente a la izquierda',
-    'slight right':'levemente a la derecha', 'sharp left':'fuerte a la izquierda',
-    'sharp right':'fuerte a la derecha', straight:'recto', uturn:'media vuelta' };
-  const d = dir[modifier] || '';
-  if (type === 'depart') return 'Inicia el recorrido';
-  if (type === 'arrive') return 'Llegaste a tu destino';
-  if (type === 'turn' && d)   return `Gira ${d}`;
-  if (type === 'continue')    return `Continúa ${d || 'recto'}`;
-  if (type === 'merge')       return `Incorpora ${d}`;
-  if (type === 'on ramp')     return `Toma la rampa ${d}`;
-  if (type === 'off ramp')    return `Sal ${d}`;
-  if (type === 'roundabout' || type === 'rotary') return 'Toma la rotonda';
-  return d ? `Dobla ${d}` : 'Continúa';
-}
 function fmtDist(m) {
   return m < 1000 ? `${Math.round(m / 10) * 10} m` : `${(m / 1000).toFixed(1)} km`;
 }
 
-// Servidores OSRM públicos (se intentan en orden)
-const OSRM_SERVERS = [
-  'https://router.project-osrm.org',
-  'https://routing.openstreetmap.de/routed-car',
-];
+// ── OpenRouteService (motor de rutas) ────────────────────────────────────────
+const ORS_KEY = 'eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjZmZWE5MWE2OWQ1MTRmZWE5NjllYmI1ZTMyNmYxZjI5IiwiaCI6Im11cm11cjY0In0=';
+const ORS_URL = 'https://api.openrouteservice.org/v2/directions/driving-car';
 
-async function fetchConTimeout(url, ms) {
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), ms);
-  try {
-    const r = await fetch(url, { signal: ctrl.signal });
-    clearTimeout(timer);
-    return r;
-  } catch(e) {
-    clearTimeout(timer);
-    throw e;
-  }
-}
+// Íconos por tipo de maniobra ORS (0-13)
+const ORS_ICON = ['↰','↱','⬅','➡','↖','↗','⬆','🔄','🔄','↩','🏁','🚦','↙','↘'];
 
 async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash, esRutaPrincipal) {
   color  = color  || '#FFCC00';
@@ -961,62 +918,64 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
   lat1=parseFloat(lat1); lng1=parseFloat(lng1); lat2=parseFloat(lat2); lng2=parseFloat(lng2);
 
   const dbgEl = document.getElementById('debug-panel');
+  if (dbgEl) dbgEl.innerHTML += '<br>🛣 ORS calculando ruta...';
 
-  for (const srv of OSRM_SERVERS) {
-    try {
-      const withSteps = esRutaPrincipal ? '&steps=true' : '';
-      const url = `${srv}/route/v1/driving/${lng1},${lat1};${lng2},${lat2}?overview=full&geometries=geojson${withSteps}`;
-      if (dbgEl) dbgEl.innerHTML += `<br>🛣 ${srv.includes('openstreetmap') ? 'OSM' : 'OSRM'}...`;
-      const r = await fetchConTimeout(url, 8000);
-      const d = await r.json();
-      if (dbgEl) dbgEl.innerHTML += ` → ${d.code}`;
-      if (d.code === 'Ok' && d.routes && d.routes[0]) {
-      const route = d.routes[0];
-      const coords = route.geometry.coordinates.map(([ln, lt]) => [lt, ln]);
-      const opts = { color, weight, opacity: 0.9 };
-      if (dash) opts.dashArray = dash;
-      const poly = L.polyline(coords, opts).addTo(mapa);
-      if (esRutaPrincipal) navPolyline = poly;
-
-      const distKm = (route.distance / 1000).toFixed(1);
-      const durMin = Math.round(route.duration / 60);
-
-      if (esRutaPrincipal) {
-        // Actualizar barra de info inferior
-        const eta = new Date(Date.now() + route.duration * 1000);
-        const etaStr = eta.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
-        const el = id => document.getElementById(id);
-        if (el('nav-eta'))        el('nav-eta').textContent        = etaStr;
-        if (el('nav-dist-total')) el('nav-dist-total').textContent = `${distKm} km`;
-        if (el('nav-tiempo'))     el('nav-tiempo').textContent     = durMin < 60 ? `${durMin} min` : `${Math.floor(durMin/60)}h ${durMin%60}m`;
-
-        // Parsear pasos
-        if (route.legs && route.legs[0] && route.legs[0].steps) {
-          navSteps = route.legs[0].steps.map(s => ({
-            icon: maneuverIcon(s.maneuver.type, s.maneuver.modifier),
-            accion: maneuverText(s.maneuver.type, s.maneuver.modifier, s.name),
-            calle: s.name || '',
-            distancia: s.distance,
-            location: [s.maneuver.location[1], s.maneuver.location[0]] // [lat,lng]
-          }));
-          navStepIdx = 0;
-          renderNavStep(0);
-          renderPasosLista();
-        }
-      }
-
-      return { distKm, durMin };
-      } // end if Ok
-    } catch(e) {
-      if (dbgEl) dbgEl.innerHTML += ` ❌ ${e.name === 'AbortError' ? 'timeout' : e.message}`;
-      continue; // intentar siguiente servidor
+  try {
+    const url = `${ORS_URL}?api_key=${ORS_KEY}&start=${lng1},${lat1}&end=${lng2},${lat2}&language=es`;
+    const r = await fetch(url);
+    if (!r.ok) {
+      const err = await r.json().catch(() => ({}));
+      throw new Error(`HTTP ${r.status}: ${err.error?.message || r.statusText}`);
     }
-  } // end for servers
+    const d = await r.json();
+    if (dbgEl) dbgEl.innerHTML += ' ✅ OK';
 
-  // Fallback: línea recta si todos los servidores fallaron
-  if (dbgEl) dbgEl.innerHTML += '<br>↩ Usando línea recta';
-  L.polyline([[lat1, lng1],[lat2, lng2]], { color, weight: weight - 1 || 4, opacity: 0.7, dashArray: '12,8' }).addTo(mapa);
-  return null;
+    const feature = d.features && d.features[0];
+    if (!feature) throw new Error('Sin ruta en respuesta');
+
+    // Dibujar polilínea
+    const coords = feature.geometry.coordinates.map(([ln, lt]) => [lt, ln]);
+    const opts = { color, weight, opacity: 0.9 };
+    if (dash) opts.dashArray = dash;
+    const poly = L.polyline(coords, opts).addTo(mapa);
+    if (esRutaPrincipal) navPolyline = poly;
+
+    const summary  = feature.properties.summary;
+    const distKm   = (summary.distance / 1000).toFixed(1);
+    const durMin   = Math.round(summary.duration / 60);
+
+    if (esRutaPrincipal) {
+      // Info bar
+      const eta    = new Date(Date.now() + summary.duration * 1000);
+      const etaStr = eta.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
+      const el = id => document.getElementById(id);
+      if (el('nav-eta'))        el('nav-eta').textContent        = etaStr;
+      if (el('nav-dist-total')) el('nav-dist-total').textContent = `${distKm} km`;
+      if (el('nav-tiempo'))     el('nav-tiempo').textContent     = durMin < 60 ? `${durMin} min` : `${Math.floor(durMin/60)}h ${durMin%60}m`;
+
+      // Pasos
+      const steps = feature.properties.segments?.[0]?.steps || [];
+      navSteps = steps.map(s => ({
+        icon:     ORS_ICON[s.type] || '⬆',
+        accion:   s.instruction || 'Continúa',
+        calle:    s.name && s.name !== '-' ? s.name : '',
+        distancia: s.distance,
+        location: coords[s.way_points?.[0] || 0]  // [lat, lng] ya convertido
+      }));
+      navStepIdx = 0;
+      renderNavStep(0);
+      renderPasosLista();
+    }
+
+    return { distKm, durMin };
+
+  } catch(e) {
+    if (dbgEl) dbgEl.innerHTML += ` ❌ ${e.message}`;
+    // Fallback: línea recta
+    if (dbgEl) dbgEl.innerHTML += '<br>↩ Línea recta (sin ruta)';
+    L.polyline([[lat1,lng1],[lat2,lng2]], { color, weight: weight-1||4, opacity:0.6, dashArray:'12,8' }).addTo(mapa);
+    return null;
+  }
 }
 
 function renderNavStep(idx) {
