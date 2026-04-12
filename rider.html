@@ -1343,8 +1343,8 @@ function renderPedidoActivo(p) {
       L.marker([p.neg_lat, p.neg_lng], { icon: iconNeg }).addTo(mapaNav).bindPopup(`🏪 ${p.nombre_comercial}<br><small>Punto de retiro</small>`);
     }
 
-    // Marker destino entrega
-    if (p.lat_entrega && p.lng_entrega) {
+    // Marker destino entrega — solo visible en en_camino
+    if (p.estado === 'en_camino' && p.lat_entrega && p.lng_entrega) {
       const iconDest = L.divIcon({ html: '<div style="background:#DC2626;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:10px">📍</div>', iconSize:[20,20], iconAnchor:[10,10] });
       L.marker([p.lat_entrega, p.lng_entrega], { icon: iconDest }).addTo(mapaNav).bindPopup(`📍 Destino entrega<br><small>${p.direccion_entrega}</small>`);
     }
@@ -1355,9 +1355,8 @@ function renderPedidoActivo(p) {
     const tieneNeg  = !isNaN(nLat) && !isNaN(nLng);
     const tieneDest = !isNaN(dLat) && !isNaN(dLng);
 
-    // Línea guía inmediata negocio→destino
-    if (tieneNeg && tieneDest) {
-      L.polyline([[nLat, nLng], [dLat, dLng]], { color: '#FFCC00', weight: 4, opacity: 0.35, dashArray: '10,10' }).addTo(mapaNav);
+    // Línea guía negocio→destino: solo en en_camino
+    if (p.estado === 'en_camino' && tieneNeg && tieneDest) {
       mapaNav.fitBounds([[nLat, nLng], [dLat, dLng]], { padding: [60, 40] });
     } else if (tieneNeg) {
       mapaNav.setView([nLat, nLng], 15);
@@ -1371,23 +1370,25 @@ function renderPedidoActivo(p) {
       markerMiPos = L.marker([myLat, myLng], { icon: iconMe }).addTo(mapaNav).bindPopup('Tu posición');
 
       const puntos = [[myLat, myLng]];
-      if (tieneNeg)  puntos.push([nLat, nLng]);
-      if (tieneDest) puntos.push([dLat, dLng]);
+      if (tieneNeg) puntos.push([nLat, nLng]);
+      // Solo incluir destino en el encuadre si ya está en camino
+      if (p.estado === 'en_camino' && tieneDest) puntos.push([dLat, dLng]);
       if (puntos.length > 1) mapaNav.fitBounds(puntos, { padding: [60, 40] });
 
       if (p.estado === 'asignado' && tieneNeg) {
+        // Solo ruta al negocio, sin preview al destino
         dibujarRutaOSRM(mapaNav, myLat, myLng, nLat, nLng, '#38B6FF', 7, null, true);
-        if (tieneDest)
-          dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#aaa', 3, '6,8', false);
-      } else if (p.estado === 'retiro' && tieneNeg && tieneDest) {
-        dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#38B6FF', 7, null, true);
-      } else if (tieneDest) {
+      } else if (p.estado === 'retiro' && tieneNeg) {
+        // Rider en negocio esperando — muestra solo el negocio
+        dibujarRutaOSRM(mapaNav, myLat, myLng, nLat, nLng, '#38B6FF', 7, null, true);
+      } else if (p.estado === 'en_camino' && tieneDest) {
         dibujarRutaOSRM(mapaNav, myLat, myLng, dLat, dLng, '#38B6FF', 7, null, true);
       }
     };
 
     const sinGPS = () => {
-      if (tieneNeg && tieneDest) {
+      // Sin GPS: en_camino muestra ruta negocio→destino como referencia
+      if (p.estado === 'en_camino' && tieneNeg && tieneDest) {
         dibujarRutaOSRM(mapaNav, nLat, nLng, dLat, dLng, '#38B6FF', 7, null, true);
       }
     };
