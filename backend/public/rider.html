@@ -941,10 +941,42 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
   }
 }
 
-// Re-centrar mapa cuando el rider se mueve
+// Distancia haversine en metros entre dos puntos
+function distMetros(lat1, lng1, lat2, lng2) {
+  const R = 6371000, toR = d => d * Math.PI / 180;
+  const dLat = toR(lat2 - lat1), dLng = toR(lng2 - lng1);
+  const a = Math.sin(dLat/2)**2 + Math.cos(toR(lat1)) * Math.cos(toR(lat2)) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.asin(Math.sqrt(a));
+}
+
+let avanzandoAutoNegocio = false; // evitar doble disparo
+
+// Re-centrar mapa y detectar llegada automática al negocio
 function actualizarPasoNavegacion(lat, lng) {
   if (!mapaNav) return;
   mapaNav.setView([lat, lng], mapaNav.getZoom(), { animate: true, duration: 0.5 });
+
+  // Auto-avanzar a "retiro" cuando rider llega al negocio
+  if (!pedidoActivo || pedidoActivo.estado !== 'asignado' || avanzandoAutoNegocio) return;
+  const nLat = parseFloat(pedidoActivo.neg_lat);
+  const nLng = parseFloat(pedidoActivo.neg_lng);
+  if (isNaN(nLat) || isNaN(nLng)) return;
+
+  const dist = distMetros(lat, lng, nLat, nLng);
+  if (dist <= 10) {
+    avanzandoAutoNegocio = true;
+    toast('🏪 Llegaste al negocio — avanzando...', 'success');
+    apiFetch(`/pedidos/${pedidoActivo.id}/estado`, { method: 'PUT' })
+      .then(actualizado => {
+        pedidoActivo = actualizado;
+        renderPedidoActivo(actualizado);
+        toast(`Estado: ${ESTADO_LABEL[actualizado.estado]}`, 'success');
+      })
+      .catch(e => {
+        toast(e.message, 'error');
+        avanzandoAutoNegocio = false;
+      });
+  }
 }
 
 // ══════════ TURNO (SHIFT TIMER) ══════════
@@ -1144,6 +1176,9 @@ function renderPedidoActivo(p) {
       sinGPS();
     }
   }, 100);
+
+  // Resetear flag auto-llegada al cargar nuevo pedido
+  avanzandoAutoNegocio = false;
 
   // Iniciar chat para este pedido
   chatPedidoId = p.id;
