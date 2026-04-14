@@ -132,6 +132,7 @@ const migrations = [
   // ── Columnas adicionales pedidos (idempotente) ────────────────────────────
   `ALTER TABLE pedidos ADD COLUMN IF NOT EXISTS cliente_id UUID REFERENCES clientes(id)`,
   `ALTER TABLE pedidos ADD COLUMN IF NOT EXISTS retiro_at TIMESTAMP`,
+  `ALTER TABLE pedidos ADD COLUMN IF NOT EXISTS en_camino_at TIMESTAMP`,
   `ALTER TABLE pedidos ADD COLUMN IF NOT EXISTS asignado_at TIMESTAMP`,
   `ALTER TABLE pedidos ADD COLUMN IF NOT EXISTS valor_producto INTEGER`,
   `ALTER TABLE riders  ADD COLUMN IF NOT EXISTS saldo_pendiente INTEGER DEFAULT 0`,

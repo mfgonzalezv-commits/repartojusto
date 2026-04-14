@@ -52,12 +52,7 @@ module.exports = (io) => {
         if (rows[0]) {
           socket.join(`rider:${rows[0].id}`);
           socket.rider_id = rows[0].id;
-          // Marcar rider como en línea
-          await db(
-            'UPDATE riders SET disponible = true WHERE id = $1',
-            [rows[0].id]
-          );
-          io.emit('rider:en_linea', { rider_id: rows[0].id });
+          // No se cambia disponible aquí — el rider lo activa manualmente desde su app
         }
       }
 

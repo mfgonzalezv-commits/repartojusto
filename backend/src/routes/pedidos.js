@@ -56,16 +56,16 @@ router.post('/',
         });
       }
 
-      // Cobrar app_fee ($500) al negocio
+      const tarifa_entrega = calcularTarifa(distancia_km);
+
+      // Cobrar al negocio: app_fee ($500) + tarifa_entrega (va al rider)
       const cobro = await cobros.cobrar({
         customerId: negocio.tarjeta_customer_id,
-        monto: config.APP_FEE,
+        monto: config.APP_FEE + tarifa_entrega,
       });
       if (!cobro.ok) {
         return res.status(402).json({ error: 'Pago rechazado', detalle: 'No se pudo cobrar el servicio. Verifica tu tarjeta.' });
       }
-
-      const tarifa_entrega = calcularTarifa(distancia_km);
 
       // Guardar/actualizar cliente en directorio
       if (cliente_telefono) {
@@ -212,6 +212,7 @@ router.put('/:id/estado', auth, solo('rider', 'admin'), async (req, res, next) =
     // Registrar timestamps por etapa
     let extras = '';
     if (nuevoEstado === 'retiro')    extras = ', retiro_at = NOW()';
+    if (nuevoEstado === 'en_camino') extras = ', en_camino_at = NOW()';
     if (nuevoEstado === 'entregado') extras = ', entregado_at = NOW()';
 
     const { rows: [actualizado] } = await db(
