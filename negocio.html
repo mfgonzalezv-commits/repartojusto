@@ -247,6 +247,83 @@
     .pago-estado { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 20px; }
     .pago-pagado { background: var(--teal-bg); color: var(--teal); }
     .pago-pendiente { background: var(--amber-bg); color: var(--amber); }
+
+    /* ── BOTTOM NAV (móvil) ── */
+    .bottom-nav {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: var(--negro); border-top: 1px solid rgba(255,255,255,0.08);
+      z-index: 200; height: 62px;
+    }
+    .bottom-nav-btn {
+      flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 3px; color: #666; font-size: 10px; font-weight: 600; cursor: pointer;
+      border: none; background: none; padding: 6px 4px; transition: color .2s;
+      font-family: inherit;
+    }
+    .bottom-nav-btn.active { color: var(--amarillo); }
+    .bottom-nav-icon { font-size: 20px; line-height: 1; }
+    .bottom-nav-nuevo {
+      flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 3px; cursor: pointer; border: none; background: none; padding: 6px 4px;
+      font-family: inherit;
+    }
+    .bottom-nav-nuevo-circle {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--amarillo);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; color: var(--negro); font-weight: 800; line-height: 1;
+      margin-bottom: 2px; margin-top: -14px;
+      box-shadow: 0 4px 16px rgba(255,204,0,.5);
+    }
+    .bottom-nav-nuevo span { font-size: 10px; font-weight: 600; color: var(--amarillo); }
+    .bottom-nav-nuevo.active .bottom-nav-nuevo-circle { background: white; }
+
+    /* ── RESPONSIVE MÓVIL ── */
+    @media (max-width: 768px) {
+      .bottom-nav { display: flex; }
+      .topbar-tabs { display: none; }
+      .topbar { padding: 0 14px; gap: 10px; }
+      .topbar-brand { font-size: 15px; }
+      .negocio-name { display: none; }
+      #btn-logout { display: none; }
+      .topbar-info { gap: 8px; }
+
+      #app { height: auto; overflow: visible; min-height: 100vh; }
+      .main {
+        padding: 10px 10px 80px 10px;
+        height: auto; overflow: visible; max-width: 100%;
+      }
+
+      /* Tabs de contenido: auto height y scroll */
+      #tab-pedidos, #tab-historial { height: auto; }
+      #tab-cuenta { height: auto !important; overflow: visible !important; }
+
+      /* Nuevo pedido: columna única */
+      #tab-nuevo { height: auto !important; }
+      #tab-nuevo > div {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        height: auto !important;
+        gap: 10px;
+      }
+      #tab-nuevo .card { grid-row: auto !important; height: auto !important; }
+      #mapa-selector { min-height: 220px !important; height: 220px; }
+
+      /* Formulario grid 2 col → 1 col */
+      .row-2 { grid-template-columns: 1fr !important; }
+
+      /* Modal detalle: pantalla completa desde abajo */
+      #modal-detalle > div {
+        border-radius: 16px 16px 0 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        max-height: 92vh;
+      }
+      #modal-detalle { align-items: flex-end !important; padding: 0 !important; }
+
+      /* Auth card: compacto */
+      .auth-card { padding: 32px 20px; margin: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -529,6 +606,27 @@
     </div>
 
   </div>
+
+  <!-- ── BOTTOM NAV (solo móvil) ── -->
+  <nav class="bottom-nav">
+    <button class="bottom-nav-btn" data-tab="pedidos">
+      <span class="bottom-nav-icon">📦</span>
+      <span>Pedidos</span>
+    </button>
+    <button class="bottom-nav-nuevo" data-tab="nuevo">
+      <div class="bottom-nav-nuevo-circle">+</div>
+      <span>Nuevo</span>
+    </button>
+    <button class="bottom-nav-btn" data-tab="historial">
+      <span class="bottom-nav-icon">📋</span>
+      <span>Historial</span>
+    </button>
+    <button class="bottom-nav-btn" data-tab="cuenta">
+      <span class="bottom-nav-icon">👤</span>
+      <span>Cuenta</span>
+    </button>
+  </nav>
+
 </div>
 
 <!-- ── MODAL: DETALLE DEL PEDIDO ─────────────────────────────────── -->
@@ -876,16 +974,23 @@ function conectarSocket() {
 // ══════════════════════════════════════════════════════════════
 // TABS
 // ══════════════════════════════════════════════════════════════
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    ['pedidos', 'historial', 'nuevo', 'cuenta'].forEach(name => {
-      $(`tab-${name}`).style.display = tab.dataset.tab === name ? 'block' : 'none';
-    });
-    if (tab.dataset.tab === 'historial') cargarHistorial();
-    if (tab.dataset.tab === 'cuenta') cargarMiCuenta();
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === name);
   });
+  document.querySelectorAll('.bottom-nav-btn, .bottom-nav-nuevo').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === name);
+  });
+  ['pedidos', 'historial', 'nuevo', 'cuenta'].forEach(n => {
+    $(`tab-${n}`).style.display = n === name ? 'block' : 'none';
+  });
+  if (name === 'historial') cargarHistorial();
+  if (name === 'cuenta') cargarMiCuenta();
+  if (name === 'nuevo') setTimeout(() => { if (mapaSelector) mapaSelector.invalidateSize(); }, 100);
+}
+
+document.querySelectorAll('.tab, .bottom-nav-btn, .bottom-nav-nuevo').forEach(tab => {
+  tab.addEventListener('click', () => switchTab(tab.dataset.tab));
 });
 
 // ══════════════════════════════════════════════════════════════
@@ -1523,7 +1628,7 @@ $('btn-crear-pedido').addEventListener('click', async () => {
     destinoLat = null; destinoLng = null; clienteActual = null;
     if (mapaSelector) { mapaSelector.remove(); mapaSelector = null; markerSelector = null; }
 
-    document.querySelector('[data-tab="pedidos"]').click();
+    switchTab('pedidos');
     cargarPedidosActivos();
     setTimeout(() => abrirModalDetalle(pedido.id), 600);
   } catch (e) { toast(e.message, 'error'); }
