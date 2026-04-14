@@ -285,13 +285,58 @@
   footer span { color: var(--amarillo); }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 600px) {
-    .comp-wrap { grid-template-columns: 1fr; }
-    .calc-row-input { grid-template-columns: 1fr; }
-    .calc-box { padding: 28px 20px; }
-    .precio-card { padding: 36px 24px; }
+  @media (max-width: 640px) {
+    /* Nav */
+    nav { padding: 12px 16px; }
+    .nav-brand { font-size: 16px; }
+    nav .nav-cta { font-size: 12px; padding: 8px 14px; border-radius: 8px; }
+
+    /* Alerta */
+    .alerta-bar { font-size: 13px; padding: 10px 16px; }
+
+    /* Hero */
+    #hero { padding: 52px 16px 48px; }
+    #hero p { font-size: 15px; }
+    .btn-cta { font-size: 16px; padding: 16px 28px; width: 100%; text-align: center; display: block; }
+
+    /* Secciones: menos padding */
+    #problema, #comparacion, #calculadora, #como, #beneficios, #testimonios, #precio { padding: 52px 16px; }
+    #cta-final { padding: 64px 16px; }
+
+    /* Tag */
+    .tag { font-size: 11px; }
+
+    /* Grids → 1 columna */
+    .comp-wrap { grid-template-columns: 1fr; gap: 32px; }
+    .problema-cards { grid-template-columns: 1fr; }
+    .pasos { grid-template-columns: 1fr; }
+    .bene-grid { grid-template-columns: 1fr; }
+    .testi-grid { grid-template-columns: 1fr; }
+
+    /* Comparación: badge reposicionado */
+    .comp-badge { top: -12px; font-size: 11px; }
+    .comp-card { padding: 24px 20px; }
+
+    /* Calculadora */
+    .calc-row-input { grid-template-columns: 1fr; gap: 12px; }
+    .calc-box { padding: 24px 16px; }
+    .calc-linea { font-size: 14px; }
+    .calc-linea.ahorro { font-size: 17px; }
+    .calc-anual { font-size: 12px; }
+    .calc-anual strong { font-size: 16px; }
+
+    /* Precio */
+    .precio-card { padding: 32px 20px; }
     .precio-monto { font-size: 52px; }
-    nav .nav-cta { font-size: 12px; padding: 8px 14px; }
+    .precio-por { font-size: 13px; }
+    .precio-item { font-size: 14px; }
+
+    /* CTA final */
+    #cta-final p { font-size: 16px; }
+    #cta-final .btn-cta { font-size: 18px; padding: 18px 28px; width: 100%; display: block; }
+
+    /* Testimonios */
+    .testi-texto { font-size: 14px; }
   }
 </style>
 </head>
