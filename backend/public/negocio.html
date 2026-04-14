@@ -300,7 +300,7 @@
     </div>
     <div class="field">
       <label>Dirección del local *</label>
-      <input type="text" id="reg-direccion" placeholder="Av. Providencia 1234, Santiago">
+      <input type="text" id="reg-direccion" placeholder="Ej: Freire 489, Villa Alemana">
     </div>
     <div class="field">
       <label>Categoría</label>
@@ -1015,7 +1015,7 @@ async function cargarDetalle(id) {
       mapaEl.style.display = 'block';
       if (mapaInstance) { mapaInstance.remove(); mapaInstance = null; }
       setTimeout(() => {
-        const centro = tieneDestino ? [p.lat_entrega, p.lng_entrega] : [-33.45, -70.65];
+        const centro = tieneDestino ? [p.lat_entrega, p.lng_entrega] : [-33.0492, -71.3731];
         mapaInstance = L.map('mapa-seguimiento').setView(centro, 14);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© OpenStreetMap'
@@ -1303,7 +1303,7 @@ function iniciarMapaSelector() {
   setTimeout(() => {
     if (mapaSelector) { mapaSelector.remove(); mapaSelector = null; markerSelector = null; }
     const centro = destinoLat && destinoLng ? [destinoLat, destinoLng]
-      : (negocioLat ? [negocioLat, negocioLng] : [-33.45, -70.65]);
+      : (negocioLat ? [negocioLat, negocioLng] : [-33.0492, -71.3731]);
     mapaSelector = L.map('mapa-selector').setView(centro, 14);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' }).addTo(mapaSelector);
 
@@ -1332,8 +1332,8 @@ function iniciarMapaSelector() {
       const dir = inputDir.value.trim();
       if (dir.length < 6) return;
       try {
-        const q = encodeURIComponent(dir + ', Chile');
-        const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=cl`);
+        const q = encodeURIComponent(dir + ', Villa Alemana, Chile');
+        const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=cl&viewbox=-71.47,-32.98,-71.28,-33.12&bounded=0`);
         const d = await r.json();
         if (d[0]) {
           const lat = parseFloat(d[0].lat), lng = parseFloat(d[0].lon);
@@ -1413,7 +1413,7 @@ $('btn-crear-pedido').addEventListener('click', async () => {
     const dir = $('np-direccion').value.trim();
     if (dir.length > 5) {
       try {
-        const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(dir + ', Chile')}&format=json&limit=1&countrycodes=cl`);
+        const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(dir + ', Villa Alemana, Chile')}&format=json&limit=1&countrycodes=cl&viewbox=-71.47,-32.98,-71.28,-33.12&bounded=0`);
         const d = await r.json();
         if (d[0]) { destinoLat = parseFloat(d[0].lat); destinoLng = parseFloat(d[0].lon); }
       } catch {}
@@ -1593,7 +1593,7 @@ function abrirModalPerfil() {
     // Inicializar mapa (esperar que el div sea visible)
     setTimeout(() => {
       if (!mapaPerfil) {
-        const centro = (epLat && epLng) ? [epLat, epLng] : [-33.45, -70.65];
+        const centro = (epLat && epLng) ? [epLat, epLng] : [-33.0492, -71.3731];
         mapaPerfil = L.map('mapa-perfil').setView(centro, epLat ? 15 : 11);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© OpenStreetMap'
@@ -1655,8 +1655,8 @@ async function geocodificarDirPerfil() {
   const dir = $('ep-direccion').value.trim();
   if (dir.length < 6) return;
   try {
-    const q = encodeURIComponent(dir + ', Chile');
-    const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=cl`);
+    const q = encodeURIComponent(dir + ', Villa Alemana, Chile');
+    const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=cl&viewbox=-71.47,-32.98,-71.28,-33.12&bounded=0`);
     const d = await r.json();
     if (d[0]) {
       epLat = parseFloat(d[0].lat);
