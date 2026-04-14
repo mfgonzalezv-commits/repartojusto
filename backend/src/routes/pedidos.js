@@ -4,6 +4,7 @@ const { query: db, transaction } = require('../config/database');
 const { auth, solo } = require('../middleware/auth');
 const config = require('../config');
 const { iniciarCascada, cancelarCascada } = require('../sockets/asignacion');
+const { cobros } = require('./negocios');
 
 const validar = (req, res, next) => {
   const errores = validationResult(req);
@@ -41,9 +42,28 @@ router.post('/',
     const { cliente_nombre, cliente_telefono, direccion_entrega, lat_entrega, lng_entrega, distancia_km, valor_producto, notas } = req.body;
     try {
       const { rows: [negocio] } = await db(
-        'SELECT id FROM negocios WHERE usuario_id = $1 AND activo = true', [req.usuario.id]
+        `SELECT id, tarjeta_customer_id, tarjeta_token
+         FROM negocios WHERE usuario_id = $1 AND activo = true`,
+        [req.usuario.id]
       );
       if (!negocio) return res.status(404).json({ error: 'Negocio no encontrado' });
+
+      // Verificar tarjeta registrada
+      if (!negocio.tarjeta_token) {
+        return res.status(402).json({
+          error: 'Tarjeta requerida',
+          detalle: 'Debes registrar una tarjeta de crédito o débito antes de publicar pedidos.'
+        });
+      }
+
+      // Cobrar app_fee ($500) al negocio
+      const cobro = await cobros.cobrar({
+        customerId: negocio.tarjeta_customer_id,
+        monto: config.APP_FEE,
+      });
+      if (!cobro.ok) {
+        return res.status(402).json({ error: 'Pago rechazado', detalle: 'No se pudo cobrar el servicio. Verifica tu tarjeta.' });
+      }
 
       const tarifa_entrega = calcularTarifa(distancia_km);
 

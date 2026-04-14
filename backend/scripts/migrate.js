@@ -136,6 +136,14 @@ const migrations = [
   `ALTER TABLE pedidos ADD COLUMN IF NOT EXISTS valor_producto INTEGER`,
   `ALTER TABLE riders  ADD COLUMN IF NOT EXISTS saldo_pendiente INTEGER DEFAULT 0`,
 
+  // ── Tarjeta de cobro del negocio ─────────────────────────────────────────
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_customer_id VARCHAR(255)`,
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_token       VARCHAR(255)`,
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_ultimos4    VARCHAR(4)`,
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_marca       VARCHAR(30)`,
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_exp         VARCHAR(7)`,
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_registrada_at TIMESTAMPTZ`,
+
   // ── Restricciones adicionales (idempotente) ───────────────────────────────
   `DO $$ BEGIN
      IF NOT EXISTS (

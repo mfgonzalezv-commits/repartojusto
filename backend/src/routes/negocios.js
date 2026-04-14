@@ -1,7 +1,25 @@
 const router = require('express').Router();
 const { body, validationResult } = require('express-validator');
+const crypto = require('crypto');
 const { query: db } = require('../config/database');
 const { auth, solo } = require('../middleware/auth');
+const config = require('../config');
+
+// ── Mock cobros (sandbox) — reemplazar con Flow/Stripe en producción ──────
+const cobros = {
+  async registrarTarjeta({ negocio_id, email }) {
+    if (config.FLOW_ENVIRONMENT === 'sandbox') {
+      return { customerId: `CUST_${negocio_id.substring(0, 8)}` };
+    }
+    throw new Error('Integración producción no implementada');
+  },
+  async cobrar({ customerId, monto }) {
+    if (config.FLOW_ENVIRONMENT === 'sandbox') {
+      return { ok: true, transaccion_id: `TXN_${Date.now()}` };
+    }
+    throw new Error('Integración producción no implementada');
+  },
+};
 
 const validar = (req, res, next) => {
   const errores = validationResult(req);
@@ -112,4 +130,78 @@ router.get('/pedidos/:id', auth, solo('negocio'), async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+// ── GET /api/negocios/tarjeta ─────────────────────────────────────────────
+// Estado de la tarjeta registrada del negocio
+router.get('/tarjeta', auth, solo('negocio'), async (req, res, next) => {
+  try {
+    const { rows: [neg] } = await db(
+      `SELECT tarjeta_ultimos4, tarjeta_marca, tarjeta_exp, tarjeta_registrada_at
+       FROM negocios WHERE usuario_id = $1`,
+      [req.usuario.id]
+    );
+    if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });
+    const tiene = !!neg.tarjeta_ultimos4;
+    res.json({ tiene, ...neg });
+  } catch (err) { next(err); }
+});
+
+// ── POST /api/negocios/tarjeta ────────────────────────────────────────────
+// Registrar tarjeta (en sandbox acepta datos directamente)
+router.post('/tarjeta',
+  auth, solo('negocio'),
+  [
+    body('ultimos4').isLength({ min: 4, max: 4 }).isNumeric(),
+    body('marca').trim().notEmpty(),
+    body('exp').matches(/^\d{2}\/\d{4}$/),
+  ],
+  async (req, res, next) => {
+    const errores = validationResult(req);
+    if (!errores.isEmpty()) return res.status(400).json({ error: 'Datos inválidos', detalles: errores.array() });
+
+    const { ultimos4, marca, exp } = req.body;
+    try {
+      const { rows: [neg] } = await db(
+        'SELECT id FROM negocios WHERE usuario_id = $1', [req.usuario.id]
+      );
+      if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });
+
+      const { customerId } = await cobros.registrarTarjeta({
+        negocio_id: neg.id,
+        email: req.usuario.email,
+      });
+
+      await db(
+        `UPDATE negocios
+         SET tarjeta_customer_id   = $1,
+             tarjeta_token         = $2,
+             tarjeta_ultimos4      = $3,
+             tarjeta_marca         = $4,
+             tarjeta_exp           = $5,
+             tarjeta_registrada_at = NOW()
+         WHERE id = $6`,
+        [customerId, crypto.randomUUID(), ultimos4, marca, exp, neg.id]
+      );
+
+      res.json({ ok: true, ultimos4, marca, exp });
+    } catch (err) { next(err); }
+  }
+);
+
+// ── DELETE /api/negocios/tarjeta ──────────────────────────────────────────
+router.delete('/tarjeta', auth, solo('negocio'), async (req, res, next) => {
+  try {
+    await db(
+      `UPDATE negocios
+       SET tarjeta_customer_id = NULL, tarjeta_token = NULL,
+           tarjeta_ultimos4 = NULL, tarjeta_marca = NULL,
+           tarjeta_exp = NULL, tarjeta_registrada_at = NULL
+       WHERE usuario_id = $1`,
+      [req.usuario.id]
+    );
+    res.json({ ok: true });
+  } catch (err) { next(err); }
+});
+
+// Exportar cobros para usar en pedidos.js
 module.exports = router;
+module.exports.cobros = cobros;

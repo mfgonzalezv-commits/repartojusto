@@ -408,6 +408,14 @@
               <h4>Últimos pagos</h4>
               <div id="cuenta-pagos-lista"><p style="color:var(--text3);font-size:13px">Cargando...</p></div>
             </div>
+            <div class="cuenta-section" style="border-top:1px solid var(--border);padding-top:16px">
+              <h4>💳 Método de pago</h4>
+              <div id="tarjeta-status">
+                <!-- Se rellena por JS -->
+                <p style="color:var(--text3);font-size:13px">Cargando...</p>
+              </div>
+            </div>
+
             <div class="cuenta-section" style="padding-top:8px;border-top:1px solid var(--border)">
               <button class="btn btn-danger btn-full" id="btn-logout-cuenta">Cerrar sesión</button>
             </div>
@@ -544,6 +552,45 @@
 <div id="toast-container"></div>
 
 <!-- ── MODAL: EDITAR PERFIL NEGOCIO ──────────────────────────── -->
+<!-- ══ MODAL TARJETA ══════════════════════════════════════════════════ -->
+<div id="modal-tarjeta" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;overflow-y:auto;padding:24px 16px">
+  <div style="background:white;border-radius:16px;max-width:420px;margin:0 auto;overflow:hidden">
+    <div style="padding:20px 24px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+      <h3 style="font-size:17px;font-weight:700">💳 Registrar tarjeta</h3>
+      <button onclick="cerrarModalTarjeta()" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--text2)">✕</button>
+    </div>
+    <div style="padding:24px">
+      <div style="background:#FFF3CD;border-radius:10px;padding:12px 14px;font-size:12px;color:#856404;margin-bottom:20px">
+        🔒 Modo pruebas — ingresa cualquier número de tarjeta válido. En producción se conectará al procesador de pagos.
+      </div>
+      <div class="field">
+        <label>Número de tarjeta</label>
+        <input type="text" id="t-numero" placeholder="4242 4242 4242 4242" maxlength="19"
+          oninput="this.value=this.value.replace(/\D/g,'').replace(/(.{4})/g,'$1 ').trim()">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="field">
+          <label>Vencimiento</label>
+          <input type="text" id="t-exp" placeholder="MM/AAAA" maxlength="7"
+            oninput="let v=this.value.replace(/\D/g,'');if(v.length>2)v=v.slice(0,2)+'/'+v.slice(2);this.value=v">
+        </div>
+        <div class="field">
+          <label>CVV</label>
+          <input type="password" id="t-cvv" placeholder="123" maxlength="4">
+        </div>
+      </div>
+      <div class="field">
+        <label>Nombre en la tarjeta</label>
+        <input type="text" id="t-nombre" placeholder="JUAN PEREZ">
+      </div>
+      <div style="display:flex;gap:10px;margin-top:8px">
+        <button class="btn btn-outline" style="flex:1" onclick="cerrarModalTarjeta()">Cancelar</button>
+        <button class="btn btn-primary" style="flex:2" id="btn-guardar-tarjeta" onclick="guardarTarjeta()">Guardar tarjeta</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="modal-perfil" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:2000;overflow-y:auto;padding:24px 16px">
   <div style="background:white;border-radius:16px;max-width:520px;margin:0 auto;overflow:hidden">
     <div style="padding:20px 24px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
@@ -1525,6 +1572,7 @@ $('btn-toggle-abierto').addEventListener('click', async () => {
 // MI CUENTA
 // ══════════════════════════════════════════════════════════════
 async function cargarMiCuenta() {
+  cargarTarjeta(); // cargar tarjeta en paralelo sin bloquear
   try {
     const [perfil, pedidosTodos] = await Promise.all([
       apiFetch('/negocios/perfil'),
@@ -1805,6 +1853,93 @@ function iniciarGrafico(pedidos) {
       }
     }
   });
+}
+
+// ══════════════════════════════════════════════════════════════
+// TARJETA DE COBRO
+// ══════════════════════════════════════════════════════════════
+async function cargarTarjeta() {
+  try {
+    const data = await apiFetch('/negocios/tarjeta');
+    renderTarjeta(data);
+  } catch { renderTarjeta(null); }
+}
+
+function renderTarjeta(data) {
+  const wrap = $('tarjeta-status');
+  if (!wrap) return;
+  if (data?.tiene) {
+    const marcaIcon = { visa: '💳', mastercard: '💳', amex: '💳' }[data.tarjeta_marca?.toLowerCase()] || '💳';
+    wrap.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;background:var(--teal-bg);border-radius:10px;padding:12px 14px">
+        <div>
+          <div style="font-size:13px;font-weight:700">${marcaIcon} ${data.tarjeta_marca || 'Tarjeta'} •••• ${data.tarjeta_ultimos4}</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:2px">Vence ${data.tarjeta_exp}</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-outline btn-sm" onclick="abrirModalTarjeta()">Cambiar</button>
+          <button class="btn btn-danger btn-sm" onclick="eliminarTarjeta()">Quitar</button>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--text3);margin-top:8px">Se cobran $500 automáticamente al publicar cada pedido.</div>`;
+  } else {
+    wrap.innerHTML = `
+      <div style="background:var(--red-bg);border-radius:10px;padding:12px 14px;margin-bottom:10px">
+        <div style="font-size:13px;font-weight:600;color:var(--red)">Sin tarjeta registrada</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:3px">Necesitas una tarjeta para publicar pedidos ($500 por pedido).</div>
+      </div>
+      <button class="btn btn-primary" style="width:100%" onclick="abrirModalTarjeta()">+ Agregar tarjeta</button>`;
+  }
+}
+
+function abrirModalTarjeta() {
+  $('t-numero').value = '';
+  $('t-exp').value = '';
+  $('t-cvv').value = '';
+  $('t-nombre').value = '';
+  $('modal-tarjeta').style.display = 'block';
+}
+
+function cerrarModalTarjeta() {
+  $('modal-tarjeta').style.display = 'none';
+}
+
+async function guardarTarjeta() {
+  const numero = $('t-numero').value.replace(/\s/g, '');
+  const exp    = $('t-exp').value.trim();
+  const cvv    = $('t-cvv').value.trim();
+
+  if (numero.length < 13 || numero.length > 16) { toast('Número de tarjeta inválido', 'error'); return; }
+  if (!/^\d{2}\/\d{4}$/.test(exp)) { toast('Vencimiento inválido (MM/AAAA)', 'error'); return; }
+  if (cvv.length < 3) { toast('CVV inválido', 'error'); return; }
+
+  const ultimos4 = numero.slice(-4);
+  const marca = numero.startsWith('4') ? 'Visa' : numero.startsWith('5') ? 'Mastercard' : numero.startsWith('3') ? 'Amex' : 'Débito';
+
+  const btn = $('btn-guardar-tarjeta');
+  btn.disabled = true; btn.textContent = 'Guardando...';
+  try {
+    await apiFetch('/negocios/tarjeta', {
+      method: 'POST',
+      body: JSON.stringify({ ultimos4, marca, exp })
+    });
+    cerrarModalTarjeta();
+    toast('Tarjeta registrada correctamente', 'success');
+    cargarTarjeta();
+  } catch (e) {
+    toast(e.message, 'error');
+  } finally {
+    btn.disabled = false; btn.textContent = 'Guardar tarjeta';
+  }
+}
+
+async function eliminarTarjeta() {
+  if (!confirm('¿Eliminar la tarjeta registrada?')) return;
+  try {
+    await apiFetch('/negocios/tarjeta', { method: 'DELETE' });
+    toast('Tarjeta eliminada', 'success');
+    cargarTarjeta();
+  } catch (e) { toast(e.message, 'error'); }
 }
 
 // ══════════════════════════════════════════════════════════════
