@@ -797,10 +797,20 @@ function pedirPermisoNotif() {
   }
 }
 
+function iniciarAudioCtx() {
+  // Debe llamarse desde un gesto del usuario (ej: toggle disponible)
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+  } catch {}
+}
+
 function sonarAlarma() {
   try {
-    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
-    // Patrón de alarma: tono alto × 4 repeticiones rápidas
+    if (!audioCtx) return; // no inicializado aún
+    if (audioCtx.state === 'suspended') audioCtx.resume();
     const tiempos = [0, 0.18, 0.36, 0.54, 0.85, 1.03, 1.21, 1.39];
     tiempos.forEach((t, i) => {
       const osc  = audioCtx.createOscillator();
@@ -1063,11 +1073,12 @@ $('toggle-disponible').addEventListener('change', async (e) => {
     });
 
     if (disponible) {
+      iniciarAudioCtx();   // activar audio desde gesto del usuario
+      pedirPermisoNotif(); // pedir permiso notificaciones
       iniciarGPS();
       cargarDisponibles();
       iniciarTurno();
       iniciarPolling();
-      pedirPermisoNotif();
       toast('¡Estás online! Buscando pedidos...', 'success');
     } else {
       detenerGPS();
