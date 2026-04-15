@@ -23,7 +23,7 @@ async function _riderMasCercano(negLat, negLng, ofrecidos) {
     `SELECT id FROM riders
      WHERE disponible = true
        AND lat IS NOT NULL AND lng IS NOT NULL
-       AND id <> ALL($3::int[])
+       AND id <> ALL($3::uuid[])
      ORDER BY (($1 - lat)^2 + (($2 - lng) * COS(RADIANS($1)))^2) ASC
      LIMIT 1`,
     [negLat, negLng, [...ofrecidos]]
