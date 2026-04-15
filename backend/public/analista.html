@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reparto Justo — Analista IA</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --amarillo: #FFCC00;
+  --negro: #1C1C1C;
+  --navy: #0F172A;
+  --bg: #F4F5F7;
+  --bg2: #FFFFFF;
+  --border: rgba(0,0,0,0.08);
+  --text: #1C1C1C;
+  --text2: #6b6b66;
+  --text3: #9a9a94;
+  --green: #16A34A; --green-bg: #DCFCE7; --green-light: #F0FDF4;
+  --red: #DC2626; --red-bg: #FEE2E2; --red-light: #FFF5F5;
+  --blue: #2563EB; --blue-bg: #DBEAFE; --blue-light: #EFF6FF;
+  --amber: #D97706; --amber-bg: #FEF3C7; --amber-light: #FFFBEB;
+  --purple: #7C3AED; --purple-bg: #EDE9FE;
+  --r: 14px; --r-sm: 8px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+/* AUTH */
+#auth-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%); }
+.auth-card { background: white; border-radius: 20px; padding: 44px 36px; width: 100%; max-width: 380px; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+.auth-logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; color: var(--negro); margin-bottom: 4px; }
+.auth-logo span { color: var(--amarillo); }
+.auth-badge { display: inline-block; background: var(--amarillo); color: var(--negro); font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; margin-bottom: 20px; }
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 12px; font-weight: 600; color: var(--text2); margin-bottom: 5px; }
+.field input { width: 100%; padding: 10px 13px; border: 1.5px solid var(--border); border-radius: var(--r-sm); font-size: 14px; font-family: inherit; }
+.field input:focus { outline: none; border-color: var(--amarillo); }
+.btn-auth { width: 100%; padding: 12px; background: var(--amarillo); color: var(--negro); border: none; border-radius: var(--r-sm); font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; }
+#auth-error { color: var(--red); font-size: 12px; margin-bottom: 10px; display: none; }
+
+/* APP */
+#app { display: none; }
+
+/* TOPBAR */
+.topbar { background: var(--negro); height: 54px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.topbar-left { display: flex; align-items: center; gap: 14px; }
+.topbar-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 17px; color: var(--amarillo); }
+.topbar-badge { background: rgba(255,204,0,.15); border: 1px solid rgba(255,204,0,.3); color: var(--amarillo); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+.topbar-right { display: flex; align-items: center; gap: 12px; }
+.refresh-info { font-size: 12px; color: #666; }
+.live-badge { display: flex; align-items: center; gap: 6px; background: rgba(22,163,74,.15); border: 1px solid rgba(22,163,74,.3); color: #4ade80; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+.live-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:.3} }
+.btn-sm { padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; font-family: inherit; }
+.btn-logout { background: rgba(255,255,255,.1); color: white; }
+
+/* MAIN */
+.main { max-width: 1280px; margin: 0 auto; padding: 20px; }
+
+/* HEALTH BANNER */
+.health-banner {
+  border-radius: var(--r); padding: 20px 24px; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 16px;
+  animation: fadeIn .4s ease;
+}
+@keyframes fadeIn { from{opacity:0;transform:translateY(-6px)} to{opacity:1;transform:none} }
+.health-banner.verde { background: var(--green-light); border: 1.5px solid #bbf7d0; }
+.health-banner.amarillo { background: var(--amber-light); border: 1.5px solid #fde68a; }
+.health-banner.rojo { background: var(--red-light); border: 1.5px solid #fecaca; }
+.health-score { font-family: 'Montserrat', sans-serif; font-size: 52px; font-weight: 900; line-height: 1; min-width: 80px; text-align: center; }
+.health-banner.verde .health-score { color: var(--green); }
+.health-banner.amarillo .health-score { color: var(--amber); }
+.health-banner.rojo .health-score { color: var(--red); }
+.health-label { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.health-desc { font-size: 13px; color: var(--text2); }
+
+/* ALERTAS */
+.alertas { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.alerta {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 16px; border-radius: var(--r-sm); font-size: 13px;
+  animation: fadeIn .3s ease;
+}
+.alerta.critica { background: var(--red-light); border: 1px solid #fecaca; }
+.alerta.advertencia { background: var(--amber-light); border: 1px solid #fde68a; }
+.alerta.info { background: var(--blue-light); border: 1px solid #bfdbfe; }
+.alerta.ok { background: var(--green-light); border: 1px solid #bbf7d0; }
+.alerta-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.alerta-texto { flex: 1; }
+.alerta-titulo { font-weight: 700; margin-bottom: 2px; }
+.alerta.critica .alerta-titulo { color: var(--red); }
+.alerta.advertencia .alerta-titulo { color: var(--amber); }
+.alerta.info .alerta-titulo { color: var(--blue); }
+.alerta.ok .alerta-titulo { color: var(--green); }
+.alerta-detalle { color: var(--text2); font-size: 12px; }
+
+/* GRID */
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 20px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+
+/* METRIC CARD */
+.metric { background: white; border: 1px solid var(--border); border-radius: var(--r); padding: 18px 20px; }
+.metric-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text3); margin-bottom: 8px; }
+.metric-value { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; line-height: 1; color: var(--negro); }
+.metric-value.green { color: var(--green); }
+.metric-value.red { color: var(--red); }
+.metric-value.amber { color: var(--amber); }
+.metric-value.blue { color: var(--blue); }
+.metric-value.purple { color: var(--purple); }
+.metric-value.amarillo { color: #b8920a; }
+.metric-sub { font-size: 12px; color: var(--text3); margin-top: 6px; }
+.metric-trend { font-size: 12px; font-weight: 600; margin-top: 4px; }
+.metric-trend.up { color: var(--green); }
+.metric-trend.down { color: var(--red); }
+
+/* CARD */
+.card { background: white; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; margin-bottom: 16px; }
+.card-header { padding: 14px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.card-title { font-size: 14px; font-weight: 700; }
+.card-body { padding: 18px; }
+
+/* TABLA */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th { background: var(--bg); padding: 9px 13px; text-align: left; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text2); border-bottom: 1px solid var(--border); }
+tbody td { padding: 11px 13px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: #fafafa; }
+
+/* BADGE */
+.badge { display: inline-block; padding: 3px 9px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.b-green { background: var(--green-bg); color: var(--green); }
+.b-red { background: var(--red-bg); color: var(--red); }
+.b-amber { background: var(--amber-bg); color: var(--amber); }
+.b-blue { background: var(--blue-bg); color: var(--blue); }
+.b-purple { background: var(--purple-bg); color: var(--purple); }
+.b-gray { background: #f0f0ee; color: var(--text3); }
+
+/* FUNNEL */
+.funnel { display: flex; gap: 8px; margin-top: 8px; }
+.funnel-step { flex: 1; text-align: center; }
+.funnel-bar { border-radius: 6px; margin-bottom: 6px; min-height: 8px; transition: height .5s; }
+.funnel-val { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 900; }
+.funnel-lbl { font-size: 10px; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+
+/* RIDER PERF */
+.rider-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.rider-row:last-child { border-bottom: none; }
+.rider-av { width: 36px; height: 36px; border-radius: 50%; background: var(--negro); color: var(--amarillo); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; flex-shrink: 0; }
+.rider-info { flex: 1; }
+.rider-name { font-weight: 600; font-size: 13px; }
+.rider-stats { font-size: 11px; color: var(--text3); margin-top: 2px; }
+.rider-saldo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; color: var(--green); }
+
+/* PROGRESS BAR */
+.prog-bar { height: 6px; border-radius: 3px; background: var(--bg); overflow: hidden; margin-top: 6px; }
+.prog-fill { height: 100%; border-radius: 3px; transition: width .5s; }
+
+/* SPINNER */
+.spinner { text-align: center; padding: 40px; color: var(--text3); font-size: 14px; }
+
+/* TIMESTAMP */
+.ts { font-size: 11px; color: var(--text3); }
+
+@media (max-width: 768px) {
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .health-score { font-size: 40px; }
+  .funnel { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<!-- AUTH -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="auth-logo">Reparto<span>Justo</span></div>
+    <div class="auth-badge">🤖 Analista del Sistema</div>
+    <div class="field"><label>Email Admin</label><input type="email" id="email" placeholder="admin@repartojusto.cl" value="admin@repartojusto.cl"></div>
+    <div class="field"><label>Contraseña</label><input type="password" id="pass" placeholder="••••••••" value="admin1234"></div>
+    <p id="auth-error"></p>
+    <button class="btn-auth" id="btn-login">Analizar sistema</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <nav class="topbar">
+    <div class="topbar-left">
+      <div class="topbar-brand">🏍️ Reparto Justo</div>
+      <div class="topbar-badge">🤖 Analista en tiempo real</div>
+    </div>
+    <div class="topbar-right">
+      <span class="refresh-info" id="refresh-info">—</span>
+      <div class="live-badge"><div class="live-dot"></div>EN VIVO</div>
+      <button class="btn-sm" onclick="analizar()" style="background:var(--amarillo);color:var(--negro);font-weight:700">↻ Analizar</button>
+      <button class="btn-sm btn-logout" id="btn-logout">Salir</button>
+    </div>
+  </nav>
+
+  <div class="main">
+
+    <!-- HEALTH SCORE -->
+    <div id="health-banner" class="health-banner amarillo">
+      <div class="health-score" id="health-score">—</div>
+      <div>
+        <div class="health-label" id="health-label">Analizando sistema...</div>
+        <div class="health-desc" id="health-desc">Procesando datos de todas las secciones</div>
+      </div>
+    </div>
+
+    <!-- ALERTAS -->
+    <div class="alertas" id="alertas-container">
+      <div class="spinner">🔍 Auditando datos...</div>
+    </div>
+
+    <!-- KPIs OPERACIONALES -->
+    <div class="grid-4" id="kpis-grid">
+      <div class="metric"><div class="metric-label">Pedidos hoy</div><div class="metric-value blue" id="k-hoy">—</div><div class="metric-sub">Últimas 24h</div></div>
+      <div class="metric"><div class="metric-label">Tasa de éxito</div><div class="metric-value green" id="k-tasa">—</div><div class="metric-sub">Entregados / Total</div></div>
+      <div class="metric"><div class="metric-label">Riders online</div><div class="metric-value purple" id="k-riders-on">—</div><div class="metric-sub" id="k-riders-total">—</div></div>
+      <div class="metric"><div class="metric-label">Ingreso plataforma</div><div class="metric-value amarillo" id="k-ingresos">—</div><div class="metric-sub">App fee total</div></div>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- FUNNEL DE ESTADOS -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📊 Funnel de estados</div>
+          <span class="ts" id="ts-funnel">—</span>
+        </div>
+        <div class="card-body">
+          <div class="funnel" id="funnel-container">
+            <div class="spinner">Cargando...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÉTRICAS FINANCIERAS -->
+      <div class="card">
+        <div class="card-header"><div class="card-title">💰 Financiero</div></div>
+        <div class="card-body">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <div style="font-size:11px;color:var(--text3);font-weight:700;text-transform:uppercase;margin-bottom:4px">Cobrado a negocios</div>
+              <div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;color:var(--negro)" id="f-cobrado">—</div>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text3);font-weight:700;text-transform:uppercase;margin-bottom:4px">Por pagar a riders</div>
+              <div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;color:var(--amber)" id="f-saldo">—</div>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text3);font-weight:700;text-transform:uppercase;margin-bottom:4px">Ganancia plataforma</div>
+              <div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;color:var(--green)" id="f-ganancia">—</div>
+            </div>
+            <div>
+              <div style="font-size:11px;color:var(--text3);font-weight:700;text-transform:uppercase;margin-bottom:4px">Dist. promedio</div>
+              <div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;color:var(--blue)" id="f-dist">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- RENDIMIENTO RIDERS -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">🏍️ Rendimiento riders</div>
+          <span class="ts" id="ts-riders">—</span>
+        </div>
+        <div class="card-body" id="riders-perf-body">
+          <div class="spinner">Cargando...</div>
+        </div>
+      </div>
+
+      <!-- AUDITORÍA DE DATOS -->
+      <div class="card">
+        <div class="card-header"><div class="card-title">🔍 Auditoría de datos</div></div>
+        <div class="card-body" id="auditoria-body">
+          <div class="spinner">Auditando...</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TABLA: PEDIDOS CRÍTICOS -->
+    <div class="card" id="card-criticos" style="display:none">
+      <div class="card-header">
+        <div class="card-title" style="color:var(--red)">⚠️ Pedidos que requieren atención</div>
+        <span class="ts" id="ts-criticos">—</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Comercio</th><th>Cliente</th><th>Estado</th><th>Tiempo en estado</th><th>Problema detectado</th></tr></thead>
+          <tbody id="tbody-criticos"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TABLA: COMERCIOS -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🏪 Salud de comercios</div>
+        <span class="ts" id="ts-comercios">—</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Comercio</th><th>Tarjeta</th><th>Estado</th><th>Diagnóstico</th></tr></thead>
+          <tbody id="tbody-comercios"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const API = '/api';
+let token = null;
+let intervalId = null;
+
+const $ = id => document.getElementById(id);
+const fmt = n => '$' + Math.round(n || 0).toLocaleString('es-CL');
+const pct = (a, b) => b > 0 ? Math.round(a / b * 100) + '%' : '0%';
+
+function tiempoTranscurrido(fecha) {
+  if (!fecha) return null;
+  const mins = Math.floor((Date.now() - new Date(fecha)) / 60000);
+  if (mins < 60) return `${mins} min`;
+  const hrs = Math.floor(mins / 60);
+  return `${hrs}h ${mins % 60}min`;
+}
+
+async function apiFetch(path) {
+  const res = await fetch(API + path, { headers: { Authorization: `Bearer ${token}` } });
+  if (!res.ok) throw new Error('Error API: ' + path);
+  return res.json();
+}
+
+// ── AUTH ──
+$('btn-login').addEventListener('click', async () => {
+  const email = $('email').value.trim();
+  const pass = $('pass').value;
+  $('auth-error').style.display = 'none';
+  $('btn-login').textContent = 'Conectando...';
+  try {
+    const r = await fetch(`${API}/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password: pass })
+    });
+    const d = await r.json();
+    if (d.error) throw new Error(d.error);
+    if (d.usuario.rol !== 'admin') throw new Error('Se requiere cuenta admin');
+    token = d.token;
+    $('auth-screen').style.display = 'none';
+    $('app').style.display = 'block';
+    analizar();
+    intervalId = setInterval(analizar, 60000); // actualizar cada 60s
+  } catch(e) {
+    $('auth-error').textContent = e.message;
+    $('auth-error').style.display = 'block';
+  } finally { $('btn-login').textContent = 'Analizar sistema'; }
+});
+
+$('pass').addEventListener('keydown', e => { if (e.key === 'Enter') $('btn-login').click(); });
+$('btn-logout').addEventListener('click', () => { clearInterval(intervalId); token = null; $('app').style.display = 'none'; $('auth-screen').style.display = 'flex'; });
+
+// ── ANÁLISIS PRINCIPAL ──
+async function analizar() {
+  $('refresh-info').textContent = 'Actualizando...';
+  try {
+    const [metricas, pedidos, riders, usuarios] = await Promise.all([
+      apiFetch('/admin/metricas'),
+      apiFetch('/admin/pedidos?limit=100'),
+      apiFetch('/admin/riders'),
+      apiFetch('/admin/usuarios?rol=negocio&limit=50')
+    ]);
+
+    renderKPIs(metricas, riders);
+    renderFunnel(metricas.pedidos);
+    renderFinanciero(metricas, riders);
+    renderRiders(riders);
+    const alertas = auditar(metricas, pedidos, riders, usuarios);
+    renderAlertas(alertas);
+    renderHealthScore(alertas);
+    renderPedidosCriticos(pedidos);
+    renderComercios(usuarios);
+
+    const ahora = new Date().toLocaleTimeString('es-CL');
+    $('refresh-info').textContent = `Última actualización: ${ahora}`;
+    document.querySelectorAll('.ts').forEach(el => el.textContent = ahora);
+  } catch(e) {
+    $('refresh-info').textContent = 'Error al actualizar';
+    console.error(e);
+  }
+}
+
+// ── KPIs ──
+function renderKPIs(m, riders) {
+  const p = m.pedidos, ing = m.ingresos, r = m.riders;
+  $('k-hoy').textContent = p.ultimas_24h || 0;
+  const tasa = p.total > 0 ? Math.round(p.entregados / p.total * 100) : 0;
+  $('k-tasa').textContent = tasa + '%';
+  $('k-tasa').className = 'metric-value ' + (tasa >= 80 ? 'green' : tasa >= 60 ? 'amber' : 'red');
+  $('k-riders-on').textContent = r.disponibles;
+  $('k-riders-total').textContent = `de ${r.total} registrados`;
+  $('k-ingresos').textContent = fmt(ing.app_fee_total);
+}
+
+// ── FUNNEL ──
+function renderFunnel(p) {
+  const estados = [
+    { lbl: 'Pendiente', val: parseInt(p.pendientes), color: '#D97706' },
+    { lbl: 'Asignado', val: parseInt(p.asignado || 0), color: '#2563EB' },
+    { lbl: 'En camino', val: parseInt(p.en_camino), color: '#7C3AED' },
+    { lbl: 'Entregado', val: parseInt(p.entregados), color: '#16A34A' },
+    { lbl: 'Cancelado', val: parseInt(p.cancelados), color: '#DC2626' },
+  ];
+  const maxVal = Math.max(...estados.map(e => e.val), 1);
+  $('funnel-container').innerHTML = estados.map(e => `
+    <div class="funnel-step">
+      <div class="funnel-bar" style="height:${Math.max(8, e.val/maxVal*80)}px;background:${e.color}20;border:2px solid ${e.color}"></div>
+      <div class="funnel-val" style="color:${e.color}">${e.val}</div>
+      <div class="funnel-lbl">${e.lbl}</div>
+    </div>
+  `).join('');
+}
+
+// ── FINANCIERO ──
+function renderFinanciero(m, riders) {
+  const ing = m.ingresos;
+  const saldoTotal = riders.reduce((s, r) => s + parseInt(r.saldo_pendiente || 0), 0);
+  const cobradoTotal = parseInt(ing.app_fee_total || 0) + parseInt(ing.tarifas_total || 0);
+  const ganancia = parseInt(ing.app_fee_total || 0);
+  $('f-cobrado').textContent = fmt(cobradoTotal);
+  $('f-saldo').textContent = fmt(saldoTotal);
+  $('f-ganancia').textContent = fmt(ganancia);
+  $('f-dist').textContent = parseFloat(ing.distancia_promedio || 0).toFixed(1) + ' km';
+}
+
+// ── RIDERS RENDIMIENTO ──
+function renderRiders(riders) {
+  const sorted = [...riders].sort((a, b) => (b.total_entregas || 0) - (a.total_entregas || 0));
+  const maxEntregas = Math.max(...sorted.map(r => r.total_entregas || 0), 1);
+  const saldoTotal = riders.reduce((s, r) => s + parseInt(r.saldo_pendiente || 0), 0);
+
+  if (!sorted.length) { $('riders-perf-body').innerHTML = '<div class="spinner">Sin riders registrados</div>'; return; }
+
+  $('riders-perf-body').innerHTML = sorted.slice(0, 6).map(r => {
+    const entregas = r.total_entregas || 0;
+    const saldo = parseInt(r.saldo_pendiente || 0);
+    const pctBar = Math.round(entregas / maxEntregas * 100);
+    return `
+      <div class="rider-row">
+        <div class="rider-av">${r.nombre.charAt(0).toUpperCase()}</div>
+        <div class="rider-info">
+          <div class="rider-name">${r.nombre} ${r.disponible ? '🟢' : '⚫'}</div>
+          <div class="rider-stats">${entregas} entregas · Rating ${parseFloat(r.rating || 5).toFixed(1)}⭐</div>
+          <div class="prog-bar"><div class="prog-fill" style="width:${pctBar}%;background:${r.disponible ? '#16A34A' : '#9a9a94'}"></div></div>
+        </div>
+        <div class="rider-saldo">${saldo > 0 ? fmt(saldo) : '<span style="color:var(--text3);font-size:12px">$0</span>'}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ── AUDITORÍA ──
+function auditar(metricas, pedidos, riders, usuarios) {
+  const alertas = [];
+  const p = metricas.pedidos;
+  const ahora = Date.now();
+
+  // 1. Pedidos pendientes sin rider por más de 10 minutos
+  const pendientesViejos = pedidos.filter(ped =>
+    ped.estado === 'pendiente' &&
+    (ahora - new Date(ped.created_at)) > 10 * 60 * 1000
+  );
+  if (pendientesViejos.length > 0) {
+    alertas.push({ tipo: 'critica', titulo: `${pendientesViejos.length} pedido(s) sin rider por más de 10 min`, detalle: 'Sin asignación prolongada puede indicar falta de riders disponibles o problema con la cascada.' });
+  }
+
+  // 2. Pedidos atascados en asignado/retiro por más de 1 hora
+  const atascados = pedidos.filter(ped =>
+    ['asignado', 'retiro'].includes(ped.estado) &&
+    (ahora - new Date(ped.asignado_at || ped.created_at)) > 60 * 60 * 1000
+  );
+  if (atascados.length > 0) {
+    alertas.push({ tipo: 'critica', titulo: `${atascados.length} pedido(s) atascado(s) hace más de 1 hora`, detalle: 'El rider podría tener un problema. Revisar y contactar.' });
+  }
+
+  // 3. Tasa de cancelación alta
+  const tasaCancelacion = p.total > 0 ? p.cancelados / p.total : 0;
+  if (tasaCancelacion > 0.2) {
+    alertas.push({ tipo: 'advertencia', titulo: `Tasa de cancelación alta: ${Math.round(tasaCancelacion * 100)}%`, detalle: 'Más del 20% de los pedidos se cancelan. Revisar causas.' });
+  } else if (tasaCancelacion > 0.1) {
+    alertas.push({ tipo: 'advertencia', titulo: `Tasa de cancelación moderada: ${Math.round(tasaCancelacion * 100)}%`, detalle: 'Vigilar si sigue subiendo.' });
+  }
+
+  // 4. Sin riders disponibles
+  if (parseInt(metricas.riders.disponibles) === 0 && parseInt(p.pendientes) > 0) {
+    alertas.push({ tipo: 'critica', titulo: 'Sin riders disponibles con pedidos pendientes', detalle: 'Los pedidos no pueden asignarse. Se requiere activar riders urgente.' });
+  } else if (parseInt(metricas.riders.disponibles) === 0) {
+    alertas.push({ tipo: 'advertencia', titulo: 'No hay riders disponibles en este momento', detalle: 'Si llegan pedidos no habrá asignación automática.' });
+  }
+
+  // 5. Saldo pendiente alto sin liquidar
+  const saldoTotal = riders.reduce((s, r) => s + parseInt(r.saldo_pendiente || 0), 0);
+  if (saldoTotal > 500000) {
+    alertas.push({ tipo: 'advertencia', titulo: `Saldo pendiente alto: ${fmt(saldoTotal)}`, detalle: 'Hay un monto significativo sin liquidar a los riders. Generar liquidaciones.' });
+  }
+
+  // 6. Comercios sin tarjeta
+  const sinTarjeta = usuarios.filter(u => !u.tarjeta_ultimos4 && u.activo);
+  if (sinTarjeta.length > 0) {
+    alertas.push({ tipo: 'info', titulo: `${sinTarjeta.length} comercio(s) sin tarjeta registrada`, detalle: sinTarjeta.map(u => u.nombre_comercial || u.nombre).join(', ') + '. No podrán publicar pedidos.' });
+  }
+
+  // 7. Riders sin entregas
+  const sinEntregas = riders.filter(r => (r.total_entregas || 0) === 0);
+  if (sinEntregas.length > 0) {
+    alertas.push({ tipo: 'info', titulo: `${sinEntregas.length} rider(s) registrado(s) sin entregas aún`, detalle: 'Riders nuevos o inactivos que podrían necesitar activación.' });
+  }
+
+  // 8. Todo OK
+  const tasa = p.total > 0 ? p.entregados / p.total : 0;
+  if (tasa >= 0.8 && parseInt(metricas.riders.disponibles) > 0 && pendientesViejos.length === 0 && atascados.length === 0) {
+    alertas.push({ tipo: 'ok', titulo: 'Operación fluida', detalle: `Tasa de éxito ${Math.round(tasa * 100)}% · ${metricas.riders.disponibles} riders disponibles · Sin pedidos críticos detectados.` });
+  }
+
+  return alertas;
+}
+
+function renderAlertas(alertas) {
+  const iconos = { critica: '🔴', advertencia: '🟡', info: 'ℹ️', ok: '✅' };
+  $('alertas-container').innerHTML = alertas.map(a => `
+    <div class="alerta ${a.tipo}">
+      <div class="alerta-icon">${iconos[a.tipo]}</div>
+      <div class="alerta-texto">
+        <div class="alerta-titulo">${a.titulo}</div>
+        <div class="alerta-detalle">${a.detalle}</div>
+      </div>
+    </div>
+  `).join('') || '<div class="alerta ok"><div class="alerta-icon">✅</div><div class="alerta-texto"><div class="alerta-titulo">Sin alertas detectadas</div></div></div>';
+}
+
+function renderHealthScore(alertas) {
+  const criticas = alertas.filter(a => a.tipo === 'critica').length;
+  const advertencias = alertas.filter(a => a.tipo === 'advertencia').length;
+
+  let score = 100 - (criticas * 25) - (advertencias * 10);
+  score = Math.max(0, Math.min(100, score));
+
+  $('health-score').textContent = score;
+  const banner = $('health-banner');
+
+  if (score >= 80) {
+    banner.className = 'health-banner verde';
+    $('health-label').textContent = '✅ Sistema saludable';
+    $('health-desc').textContent = `Puntuación ${score}/100 · Todo funcionando correctamente`;
+  } else if (score >= 50) {
+    banner.className = 'health-banner amarillo';
+    $('health-label').textContent = '⚠️ Atención requerida';
+    $('health-desc').textContent = `Puntuación ${score}/100 · ${criticas} alerta(s) crítica(s) y ${advertencias} advertencia(s)`;
+  } else {
+    banner.className = 'health-banner rojo';
+    $('health-label').textContent = '🔴 Sistema en riesgo';
+    $('health-desc').textContent = `Puntuación ${score}/100 · Revisar alertas críticas de inmediato`;
+  }
+}
+
+function renderPedidosCriticos(pedidos) {
+  const ahora = Date.now();
+  const criticos = pedidos.filter(p => {
+    if (p.estado === 'pendiente' && (ahora - new Date(p.created_at)) > 10 * 60 * 1000) return true;
+    if (['asignado','retiro'].includes(p.estado) && (ahora - new Date(p.created_at)) > 60 * 60 * 1000) return true;
+    return false;
+  });
+
+  const card = $('card-criticos');
+  if (!criticos.length) { card.style.display = 'none'; return; }
+  card.style.display = 'block';
+
+  $('tbody-criticos').innerHTML = criticos.map(p => {
+    const tiempo = tiempoTranscurrido(p.created_at);
+    let problema = '';
+    if (p.estado === 'pendiente') problema = '⚠️ Sin rider asignado';
+    else problema = '🔴 Demorado en estado ' + p.estado;
+    return `
+      <tr>
+        <td style="font-family:monospace;font-size:11px;color:var(--text3)">${p.id.substring(0,8)}</td>
+        <td style="font-weight:600">${p.nombre_comercial}</td>
+        <td>${p.cliente_nombre}</td>
+        <td><span class="badge b-amber">${p.estado}</span></td>
+        <td style="font-weight:600;color:var(--red)">${tiempo}</td>
+        <td style="font-size:12px">${problema}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function renderComercios(usuarios) {
+  const negocios = usuarios.filter(u => u.rol === 'negocio' || u.nombre_comercial);
+  $('tbody-comercios').innerHTML = negocios.length ? negocios.map(u => {
+    const tieneTarjeta = !!u.tarjeta_ultimos4;
+    const activo = u.activo;
+    let diagnostico = '';
+    if (!activo) diagnostico = '<span class="badge b-red">Cuenta inactiva</span>';
+    else if (!tieneTarjeta) diagnostico = '<span class="badge b-amber">Sin tarjeta — no puede publicar</span>';
+    else diagnostico = '<span class="badge b-green">Operativo</span>';
+
+    return `
+      <tr>
+        <td style="font-weight:600">${u.nombre_comercial || u.nombre}</td>
+        <td>${tieneTarjeta ? `<span class="badge b-green">✓ **** ${u.tarjeta_ultimos4}</span>` : '<span class="badge b-red">Sin tarjeta</span>'}</td>
+        <td><span class="badge ${activo ? 'b-green' : 'b-red'}">${activo ? 'Activo' : 'Inactivo'}</span></td>
+        <td>${diagnostico}</td>
+      </tr>
+    `;
+  }).join('') : '<tr><td colspan="4" style="text-align:center;padding:24px;color:var(--text3)">Sin comercios registrados</td></tr>';
+}
+</script>
+</body>
+</html>
