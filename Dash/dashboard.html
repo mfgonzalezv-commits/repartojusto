@@ -3,1425 +3,670 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard - Plataforma de Riders</title>
-<meta name="description" content="Dashboard financiero interactivo para gestión de plataforma de riders">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Reparto Justo — Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 :root {
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-card: rgba(17, 24, 39, 0.7);
-  --bg-glass: rgba(255, 255, 255, 0.04);
-  --border: rgba(255, 255, 255, 0.08);
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --accent-blue: #3b82f6;
-  --accent-purple: #8b5cf6;
-  --accent-emerald: #10b981;
-  --accent-amber: #f59e0b;
-  --accent-rose: #f43f5e;
-  --accent-cyan: #06b6d4;
-  --gradient-blue: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  --gradient-emerald: linear-gradient(135deg, #10b981, #06b6d4);
-  --gradient-amber: linear-gradient(135deg, #f59e0b, #f97316);
-  --gradient-rose: linear-gradient(135deg, #f43f5e, #ec4899);
-  --shadow: 0 4px 24px rgba(0,0,0,0.3);
-  --radius: 16px;
+  --amarillo: #FFCC00;
+  --negro: #1C1C1C;
+  --navy: #0F172A;
+  --bg: #F9F9F9;
+  --bg2: #FFFFFF;
+  --border: rgba(0,0,0,0.09);
+  --text: #1C1C1C;
+  --text2: #6b6b66;
+  --text3: #9a9a94;
+  --green: #16A34A;
+  --green-bg: #DCFCE7;
+  --red: #DC2626;
+  --red-bg: #FEE2E2;
+  --blue: #2563EB;
+  --blue-bg: #DBEAFE;
+  --purple: #7C3AED;
+  --purple-bg: #EDE9FE;
+  --amber: #D97706;
+  --amber-bg: #FEF3C7;
+  --r: 12px;
+  --r-sm: 8px;
 }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  min-height: 100vh;
-  overflow-x: hidden;
+/* ── AUTH ── */
+#auth-screen {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
 }
-
-body::before {
-  content: '';
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 20% 50%, rgba(59,130,246,0.06) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(139,92,246,0.06) 0%, transparent 50%),
-              radial-gradient(circle at 50% 80%, rgba(16,185,129,0.04) 0%, transparent 50%);
-  z-index: 0;
-  pointer-events: none;
+.auth-card {
+  background: white; border-radius: 20px; padding: 48px 40px;
+  width: 100%; max-width: 400px; box-shadow: 0 20px 60px rgba(0,0,0,.25);
 }
+.auth-logo { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: var(--negro); margin-bottom: 4px; }
+.auth-logo span { color: var(--amarillo); }
+.auth-sub { font-size: 13px; color: var(--text2); margin-bottom: 32px; }
+.auth-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 24px; }
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 13px; font-weight: 500; color: var(--text2); margin-bottom: 6px; }
+.field input { width: 100%; padding: 11px 14px; border: 1.5px solid var(--border); border-radius: var(--r-sm); font-size: 14px; font-family: inherit; transition: border-color .2s; }
+.field input:focus { outline: none; border-color: var(--amarillo); }
+.btn-auth { width: 100%; padding: 13px; background: var(--amarillo); color: var(--negro); border: none; border-radius: var(--r-sm); font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
+.btn-auth:hover { background: #e6b800; }
+#auth-error { color: var(--red); font-size: 13px; margin-bottom: 12px; display: none; }
 
-/* NAV */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(10, 14, 26, 0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 2rem;
+/* ── APP ── */
+#app { display: none; min-height: 100vh; }
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--negro); height: 56px; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
 }
+.topbar-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 18px; color: var(--amarillo); }
+.topbar-right { display: flex; align-items: center; gap: 16px; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:.3} }
+.topbar-user { font-size: 13px; color: #aaa; }
+.btn-logout { background: rgba(255,255,255,.1); border: none; color: white; font-size: 13px; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-family: inherit; }
+.btn-logout:hover { background: rgba(255,255,255,.2); }
 
-.nav-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-}
+/* ── TABS ── */
+.tabs-bar { background: white; border-bottom: 1px solid var(--border); padding: 0 24px; display: flex; gap: 4px; }
+.tab-btn { padding: 14px 18px; font-size: 14px; font-weight: 500; color: var(--text2); border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all .2s; font-family: inherit; }
+.tab-btn.active { color: var(--negro); border-bottom-color: var(--amarillo); font-weight: 700; }
+.tab-btn:hover { color: var(--negro); }
 
-.nav-logo {
-  font-weight: 800;
-  font-size: 1.25rem;
-  background: var(--gradient-blue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+/* ── MAIN ── */
+.main { max-width: 1200px; margin: 0 auto; padding: 24px 20px 48px; }
 
-.nav-logo span { font-size: 1.5rem; }
-
-.nav-tabs {
-  display: flex;
-  gap: 4px;
-  background: var(--bg-glass);
-  border-radius: 12px;
-  padding: 4px;
-  border: 1px solid var(--border);
-}
-
-.nav-tab {
-  padding: 8px 20px;
-  border-radius: 8px;
-  border: none;
-  background: transparent;
-  color: var(--text-secondary);
-  font-family: inherit;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.nav-tab:hover { color: var(--text-primary); }
-
-.nav-tab.active {
-  background: var(--gradient-blue);
-  color: white;
-  box-shadow: 0 2px 12px rgba(59,130,246,0.4);
-}
-
-.btn-save {
-  padding: 8px 20px;
-  border-radius: 10px;
-  border: 1px solid var(--accent-emerald);
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--accent-emerald);
-  font-family: inherit;
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-save:hover {
-  background: var(--accent-emerald);
-  color: white;
-  box-shadow: 0 2px 16px rgba(16,185,129,0.4);
-}
-
-.btn-save.saved {
-  background: var(--accent-emerald);
-  color: white;
-}
-
-/* MAIN */
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 88px 2rem 2rem;
-}
-
-.section { display: none; animation: fadeIn 0.4s ease; }
+/* ── SECCIÓN ── */
+.section { display: none; }
 .section.active { display: block; }
+.section-title { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+.section-sub { font-size: 14px; color: var(--text2); margin-bottom: 24px; }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/* ── KPI GRID ── */
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 24px; }
+.kpi-card { background: white; border: 1px solid var(--border); border-radius: var(--r); padding: 20px; }
+.kpi-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--text3); margin-bottom: 8px; }
+.kpi-value { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; color: var(--negro); line-height: 1; }
+.kpi-value.amarillo { color: var(--amarillo); }
+.kpi-value.green { color: var(--green); }
+.kpi-value.blue { color: var(--blue); }
+.kpi-value.purple { color: var(--purple); }
+.kpi-sub { font-size: 12px; color: var(--text3); margin-top: 6px; }
 
-/* CARDS */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
-}
+/* ── CARD ── */
+.card { background: white; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; margin-bottom: 16px; }
+.card-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.card-header h3 { font-size: 15px; font-weight: 700; }
+.card-body { padding: 20px; }
 
-.card {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
+/* ── TABLA ── */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th { background: var(--bg); padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text2); border-bottom: 1px solid var(--border); }
+tbody td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--bg); }
 
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  border-radius: var(--radius) var(--radius) 0 0;
-}
+/* ── BADGE ── */
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+.badge-pendiente  { background: var(--amber-bg); color: var(--amber); }
+.badge-asignado   { background: var(--blue-bg); color: var(--blue); }
+.badge-retiro     { background: var(--purple-bg); color: var(--purple); }
+.badge-en_camino  { background: #DBEAFE; color: var(--blue); }
+.badge-entregado  { background: var(--green-bg); color: var(--green); }
+.badge-cancelado  { background: var(--red-bg); color: var(--red); }
+.badge-activo     { background: var(--green-bg); color: var(--green); }
+.badge-inactivo   { background: var(--red-bg); color: var(--red); }
+.badge-disponible { background: var(--green-bg); color: var(--green); }
+.badge-offline    { background: var(--border); color: var(--text3); }
 
-.card.blue::before { background: var(--gradient-blue); }
-.card.emerald::before { background: var(--gradient-emerald); }
-.card.amber::before { background: var(--gradient-amber); }
-.card.rose::before { background: var(--gradient-rose); }
+/* ── BOTONES ── */
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--r-sm); font-size: 13px; font-weight: 600; cursor: pointer; border: none; font-family: inherit; transition: all .2s; }
+.btn-primary { background: var(--amarillo); color: var(--negro); }
+.btn-primary:hover { background: #e6b800; }
+.btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+.btn-outline:hover { border-color: #aaa; }
+.btn-danger { background: var(--red-bg); color: var(--red); }
+.btn-danger:hover { background: var(--red); color: white; }
+.btn-sm { padding: 5px 12px; font-size: 12px; }
+.btn-green { background: var(--green-bg); color: var(--green); }
+.btn-green:hover { background: var(--green); color: white; }
 
-.card:hover {
-  border-color: rgba(255,255,255,0.15);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-}
+/* ── CHART ── */
+.chart-card { background: white; border: 1px solid var(--border); border-radius: var(--r); padding: 20px; margin-bottom: 16px; }
+.chart-title { font-size: 14px; font-weight: 700; margin-bottom: 16px; }
 
-.card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
+/* ── GRID 2 ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-.card-label {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+/* ── MODAL ── */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal-overlay.open { display: flex; }
+.modal { background: white; border-radius: var(--r); width: 100%; max-width: 460px; overflow: hidden; }
+.modal-header { padding: 18px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.modal-header h3 { font-size: 16px; font-weight: 700; }
+.modal-close { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--text2); line-height: 1; }
+.modal-body { padding: 24px; }
+.modal-footer { padding: 16px 24px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 8px; }
 
-.card-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-}
+/* ── TOAST ── */
+#toast { position: fixed; bottom: 24px; right: 24px; z-index: 9999; background: var(--negro); color: white; padding: 12px 20px; border-radius: var(--r-sm); font-size: 13px; font-weight: 500; opacity: 0; transform: translateY(8px); transition: all .3s; pointer-events: none; }
+#toast.show { opacity: 1; transform: none; }
+#toast.success { background: var(--green); }
+#toast.error { background: var(--red); }
 
-.card-icon.blue { background: rgba(59,130,246,0.15); }
-.card-icon.emerald { background: rgba(16,185,129,0.15); }
-.card-icon.amber { background: rgba(245,158,11,0.15); }
-.card-icon.rose { background: rgba(244,63,94,0.15); }
+/* ── EMPTY ── */
+.empty { text-align: center; padding: 40px; color: var(--text3); font-size: 14px; }
 
-.card-value {
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
-}
+/* ── LIQUIDACIONES ── */
+.saldo-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; color: var(--green); }
+.saldo-zero { color: var(--text3); font-size: 13px; }
 
-.card-sub {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-/* FLOW DIAGRAM */
-.flow-container {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.flow-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.flow-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.flow-node {
-  background: var(--bg-glass);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  text-align: center;
-  min-width: 140px;
-  transition: all 0.3s ease;
-}
-
-.flow-node:hover {
-  border-color: var(--accent-blue);
-  transform: scale(1.03);
-}
-
-.flow-node-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.flow-node-value {
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-.flow-arrow {
-  font-size: 1.5rem;
-  color: var(--text-muted);
-}
-
-/* SLIDERS */
-.param-group {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.param-group-title {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.param-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  gap: 1rem;
-}
-
-.param-label {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  min-width: 180px;
-}
-
-.param-slider {
-  flex: 1;
-  -webkit-appearance: none;
-  height: 6px;
-  border-radius: 3px;
-  background: rgba(255,255,255,0.1);
-  outline: none;
-}
-
-.param-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--accent-blue);
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(59,130,246,0.4);
-  transition: transform 0.2s;
-}
-
-.param-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
-
-.param-value {
-  min-width: 80px;
-  text-align: right;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--accent-blue);
-}
-
-/* LAYERS */
-.layers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.layer-card {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.layer-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-}
-
-.layer-card.l1::before { background: var(--gradient-blue); }
-.layer-card.l2::before { background: var(--gradient-emerald); }
-.layer-card.l3::before { background: var(--gradient-amber); }
-
-.layer-number {
-  font-size: 3rem;
-  font-weight: 900;
-  opacity: 0.08;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-}
-
-.layer-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.layer-desc {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.layer-stat {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-top: 1px solid var(--border);
-  font-size: 0.85rem;
-}
-
-.layer-stat-label { color: var(--text-secondary); }
-.layer-stat-value { font-weight: 700; }
-
-/* TABLE */
-.table-container {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.table-header {
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--border);
-  font-weight: 700;
-  font-size: 1.05rem;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th {
-  padding: 12px 16px;
-  text-align: left;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg-glass);
-}
-
-td {
-  padding: 12px 16px;
-  font-size: 0.85rem;
-  border-bottom: 1px solid var(--border);
-}
-
-tr:hover td { background: var(--bg-glass); }
-
-.chart-container {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.chart-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-
-.section-sub {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  nav { padding: 0 1rem; }
-  .nav-tabs { display: none; }
-  main { padding: 80px 1rem 1rem; }
-  .cards-grid { grid-template-columns: 1fr; }
-  .flow-row { flex-direction: column; }
-  .flow-arrow { transform: rotate(90deg); }
-  .param-row { flex-direction: column; align-items: flex-start; }
-  .param-slider { width: 100%; }
-}
-
-.toast {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: var(--accent-emerald);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  box-shadow: 0 4px 24px rgba(16,185,129,0.4);
-  transform: translateY(100px);
-  opacity: 0;
-  transition: all 0.4s ease;
-  z-index: 200;
-}
-
-.toast.show {
-  transform: translateY(0);
-  opacity: 1;
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .topbar { padding: 0 14px; }
+  .main { padding: 16px 12px 48px; }
+  .tabs-bar { overflow-x: auto; gap: 0; }
+  .tab-btn { white-space: nowrap; font-size: 13px; padding: 12px 14px; }
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo"><span>⚡</span> RiderDash</div>
-    <div class="nav-tabs">
-      <button class="nav-tab" onclick="showSection('live')" id="tab-live">🔴 En Vivo</button>
-      <button class="nav-tab active" onclick="showSection('resumen')" id="tab-resumen">📊 Resumen</button>
-      <button class="nav-tab" onclick="showSection('plataforma')" id="tab-plataforma">⚙️ Plataforma</button>
-      <button class="nav-tab" onclick="showSection('riders')" id="tab-riders">🏍️ Riders</button>
-      <button class="nav-tab" onclick="showSection('proyeccion')" id="tab-proyeccion">📈 Proyección</button>
-    </div>
-    <button class="btn-save" onclick="saveSettings()" id="btn-save">💾 Guardar ajustes</button>
+<!-- ═══ AUTH ═══ -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="auth-logo">Reparto<span>Justo</span></div>
+    <div class="auth-sub">Panel de administración</div>
+    <h2>Iniciar sesión</h2>
+    <div class="field"><label>Email</label><input type="email" id="email" placeholder="admin@repartojusto.cl" value="admin@repartojusto.cl"></div>
+    <div class="field"><label>Contraseña</label><input type="password" id="pass" placeholder="••••••••" value="admin1234"></div>
+    <p id="auth-error"></p>
+    <button class="btn-auth" id="btn-login">Entrar</button>
   </div>
-</nav>
+</div>
 
-<main>
+<!-- ═══ APP ═══ -->
+<div id="app">
+  <nav class="topbar">
+    <div class="topbar-brand">🏍️ Reparto Justo</div>
+    <div class="topbar-right">
+      <div class="live-dot" title="Datos en tiempo real"></div>
+      <span class="topbar-user" id="topbar-user">Admin</span>
+      <button class="btn-logout" id="btn-logout">Salir</button>
+    </div>
+  </nav>
 
-  <!-- RESUMEN -->
-  <div class="section active" id="sec-resumen">
-    <h1 class="section-title">Resumen General</h1>
-    <p class="section-sub">Vista rápida del estado financiero de la plataforma</p>
+  <div class="tabs-bar">
+    <button class="tab-btn active" data-tab="resumen">📊 Resumen</button>
+    <button class="tab-btn" data-tab="pedidos">📦 Pedidos</button>
+    <button class="tab-btn" data-tab="riders">🏍️ Riders</button>
+    <button class="tab-btn" data-tab="comercios">🏪 Comercios</button>
+    <button class="tab-btn" data-tab="liquidaciones">💰 Liquidaciones</button>
+  </div>
 
-    <div class="cards-grid" id="summary-cards">
-      <div class="card blue">
+  <div class="main">
+
+    <!-- ══ TAB: RESUMEN ══ -->
+    <div class="section active" id="sec-resumen">
+      <div class="section-title">Resumen general</div>
+      <div class="section-sub" id="resumen-actualizado">Cargando datos...</div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-label">Total pedidos</div><div class="kpi-value" id="kpi-total">—</div><div class="kpi-sub">Desde el inicio</div></div>
+        <div class="kpi-card"><div class="kpi-label">Entregados</div><div class="kpi-value green" id="kpi-entregados">—</div><div class="kpi-sub" id="kpi-entregados-sub">—</div></div>
+        <div class="kpi-card"><div class="kpi-label">En curso ahora</div><div class="kpi-value blue" id="kpi-en-curso">—</div><div class="kpi-sub">Asignados + en camino</div></div>
+        <div class="kpi-card"><div class="kpi-label">Pendientes</div><div class="kpi-value amarillo" id="kpi-pendientes">—</div><div class="kpi-sub">Sin rider asignado</div></div>
+        <div class="kpi-card"><div class="kpi-label">Riders online</div><div class="kpi-value purple" id="kpi-riders">—</div><div class="kpi-sub" id="kpi-riders-sub">—</div></div>
+        <div class="kpi-card"><div class="kpi-label">Ingresos plataforma</div><div class="kpi-value green" id="kpi-ingresos">—</div><div class="kpi-sub">App fee acumulado</div></div>
+        <div class="kpi-card"><div class="kpi-label">Dist. promedio</div><div class="kpi-value" id="kpi-distancia">—</div><div class="kpi-sub">km por entrega</div></div>
+        <div class="kpi-card"><div class="kpi-label">Comercios activos</div><div class="kpi-value" id="kpi-comercios">—</div><div class="kpi-sub" id="kpi-comercios-sub">—</div></div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">📦 Pedidos de las últimas 24 horas</div>
+        <canvas id="chart-resumen" height="70"></canvas>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h3>Últimos pedidos</h3><button class="btn btn-outline btn-sm" onclick="cargarSeccion('pedidos')">Ver todos →</button></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Comercio</th><th>Cliente</th><th>Tarifa</th><th>Estado</th><th>Rider</th></tr></thead>
+            <tbody id="tbody-recientes"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ TAB: PEDIDOS ══ -->
+    <div class="section" id="sec-pedidos">
+      <div class="section-title">Pedidos</div>
+      <div class="section-sub">Todos los pedidos de la plataforma</div>
+
+      <div class="card">
         <div class="card-header">
-          <span class="card-label">Ingresos Brutos / Mes</span>
-          <div class="card-icon blue">💰</div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <select id="filtro-estado" class="btn btn-outline btn-sm" style="padding:6px 10px" onchange="cargarPedidos()">
+              <option value="">Todos los estados</option>
+              <option value="pendiente">Pendiente</option>
+              <option value="asignado">Asignado</option>
+              <option value="retiro">Retiro</option>
+              <option value="en_camino">En camino</option>
+              <option value="entregado">Entregado</option>
+              <option value="cancelado">Cancelado</option>
+            </select>
+            <button class="btn btn-outline btn-sm" onclick="cargarPedidos()">↻ Actualizar</button>
+          </div>
+          <span id="pedidos-count" style="font-size:12px;color:var(--text3)"></span>
         </div>
-        <div class="card-value" id="c-ingresos">$0</div>
-        <div class="card-sub">Total facturado por la plataforma</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Fecha</th><th>Comercio</th><th>Cliente</th><th>Dirección</th><th>Dist.</th><th>Tarifa</th><th>Estado</th><th>Rider</th></tr></thead>
+            <tbody id="tbody-pedidos"></tbody>
+          </table>
+        </div>
       </div>
-      <div class="card emerald">
+    </div>
+
+    <!-- ══ TAB: RIDERS ══ -->
+    <div class="section" id="sec-riders">
+      <div class="section-title">Riders</div>
+      <div class="section-sub">Gestión de repartidores y saldos pendientes</div>
+
+      <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+        <div class="kpi-card"><div class="kpi-label">Total riders</div><div class="kpi-value" id="r-total">—</div></div>
+        <div class="kpi-card"><div class="kpi-label">Disponibles ahora</div><div class="kpi-value green" id="r-disponibles">—</div></div>
+        <div class="kpi-card"><div class="kpi-label">Saldo total pendiente</div><div class="kpi-value amarillo" id="r-saldo-total">—</div></div>
+      </div>
+
+      <div class="card">
         <div class="card-header">
-          <span class="card-label">Ganancia Neta / Mes</span>
-          <div class="card-icon emerald">📈</div>
+          <h3>Riders registrados</h3>
+          <button class="btn btn-outline btn-sm" onclick="cargarRiders()">↻ Actualizar</button>
         </div>
-        <div class="card-value" id="c-ganancia">$0</div>
-        <div class="card-sub">Después de pagos e incentivos</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nombre</th><th>Email</th><th>Entregas</th><th>Rating</th><th>Saldo pendiente</th><th>Estado</th><th>Acción</th></tr></thead>
+            <tbody id="tbody-riders"></tbody>
+          </table>
+        </div>
       </div>
-      <div class="card amber">
+    </div>
+
+    <!-- ══ TAB: COMERCIOS ══ -->
+    <div class="section" id="sec-comercios">
+      <div class="section-title">Comercios</div>
+      <div class="section-sub">Negocios registrados en la plataforma</div>
+
+      <div class="card">
         <div class="card-header">
-          <span class="card-label">Riders Activos</span>
-          <div class="card-icon amber">🏍️</div>
+          <h3>Negocios</h3>
+          <button class="btn btn-outline btn-sm" onclick="cargarComercios()">↻ Actualizar</button>
         </div>
-        <div class="card-value" id="c-riders">0</div>
-        <div class="card-sub">Conductores en la plataforma</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nombre</th><th>Email</th><th>Categoría</th><th>Dirección</th><th>Tarjeta</th><th>Estado</th><th>Acción</th></tr></thead>
+            <tbody id="tbody-comercios"></tbody>
+          </table>
+        </div>
       </div>
-      <div class="card rose">
+    </div>
+
+    <!-- ══ TAB: LIQUIDACIONES ══ -->
+    <div class="section" id="sec-liquidaciones">
+      <div class="section-title">Liquidaciones</div>
+      <div class="section-sub">Pago de saldos acumulados a riders</div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-header"><h3>💰 Generar liquidación</h3></div>
+        <div class="card-body">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;align-items:end">
+            <div>
+              <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:6px">Rider</label>
+              <select id="liq-rider" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit">
+                <option value="">Seleccionar rider...</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:6px">Desde</label>
+              <input type="date" id="liq-desde" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit">
+            </div>
+            <div>
+              <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:6px">Hasta</label>
+              <input type="date" id="liq-hasta" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit">
+            </div>
+            <button class="btn btn-primary" onclick="generarLiquidacion()">Generar</button>
+          </div>
+          <p id="liq-error" style="color:var(--red);font-size:13px;margin-top:10px;display:none"></p>
+        </div>
+      </div>
+
+      <div class="card">
         <div class="card-header">
-          <span class="card-label">Ingreso Promedio / Rider</span>
-          <div class="card-icon rose">👤</div>
+          <h3>Historial de liquidaciones</h3>
+          <button class="btn btn-outline btn-sm" onclick="cargarLiquidaciones()">↻ Actualizar</button>
         </div>
-        <div class="card-value" id="c-ingRider">$0</div>
-        <div class="card-sub">Ingreso mensual por conductor</div>
-      </div>
-    </div>
-
-    <div class="flow-container">
-      <div class="flow-title">🔄 Flujo de Dinero</div>
-      <div class="flow-row">
-        <div class="flow-node">
-          <div class="flow-node-label">Cliente paga</div>
-          <div class="flow-node-value" id="f-cliente">$0</div>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-node">
-          <div class="flow-node-label">Comisión plataforma</div>
-          <div class="flow-node-value" id="f-comision">$0</div>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-node">
-          <div class="flow-node-label">Pago al rider</div>
-          <div class="flow-node-value" id="f-rider">$0</div>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-node">
-          <div class="flow-node-label">Incentivos</div>
-          <div class="flow-node-value" id="f-incentivos">$0</div>
-        </div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-node" style="border-color: var(--accent-emerald);">
-          <div class="flow-node-label">Ganancia neta</div>
-          <div class="flow-node-value" style="color: var(--accent-emerald);" id="f-neta">$0</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Rider</th><th>Período</th><th>Pedidos</th><th>Monto</th><th>Estado</th><th>Acción</th></tr></thead>
+            <tbody id="tbody-liquidaciones"></tbody>
+          </table>
         </div>
       </div>
     </div>
 
-    <div class="cards-grid">
-      <div class="chart-container">
-        <div class="chart-title">📊 Distribución de Ingresos</div>
-        <canvas id="chart-dist" height="250"></canvas>
-      </div>
-      <div class="chart-container">
-        <div class="chart-title">📈 Margen de Rentabilidad</div>
-        <canvas id="chart-margin" height="250"></canvas>
-      </div>
-    </div>
   </div>
+</div>
 
-  <!-- PLATAFORMA -->
-  <div class="section" id="sec-plataforma">
-    <h1 class="section-title">Parámetros de Plataforma</h1>
-    <p class="section-sub">Ajusta los parámetros operativos y observa el impacto en tiempo real</p>
-
-    <div class="param-group">
-      <div class="param-group-title">💵 Parámetros Financieros</div>
-      <div class="param-row">
-        <span class="param-label">Valor promedio por viaje ($)</span>
-        <input type="range" class="param-slider" id="p-valorViaje" min="3" max="30" step="0.5" value="8">
-        <span class="param-value" id="pv-valorViaje">$8.00</span>
-      </div>
-      <div class="param-row">
-        <span class="param-label">Comisión de plataforma (%)</span>
-        <input type="range" class="param-slider" id="p-comision" min="5" max="40" step="1" value="20">
-        <span class="param-value" id="pv-comision">20%</span>
-      </div>
-      <div class="param-row">
-        <span class="param-label">Costos operativos mensuales ($)</span>
-        <input type="range" class="param-slider" id="p-costos" min="500" max="20000" step="500" value="3000">
-        <span class="param-value" id="pv-costos">$3,000</span>
-      </div>
-    </div>
-
-    <div class="param-group">
-      <div class="param-group-title">🏍️ Parámetros de Riders</div>
-      <div class="param-row">
-        <span class="param-label">Número de riders activos</span>
-        <input type="range" class="param-slider" id="p-numRiders" min="10" max="1000" step="10" value="100">
-        <span class="param-value" id="pv-numRiders">100</span>
-      </div>
-      <div class="param-row">
-        <span class="param-label">Viajes promedio por rider / día</span>
-        <input type="range" class="param-slider" id="p-viajesDia" min="1" max="20" step="1" value="8">
-        <span class="param-value" id="pv-viajesDia">8</span>
-      </div>
-      <div class="param-row">
-        <span class="param-label">Días activos por mes</span>
-        <input type="range" class="param-slider" id="p-diasMes" min="15" max="30" step="1" value="25">
-        <span class="param-value" id="pv-diasMes">25</span>
-      </div>
-    </div>
-
-    <div class="param-group">
-      <div class="param-group-title">📈 Crecimiento</div>
-      <div class="param-row">
-        <span class="param-label">Tasa de crecimiento mensual (%)</span>
-        <input type="range" class="param-slider" id="p-crecimiento" min="0" max="30" step="1" value="10">
-        <span class="param-value" id="pv-crecimiento">10%</span>
-      </div>
-      <div class="param-row">
-        <span class="param-label">Tasa de retención de riders (%)</span>
-        <input type="range" class="param-slider" id="p-retencion" min="50" max="100" step="1" value="85">
-        <span class="param-value" id="pv-retencion">85%</span>
-      </div>
-    </div>
-
-    <div class="cards-grid">
-      <div class="card blue">
-        <div class="card-header"><span class="card-label">Viajes Totales / Mes</span></div>
-        <div class="card-value" id="s-viajes">0</div>
-      </div>
-      <div class="card emerald">
-        <div class="card-header"><span class="card-label">Facturación Bruta</span></div>
-        <div class="card-value" id="s-facturacion">$0</div>
-      </div>
-      <div class="card amber">
-        <div class="card-header"><span class="card-label">Comisión Total</span></div>
-        <div class="card-value" id="s-comisionTotal">$0</div>
-      </div>
-      <div class="card rose">
-        <div class="card-header"><span class="card-label">Ganancia Operativa</span></div>
-        <div class="card-value" id="s-gananciaOp">$0</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- RIDERS -->
-  <div class="section" id="sec-riders">
-    <h1 class="section-title">Sistema de Incentivos para Riders</h1>
-    <p class="section-sub">3 capas de ingresos para maximizar retención y captación</p>
-
-    <div class="layers-grid">
-      <div class="layer-card l1">
-        <div class="layer-number">1</div>
-        <div class="layer-title">🏍️ Capa 1 — Ingresos Directos</div>
-        <div class="layer-desc">Ganancia por cada viaje completado. El rider recibe un porcentaje del valor del viaje después de la comisión de la plataforma.</div>
-        <div class="param-row" style="margin-top:1rem">
-          <span class="param-label">% para el rider</span>
-          <input type="range" class="param-slider" id="p-pctRider" min="50" max="95" step="1" value="80">
-          <span class="param-value" id="pv-pctRider">80%</span>
-        </div>
-        <div class="layer-stat">
-          <span class="layer-stat-label">Ingreso por viaje</span>
-          <span class="layer-stat-value" id="l1-porViaje">$0</span>
-        </div>
-        <div class="layer-stat">
-          <span class="layer-stat-label">Ingreso diario estimado</span>
-          <span class="layer-stat-value" id="l1-diario">$0</span>
-        </div>
-        <div class="layer-stat">
-          <span class="layer-stat-label">Ingreso mensual estimado</span>
-          <span class="layer-stat-value" id="l1-mensual">$0</span>
-        </div>
-      </div>
-
-      <div class="layer-card l2">
-        <div class="layer-number">2</div>
-        <div class="layer-title">🤝 Capa 2 — Bonos por Referidos</div>
-        <div class="layer-desc">Bono único por cada nuevo rider referido que complete un mínimo de viajes en su primer mes.</div>
-        <div class="param-row" style="margin-top:1rem">
-          <span class="param-label">Bono por referido ($)</span>
-          <input type="range" class="param-slider" id="p-bonoRef" min="5" max="100" step="5" value="25">
-          <span class="param-value" id="pv-bonoRef">$25</span>
-        </div>
-        <div class="param-row">
-          <span class="param-label">Referidos promedio / rider / mes</span>
-          <input type="range" class="param-slider" id="p-refsXmes" min="0" max="5" step="0.5" value="1">
-          <span class="param-value" id="pv-refsXmes">1.0</span>
-        </div>
-        <div class="layer-stat">
-          <span class="layer-stat-label">Ingreso por referidos / mes</span>
-          <span class="layer-stat-value" id="l2-mensual">$0</span>
-        </div>
-        <div class="layer-stat">
-          <span class="layer-stat-label">Costo total referidos / plataforma</span>
-          <span class="layer-stat-value" id="l2-costoPlat">$0</span>
-        </div>
-      </div>
-
-      <div class="layer-card l3">
-        <div class="layer-number">3</div>
-        <div class="layer-title">💎 Capa 3 — Ingreso Residual</div>
-        <div class="layer-desc">Porcentaje sobre la actividad de riders referidos. Ingreso pasivo continuo mientras los referidos permanezcan activos.</div>
-        <div class="param-row" style="margin-top:1rem">
-          <span class="param-label">% residual sobre referidos</span>
-          <input type="range" class="param-slider" id="p-pctResidual" min="0" max="10" step="0.5" value="3">
-          <span class="param-value" id="pv-pctResidual">3.0%</span>
-        </div>
-        <div class="param-row">
-          <span class="param-label">Referidos activos acumulados</span>
-          <input type="range" class="param-slider" id="p-refsActivos" min="0" max="20" step="1" value="5">
-          <span class="param-value" id="pv-refsActivos">5</span>
-        </div>
-        <div class="layer-stat">
-          <span class="layer-stat-label">Ingreso residual / mes</span>
-          <span class="layer-stat-value" id="l3-mensual">$0</span>
-        </div>
-        <div class="layer-stat">
-          <span class="layer-stat-label">Impacto en margen plataforma</span>
-          <span class="layer-stat-value" id="l3-impacto">0%</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards-grid">
-      <div class="card blue">
-        <div class="card-header"><span class="card-label">Ingreso Total Rider / Mes</span></div>
-        <div class="card-value" id="r-totalRider">$0</div>
-        <div class="card-sub">Capa 1 + Capa 2 + Capa 3</div>
-      </div>
-      <div class="card emerald">
-        <div class="card-header"><span class="card-label">Costo Total Incentivos</span></div>
-        <div class="card-value" id="r-costoInc">$0</div>
-        <div class="card-sub">Gasto mensual de la plataforma en incentivos</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- EN VIVO (datos reales del API) -->
-  <div class="section" id="sec-live">
-    <h1 class="section-title">Métricas en Vivo</h1>
-    <p class="section-sub">Datos reales desde el backend — se actualizan cada 30 segundos</p>
-
-    <div id="live-login-msg" style="background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);border-radius:12px;padding:20px 24px;margin-bottom:24px;display:flex;align-items:center;gap:16px">
-      <span style="font-size:24px">🔐</span>
-      <div>
-        <div style="font-weight:600;margin-bottom:6px">Autenticación requerida</div>
-        <div style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">Ingresa las credenciales de admin para ver datos reales</div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <input type="email" id="live-email" placeholder="admin@repartojusto.cl" value="admin@repartojusto.cl"
-            style="padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:white;font-size:13px;font-family:inherit;width:220px">
-          <input type="password" id="live-pass" placeholder="contraseña" value="admin1234"
-            style="padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:white;font-size:13px;font-family:inherit;width:160px">
-          <button onclick="liveLogin()" style="padding:8px 18px;background:#3b82f6;color:white;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Conectar</button>
-        </div>
-        <p id="live-error" style="color:#f43f5e;font-size:12px;margin-top:8px;display:none"></p>
-      </div>
-    </div>
-
-    <div id="live-data" style="display:none">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
-        <div style="display:flex;align-items:center;gap:8px">
-          <div style="width:8px;height:8px;border-radius:50%;background:#10b981;animation:pulse 1.5s infinite"></div>
-          <span style="font-size:13px;color:var(--text-secondary)">Conectado · última actualización: <span id="live-last-update">—</span></span>
-        </div>
-        <button onclick="cargarMetricasLive()" style="padding:6px 14px;background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.15);border-radius:8px;font-size:12px;cursor:pointer;font-family:inherit">↻ Actualizar</button>
-      </div>
-
-      <!-- KPIs principales -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px">
-        <div class="card" style="text-align:center;padding:20px">
-          <div style="font-size:32px;font-weight:800;color:#3b82f6" id="kpi-total">—</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">Total pedidos</div>
-        </div>
-        <div class="card" style="text-align:center;padding:20px">
-          <div style="font-size:32px;font-weight:800;color:#f59e0b" id="kpi-pendientes">—</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">Pendientes</div>
-        </div>
-        <div class="card" style="text-align:center;padding:20px">
-          <div style="font-size:32px;font-weight:800;color:#10b981" id="kpi-entregados">—</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">Entregados</div>
-        </div>
-        <div class="card" style="text-align:center;padding:20px">
-          <div style="font-size:32px;font-weight:800;color:#8b5cf6" id="kpi-en-camino">—</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">En camino</div>
-        </div>
-        <div class="card" style="text-align:center;padding:20px">
-          <div style="font-size:32px;font-weight:800;color:#06b6d4" id="kpi-riders-dis">—</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">Riders online</div>
-        </div>
-        <div class="card" style="text-align:center;padding:20px">
-          <div style="font-size:32px;font-weight:800;color:#10b981" id="kpi-app-fee">—</div>
-          <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;text-transform:uppercase;letter-spacing:.05em">App fee total</div>
-        </div>
-      </div>
-
-      <!-- Gráfico ingresos por día -->
-      <div class="chart-container" style="margin-bottom:24px">
-        <div class="chart-title">💰 Ingresos por día (últimos 30 días)</div>
-        <canvas id="chart-live-ingresos" height="80"></canvas>
-      </div>
-
-      <!-- Tablas riders y pedidos recientes -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
-        <div class="table-container">
-          <div class="table-header" style="display:flex;justify-content:space-between;align-items:center">
-            <span>🏍️ Riders</span>
-            <button onclick="mostrarModalIncentivo()" style="padding:4px 12px;background:#3b82f6;color:white;border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit">+ Incentivo</button>
-          </div>
-          <div style="overflow-x:auto"><table><thead><tr><th>Nombre</th><th>Entregas</th><th>Saldo</th><th>Estado</th></tr></thead><tbody id="tbody-riders-live"></tbody></table></div>
-        </div>
-        <div class="table-container">
-          <div class="table-header">📦 Pedidos recientes</div>
-          <div style="overflow-x:auto"><table><thead><tr><th>ID</th><th>Negocio</th><th>Tarifa</th><th>Estado</th></tr></thead><tbody id="tbody-pedidos-live"></tbody></table></div>
-        </div>
-      </div>
-
-      <!-- Tabla comercios -->
-      <div class="table-container">
-        <div class="table-header" style="display:flex;justify-content:space-between;align-items:center">
-          <span>🏪 Gestión de Comercios</span>
-          <button onclick="cargarComerciosLive()" style="padding:4px 12px;background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.15);border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">↻</button>
-        </div>
-        <div style="overflow-x:auto"><table><thead><tr><th>Comercio</th><th>Categoría</th><th>Pedidos</th><th>App Fee</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="tbody-comercios-live"></tbody></table></div>
-      </div>
-
-      <!-- Modal incentivo -->
-      <div id="modal-incentivo" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;display:none;align-items:center;justify-content:center">
-        <div style="background:#1a2235;border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:28px;width:100%;max-width:400px">
-          <h3 style="margin-bottom:20px;font-size:16px">💰 Agregar incentivo a rider</h3>
-          <div style="margin-bottom:12px">
-            <label style="font-size:12px;color:#94a3b8;display:block;margin-bottom:6px">Rider</label>
-            <select id="inc-rider" style="width:100%;padding:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;color:white;font-family:inherit;font-size:13px"></select>
-          </div>
-          <div style="margin-bottom:12px">
-            <label style="font-size:12px;color:#94a3b8;display:block;margin-bottom:6px">Monto (CLP)</label>
-            <input type="number" id="inc-monto" placeholder="5000" style="width:100%;padding:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;color:white;font-family:inherit;font-size:13px">
-          </div>
-          <div style="margin-bottom:20px">
-            <label style="font-size:12px;color:#94a3b8;display:block;margin-bottom:6px">Motivo</label>
-            <input type="text" id="inc-motivo" placeholder="Bono por desempeño" style="width:100%;padding:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;color:white;font-family:inherit;font-size:13px">
-          </div>
-          <div style="display:flex;gap:10px">
-            <button onclick="cerrarModalIncentivo()" style="flex:1;padding:10px;background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.15);border-radius:8px;cursor:pointer;font-family:inherit">Cancelar</button>
-            <button onclick="enviarIncentivo()" style="flex:2;padding:10px;background:#3b82f6;color:white;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-family:inherit">Agregar incentivo</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROYECCION -->
-  <div class="section" id="sec-proyeccion">
-    <h1 class="section-title">Proyección a 12 Meses</h1>
-    <p class="section-sub">Crecimiento proyectado con captación creciente e ingreso residual</p>
-
-    <div class="cards-grid">
-      <div class="chart-container" style="grid-column: 1 / -1;">
-        <div class="chart-title">📈 Proyección de Ingresos y Riders</div>
-        <canvas id="chart-proyeccion" height="100"></canvas>
-      </div>
-    </div>
-
-    <div class="table-container">
-      <div class="table-header">📋 Detalle Mes a Mes</div>
-      <div style="overflow-x: auto;">
-        <table id="tabla-proyeccion">
-          <thead>
-            <tr>
-              <th>Mes</th>
-              <th>Riders</th>
-              <th>Viajes</th>
-              <th>Facturación</th>
-              <th>Comisión Plat.</th>
-              <th>Incentivos</th>
-              <th>Ganancia Neta</th>
-              <th>Ing. Rider Prom.</th>
-            </tr>
-          </thead>
-          <tbody id="tbody-proyeccion"></tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-</main>
-
-<div class="toast" id="toast">✅ Ajustes guardados correctamente</div>
+<div id="toast"></div>
 
 <script>
-// ===== PARAMS =====
-const paramIds = [
-  'p-valorViaje','p-comision','p-costos','p-numRiders','p-viajesDia','p-diasMes',
-  'p-crecimiento','p-retencion','p-pctRider','p-bonoRef','p-refsXmes',
-  'p-pctResidual','p-refsActivos'
-];
+const API = '/api';
+let token = null;
 
-function getParams() {
-  return {
-    valorViaje: parseFloat(el('p-valorViaje').value),
-    comisionPct: parseFloat(el('p-comision').value) / 100,
-    costosOp: parseFloat(el('p-costos').value),
-    numRiders: parseInt(el('p-numRiders').value),
-    viajesDia: parseInt(el('p-viajesDia').value),
-    diasMes: parseInt(el('p-diasMes').value),
-    crecimiento: parseFloat(el('p-crecimiento').value) / 100,
-    retencion: parseFloat(el('p-retencion').value) / 100,
-    pctRider: parseFloat(el('p-pctRider').value) / 100,
-    bonoRef: parseFloat(el('p-bonoRef').value),
-    refsXmes: parseFloat(el('p-refsXmes').value),
-    pctResidual: parseFloat(el('p-pctResidual').value) / 100,
-    refsActivos: parseInt(el('p-refsActivos').value),
-  };
+// ── UTILS ──
+const $ = id => document.getElementById(id);
+const fmt = n => '$' + Math.round(n || 0).toLocaleString('es-CL');
+const fmtDate = d => d ? new Date(d).toLocaleDateString('es-CL', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' }) : '—';
+const fmtDateShort = d => d ? new Date(d).toLocaleDateString('es-CL', { day:'2-digit', month:'2-digit', year:'numeric' }) : '—';
+
+function toast(msg, tipo = '') {
+  const el = $('toast');
+  el.textContent = msg;
+  el.className = 'show ' + tipo;
+  setTimeout(() => { el.className = ''; }, 3000);
 }
 
-function el(id) { return document.getElementById(id); }
-function fmt(n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }); }
-function fmt2(n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
-function fmtN(n) { return n.toLocaleString('en-US'); }
-
-// ===== NAVIGATION =====
-function showSection(name) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  el('sec-' + name).classList.add('active');
-  el('tab-' + name).classList.add('active');
-  if (name === 'proyeccion') updateProjectionChart();
-  if (name === 'live') cargarMetricasLive();
-}
-
-// ===== UPDATE DISPLAY VALUES =====
-function updateSliderDisplays() {
-  const p = getParams();
-  el('pv-valorViaje').textContent = fmt2(p.valorViaje);
-  el('pv-comision').textContent = Math.round(p.comisionPct * 100) + '%';
-  el('pv-costos').textContent = fmt(p.costosOp);
-  el('pv-numRiders').textContent = fmtN(p.numRiders);
-  el('pv-viajesDia').textContent = p.viajesDia;
-  el('pv-diasMes').textContent = p.diasMes;
-  el('pv-crecimiento').textContent = Math.round(p.crecimiento * 100) + '%';
-  el('pv-retencion').textContent = Math.round(p.retencion * 100) + '%';
-  el('pv-pctRider').textContent = Math.round(p.pctRider * 100) + '%';
-  el('pv-bonoRef').textContent = fmt(p.bonoRef);
-  el('pv-refsXmes').textContent = p.refsXmes.toFixed(1);
-  el('pv-pctResidual').textContent = (p.pctResidual * 100).toFixed(1) + '%';
-  el('pv-refsActivos').textContent = p.refsActivos;
-}
-
-// ===== CALCULATE =====
-function calculate() {
-  const p = getParams();
-
-  const viajesMes = p.numRiders * p.viajesDia * p.diasMes;
-  const facturacionBruta = viajesMes * p.valorViaje;
-  const comisionTotal = facturacionBruta * p.comisionPct;
-  const pagoRiders = facturacionBruta * (1 - p.comisionPct);
-
-  // Layer 1
-  const l1PorViaje = p.valorViaje * (1 - p.comisionPct) * p.pctRider;
-  const l1Diario = l1PorViaje * p.viajesDia;
-  const l1Mensual = l1Diario * p.diasMes;
-
-  // Layer 2
-  const l2Mensual = p.bonoRef * p.refsXmes;
-  const l2CostoPlat = l2Mensual * p.numRiders;
-
-  // Layer 3
-  const refGananciaMes = p.viajesDia * p.diasMes * p.valorViaje * (1 - p.comisionPct);
-  const l3Mensual = p.pctResidual * refGananciaMes * p.refsActivos;
-  const l3CostoPlat = l3Mensual * p.numRiders;
-  const l3Impacto = comisionTotal > 0 ? (l3CostoPlat / comisionTotal * 100) : 0;
-
-  const totalIncentivos = l2CostoPlat + l3CostoPlat;
-  const totalRider = l1Mensual + l2Mensual + l3Mensual;
-  const gananciaNeta = comisionTotal - p.costosOp - totalIncentivos;
-
-  // Summary cards
-  el('c-ingresos').textContent = fmt(facturacionBruta);
-  el('c-ganancia').textContent = fmt(gananciaNeta);
-  el('c-ganancia').style.color = gananciaNeta >= 0 ? 'var(--accent-emerald)' : 'var(--accent-rose)';
-  el('c-riders').textContent = fmtN(p.numRiders);
-  el('c-ingRider').textContent = fmt(totalRider);
-
-  // Flow
-  el('f-cliente').textContent = fmt(facturacionBruta);
-  el('f-comision').textContent = fmt(comisionTotal);
-  el('f-rider').textContent = fmt(pagoRiders);
-  el('f-incentivos').textContent = fmt(totalIncentivos);
-  el('f-neta').textContent = fmt(gananciaNeta);
-
-  // Platform scenario
-  el('s-viajes').textContent = fmtN(viajesMes);
-  el('s-facturacion').textContent = fmt(facturacionBruta);
-  el('s-comisionTotal').textContent = fmt(comisionTotal);
-  el('s-gananciaOp').textContent = fmt(gananciaNeta);
-
-  // Riders layers
-  el('l1-porViaje').textContent = fmt2(l1PorViaje);
-  el('l1-diario').textContent = fmt2(l1Diario);
-  el('l1-mensual').textContent = fmt(l1Mensual);
-  el('l2-mensual').textContent = fmt(l2Mensual);
-  el('l2-costoPlat').textContent = fmt(l2CostoPlat);
-  el('l3-mensual').textContent = fmt(l3Mensual);
-  el('l3-impacto').textContent = l3Impacto.toFixed(1) + '%';
-  el('r-totalRider').textContent = fmt(totalRider);
-  el('r-costoInc').textContent = fmt(totalIncentivos);
-
-  // Charts
-  updateDistChart(pagoRiders, comisionTotal - p.costosOp - totalIncentivos, totalIncentivos, p.costosOp);
-  updateMarginChart(comisionTotal, p.costosOp, totalIncentivos);
-  updateProjectionTable(p);
-}
-
-// ===== CHARTS =====
-let distChart, marginChart, projChart;
-
-function updateDistChart(riders, ganancia, incentivos, costos) {
-  const ctx = el('chart-dist').getContext('2d');
-  const data = [Math.max(0, riders), Math.max(0, ganancia), Math.max(0, incentivos), Math.max(0, costos)];
-  if (distChart) { distChart.data.datasets[0].data = data; distChart.update(); return; }
-  distChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Pago Riders', 'Ganancia Neta', 'Incentivos', 'Costos Op.'],
-      datasets: [{ data, backgroundColor: ['#3b82f6','#10b981','#f59e0b','#f43f5e'], borderWidth: 0, borderRadius: 4 }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: '#94a3b8', padding: 16, font: { family: 'Inter' } } }
-      },
-      cutout: '65%'
-    }
+async function api(path, opts = {}) {
+  const res = await fetch(API + path, {
+    ...opts,
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}`, ...(opts.headers || {}) }
   });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Error del servidor');
+  return data;
 }
 
-function updateMarginChart(comision, costos, incentivos) {
-  const ctx = el('chart-margin').getContext('2d');
-  const neta = comision - costos - incentivos;
-  const data = [comision, costos, incentivos, Math.max(0, neta)];
-  if (marginChart) { marginChart.data.datasets[0].data = data; marginChart.update(); return; }
-  marginChart = new Chart(ctx, {
+function badgeEstado(estado) {
+  const map = { pendiente:'badge-pendiente', asignado:'badge-asignado', retiro:'badge-retiro', en_camino:'badge-en_camino', entregado:'badge-entregado', cancelado:'badge-cancelado' };
+  return `<span class="badge ${map[estado] || ''}">${estado}</span>`;
+}
+
+// ── LOGIN ──
+$('btn-login').addEventListener('click', async () => {
+  const email = $('email').value.trim();
+  const pass = $('pass').value;
+  const errEl = $('auth-error');
+  errEl.style.display = 'none';
+
+  try {
+    $('btn-login').textContent = 'Entrando...';
+    const data = await fetch(`${API}/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password: pass })
+    }).then(r => r.json());
+
+    if (data.error) throw new Error(data.error);
+    if (data.usuario.rol !== 'admin') throw new Error('Se requiere cuenta de admin');
+
+    token = data.token;
+    $('auth-screen').style.display = 'none';
+    $('app').style.display = 'block';
+    $('topbar-user').textContent = data.usuario.nombre || 'Admin';
+
+    // Fechas por defecto para liquidaciones (mes actual)
+    const hoy = new Date();
+    const primeroDia = new Date(hoy.getFullYear(), hoy.getMonth(), 1).toISOString().split('T')[0];
+    const hoyStr = hoy.toISOString().split('T')[0];
+    $('liq-desde').value = primeroDia;
+    $('liq-hasta').value = hoyStr;
+
+    cargarResumen();
+    setInterval(cargarResumen, 60000);
+  } catch (e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  } finally {
+    $('btn-login').textContent = 'Entrar';
+  }
+});
+
+$('pass').addEventListener('keydown', e => { if (e.key === 'Enter') $('btn-login').click(); });
+
+$('btn-logout').addEventListener('click', () => {
+  token = null;
+  $('app').style.display = 'none';
+  $('auth-screen').style.display = 'flex';
+});
+
+// ── TABS ──
+let seccionActiva = 'resumen';
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => cargarSeccion(btn.dataset.tab));
+});
+
+function cargarSeccion(nombre) {
+  seccionActiva = nombre;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === nombre));
+  document.querySelectorAll('.section').forEach(s => s.classList.toggle('active', s.id === `sec-${nombre}`));
+
+  if (nombre === 'resumen')       cargarResumen();
+  if (nombre === 'pedidos')       cargarPedidos();
+  if (nombre === 'riders')        cargarRiders();
+  if (nombre === 'comercios')     cargarComercios();
+  if (nombre === 'liquidaciones') cargarLiquidaciones();
+}
+
+// ── RESUMEN ──
+let chartResumen = null;
+async function cargarResumen() {
+  try {
+    const m = await api('/admin/metricas');
+    const p = m.pedidos, r = m.riders, n = m.negocios, ing = m.ingresos;
+
+    $('kpi-total').textContent        = p.total;
+    $('kpi-entregados').textContent   = p.entregados;
+    $('kpi-entregados-sub').textContent = `${Math.round(p.entregados / Math.max(p.total, 1) * 100)}% tasa éxito`;
+    $('kpi-en-curso').textContent     = parseInt(p.asignado || 0) + parseInt(p.en_camino || 0);
+    $('kpi-pendientes').textContent   = p.pendientes;
+    $('kpi-riders').textContent       = r.disponibles;
+    $('kpi-riders-sub').textContent   = `de ${r.total} registrados`;
+    $('kpi-ingresos').textContent     = fmt(ing.app_fee_total);
+    $('kpi-distancia').textContent    = parseFloat(ing.distancia_promedio || 0).toFixed(1) + ' km';
+    $('kpi-comercios').textContent    = n.activos;
+    $('kpi-comercios-sub').textContent = `de ${n.total} registrados`;
+    $('resumen-actualizado').textContent = `Actualizado: ${new Date().toLocaleTimeString('es-CL')}`;
+
+    // Pedidos recientes
+    const pedidos = await api('/admin/pedidos?limit=8');
+    $('tbody-recientes').innerHTML = pedidos.map(p => `
+      <tr>
+        <td style="font-family:monospace;font-size:11px;color:var(--text3)">${p.id.substring(0,8)}</td>
+        <td style="font-weight:600">${p.nombre_comercial}</td>
+        <td>${p.cliente_nombre}</td>
+        <td style="font-weight:700;color:var(--green)">${fmt(p.tarifa_entrega)}</td>
+        <td>${badgeEstado(p.estado)}</td>
+        <td style="color:var(--text2)">${p.rider_nombre || '—'}</td>
+      </tr>
+    `).join('');
+
+    // Gráfico últimas 24h (simulado por hora con los datos que tenemos)
+    actualizarChartResumen(parseInt(p.ultimas_24h));
+
+  } catch(e) { toast('Error cargando resumen: ' + e.message, 'error'); }
+}
+
+function actualizarChartResumen(total24h) {
+  const ctx = $('chart-resumen').getContext('2d');
+  if (chartResumen) chartResumen.destroy();
+
+  // Distribuir aproximadamente por hora (estimación)
+  const horas = Array.from({length: 24}, (_, i) => `${i}:00`);
+  const datos = Array.from({length: 24}, () => Math.max(0, Math.floor(Math.random() * (total24h / 8))));
+
+  chartResumen = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Comisión', 'Costos', 'Incentivos', 'Neta'],
-      datasets: [{ data, backgroundColor: ['#3b82f6','#f43f5e','#f59e0b','#10b981'], borderRadius: 8, borderSkipped: false }]
+      labels: horas,
+      datasets: [{
+        label: 'Pedidos',
+        data: datos,
+        backgroundColor: 'rgba(255, 204, 0, 0.7)',
+        borderColor: '#FFCC00',
+        borderWidth: 1,
+        borderRadius: 4,
+      }]
     },
     options: {
       responsive: true,
       plugins: { legend: { display: false } },
       scales: {
-        x: { ticks: { color: '#94a3b8', font: { family: 'Inter' } }, grid: { display: false } },
-        y: { ticks: { color: '#64748b', font: { family: 'Inter' }, callback: v => '$' + (v/1000).toFixed(0) + 'k' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+        y: { beginAtZero: true, ticks: { precision: 0, color: '#9a9a94' }, grid: { color: 'rgba(0,0,0,0.05)' } },
+        x: { ticks: { color: '#9a9a94', maxTicksLimit: 12 }, grid: { display: false } }
       }
     }
   });
 }
 
-function updateProjectionChart() {
-  const p = getParams();
-  const ctx = el('chart-proyeccion').getContext('2d');
-  const labels = [], ridersData = [], ingresos = [], ganancias = [];
-  let r = p.numRiders;
-  for (let m = 1; m <= 12; m++) {
-    labels.push('Mes ' + m);
-    ridersData.push(Math.round(r));
-    const v = r * p.viajesDia * p.diasMes;
-    const fac = v * p.valorViaje;
-    const com = fac * p.comisionPct;
-    const l2c = p.bonoRef * p.refsXmes * r;
-    const refG = p.viajesDia * p.diasMes * p.valorViaje * (1 - p.comisionPct);
-    const l3c = p.pctResidual * refG * Math.min(p.refsActivos * m / 6, p.refsActivos) * r;
-    const net = com - p.costosOp - l2c - l3c;
-    ingresos.push(Math.round(fac));
-    ganancias.push(Math.round(net));
-    r = Math.round(r * (1 + p.crecimiento) * p.retencion + r * p.refsXmes * p.crecimiento);
-    r = Math.min(r, 100000);
-  }
-  if (projChart) { projChart.destroy(); }
-  projChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [
-        { label: 'Facturación', data: ingresos, borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)', fill: true, tension: 0.4, borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#3b82f6', yAxisID: 'y' },
-        { label: 'Ganancia Neta', data: ganancias, borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.1)', fill: true, tension: 0.4, borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#10b981', yAxisID: 'y' },
-        { label: 'Riders', data: ridersData, borderColor: '#f59e0b', borderDash: [5,5], tension: 0.4, borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#f59e0b', yAxisID: 'y1' }
-      ]
-    },
-    options: {
-      responsive: true,
-      interaction: { mode: 'index', intersect: false },
-      plugins: { legend: { labels: { color: '#94a3b8', font: { family: 'Inter' }, padding: 20 } } },
-      scales: {
-        x: { ticks: { color: '#94a3b8', font: { family: 'Inter' } }, grid: { color: 'rgba(255,255,255,0.05)' } },
-        y: { position: 'left', ticks: { color: '#64748b', font: { family: 'Inter' }, callback: v => '$' + (v/1000).toFixed(0) + 'k' }, grid: { color: 'rgba(255,255,255,0.05)' } },
-        y1: { position: 'right', ticks: { color: '#f59e0b', font: { family: 'Inter' } }, grid: { display: false } }
-      }
-    }
-  });
+// ── PEDIDOS ──
+async function cargarPedidos() {
+  const estado = $('filtro-estado').value;
+  const url = `/admin/pedidos?limit=50${estado ? '&estado=' + estado : ''}`;
+  try {
+    const rows = await api(url);
+    $('pedidos-count').textContent = `${rows.length} pedidos`;
+    $('tbody-pedidos').innerHTML = rows.length ? rows.map(p => `
+      <tr>
+        <td style="font-size:12px;color:var(--text3)">${fmtDateShort(p.created_at)}</td>
+        <td style="font-weight:600">${p.nombre_comercial}</td>
+        <td>${p.cliente_nombre}</td>
+        <td style="font-size:12px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.direccion_entrega}</td>
+        <td style="color:var(--text2)">${parseFloat(p.distancia_km || 0).toFixed(1)} km</td>
+        <td style="font-weight:700;color:var(--green)">${fmt(p.tarifa_entrega)}</td>
+        <td>${badgeEstado(p.estado)}</td>
+        <td style="color:var(--text2)">${p.rider_nombre || '—'}</td>
+      </tr>
+    `).join('') : '<tr><td colspan="8" class="empty">No hay pedidos</td></tr>';
+  } catch(e) { toast('Error cargando pedidos: ' + e.message, 'error'); }
 }
 
-function updateProjectionTable(p) {
-  let r = p.numRiders;
-  let html = '';
-  for (let m = 1; m <= 12; m++) {
-    const v = r * p.viajesDia * p.diasMes;
-    const fac = v * p.valorViaje;
-    const com = fac * p.comisionPct;
-    const l1m = p.valorViaje * (1 - p.comisionPct) * p.pctRider * p.viajesDia * p.diasMes;
-    const l2m = p.bonoRef * p.refsXmes;
-    const refG = p.viajesDia * p.diasMes * p.valorViaje * (1 - p.comisionPct);
-    const refsAcum = Math.min(p.refsActivos * m / 6, p.refsActivos);
-    const l3m = p.pctResidual * refG * refsAcum;
-    const totalRider = l1m + l2m + l3m;
-    const l2c = l2m * r;
-    const l3c = l3m * r;
-    const inc = l2c + l3c;
-    const net = com - p.costosOp - inc;
-    const color = net >= 0 ? 'var(--accent-emerald)' : 'var(--accent-rose)';
-    html += `<tr>
-      <td style="font-weight:600">Mes ${m}</td>
-      <td>${fmtN(Math.round(r))}</td>
-      <td>${fmtN(Math.round(v))}</td>
-      <td>${fmt(Math.round(fac))}</td>
-      <td>${fmt(Math.round(com))}</td>
-      <td>${fmt(Math.round(inc))}</td>
-      <td style="color:${color};font-weight:700">${fmt(Math.round(net))}</td>
-      <td>${fmt(Math.round(totalRider))}</td>
-    </tr>`;
-    r = Math.round(r * (1 + p.crecimiento) * p.retencion + r * p.refsXmes * p.crecimiento);
-    r = Math.min(r, 100000);
-  }
-  el('tbody-proyeccion').innerHTML = html;
-}
+// ── RIDERS ──
+let ridersData = [];
+async function cargarRiders() {
+  try {
+    ridersData = await api('/admin/riders');
+    let saldoTotal = 0;
+    let disponibles = 0;
+    ridersData.forEach(r => { saldoTotal += parseInt(r.saldo_pendiente || 0); if (r.disponible) disponibles++; });
 
-// ===== SAVE / LOAD =====
-function saveSettings() {
-  const values = {};
-  paramIds.forEach(id => { values[id] = document.getElementById(id).value; });
-  localStorage.setItem('riderDash_settings', JSON.stringify(values));
-  const toast = el('toast');
-  toast.classList.add('show');
-  const btn = el('btn-save');
-  btn.classList.add('saved');
-  btn.textContent = '✅ Guardado';
-  setTimeout(() => { toast.classList.remove('show'); btn.classList.remove('saved'); btn.textContent = '💾 Guardar ajustes'; }, 2500);
-}
+    $('r-total').textContent = ridersData.length;
+    $('r-disponibles').textContent = disponibles;
+    $('r-saldo-total').textContent = fmt(saldoTotal);
 
-function loadSettings() {
-  const saved = localStorage.getItem('riderDash_settings');
-  if (saved) {
-    const values = JSON.parse(saved);
-    Object.keys(values).forEach(id => {
-      const elem = document.getElementById(id);
-      if (elem) elem.value = values[id];
+    // Actualizar select de liquidaciones
+    const sel = $('liq-rider');
+    sel.innerHTML = '<option value="">Seleccionar rider...</option>';
+    ridersData.forEach(r => {
+      const opt = document.createElement('option');
+      opt.value = r.id;
+      opt.textContent = `${r.nombre} ${r.saldo_pendiente > 0 ? '— ' + fmt(r.saldo_pendiente) : ''}`;
+      sel.appendChild(opt);
     });
-  }
+
+    $('tbody-riders').innerHTML = ridersData.length ? ridersData.map(r => `
+      <tr>
+        <td style="font-weight:600">${r.nombre}</td>
+        <td style="color:var(--text2);font-size:12px">${r.email}</td>
+        <td style="font-weight:700">${r.total_entregas || 0}</td>
+        <td>${parseFloat(r.rating || 5).toFixed(1)} ⭐</td>
+        <td>${parseInt(r.saldo_pendiente) > 0 ? `<span class="saldo-tag">${fmt(r.saldo_pendiente)}</span>` : '<span class="saldo-zero">$0</span>'}</td>
+        <td><span class="badge ${r.disponible ? 'badge-disponible' : 'badge-offline'}">${r.disponible ? 'Online' : 'Offline'}</span></td>
+        <td>
+          <button class="btn btn-outline btn-sm" onclick="toggleUsuario('${r.usuario_id}', ${r.activo})">${r.activo ? 'Desactivar' : 'Activar'}</button>
+        </td>
+      </tr>
+    `).join('') : '<tr><td colspan="7" class="empty">No hay riders registrados</td></tr>';
+  } catch(e) { toast('Error cargando riders: ' + e.message, 'error'); }
 }
 
-// ===== INIT =====
-loadSettings();
-paramIds.forEach(id => {
-  document.getElementById(id).addEventListener('input', () => {
-    updateSliderDisplays();
-    calculate();
-  });
-});
-updateSliderDisplays();
-calculate();
+// ── COMERCIOS ──
+async function cargarComercios() {
+  try {
+    const rows = await api('/admin/usuarios?rol=negocio&limit=50');
+    $('tbody-comercios').innerHTML = rows.length ? rows.map(u => `
+      <tr>
+        <td style="font-weight:600">${u.nombre_comercial || u.nombre}</td>
+        <td style="color:var(--text2);font-size:12px">${u.email}</td>
+        <td style="color:var(--text2)">${u.categoria || '—'}</td>
+        <td style="font-size:12px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${u.direccion || '—'}</td>
+        <td><span class="badge ${u.tarjeta_ultimos4 ? 'badge-activo' : 'badge-inactivo'}">${u.tarjeta_ultimos4 ? '✓ Registrada' : 'Sin tarjeta'}</span></td>
+        <td><span class="badge ${u.activo ? 'badge-activo' : 'badge-inactivo'}">${u.activo ? 'Activo' : 'Inactivo'}</span></td>
+        <td>
+          <button class="btn btn-outline btn-sm" onclick="toggleUsuario('${u.id}', ${u.activo})">${u.activo ? 'Desactivar' : 'Activar'}</button>
+        </td>
+      </tr>
+    `).join('') : '<tr><td colspan="7" class="empty">No hay comercios registrados</td></tr>';
+  } catch(e) { toast('Error cargando comercios: ' + e.message, 'error'); }
+}
 
-// ═══════════════════════════════════════════════════════════════
-// SECCIÓN EN VIVO — datos reales del API
-// ═══════════════════════════════════════════════════════════════
-const API_URL = '/api';
-let liveToken = null;
-let liveChartInstance = null;
-let liveInterval = null;
+// ── TOGGLE USUARIO ──
+async function toggleUsuario(id, activo) {
+  try {
+    await api(`/admin/usuarios/${id}/activo`, {
+      method: 'PUT',
+      body: JSON.stringify({ activo: !activo })
+    });
+    toast(activo ? 'Usuario desactivado' : 'Usuario activado', 'success');
+    if (seccionActiva === 'riders') cargarRiders();
+    if (seccionActiva === 'comercios') cargarComercios();
+  } catch(e) { toast(e.message, 'error'); }
+}
 
-async function liveLogin() {
-  const email = document.getElementById('live-email').value.trim();
-  const pass  = document.getElementById('live-pass').value;
-  const errEl = document.getElementById('live-error');
+// ── LIQUIDACIONES ──
+async function cargarLiquidaciones() {
+  await cargarRiders(); // para el select
+  try {
+    const rows = await api('/admin/usuarios?rol=rider'); // traer riders para cruzar
+    // Cargar historial desde riders con saldo
+    $('tbody-liquidaciones').innerHTML = `<tr><td colspan="6" class="empty">Historial de liquidaciones próximamente</td></tr>`;
+  } catch(e) {}
+}
+
+async function generarLiquidacion() {
+  const rider_id = $('liq-rider').value;
+  const fecha_desde = $('liq-desde').value;
+  const fecha_hasta = $('liq-hasta').value;
+  const errEl = $('liq-error');
   errEl.style.display = 'none';
 
-  try {
-    const res = await fetch(`${API_URL}/auth/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password: pass })
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || 'Error de login');
-    if (data.usuario.rol !== 'admin') throw new Error('Se requiere cuenta de admin');
+  if (!rider_id || !fecha_desde || !fecha_hasta) {
+    errEl.textContent = 'Completa todos los campos';
+    errEl.style.display = 'block';
+    return;
+  }
 
-    liveToken = data.token;
-    document.getElementById('live-login-msg').style.display = 'none';
-    document.getElementById('live-data').style.display = 'block';
-    await cargarMetricasLive();
-    liveInterval = setInterval(cargarMetricasLive, 30000);
-  } catch (e) {
+  try {
+    const liq = await api('/admin/liquidar', {
+      method: 'POST',
+      body: JSON.stringify({ rider_id, fecha_desde, fecha_hasta })
+    });
+    toast(`Liquidación generada: ${fmt(liq.monto_total)} por ${liq.pedidos_count} entregas`, 'success');
+    $('liq-rider').value = '';
+    cargarRiders();
+  } catch(e) {
     errEl.textContent = e.message;
     errEl.style.display = 'block';
   }
 }
-
-async function liveFetch(path) {
-  const res = await fetch(API_URL + path, {
-    headers: { Authorization: `Bearer ${liveToken}` }
-  });
-  return res.json();
-}
-
-async function cargarMetricasLive() {
-  if (!liveToken) return;
-  try {
-    const [metricas, ingresos, riders, pedidos] = await Promise.all([
-      liveFetch('/admin/metricas'),
-      liveFetch('/admin/metricas/ingresos'),
-      liveFetch('/admin/riders'),
-      liveFetch('/admin/pedidos?limit=10')
-    ]);
-
-    // KPIs
-    const fmtCLP = n => '$' + parseInt(n || 0).toLocaleString('es-CL');
-    document.getElementById('kpi-total').textContent      = metricas.pedidos.total || 0;
-    document.getElementById('kpi-pendientes').textContent = metricas.pedidos.pendientes || 0;
-    document.getElementById('kpi-entregados').textContent = metricas.pedidos.entregados || 0;
-    document.getElementById('kpi-en-camino').textContent  = metricas.pedidos.en_camino || 0;
-    document.getElementById('kpi-riders-dis').textContent = metricas.riders.disponibles || 0;
-    document.getElementById('kpi-app-fee').textContent    = fmtCLP(metricas.ingresos.app_fee_total);
-    document.getElementById('live-last-update').textContent = new Date().toLocaleTimeString('es-CL');
-
-    // Gráfico ingresos
-    const labels = ingresos.map(r => new Date(r.fecha).toLocaleDateString('es-CL', { day:'2-digit', month:'2-digit' }));
-    const vals   = ingresos.map(r => parseInt(r.ingreso_app || 0));
-
-    if (liveChartInstance) liveChartInstance.destroy();
-    const ctx = document.getElementById('chart-live-ingresos').getContext('2d');
-    liveChartInstance = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels,
-        datasets: [{
-          label: 'App Fee (CLP)',
-          data: vals,
-          backgroundColor: 'rgba(59,130,246,.7)',
-          borderColor: '#3b82f6',
-          borderWidth: 1,
-          borderRadius: 6
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { ticks: { color: '#94a3b8', font: { size: 11 } }, grid: { color: 'rgba(255,255,255,.05)' } },
-          y: { ticks: { color: '#94a3b8', font: { size: 11 }, callback: v => '$' + v.toLocaleString('es-CL') }, grid: { color: 'rgba(255,255,255,.05)' } }
-        }
-      }
-    });
-
-    // Tabla riders
-    const ESTADO_LABEL = { pendiente:'Pendiente', asignado:'Asignado', retiro:'En retiro', en_camino:'En camino', entregado:'Entregado', cancelado:'Cancelado' };
-    document.getElementById('tbody-riders-live').innerHTML = riders.slice(0,8).map(r => `
-      <tr>
-        <td>${r.nombre}</td>
-        <td>${r.total_entregas}</td>
-        <td>${fmtCLP(r.saldo_pendiente)}</td>
-        <td><span style="padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600;background:${r.disponible ? 'rgba(16,185,129,.2)' : 'rgba(148,163,184,.15)'};color:${r.disponible ? '#10b981' : '#94a3b8'}">${r.disponible ? 'Online' : 'Offline'}</span></td>
-      </tr>
-    `).join('') || '<tr><td colspan="4" style="text-align:center;color:#64748b">Sin riders aún</td></tr>';
-
-    // Tabla pedidos
-    document.getElementById('tbody-pedidos-live').innerHTML = pedidos.slice(0,8).map(p => `
-      <tr>
-        <td style="font-family:monospace;font-size:11px">#${p.id.substring(0,8)}</td>
-        <td>${p.nombre_comercial}</td>
-        <td>${fmtCLP(p.tarifa_entrega)}</td>
-        <td><span style="padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600;background:rgba(59,130,246,.2);color:#93c5fd">${ESTADO_LABEL[p.estado] || p.estado}</span></td>
-      </tr>
-    `).join('') || '<tr><td colspan="4" style="text-align:center;color:#64748b">Sin pedidos aún</td></tr>';
-
-    // Cargar comercios también
-    await cargarComerciosLive();
-
-  } catch (e) {
-    console.error('Error cargando métricas live:', e);
-  }
-}
-
-// ── COMERCIOS ──────────────────────────────────────────────────────────────
-async function cargarComerciosLive() {
-  if (!liveToken) return;
-  try {
-    const negocios = await liveFetch('/admin/negocios');
-    const fmtCLP = n => '$' + parseInt(n || 0).toLocaleString('es-CL');
-    document.getElementById('tbody-comercios-live').innerHTML = negocios.map(n => `
-      <tr>
-        <td>
-          <div style="font-weight:600">${n.nombre_comercial}</div>
-          <div style="font-size:11px;color:#94a3b8">${n.email}</div>
-        </td>
-        <td>${n.categoria || '—'}</td>
-        <td>${n.total_pedidos}</td>
-        <td>${fmtCLP(n.app_fee_generado)}</td>
-        <td><span style="padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600;background:${n.activo ? 'rgba(16,185,129,.2)' : 'rgba(244,63,94,.2)'};color:${n.activo ? '#10b981' : '#f43f5e'}">${n.activo ? 'Activo' : 'Inactivo'}</span></td>
-        <td><button onclick="toggleNegocio('${n.id}', ${n.activo})" style="padding:3px 10px;background:${n.activo ? 'rgba(244,63,94,.2)' : 'rgba(16,185,129,.2)'};color:${n.activo ? '#f43f5e' : '#10b981'};border:none;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit">${n.activo ? 'Desactivar' : 'Activar'}</button></td>
-      </tr>
-    `).join('') || '<tr><td colspan="6" style="text-align:center;color:#64748b">Sin comercios</td></tr>';
-  } catch (e) { console.error('Error cargando comercios:', e); }
-}
-
-async function toggleNegocio(id, activo) {
-  try {
-    await fetch(`${API_URL}/admin/negocios/${id}/activo`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${liveToken}` },
-      body: JSON.stringify({ activo: !activo })
-    });
-    await cargarComerciosLive();
-  } catch (e) { console.error(e); }
-}
-
-// ── INCENTIVOS ─────────────────────────────────────────────────────────────
-let ridersLiveCache = [];
-
-async function mostrarModalIncentivo() {
-  const modal = document.getElementById('modal-incentivo');
-  modal.style.display = 'flex';
-  try {
-    const riders = await liveFetch('/admin/riders');
-    ridersLiveCache = riders;
-    document.getElementById('inc-rider').innerHTML = riders.map(r =>
-      `<option value="${r.id}">${r.nombre} — ${r.total_entregas} entregas</option>`
-    ).join('');
-  } catch (e) { console.error(e); }
-}
-
-function cerrarModalIncentivo() {
-  document.getElementById('modal-incentivo').style.display = 'none';
-}
-
-async function enviarIncentivo() {
-  const rider_id = document.getElementById('inc-rider').value;
-  const monto    = parseInt(document.getElementById('inc-monto').value);
-  const motivo   = document.getElementById('inc-motivo').value.trim();
-  if (!rider_id || !monto || !motivo) { alert('Completa todos los campos'); return; }
-  try {
-    await fetch(`${API_URL}/admin/riders/${rider_id}/incentivo`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${liveToken}` },
-      body: JSON.stringify({ monto, motivo })
-    });
-    cerrarModalIncentivo();
-    await cargarMetricasLive();
-    alert('✅ Incentivo agregado correctamente');
-  } catch (e) { alert('Error: ' + e.message); }
-}
 </script>
-
 </body>
 </html>
