@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reparto Justo — Material para Riders</title>
+<title>Reparto Justo — Guía para Riders</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -11,428 +11,568 @@
     --purple: #3C3489; --purple-bg: #EEEDFE; --purple-mid: #7F77DD;
     --amber: #854F0B; --amber-bg: #FAEEDA;
     --green: #3B6D11; --green-bg: #EAF3DE; --green-mid: #639922;
+    --red: #DC2626; --red-bg: #FEE2E2;
+    --amarillo: #FFCC00;
     --text: #1a1a18; --text2: #6b6b66; --text3: #9a9a94;
     --bg: #f5f5f3; --bg2: #ffffff; --border: rgba(0,0,0,0.10); --border2: rgba(0,0,0,0.18);
-    --r: 10px; --r-sm: 6px;
+    --r: 12px; --r-sm: 8px;
   }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
-  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 20px 14px 60px; }
+
+  /* HEADER */
+  .page-header { background: linear-gradient(135deg, #0F172A 0%, #0F6E56 100%); border-radius: var(--r); padding: 28px 24px; margin-bottom: 20px; }
+  .ph-brand { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 6px; }
+  .ph-title { font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.2; }
+  .ph-sub { font-size: 13px; color: rgba(255,255,255,.75); }
 
   /* TABS */
-  .tabs { display: flex; gap: 6px; margin-bottom: 16px; }
-  .tab-btn { flex: 1; padding: 10px 8px; border-radius: var(--r-sm); border: .5px solid var(--border2); background: var(--bg2); font-size: 13px; font-weight: 500; color: var(--text2); cursor: pointer; text-align: center; transition: all .15s; }
-  .tab-btn.active { background: var(--teal-bg); border-color: var(--teal-mid); color: var(--teal-dk); }
+  .tabs { display: flex; gap: 6px; margin-bottom: 18px; overflow-x: auto; padding-bottom: 2px; }
+  .tab-btn { flex-shrink: 0; padding: 9px 14px; border-radius: 99px; border: 1.5px solid var(--border2); background: var(--bg2); font-size: 13px; font-weight: 600; color: var(--text2); cursor: pointer; transition: all .15s; }
+  .tab-btn.active { background: var(--teal); border-color: var(--teal); color: #fff; }
   .panel { display: none; flex-direction: column; gap: 14px; }
   .panel.active { display: flex; }
 
   /* CARDS */
-  .card { background: var(--bg2); border: .5px solid var(--border); border-radius: var(--r); padding: 18px 20px; }
-  .card-title { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text2); margin-bottom: 14px; }
+  .card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: 20px; }
+  .card-title { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--text3); margin-bottom: 16px; }
+
+  /* SECTION LABEL */
+  .sec-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--text3); margin-bottom: 10px; }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box { border-radius: var(--r-sm); padding: 16px 18px; margin-bottom: 12px; }
+  .highlight-box.green { background: var(--teal-bg); border-left: 4px solid var(--teal-mid); }
+  .highlight-box.amber { background: var(--amber-bg); border-left: 4px solid #D97706; }
+  .highlight-box.purple { background: var(--purple-bg); border-left: 4px solid var(--purple-mid); }
+  .highlight-box.yellow { background: #FFFBEB; border-left: 4px solid var(--amarillo); }
+  .highlight-box p { font-size: 13px; line-height: 1.6; color: var(--text2); }
+  .highlight-box strong { color: var(--text); }
 
   /* STEPS */
-  .step { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-bottom: .5px solid var(--border); }
-  .step:last-child { border-bottom: none; }
-  .step-num { width: 28px; height: 28px; border-radius: 50%; background: var(--teal-bg); color: var(--teal); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-  .step-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .step { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .step:last-child { border-bottom: none; padding-bottom: 0; }
+  .step-num { width: 28px; height: 28px; border-radius: 50%; background: var(--teal); color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
   .step-text { font-size: 13px; color: var(--text2); line-height: 1.5; }
-  .quote { background: var(--teal-bg); border-radius: 0 var(--r-sm) var(--r-sm) 0; padding: 10px 13px; margin-top: 8px; font-size: 13px; color: var(--teal-dk); font-style: italic; line-height: 1.5; border-left: 3px solid var(--teal-mid); }
 
-  /* TARIFA TABLE */
-  .tarifa-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .tarifa-table th { background: var(--teal-bg); color: var(--teal-dk); font-weight: 700; padding: 8px 12px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
-  .tarifa-table td { padding: 9px 12px; border-bottom: .5px solid var(--border); }
-  .tarifa-table tr:last-child td { border-bottom: none; }
-  .tarifa-table .val { font-weight: 700; color: var(--teal-dk); }
-  .tarifa-table .highlight { background: #f0fdf4; }
+  /* TABLA TARIFAS */
+  .tarifa-wrap { overflow-x: auto; border-radius: var(--r-sm); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th { background: var(--bg); padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text2); border-bottom: 1px solid var(--border); }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); }
+  tbody tr:last-child td { border-bottom: none; }
+  .val-rj { font-weight: 700; color: var(--teal-dk); }
+  .val-py { color: var(--text2); }
+  .winner { background: #f0fdf8; }
+  .winner .val-rj::after { content: ' ✓'; color: var(--teal-mid); font-size: 11px; }
+  .dist-col { color: var(--text2); font-size: 12px; }
 
-  /* SCENARIOS */
-  .scenario-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 14px; }
-  .sc { border-radius: var(--r-sm); padding: 14px 10px; text-align: center; border: 1.5px solid transparent; cursor: pointer; transition: all .2s; }
-  .sc.low { background: #f9f9f7; border-color: var(--border2); }
-  .sc.mid { background: var(--teal-bg); border-color: var(--teal-mid); }
-  .sc.high { background: var(--purple-bg); border-color: var(--purple-mid); }
-  .sc-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
-  .sc.low .sc-label { color: var(--text3); }
-  .sc.mid .sc-label { color: var(--teal); }
-  .sc.high .sc-label { color: var(--purple); }
-  .sc-deliveries { font-size: 18px; font-weight: 700; margin-bottom: 2px; }
-  .sc.low .sc-deliveries { color: var(--text); }
-  .sc.mid .sc-deliveries { color: var(--teal-dk); }
-  .sc.high .sc-deliveries { color: var(--purple); }
-  .sc-sub { font-size: 11px; }
-  .sc.low .sc-sub { color: var(--text3); }
-  .sc.mid .sc-sub { color: var(--teal); }
-  .sc.high .sc-sub { color: var(--purple-mid); }
-  .sc-total { font-size: 13px; font-weight: 700; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,.08); }
-  .sc.mid .sc-total { border-color: rgba(29,158,117,.2); color: var(--teal-dk); }
-  .sc.high .sc-total { border-color: rgba(127,119,221,.2); color: var(--purple); }
+  /* ESCENARIOS INGRESOS */
+  .escenario-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .esc { border-radius: var(--r-sm); padding: 16px 12px; text-align: center; }
+  .esc.bajo { background: var(--bg); border: 1px solid var(--border2); }
+  .esc.medio { background: var(--teal-bg); border: 1.5px solid var(--teal-mid); }
+  .esc.alto { background: var(--purple-bg); border: 1.5px solid var(--purple-mid); }
+  .esc-titulo { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
+  .esc.bajo .esc-titulo { color: var(--text3); }
+  .esc.medio .esc-titulo { color: var(--teal); }
+  .esc.alto .esc-titulo { color: var(--purple-mid); }
+  .esc-pedidos { font-size: 26px; font-weight: 800; line-height: 1; margin-bottom: 2px; }
+  .esc.bajo .esc-pedidos { color: var(--text); }
+  .esc.medio .esc-pedidos { color: var(--teal-dk); }
+  .esc.alto .esc-pedidos { color: var(--purple); }
+  .esc-sub { font-size: 10px; margin-bottom: 12px; }
+  .esc.bajo .esc-sub { color: var(--text3); }
+  .esc.medio .esc-sub { color: var(--teal); }
+  .esc.alto .esc-sub { color: var(--purple-mid); }
+  .esc-divider { border: none; border-top: 1px solid rgba(0,0,0,.08); margin: 8px 0; }
+  .esc-rj-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 3px; }
+  .esc.bajo .esc-rj-label { color: var(--text3); }
+  .esc.medio .esc-rj-label { color: var(--teal); }
+  .esc.alto .esc-rj-label { color: var(--purple-mid); }
+  .esc-rj-val { font-size: 17px; font-weight: 800; }
+  .esc.bajo .esc-rj-val { color: var(--text); }
+  .esc.medio .esc-rj-val { color: var(--teal-dk); }
+  .esc.alto .esc-rj-val { color: var(--purple); }
+  .esc-py-row { font-size: 11px; margin-top: 6px; }
+  .esc.bajo .esc-py-row { color: var(--text3); }
+  .esc.medio .esc-py-row { color: var(--teal); }
+  .esc.alto .esc-py-row { color: var(--purple-mid); }
+  .esc-diferencia { font-size: 10px; font-weight: 700; margin-top: 4px; background: rgba(255,255,255,.6); border-radius: 4px; padding: 2px 6px; display: inline-block; }
+  .esc.medio .esc-diferencia { color: var(--teal-dk); }
+  .esc.alto .esc-diferencia { color: var(--purple); }
 
-  /* METRICS */
-  .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .met { background: var(--bg); border-radius: var(--r-sm); padding: 12px; text-align: center; }
-  .met-val { font-size: 18px; font-weight: 700; color: var(--text); }
-  .met-lbl { font-size: 10px; color: var(--text2); margin-top: 3px; }
+  /* RESIDUAL */
+  .residual-card { background: var(--amber-bg); border-radius: var(--r-sm); padding: 16px; border: 1px solid rgba(213,128,0,.2); }
+  .rc-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+  .rc-icon { font-size: 22px; }
+  .rc-title { font-size: 15px; font-weight: 700; color: var(--amber); }
+  .rc-sub { font-size: 12px; color: var(--amber); opacity: .8; }
+  .rc-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(213,128,0,.15); font-size: 13px; }
+  .rc-row:last-child { border-bottom: none; }
+  .rc-label { color: var(--amber); }
+  .rc-val { font-weight: 700; color: var(--amber); font-size: 15px; }
+  .rc-nota { font-size: 11px; color: var(--amber); opacity: .75; margin-top: 10px; line-height: 1.5; }
 
-  /* OBJECTIONS */
-  .obj { background: var(--bg); border-radius: var(--r-sm); padding: 12px 14px; margin-bottom: 8px; }
-  .obj:last-child { margin-bottom: 0; }
-  .obj-q { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
-  .obj-a { font-size: 13px; color: var(--text2); line-height: 1.5; }
-
-  /* TAG */
-  .tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 99px; margin-left: 6px; vertical-align: middle; }
-  .tag-green { background: var(--green-bg); color: var(--green); }
-  .tag-amber { background: var(--amber-bg); color: var(--amber); }
+  /* BONO RIDER */
+  .bono-card { background: var(--purple-bg); border-radius: var(--r-sm); padding: 16px; border: 1px solid rgba(127,119,221,.2); }
+  .bono-monto { font-size: 36px; font-weight: 800; color: var(--purple); line-height: 1; margin-bottom: 4px; }
+  .bono-label { font-size: 12px; color: var(--purple-mid); font-weight: 600; margin-bottom: 14px; }
+  .condicion { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(127,119,221,.15); font-size: 13px; }
+  .condicion:last-child { border-bottom: none; }
+  .condicion-num { width: 22px; height: 22px; border-radius: 50%; background: var(--purple); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .condicion-text { color: var(--purple); line-height: 1.5; }
+  .condicion-text strong { color: var(--purple); }
 
   /* WHATSAPP */
-  .wa-phone { background: #e5ddd5; border-radius: var(--r); padding: 12px; }
+  .wa-phone { background: #e5ddd5; border-radius: var(--r); padding: 14px; }
   .wa-header { background: var(--teal); border-radius: var(--r-sm); padding: 10px 14px; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .wa-av { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .wa-av { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
   .wa-name { font-size: 13px; font-weight: 700; color: #fff; }
-  .wa-status { font-size: 11px; color: rgba(255,255,255,.75); }
-  .bubble { background: #fff; border-radius: 10px 10px 10px 0; padding: 12px 14px; font-size: 13px; color: #1a1a18; line-height: 1.6; max-width: 90%; margin-bottom: 8px; border: .5px solid rgba(0,0,0,.06); }
+  .wa-status { font-size: 11px; color: rgba(255,255,255,.7); }
+  .bubble { background: #fff; border-radius: 10px 10px 10px 0; padding: 12px 14px; font-size: 13px; color: #1a1a18; line-height: 1.65; max-width: 95%; margin-bottom: 8px; border: .5px solid rgba(0,0,0,.06); white-space: pre-line; }
   .bubble-time { font-size: 10px; color: #888; text-align: right; margin-top: 5px; }
-  .copy-btn { width: 100%; padding: 10px; border-radius: var(--r-sm); border: .5px solid var(--border2); background: var(--bg2); font-size: 13px; font-weight: 500; color: var(--text2); cursor: pointer; margin-top: 8px; transition: all .15s; }
-  .copy-btn:hover { background: var(--bg); }
-  .copy-btn.copied { color: var(--teal); border-color: var(--teal-mid); }
+  .copy-btn { width: 100%; padding: 10px; border-radius: var(--r-sm); border: 1px solid var(--border2); background: var(--bg2); font-size: 13px; font-weight: 600; color: var(--teal); cursor: pointer; margin-top: 8px; transition: all .15s; }
+  .copy-btn:hover { background: var(--teal-bg); }
+  .copy-btn.copied { background: var(--teal); color: #fff; border-color: var(--teal); }
 
-  /* FOLLETO */
-  .folleto-header { background: linear-gradient(135deg, var(--teal-dk) 0%, var(--teal-mid) 100%); border-radius: var(--r); padding: 28px 20px; text-align: center; margin-bottom: 14px; }
-  .fh-title { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-  .fh-sub { font-size: 14px; color: rgba(255,255,255,.8); }
-  .fh-tag { display: inline-block; background: rgba(255,255,255,.2); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 99px; margin-top: 10px; }
-  .f-grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 14px; }
-  .f-box { border-radius: var(--r-sm); padding: 14px 10px; text-align: center; }
-  .f-box-green { background: var(--green-bg); }
-  .f-box-teal { background: var(--teal-bg); }
-  .f-box-purple { background: var(--purple-bg); }
-  .fb-val { font-size: 20px; font-weight: 700; }
-  .f-box-green .fb-val { color: var(--teal-dk); }
-  .f-box-teal .fb-val { color: var(--teal); }
-  .f-box-purple .fb-val { color: var(--purple); }
-  .fb-lbl { font-size: 10px; margin-top: 3px; }
-  .f-box-green .fb-lbl { color: var(--green); }
-  .f-box-teal .fb-lbl { color: var(--teal); }
-  .f-box-purple .fb-lbl { color: var(--purple-mid); }
-  .benefit-row { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: .5px solid var(--border); font-size: 13px; }
-  .benefit-row:last-child { border-bottom: none; }
-  .b-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+  /* UTILIDADES */
+  .badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 99px; }
+  .badge-green { background: var(--teal-bg); color: var(--teal-dk); }
+  .badge-amber { background: var(--amber-bg); color: var(--amber); }
+  .badge-purple { background: var(--purple-bg); color: var(--purple); }
+  .check-row { display: flex; gap: 8px; font-size: 13px; padding: 6px 0; color: var(--text2); }
+  .check-row::before { content: '✓'; color: var(--teal-mid); font-weight: 700; flex-shrink: 0; }
 
-  .income-table { background: var(--teal-bg); border-radius: var(--r-sm); padding: 14px; margin: 14px 0; }
-  .it-title { font-size: 11px; font-weight: 700; color: var(--teal-dk); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; }
-  .it-row { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; }
-  .it-row .il { color: var(--teal-dk); }
-  .it-row .iv { font-weight: 700; color: var(--teal-dk); }
-  .it-sep { border: none; border-top: .5px solid #9FE1CB; margin: 6px 0; }
-  .it-total .il { font-weight: 700; color: var(--teal-dk); font-size: 14px; }
-  .it-total .iv { font-size: 20px; color: var(--teal); }
-
-  .escenarios-folleto { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 14px 0; }
-  .ef { border-radius: var(--r-sm); padding: 12px 8px; text-align: center; }
-  .ef-val { font-size: 16px; font-weight: 700; }
-  .ef-lbl { font-size: 10px; margin-top: 2px; }
-  .ef.bajo { background: #f9f9f7; }
-  .ef.bajo .ef-val { color: var(--text); }
-  .ef.bajo .ef-lbl { color: var(--text3); }
-  .ef.medio { background: var(--teal-bg); }
-  .ef.medio .ef-val { color: var(--teal-dk); }
-  .ef.medio .ef-lbl { color: var(--teal); }
-  .ef.alto { background: var(--purple-bg); }
-  .ef.alto .ef-val { color: var(--purple); }
-  .ef.alto .ef-lbl { color: var(--purple-mid); }
-  .ef-header { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; color: var(--text2); text-align: center; }
-
-  .cta-box { background: var(--teal); border-radius: var(--r-sm); padding: 16px; text-align: center; }
-  .cta-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-  .cta-sub { font-size: 12px; color: rgba(255,255,255,.8); }
-
-  @media print {
-    .tabs, .tab-btn, .copy-btn, button { display: none !important; }
-    .panel { display: flex !important; }
-    body { background: #fff; }
-    .card { border: 1px solid #ddd; }
-  }
   @media (max-width: 480px) {
-    .metrics { grid-template-columns: 1fr 1fr; }
-    .scenario-grid { grid-template-columns: 1fr; }
-    .f-grid3 { grid-template-columns: 1fr 1fr; }
-    .escenarios-folleto { grid-template-columns: 1fr; }
+    .escenario-grid { grid-template-columns: 1fr; }
+    .ph-title { font-size: 20px; }
   }
 </style>
 </head>
 <body>
 <div class="container">
 
-  <div style="margin-bottom:20px;">
-    <div style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text2);margin-bottom:4px;">Reparto Justo</div>
-    <h1 style="font-size:22px;font-weight:700;color:var(--text);margin-bottom:4px;">Material de captación — Riders</h1>
-    <p style="font-size:13px;color:var(--text2);">Tres formatos listos para usar: discurso en persona, mensajes WhatsApp y folleto digital.</p>
+  <div class="page-header">
+    <div class="ph-brand">Reparto Justo — Material interno</div>
+    <div class="ph-title">Guía para riders 🏍️</div>
+    <div class="ph-sub">Explica qué es, cómo se gana y cuánto se puede ganar al mes — con números reales.</div>
   </div>
 
   <div class="tabs">
-    <button class="tab-btn active" onclick="show('discurso',this)">Discurso en persona</button>
-    <button class="tab-btn" onclick="show('whatsapp',this)">WhatsApp</button>
-    <button class="tab-btn" onclick="show('folleto',this)">Folleto</button>
+    <button class="tab-btn active" onclick="show('intro',this)">¿Qué es?</button>
+    <button class="tab-btn" onclick="show('ganancias',this)">¿Cuánto gano?</button>
+    <button class="tab-btn" onclick="show('extra',this)">Ganancias extra</button>
+    <button class="tab-btn" onclick="show('whatsapp',this)">Mensajes WhatsApp</button>
   </div>
 
-  <!-- ═══ DISCURSO ═══ -->
-  <div class="panel active" id="tab-discurso">
+  <!-- ═══ TAB 1: QUÉ ES ═══ -->
+  <div class="panel active" id="tab-intro">
 
     <div class="card">
-      <div class="card-title">Estructura — 5 minutos en persona</div>
+      <div class="card-title">¿Qué es Reparto Justo?</div>
+      <div class="highlight-box green">
+        <p><strong>Reparto Justo es una app de delivery sin comisiones para los negocios.</strong> Los restaurantes, minimarkets y tiendas que usan la app pagan una tarifa fija por cada entrega — y ese dinero va directo al rider. La plataforma no se queda con un porcentaje de tus ganancias.</p>
+      </div>
+      <div class="highlight-box yellow">
+        <p>Los negocios ya tienen sus propios clientes. Reparto Justo les da la tecnología para gestionar las entregas a domicilio sin depender de apps grandes que les cobran hasta un 30% de comisión por venta. <strong>Tú eres el vínculo entre el negocio y su cliente.</strong></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">¿Cómo funciona el trabajo?</div>
       <div class="step">
         <div class="step-num">1</div>
         <div>
-          <div class="step-title">Apertura — conectar con su realidad</div>
-          <div class="step-text">Empieza reconociendo cómo funciona el delivery tradicional. No critiques — valida su experiencia.</div>
-          <div class="quote">"¿Trabajas o has trabajado con alguna app de delivery? ¿Cómo ha sido la experiencia con los tiempos muertos, cuando estás esperando y no llegan pedidos?"</div>
+          <div class="step-title">Te conectas cuando quieres</div>
+          <div class="step-text">Abres la app, activas "disponible" y empiezas a recibir pedidos. Sin horarios fijos, sin mínimo de horas. Tú decides cuándo trabajar.</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div>
-          <div class="step-title">El problema que resolvemos</div>
-          <div class="step-text">Sin exagerar, describe lo que ellos ya conocen de su experiencia.</div>
-          <div class="quote">"En apps como PedidosYa dependes de que lleguen pedidos al azar. Hay ratos muertos, y el algoritmo decide cuánto ganas. Nosotros funcionamos diferente: los negocios ya tienen sus clientes, y te llaman a ti directamente cuando necesitan una entrega."</div>
+          <div class="step-title">Recibes una oferta</div>
+          <div class="step-text">Cuando un negocio publica un pedido, el sistema te muestra la dirección de entrega, la distancia y el monto que ganarás. Tienes 30 segundos para aceptar o rechazar.</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div>
-          <div class="step-title">Cuánto se gana — la tarifa es transparente</div>
-          <div class="step-text">Muestra la tabla de tarifas. Sin sorpresas ni algoritmos.</div>
-          <div class="quote">"La tarifa es fija por kilómetro. Hasta 1 km ganas $1.250. De ahí en adelante se suma $65 por cada 100 metros. Una entrega de 3 km te da $2.550. Una de 5 km, $3.850. Tú siempre sabes cuánto vas a ganar antes de salir."</div>
+          <div class="step-title">Retiras y entregas</div>
+          <div class="step-text">La app te guía hasta el negocio y luego hasta el cliente. Marcas cada etapa: llegué al negocio → salí con el pedido → entregué.</div>
         </div>
       </div>
       <div class="step">
         <div class="step-num">4</div>
         <div>
-          <div class="step-title">El potencial real con volumen <span class="tag tag-green">Lo más importante</span></div>
-          <div class="step-text">Usa los escenarios de ingresos. Apunta al escenario medio como objetivo realista del primer mes.</div>
-          <div class="quote">"Con 10 entregas al día — que es perfectamente alcanzable en horario de almuerzo y tarde — estás ganando sobre $500.000 al mes solo de envíos. Y eso sin contar lo que puedes sumar si traes negocios tú mismo."</div>
+          <div class="step-title">Acumulas tu saldo</div>
+          <div class="step-text">Al marcar "entregué", la tarifa queda registrada en tu cuenta. El pago se liquida semanalmente por transferencia bancaria directa — sin descuentos ni retenciones.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">¿En qué se diferencia de PedidosYa?</div>
+      <div class="check-row">La tarifa que ves es lo que recibes — sin descuentos de la plataforma</div>
+      <div class="check-row">No hay turnos ni zonas asignadas — trabajas donde y cuando quieres</div>
+      <div class="check-row">Puedes ganar residual por los locales que incorpores a la app</div>
+      <div class="check-row">Atención directa — no eres un número en una fila de miles de riders</div>
+      <div class="check-row">Los negocios son locales que ya conoces — no hay que ganar la confianza de cero</div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB 2: CUÁNTO GANO ═══ -->
+  <div class="panel" id="tab-ganancias">
+
+    <div class="card">
+      <div class="card-title">Tarifas por distancia — RJ vs PedidosYa</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:14px">Desde los <strong>2,4 km en adelante, Reparto Justo paga más</strong> que PedidosYa. A mayor distancia, mayor la diferencia a tu favor.</p>
+      <div class="tarifa-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Distancia</th>
+              <th>Reparto Justo</th>
+              <th>PedidosYa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="dist-col">1 km</td>
+              <td class="val-rj">$1.250</td>
+              <td class="val-py">$1.710</td>
+            </tr>
+            <tr>
+              <td class="dist-col">2 km</td>
+              <td class="val-rj">$1.900</td>
+              <td class="val-py">$2.030</td>
+            </tr>
+            <tr class="winner">
+              <td class="dist-col">3 km</td>
+              <td class="val-rj">$2.550</td>
+              <td class="val-py">$2.350</td>
+            </tr>
+            <tr class="winner">
+              <td class="dist-col">4 km</td>
+              <td class="val-rj">$3.200</td>
+              <td class="val-py">$2.670</td>
+            </tr>
+            <tr class="winner">
+              <td class="dist-col">5 km</td>
+              <td class="val-rj">$3.850</td>
+              <td class="val-py">$2.990</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:11px;color:var(--text3);margin-top:10px">✓ = Reparto Justo paga más en esas filas. PedidosYa: $1.390 base + $320/km. RJ: $1.250 base hasta 1km, luego $65 por cada 100m adicionales.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">¿Cuánto gano al mes? — Promedio 3 km por entrega</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px">Calculado sobre <strong>22 días hábiles al mes</strong>, con una distancia promedio de 3 km por entrega ($2.550 con Reparto Justo / $2.350 con PedidosYa).</p>
+
+      <div class="escenario-grid">
+        <div class="esc bajo">
+          <div class="esc-titulo">Tranquilo</div>
+          <div class="esc-pedidos">10</div>
+          <div class="esc-sub">pedidos/día</div>
+          <hr class="esc-divider">
+          <div class="esc-rj-label">Reparto Justo</div>
+          <div class="esc-rj-val">$561.000</div>
+          <div class="esc-py-row">PedidosYa: $517.000</div>
+          <div class="esc-diferencia" style="color:var(--teal-dk)">+$44.000 más</div>
+        </div>
+        <div class="esc medio">
+          <div class="esc-titulo">Activo</div>
+          <div class="esc-pedidos">15</div>
+          <div class="esc-sub">pedidos/día</div>
+          <hr class="esc-divider">
+          <div class="esc-rj-label">Reparto Justo</div>
+          <div class="esc-rj-val">$841.500</div>
+          <div class="esc-py-row">PedidosYa: $775.500</div>
+          <div class="esc-diferencia">+$66.000 más</div>
+        </div>
+        <div class="esc alto">
+          <div class="esc-titulo">Intensivo</div>
+          <div class="esc-pedidos">20</div>
+          <div class="esc-sub">pedidos/día</div>
+          <hr class="esc-divider">
+          <div class="esc-rj-label">Reparto Justo</div>
+          <div class="esc-rj-val">$1.122.000</div>
+          <div class="esc-py-row">PedidosYa: $1.034.000</div>
+          <div class="esc-diferencia">+$88.000 más</div>
+        </div>
+      </div>
+
+      <div class="highlight-box amber" style="margin-top:16px;margin-bottom:0">
+        <p><strong>Importante:</strong> Estos números son solo por las entregas. En Reparto Justo también puedes ganar <strong>ingresos residuales por los negocios que incorpores</strong> — eso es dinero extra que llega aunque no estés trabajando. Lo explicamos en la pestaña "Ganancias extra".</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">¿Cuándo y cómo me pagan?</div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Cada entrega suma a tu saldo</div>
+          <div class="step-text">Al marcar "Entregué el pedido", la tarifa se acredita automáticamente en tu cuenta de la app.</div>
         </div>
       </div>
       <div class="step">
-        <div class="step-num">5</div>
+        <div class="step-num">2</div>
         <div>
-          <div class="step-title">Cierre</div>
-          <div class="step-text">Una sola cosa que hacer ahora.</div>
-          <div class="quote">"Te registro hoy, te explico la app en 10 minutos y mañana puedes estar recibiendo pedidos. ¿Tienes vehículo propio?"</div>
+          <div class="step-title">Liquidación semanal</div>
+          <div class="step-text">El administrador genera tu liquidación cada semana. Puedes ver el monto en la app antes de que te lo transfieran.</div>
         </div>
       </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Tabla de tarifas — mostrar en la conversación</div>
-      <table class="tarifa-table">
-        <thead>
-          <tr><th>Distancia</th><th>Ganancia por entrega</th><th>Nota</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1 km</td><td class="val">$1.250</td><td style="color:var(--text3);font-size:12px">Tarifa base</td></tr>
-          <tr class="highlight"><td>2 km</td><td class="val">$1.900</td><td style="color:var(--text3);font-size:12px">Más frecuente</td></tr>
-          <tr class="highlight"><td>3 km</td><td class="val">$2.550</td><td style="color:var(--text3);font-size:12px">Más frecuente</td></tr>
-          <tr><td>4 km</td><td class="val">$3.200</td><td style="color:var(--text3);font-size:12px"></td></tr>
-          <tr><td>5 km</td><td class="val">$3.850</td><td style="color:var(--text3);font-size:12px">Entrega larga</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Escenarios de ingresos mensuales (26 días hábiles · promedio 2.5 km/entrega)</div>
-      <div class="scenario-grid">
-        <div class="sc low">
-          <div class="sc-label">Inicio</div>
-          <div class="sc-deliveries">8 entregas</div>
-          <div class="sc-sub">por día</div>
-          <div class="sc-total" style="color:var(--text2);">~$465.000/mes</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Transferencia directa a tu cuenta</div>
+          <div class="step-text">Recibes el 100% de lo acumulado por transferencia bancaria, sin descuentos ni comisiones de plataforma.</div>
         </div>
-        <div class="sc mid">
-          <div class="sc-label">Medio</div>
-          <div class="sc-deliveries">12 entregas</div>
-          <div class="sc-sub">por día</div>
-          <div class="sc-total">~$698.000/mes</div>
-        </div>
-        <div class="sc high">
-          <div class="sc-label">Alto</div>
-          <div class="sc-deliveries">15 entregas</div>
-          <div class="sc-sub">por día</div>
-          <div class="sc-total">~$873.000/mes</div>
-        </div>
-      </div>
-      <p style="font-size:12px;color:var(--text3);margin-top:4px;">* Solo del envío. Sin incluir residuales por comercios referidos.</p>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Objeciones más comunes</div>
-      <div class="obj">
-        <div class="obj-q">"¿Y si no hay pedidos?"</div>
-        <div class="obj-a">Los negocios ya tienen sus clientes regulares. No dependes de que aparezca demanda — el negocio ya la tiene y te llama directamente. Además, mientras más negocios haya en la plataforma, más pedidos disponibles tienes.</div>
-      </div>
-      <div class="obj">
-        <div class="obj-q">"¿Cuándo me pagan?"</div>
-        <div class="obj-a">El pago del envío lo recibes directamente del cliente al momento de la entrega. Los residuales por comercios referidos se liquidan semanalmente por transferencia bancaria.</div>
-      </div>
-      <div class="obj">
-        <div class="obj-q">"¿Es como PedidosYa?"</div>
-        <div class="obj-a">La diferencia clave es la tarifa transparente: aquí siempre sabes exactamente cuánto vas a ganar por cada entrega antes de salir. No hay algoritmos que bajen tu pago según la hora o la zona.</div>
-      </div>
-      <div class="obj">
-        <div class="obj-q">"¿Tengo que pagar algo para entrar?"</div>
-        <div class="obj-a">Nada. Registrarse es completamente gratis. Solo necesitas vehículo propio y el celular que ya tienes.</div>
-      </div>
-      <div class="obj">
-        <div class="obj-q">"¿Cuántas entregas puedo hacer al día?"</div>
-        <div class="obj-a">Depende de tu disponibilidad. Un rider a tiempo completo en horario de almuerzo y tarde puede hacer 12 a 15 entregas al día. A tiempo parcial, 6 a 8 entregas es un objetivo cómodo.</div>
       </div>
     </div>
 
   </div>
 
-  <!-- ═══ WHATSAPP ═══ -->
+  <!-- ═══ TAB 3: GANANCIAS EXTRA ═══ -->
+  <div class="panel" id="tab-extra">
+
+    <!-- RESIDUAL POR LOCALES -->
+    <div class="card">
+      <div class="card-title">💰 Ingreso residual por incorporar locales</div>
+      <div class="highlight-box green" style="margin-bottom:16px">
+        <p>Cada vez que convences a un negocio de unirse a Reparto Justo, <strong>ganas el 8% de lo que la plataforma cobra por cada pedido que salga de ese local</strong> — para siempre, aunque tú no lo entregues. Es ingreso pasivo que se acumula mes a mes.</p>
+      </div>
+
+      <div class="sec-label">¿Cuánto es el 8%?</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:14px">Reparto Justo cobra $500 al negocio por cada pedido publicado. El 8% de eso = <strong>$40 por cada pedido que haga el local.</strong></p>
+
+      <div class="sec-label" style="margin-bottom:10px">Ejemplos según actividad del local</div>
+
+      <div class="residual-card" style="margin-bottom:10px">
+        <div class="rc-header">
+          <div class="rc-icon">🏪</div>
+          <div>
+            <div class="rc-title">Local pequeño</div>
+            <div class="rc-sub">8 pedidos por día</div>
+          </div>
+        </div>
+        <div class="rc-row">
+          <span class="rc-label">Pedidos al mes (22 días)</span>
+          <span class="rc-val">176 pedidos</span>
+        </div>
+        <div class="rc-row">
+          <span class="rc-label">Tu residual mensual</span>
+          <span class="rc-val">$7.040</span>
+        </div>
+        <div class="rc-nota">176 pedidos × $40 = $7.040/mes que recibes tú, sin hacer nada extra.</div>
+      </div>
+
+      <div class="residual-card" style="margin-bottom:10px">
+        <div class="rc-header">
+          <div class="rc-icon">🍕</div>
+          <div>
+            <div class="rc-title">Local mediano</div>
+            <div class="rc-sub">15 pedidos por día</div>
+          </div>
+        </div>
+        <div class="rc-row">
+          <span class="rc-label">Pedidos al mes (22 días)</span>
+          <span class="rc-val">330 pedidos</span>
+        </div>
+        <div class="rc-row">
+          <span class="rc-label">Tu residual mensual</span>
+          <span class="rc-val">$13.200</span>
+        </div>
+        <div class="rc-nota">330 pedidos × $40 = $13.200/mes de ingreso pasivo.</div>
+      </div>
+
+      <div class="residual-card">
+        <div class="rc-header">
+          <div class="rc-icon">🏬</div>
+          <div>
+            <div class="rc-title">Local activo</div>
+            <div class="rc-sub">25 pedidos por día</div>
+          </div>
+        </div>
+        <div class="rc-row">
+          <span class="rc-label">Pedidos al mes (22 días)</span>
+          <span class="rc-val">550 pedidos</span>
+        </div>
+        <div class="rc-row">
+          <span class="rc-label">Tu residual mensual</span>
+          <span class="rc-val">$22.000</span>
+        </div>
+        <div class="rc-nota">550 pedidos × $40 = $22.000/mes. Y si incorporas 3 locales así, son $66.000 mensuales extra solo por haberlos convencido.</div>
+      </div>
+
+      <div class="highlight-box purple" style="margin-top:14px;margin-bottom:0">
+        <p><strong>Ejemplo real:</strong> un rider que incorpora 5 locales de actividad variada puede estar recibiendo entre <strong>$30.000 y $80.000 al mes</strong> en residual — sin hacer ninguna entrega adicional.</p>
+      </div>
+    </div>
+
+    <!-- BONO RIDER REFERIDO -->
+    <div class="card">
+      <div class="card-title">🤝 Bono por rider referido — $2.500</div>
+
+      <div class="bono-card" style="margin-bottom:16px">
+        <div class="bono-monto">$2.500</div>
+        <div class="bono-label">pago único por cada rider que incorpores a la plataforma</div>
+
+        <div class="sec-label" style="color:var(--purple-mid);margin-bottom:10px">Condiciones para cobrar el bono</div>
+        <div class="condicion">
+          <div class="condicion-num">1</div>
+          <div class="condicion-text">El rider referido debe registrarse con <strong>tu código personal de referido</strong> en la app.</div>
+        </div>
+        <div class="condicion">
+          <div class="condicion-num">2</div>
+          <div class="condicion-text">Debe completar un <strong>mínimo de 15 entregas dentro de sus primeros 30 días</strong> desde el registro — así verificamos que es un rider real y activo.</div>
+        </div>
+        <div class="condicion">
+          <div class="condicion-num">3</div>
+          <div class="condicion-text">El bono se paga el <strong>día 35 desde el registro</strong> del rider referido, junto con tu liquidación semanal normal.</div>
+        </div>
+        <div class="condicion">
+          <div class="condicion-num">4</div>
+          <div class="condicion-text">Tanto tú como el rider referido deben tener la cuenta <strong>activa y sin suspensiones</strong> al momento del pago.</div>
+        </div>
+        <div class="condicion">
+          <div class="condicion-num">5</div>
+          <div class="condicion-text">Cada persona solo puede ser referida una vez. <strong>No hay límite</strong> de cuántos riders puedes referir.</div>
+        </div>
+      </div>
+
+      <div class="highlight-box amber" style="margin-bottom:0">
+        <p><strong>¿Por qué las condiciones?</strong> Para evitar cuentas falsas. El sistema verifica que el rider referido haga entregas reales antes de pagar el bono. Si el rider no cumple las 15 entregas en 30 días, el bono no se genera — pero puedes volver a motivarlo para que lo logre.</p>
+      </div>
+    </div>
+
+    <!-- RESUMEN COMBINADO -->
+    <div class="card">
+      <div class="card-title">Ejemplo combinado — un mes con RJ</div>
+      <div style="background:var(--bg);border-radius:var(--r-sm);padding:16px">
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">
+          <span style="color:var(--text2)">Entregas (15/día × 22 días a 3km)</span>
+          <strong>$841.500</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">
+          <span style="color:var(--text2)">Residual 2 locales medianos</span>
+          <strong>$26.400</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">
+          <span style="color:var(--text2)">2 bonos por riders referidos</span>
+          <strong>$5.000</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0 0;font-size:15px">
+          <strong>Total del mes</strong>
+          <strong style="color:var(--teal-dk);font-size:18px">$872.900</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB 4: WHATSAPP ═══ -->
   <div class="panel" id="tab-whatsapp">
 
     <div class="card">
-      <div class="card-title">Mensaje 1 — Primer contacto <span class="tag tag-green">Enviar primero</span></div>
+      <div class="card-title">Mensaje 1 — Presentación general</div>
       <div class="wa-phone">
         <div class="wa-header">
-          <div class="wa-av">RJ</div>
-          <div><div class="wa-name">Reparto Justo</div><div class="wa-status">Delivery sin comisiones</div></div>
+          <div class="wa-av">🏍️</div>
+          <div>
+            <div class="wa-name">Reparto Justo</div>
+            <div class="wa-status">Mensaje de presentación</div>
+          </div>
         </div>
-        <div class="bubble">
-          Hola [nombre] 👋 te contacto de Reparto Justo, una plataforma de delivery nueva en la zona.<br><br>
-          Estamos buscando riders con vehículo para sumar al equipo. La diferencia con otras apps: tarifa fija por kilómetro — siempre sabes cuánto vas a ganar antes de salir.<br><br>
-          ¿Tienes 5 minutos para que te cuente cómo funciona?
-          <div class="bubble-time">✓✓ 10:32</div>
+        <div class="bubble" id="msg1">Hola! 👋 Te cuento de Reparto Justo, una app de delivery donde tú decides cuándo trabajar y *ganas más por km recorrido*.
+
+🏍️ *¿Cómo funciona?*
+— Activas la app cuando quieres trabajar
+— Recibes pedidos de negocios cercanos
+— Retiras y entregas — la app te guía paso a paso
+— Tu saldo se acumula y te lo transferimos cada semana
+
+💰 *¿Cuánto se gana?*
+— 3 km = $2.550 por entrega
+— 5 km = $3.850 por entrega
+— 15 entregas/día = ~$841.000 al mes
+
+Además, si incorporas locales a la app, ganas un residual *por cada pedido que hagan ellos* — aunque tú no lo entregues.
+
+¿Te interesa saber más?
+<div class="bubble-time">Ahora ✓✓</div>
         </div>
       </div>
-      <button class="copy-btn" onclick="copiar(this, 'Hola [nombre] 👋 te contacto de Reparto Justo, una plataforma de delivery nueva en la zona.\n\nEstamos buscando riders con vehículo para sumar al equipo. La diferencia con otras apps: tarifa fija por kilómetro — siempre sabes cuánto vas a ganar antes de salir.\n\n¿Tienes 5 minutos para que te cuente cómo funciona?')">Copiar mensaje</button>
+      <button class="copy-btn" onclick="copiar('msg1',this)">📋 Copiar mensaje</button>
     </div>
 
     <div class="card">
-      <div class="card-title">Mensaje 2 — Con los números <span class="tag tag-amber">Si responde con interés</span></div>
+      <div class="card-title">Mensaje 2 — Énfasis en tarifas y comparación</div>
       <div class="wa-phone">
         <div class="wa-header">
-          <div class="wa-av">RJ</div>
-          <div><div class="wa-name">Reparto Justo</div><div class="wa-status">Delivery sin comisiones</div></div>
+          <div class="wa-av">🏍️</div>
+          <div>
+            <div class="wa-name">Reparto Justo</div>
+            <div class="wa-status">Comparación de tarifas</div>
+          </div>
         </div>
-        <div class="bubble">
-          Te paso los números concretos 👇<br><br>
-          📍 <strong>Tarifa por entrega:</strong><br>
-          &nbsp;&nbsp;&nbsp;• 2 km = $1.900<br>
-          &nbsp;&nbsp;&nbsp;• 3 km = $2.550<br>
-          &nbsp;&nbsp;&nbsp;• 5 km = $3.850<br><br>
-          📦 <strong>Ingresos al mes (solo envíos):</strong><br>
-          &nbsp;&nbsp;&nbsp;• 8 entregas/día → ~$465.000<br>
-          &nbsp;&nbsp;&nbsp;• 12 entregas/día → ~$698.000<br>
-          &nbsp;&nbsp;&nbsp;• 15 entregas/día → ~$873.000<br><br>
-          El registro es gratis. Solo necesitas vehículo propio.<br><br>
-          ¿Te interesa? Te explico la app en 10 minutos cuando quieras 🙌
-          <div class="bubble-time">✓✓ 10:35</div>
+        <div class="bubble" id="msg2">¿Trabajas con PedidosYa u otra app? Mira la diferencia en lo que ganas por km:
+
+📊 *Tarifa por entrega (a 3 km):*
+PedidosYa → $2.350
+Reparto Justo → *$2.550* ✅
+
+A 4 km: PedidosYa $2.670 / RJ *$3.200* ✅
+A 5 km: PedidosYa $2.990 / RJ *$3.850* ✅
+
+Y lo mejor: *en RJ la tarifa que ves es lo que recibes* — sin descuentos de la plataforma, sin sorpresas.
+
+Trabajando 15 entregas al día, 22 días al mes:
+➡️ *$841.500 mensual* solo en entregas.
+
+¿Quieres más info?
+<div class="bubble-time">Ahora ✓✓</div>
         </div>
       </div>
-      <button class="copy-btn" onclick="copiar(this, 'Te paso los números concretos 👇\n\n📍 Tarifa por entrega:\n   • 2 km = $1.900\n   • 3 km = $2.550\n   • 5 km = $3.850\n\n📦 Ingresos al mes (solo envíos):\n   • 8 entregas/día → ~$465.000\n   • 12 entregas/día → ~$698.000\n   • 15 entregas/día → ~$873.000\n\nEl registro es gratis. Solo necesitas vehículo propio.\n\n¿Te interesa? Te explico la app en 10 minutos cuando quieras 🙌')">Copiar mensaje</button>
+      <button class="copy-btn" onclick="copiar('msg2',this)">📋 Copiar mensaje</button>
     </div>
 
     <div class="card">
-      <div class="card-title">Mensaje 3 — Seguimiento <span class="tag tag-amber">Si no responde en 2 días</span></div>
+      <div class="card-title">Mensaje 3 — Ingreso residual por locales</div>
       <div class="wa-phone">
         <div class="wa-header">
-          <div class="wa-av">RJ</div>
-          <div><div class="wa-name">Reparto Justo</div><div class="wa-status">Delivery sin comisiones</div></div>
+          <div class="wa-av">🏍️</div>
+          <div>
+            <div class="wa-name">Reparto Justo</div>
+            <div class="wa-status">Residual por locales</div>
+          </div>
         </div>
-        <div class="bubble">
-          Hola [nombre], solo quería saber si tuviste tiempo de revisar lo que te mandé de Reparto Justo.<br><br>
-          Estamos incorporando riders esta semana. Cualquier duda te respondo al tiro 🙌
-          <div class="bubble-time">✓✓ 09:14</div>
-        </div>
-      </div>
-      <button class="copy-btn" onclick="copiar(this, 'Hola [nombre], solo quería saber si tuviste tiempo de revisar lo que te mandé de Reparto Justo.\n\nEstamos incorporando riders esta semana. Cualquier duda te respondo al tiro 🙌')">Copiar mensaje</button>
-    </div>
+        <div class="bubble" id="msg3">En Reparto Justo hay algo que otras apps no tienen: *ingresos residuales por los locales que sumas*.
 
-  </div>
+🏪 *¿Cómo funciona?*
+Si convences a un negocio de usar la app, ganas el *8% de cada pedido que ellos publiquen* — para siempre.
 
-  <!-- ═══ FOLLETO ═══ -->
-  <div class="panel" id="tab-folleto">
+Un local mediano hace ~15 pedidos/día.
+15 × 22 días × $40 = *$13.200 al mes* solo de ese local.
 
-    <div class="folleto-header">
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:6px;">Únete al equipo</div>
-      <div class="fh-title">Reparto Justo</div>
-      <div class="fh-sub">Riders — gana más, trabaja inteligente</div>
-      <div class="fh-tag">Registro 100% gratis · Solo necesitas vehículo</div>
-    </div>
+Tú no tienes que entregar ese pedido para ganar. El dinero llega igual 💸
 
-    <div class="card">
-      <div class="card-title">Tarifa por entrega — siempre transparente</div>
-      <table class="tarifa-table">
-        <thead><tr><th>Distancia</th><th>Tú ganas</th></tr></thead>
-        <tbody>
-          <tr><td>Hasta 1 km</td><td class="val">$1.250</td></tr>
-          <tr class="highlight"><td>2 km</td><td class="val">$1.900</td></tr>
-          <tr class="highlight"><td>3 km</td><td class="val">$2.550</td></tr>
-          <tr><td>4 km</td><td class="val">$3.200</td></tr>
-          <tr><td>5 km</td><td class="val">$3.850</td></tr>
-        </tbody>
-      </table>
-    </div>
+Si sumas 3 locales así, son más de *$35.000 extra al mes* de ingreso pasivo.
 
-    <div class="card">
-      <div class="card-title">¿Cuánto puedes ganar al mes?</div>
-      <div class="ef-header">26 días hábiles · promedio 2.5 km por entrega</div>
-      <div class="escenarios-folleto">
-        <div class="ef bajo">
-          <div class="ef-val">~$465K</div>
-          <div class="ef-lbl">8 entregas/día</div>
-        </div>
-        <div class="ef medio">
-          <div class="ef-val">~$698K</div>
-          <div class="ef-lbl">12 entregas/día</div>
-        </div>
-        <div class="ef alto">
-          <div class="ef-val">~$873K</div>
-          <div class="ef-lbl">15 entregas/día</div>
+Más el bono de *$2.500 por cada rider que refieras* (con condiciones simples de actividad).
+
+¿Hablamos?
+<div class="bubble-time">Ahora ✓✓</div>
         </div>
       </div>
+      <button class="copy-btn" onclick="copiar('msg3',this)">📋 Copiar mensaje</button>
     </div>
-
-    <div class="income-table">
-      <div class="it-title">Ejemplo real — rider a tiempo completo al mes</div>
-      <div class="it-row"><span class="il">12 entregas/día × 26 días (avg 2.5 km)</span><span class="iv">$698.100</span></div>
-      <div class="it-row"><span class="il">Residuales por comercios referidos</span><span class="iv">+variable</span></div>
-      <div class="it-sep"></div>
-      <div class="it-row it-total"><span class="il">Ingreso base estimado</span><span class="iv">$698.000+</span></div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">¿Por qué Reparto Justo?</div>
-      <div class="benefit-row">
-        <div class="b-dot" style="background:var(--teal-mid);"></div>
-        <div><strong>Tarifa transparente</strong> — sabes exactamente cuánto ganas antes de salir. Sin algoritmos, sin sorpresas.</div>
-      </div>
-      <div class="benefit-row">
-        <div class="b-dot" style="background:var(--teal-mid);"></div>
-        <div><strong>Pedidos directos</strong> — los negocios ya tienen sus clientes. Tú vas al retiro, no esperas que aparezca demanda.</div>
-      </div>
-      <div class="benefit-row">
-        <div class="b-dot" style="background:var(--purple-mid);"></div>
-        <div><strong>Ingreso extra</strong> — trae negocios a la plataforma y gana un porcentaje de sus pedidos, mes a mes.</div>
-      </div>
-      <div class="benefit-row">
-        <div class="b-dot" style="background:var(--teal-mid);"></div>
-        <div><strong>Flexible</strong> — trabajas cuando quieres. Sin horario fijo, sin jefe.</div>
-      </div>
-      <div class="benefit-row">
-        <div class="b-dot" style="background:var(--green-mid);"></div>
-        <div><strong>Gratis para entrar</strong> — registro sin costo. Solo necesitas vehículo propio y tu celular.</div>
-      </div>
-    </div>
-
-    <div class="cta-box">
-      <div class="cta-title">¿Quieres sumarte?</div>
-      <div class="cta-sub">Escríbenos por WhatsApp o pregúntale al rider que te compartió esto</div>
-    </div>
-
-    <button onclick="window.print()" style="width:100%;padding:12px;border-radius:var(--r-sm);border:.5px solid var(--border2);background:var(--bg2);font-size:13px;font-weight:500;color:var(--text2);cursor:pointer;margin-top:4px;">Imprimir o guardar como PDF</button>
 
   </div>
 
@@ -446,14 +586,16 @@ function show(id, btn) {
   btn.classList.add('active');
 }
 
-function copiar(btn, texto) {
+function copiar(id, btn) {
+  const el = document.getElementById(id);
+  // Obtener solo el texto visible (excluir bubble-time)
+  const clone = el.cloneNode(true);
+  clone.querySelectorAll('.bubble-time').forEach(e => e.remove());
+  const texto = clone.innerText.trim();
   navigator.clipboard.writeText(texto).then(() => {
-    btn.textContent = 'Copiado ✓';
+    btn.textContent = '✓ Copiado';
     btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copiar mensaje'; btn.classList.remove('copied'); }, 2000);
-  }).catch(() => {
-    btn.textContent = 'Copia el texto de arriba';
-    setTimeout(() => { btn.textContent = 'Copiar mensaje'; }, 2000);
+    setTimeout(() => { btn.textContent = '📋 Copiar mensaje'; btn.classList.remove('copied'); }, 2000);
   });
 }
 </script>
