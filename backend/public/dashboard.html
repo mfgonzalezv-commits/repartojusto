@@ -210,6 +210,7 @@ tbody tr:hover { background: var(--bg); }
     <button class="tab-btn" data-tab="riders">🏍️ Riders</button>
     <button class="tab-btn" data-tab="comercios">🏪 Comercios</button>
     <button class="tab-btn" data-tab="liquidaciones">💰 Liquidaciones</button>
+    <button class="tab-btn" data-tab="usuarios">👤 Usuarios</button>
   </div>
 
   <div class="main">
@@ -320,6 +321,33 @@ tbody tr:hover { background: var(--bg); }
       </div>
     </div>
 
+    <!-- ══ TAB: USUARIOS ══ -->
+    <div class="section" id="sec-usuarios">
+      <div class="section-title">Usuarios</div>
+      <div class="section-sub">Todos los usuarios registrados en la plataforma</div>
+
+      <div class="card">
+        <div class="card-header">
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <select id="filtro-rol" class="btn btn-outline btn-sm" style="padding:6px 10px" onchange="cargarUsuarios()">
+              <option value="">Todos los roles</option>
+              <option value="admin">Admin</option>
+              <option value="negocio">Negocio</option>
+              <option value="rider">Rider</option>
+            </select>
+            <button class="btn btn-outline btn-sm" onclick="cargarUsuarios()">↻ Actualizar</button>
+          </div>
+          <span id="usuarios-count" style="font-size:12px;color:var(--text3)"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Rol</th><th>Estado</th><th>Registro</th><th>Acciones</th></tr></thead>
+            <tbody id="tbody-usuarios"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <!-- ══ TAB: LIQUIDACIONES ══ -->
     <div class="section" id="sec-liquidaciones">
       <div class="section-title">Liquidaciones</div>
@@ -363,6 +391,26 @@ tbody tr:hover { background: var(--bg); }
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- ═══ MODAL EDITAR USUARIO ═══ -->
+<div class="modal-overlay" id="modal-editar">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Editar usuario</h3>
+      <button class="modal-close" onclick="cerrarModalEditar()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="field"><label>Nombre</label><input type="text" id="edit-nombre" placeholder="Nombre completo"></div>
+      <div class="field"><label>Email</label><input type="email" id="edit-email" placeholder="email@ejemplo.cl"></div>
+      <div class="field"><label>Teléfono</label><input type="tel" id="edit-telefono" placeholder="+56912345678"></div>
+      <div class="field"><label>Nueva contraseña <span style="color:var(--text3);font-weight:400">(dejar vacío para no cambiar)</span></label><input type="password" id="edit-password" placeholder="••••••••"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="cerrarModalEditar()">Cancelar</button>
+      <button class="btn btn-primary" onclick="guardarEdicionUsuario()">Guardar</button>
+    </div>
   </div>
 </div>
 
@@ -464,6 +512,7 @@ function cargarSeccion(nombre) {
   if (nombre === 'riders')        cargarRiders();
   if (nombre === 'comercios')     cargarComercios();
   if (nombre === 'liquidaciones') cargarLiquidaciones();
+  if (nombre === 'usuarios')      cargarUsuarios();
 }
 
 // ── RESUMEN ──
@@ -663,6 +712,92 @@ async function marcarPagada(id) {
     await api(`/admin/liquidaciones/${id}/pagar`, { method: 'PUT' });
     toast('Liquidación marcada como pagada', 'success');
     cargarLiquidaciones();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── USUARIOS ──
+let usuariosData = [];
+async function cargarUsuarios() {
+  const rol = $('filtro-rol').value;
+  const url = `/admin/usuarios?limit=100${rol ? '&rol=' + rol : ''}`;
+  try {
+    usuariosData = await api(url);
+    $('usuarios-count').textContent = `${usuariosData.length} usuarios`;
+
+    const rolBadge = { admin: 'badge-asignado', negocio: 'badge-retiro', rider: 'badge-en_camino' };
+    $('tbody-usuarios').innerHTML = usuariosData.length ? usuariosData.map(u => `
+      <tr>
+        <td style="font-weight:600">${u.nombre || '—'}</td>
+        <td style="color:var(--text2);font-size:12px">${u.email}</td>
+        <td style="color:var(--text2);font-size:12px">${u.telefono || '—'}</td>
+        <td><span class="badge ${rolBadge[u.rol] || ''}">${u.rol}</span></td>
+        <td><span class="badge ${u.activo ? 'badge-activo' : 'badge-inactivo'}">${u.activo ? 'Activo' : 'Inactivo'}</span></td>
+        <td style="font-size:12px;color:var(--text3)">${fmtDateShort(u.created_at)}</td>
+        <td>
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-outline btn-sm" onclick="abrirEditarUsuario('${u.id}')">Editar</button>
+            <button class="btn btn-outline btn-sm" onclick="toggleUsuarioDesde('${u.id}', ${u.activo})">${u.activo ? 'Desactivar' : 'Activar'}</button>
+            ${u.rol !== 'admin' ? `<button class="btn btn-danger btn-sm" onclick="eliminarUsuario('${u.id}', '${(u.nombre||u.email).replace(/'/g,"\\'")}')">Eliminar</button>` : ''}
+          </div>
+        </td>
+      </tr>
+    `).join('') : '<tr><td colspan="7" class="empty">No hay usuarios</td></tr>';
+  } catch(e) { toast('Error cargando usuarios: ' + e.message, 'error'); }
+}
+
+async function toggleUsuarioDesde(id, activo) {
+  try {
+    await api(`/admin/usuarios/${id}/activo`, { method: 'PUT', body: JSON.stringify({ activo: !activo }) });
+    toast(activo ? 'Usuario desactivado' : 'Usuario activado', 'success');
+    cargarUsuarios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function eliminarUsuario(id, nombre) {
+  if (!confirm(`¿Eliminar a "${nombre}" y todos sus datos? Esta acción no se puede deshacer.`)) return;
+  try {
+    await api(`/admin/usuarios/${id}`, { method: 'DELETE' });
+    toast('Usuario eliminado', 'success');
+    cargarUsuarios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── MODAL EDITAR USUARIO ──
+let editandoUserId = null;
+
+function abrirEditarUsuario(id) {
+  const u = usuariosData.find(x => x.id === id);
+  if (!u) return;
+  editandoUserId = id;
+  $('edit-nombre').value = u.nombre || '';
+  $('edit-email').value = u.email || '';
+  $('edit-telefono').value = u.telefono || '';
+  $('edit-password').value = '';
+  $('modal-editar').classList.add('open');
+}
+
+function cerrarModalEditar() {
+  $('modal-editar').classList.remove('open');
+  editandoUserId = null;
+}
+
+async function guardarEdicionUsuario() {
+  if (!editandoUserId) return;
+  const body = {};
+  const nombre = $('edit-nombre').value.trim();
+  const email = $('edit-email').value.trim();
+  const telefono = $('edit-telefono').value.trim();
+  const password = $('edit-password').value;
+  if (nombre) body.nombre = nombre;
+  if (email) body.email = email;
+  if (telefono) body.telefono = telefono;
+  if (password) body.password = password;
+
+  try {
+    await api(`/admin/usuarios/${editandoUserId}`, { method: 'PUT', body: JSON.stringify(body) });
+    toast('Usuario actualizado', 'success');
+    cerrarModalEditar();
+    cargarUsuarios();
   } catch(e) { toast(e.message, 'error'); }
 }
 
