@@ -234,6 +234,23 @@ router.get('/negocios', async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+// ── PUT /api/admin/negocios/:id/modo ─────────────────────────────────────────
+// Cambiar modo del negocio: 'prueba' → 'activo'
+router.put('/negocios/:id/modo',
+  [body('modo').isIn(['prueba', 'activo'])],
+  validar,
+  async (req, res, next) => {
+    try {
+      const { rows } = await db(
+        `UPDATE negocios SET modo = $1 WHERE id = $2 RETURNING id, nombre_comercial, modo`,
+        [req.body.modo, req.params.id]
+      );
+      if (!rows[0]) return res.status(404).json({ error: 'Negocio no encontrado' });
+      res.json(rows[0]);
+    } catch (err) { next(err); }
+  }
+);
+
 // ── PUT /api/admin/negocios/:id/activo ────────────────────────────────────────
 router.put('/negocios/:id/activo',
   [body('activo').isBoolean()],

@@ -314,7 +314,7 @@ tbody tr:hover { background: var(--bg); }
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Nombre</th><th>Email</th><th>Categoría</th><th>Dirección</th><th>Tarjeta</th><th>Estado</th><th>Acción</th></tr></thead>
+            <thead><tr><th>Nombre</th><th>Email</th><th>Categoría</th><th>Modo</th><th>Estado</th><th>Acciones</th></tr></thead>
             <tbody id="tbody-comercios"></tbody>
           </table>
         </div>
@@ -651,21 +651,49 @@ async function cargarRiders() {
 // ── COMERCIOS ──
 async function cargarComercios() {
   try {
-    const rows = await api('/admin/usuarios?rol=negocio&limit=50');
-    $('tbody-comercios').innerHTML = rows.length ? rows.map(u => `
-      <tr>
-        <td style="font-weight:600">${u.nombre_comercial || u.nombre}</td>
-        <td style="color:var(--text2);font-size:12px">${u.email}</td>
-        <td style="color:var(--text2)">${u.categoria || '—'}</td>
-        <td style="font-size:12px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${u.direccion || '—'}</td>
-        <td><span class="badge ${u.tarjeta_ultimos4 ? 'badge-activo' : 'badge-inactivo'}">${u.tarjeta_ultimos4 ? '✓ Registrada' : 'Sin tarjeta'}</span></td>
-        <td><span class="badge ${u.activo ? 'badge-activo' : 'badge-inactivo'}">${u.activo ? 'Activo' : 'Inactivo'}</span></td>
+    const rows = await api('/admin/negocios');
+    $('tbody-comercios').innerHTML = rows.length ? rows.map(n => {
+      const enPrueba = !n.modo || n.modo === 'prueba';
+      return `<tr>
+        <td style="font-weight:600">${n.nombre_comercial}</td>
+        <td style="color:var(--text2);font-size:12px">${n.email}</td>
+        <td style="color:var(--text2)">${n.categoria || '—'}</td>
         <td>
-          <button class="btn btn-outline btn-sm" onclick="toggleUsuario('${u.id}', ${u.activo})">${u.activo ? 'Desactivar' : 'Activar'}</button>
+          <span class="badge ${enPrueba ? 'badge-pendiente' : 'badge-activo'}">
+            ${enPrueba ? '🧪 Prueba' : '✓ Activo'}
+          </span>
         </td>
-      </tr>
-    `).join('') : '<tr><td colspan="7" class="empty">No hay comercios registrados</td></tr>';
+        <td><span class="badge ${n.activo ? 'badge-activo' : 'badge-inactivo'}">${n.activo ? 'Habilitado' : 'Bloqueado'}</span></td>
+        <td>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            ${enPrueba
+              ? `<button class="btn btn-primary btn-sm" onclick="activarNegocio('${n.id}')">Activar</button>`
+              : `<button class="btn btn-outline btn-sm" onclick="volverPrueba('${n.id}')">→ Prueba</button>`
+            }
+            <button class="btn btn-outline btn-sm" onclick="toggleUsuario('${n.usuario_id}', ${n.activo})">${n.activo ? 'Bloquear' : 'Habilitar'}</button>
+          </div>
+        </td>
+      </tr>`;
+    }).join('') : '<tr><td colspan="6" class="empty">No hay comercios registrados</td></tr>';
   } catch(e) { toast('Error cargando comercios: ' + e.message, 'error'); }
+}
+
+async function activarNegocio(negocioId) {
+  if (!confirm('¿Activar este negocio? A partir de ahora se le cobrará por cada pedido.')) return;
+  try {
+    await api(`/admin/negocios/${negocioId}/modo`, { method: 'PUT', body: JSON.stringify({ modo: 'activo' }) });
+    toast('Negocio activado correctamente', 'success');
+    cargarComercios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function volverPrueba(negocioId) {
+  if (!confirm('¿Volver este negocio a modo prueba? No se le cobrará hasta que lo actives.')) return;
+  try {
+    await api(`/admin/negocios/${negocioId}/modo`, { method: 'PUT', body: JSON.stringify({ modo: 'prueba' }) });
+    toast('Negocio en modo prueba', 'success');
+    cargarComercios();
+  } catch(e) { toast(e.message, 'error'); }
 }
 
 // ── LIBERAR PEDIDO ──

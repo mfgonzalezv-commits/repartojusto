@@ -424,6 +424,11 @@
     </div>
   </div>
 
+  <!-- Banner modo prueba -->
+  <div id="banner-prueba" style="display:none;background:#FEF3C7;border-bottom:2px solid #FFCC00;padding:10px 20px;font-size:13px;font-weight:600;color:#92400E;text-align:center">
+    🧪 Estás en <strong>modo prueba</strong> — los pedidos no tienen costo hasta que el administrador active tu cuenta.
+  </div>
+
   <div class="main">
     <!-- Contenido full-width sin columna derecha -->
     <div style="height:100%">
@@ -903,6 +908,10 @@ async function iniciarApp() {
     if (perfil.activo) {
       btnAbierto.textContent = '● Abierto';
       btnAbierto.className = 'badge-abierto open';
+    }
+    // Mostrar banner si está en modo prueba
+    if (!perfil.modo || perfil.modo === 'prueba') {
+      $('banner-prueba').style.display = 'block';
     }
   } catch {}
 

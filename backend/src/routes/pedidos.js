@@ -42,30 +42,33 @@ router.post('/',
     const { cliente_nombre, cliente_telefono, direccion_entrega, lat_entrega, lng_entrega, distancia_km, valor_producto, notas } = req.body;
     try {
       const { rows: [negocio] } = await db(
-        `SELECT id, tarjeta_customer_id, tarjeta_token
+        `SELECT id, tarjeta_customer_id, tarjeta_token, modo
          FROM negocios WHERE usuario_id = $1 AND activo = true`,
         [req.usuario.id]
       );
       if (!negocio) return res.status(404).json({ error: 'Negocio no encontrado' });
 
-      // Verificar tarjeta registrada
-      if (!negocio.tarjeta_token) {
-        return res.status(402).json({
-          error: 'Tarjeta requerida',
-          detalle: 'Debes registrar una tarjeta de crédito o débito antes de publicar pedidos.'
+      const enPrueba = negocio.modo === 'prueba';
+
+      // En modo activo, verificar tarjeta y cobrar
+      if (!enPrueba) {
+        if (!negocio.tarjeta_token) {
+          return res.status(402).json({
+            error: 'Tarjeta requerida',
+            detalle: 'Debes registrar una tarjeta de crédito o débito antes de publicar pedidos.'
+          });
+        }
+        const tarifa_entrega_pre = calcularTarifa(distancia_km);
+        const cobro = await cobros.cobrar({
+          customerId: negocio.tarjeta_customer_id,
+          monto: config.APP_FEE + tarifa_entrega_pre,
         });
+        if (!cobro.ok) {
+          return res.status(402).json({ error: 'Pago rechazado', detalle: 'No se pudo cobrar el servicio. Verifica tu tarjeta.' });
+        }
       }
 
       const tarifa_entrega = calcularTarifa(distancia_km);
-
-      // Cobrar al negocio: app_fee ($500) + tarifa_entrega (va al rider)
-      const cobro = await cobros.cobrar({
-        customerId: negocio.tarjeta_customer_id,
-        monto: config.APP_FEE + tarifa_entrega,
-      });
-      if (!cobro.ok) {
-        return res.status(402).json({ error: 'Pago rechazado', detalle: 'No se pudo cobrar el servicio. Verifica tu tarjeta.' });
-      }
 
       // Guardar/actualizar cliente en directorio
       if (cliente_telefono) {

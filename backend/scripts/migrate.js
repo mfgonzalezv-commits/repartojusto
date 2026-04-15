@@ -144,6 +144,7 @@ const migrations = [
   `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_marca       VARCHAR(30)`,
   `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_exp         VARCHAR(7)`,
   `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_registrada_at TIMESTAMPTZ`,
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS modo VARCHAR(20) DEFAULT 'prueba'`,
 
   // ── Restricciones adicionales (idempotente) ───────────────────────────────
   `DO $$ BEGIN
