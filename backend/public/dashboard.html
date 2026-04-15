@@ -633,12 +633,37 @@ async function toggleUsuario(id, activo) {
 
 // ── LIQUIDACIONES ──
 async function cargarLiquidaciones() {
-  await cargarRiders(); // para el select
+  await cargarRiders();
   try {
-    const rows = await api('/admin/usuarios?rol=rider'); // traer riders para cruzar
-    // Cargar historial desde riders con saldo
-    $('tbody-liquidaciones').innerHTML = `<tr><td colspan="6" class="empty">Historial de liquidaciones próximamente</td></tr>`;
-  } catch(e) {}
+    const rows = await api('/admin/liquidaciones');
+    $('tbody-liquidaciones').innerHTML = rows.length ? rows.map(l => {
+      const esPendiente = l.estado === 'pendiente';
+      return `<tr>
+        <td style="font-weight:600">${l.rider_nombre}</td>
+        <td style="font-size:12px;color:var(--text2)">${fmtDateShort(l.fecha_desde)} → ${fmtDateShort(l.fecha_hasta)}</td>
+        <td style="text-align:center;font-weight:700">${l.pedidos_count}</td>
+        <td style="font-weight:700;color:var(--green);font-size:15px">${fmt(l.monto_total)}</td>
+        <td>
+          <span class="badge ${esPendiente ? 'badge-pendiente' : 'badge-entregado'}">
+            ${esPendiente ? 'Pendiente' : '✓ Pagada'}
+          </span>
+          ${l.pagada_at ? `<div style="font-size:11px;color:var(--text3);margin-top:3px">${fmtDateShort(l.pagada_at)}</div>` : ''}
+        </td>
+        <td>
+          ${esPendiente ? `<button class="btn btn-green btn-sm" onclick="marcarPagada('${l.id}')">✓ Marcar pagada</button>` : '—'}
+        </td>
+      </tr>`;
+    }).join('') : '<tr><td colspan="6" class="empty">No hay liquidaciones generadas aún</td></tr>';
+  } catch(e) { toast('Error cargando liquidaciones: ' + e.message, 'error'); }
+}
+
+async function marcarPagada(id) {
+  if (!confirm('¿Confirmas que ya realizaste la transferencia a este rider?')) return;
+  try {
+    await api(`/admin/liquidaciones/${id}/pagar`, { method: 'PUT' });
+    toast('Liquidación marcada como pagada', 'success');
+    cargarLiquidaciones();
+  } catch(e) { toast(e.message, 'error'); }
 }
 
 async function generarLiquidacion() {

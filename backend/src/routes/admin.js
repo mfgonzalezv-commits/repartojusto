@@ -185,6 +185,21 @@ router.post('/liquidar',
   }
 );
 
+// ── GET /api/admin/liquidaciones ─────────────────────────────────────────────
+router.get('/liquidaciones', async (req, res, next) => {
+  try {
+    const { rows } = await db(
+      `SELECT l.*, u.nombre AS rider_nombre, u.email AS rider_email
+       FROM liquidaciones l
+       JOIN riders r ON r.id = l.rider_id
+       JOIN usuarios u ON u.id = r.usuario_id
+       ORDER BY l.created_at DESC
+       LIMIT 100`
+    );
+    res.json(rows);
+  } catch (err) { next(err); }
+});
+
 // ── PUT /api/admin/liquidaciones/:id/pagar ────────────────────────────────────
 router.put('/liquidaciones/:id/pagar', async (req, res, next) => {
   try {
