@@ -21,13 +21,35 @@
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
     .topbar {
-      background: var(--negro); padding: 0 20px; height: 56px;
+      background: var(--negro); padding: 0 20px; height: 64px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .topbar-brand { font-size: 18px; font-weight: 800; color: var(--amarillo); font-family: 'Montserrat', sans-serif; }
+    .topbar-logo { display: flex; align-items: center; gap: 10px; }
+    .topbar-logo img { height: 32px; width: auto; display: block; }
+    .topbar-logo-fallback { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 900; color: var(--amarillo); letter-spacing: -.5px; }
+    .topbar-logo-fallback span { color: #fff; }
+    .topbar-tagline { font-size: 10px; color: rgba(255,255,255,.5); font-weight: 500; margin-top: 1px; }
     .live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,.8); }
     .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; animation: pulse 1.5s infinite; }
     @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    /* Banner marketing */
+    .marketing-banner {
+      background: linear-gradient(135deg, var(--negro) 0%, #1e3a5f 100%);
+      padding: 18px 20px; text-align: center; margin-bottom: 16px;
+      border-radius: var(--r);
+    }
+    .mb-title { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 800; color: #fff; margin-bottom: 3px; }
+    .mb-title span { color: var(--amarillo); }
+    .mb-sub { font-size: 12px; color: rgba(255,255,255,.65); margin-bottom: 10px; }
+    .mb-badges { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+    .mb-badge { background: rgba(255,255,255,.1); color: rgba(255,255,255,.85); font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 99px; }
+
+    /* Footer CTA */
+    .footer-cta { background: var(--amarillo); border-radius: var(--r); padding: 18px 20px; text-align: center; margin-bottom: 16px; }
+    .fc-title { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 900; color: var(--negro); margin-bottom: 4px; }
+    .fc-sub { font-size: 12px; color: rgba(0,0,0,.6); margin-bottom: 10px; }
+    .fc-btn { display: inline-block; background: var(--negro); color: var(--amarillo); font-size: 12px; font-weight: 700; padding: 8px 20px; border-radius: 99px; text-decoration: none; }
 
     #mapa { height: 280px; }
 
@@ -102,7 +124,13 @@
 <body>
 
 <div class="topbar">
-  <div class="topbar-brand">🏍️ Reparto Justo</div>
+  <div class="topbar-logo">
+    <!-- Cuando tengas el logo: reemplaza el div de abajo por <img src="/logo.png" alt="Reparto Justo"> -->
+    <div>
+      <div class="topbar-logo-fallback">Reparto<span>Justo</span></div>
+      <div class="topbar-tagline">Delivery sin comisiones</div>
+    </div>
+  </div>
   <div class="live-badge"><div class="live-dot"></div>En vivo</div>
 </div>
 
@@ -298,7 +326,24 @@ function renderPedido(p) {
         </div>` : ''}
       </div>
 
-      <div class="branding">Powered by <strong>Reparto Justo</strong> — Delivery sin comisiones</div>
+      <!-- Banner marketing -->
+      <div class="marketing-banner">
+        <div class="mb-title">Tu pedido es gestionado por <span>Reparto Justo</span></div>
+        <div class="mb-sub">La plataforma de delivery que trabaja para los negocios y sus clientes</div>
+        <div class="mb-badges">
+          <span class="mb-badge">🏍️ Riders verificados</span>
+          <span class="mb-badge">📍 Seguimiento en vivo</span>
+          <span class="mb-badge">✅ Sin comisiones</span>
+        </div>
+      </div>
+
+      <!-- Footer CTA para negocios -->
+      <div class="footer-cta">
+        <div class="fc-title">¿Tienes un negocio?</div>
+        <div class="fc-sub">Únete a Reparto Justo y ofrece delivery a tus clientes sin pagar comisiones por venta.</div>
+        <a href="/ventas.html" class="fc-btn">Conoce cómo funciona →</a>
+      </div>
+
     </div>
   `;
 }
