@@ -239,6 +239,52 @@ router.put('/:id/estado', auth, solo('rider', 'admin'), async (req, res, next) =
   } catch (err) { next(err); }
 });
 
+// ── PUT /api/pedidos/:id/liberar ──────────────────────────────────────────
+// Devuelve el pedido a 'pendiente' y libera al rider (por inconveniente)
+router.put('/:id/liberar', auth, solo('rider', 'admin'), async (req, res, next) => {
+  try {
+    const { rows: [rider] } = req.usuario.rol === 'rider'
+      ? await db('SELECT id FROM riders WHERE usuario_id = $1', [req.usuario.id])
+      : { rows: [{ id: null }] };
+
+    const { rows: [pedido] } = await db(
+      'SELECT * FROM pedidos WHERE id = $1', [req.params.id]
+    );
+    if (!pedido) return res.status(404).json({ error: 'Pedido no encontrado' });
+
+    // Solo se puede liberar si está asignado o en retiro
+    if (!['asignado', 'retiro'].includes(pedido.estado)) {
+      return res.status(400).json({ error: `No se puede liberar un pedido en estado '${pedido.estado}'` });
+    }
+
+    // Riders solo pueden liberar sus propios pedidos
+    if (req.usuario.rol === 'rider' && pedido.rider_id !== rider.id) {
+      return res.status(403).json({ error: 'No es tu pedido' });
+    }
+
+    // Volver a pendiente y quitar rider
+    const { rows: [liberado] } = await db(
+      `UPDATE pedidos
+       SET estado = 'pendiente', rider_id = NULL, asignado_at = NULL
+       WHERE id = $1
+       RETURNING *`,
+      [pedido.id]
+    );
+
+    // Marcar al rider como no disponible (tuvo un inconveniente)
+    if (pedido.rider_id) {
+      await db('UPDATE riders SET disponible = false WHERE id = $1', [pedido.rider_id]);
+    }
+
+    // Notificar al negocio que el pedido volvió a pendiente
+    req.app.get('io')?.to(`negocio:${pedido.negocio_id}`).emit('pedido:actualizado', {
+      id: liberado.id, estado: 'pendiente'
+    });
+
+    res.json(liberado);
+  } catch (err) { next(err); }
+});
+
 // ── PUT /api/pedidos/:id/cancelar ─────────────────────────────────────────
 router.put('/:id/cancelar',
   auth,

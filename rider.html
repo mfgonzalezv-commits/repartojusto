@@ -1322,7 +1322,8 @@ function renderPedidoActivo(p) {
         </div>
 
         ${siguiente
-          ? `<button class="avanzar-btn" id="btn-avanzar">${SIGUIENTE_BTN[p.estado]}</button>`
+          ? `<button class="avanzar-btn" id="btn-avanzar">${SIGUIENTE_BTN[p.estado]}</button>
+             ${['asignado','retiro'].includes(p.estado) ? `<button id="btn-liberar" style="width:100%;margin-top:8px;background:var(--red-bg);color:var(--red);border:none;border-radius:10px;padding:12px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">⚠️ No puedo cumplir este pedido</button>` : ''}`
           : '<div style="margin-top:16px;text-align:center;color:var(--teal);font-weight:700;padding:14px;background:var(--teal-bg);border-radius:10px">✅ ¡Pedido entregado!</div>'
         }
       </div>
@@ -1433,6 +1434,26 @@ function renderPedidoActivo(p) {
         }
       } catch (e) { toast(e.message, 'error'); $('btn-avanzar').disabled = false; }
     });
+
+    const btnLiberar = $('btn-liberar');
+    if (btnLiberar) {
+      btnLiberar.addEventListener('click', async () => {
+        if (!confirm('¿Confirmas que no puedes cumplir este pedido? Volverá a estar disponible para otro rider y quedarás como no disponible.')) return;
+        btnLiberar.disabled = true;
+        btnLiberar.textContent = 'Liberando...';
+        try {
+          await apiFetch(`/pedidos/${p.id}/liberar`, { method: 'PUT' });
+          pedidoActivo = null;
+          if (mapaNav) { mapaNav.remove(); mapaNav = null; }
+          $('pedido-activo-wrap').style.display = 'none';
+          // Marcar como no disponible en la UI
+          disponible = false;
+          $('toggle-disponible').checked = false;
+          $('disponible-label').textContent = 'No disponible';
+          toast('Pedido liberado. Quedaste marcado como no disponible.', 'error');
+        } catch (e) { toast(e.message, 'error'); btnLiberar.disabled = false; btnLiberar.textContent = '⚠️ No puedo cumplir este pedido'; }
+      });
+    }
   }
 }
 

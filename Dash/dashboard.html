@@ -270,7 +270,7 @@ tbody tr:hover { background: var(--bg); }
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Fecha</th><th>Comercio</th><th>Cliente</th><th>Dirección</th><th>Dist.</th><th>Tarifa</th><th>Estado</th><th>Rider</th></tr></thead>
+            <thead><tr><th>Fecha</th><th>Comercio</th><th>Cliente</th><th>Dirección</th><th>Dist.</th><th>Tarifa</th><th>Estado</th><th>Rider</th><th>Acción</th></tr></thead>
             <tbody id="tbody-pedidos"></tbody>
           </table>
         </div>
@@ -603,8 +603,9 @@ async function cargarPedidos() {
         <td style="font-weight:700;color:var(--green)">${fmt(p.tarifa_entrega)}</td>
         <td>${badgeEstado(p.estado)}</td>
         <td style="color:var(--text2)">${p.rider_nombre || '—'}</td>
+        <td>${['asignado','retiro'].includes(p.estado) ? `<button class="btn btn-danger btn-sm" onclick="liberarPedido('${p.id}')">Liberar</button>` : '—'}</td>
       </tr>
-    `).join('') : '<tr><td colspan="8" class="empty">No hay pedidos</td></tr>';
+    `).join('') : '<tr><td colspan="9" class="empty">No hay pedidos</td></tr>';
   } catch(e) { toast('Error cargando pedidos: ' + e.message, 'error'); }
 }
 
@@ -665,6 +666,16 @@ async function cargarComercios() {
       </tr>
     `).join('') : '<tr><td colspan="7" class="empty">No hay comercios registrados</td></tr>';
   } catch(e) { toast('Error cargando comercios: ' + e.message, 'error'); }
+}
+
+// ── LIBERAR PEDIDO ──
+async function liberarPedido(id) {
+  if (!confirm('¿Liberar este pedido? Volverá a "pendiente" y se desasignará el rider.')) return;
+  try {
+    await api(`/pedidos/${id}/liberar`, { method: 'PUT' });
+    toast('Pedido liberado y vuelto a pendiente', 'success');
+    cargarPedidos();
+  } catch(e) { toast(e.message, 'error'); }
 }
 
 // ── TOGGLE USUARIO ──
