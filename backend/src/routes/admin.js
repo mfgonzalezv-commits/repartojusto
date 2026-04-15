@@ -150,15 +150,15 @@ router.post('/liquidar',
   async (req, res, next) => {
     const { rider_id, fecha_desde, fecha_hasta } = req.body;
     try {
-      // Calcular monto: suma de tarifas de pedidos entregados en el período
+      // Calcular monto: suma de tarifas de entregas en el período
       const { rows: [resumen] } = await db(
         `SELECT COUNT(*) AS pedidos_count,
-                COALESCE(SUM(tarifa_entrega - app_fee * $3 / 100), 0) AS monto_total
+                COALESCE(SUM(tarifa_entrega), 0) AS monto_total
          FROM pedidos
          WHERE rider_id = $1
            AND estado = 'entregado'
-           AND entregado_at BETWEEN $4 AND $5`,
-        [rider_id, null, config.RESIDUAL_PCT, fecha_desde, fecha_hasta]
+           AND entregado_at BETWEEN $2 AND $3`,
+        [rider_id, fecha_desde, fecha_hasta]
       );
 
       if (parseInt(resumen.pedidos_count) === 0) {
