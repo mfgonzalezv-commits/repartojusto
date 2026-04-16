@@ -13,14 +13,10 @@ const validar = (req, res, next) => {
 };
 
 // tarifa_entrega = lo que recibe el rider:
-//   0 – 1 km         → $1.250 tarifa plana
-//   > 1 km           → $1.250 + $65 por cada 100 m sobre el primer km (redondeado hacia arriba)
+//   $1.100 fijo + $350 × km (redondeado al entero más cercano)
 // app_fee = uso plataforma cobrado al negocio = $500
 const calcularTarifa = (distancia_km) => {
-  if (distancia_km <= config.TARIFA_BASE_KM) return config.TARIFA_BASE_CLP;
-  const metrosExtra = (distancia_km - config.TARIFA_BASE_KM) * 1000;
-  const tramos = Math.ceil(metrosExtra / config.TARIFA_TRAMO_METROS);
-  return config.TARIFA_BASE_CLP + tramos * config.TARIFA_TRAMO_CLP;
+  return Math.round(config.TARIFA_FIJA_CLP + config.TARIFA_KM_CLP * distancia_km);
 };
 
 // ── POST /api/pedidos ─────────────────────────────────────────────────────

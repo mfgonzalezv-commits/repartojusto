@@ -600,7 +600,7 @@ function calcular() {
   const ticket  = parseInt(document.getElementById('inp-ticket').value)  || 0;
 
   const costoEllos   = pedidos * ticket * 0.30;
-  const costoNosotros = pedidos * 500 + pedidos * 1250; // app_fee + envío promedio 1km
+  const costoNosotros = pedidos * 500 + pedidos * (1100 + 350 * 2.5); // app_fee + envío promedio 2.5km
   const ahorro       = costoEllos - costoNosotros;
 
   document.getElementById('r-ellos').textContent    = fmt(costoEllos);

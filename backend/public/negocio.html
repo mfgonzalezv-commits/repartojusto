@@ -1285,20 +1285,14 @@ async function cancelarPedido(id) {
 // NUEVO PEDIDO — flujo en 2 pasos con mapa y distancia automática
 // ══════════════════════════════════════════════════════════════
 // Estructura de tarifas:
-//   0 – 1 km         → $1.250 tarifa plana
-//   > 1 km           → $1.250 + $65 por cada 100 m sobre el primer km
-const TARIFA_BASE_CLP     = 1250;  // tarifa plana 0-1 km
-const TARIFA_BASE_KM      = 1;     // km incluidos en la base
-const TARIFA_TRAMO_METROS = 100;   // granularidad
-const TARIFA_TRAMO_CLP    = 65;    // $/tramo adicional
+//   tarifa = $1.100 fijo + $350 × km
+const TARIFA_FIJA_CLP = 1100;  // monto fijo por pedido
+const TARIFA_KM_CLP   = 350;   // CLP por km
 const APP_FEE    = 500;   // uso plataforma por pedido (cobrado al negocio)
 const CANCEL_FEE = 1000;  // multa por cancelación dentro del periodo
 
 function calcularTarifaEnvio(km) {
-  if (km <= TARIFA_BASE_KM) return TARIFA_BASE_CLP;
-  const metrosExtra = (km - TARIFA_BASE_KM) * 1000;
-  const tramos = Math.ceil(metrosExtra / TARIFA_TRAMO_METROS);
-  return TARIFA_BASE_CLP + tramos * TARIFA_TRAMO_CLP;
+  return Math.round(TARIFA_FIJA_CLP + TARIFA_KM_CLP * km);
 }
 
 let negocioLat = null, negocioLng = null;
