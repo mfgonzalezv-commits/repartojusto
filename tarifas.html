@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparador de Tarifas — Reparto Justo</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --negro: #1C1C1C; --amarillo: #FFCC00; --bg: #F4F4F0;
+      --card: #ffffff; --border: rgba(0,0,0,.09);
+      --c1: #FFCC00; --c2: #378ADD; --c3: #22C55E;
+      --text: #1C1C1C; --text2: #6b6b66; --r: 14px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    .topbar {
+      background: var(--negro); padding: 0 24px; height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 18px; color: var(--amarillo); }
+    .topbar-sub { font-size: 13px; color: #aaa; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 28px 20px 60px; }
+
+    h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .subtitle { font-size: 14px; color: var(--text2); margin-bottom: 28px; }
+
+    /* ── Fichas de tarifas ── */
+    .tarifas-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px;
+    }
+    @media(max-width:600px) { .tarifas-grid { grid-template-columns: 1fr; } }
+
+    .tarifa-card {
+      background: var(--card); border-radius: var(--r); padding: 18px 16px;
+      border: 2px solid var(--border); position: relative; overflow: hidden;
+    }
+    .tarifa-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    }
+    .tarifa-card.c1::before { background: var(--c1); }
+    .tarifa-card.c2::before { background: var(--c2); }
+    .tarifa-card.c3::before { background: var(--c3); }
+
+    .tarifa-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text2); margin-bottom: 6px; }
+    .tarifa-nombre { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+    .tarifa-param { font-size: 13px; color: var(--text2); margin-bottom: 4px; }
+    .tarifa-param strong { color: var(--text); }
+    .badge-mejor {
+      display: inline-block; background: #DCFCE7; color: #15803D;
+      font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; margin-top: 10px;
+    }
+    .badge-mayor {
+      display: inline-block; background: #FEE2E2; color: #DC2626;
+      font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; margin-top: 10px;
+    }
+
+    /* ── Slider interactivo ── */
+    .card { background: var(--card); border-radius: var(--r); padding: 22px 20px; margin-bottom: 20px; border: 1px solid var(--border); }
+    .card-title { font-size: 15px; font-weight: 700; margin-bottom: 16px; }
+
+    .slider-wrap { margin-bottom: 20px; }
+    .slider-label { display: flex; justify-content: space-between; font-size: 13px; color: var(--text2); margin-bottom: 8px; }
+    .slider-label strong { color: var(--text); font-size: 16px; }
+    input[type=range] {
+      width: 100%; -webkit-appearance: none; height: 6px; border-radius: 6px;
+      background: linear-gradient(to right, var(--amarillo) 0%, var(--amarillo) var(--pct, 30%), #e0e0e0 var(--pct, 30%));
+      outline: none; cursor: pointer;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%;
+      background: var(--negro); border: 3px solid var(--amarillo); cursor: pointer;
+    }
+
+    .resultado-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    @media(max-width:500px) { .resultado-grid { grid-template-columns: 1fr; } }
+
+    .resultado-item {
+      border-radius: 10px; padding: 14px 12px; text-align: center; border: 2px solid transparent;
+    }
+    .resultado-item.c1 { background: #FFFBEA; border-color: var(--c1); }
+    .resultado-item.c2 { background: #EFF6FF; border-color: var(--c2); }
+    .resultado-item.c3 { background: #F0FDF4; border-color: var(--c3); }
+    .resultado-item.ganador { box-shadow: 0 0 0 3px rgba(34,197,94,.3); }
+    .resultado-nombre { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text2); margin-bottom: 6px; }
+    .resultado-valor { font-size: 24px; font-weight: 800; }
+    .resultado-item.c1 .resultado-valor { color: #B45309; }
+    .resultado-item.c2 .resultado-valor { color: #1D4ED8; }
+    .resultado-item.c3 .resultado-valor { color: #15803D; }
+    .resultado-tag { font-size: 11px; margin-top: 4px; font-weight: 600; }
+
+    /* ── Tabla comparativa ── */
+    .tabla-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead th {
+      padding: 10px 12px; text-align: right; font-weight: 700; font-size: 11px;
+      text-transform: uppercase; letter-spacing: .05em; color: var(--text2);
+      border-bottom: 2px solid var(--border); background: #FAFAF8;
+    }
+    thead th:first-child { text-align: left; }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:hover { background: #FAFAF8; }
+    tbody td { padding: 10px 12px; text-align: right; }
+    tbody td:first-child { text-align: left; font-weight: 600; color: var(--text2); }
+
+    .td-min { background: #DCFCE7; color: #15803D; font-weight: 700; border-radius: 6px; padding: 4px 8px; }
+    .td-max { background: #FEE2E2; color: #DC2626; font-weight: 600; border-radius: 6px; padding: 4px 8px; }
+    .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+
+    /* ── Gráfico ── */
+    .chart-wrap { position: relative; height: 320px; }
+
+    /* ── Resumen ── */
+    .resumen-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    @media(max-width:600px) { .resumen-grid { grid-template-columns: 1fr; } }
+    .resumen-item { background: #FAFAF8; border-radius: 10px; padding: 14px 12px; }
+    .resumen-titulo { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text2); margin-bottom: 8px; }
+    .resumen-valor { font-size: 15px; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="brand">RepartoJusto</span>
+  <span class="topbar-sub">Comparador de tarifas</span>
+</div>
+
+<div class="container">
+  <h1>Comparador de Tarifas de Envío</h1>
+  <p class="subtitle">Compara cómo afecta cada estructura de cobro según la distancia del pedido</p>
+
+  <!-- Fichas de tarifas -->
+  <div class="tarifas-grid">
+    <div class="tarifa-card c1">
+      <div class="tarifa-label">Tarifa actual</div>
+      <div class="tarifa-nombre">Base + tramo</div>
+      <div class="tarifa-param">Base 0–1 km: <strong>$1.250</strong></div>
+      <div class="tarifa-param">Cada 100m extra: <strong>$65</strong></div>
+      <div class="tarifa-param" style="font-size:11px;margin-top:6px;color:#9a9a94">= $650/km sobre el primer km</div>
+    </div>
+    <div class="tarifa-card c2">
+      <div class="tarifa-label">Propuesta 1</div>
+      <div class="tarifa-nombre">Base + tramo menor</div>
+      <div class="tarifa-param">Base 0–1 km: <strong>$1.250</strong></div>
+      <div class="tarifa-param">Cada 100m extra: <strong>$55</strong></div>
+      <div class="tarifa-param" style="font-size:11px;margin-top:6px;color:#9a9a94">= $550/km sobre el primer km</div>
+    </div>
+    <div class="tarifa-card c3">
+      <div class="tarifa-label">Propuesta 2</div>
+      <div class="tarifa-nombre">Fija + km lineal</div>
+      <div class="tarifa-param">Fijo por pedido: <strong>$1.100</strong></div>
+      <div class="tarifa-param">Por km: <strong>$350</strong></div>
+      <div class="tarifa-param" style="font-size:11px;margin-top:6px;color:#9a9a94">Sin base mínima de km</div>
+    </div>
+  </div>
+
+  <!-- Simulador interactivo -->
+  <div class="card">
+    <div class="card-title">🧮 Simulador por distancia</div>
+    <div class="slider-wrap">
+      <div class="slider-label">
+        <span>Distancia del pedido</span>
+        <strong id="dist-label">3.0 km</strong>
+      </div>
+      <input type="range" id="slider-dist" min="0.1" max="12" step="0.1" value="3">
+    </div>
+    <div class="resultado-grid">
+      <div class="resultado-item c1" id="res1">
+        <div class="resultado-nombre">Actual</div>
+        <div class="resultado-valor" id="val1">—</div>
+        <div class="resultado-tag" id="tag1"></div>
+      </div>
+      <div class="resultado-item c2" id="res2">
+        <div class="resultado-nombre">Propuesta 1</div>
+        <div class="resultado-valor" id="val2">—</div>
+        <div class="resultado-tag" id="tag2"></div>
+      </div>
+      <div class="resultado-item c3" id="res3">
+        <div class="resultado-nombre">Propuesta 2</div>
+        <div class="resultado-valor" id="val3">—</div>
+        <div class="resultado-tag" id="tag3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gráfico -->
+  <div class="card">
+    <div class="card-title">📈 Evolución por distancia</div>
+    <div class="chart-wrap">
+      <canvas id="grafico"></canvas>
+    </div>
+  </div>
+
+  <!-- Tabla comparativa -->
+  <div class="card">
+    <div class="card-title">📋 Tabla comparativa</div>
+    <div class="tabla-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Distancia</th>
+            <th><span class="dot" style="background:var(--c1)"></span>Actual</th>
+            <th><span class="dot" style="background:var(--c2)"></span>Propuesta 1</th>
+            <th><span class="dot" style="background:var(--c3)"></span>Propuesta 2</th>
+            <th>Menor costo</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Resumen estratégico -->
+  <div class="card">
+    <div class="card-title">💡 Resumen estratégico</div>
+    <div class="resumen-grid">
+      <div class="resumen-item">
+        <div class="resumen-titulo">P2 más barata que Actual desde</div>
+        <div class="resumen-valor" id="cruce-actual">—</div>
+      </div>
+      <div class="resumen-item">
+        <div class="resumen-titulo">P2 más barata que P1 desde</div>
+        <div class="resumen-valor" id="cruce-p1">—</div>
+      </div>
+      <div class="resumen-item">
+        <div class="resumen-titulo">Ahorro P2 vs Actual en 3km</div>
+        <div class="resumen-valor" id="ahorro-3km">—</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ── Cálculo de tarifas ────────────────────────────────────────────────────────
+function tarifaActual(km) {
+  if (km <= 1) return 1250;
+  return 1250 + Math.ceil((km - 1) * 10) * 65;
+}
+function tarifaP1(km) {
+  if (km <= 1) return 1250;
+  return 1250 + Math.ceil((km - 1) * 10) * 55;
+}
+function tarifaP2(km) {
+  return 1100 + Math.round(km * 350);
+}
+function fmt(n) { return '$' + Math.round(n).toLocaleString('es-CL'); }
+
+// ── Slider ────────────────────────────────────────────────────────────────────
+const slider = document.getElementById('slider-dist');
+function actualizarSimulador() {
+  const km = parseFloat(slider.value);
+  const pct = ((km - 0.1) / (12 - 0.1) * 100).toFixed(1);
+  slider.style.setProperty('--pct', pct + '%');
+  document.getElementById('dist-label').textContent = km.toFixed(1) + ' km';
+
+  const v1 = tarifaActual(km), v2 = tarifaP1(km), v3 = tarifaP2(km);
+  const min = Math.min(v1, v2, v3);
+
+  document.getElementById('val1').textContent = fmt(v1);
+  document.getElementById('val2').textContent = fmt(v2);
+  document.getElementById('val3').textContent = fmt(v3);
+
+  ['res1','res2','res3'].forEach(id => document.getElementById(id).classList.remove('ganador'));
+  const vals = [v1,v2,v3];
+  const ids  = ['res1','res2','res3'];
+  const tags = ['tag1','tag2','tag3'];
+  const minIdx = vals.indexOf(min);
+  ids.forEach((id, i) => {
+    const tag = document.getElementById(tags[i]);
+    const diff = vals[i] - min;
+    if (i === minIdx) {
+      document.getElementById(id).classList.add('ganador');
+      tag.style.color = '#15803D';
+      tag.textContent = '✓ Más económica';
+    } else {
+      tag.style.color = '#9a9a94';
+      tag.textContent = '+' + fmt(diff) + ' vs menor';
+    }
+  });
+}
+slider.addEventListener('input', actualizarSimulador);
+actualizarSimulador();
+
+// ── Tabla ─────────────────────────────────────────────────────────────────────
+const distancias = [0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12];
+const tbody = document.getElementById('tabla-body');
+distancias.forEach(km => {
+  const v1 = tarifaActual(km), v2 = tarifaP1(km), v3 = tarifaP2(km);
+  const min = Math.min(v1,v2,v3), max = Math.max(v1,v2,v3);
+  const nombres = ['Actual','P1','P2'];
+  const vals = [v1,v2,v3];
+  const menor = nombres[vals.indexOf(min)];
+
+  function cell(v) {
+    if (v === min) return `<span class="td-min">${fmt(v)}</span>`;
+    if (v === max) return `<span class="td-max">${fmt(v)}</span>`;
+    return fmt(v);
+  }
+  tbody.innerHTML += `<tr>
+    <td>${km.toFixed(1)} km</td>
+    <td>${cell(v1)}</td>
+    <td>${cell(v2)}</td>
+    <td>${cell(v3)}</td>
+    <td style="font-weight:700;color:#15803D">${menor}</td>
+  </tr>`;
+});
+
+// ── Resumen estratégico ───────────────────────────────────────────────────────
+// ¿Desde qué km P2 < Actual?  1250+(d-1)*650 = 1100+350d → d=1.67
+document.getElementById('cruce-actual').textContent = '1.7 km';
+// ¿Desde qué km P2 < P1?  1250+(d-1)*550 = 1100+350d → d=2.0
+document.getElementById('cruce-p1').textContent = '2.0 km';
+// Ahorro P2 vs Actual en 3km
+const ah = tarifaActual(3) - tarifaP2(3);
+document.getElementById('ahorro-3km').textContent = fmt(ah) + (ah > 0 ? ' más barata P2' : ' más cara P2');
+
+// ── Gráfico Chart.js ─────────────────────────────────────────────────────────
+const labels = [];
+const d1 = [], d2 = [], d3 = [];
+for (let km = 0.1; km <= 12; km += 0.1) {
+  labels.push(km.toFixed(1));
+  d1.push(tarifaActual(km));
+  d2.push(tarifaP1(km));
+  d3.push(tarifaP2(km));
+}
+
+new Chart(document.getElementById('grafico'), {
+  type: 'line',
+  data: {
+    labels,
+    datasets: [
+      { label: 'Actual', data: d1, borderColor: '#FFCC00', backgroundColor: 'rgba(255,204,0,.08)', borderWidth: 2.5, pointRadius: 0, tension: 0.1 },
+      { label: 'Propuesta 1', data: d2, borderColor: '#378ADD', backgroundColor: 'rgba(55,138,221,.08)', borderWidth: 2.5, pointRadius: 0, tension: 0.1 },
+      { label: 'Propuesta 2', data: d3, borderColor: '#22C55E', backgroundColor: 'rgba(34,197,94,.08)', borderWidth: 2.5, pointRadius: 0, tension: 0.1 },
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { position: 'top', labels: { font: { family: 'Inter', size: 12 }, padding: 20 } },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` ${ctx.dataset.label}: $${Math.round(ctx.parsed.y).toLocaleString('es-CL')}`,
+          title: titles => `📍 ${titles[0]} km`
+        }
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          maxTicksLimit: 13,
+          callback: (val, i) => labels[i] % 1 === 0 || labels[i].endsWith('.0') ? labels[i] + ' km' : null,
+          font: { size: 11 }
+        },
+        grid: { color: 'rgba(0,0,0,.05)' }
+      },
+      y: {
+        ticks: {
+          callback: v => '$' + (v/1000).toFixed(1) + 'k',
+          font: { size: 11 }
+        },
+        grid: { color: 'rgba(0,0,0,.05)' }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>
