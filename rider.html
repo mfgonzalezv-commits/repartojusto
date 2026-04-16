@@ -969,6 +969,8 @@ function conectarSocket() {
   socket.on('connect', () => {
     console.log('🔌 Socket rider conectado');
     if (disponible) socket.emit('rider:pedir_disponibles');
+    // Re-unirse al chat si hay pedido activo (reconexión tras recarga)
+    if (chatPedidoId) socket.emit('chat:unirse', { pedido_id: chatPedidoId });
   });
   socket.on('pedido:nuevo', (data) => {
     if (disponible && !pedidoActivo) {
@@ -1004,10 +1006,28 @@ function conectarSocket() {
 
   socket.on('chat:mensaje', (msg) => {
     agregarMensajeChat(msg);
-    if (!chatAbierto && msg.desde !== 'rider') {
+    if (msg.desde !== 'rider') {
+      // Badge siempre visible
       const badge = $('chat-badge');
-      if (badge) { badge.style.display = 'inline-flex'; }
-      notificarPedido(null); // sonido de alerta
+      if (badge) badge.style.display = 'inline-flex';
+      if (!chatAbierto) {
+        // Abrir chat automáticamente y hacer scroll
+        const wrap = $('chat-wrap');
+        if (wrap) { wrap.style.display = 'block'; chatAbierto = true; }
+        // Vibración corta
+        if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
+        // Notificación OS
+        if (notifPermiso && swRegistration) {
+          swRegistration.showNotification('💬 Mensaje del negocio', {
+            body: msg.texto,
+            icon: '/icon-512.png',
+            tag: 'chat-negocio',
+            renotify: true,
+            requireInteraction: false,
+          }).catch(() => {});
+        }
+        toast(`💬 ${msg.nombre}: ${msg.texto}`, 'success');
+      }
     }
   });
 }
