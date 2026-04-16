@@ -786,6 +786,14 @@ async function iniciarApp() {
     $('switch-label').textContent = 'Online';
     $('switch-label').className = 'switch-label on';
     iniciarTurno();
+
+    // Sincronizar disponible=true con la BD (puede haber quedado false por recarga/desconexión)
+    getCurrentPos().catch(() => null).then(pos => {
+      apiFetch('/riders/disponibilidad', {
+        method: 'PUT',
+        body: JSON.stringify({ disponible: true, lat: pos ? pos.lat : null, lng: pos ? pos.lng : null })
+      }).catch(() => {});
+    });
   }
 
   conectarSocket();
