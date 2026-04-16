@@ -758,6 +758,11 @@ const toast = (msg, type = '') => {
 };
 
 const fmt = n => '$' + parseInt(n).toLocaleString('es-CL');
+const telWA = tel => {
+  const d = (tel || '').replace(/\D/g, '');
+  if (d.startsWith('56') && d.length >= 11) return d;
+  return '56' + d;
+};
 const timeAgo = d => {
   const diff = Date.now() - new Date(d);
   const m = Math.floor(diff / 60000);
@@ -1078,7 +1083,7 @@ async function cargarDetalle(id) {
         <div class="rider-avatar">${p.rider_nombre[0]}</div>
         <div class="rider-info">
           <div class="rider-name">${p.rider_nombre}</div>
-          <div class="rider-veh">🏍️ ${p.vehiculo_tipo || 'Vehículo'} · ${p.rider_telefono || '—'}</div>
+          <div class="rider-veh">🏍️ ${p.vehiculo_tipo || 'Vehículo'}${p.rider_telefono ? ` · <a href="https://wa.me/${telWA(p.rider_telefono)}" target="_blank" style="color:#25D366;font-weight:700;text-decoration:none">💬 WhatsApp</a>` : ''}</div>
           ${enMovimiento ? '<div style="font-size:11px;color:var(--teal);margin-top:3px;font-weight:600">● Ubicación en tiempo real</div>' : ''}
         </div>
       </div>
@@ -1091,7 +1096,7 @@ async function cargarDetalle(id) {
       ${riderHtml}
       <div class="detalle-section">
         <div class="detalle-label">Cliente</div>
-        <div class="detalle-value"><strong>${p.cliente_nombre}</strong>${p.cliente_telefono ? ' · ' + p.cliente_telefono : ''}</div>
+        <div class="detalle-value"><strong>${p.cliente_nombre}</strong>${p.cliente_telefono ? ` · ${p.cliente_telefono} <a href="https://wa.me/${telWA(p.cliente_telefono)}" target="_blank" style="color:#25D366;font-weight:700;text-decoration:none;margin-left:4px">💬</a>` : ''}</div>
       </div>
       <div class="detalle-section">
         <div class="detalle-label">Dirección de entrega</div>

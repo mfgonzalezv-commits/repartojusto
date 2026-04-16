@@ -733,6 +733,12 @@ const toast = (msg, type = '') => {
   setTimeout(() => el.remove(), 3500);
 };
 const fmt = n => '$' + parseInt(n).toLocaleString('es-CL');
+// Formatea teléfono para WhatsApp: siempre 56XXXXXXXXX sin duplicar código de país
+const telWA = tel => {
+  const d = (tel || '').replace(/\D/g, '');
+  if (d.startsWith('56') && d.length >= 11) return d;
+  return '56' + d;
+};
 const timeAgo = d => {
   const m = Math.floor((Date.now() - new Date(d)) / 60000);
   if (m < 1) return 'hace un momento';
@@ -1396,7 +1402,7 @@ function renderPedidoActivo(p) {
       <div style="font-size:13px;color:var(--text2);margin-top:4px;margin-bottom:8px">${p.cliente_telefono}</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <a href="tel:${p.cliente_telefono}" style="display:inline-flex;align-items:center;gap:5px;background:var(--blue-bg);color:var(--blue);border-radius:20px;padding:7px 16px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap">📞 Llamar</a>
-        <a href="https://wa.me/56${p.cliente_telefono.replace(/\D/g,'')}" target="_blank" style="display:inline-flex;align-items:center;gap:5px;background:#25D366;color:white;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap">💬 WhatsApp</a>
+        <a href="https://wa.me/${telWA(p.cliente_telefono)}" target="_blank" style="display:inline-flex;align-items:center;gap:5px;background:#25D366;color:white;border-radius:20px;padding:7px 16px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap">💬 WhatsApp</a>
       </div>` : ''}
       <div class="pa-info-label" style="margin-top:10px">📍 Dirección de entrega</div>
       <div style="font-size:14px;font-weight:600;margin-top:3px">${p.direccion_entrega}</div>
