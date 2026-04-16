@@ -785,13 +785,16 @@ async function iniciarApp() {
 
 // ══════════ NOTIFICACIONES ══════════
 let notifPermiso = false;
+let swRegistration = null;
 let vibracionInterval = null;
 let wakeLock = null;
-let audioDesbloqueado = false;
 
-// Elemento de audio HTML — más confiable que Web Audio API en móvil
-const sndOferta = new Audio('data:audio/wav;base64,UklGRl9vT1RXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgA');
-sndOferta.volume = 1.0;
+// Registrar Service Worker para notificaciones a nivel OS
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(reg => {
+    swRegistration = reg;
+  }).catch(() => {});
+}
 
 function pedirPermisoNotif() {
   if (!('Notification' in window)) return;
@@ -802,14 +805,8 @@ function pedirPermisoNotif() {
 }
 
 function iniciarAudioCtx() {
-  // Desbloquear audio desde gesto del usuario
-  try {
-    sndOferta.play().then(() => {
-      sndOferta.pause();
-      sndOferta.currentTime = 0;
-      audioDesbloqueado = true;
-    }).catch(() => {});
-  } catch {}
+  // Solo pedir permiso de notificaciones — el sonido lo maneja el OS
+  pedirPermisoNotif();
 }
 
 function sonarAlarma() {
@@ -866,16 +863,25 @@ function iniciarAlertas(tarifa) {
     flashPantalla();
     if (navigator.vibrate) navigator.vibrate([400, 100, 400]);
   }, 4000);
-  // 5. Notificación del navegador
+  // 5. Notificación OS via Service Worker (aparece sobre cualquier app)
   if (notifPermiso) {
+    const opts = {
+      body: tarifa ? `Tarifa: $${parseInt(tarifa).toLocaleString('es-CL')} — ¡Acepta ahora!` : '¡Un pedido está esperando!',
+      icon: '/favicon.ico',
+      badge: '/favicon.ico',
+      tag: 'pedido-nuevo',
+      renotify: true,
+      requireInteraction: true,
+      vibrate: [400, 100, 400, 100, 800],
+      silent: false
+    };
     try {
-      new Notification('🔔 ¡Nuevo pedido!', {
-        body: tarifa ? `Tarifa: $${parseInt(tarifa).toLocaleString('es-CL')} — ¡Acepta ahora!` : '¡Un pedido está esperando!',
-        icon: '/favicon.ico',
-        tag: 'pedido-nuevo',
-        renotify: true,
-        requireInteraction: true
-      });
+      // Service Worker: notificación real del OS con sonido y vibración
+      if (swRegistration) {
+        swRegistration.showNotification('🔔 ¡Nuevo pedido!', opts);
+      } else {
+        new Notification('🔔 ¡Nuevo pedido!', opts);
+      }
     } catch {}
   }
   // 6. Wake lock: pantalla no se apaga
