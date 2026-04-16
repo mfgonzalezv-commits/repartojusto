@@ -785,9 +785,13 @@ async function iniciarApp() {
 
 // ══════════ NOTIFICACIONES ══════════
 let notifPermiso = false;
-let audioCtx = null;
 let vibracionInterval = null;
 let wakeLock = null;
+let audioDesbloqueado = false;
+
+// Elemento de audio HTML — más confiable que Web Audio API en móvil
+const sndOferta = new Audio('data:audio/wav;base64,UklGRl9vT1RXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgA');
+sndOferta.volume = 1.0;
 
 function pedirPermisoNotif() {
   if (!('Notification' in window)) return;
@@ -798,38 +802,50 @@ function pedirPermisoNotif() {
 }
 
 function iniciarAudioCtx() {
-  // Debe llamarse desde un gesto del usuario (ej: toggle disponible)
+  // Desbloquear audio desde gesto del usuario
   try {
-    if (!audioCtx) {
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    }
-    if (audioCtx.state === 'suspended') audioCtx.resume();
+    sndOferta.play().then(() => {
+      sndOferta.pause();
+      sndOferta.currentTime = 0;
+      audioDesbloqueado = true;
+    }).catch(() => {});
   } catch {}
 }
 
 function sonarAlarma() {
+  // Usar Web Audio API para generar tono (no depende de archivo externo)
   try {
-    if (!audioCtx) return; // no inicializado aún
-    if (audioCtx.state === 'suspended') audioCtx.resume();
-    const tiempos = [0, 0.18, 0.36, 0.54, 0.85, 1.03, 1.21, 1.39];
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const tiempos = [0, 0.15, 0.30, 0.50, 0.65, 0.80, 1.0, 1.15];
     tiempos.forEach((t, i) => {
-      const osc  = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.connect(gain); gain.connect(audioCtx.destination);
-      osc.frequency.value = i % 2 === 0 ? 1050 : 880;
-      gain.gain.setValueAtTime(0.5, audioCtx.currentTime + t);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + t + 0.15);
-      osc.start(audioCtx.currentTime + t);
-      osc.stop(audioCtx.currentTime + t + 0.15);
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = i % 2 === 0 ? 1200 : 900;
+      gain.gain.setValueAtTime(0.6, ctx.currentTime + t);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + t + 0.12);
+      osc.start(ctx.currentTime + t);
+      osc.stop(ctx.currentTime + t + 0.12);
     });
+    setTimeout(() => ctx.close(), 2000);
   } catch {}
+}
+
+function flashPantalla() {
+  // Flash visual agresivo: capa amarilla parpadea sobre toda la pantalla
+  const flash = document.createElement('div');
+  flash.style.cssText = 'position:fixed;inset:0;z-index:99998;background:#FFCC00;pointer-events:none;animation:flashScreen 0.2s ease 5 alternate';
+  const style = document.createElement('style');
+  style.textContent = '@keyframes flashScreen{from{opacity:0.9}to{opacity:0}}';
+  document.head.appendChild(style);
+  document.body.appendChild(flash);
+  setTimeout(() => { flash.remove(); style.remove(); }, 2200);
 }
 
 async function activarWakeLock() {
   try {
-    if ('wakeLock' in navigator) {
-      wakeLock = await navigator.wakeLock.request('screen');
-    }
+    if ('wakeLock' in navigator) wakeLock = await navigator.wakeLock.request('screen');
   } catch {}
 }
 
@@ -838,32 +854,37 @@ function liberarWakeLock() {
 }
 
 function iniciarAlertas(tarifa) {
-  // Sonido inmediato
+  // 1. Sonido
   sonarAlarma();
-  // Vibración inmediata fuerte
-  if (navigator.vibrate) navigator.vibrate([300, 100, 300, 100, 600, 200, 300, 100, 300]);
-  // Repetir vibración + sonido cada 4 segundos
+  // 2. Flash visual de pantalla
+  flashPantalla();
+  // 3. Vibración fuerte inmediata
+  if (navigator.vibrate) navigator.vibrate([400, 100, 400, 100, 800, 200, 400, 100, 400]);
+  // 4. Repetir sonido + vibración cada 4s mientras dura la oferta
   vibracionInterval = setInterval(() => {
     sonarAlarma();
+    flashPantalla();
     if (navigator.vibrate) navigator.vibrate([400, 100, 400]);
   }, 4000);
-  // Notificación del navegador (aparece encima de cualquier app)
+  // 5. Notificación del navegador
   if (notifPermiso) {
-    new Notification('🔔 ¡Nuevo pedido!', {
-      body: tarifa ? `Tarifa: $${parseInt(tarifa).toLocaleString('es-CL')} — Acepta antes que expire` : '¡Un pedido está esperando!',
-      icon: '/favicon.ico',
-      tag: 'pedido-nuevo',
-      renotify: true,
-      requireInteraction: true  // no desaparece hasta que el rider interactúe
-    });
+    try {
+      new Notification('🔔 ¡Nuevo pedido!', {
+        body: tarifa ? `Tarifa: $${parseInt(tarifa).toLocaleString('es-CL')} — ¡Acepta ahora!` : '¡Un pedido está esperando!',
+        icon: '/favicon.ico',
+        tag: 'pedido-nuevo',
+        renotify: true,
+        requireInteraction: true
+      });
+    } catch {}
   }
-  // Mantener pantalla encendida
+  // 6. Wake lock: pantalla no se apaga
   activarWakeLock();
 }
 
 function detenerAlertas() {
   if (vibracionInterval) { clearInterval(vibracionInterval); vibracionInterval = null; }
-  if (navigator.vibrate) navigator.vibrate(0); // detener vibración
+  if (navigator.vibrate) navigator.vibrate(0);
   liberarWakeLock();
 }
 
