@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reparto Justo — App Rider</title>
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest-rider.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="RJ Rider">
+  <meta name="theme-color" content="#1C1C1C">
+  <link rel="apple-touch-icon" href="/icon-rider-512.svg">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -398,6 +406,13 @@
 <!-- ═══════════════════ APP ═══════════════════ -->
 <div id="app" style="display:none">
 
+  <!-- ── Banner instalación PWA ── -->
+  <div id="banner-instalar" style="display:none; background:#FFCC00; padding:12px 16px; display:none; align-items:center; gap:12px; position:sticky; top:60px; z-index:90;">
+    <span style="font-size:13px; font-weight:600; color:#1C1C1C; flex:1">📲 Instala la app para recibir alertas aunque el teléfono esté bloqueado</span>
+    <button onclick="instalarPWA()" style="background:#1C1C1C; color:#FFCC00; border:none; padding:8px 14px; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer; white-space:nowrap">Instalar</button>
+    <button onclick="document.getElementById('banner-instalar').style.display='none'" style="background:transparent; border:none; font-size:18px; cursor:pointer; color:#1C1C1C; line-height:1">×</button>
+  </div>
+
   <!-- ── Modal oferta de pedido ── -->
   <div id="oferta-overlay">
     <div id="oferta-card">
@@ -781,6 +796,32 @@ async function iniciarApp() {
     iniciarPolling();
     pedirPermisoNotif();
   }
+}
+
+// ══════════ PWA — INSTALACIÓN ══════════
+let deferredInstallPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  // Mostrar banner solo si no está ya instalada
+  const banner = document.getElementById('banner-instalar');
+  if (banner) banner.style.display = 'flex';
+});
+
+window.addEventListener('appinstalled', () => {
+  deferredInstallPrompt = null;
+  const banner = document.getElementById('banner-instalar');
+  if (banner) banner.style.display = 'none';
+  toast('✅ App instalada — las alertas ahora funcionan sobre cualquier pantalla', 'success');
+});
+
+function instalarPWA() {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  deferredInstallPrompt.userChoice.then(() => {
+    deferredInstallPrompt = null;
+  });
 }
 
 // ══════════ NOTIFICACIONES ══════════

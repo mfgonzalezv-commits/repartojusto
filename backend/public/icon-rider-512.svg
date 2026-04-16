@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fondo negro -->
+  <rect width="512" height="512" rx="100" fill="#1C1C1C"/>
+  <!-- Texto RJ amarillo -->
+  <text x="256" y="300" font-family="Arial Black, Arial" font-weight="900" font-size="220" fill="#FFCC00" text-anchor="middle">RJ</text>
+  <!-- Punto amarillo decorativo pequeño -->
+  <circle cx="390" cy="160" r="28" fill="#FFCC00" opacity="0.4"/>
+</svg>
