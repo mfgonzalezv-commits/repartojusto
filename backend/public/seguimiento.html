@@ -334,6 +334,37 @@ function renderPedido(p) {
         </div>` : ''}
       </div>
 
+      <!-- Calificación del cliente (solo si fue entregado y tiene rider) -->
+      ${p.estado === 'entregado' && p.rider_nombre ? `
+      <div style="background:white;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.07)">
+        <div style="font-size:15px;font-weight:700;color:#0F172A;margin-bottom:4px">⭐ ¿Cómo fue tu entrega?</div>
+        <div style="font-size:12px;color:#64748B;margin-bottom:14px">Califica a tu repartidor ${p.rider_nombre}</div>
+        <div id="calif-cli-form">
+          ${[
+            ['llego_tiempo',       '¿Llegó a tiempo?'],
+            ['fue_amable',         '¿Fue amable y respetuoso?'],
+            ['pedido_buen_estado', '¿El pedido llegó en buen estado?'],
+            ['lo_recomendaria',    '¿Lo recomendarías?'],
+          ].map(([key, label]) => `
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(0,0,0,.05)">
+              <span style="font-size:13px;color:#1E293B">${label}</span>
+              <div style="display:flex;gap:8px">
+                <button onclick="setCalifCli('${key}',true,this)" style="padding:6px 16px;border-radius:20px;border:1.5px solid #E2E8F0;background:white;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">Sí</button>
+                <button onclick="setCalifCli('${key}',false,this)" style="padding:6px 16px;border-radius:20px;border:1.5px solid #E2E8F0;background:white;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">No</button>
+              </div>
+            </div>`).join('')}
+          <textarea id="calif-comentario-cli" placeholder="Comentario opcional..." rows="2"
+            style="width:100%;margin-top:12px;padding:9px 12px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:13px;font-family:inherit;resize:none;box-sizing:border-box"></textarea>
+          <button onclick="enviarCalifCliente('${p.id}')"
+            style="width:100%;margin-top:10px;background:#0F766E;color:white;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">
+            Enviar calificación
+          </button>
+        </div>
+        <div id="calif-cli-ok" style="display:none;text-align:center;padding:18px;color:#0F766E;font-weight:600;font-size:14px">
+          ✅ ¡Gracias por calificar a tu repartidor!
+        </div>
+      </div>` : ''}
+
       <!-- Banner marketing -->
       <div class="marketing-banner">
         <div class="mb-title">Tu pedido es gestionado por <span>Reparto Justo</span></div>
@@ -388,6 +419,50 @@ function mostrarError(titulo, sub) {
 cargarPedido();
 // Refrescar cada 30s
 setInterval(cargarPedido, 30000);
+
+// ── Calificación del cliente ──────────────────────────────────────────────
+const _califCli = {};
+function setCalifCli(key, val, btn) {
+  _califCli[key] = val;
+  const par = btn.parentElement;
+  par.querySelectorAll('button').forEach(b => {
+    b.style.background = 'white';
+    b.style.color = '#1E293B';
+    b.style.borderColor = '#E2E8F0';
+  });
+  btn.style.background = val ? '#0F766E' : '#DC2626';
+  btn.style.color = 'white';
+  btn.style.borderColor = val ? '#0F766E' : '#DC2626';
+}
+
+async function enviarCalifCliente(pedidoId) {
+  const campos = ['llego_tiempo','fue_amable','pedido_buen_estado','lo_recomendaria'];
+  if (!campos.every(c => c in _califCli)) {
+    alert('Por favor responde todas las preguntas antes de enviar.');
+    return;
+  }
+  try {
+    const res = await fetch('/api/calificaciones', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        pedido_id: pedidoId,
+        tipo: 'cliente',
+        ..._califCli,
+        comentario: document.getElementById('calif-comentario-cli')?.value || ''
+      })
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      alert(err.error || 'Error al enviar calificación');
+      return;
+    }
+    document.getElementById('calif-cli-form').style.display = 'none';
+    document.getElementById('calif-cli-ok').style.display = 'block';
+  } catch {
+    alert('Error de conexión. Intenta de nuevo.');
+  }
+}
 </script>
 <script src="/socket.io/socket.io.js"></script>
 </body>

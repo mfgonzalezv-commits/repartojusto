@@ -1270,6 +1270,34 @@ async function cargarDetalle(id) {
           </div>
         </div>
       </div>` : ''}
+      ${p.estado === 'entregado' && p.rider_nombre ? `
+      <div style="margin-top:16px;border-top:1px solid var(--border);padding-top:14px">
+        <div style="font-size:13px;font-weight:700;color:var(--text1);margin-bottom:10px">⭐ Calificar al rider</div>
+        <div id="calif-negocio-form">
+          ${[
+            ['llego_tiempo',    '¿Llegó a tiempo al local?'],
+            ['fue_amable',      '¿Fue amable y respetuoso?'],
+            ['bien_presentado', '¿Llegó bien presentado?'],
+            ['verifico_pedido', '¿Verificó el pedido antes de salir?'],
+          ].map(([key,label]) => `
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.05)">
+              <span style="font-size:13px;color:var(--text1)">${label}</span>
+              <div style="display:flex;gap:8px">
+                <button onclick="setCalifNeg('${key}',true,this)"  data-key="${key}" data-val="true"  style="padding:5px 14px;border-radius:20px;border:1.5px solid var(--border);background:white;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">Sí</button>
+                <button onclick="setCalifNeg('${key}',false,this)" data-key="${key}" data-val="false" style="padding:5px 14px;border-radius:20px;border:1.5px solid var(--border);background:white;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">No</button>
+              </div>
+            </div>`).join('')}
+          <textarea id="calif-comentario-neg" placeholder="Comentario opcional..." rows="2"
+            style="width:100%;margin-top:10px;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;resize:none;box-sizing:border-box"></textarea>
+          <button onclick="enviarCalifNegocio('${p.id}')"
+            style="width:100%;margin-top:10px;background:var(--teal);color:white;border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">
+            Enviar calificación
+          </button>
+        </div>
+        <div id="calif-negocio-ok" style="display:none;text-align:center;padding:14px;color:var(--teal);font-weight:600;font-size:13px">
+          ✅ Gracias por calificar al rider
+        </div>
+      </div>` : ''}
     `;
 
     if (cancelBtn) $('btn-cancelar').addEventListener('click', () => cancelarPedido(p.id));
@@ -2195,6 +2223,43 @@ async function eliminarTarjeta() {
 // ══════════════════════════════════════════════════════════════
 if (token && usuario?.rol === 'negocio') {
   iniciarApp();
+}
+
+// ── Calificación de rider por negocio ─────────────────────────────────────
+const _califNeg = {};
+function setCalifNeg(key, val, btn) {
+  _califNeg[key] = val;
+  // Resaltar botón seleccionado
+  const par = btn.parentElement;
+  par.querySelectorAll('button').forEach(b => {
+    b.style.background = 'white';
+    b.style.color = 'var(--text1)';
+    b.style.borderColor = 'var(--border)';
+  });
+  btn.style.background = val ? 'var(--teal)' : 'var(--red)';
+  btn.style.color = 'white';
+  btn.style.borderColor = val ? 'var(--teal)' : 'var(--red)';
+}
+
+async function enviarCalifNegocio(pedidoId) {
+  const campos = ['llego_tiempo','fue_amable','bien_presentado','verifico_pedido'];
+  if (!campos.every(c => c in _califNeg)) {
+    return toast('Responde todas las preguntas antes de enviar', 'error');
+  }
+  try {
+    await apiFetch('/calificaciones', {
+      method: 'POST',
+      body: JSON.stringify({
+        pedido_id: pedidoId,
+        tipo: 'negocio',
+        ..._califNeg,
+        comentario: $('calif-comentario-neg')?.value || ''
+      })
+    });
+    $('calif-negocio-form').style.display = 'none';
+    $('calif-negocio-ok').style.display = 'block';
+    toast('✅ Calificación enviada', 'success');
+  } catch (e) { toast(e.message, 'error'); }
 }
 </script>
 

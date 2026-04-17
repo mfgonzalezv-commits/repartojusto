@@ -18,7 +18,8 @@ const riderRoutes = require('./src/routes/riders');
 const negocioRoutes = require('./src/routes/negocios');
 const pagoRoutes = require('./src/routes/pagos');
 const adminRoutes = require('./src/routes/admin');
-const clienteRoutes = require('./src/routes/clientes');
+const clienteRoutes  = require('./src/routes/clientes');
+const califRoutes    = require('./src/routes/calificaciones');
 
 // Middleware
 const errorHandler = require('./src/middleware/errorHandler');
@@ -80,6 +81,7 @@ app.use('/api/negocios', negocioRoutes);
 app.use('/api/pagos', pagoRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/clientes', clienteRoutes);
+app.use('/api/calificaciones', califRoutes);
 
 // ── Endpoint público de seguimiento (sin auth) ────────────────────────────
 const { query: dbQuery } = require('./src/config/database');

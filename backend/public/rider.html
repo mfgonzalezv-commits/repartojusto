@@ -813,6 +813,61 @@ async function iniciarApp() {
   }
 }
 
+// ══════════ SCORE DEL RIDER ══════════
+async function cargarScore() {
+  const box = $('score-box');
+  if (!box) return;
+  try {
+    const s = await apiFetch('/calificaciones/mi-score');
+
+    const barra = (val) => {
+      const pct = val ?? 0;
+      const color = pct >= 80 ? '#0F766E' : pct >= 60 ? '#F59E0B' : '#DC2626';
+      return `<div style="flex:1;height:8px;background:#E2E8F0;border-radius:4px;overflow:hidden">
+        <div style="width:${pct}%;height:100%;background:${color};border-radius:4px;transition:width .5s"></div>
+      </div>`;
+    };
+
+    const fila = (label, val, detalle) => val === null ? '' : `
+      <div style="margin-bottom:10px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px">
+          <span style="color:#475569">${label}</span>
+          <strong style="color:#0F172A">${val}/100${detalle ? ' · <span style="font-weight:400;color:#64748B">'+detalle+'</span>' : ''}</strong>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">${barra(val)}</div>
+      </div>`;
+
+    const sf = s.score_final;
+    const colorFinal = sf === null ? '#94A3B8' : sf >= 90 ? '#0F766E' : sf >= 70 ? '#F59E0B' : sf >= 50 ? '#EA580C' : '#DC2626';
+    const pl = s.plataforma;
+
+    box.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div>
+          <div style="font-size:22px;font-weight:800;color:${colorFinal}">${sf !== null ? sf + '/100' : '—'}</div>
+          <div style="font-size:12px;color:#64748B;margin-top:2px">${s.nivel}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:11px;color:#94A3B8">Calidad 60% · Plataforma 40%</div>
+        </div>
+      </div>
+
+      <div style="font-size:12px;font-weight:700;color:#0F172A;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">⭐ Calidad de servicio · ${s.calidad.score ?? '—'}/100</div>
+      ${fila('Calificaciones de negocios', s.calidad.negocio, s.calidad.total_negocio + ' calific.')}
+      ${fila('Calificaciones de clientes', s.calidad.cliente, s.calidad.total_cliente + ' calific.')}
+
+      <div style="font-size:12px;font-weight:700;color:#0F172A;margin:14px 0 8px;text-transform:uppercase;letter-spacing:.5px">📊 Comportamiento · ${pl.score ?? '—'}/100</div>
+      ${fila('Pedidos completados',    pl.completados.score,   pl.completados.total + ' total')}
+      ${fila('Sin cancelaciones',      pl.cancelaciones.score, pl.cancelaciones.total > 0 ? pl.cancelaciones.total + ' liberados' : 'Sin cancelaciones')}
+      ${fila('Velocidad de entrega',   pl.velocidad.score,     pl.velocidad.minutos ? pl.velocidad.minutos + ' min promedio' : null)}
+      ${fila('Horarios valle (14–19h)',pl.valle.score,         null)}
+      ${fila('Feriados trabajados',    pl.feriados.score,      pl.feriados.trabajados + '/' + pl.feriados.total + ' feriados')}
+    `;
+  } catch {
+    if ($('score-box')) $('score-box').innerHTML = '<div style="font-size:12px;color:#94A3B8">Score no disponible aún</div>';
+  }
+}
+
 // ══════════ PWA — INSTALACIÓN ══════════
 let deferredInstallPrompt = null;
 
@@ -1744,11 +1799,14 @@ async function cargarPerfil() {
         <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Teléfono</span><strong>${p.telefono || '—'}</strong></div>
         <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Vehículo</span><strong>${p.vehiculo_tipo || '—'}</strong></div>
         <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Total entregas</span><strong>${p.total_entregas}</strong></div>
-        <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Rating</span><strong>⭐ ${parseFloat(p.rating || 5).toFixed(1)}</strong></div>
         <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Saldo pendiente</span><strong style="color:var(--teal)">${fmt(p.saldo_pendiente || 0)}</strong></div>
         <div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:var(--text2)">Miembro desde</span><strong>${new Date(p.created_at).toLocaleDateString('es-CL')}</strong></div>
       </div>
+      <div id="score-box" style="margin-top:20px;background:#F8FAFC;border-radius:14px;padding:16px">
+        <div style="font-size:13px;color:var(--text2);margin-bottom:8px">Cargando tu score...</div>
+      </div>
     `;
+    cargarScore();
   } catch (e) { toast(e.message, 'error'); }
 }
 

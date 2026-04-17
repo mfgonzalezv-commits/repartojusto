@@ -162,6 +162,28 @@ const migrations = [
      END IF;
    END $$`,
 
+  // ── CALIFICACIONES DE RIDERS ─────────────────────────────────────────────
+  `CREATE TABLE IF NOT EXISTS calificaciones (
+    id            UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    pedido_id     UUID NOT NULL REFERENCES pedidos(id),
+    rider_id      UUID NOT NULL REFERENCES riders(id),
+    tipo          VARCHAR(10) NOT NULL CHECK (tipo IN ('negocio','cliente')),
+    -- Preguntas negocio
+    llego_tiempo      BOOLEAN,
+    fue_amable        BOOLEAN,
+    bien_presentado   BOOLEAN,
+    verifico_pedido   BOOLEAN,
+    -- Preguntas cliente
+    pedido_buen_estado BOOLEAN,
+    lo_recomendaria    BOOLEAN,
+    -- Compartida
+    comentario    TEXT,
+    created_at    TIMESTAMP DEFAULT NOW(),
+    UNIQUE(pedido_id, tipo)
+  )`,
+  `CREATE INDEX IF NOT EXISTS idx_calificaciones_rider  ON calificaciones(rider_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_calificaciones_pedido ON calificaciones(pedido_id)`,
+
   // ── ÍNDICES ───────────────────────────────────────────────────────────────
   `CREATE INDEX IF NOT EXISTS idx_pedidos_negocio  ON pedidos(negocio_id)`,
   `CREATE INDEX IF NOT EXISTS idx_pedidos_rider    ON pedidos(rider_id)`,
