@@ -411,31 +411,32 @@
 <section id="comparacion">
   <div class="container">
     <h2>Mismo negocio. Mismos pedidos.<br>Costos muy distintos.</h2>
-    <p class="sub">100 pedidos al mes · 3 km de distancia promedio</p>
+    <p class="sub">100 pedidos al mes · ticket promedio $10.000</p>
 
     <div class="comp-wrap">
       <div class="comp-card ellos">
         <div class="comp-label">Lo que pagas hoy</div>
-        <div class="comp-nombre">Otras apps</div>
-        <div class="comp-item"><span class="lbl">Cargo fijo por pedido</span><span class="val mal">$1.040</span></div>
-        <div class="comp-item"><span class="lbl">Tarifa por km (3 km)</span><span class="val mal">$960</span></div>
-        <div class="comp-item"><span class="lbl">Costo total por pedido</span><span class="val mal">$2.000</span></div>
-        <div class="comp-item"><span class="lbl">Control de tu operación</span><span class="val mal">❌ Limitado</span></div>
+        <div class="comp-nombre">Grandes Aplicaciones</div>
+        <div class="comp-item"><span class="lbl">Comisión sobre tu venta (30%)</span><span class="val mal">$3.000 por pedido</span></div>
+        <div class="comp-item"><span class="lbl">Cobro adicional al cliente</span><span class="val mal">~$1.000 extra</span></div>
+        <div class="comp-item"><span class="lbl">¿Quién se queda con tu margen?</span><span class="val mal">❌ Ellos</span></div>
         <div class="comp-item"><span class="lbl">Datos de tus clientes</span><span class="val mal">❌ Son de ellos</span></div>
-        <div class="comp-total">$200.000 al mes</div>
+        <div class="comp-item"><span class="lbl">Control de tu operación</span><span class="val mal">❌ Limitado</span></div>
+        <div class="comp-total">$300.000 al mes *</div>
       </div>
       <div class="comp-card nosotros">
         <div class="comp-badge">✓ La alternativa inteligente</div>
         <div class="comp-label">Lo que pagas con nosotros</div>
         <div class="comp-nombre">Reparto Justo</div>
-        <div class="comp-item"><span class="lbl">Cargo fijo por pedido</span><span class="val bien">$500</span></div>
-        <div class="comp-item"><span class="lbl">Tarifa por km (3 km)</span><span class="val bien">$2.150 va al rider</span></div>
-        <div class="comp-item"><span class="lbl">Costo plataforma por pedido</span><span class="val bien">Solo $500</span></div>
-        <div class="comp-item"><span class="lbl">Control de tu operación</span><span class="val bien">✅ Total</span></div>
+        <div class="comp-item"><span class="lbl">Cargo plataforma por pedido</span><span class="val bien">$500 fijo</span></div>
+        <div class="comp-item"><span class="lbl">Cobro adicional al cliente</span><span class="val bien">✅ $0</span></div>
+        <div class="comp-item"><span class="lbl">¿Quién se queda con tu margen?</span><span class="val bien">✅ Tú</span></div>
         <div class="comp-item"><span class="lbl">Datos de tus clientes</span><span class="val bien">✅ Son tuyos</span></div>
+        <div class="comp-item"><span class="lbl">Control de tu operación</span><span class="val bien">✅ Total</span></div>
         <div class="comp-total">$50.000 al mes</div>
       </div>
     </div>
+    <p style="text-align:center;font-size:12px;color:var(--text2);margin-top:16px">* Solo en comisión sobre ventas, sin contar el cobro extra al cliente</p>
   </div>
 </section>
 
@@ -447,33 +448,28 @@
     <p class="sub">Ingresa los datos de tu negocio. Te mostramos el impacto en segundos.</p>
 
     <div class="calc-box">
-      <div class="calc-inputs">
+      <div class="calc-inputs" style="grid-template-columns:1fr 1fr">
         <div class="calc-field">
           <label>Pedidos al mes</label>
           <input type="number" id="inp-pedidos" value="100" min="1" oninput="calcular()">
         </div>
         <div class="calc-field">
-          <label>Km promedio</label>
-          <input type="number" id="inp-km" value="3" min="0.5" step="0.5" oninput="calcular()">
-        </div>
-        <div class="calc-field">
           <label>Ticket promedio ($)</label>
-          <input type="number" id="inp-ticket" value="8000" min="500" step="500" oninput="calcular()">
+          <input type="number" id="inp-ticket" value="10000" min="500" step="500" oninput="calcular()">
         </div>
       </div>
       <div class="calc-resultado">
-        <div class="calc-linea malo"><span>Otras apps (cargo plataforma)</span><span id="r-ellos-plat">$104.000</span></div>
-        <div class="calc-linea malo"><span>Otras apps (cargo distancia)</span><span id="r-ellos-km">$96.000</span></div>
-        <div class="calc-linea malo"><span>Total que pagas a otras apps</span><span id="r-ellos">$200.000</span></div>
+        <div class="calc-linea malo"><span>Comisión grandes apps (30% de tu venta)</span><span id="r-ellos-com">$300.000</span></div>
+        <div class="calc-linea malo"><span>Cobro extra a tus clientes (~$1.000 c/u)</span><span id="r-ellos-cli">$100.000</span></div>
+        <div class="calc-linea malo"><span>Total que se llevan ellos</span><span id="r-ellos">$400.000</span></div>
         <hr class="calc-sep">
         <div class="calc-linea bueno"><span>Reparto Justo (cargo plataforma)</span><span id="r-nosotros">$50.000</span></div>
-        <div class="calc-linea bueno"><span>Delivery va directo al rider</span><span id="r-rider">tú decides quién paga</span></div>
         <hr class="calc-sep">
-        <div class="calc-ahorro"><span>Ahorras en plataforma</span><span id="r-ahorro">$150.000/mes</span></div>
+        <div class="calc-ahorro"><span>Ahorras en comisión</span><span id="r-ahorro">$250.000/mes</span></div>
       </div>
       <div class="calc-anual">
-        Al año, ese ahorro en cargo de plataforma es de
-        <strong id="r-anual">$1.800.000</strong>
+        En un año, dejas de regalar
+        <strong id="r-anual">$3.000.000</strong>
       </div>
     </div>
   </div>
@@ -638,28 +634,21 @@ function fmt(n) {
 
 function calcular() {
   const pedidos = parseInt(document.getElementById('inp-pedidos').value) || 0;
-  const km      = parseFloat(document.getElementById('inp-km').value)    || 0;
   const ticket  = parseInt(document.getElementById('inp-ticket').value)  || 0;
 
-  // Otras apps
-  const otrasFijo = pedidos * 1040;
-  const otrasKm   = pedidos * 320 * km;
-  const otrasTotal = otrasFijo + otrasKm;
+  const otrasComision = pedidos * ticket * 0.30;
+  const otrasCliente  = pedidos * 1000;
+  const otrasTotal    = otrasComision + otrasCliente;
 
-  // Reparto Justo (solo cargo plataforma)
   const rjPlat = pedidos * 500;
-  // Rider fee (informativo)
-  const rjRider = pedidos * (1100 + 350 * km);
+  const ahorro = otrasComision - rjPlat;
 
-  const ahorro = otrasTotal - rjPlat;
-
-  document.getElementById('r-ellos-plat').textContent = fmt(otrasFijo);
-  document.getElementById('r-ellos-km').textContent   = fmt(otrasKm);
-  document.getElementById('r-ellos').textContent      = fmt(otrasTotal);
-  document.getElementById('r-nosotros').textContent   = fmt(rjPlat);
-  document.getElementById('r-rider').textContent      = fmt(rjRider) + ' va al rider';
-  document.getElementById('r-ahorro').textContent     = fmt(ahorro) + '/mes';
-  document.getElementById('r-anual').textContent      = fmt(ahorro * 12);
+  document.getElementById('r-ellos-com').textContent = fmt(otrasComision);
+  document.getElementById('r-ellos-cli').textContent = fmt(otrasCliente);
+  document.getElementById('r-ellos').textContent     = fmt(otrasTotal);
+  document.getElementById('r-nosotros').textContent  = fmt(rjPlat);
+  document.getElementById('r-ahorro').textContent    = fmt(ahorro) + '/mes';
+  document.getElementById('r-anual').textContent     = fmt(ahorro * 12);
 }
 
 calcular();
