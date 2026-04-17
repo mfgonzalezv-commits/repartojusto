@@ -1,7 +1,7 @@
 // Service Worker — Reparto Justo Rider PWA
 // v2 — caché básico + notificaciones OS
 
-const CACHE = 'rj-rider-v1';
+const CACHE = 'rj-rider-v3';
 const PRECACHE = ['/rider.html', '/manifest-rider.json', '/icon-rider-512.svg'];
 
 // ── Instalación: pre-cachear archivos esenciales ──────────────────────────────
