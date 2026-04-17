@@ -102,6 +102,7 @@ function _payload(pedido) {
     direccion_entrega: pedido.direccion_entrega,
     tarifa_entrega:    pedido.tarifa_entrega,
     distancia_km:      pedido.distancia_km,
+    hora_retiro:       pedido.hora_retiro || null,
   };
 }
 
@@ -204,4 +205,37 @@ function cancelarCascada(pedido_id) {
   }
 }
 
-module.exports = { iniciarCascada, aceptarOferta, rechazarOferta, cancelarCascada };
+// ── Scheduler: lanza cascada 10 min antes de hora_retiro ─────────────────────
+const ANTICIPACION_MIN = 10;
+
+async function _revisarAgendados(io) {
+  try {
+    const { rows } = await db(
+      `SELECT p.id
+       FROM pedidos p
+       WHERE p.estado = 'agendado'
+         AND p.hora_retiro IS NOT NULL
+         AND p.hora_retiro <= (NOW() + INTERVAL '${ANTICIPACION_MIN} minutes')::time
+         AND p.hora_retiro >= NOW()::time`
+    );
+    for (const { id } of rows) {
+      // Pasar a pendiente y disparar cascada
+      await db(
+        `UPDATE pedidos SET estado = 'pendiente' WHERE id = $1 AND estado = 'agendado'`,
+        [id]
+      );
+      iniciarCascada(id, io).catch(err =>
+        console.error('❌ Error cascada agendado:', err.message)
+      );
+    }
+  } catch (err) {
+    console.error('❌ Error revisarAgendados:', err.message);
+  }
+}
+
+function iniciarScheduler(io) {
+  setInterval(() => _revisarAgendados(io), 60 * 1000);
+  console.log('⏰ Scheduler de pedidos agendados activo (cada 1 min)');
+}
+
+module.exports = { iniciarCascada, aceptarOferta, rechazarOferta, cancelarCascada, iniciarScheduler };

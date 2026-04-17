@@ -136,6 +136,7 @@
     .estado-badge {
       padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase;
     }
+    .estado-agendado   { background: #FEF3C7; color: #92400E; }
     .estado-pendiente  { background: var(--amber-bg); color: var(--amber); }
     .estado-asignado   { background: var(--blue-bg); color: var(--blue); }
     .estado-retiro     { background: #EDE9FE; color: #5B21B6; }
@@ -580,6 +581,20 @@
                   <input type="text" id="np-notas" placeholder="Ej: dejar en portería, 3er piso">
                 </div>
 
+                <!-- Agendar para más tarde -->
+                <div class="field" style="background:#FFFBEB;border:1.5px solid #FCD34D;border-radius:10px;padding:12px">
+                  <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:600;margin-bottom:0">
+                    <input type="checkbox" id="chk-agendar" onchange="toggleHoraRetiro()" style="width:16px;height:16px;accent-color:var(--teal)">
+                    ⏰ Agendar para más tarde (hoy)
+                  </label>
+                  <div id="wrap-hora-retiro" style="display:none;margin-top:10px">
+                    <label style="font-size:12px;color:var(--text2);font-weight:500">Hora de retiro en el local</label>
+                    <input type="time" id="np-hora-retiro"
+                      style="width:100%;margin-top:4px;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit">
+                    <div style="font-size:11px;color:var(--text3);margin-top:4px">El rider será contactado 10 minutos antes</div>
+                  </div>
+                </div>
+
                 <div class="field">
                   <label>Valor del producto *</label>
                   <input type="number" id="np-valor-producto" placeholder="Ej: 15000" min="0" step="100"
@@ -862,6 +877,7 @@ const timeAgo = d => {
 };
 
 const ESTADO_LABEL = {
+  agendado: 'Agendado',
   pendiente: 'Pendiente',
   asignado: 'Asignado',
   retiro: 'En retiro',
@@ -1736,20 +1752,32 @@ $('btn-crear-pedido').addEventListener('click', async () => {
       body: JSON.stringify({ nombre, telefono, direccion, lat: destinoLat, lng: destinoLng, notas: notas || undefined })
     });
 
+    // Hora de retiro (si está agendado)
+    const horaRetiro = $('chk-agendar')?.checked ? $('np-hora-retiro')?.value : null;
+    if ($('chk-agendar')?.checked && !horaRetiro) {
+      toast('Ingresa la hora de retiro para agendar', 'error');
+      btn.disabled = false; btn.textContent = 'Crear pedido';
+      return;
+    }
+
     // Crear pedido
     const pedido = await apiFetch('/pedidos', {
       method: 'POST',
       body: JSON.stringify({
         cliente_nombre: nombre, cliente_telefono: telefono,
         direccion_entrega: direccion, lat_entrega: destinoLat, lng_entrega: destinoLng,
-        distancia_km: km, valor_producto: valorProducto, notas: notas || undefined
+        distancia_km: km, valor_producto: valorProducto, notas: notas || undefined,
+        hora_retiro: horaRetiro || undefined
       })
     });
 
     // Generar link de seguimiento
     const linkSeguimiento = `${location.origin}/seguimiento.html?id=${pedido.id}`;
 
-    toast('¡Pedido creado! Copiando link de seguimiento...', 'success');
+    const msgCreado = horaRetiro
+      ? `¡Pedido agendado para las ${horaRetiro}! El rider será contactado 10 min antes.`
+      : '¡Pedido creado! Copiando link de seguimiento...';
+    toast(msgCreado, 'success');
     navigator.clipboard?.writeText(linkSeguimiento).catch(() => {});
 
     // Mostrar modal con link
@@ -2200,6 +2228,19 @@ async function eliminarTarjeta() {
 // ══════════════════════════════════════════════════════════════
 if (token && usuario?.rol === 'negocio') {
   iniciarApp();
+}
+
+// ── Agendar reparto ───────────────────────────────────────────────────────
+function toggleHoraRetiro() {
+  const wrap = $('wrap-hora-retiro');
+  if (!wrap) return;
+  wrap.style.display = $('chk-agendar').checked ? 'block' : 'none';
+  if ($('chk-agendar').checked) {
+    // Sugerir hora actual + 30 min como valor por defecto
+    const d = new Date(Date.now() + 30 * 60000);
+    $('np-hora-retiro').value = d.toTimeString().slice(0,5);
+    $('np-hora-retiro').focus();
+  }
 }
 
 // ── Calificación de rider por negocio (modal) ─────────────────────────────

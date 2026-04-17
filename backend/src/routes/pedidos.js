@@ -32,10 +32,11 @@ router.post('/',
     body('distancia_km').isFloat({ min: 0.1, max: 500 }),
     body('valor_producto').optional().isInt({ min: 0 }),
     body('notas').optional().trim(),
+    body('hora_retiro').optional().matches(/^\d{2}:\d{2}$/),
   ],
   validar,
   async (req, res, next) => {
-    const { cliente_nombre, cliente_telefono, direccion_entrega, lat_entrega, lng_entrega, distancia_km, valor_producto, notas } = req.body;
+    const { cliente_nombre, cliente_telefono, direccion_entrega, lat_entrega, lng_entrega, distancia_km, valor_producto, notas, hora_retiro } = req.body;
     try {
       const { rows: [negocio] } = await db(
         `SELECT id, tarjeta_customer_id, tarjeta_token, modo,
@@ -89,26 +90,31 @@ router.post('/',
         );
       }
 
+      const agendado = !!hora_retiro;
+      const estadoInicial = agendado ? 'agendado' : 'pendiente';
+
       const { rows: [pedido] } = await db(
         `INSERT INTO pedidos
            (negocio_id, cliente_nombre, cliente_telefono, direccion_entrega,
             lat_entrega, lng_entrega, distancia_km, tarifa_entrega, app_fee,
-            valor_producto, notas, cargo_negocio, cargo_cliente)
-         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
+            valor_producto, notas, cargo_negocio, cargo_cliente, hora_retiro, estado)
+         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15)
          RETURNING *`,
         [negocio.id, cliente_nombre, cliente_telefono, direccion_entrega,
          lat_entrega, lng_entrega, distancia_km, tarifa_entrega, config.APP_FEE,
          valor_producto ? parseInt(valor_producto) : null, notas,
-         cargo_negocio, cargo_cliente]
+         cargo_negocio, cargo_cliente, hora_retiro || null, estadoInicial]
       );
 
-      // ── Motor de asignación: cascada al rider más cercano ────────────────
+      // ── Motor de asignación ──────────────────────────────────────────────
       const io = req.app.get('io');
-      if (io) {
+      if (io && !agendado) {
+        // Pedido inmediato: lanzar cascada ahora
         iniciarCascada(pedido.id, io).catch(err =>
           console.error('❌ Error cascada asignación:', err.message)
         );
       }
+      // Pedido agendado: el scheduler lo lanzará 10 min antes de hora_retiro
 
       res.status(201).json(pedido);
     } catch (err) { next(err); }
@@ -312,6 +318,17 @@ router.put('/:id/cancelar',
         filtro += ` AND negocio_id = $${params.length}`;
       }
 
+      // Verificar estado actual antes de cancelar
+      const { rows: [actual] } = await db(
+        `SELECT p.*, r.id AS rider_db_id FROM pedidos p
+         LEFT JOIN riders r ON r.id = p.rider_id
+         WHERE p.id = $1`, [req.params.id]
+      );
+      if (!actual) return res.status(404).json({ error: 'Pedido no encontrado' });
+      if (['entregado','cancelado'].includes(actual.estado)) {
+        return res.status(400).json({ error: 'Pedido ya finalizado' });
+      }
+
       const { rows } = await db(
         `UPDATE pedidos
          SET estado = 'cancelado', cancelado_motivo = $${params.length + 1}
@@ -321,11 +338,34 @@ router.put('/:id/cancelar',
       );
       if (!rows[0]) return res.status(404).json({ error: 'Pedido no encontrado o ya finalizado' });
 
+      // ── Multa si el rider ya estaba en el local (retiro) ────────────────
+      let multa = false;
+      if (actual.estado === 'retiro' && actual.rider_id) {
+        await db(
+          `UPDATE riders
+           SET saldo_pendiente = saldo_pendiente + $1
+           WHERE id = $2`,
+          [actual.tarifa_entrega, actual.rider_id]
+        );
+        multa = true;
+      }
+
       req.app.get('io')?.to(`negocio:${rows[0].negocio_id}`).emit('pedido:actualizado', {
         id: rows[0].id, estado: 'cancelado'
       });
 
-      res.json(rows[0]);
+      // Notificar al rider si aplica
+      if (actual.rider_id) {
+        req.app.get('io')?.to(`rider:${actual.rider_id}`).emit('pedido:cancelado', {
+          pedido_id: rows[0].id,
+          multa,
+          mensaje: multa
+            ? `El negocio canceló el pedido. Recibirás $${actual.tarifa_entrega.toLocaleString('es-CL')} por el desplazamiento.`
+            : 'El negocio canceló el pedido.'
+        });
+      }
+
+      res.json({ ...rows[0], multa });
     } catch (err) { next(err); }
   }
 );

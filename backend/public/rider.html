@@ -1102,7 +1102,9 @@ function mostrarOferta(data) {
   $('oferta-retiro').textContent   = data.direccion_retiro  || '—';
   $('oferta-entrega').textContent  = data.direccion_entrega || '—';
   $('oferta-km').textContent       = `${parseFloat(data.distancia_km).toFixed(1)} km`;
-  $('oferta-tarifa-lbl').textContent = `💵 ${fmt(data.tarifa_entrega)}`;
+  $('oferta-tarifa-lbl').textContent = data.hora_retiro
+    ? `⏰ Agendado ${data.hora_retiro.slice(0,5)} · 💵 ${fmt(data.tarifa_entrega)}`
+    : `💵 ${fmt(data.tarifa_entrega)}`;
 
   // Iniciar anillo
   let seg = OFERTA_TOTAL_SEG;

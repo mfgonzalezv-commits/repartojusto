@@ -184,6 +184,16 @@ const migrations = [
   `CREATE INDEX IF NOT EXISTS idx_calificaciones_rider  ON calificaciones(rider_id)`,
   `CREATE INDEX IF NOT EXISTS idx_calificaciones_pedido ON calificaciones(pedido_id)`,
 
+  // ── PEDIDOS AGENDADOS ─────────────────────────────────────────────────────
+  `ALTER TABLE pedidos ADD COLUMN IF NOT EXISTS hora_retiro TIME`,
+  // Ampliar constraint de estado para incluir 'agendado'
+  `DO $$ BEGIN
+     ALTER TABLE pedidos DROP CONSTRAINT IF EXISTS pedidos_estado_check;
+     ALTER TABLE pedidos ADD CONSTRAINT pedidos_estado_check
+       CHECK (estado IN ('agendado','pendiente','asignado','retiro','en_camino','entregado','cancelado'));
+   EXCEPTION WHEN OTHERS THEN NULL;
+   END $$`,
+
   // ── ÍNDICES ───────────────────────────────────────────────────────────────
   `CREATE INDEX IF NOT EXISTS idx_pedidos_negocio  ON pedidos(negocio_id)`,
   `CREATE INDEX IF NOT EXISTS idx_pedidos_rider    ON pedidos(rider_id)`,

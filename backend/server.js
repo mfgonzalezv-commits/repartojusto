@@ -122,6 +122,10 @@ app.set('io', io);
 // Configurar WebSockets
 setupSockets(io);
 
+// Scheduler de pedidos agendados
+const { iniciarScheduler } = require('./src/sockets/asignacion');
+iniciarScheduler(io);
+
 // Iniciar servidor
 const PORT = config.PORT;
 server.listen(PORT, '0.0.0.0', () => {
