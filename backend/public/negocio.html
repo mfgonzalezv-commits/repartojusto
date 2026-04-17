@@ -1271,33 +1271,10 @@ async function cargarDetalle(id) {
         </div>
       </div>` : ''}
       ${p.estado === 'entregado' && p.rider_nombre ? `
-      <div style="margin-top:16px;border-top:1px solid var(--border);padding-top:14px">
-        <div style="font-size:13px;font-weight:700;color:var(--text1);margin-bottom:10px">⭐ Calificar al rider</div>
-        <div id="calif-negocio-form">
-          ${[
-            ['llego_tiempo',    '¿Llegó a tiempo al local?'],
-            ['fue_amable',      '¿Fue amable y respetuoso?'],
-            ['bien_presentado', '¿Llegó bien presentado?'],
-            ['verifico_pedido', '¿Verificó el pedido antes de salir?'],
-          ].map(([key,label]) => `
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.05)">
-              <span style="font-size:13px;color:var(--text1)">${label}</span>
-              <div style="display:flex;gap:8px">
-                <button onclick="setCalifNeg('${key}',true,this)"  data-key="${key}" data-val="true"  style="padding:5px 14px;border-radius:20px;border:1.5px solid var(--border);background:white;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">Sí</button>
-                <button onclick="setCalifNeg('${key}',false,this)" data-key="${key}" data-val="false" style="padding:5px 14px;border-radius:20px;border:1.5px solid var(--border);background:white;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">No</button>
-              </div>
-            </div>`).join('')}
-          <textarea id="calif-comentario-neg" placeholder="Comentario opcional..." rows="2"
-            style="width:100%;margin-top:10px;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;resize:none;box-sizing:border-box"></textarea>
-          <button onclick="enviarCalifNegocio('${p.id}')"
-            style="width:100%;margin-top:10px;background:var(--teal);color:white;border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">
-            Enviar calificación
-          </button>
-        </div>
-        <div id="calif-negocio-ok" style="display:none;text-align:center;padding:14px;color:var(--teal);font-weight:600;font-size:13px">
-          ✅ Gracias por calificar al rider
-        </div>
-      </div>` : ''}
+      <button onclick="abrirModalCalif('${p.id}','${p.rider_nombre}')"
+        style="width:100%;margin-top:16px;background:#FFFBEB;color:#92400E;border:2px solid #FCD34D;border-radius:12px;padding:14px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px">
+        ⭐ Calificar a ${p.rider_nombre}
+      </button>` : ''}
     `;
 
     if (cancelBtn) $('btn-cancelar').addEventListener('click', () => cancelarPedido(p.id));
@@ -2225,11 +2202,43 @@ if (token && usuario?.rol === 'negocio') {
   iniciarApp();
 }
 
-// ── Calificación de rider por negocio ─────────────────────────────────────
+// ── Calificación de rider por negocio (modal) ─────────────────────────────
 const _califNeg = {};
+let _califPedidoId = null;
+const PREGUNTAS_NEG = [
+  ['llego_tiempo',    '¿Llegó a tiempo al local?'],
+  ['fue_amable',      '¿Fue amable y respetuoso?'],
+  ['bien_presentado', '¿Llegó bien presentado?'],
+  ['verifico_pedido', '¿Verificó el pedido antes de salir?'],
+];
+
+function abrirModalCalif(pedidoId, riderNombre) {
+  _califPedidoId = pedidoId;
+  Object.keys(_califNeg).forEach(k => delete _califNeg[k]);
+  $('calif-modal-titulo').textContent = `Califica a ${riderNombre}`;
+  $('calif-modal-ok').style.display = 'none';
+  $('calif-modal-form').style.display = 'block';
+  $('calif-comentario-neg').value = '';
+
+  $('calif-preguntas-neg').innerHTML = PREGUNTAS_NEG.map(([key, label]) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06)">
+      <span style="font-size:13px;color:var(--text1);flex:1;padding-right:12px">${label}</span>
+      <div style="display:flex;gap:8px;flex-shrink:0">
+        <button onclick="setCalifNeg('${key}',true,this)" style="padding:7px 18px;border-radius:20px;border:1.5px solid var(--border);background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Sí</button>
+        <button onclick="setCalifNeg('${key}',false,this)" style="padding:7px 18px;border-radius:20px;border:1.5px solid var(--border);background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">No</button>
+      </div>
+    </div>`).join('');
+
+  const modal = $('modal-calif');
+  modal.style.display = 'flex';
+}
+
+function cerrarModalCalif() {
+  $('modal-calif').style.display = 'none';
+}
+
 function setCalifNeg(key, val, btn) {
   _califNeg[key] = val;
-  // Resaltar botón seleccionado
   const par = btn.parentElement;
   par.querySelectorAll('button').forEach(b => {
     b.style.background = 'white';
@@ -2241,7 +2250,7 @@ function setCalifNeg(key, val, btn) {
   btn.style.borderColor = val ? 'var(--teal)' : 'var(--red)';
 }
 
-async function enviarCalifNegocio(pedidoId) {
+async function enviarCalifNegocio() {
   const campos = ['llego_tiempo','fue_amable','bien_presentado','verifico_pedido'];
   if (!campos.every(c => c in _califNeg)) {
     return toast('Responde todas las preguntas antes de enviar', 'error');
@@ -2250,18 +2259,54 @@ async function enviarCalifNegocio(pedidoId) {
     await apiFetch('/calificaciones', {
       method: 'POST',
       body: JSON.stringify({
-        pedido_id: pedidoId,
+        pedido_id: _califPedidoId,
         tipo: 'negocio',
         ..._califNeg,
         comentario: $('calif-comentario-neg')?.value || ''
       })
     });
-    $('calif-negocio-form').style.display = 'none';
-    $('calif-negocio-ok').style.display = 'block';
+    $('calif-modal-form').style.display = 'none';
+    $('calif-modal-ok').style.display = 'block';
     toast('✅ Calificación enviada', 'success');
   } catch (e) { toast(e.message, 'error'); }
 }
 </script>
+
+<!-- ── MODAL CALIFICACIÓN RIDER ──────────────────────────────────────── -->
+<div id="modal-calif" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:3000;align-items:center;justify-content:center;padding:20px">
+  <div style="background:white;border-radius:20px;width:100%;max-width:460px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3)">
+    <!-- Header amarillo -->
+    <div style="background:#FFCC00;padding:20px 24px 16px">
+      <div style="font-size:26px;text-align:center;margin-bottom:6px">⭐</div>
+      <div style="font-size:17px;font-weight:800;color:#1C1C1C;text-align:center" id="calif-modal-titulo">Califica al rider</div>
+      <div style="font-size:13px;color:#4B4B00;text-align:center;margin-top:4px">Tu opinión ayuda a mejorar el servicio</div>
+    </div>
+    <!-- Formulario -->
+    <div style="padding:20px 24px">
+      <div id="calif-modal-form">
+        <div id="calif-preguntas-neg"></div>
+        <textarea id="calif-comentario-neg" placeholder="Comentario opcional (máx. 300 caracteres)..." rows="2" maxlength="300"
+          style="width:100%;margin-top:14px;padding:10px 12px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:inherit;resize:none;box-sizing:border-box"></textarea>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <button onclick="cerrarModalCalif()"
+            style="flex:1;padding:12px;border:1.5px solid var(--border);border-radius:10px;background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--text2)">
+            Ahora no
+          </button>
+          <button onclick="enviarCalifNegocio()"
+            style="flex:2;padding:12px;background:#1C1C1C;color:white;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">
+            Enviar calificación
+          </button>
+        </div>
+      </div>
+      <div id="calif-modal-ok" style="display:none;text-align:center;padding:20px 0">
+        <div style="font-size:40px;margin-bottom:10px">✅</div>
+        <div style="font-size:16px;font-weight:700;color:#065F46">¡Gracias por calificar!</div>
+        <div style="font-size:13px;color:var(--text2);margin-top:6px">Tu opinión ayuda a mejorar el servicio</div>
+        <button onclick="cerrarModalCalif()" style="margin-top:16px;padding:10px 24px;background:#FFCC00;color:#1C1C1C;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Socket.io client (se carga desde el servidor) -->
 <script src="/socket.io/socket.io.js"></script>

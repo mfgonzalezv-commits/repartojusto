@@ -336,32 +336,16 @@ function renderPedido(p) {
 
       <!-- Calificación del cliente (solo si fue entregado y tiene rider) -->
       ${p.estado === 'entregado' && p.rider_nombre ? `
-      <div style="background:white;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.07)">
-        <div style="font-size:15px;font-weight:700;color:#0F172A;margin-bottom:4px">⭐ ¿Cómo fue tu entrega?</div>
-        <div style="font-size:12px;color:#64748B;margin-bottom:14px">Califica a tu repartidor ${p.rider_nombre}</div>
-        <div id="calif-cli-form">
-          ${[
-            ['llego_tiempo',       '¿Llegó a tiempo?'],
-            ['fue_amable',         '¿Fue amable y respetuoso?'],
-            ['pedido_buen_estado', '¿El pedido llegó en buen estado?'],
-            ['lo_recomendaria',    '¿Lo recomendarías?'],
-          ].map(([key, label]) => `
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(0,0,0,.05)">
-              <span style="font-size:13px;color:#1E293B">${label}</span>
-              <div style="display:flex;gap:8px">
-                <button onclick="setCalifCli('${key}',true,this)" style="padding:6px 16px;border-radius:20px;border:1.5px solid #E2E8F0;background:white;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">Sí</button>
-                <button onclick="setCalifCli('${key}',false,this)" style="padding:6px 16px;border-radius:20px;border:1.5px solid #E2E8F0;background:white;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">No</button>
-              </div>
-            </div>`).join('')}
-          <textarea id="calif-comentario-cli" placeholder="Comentario opcional..." rows="2"
-            style="width:100%;margin-top:12px;padding:9px 12px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:13px;font-family:inherit;resize:none;box-sizing:border-box"></textarea>
-          <button onclick="enviarCalifCliente('${p.id}')"
-            style="width:100%;margin-top:10px;background:#0F766E;color:white;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">
-            Enviar calificación
-          </button>
-        </div>
-        <div id="calif-cli-ok" style="display:none;text-align:center;padding:18px;color:#0F766E;font-weight:600;font-size:14px">
-          ✅ ¡Gracias por calificar a tu repartidor!
+      <div style="background:white;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.07);text-align:center" id="calif-cli-cta">
+        <div style="font-size:32px;margin-bottom:8px">⭐</div>
+        <div style="font-size:15px;font-weight:700;color:#0F172A;margin-bottom:4px">¿Cómo fue tu entrega?</div>
+        <div style="font-size:13px;color:#64748B;margin-bottom:14px">Tómate 30 segundos para calificar a ${p.rider_nombre}</div>
+        <button onclick="abrirModalCalifCli('${p.id}','${p.rider_nombre}')"
+          style="width:100%;padding:13px;background:#FFCC00;color:#1C1C1C;border:none;border-radius:12px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit">
+          Calificar repartidor
+        </button>
+        <div id="calif-cli-ok" style="display:none;margin-top:12px;color:#0F766E;font-weight:600;font-size:14px">
+          ✅ ¡Gracias por calificar!
         </div>
       </div>` : ''}
 
@@ -420,8 +404,44 @@ cargarPedido();
 // Refrescar cada 30s
 setInterval(cargarPedido, 30000);
 
-// ── Calificación del cliente ──────────────────────────────────────────────
+// ── Calificación del cliente (modal) ─────────────────────────────────────
 const _califCli = {};
+let _califCliPedidoId = null;
+let _modalCalifCliAbierto = false;
+
+const PREGUNTAS_CLI = [
+  ['llego_tiempo',       '¿Llegó a tiempo?'],
+  ['fue_amable',         '¿Fue amable y respetuoso?'],
+  ['pedido_buen_estado', '¿El pedido llegó en buen estado?'],
+  ['lo_recomendaria',    '¿Lo recomendarías?'],
+];
+
+function abrirModalCalifCli(pedidoId, riderNombre) {
+  if (_modalCalifCliAbierto) return;
+  _califCliPedidoId = pedidoId;
+  Object.keys(_califCli).forEach(k => delete _califCli[k]);
+  document.getElementById('calif-modal-cli-titulo').textContent = `Califica a ${riderNombre}`;
+  document.getElementById('calif-modal-cli-form').style.display = 'block';
+  document.getElementById('calif-modal-cli-ok').style.display = 'none';
+  document.getElementById('calif-comentario-cli').value = '';
+
+  document.getElementById('calif-preguntas-cli').innerHTML = PREGUNTAS_CLI.map(([key, label]) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06)">
+      <span style="font-size:13px;color:#1E293B;flex:1;padding-right:12px">${label}</span>
+      <div style="display:flex;gap:8px;flex-shrink:0">
+        <button onclick="setCalifCli('${key}',true,this)" style="padding:7px 18px;border-radius:20px;border:1.5px solid #E2E8F0;background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Sí</button>
+        <button onclick="setCalifCli('${key}',false,this)" style="padding:7px 18px;border-radius:20px;border:1.5px solid #E2E8F0;background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">No</button>
+      </div>
+    </div>`).join('');
+
+  document.getElementById('modal-calif-cli').style.display = 'flex';
+  _modalCalifCliAbierto = true;
+}
+
+function cerrarModalCalifCli() {
+  document.getElementById('modal-calif-cli').style.display = 'none';
+}
+
 function setCalifCli(key, val, btn) {
   _califCli[key] = val;
   const par = btn.parentElement;
@@ -435,7 +455,7 @@ function setCalifCli(key, val, btn) {
   btn.style.borderColor = val ? '#0F766E' : '#DC2626';
 }
 
-async function enviarCalifCliente(pedidoId) {
+async function enviarCalifCliente() {
   const campos = ['llego_tiempo','fue_amable','pedido_buen_estado','lo_recomendaria'];
   if (!campos.every(c => c in _califCli)) {
     alert('Por favor responde todas las preguntas antes de enviar.');
@@ -446,7 +466,7 @@ async function enviarCalifCliente(pedidoId) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        pedido_id: pedidoId,
+        pedido_id: _califCliPedidoId,
         tipo: 'cliente',
         ..._califCli,
         comentario: document.getElementById('calif-comentario-cli')?.value || ''
@@ -457,13 +477,54 @@ async function enviarCalifCliente(pedidoId) {
       alert(err.error || 'Error al enviar calificación');
       return;
     }
-    document.getElementById('calif-cli-form').style.display = 'none';
-    document.getElementById('calif-cli-ok').style.display = 'block';
+    document.getElementById('calif-modal-cli-form').style.display = 'none';
+    document.getElementById('calif-modal-cli-ok').style.display = 'block';
+    // Ocultar también el CTA en la página
+    const cta = document.getElementById('calif-cli-cta');
+    if (cta) {
+      cta.querySelector('button')?.remove();
+      const ok = document.getElementById('calif-cli-ok');
+      if (ok) ok.style.display = 'block';
+    }
   } catch {
     alert('Error de conexión. Intenta de nuevo.');
   }
 }
 </script>
+<!-- ── MODAL CALIFICACIÓN CLIENTE ────────────────────────────────────── -->
+<div id="modal-calif-cli" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:3000;align-items:center;justify-content:center;padding:20px">
+  <div style="background:white;border-radius:20px;width:100%;max-width:440px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3)">
+    <div style="background:#FFCC00;padding:20px 24px 16px">
+      <div style="font-size:28px;text-align:center;margin-bottom:6px">⭐</div>
+      <div style="font-size:17px;font-weight:800;color:#1C1C1C;text-align:center" id="calif-modal-cli-titulo">Califica al repartidor</div>
+      <div style="font-size:13px;color:#4B4B00;text-align:center;margin-top:4px">Solo 4 preguntas rápidas · 30 segundos</div>
+    </div>
+    <div style="padding:20px 24px">
+      <div id="calif-modal-cli-form">
+        <div id="calif-preguntas-cli"></div>
+        <textarea id="calif-comentario-cli" placeholder="Comentario opcional..." rows="2" maxlength="300"
+          style="width:100%;margin-top:14px;padding:10px 12px;border:1.5px solid #E2E8F0;border-radius:10px;font-size:13px;font-family:inherit;resize:none;box-sizing:border-box"></textarea>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <button onclick="cerrarModalCalifCli()"
+            style="flex:1;padding:12px;border:1.5px solid #E2E8F0;border-radius:10px;background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;color:#64748B">
+            Ahora no
+          </button>
+          <button onclick="enviarCalifCliente()"
+            style="flex:2;padding:12px;background:#0F766E;color:white;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">
+            Enviar calificación
+          </button>
+        </div>
+      </div>
+      <div id="calif-modal-cli-ok" style="display:none;text-align:center;padding:20px 0">
+        <div style="font-size:40px;margin-bottom:10px">✅</div>
+        <div style="font-size:16px;font-weight:700;color:#065F46">¡Gracias por calificar!</div>
+        <div style="font-size:13px;color:#64748B;margin-top:6px">Tu opinión ayuda a mejorar el servicio</div>
+        <button onclick="cerrarModalCalifCli()" style="margin-top:16px;padding:10px 24px;background:#FFCC00;color:#1C1C1C;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>
