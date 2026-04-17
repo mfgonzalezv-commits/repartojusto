@@ -2229,6 +2229,17 @@ function abrirModalCalif(pedidoId, riderNombre) {
       </div>
     </div>`).join('');
 
+  // Pre-seleccionar "Sí" en todas las preguntas
+  PREGUNTAS_NEG.forEach(([key]) => {
+    _califNeg[key] = true;
+    const btns = $('calif-preguntas-neg').querySelectorAll(`button[onclick*="'${key}'"]`);
+    if (btns[0]) {
+      btns[0].style.background = 'var(--teal)';
+      btns[0].style.color = 'white';
+      btns[0].style.borderColor = 'var(--teal)';
+    }
+  });
+
   const modal = $('modal-calif');
   modal.style.display = 'flex';
 }
