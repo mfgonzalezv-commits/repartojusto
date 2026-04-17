@@ -496,7 +496,7 @@
               <p style="font-size:12px;color:var(--text2);margin-bottom:12px">Define cómo se distribuye el costo de envío entre tú y tu cliente.</p>
               <div class="field" style="margin-bottom:12px">
                 <label style="font-size:13px;font-weight:600">Estrategia de cobro</label>
-                <select id="select-estrategia" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit;margin-top:6px">
+                <select id="select-estrategia" onchange="togglePctInput();actualizarCalculoSiHayDistancia()" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit;margin-top:6px">
                   <option value="todo_incluido">Negocio paga todo — el cliente no ve costo de envío</option>
                   <option value="cliente_paga_todo">Delivery a cargo del cliente — el cliente paga fee + envío</option>
                   <option value="fee_negocio_envio_cliente">Fee propio, envío al cliente — tú pagas $500, cliente paga por km</option>
@@ -506,7 +506,7 @@
               </div>
               <div id="wrap-pct-negocio" style="display:none;margin-bottom:12px">
                 <label style="font-size:13px;font-weight:600">% que asumes tú (0–100)</label>
-                <input type="number" id="inp-pct-negocio" min="0" max="100" value="50"
+                <input type="number" id="inp-pct-negocio" min="0" max="100" value="50" oninput="actualizarCalculoSiHayDistancia()"
                   style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit;margin-top:6px">
               </div>
               <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
@@ -799,8 +799,11 @@ let perfilNegocio = null;
 
 function calcCargosLocal(tarifa, fee) {
   const total = tarifa + fee;
-  const est = perfilNegocio?.estrategia_cobro || 'todo_incluido';
-  const pct = Math.max(0, Math.min(100, perfilNegocio?.pct_negocio ?? 100));
+  // Leer siempre del DOM para reflejar el valor actual del select
+  const selEl = document.getElementById('select-estrategia');
+  const pctEl = document.getElementById('inp-pct-negocio');
+  const est = selEl ? selEl.value : (perfilNegocio?.estrategia_cobro || 'todo_incluido');
+  const pct = Math.max(0, Math.min(100, pctEl ? (parseInt(pctEl.value) || 100) : (perfilNegocio?.pct_negocio ?? 100)));
   switch (est) {
     case 'todo_incluido':             return { cargo_negocio: total,                     cargo_cliente: 0 };
     case 'cliente_paga_todo':         return { cargo_negocio: 0,                         cargo_cliente: total };
