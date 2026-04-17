@@ -819,7 +819,20 @@ function togglePctInput() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const sel = $('select-estrategia');
-  if (sel) sel.addEventListener('change', togglePctInput);
+  if (sel) sel.addEventListener('change', () => {
+    togglePctInput();
+    // Actualizar perfilNegocio local para que la calculadora refleje el cambio al instante
+    if (perfilNegocio) {
+      perfilNegocio.estrategia_cobro = sel.value;
+      perfilNegocio.pct_negocio = parseInt($('inp-pct-negocio')?.value) || 100;
+    }
+    actualizarCalculoSiHayDistancia();
+  });
+  const pct = $('inp-pct-negocio');
+  if (pct) pct.addEventListener('input', () => {
+    if (perfilNegocio) perfilNegocio.pct_negocio = parseInt(pct.value) || 100;
+    actualizarCalculoSiHayDistancia();
+  });
 });
 
 async function guardarEstrategia() {
@@ -980,13 +993,13 @@ async function iniciarApp() {
   // Cargar perfil negocio
   try {
     const perfil = await apiFetch('/negocios/perfil');
+    perfilNegocio = perfil; // ← disponible para calcularCargos desde el inicio
     $('topbar-nombre').textContent = perfil.nombre_comercial;
     const btnAbierto = $('btn-toggle-abierto');
     if (perfil.activo) {
       btnAbierto.textContent = '● Abierto';
       btnAbierto.className = 'badge-abierto open';
     }
-    // Mostrar banner si está en modo prueba
     if (!perfil.modo || perfil.modo === 'prueba') {
       $('banner-prueba').style.display = 'block';
     }
@@ -1422,7 +1435,13 @@ async function calcularDistanciaRuta(lat1, lng1, lat2, lng2) {
   return haversineKm(lat1, lng1, lat2, lng2);
 }
 
+let _ultimoKm = null;
+function actualizarCalculoSiHayDistancia() {
+  if (_ultimoKm) actualizarCalculo(_ultimoKm);
+}
+
 function actualizarCalculo(km) {
+  _ultimoKm = km;
   if (!Number.isFinite(km) || km <= 0) {
     $('calc-box-contenido').style.display = 'none';
     $('calc-box').style.display = 'block';
