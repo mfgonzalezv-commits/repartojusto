@@ -790,7 +790,8 @@ const toast = (msg, type = '') => {
 const fmt = n => '$' + parseInt(n).toLocaleString('es-CL');
 const telWA = tel => {
   let d = (tel || '').replace(/\D/g, '');
-  if (d.startsWith('56')) d = d.slice(2);
+  // Quitar prefijo 56 repetido hasta llegar al número local (9 dígitos)
+  while (d.startsWith('56') && d.length >= 11) d = d.slice(2);
   return '56' + d;
 };
 
