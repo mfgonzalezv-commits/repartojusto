@@ -998,6 +998,17 @@ async function iniciarApp() {
     const perfil = await apiFetch('/negocios/perfil');
     perfilNegocio = perfil; // ← disponible para calcularCargos desde el inicio
     $('topbar-nombre').textContent = perfil.nombre_comercial;
+    // Restaurar estrategia de cobro guardada en el select
+    if (perfil.estrategia_cobro && $('select-estrategia')) {
+      $('select-estrategia').value = perfil.estrategia_cobro;
+      togglePctInput();
+    }
+    if (perfil.pct_negocio != null && $('inp-pct-negocio')) {
+      $('inp-pct-negocio').value = perfil.pct_negocio;
+    }
+    if (perfil.mostrar_costo_seguimiento != null && $('chk-mostrar-seguimiento')) {
+      $('chk-mostrar-seguimiento').checked = !!perfil.mostrar_costo_seguimiento;
+    }
     const btnAbierto = $('btn-toggle-abierto');
     if (perfil.activo) {
       btnAbierto.textContent = '● Abierto';
