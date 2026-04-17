@@ -201,6 +201,8 @@ async function cargarPedido() {
     pedidoData = p;
     renderPedido(p);
     conectarSocket(p);
+    // Cargar badge de score del rider si está asignado
+    if (p.rider_id) cargarBadgeRider(p.rider_id);
   } catch (e) {
     mostrarError('Pedido no encontrado', 'Este link de seguimiento no es válido o el pedido ya no existe.');
   }
@@ -255,12 +257,12 @@ function renderPedido(p) {
 
       <!-- Rider -->
       ${p.rider_nombre ? `
-        <div class="rider-card">
+        <div class="rider-card" id="rider-card">
           <div class="rider-av">${p.rider_nombre[0]}</div>
           <div class="rider-info">
             <div class="rider-name">${p.rider_nombre}</div>
             <div class="rider-veh">🏍️ ${p.vehiculo_tipo || 'Vehículo'}</div>
-            <div class="rider-rating">⭐ ${parseFloat(p.rider_rating || 5).toFixed(1)}</div>
+            <div id="rider-badge-score"></div>
           </div>
           <span class="badge badge-${p.estado}">${p.estado === 'en_camino' ? 'En camino' : p.estado === 'retiro' ? 'En retiro' : 'Asignado'}</span>
         </div>
@@ -398,6 +400,25 @@ function mostrarError(titulo, sub) {
       <div class="state-sub">${sub}</div>
     </div>
   `;
+}
+
+async function cargarBadgeRider(riderId) {
+  const el = document.getElementById('rider-badge-score');
+  if (!el) return;
+  try {
+    const res = await fetch(`${API}/calificaciones/rider/${riderId}/score`);
+    if (!res.ok) return;
+    const s = await res.json();
+    if (s.score_final === null) {
+      el.innerHTML = '<span style="font-size:11px;color:#94A3B8">Sin calificaciones aún</span>';
+    } else if (s.score_final >= 90) {
+      el.innerHTML = '<span style="display:inline-flex;align-items:center;gap:4px;background:#FEF3C7;color:#92400E;border-radius:12px;padding:3px 10px;font-size:11px;font-weight:700">🏆 Rider Destacado</span>';
+    } else if (s.score_final >= 75) {
+      el.innerHTML = `<span style="font-size:11px;color:#0F766E;font-weight:600">⭐ Score ${s.score_final}/100</span>`;
+    } else {
+      el.innerHTML = `<span style="font-size:11px;color:#64748B">Score ${s.score_final}/100</span>`;
+    }
+  } catch {}
 }
 
 cargarPedido();

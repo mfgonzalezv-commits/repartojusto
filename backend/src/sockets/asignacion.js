@@ -17,14 +17,42 @@ const MAX_PEDIDOS_SIMULTANEOS = 3;
 // Map: pedido_id → { timer: TimeoutID|null, ofrecidos: Set<number> }
 const cascadas = new Map();
 
-// ── Rider disponible más cercano al negocio (excluye los ya ofrecidos) ──────
+// ── Rider disponible más cercano al negocio, con prioridad por score ─────────
+// Riders con mejor calificación obtienen hasta 20% de ventaja sobre la distancia.
+// Ej: rider 1 km con score 100 compite como si estuviera a 0.8 km.
 async function _riderMasCercano(negLat, negLng, ofrecidos) {
   const { rows } = await db(
-    `SELECT id FROM riders
-     WHERE disponible = true
-       AND lat IS NOT NULL AND lng IS NOT NULL
-       AND id <> ALL($3::uuid[])
-     ORDER BY (($1 - lat)^2 + (($2 - lng) * COS(RADIANS($1)))^2) ASC
+    `SELECT r.id
+     FROM riders r
+     LEFT JOIN LATERAL (
+       SELECT ROUND(
+         AVG(
+           (CASE WHEN llego_tiempo      THEN 1 ELSE 0 END +
+            CASE WHEN fue_amable        THEN 1 ELSE 0 END +
+            CASE WHEN bien_presentado   THEN 1 ELSE 0 END +
+            CASE WHEN verifico_pedido   THEN 1 ELSE 0 END +
+            CASE WHEN pedido_buen_estado THEN 1 ELSE 0 END +
+            CASE WHEN lo_recomendaria   THEN 1 ELSE 0 END)::numeric /
+           NULLIF(
+             (CASE WHEN llego_tiempo      IS NOT NULL THEN 1 ELSE 0 END +
+              CASE WHEN fue_amable        IS NOT NULL THEN 1 ELSE 0 END +
+              CASE WHEN bien_presentado   IS NOT NULL THEN 1 ELSE 0 END +
+              CASE WHEN verifico_pedido   IS NOT NULL THEN 1 ELSE 0 END +
+              CASE WHEN pedido_buen_estado IS NOT NULL THEN 1 ELSE 0 END +
+              CASE WHEN lo_recomendaria   IS NOT NULL THEN 1 ELSE 0 END), 0
+           )
+         ) * 100
+       ) AS score_pct
+       FROM calificaciones c
+       WHERE c.rider_id = r.id
+     ) sc ON true
+     WHERE r.disponible = true
+       AND r.lat IS NOT NULL AND r.lng IS NOT NULL
+       AND r.id <> ALL($3::uuid[])
+     ORDER BY
+       (($1 - r.lat)^2 + (($2 - r.lng) * COS(RADIANS($1)))^2)
+       * (1.1 - COALESCE(sc.score_pct, 50) / 100.0 * 0.2)
+     ASC
      LIMIT 1`,
     [negLat, negLng, [...ofrecidos]]
   );
