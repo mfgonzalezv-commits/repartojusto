@@ -1450,29 +1450,27 @@ function actualizarCalculo(km) {
     $('calc-box').style.display = 'block';
     return;
   }
-  const envio = calcularTarifaEnvio(km);
-  const valorProd = parseInt($('np-valor-producto')?.value) || 0;
+  const tarifa   = calcularTarifaEnvio(km);          // lo que recibe el rider
+  const envioTotal = tarifa + APP_FEE;               // costo total del envío (tarifa + fee plataforma)
+  const valorProd  = parseInt($('np-valor-producto')?.value) || 0;
+  const cargos     = calcCargosLocal(tarifa, APP_FEE); // quién paga qué
 
   if ($('calc-distancia-raw')) $('calc-distancia-raw').value = km;
-  $('calc-distancia').textContent     = km.toFixed(1) + ' km';
-  $('calc-valor-prod').textContent    = valorProd > 0 ? fmt(valorProd) : '—';
-  $('calc-envio-total').textContent   = fmt(envio);
-  $('calc-envio-ref').textContent     = fmt(envio);
+  $('calc-distancia').textContent   = km.toFixed(1) + ' km';
+  $('calc-valor-prod').textContent  = valorProd > 0 ? fmt(valorProd) : '—';
+  $('calc-envio-total').textContent = fmt(envioTotal);
+  if ($('calc-envio-ref')) $('calc-envio-ref').textContent = fmt(envioTotal);
 
-  // Desglose según estrategia de cobro
-  const cargos = calcCargosLocal(envio, APP_FEE);
-  const desglose = $('calc-desglose');
-  if (cargos.cargo_cliente > 0 && desglose) {
+  // Desglose: siempre visible para que el negocio entienda la distribución
+  const desglose = document.getElementById('calc-desglose');
+  if (desglose) {
     $('calc-cargo-negocio').textContent = fmt(cargos.cargo_negocio);
     $('calc-cargo-cliente').textContent  = fmt(cargos.cargo_cliente);
     desglose.style.display = 'block';
-    $('calc-cliente-total').textContent = valorProd > 0
-      ? fmt(valorProd + cargos.cargo_cliente)
-      : fmt(cargos.cargo_cliente);
-  } else {
-    if (desglose) desglose.style.display = 'none';
-    $('calc-cliente-total').textContent = valorProd > 0 ? fmt(valorProd + envio) : fmt(envio);
   }
+
+  // Total que el cliente paga = producto + su parte del envío
+  $('calc-cliente-total').textContent = fmt(valorProd + cargos.cargo_cliente);
 
   $('calc-box').style.display = 'none';
   $('calc-box-contenido').style.display = 'block';
