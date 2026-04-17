@@ -490,6 +490,32 @@
               <h4>Últimos pagos</h4>
               <div id="cuenta-pagos-lista"><p style="color:var(--text3);font-size:13px">Cargando...</p></div>
             </div>
+            <!-- ── Estrategia de cobro ── -->
+            <div class="cuenta-section" style="border-top:1px solid var(--border);padding-top:16px">
+              <h4>🧾 ¿Quién paga el envío?</h4>
+              <p style="font-size:12px;color:var(--text2);margin-bottom:12px">Define cómo se distribuye el costo de envío entre tú y tu cliente.</p>
+              <div class="field" style="margin-bottom:12px">
+                <label style="font-size:13px;font-weight:600">Estrategia de cobro</label>
+                <select id="select-estrategia" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit;margin-top:6px">
+                  <option value="todo_incluido">Negocio paga todo — el cliente no ve costo de envío</option>
+                  <option value="cliente_paga_todo">Delivery a cargo del cliente — el cliente paga fee + envío</option>
+                  <option value="fee_negocio_envio_cliente">Fee propio, envío al cliente — tú pagas $500, cliente paga por km</option>
+                  <option value="mitad_mitad">Mitad y mitad — dividen el total al 50%</option>
+                  <option value="personalizado">Personalizado — defines qué % asumes tú</option>
+                </select>
+              </div>
+              <div id="wrap-pct-negocio" style="display:none;margin-bottom:12px">
+                <label style="font-size:13px;font-weight:600">% que asumes tú (0–100)</label>
+                <input type="number" id="inp-pct-negocio" min="0" max="100" value="50"
+                  style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit;margin-top:6px">
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+                <input type="checkbox" id="chk-mostrar-seguimiento" style="width:18px;height:18px;cursor:pointer">
+                <label for="chk-mostrar-seguimiento" style="font-size:13px;cursor:pointer">Mostrar el costo de envío al cliente en el link de seguimiento</label>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="guardarEstrategia()">Guardar configuración</button>
+            </div>
+
             <div class="cuenta-section" style="border-top:1px solid var(--border);padding-top:16px">
               <h4>💳 Método de pago</h4>
               <div id="tarjeta-status">
@@ -590,6 +616,10 @@
                   <div class="calc-row"><span>Distancia</span><span id="calc-distancia">—</span></div>
                   <div class="calc-row"><span>Producto</span><span id="calc-valor-prod">—</span></div>
                   <div class="calc-row"><span>Envío</span><span id="calc-envio-total">—</span></div>
+                  <div id="calc-desglose" style="background:#F4F4F0;border-radius:8px;padding:8px 10px;margin:6px 0;font-size:12px;display:none">
+                    <div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="color:var(--text2)">Tú pagas</span><strong id="calc-cargo-negocio" style="color:var(--teal-dark)">—</strong></div>
+                    <div style="display:flex;justify-content:space-between"><span style="color:var(--text2)">Cliente paga envío</span><strong id="calc-cargo-cliente" style="color:var(--blue)">—</strong></div>
+                  </div>
                   <div class="calc-row" style="font-weight:700;color:var(--teal)"><span>Total cliente paga</span><span id="calc-cliente-total">—</span></div>
                   <div style="font-size:11px;color:var(--text3);margin-top:4px">$1.100 fijo + $350/km · <span style="color:var(--amber)">Multa $1.000 si cancelas en 5 min</span></div>
                 </div>
@@ -763,6 +793,48 @@ const telWA = tel => {
   if (d.startsWith('56') && d.length >= 11) return d;
   return '56' + d;
 };
+
+// ══════════ ESTRATEGIA DE COBRO ══════════
+let perfilNegocio = null;
+
+function calcCargosLocal(tarifa, fee) {
+  const total = tarifa + fee;
+  const est = perfilNegocio?.estrategia_cobro || 'todo_incluido';
+  const pct = Math.max(0, Math.min(100, perfilNegocio?.pct_negocio ?? 100));
+  switch (est) {
+    case 'todo_incluido':             return { cargo_negocio: total,                     cargo_cliente: 0 };
+    case 'cliente_paga_todo':         return { cargo_negocio: 0,                         cargo_cliente: total };
+    case 'fee_negocio_envio_cliente': return { cargo_negocio: fee,                       cargo_cliente: tarifa };
+    case 'mitad_mitad':               return { cargo_negocio: Math.round(total/2),       cargo_cliente: Math.round(total/2) };
+    case 'personalizado':             return { cargo_negocio: Math.round(total*pct/100), cargo_cliente: Math.round(total*(100-pct)/100) };
+    default:                          return { cargo_negocio: total,                     cargo_cliente: 0 };
+  }
+}
+
+function togglePctInput() {
+  const wrap = $('wrap-pct-negocio');
+  if (!wrap) return;
+  wrap.style.display = $('select-estrategia').value === 'personalizado' ? 'block' : 'none';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sel = $('select-estrategia');
+  if (sel) sel.addEventListener('change', togglePctInput);
+});
+
+async function guardarEstrategia() {
+  const estrategia_cobro = $('select-estrategia').value;
+  const pct_negocio      = parseInt($('inp-pct-negocio').value) || 100;
+  const mostrar          = $('chk-mostrar-seguimiento').checked;
+  try {
+    const res = await apiFetch('/negocios/perfil', {
+      method: 'PUT',
+      body: JSON.stringify({ estrategia_cobro, pct_negocio, mostrar_costo_seguimiento: mostrar })
+    });
+    perfilNegocio = { ...perfilNegocio, ...res };
+    toast('✅ Configuración de cobro guardada', 'success');
+  } catch (e) { toast(e.message, 'error'); }
+}
 const timeAgo = d => {
   const diff = Date.now() - new Date(d);
   const m = Math.floor(diff / 60000);
@@ -1363,8 +1435,23 @@ function actualizarCalculo(km) {
   $('calc-distancia').textContent     = km.toFixed(1) + ' km';
   $('calc-valor-prod').textContent    = valorProd > 0 ? fmt(valorProd) : '—';
   $('calc-envio-total').textContent   = fmt(envio);
-  $('calc-cliente-total').textContent = valorProd > 0 ? fmt(valorProd + envio) : fmt(envio);
   $('calc-envio-ref').textContent     = fmt(envio);
+
+  // Desglose según estrategia de cobro
+  const cargos = calcCargosLocal(envio, APP_FEE);
+  const desglose = $('calc-desglose');
+  if (cargos.cargo_cliente > 0 && desglose) {
+    $('calc-cargo-negocio').textContent = fmt(cargos.cargo_negocio);
+    $('calc-cargo-cliente').textContent  = fmt(cargos.cargo_cliente);
+    desglose.style.display = 'block';
+    $('calc-cliente-total').textContent = valorProd > 0
+      ? fmt(valorProd + cargos.cargo_cliente)
+      : fmt(cargos.cargo_cliente);
+  } else {
+    if (desglose) desglose.style.display = 'none';
+    $('calc-cliente-total').textContent = valorProd > 0 ? fmt(valorProd + envio) : fmt(envio);
+  }
+
   $('calc-box').style.display = 'none';
   $('calc-box-contenido').style.display = 'block';
 }
@@ -1703,6 +1790,17 @@ async function cargarMiCuenta() {
     $('cuenta-email').textContent       = perfil.email || '—';
     $('cuenta-telefono').textContent    = perfil.telefono || '—';
     $('cuenta-total-pedidos').textContent = pedidosTodos.length;
+
+    // Cargar estrategia de cobro en el selector
+    perfilNegocio = perfil;
+    if ($('select-estrategia')) {
+      $('select-estrategia').value = perfil.estrategia_cobro || 'todo_incluido';
+      togglePctInput();
+    }
+    if ($('inp-pct-negocio') && perfil.pct_negocio != null)
+      $('inp-pct-negocio').value = perfil.pct_negocio;
+    if ($('chk-mostrar-seguimiento'))
+      $('chk-mostrar-seguimiento').checked = !!perfil.mostrar_costo_seguimiento;
 
     const ahora = new Date();
     const pedidosMes = pedidosTodos.filter(p => {

@@ -146,6 +146,13 @@ const migrations = [
   `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS tarjeta_registrada_at TIMESTAMPTZ`,
   `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS modo VARCHAR(20) DEFAULT 'prueba'`,
 
+  // ── Estrategia de cobro al cliente ───────────────────────────────────────
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS estrategia_cobro VARCHAR(30) DEFAULT 'todo_incluido'`,
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS pct_negocio INTEGER DEFAULT 100`,
+  `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS mostrar_costo_seguimiento BOOLEAN DEFAULT false`,
+  `ALTER TABLE pedidos  ADD COLUMN IF NOT EXISTS cargo_negocio INTEGER DEFAULT 0`,
+  `ALTER TABLE pedidos  ADD COLUMN IF NOT EXISTS cargo_cliente  INTEGER DEFAULT 0`,
+
   // ── Restricciones adicionales (idempotente) ───────────────────────────────
   `DO $$ BEGIN
      IF NOT EXISTS (

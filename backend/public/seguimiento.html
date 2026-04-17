@@ -312,10 +312,18 @@ function renderPedido(p) {
         <div class="info-row">
           <div class="info-icon">📏</div>
           <div>
-            <div class="info-label">Distancia · Tarifa</div>
-            <div class="info-val">${p.distancia_km} km · <strong style="color:var(--teal)">$${parseInt(p.tarifa_entrega).toLocaleString('es-CL')}</strong></div>
+            <div class="info-label">Distancia</div>
+            <div class="info-val">${p.distancia_km} km</div>
           </div>
         </div>
+        ${p.mostrar_costo_seguimiento && p.cargo_cliente > 0 ? `
+        <div class="info-row">
+          <div class="info-icon">🚚</div>
+          <div>
+            <div class="info-label">Costo de envío</div>
+            <div class="info-val"><strong style="color:var(--teal)">$${parseInt(p.cargo_cliente).toLocaleString('es-CL')}</strong></div>
+          </div>
+        </div>` : ''}
         ${p.notas ? `
         <div class="info-row">
           <div class="info-icon">📝</div>

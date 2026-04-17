@@ -43,6 +43,26 @@ router.get('/perfil', auth, solo('negocio'), async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+// ── Helper: calcula cargo_negocio y cargo_cliente según estrategia ────────
+const ESTRATEGIAS_VALIDAS = [
+  'todo_incluido', 'cliente_paga_todo', 'fee_negocio_envio_cliente',
+  'mitad_mitad', 'personalizado'
+];
+function calcularCargos(tarifa_entrega, app_fee, estrategia, pct_negocio) {
+  const total = tarifa_entrega + app_fee;
+  switch (estrategia) {
+    case 'todo_incluido':          return { cargo_negocio: total,                      cargo_cliente: 0 };
+    case 'cliente_paga_todo':      return { cargo_negocio: 0,                          cargo_cliente: total };
+    case 'fee_negocio_envio_cliente': return { cargo_negocio: app_fee,                 cargo_cliente: tarifa_entrega };
+    case 'mitad_mitad':            return { cargo_negocio: Math.round(total / 2),      cargo_cliente: Math.round(total / 2) };
+    case 'personalizado': {
+      const pct = Math.max(0, Math.min(100, pct_negocio || 100));
+      return { cargo_negocio: Math.round(total * pct / 100), cargo_cliente: Math.round(total * (100 - pct) / 100) };
+    }
+    default: return { cargo_negocio: total, cargo_cliente: 0 };
+  }
+}
+
 // ── PUT /api/negocios/perfil ──────────────────────────────────────────────
 router.put('/perfil',
   auth, solo('negocio'),
@@ -53,22 +73,31 @@ router.put('/perfil',
     body('lat').optional().isFloat({ min: -90, max: 90 }),
     body('lng').optional().isFloat({ min: -180, max: 180 }),
     body('categoria').optional().trim(),
+    body('estrategia_cobro').optional().isIn(ESTRATEGIAS_VALIDAS),
+    body('pct_negocio').optional().isInt({ min: 0, max: 100 }),
+    body('mostrar_costo_seguimiento').optional().isBoolean(),
   ],
   validar,
   async (req, res, next) => {
-    const { nombre_comercial, descripcion, direccion, lat, lng, categoria } = req.body;
+    const { nombre_comercial, descripcion, direccion, lat, lng, categoria,
+            estrategia_cobro, pct_negocio, mostrar_costo_seguimiento } = req.body;
     try {
       const { rows } = await db(
         `UPDATE negocios
-         SET nombre_comercial = COALESCE($1, nombre_comercial),
-             descripcion      = COALESCE($2, descripcion),
-             direccion        = COALESCE($3, direccion),
-             lat              = COALESCE($4, lat),
-             lng              = COALESCE($5, lng),
-             categoria        = COALESCE($6, categoria)
+         SET nombre_comercial           = COALESCE($1,  nombre_comercial),
+             descripcion                = COALESCE($2,  descripcion),
+             direccion                  = COALESCE($3,  direccion),
+             lat                        = COALESCE($4,  lat),
+             lng                        = COALESCE($5,  lng),
+             categoria                  = COALESCE($6,  categoria),
+             estrategia_cobro           = COALESCE($8,  estrategia_cobro),
+             pct_negocio                = COALESCE($9,  pct_negocio),
+             mostrar_costo_seguimiento  = COALESCE($10, mostrar_costo_seguimiento)
          WHERE usuario_id = $7
          RETURNING *`,
-        [nombre_comercial, descripcion, direccion, lat, lng, categoria, req.usuario.id]
+        [nombre_comercial, descripcion, direccion, lat, lng, categoria,
+         req.usuario.id, estrategia_cobro, pct_negocio,
+         mostrar_costo_seguimiento === undefined ? null : mostrar_costo_seguimiento]
       );
       res.json(rows[0]);
     } catch (err) { next(err); }
@@ -202,6 +231,7 @@ router.delete('/tarjeta', auth, solo('negocio'), async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
-// Exportar cobros para usar en pedidos.js
+// Exportar cobros y calcularCargos para usar en pedidos.js
 module.exports = router;
 module.exports.cobros = cobros;
+module.exports.calcularCargos = calcularCargos;

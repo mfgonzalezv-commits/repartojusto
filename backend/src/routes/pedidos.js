@@ -4,7 +4,7 @@ const { query: db, transaction } = require('../config/database');
 const { auth, solo } = require('../middleware/auth');
 const config = require('../config');
 const { iniciarCascada, cancelarCascada } = require('../sockets/asignacion');
-const { cobros } = require('./negocios');
+const { cobros, calcularCargos } = require('./negocios');
 
 const validar = (req, res, next) => {
   const errores = validationResult(req);
@@ -38,7 +38,8 @@ router.post('/',
     const { cliente_nombre, cliente_telefono, direccion_entrega, lat_entrega, lng_entrega, distancia_km, valor_producto, notas } = req.body;
     try {
       const { rows: [negocio] } = await db(
-        `SELECT id, tarjeta_customer_id, tarjeta_token, modo
+        `SELECT id, tarjeta_customer_id, tarjeta_token, modo,
+                estrategia_cobro, pct_negocio, mostrar_costo_seguimiento
          FROM negocios WHERE usuario_id = $1 AND activo = true`,
         [req.usuario.id]
       );
@@ -65,6 +66,11 @@ router.post('/',
       }
 
       const tarifa_entrega = calcularTarifa(distancia_km);
+      const { cargo_negocio, cargo_cliente } = calcularCargos(
+        tarifa_entrega, config.APP_FEE,
+        negocio.estrategia_cobro || 'todo_incluido',
+        negocio.pct_negocio || 100
+      );
 
       // Guardar/actualizar cliente en directorio
       if (cliente_telefono) {
@@ -86,12 +92,14 @@ router.post('/',
       const { rows: [pedido] } = await db(
         `INSERT INTO pedidos
            (negocio_id, cliente_nombre, cliente_telefono, direccion_entrega,
-            lat_entrega, lng_entrega, distancia_km, tarifa_entrega, app_fee, valor_producto, notas)
-         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
+            lat_entrega, lng_entrega, distancia_km, tarifa_entrega, app_fee,
+            valor_producto, notas, cargo_negocio, cargo_cliente)
+         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
          RETURNING *`,
         [negocio.id, cliente_nombre, cliente_telefono, direccion_entrega,
          lat_entrega, lng_entrega, distancia_km, tarifa_entrega, config.APP_FEE,
-         valor_producto ? parseInt(valor_producto) : null, notas]
+         valor_producto ? parseInt(valor_producto) : null, notas,
+         cargo_negocio, cargo_cliente]
       );
 
       // ── Motor de asignación: cascada al rider más cercano ────────────────
@@ -328,6 +336,7 @@ router.get('/:id', auth, async (req, res, next) => {
     const { rows } = await db(
       `SELECT p.*,
               n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
+              n.mostrar_costo_seguimiento,
               u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
               ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
        FROM pedidos p
