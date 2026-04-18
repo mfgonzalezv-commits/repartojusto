@@ -775,6 +775,7 @@ async function cargarUsuarios() {
         <td>
           <div style="display:flex;gap:6px">
             <button class="btn btn-outline btn-sm" onclick="abrirEditarUsuario('${u.id}')">Editar</button>
+            <button class="btn btn-outline btn-sm" onclick="resetearClave('${u.id}', '${(u.nombre||u.email).replace(/'/g,"\\'")}')">🔑 Clave</button>
             <button class="btn btn-outline btn-sm" onclick="toggleUsuarioDesde('${u.id}', ${u.activo})">${u.activo ? 'Desactivar' : 'Activar'}</button>
             ${u.rol !== 'admin' ? `<button class="btn btn-danger btn-sm" onclick="eliminarUsuario('${u.id}', '${(u.nombre||u.email).replace(/'/g,"\\'")}')">Eliminar</button>` : ''}
           </div>
@@ -798,6 +799,16 @@ async function eliminarUsuario(id, nombre) {
     await api(`/admin/usuarios/${id}`, { method: 'DELETE' });
     toast('Usuario eliminado', 'success');
     cargarUsuarios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function resetearClave(id, nombre) {
+  const nueva = prompt(`Nueva contraseña para "${nombre}":`);
+  if (!nueva) return;
+  if (nueva.length < 6) { toast('La contraseña debe tener al menos 6 caracteres', 'error'); return; }
+  try {
+    await api(`/admin/usuarios/${id}`, { method: 'PUT', body: JSON.stringify({ password: nueva }) });
+    toast(`Clave de "${nombre}" actualizada`, 'success');
   } catch(e) { toast(e.message, 'error'); }
 }
 
