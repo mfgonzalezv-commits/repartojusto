@@ -215,8 +215,8 @@ async function _revisarAgendados(io) {
        FROM pedidos p
        WHERE p.estado = 'agendado'
          AND p.hora_retiro IS NOT NULL
-         AND p.hora_retiro <= (NOW() + INTERVAL '${ANTICIPACION_MIN} minutes')::time
-         AND p.hora_retiro >= NOW()::time`
+         AND p.hora_retiro <= ((NOW() AT TIME ZONE 'America/Santiago') + INTERVAL '${ANTICIPACION_MIN} minutes')::time
+         AND p.hora_retiro >= ((NOW() AT TIME ZONE 'America/Santiago') - INTERVAL '2 minutes')::time`
     );
     for (const { id } of rows) {
       // Pasar a pendiente y disparar cascada
