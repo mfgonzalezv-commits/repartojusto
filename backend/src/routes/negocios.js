@@ -257,9 +257,9 @@ router.get('/resumen', auth, solo('negocio'), async (req, res, next) => {
 
     const periodo = req.query.periodo || 'mes';
     const filtros = {
-      hoy:    `AND p.created_at >= CURRENT_DATE`,
-      semana: `AND p.created_at >= date_trunc('week', NOW())`,
-      mes:    `AND p.created_at >= date_trunc('month', NOW())`,
+      hoy:    `AND p.created_at >= (NOW() AT TIME ZONE 'America/Santiago')::date AT TIME ZONE 'America/Santiago'`,
+      semana: `AND p.created_at >= date_trunc('week', NOW() AT TIME ZONE 'America/Santiago') AT TIME ZONE 'America/Santiago'`,
+      mes:    `AND p.created_at >= date_trunc('month', NOW() AT TIME ZONE 'America/Santiago') AT TIME ZONE 'America/Santiago'`,
       todo:   '',
     };
     const filtro = filtros[periodo] || filtros.mes;
