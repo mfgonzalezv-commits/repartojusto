@@ -919,16 +919,21 @@ function pedirPermisoNotif() {
   }
 }
 
+let audioCtx = null;
+
 function activarSonido() {
-  const audio = document.getElementById('alarma-audio');
-  if (!audio) return;
-  audio.play().then(() => {
+  try {
+    // Crear AudioContext directamente en el gesto — Chrome lo permite aquí
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    // Tocar un beep de confirmación
+    _beep(880, 0.15, 0);
+    _beep(1200, 0.15, 0.2);
     audioDesbloqueado = true;
     const btn = document.getElementById('btn-sonido');
     if (btn) { btn.textContent = '🔔 Sonido ON'; btn.style.background = '#16a34a'; btn.onclick = null; btn.style.cursor = 'default'; }
     pedirPermisoNotif();
     suscribirPush();
-  }).catch(() => { toast('No se pudo activar el sonido', 'error'); });
+  } catch(e) { toast('No se pudo activar el sonido: ' + e.message, 'error'); }
 }
 
 function iniciarAudioCtx() {}
@@ -958,10 +963,22 @@ function _urlBase64ToUint8Array(base64String) {
 }
 
 function sonarAlarma() {
-  if (!audioDesbloqueado) return;
-  const audio = document.getElementById('alarma-audio');
-  if (!audio) return;
-  try { audio.currentTime = 0; audio.play().catch(() => {}); } catch {}
+  if (!audioDesbloqueado || !audioCtx) return;
+  // AudioContext creado en gesto del usuario — puede sonar desde cualquier contexto
+  const tiempos = [0, 0.18, 0.36, 0.60, 0.78, 0.96];
+  tiempos.forEach((t, i) => _beep(i % 2 === 0 ? 1200 : 900, 0.14, t));
+}
+
+function _beep(freq, dur, offset = 0) {
+  if (!audioCtx) return;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.connect(gain); gain.connect(audioCtx.destination);
+  osc.frequency.value = freq;
+  gain.gain.setValueAtTime(0.7, audioCtx.currentTime + offset);
+  gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + offset + dur);
+  osc.start(audioCtx.currentTime + offset);
+  osc.stop(audioCtx.currentTime + offset + dur);
 }
 
 function flashPantalla() {
