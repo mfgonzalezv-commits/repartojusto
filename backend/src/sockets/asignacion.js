@@ -75,9 +75,21 @@ async function _ofrecerSiguiente(pedido, io) {
   const rider = await _riderMasCercano(pedido.neg_lat, pedido.neg_lng, cascada.ofrecidos);
 
   if (!rider) {
-    // Sin riders disponibles: queda como pedido público en lista
+    // Sin riders por cascada: broadcast público + push a todos los disponibles
     cascadas.delete(pedido.id);
     io.emit('pedido:nuevo', _payload(pedido));
+
+    // Enviar push a todos los riders disponibles con suscripción registrada
+    const { rows: ridersConPush } = await db(
+      `SELECT push_subscription FROM riders WHERE disponible = true AND push_subscription IS NOT NULL`
+    );
+    const pushPayload = {
+      title: '📦 ¡Pedido disponible!',
+      body: `$${parseInt(pedido.tarifa_entrega).toLocaleString('es-CL')} — Entra a la app para tomarlo`,
+    };
+    for (const r of ridersConPush) {
+      sendPush(r.push_subscription, pushPayload).catch(() => {});
+    }
     return;
   }
 
