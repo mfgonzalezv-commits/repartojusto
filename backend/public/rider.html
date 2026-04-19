@@ -342,6 +342,37 @@
 
 <audio id="alarma-audio" src="/alarma.wav" preload="auto"></audio>
 
+<!-- MODAL CONFIGURAR NOTIFICACIONES -->
+<div id="modal-notif" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.85);padding:24px;overflow-y:auto">
+  <div style="background:#1e1e1e;border-radius:16px;padding:24px;max-width:420px;margin:0 auto">
+    <h2 style="color:#FFCC00;margin:0 0 16px;font-size:20px">📱 Activar notificaciones emergentes</h2>
+    <p style="color:#ccc;font-size:14px;margin-bottom:20px">Para recibir alertas de pedidos aunque estés en otra app, sigue estos pasos en tu Xiaomi:</p>
+
+    <div style="background:#2a2a2a;border-radius:10px;padding:16px;margin-bottom:12px">
+      <div style="color:#FFCC00;font-weight:700;margin-bottom:8px">Paso 1 — Notificaciones de Chrome</div>
+      <div style="color:#ccc;font-size:13px;line-height:1.6">
+        ⚙️ <b>Configuración</b> → <b>Apps</b> → <b>Gestionar apps</b> → busca <b>Chrome</b> → <b>Notificaciones</b> → activa <b>"Mostrar notificaciones"</b>
+      </div>
+    </div>
+
+    <div style="background:#2a2a2a;border-radius:10px;padding:16px;margin-bottom:12px">
+      <div style="color:#FFCC00;font-weight:700;margin-bottom:8px">Paso 2 — Ventana flotante</div>
+      <div style="color:#ccc;font-size:13px;line-height:1.6">
+        En esa misma pantalla de Chrome, activa <b>"Mostrar como ventana flotante"</b> o <b>"Notificaciones flotantes"</b>
+      </div>
+    </div>
+
+    <div style="background:#2a2a2a;border-radius:10px;padding:16px;margin-bottom:20px">
+      <div style="color:#FFCC00;font-weight:700;margin-bottom:8px">Paso 3 — Sin restricciones de batería</div>
+      <div style="color:#ccc;font-size:13px;line-height:1.6">
+        ⚙️ <b>Configuración</b> → <b>Apps</b> → <b>Chrome</b> → <b>Ahorro de batería</b> → selecciona <b>"Sin restricciones"</b>
+      </div>
+    </div>
+
+    <button onclick="document.getElementById('modal-notif').style.display='none'" style="width:100%;background:#FFCC00;color:#0F172A;border:none;border-radius:10px;padding:14px;font-size:16px;font-weight:700;cursor:pointer">✓ Listo, ya lo configuré</button>
+  </div>
+</div>
+
 <!-- ═══════════════════ LOGIN ═══════════════════ -->
 <div id="auth-screen">
   <!-- LOGIN -->
@@ -460,6 +491,7 @@
     <div class="topbar-brand"><img src="/logo-rj.jpg" style="height:26px;border-radius:4px;vertical-align:middle;margin-right:7px">RJ Rider</div>
     <div class="topbar-right">
       <span id="turno-timer" style="display:none;font-size:11px;color:var(--teal-mid);font-weight:600;background:#2d2d2a;padding:4px 10px;border-radius:20px"></span>
+      <button onclick="document.getElementById('modal-notif').style.display='flex'" style="background:#334155;color:#fff;border:none;border-radius:20px;padding:6px 10px;font-size:12px;cursor:pointer" title="Configurar notificaciones">⚙️</button>
       <button id="btn-sonido" onclick="activarSonido()" style="background:#DC2626;color:#fff;border:none;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">🔇 Activar sonido</button>
       <div class="switch-wrap">
         <span class="switch-label" id="switch-label">Offline</span>
