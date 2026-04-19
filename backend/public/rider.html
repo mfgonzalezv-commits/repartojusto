@@ -342,43 +342,88 @@
 
 <audio id="alarma-audio" src="/alarma.wav" preload="auto"></audio>
 
-<!-- MODAL CONFIGURAR NOTIFICACIONES -->
-<div id="modal-notif" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.85);padding:24px;overflow-y:auto">
-  <div style="background:#1e1e1e;border-radius:16px;padding:24px;max-width:420px;margin:0 auto">
-    <h2 style="color:#FFCC00;margin:0 0 16px;font-size:20px">📱 Activar notificaciones emergentes</h2>
-    <p style="color:#ccc;font-size:14px;margin-bottom:20px">Para recibir alertas de pedidos aunque estés en otra app, sigue estos pasos en tu Xiaomi:</p>
+<!-- WIZARD DE INSTALACIÓN -->
+<div id="wizard" style="display:none;position:fixed;inset:0;z-index:99999;background:#0F172A;overflow-y:auto">
+  <div style="max-width:440px;margin:0 auto;padding:32px 20px">
+    <div style="text-align:center;margin-bottom:28px">
+      <img src="/logo-rj.jpg" style="height:48px;border-radius:8px;margin-bottom:12px">
+      <h1 style="color:#FFCC00;font-size:22px;margin:0">Configuración inicial</h1>
+      <p style="color:#94A3B8;font-size:14px;margin:8px 0 0">Completa estos pasos para recibir pedidos correctamente</p>
+    </div>
 
-    <div style="background:#2a2a2a;border-radius:10px;padding:16px;margin-bottom:12px">
-      <div style="color:#FFCC00;font-weight:700;margin-bottom:8px">Paso 1 — Abrir ajustes de Chrome</div>
-      <div style="color:#ccc;font-size:13px;line-height:1.6">
-        Mantén presionado el ícono de <b>Chrome</b> en el inicio → toca <b>"Info de la app"</b> (o ícono ℹ️)
+    <!-- Paso 1: PWA -->
+    <div class="wz-paso" id="wz-pwa">
+      <div class="wz-icon" id="wz-pwa-icon">📲</div>
+      <div style="flex:1">
+        <div class="wz-titulo">Instalar la app</div>
+        <div class="wz-desc">En Chrome toca los <b>3 puntos</b> → <b>"Añadir a pantalla de inicio"</b>. Luego abre RJ desde ese ícono.</div>
+        <button class="wz-btn" onclick="wizCheckPWA()">Ya la instalé ✓</button>
       </div>
     </div>
 
-    <div style="background:#2a2a2a;border-radius:10px;padding:16px;margin-bottom:12px">
-      <div style="color:#FFCC00;font-weight:700;margin-bottom:8px">Paso 2 — Activar notificaciones</div>
-      <div style="color:#ccc;font-size:13px;line-height:1.6">
-        Dentro de Info de la app → <b>Notificaciones</b> → activa el interruptor principal → activa también <b>"Mostrar en pantalla"</b> o <b>"Ventana flotante"</b>
+    <!-- Paso 2: Notificaciones -->
+    <div class="wz-paso" id="wz-notif">
+      <div class="wz-icon" id="wz-notif-icon">🔔</div>
+      <div style="flex:1">
+        <div class="wz-titulo">Permitir notificaciones</div>
+        <div class="wz-desc">Toca el botón — el celular te pedirá permiso. Selecciona <b>"Permitir"</b>.</div>
+        <button class="wz-btn" onclick="wizPedirNotif()">Activar notificaciones</button>
       </div>
     </div>
 
-    <div style="background:#2a2a2a;border-radius:10px;padding:16px;margin-bottom:12px">
-      <div style="color:#FFCC00;font-weight:700;margin-bottom:8px">Paso 3 — Centro de notificaciones</div>
-      <div style="color:#ccc;font-size:13px;line-height:1.6">
-        ⚙️ <b>Configuración</b> → <b>Notificaciones y barra de estado</b> → <b>Notificaciones de apps</b> → busca <b>Chrome</b> → activa <b>"Notificaciones flotantes"</b>
+    <!-- Paso 3: Notificaciones flotantes Xiaomi -->
+    <div class="wz-paso" id="wz-flotante">
+      <div class="wz-icon" id="wz-flotante-icon">📱</div>
+      <div style="flex:1">
+        <div class="wz-titulo">Activar banner emergente (Xiaomi)</div>
+        <div class="wz-desc">
+          1. Mantén presionado el ícono de <b>Chrome</b> → <b>Info de la app</b><br>
+          2. Toca <b>Notificaciones</b> → activa <b>"Mostrar en pantalla"</b><br>
+          3. Vuelve atrás → <b>Batería</b> → selecciona <b>"Sin restricciones"</b>
+        </div>
+        <button class="wz-btn" onclick="wizCheckFlotante()">Ya lo configuré ✓</button>
       </div>
     </div>
 
-    <div style="background:#2a2a2a;border-radius:10px;padding:16px;margin-bottom:20px">
-      <div style="color:#FFCC00;font-weight:700;margin-bottom:8px">Paso 4 — Batería sin restricciones</div>
-      <div style="color:#ccc;font-size:13px;line-height:1.6">
-        En Info de la app de Chrome → <b>Batería</b> → selecciona <b>"Sin restricciones"</b>
+    <!-- Paso 4: Sonido -->
+    <div class="wz-paso" id="wz-sonido">
+      <div class="wz-icon" id="wz-sonido-icon">🔊</div>
+      <div style="flex:1">
+        <div class="wz-titulo">Activar sonido de alertas</div>
+        <div class="wz-desc">Toca el botón para que suene cuando llegue un pedido.</div>
+        <button class="wz-btn" onclick="wizActivarSonido()">Activar sonido</button>
       </div>
     </div>
 
-    <button onclick="document.getElementById('modal-notif').style.display='none'" style="width:100%;background:#FFCC00;color:#0F172A;border:none;border-radius:10px;padding:14px;font-size:16px;font-weight:700;cursor:pointer">✓ Listo, ya lo configuré</button>
+    <!-- Paso 5: GPS -->
+    <div class="wz-paso" id="wz-gps">
+      <div class="wz-icon" id="wz-gps-icon">📍</div>
+      <div style="flex:1">
+        <div class="wz-titulo">Permitir ubicación</div>
+        <div class="wz-desc">Necesaria para recibir pedidos cercanos. Toca <b>"Permitir"</b> cuando el celular lo pida.</div>
+        <button class="wz-btn" onclick="wizPedirGPS()">Activar ubicación</button>
+      </div>
+    </div>
+
+    <button id="wz-finalizar" onclick="wizFinalizar()" style="display:none;width:100%;background:#FFCC00;color:#0F172A;border:none;border-radius:12px;padding:16px;font-size:17px;font-weight:800;cursor:pointer;margin-top:8px">
+      ¡Listo! Comenzar a recibir pedidos →
+    </button>
+    <button onclick="wizFinalizar()" style="width:100%;background:transparent;color:#475569;border:none;padding:12px;font-size:13px;cursor:pointer;margin-top:4px">
+      Omitir configuración por ahora
+    </button>
   </div>
 </div>
+
+<style>
+.wz-paso { display:flex;gap:14px;background:#1e293b;border-radius:12px;padding:16px;margin-bottom:12px;align-items:flex-start }
+.wz-icon { font-size:28px;flex-shrink:0;margin-top:2px;transition:all .3s }
+.wz-titulo { font-weight:700;color:#f1f5f9;font-size:15px;margin-bottom:6px }
+.wz-desc { color:#94A3B8;font-size:13px;line-height:1.6;margin-bottom:10px }
+.wz-btn { background:#334155;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer }
+.wz-btn:active { opacity:.8 }
+.wz-done { background:#0f2a1a!important }
+.wz-done .wz-icon { filter:grayscale(0) }
+</style>
 
 <!-- ═══════════════════ LOGIN ═══════════════════ -->
 <div id="auth-screen">
@@ -498,7 +543,7 @@
     <div class="topbar-brand"><img src="/logo-rj.jpg" style="height:26px;border-radius:4px;vertical-align:middle;margin-right:7px">RJ Rider</div>
     <div class="topbar-right">
       <span id="turno-timer" style="display:none;font-size:11px;color:var(--teal-mid);font-weight:600;background:#2d2d2a;padding:4px 10px;border-radius:20px"></span>
-      <button onclick="document.getElementById('modal-notif').style.display='flex'" style="background:#334155;color:#fff;border:none;border-radius:20px;padding:6px 10px;font-size:12px;cursor:pointer" title="Configurar notificaciones">⚙️</button>
+      <button onclick="document.getElementById('wizard').style.display='block'" style="background:#334155;color:#fff;border:none;border-radius:20px;padding:6px 10px;font-size:12px;cursor:pointer" title="Configurar notificaciones">⚙️</button>
       <button id="btn-sonido" onclick="activarSonido()" style="background:#DC2626;color:#fff;border:none;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">🔇 Activar sonido</button>
       <div class="switch-wrap">
         <span class="switch-label" id="switch-label">Offline</span>
@@ -2029,9 +2074,86 @@ document.querySelectorAll('.b-tab').forEach(tab => {
   });
 });
 
+// ══════════ WIZARD DE CONFIGURACIÓN ══════════
+const WZ_KEY = 'rj_wizard_done';
+
+function wizCheck(id, ok) {
+  const paso = document.getElementById('wz-' + id);
+  const icon = document.getElementById('wz-' + id + '-icon');
+  if (!paso) return;
+  if (ok) {
+    paso.classList.add('wz-done');
+    paso.style.opacity = '0.6';
+    if (icon) icon.textContent = '✅';
+    const btn = paso.querySelector('.wz-btn');
+    if (btn) { btn.textContent = 'Completado'; btn.disabled = true; btn.style.background = '#16a34a'; }
+  }
+  // Mostrar botón finalizar si al menos notif + sonido están listos
+  const notifOk = Notification.permission === 'granted';
+  const sonidoOk = audioDesbloqueado;
+  if (notifOk && sonidoOk) {
+    const fin = document.getElementById('wz-finalizar');
+    if (fin) fin.style.display = 'block';
+  }
+}
+
+async function wizCheckPWA() {
+  const isPWA = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  wizCheck('pwa', true); // el rider confirma manualmente
+}
+
+async function wizPedirNotif() {
+  const p = await Notification.requestPermission();
+  notifPermiso = p === 'granted';
+  wizCheck('notif', p === 'granted');
+  if (p !== 'granted') toast('Permiso de notificaciones denegado — ve a ajustes del celular', 'error');
+}
+
+function wizCheckFlotante() {
+  wizCheck('flotante', true);
+  localStorage.setItem('rj_flotante_ok', '1');
+}
+
+function wizActivarSonido() {
+  activarSonido();
+  setTimeout(() => wizCheck('sonido', audioDesbloqueado), 500);
+}
+
+async function wizPedirGPS() {
+  try {
+    const pos = await getCurrentPos();
+    wizCheck('gps', true);
+    toast('📍 Ubicación: ' + pos.lat.toFixed(4) + ',' + pos.lng.toFixed(4), 'success');
+  } catch(e) {
+    toast('GPS denegado — actívalo en ajustes del celular', 'error');
+  }
+}
+
+function wizFinalizar() {
+  localStorage.setItem(WZ_KEY, '1');
+  document.getElementById('wizard').style.display = 'none';
+}
+
+function mostrarWizardSiNecesario() {
+  const hecho = localStorage.getItem(WZ_KEY);
+  const notifOk = Notification.permission === 'granted';
+  const sonidoOk = localStorage.getItem('rj_sonido_on') === '1';
+  // Mostrar wizard si no se completó antes o faltan permisos críticos
+  if (!hecho || !notifOk || !sonidoOk) {
+    document.getElementById('wizard').style.display = 'block';
+    // Pre-marcar lo que ya está ok
+    const isPWA = window.matchMedia('(display-mode: standalone)').matches;
+    if (isPWA) wizCheck('pwa', true);
+    if (notifOk) wizCheck('notif', true);
+    if (localStorage.getItem('rj_flotante_ok') === '1') wizCheck('flotante', true);
+    if (sonidoOk) wizCheck('sonido', true);
+  }
+}
+
 // ══════════ INIT ══════════
 if (token && usuario && usuario.rol === 'rider') {
   iniciarApp();
+  mostrarWizardSiNecesario();
 }
 </script>
 
