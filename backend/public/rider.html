@@ -1278,7 +1278,7 @@ $('toggle-disponible').addEventListener('change', async (e) => {
   if (disponible) iniciarAudioCtx();
 
   try {
-    const pos = await getCurrentPos().catch(() => null);
+    const pos = await getCurrentPos().catch(err => { toast('⚠️ GPS: ' + (err.message || err.code), 'error'); return null; });
     await apiFetch('/riders/disponibilidad', {
       method: 'PUT',
       body: JSON.stringify({ disponible, lat: pos ? pos.lat : null, lng: pos ? pos.lng : null })
@@ -1289,7 +1289,8 @@ $('toggle-disponible').addEventListener('change', async (e) => {
       cargarDisponibles();
       iniciarTurno();
       iniciarPolling();
-      toast('¡Estás online! Buscando pedidos...', 'success');
+      if (pos) toast('¡Estás online! GPS: ' + pos.lat.toFixed(4) + ',' + pos.lng.toFixed(4), 'success');
+      else toast('⚠️ Online sin GPS — no recibirás ofertas directas', 'error');
     } else {
       detenerGPS();
       detenerTurno();
