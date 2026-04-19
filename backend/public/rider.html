@@ -935,19 +935,19 @@ function iniciarAudioCtx() {
 }
 
 async function suscribirPush() {
-  if (!('PushManager' in window) || !swRegistration) return;
+  if (!('PushManager' in window)) return;
   try {
-    // Obtener clave pública del servidor
+    // Esperar a que el SW esté listo (resuelve race condition)
+    const reg = await navigator.serviceWorker.ready;
+
     const { key } = await apiFetch('/riders/vapid-public-key');
     if (!key) return;
 
-    // Suscribir al navegador
-    const sub = await swRegistration.pushManager.subscribe({
+    const sub = await reg.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: _urlBase64ToUint8Array(key),
     });
 
-    // Guardar suscripción en el servidor
     await apiFetch('/riders/push-subscription', {
       method: 'POST',
       body: JSON.stringify({ subscription: sub }),

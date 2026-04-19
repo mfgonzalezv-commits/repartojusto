@@ -1,10 +1,10 @@
 // Service Worker — Reparto Justo Rider PWA
-// v2 — caché básico + notificaciones OS
+// v4 — audio element + push notifications
 
-const CACHE = 'rj-rider-v3';
-const PRECACHE = ['/rider.html', '/manifest-rider.json', '/icon-rider-512.svg'];
+const CACHE = 'rj-rider-v4';
+const PRECACHE = ['/rider.html', '/manifest-rider.json', '/alarma.wav'];
 
-// ── Instalación: pre-cachear archivos esenciales ──────────────────────────────
+// ── Instalación ───────────────────────────────────────────────────────────────
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE).then(c => c.addAll(PRECACHE)).then(() => self.skipWaiting())
@@ -20,11 +20,16 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// ── Fetch: servir desde caché si está disponible ──────────────────────────────
+// ── Fetch: network-first para HTML, caché para el resto ───────────────────────
 self.addEventListener('fetch', (e) => {
-  // Solo manejar GETs del mismo origen
   if (e.request.method !== 'GET') return;
   if (!e.request.url.startsWith(self.location.origin)) return;
+
+  // rider.html siempre desde red para recibir actualizaciones
+  if (e.request.url.includes('rider.html')) {
+    e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+    return;
+  }
 
   e.respondWith(
     caches.match(e.request).then(cached => cached || fetch(e.request))
@@ -46,7 +51,7 @@ self.addEventListener('notificationclick', function(event) {
   );
 });
 
-// ── Push (preparado para FCM futuro) ─────────────────────────────────────────
+// ── Push: notificación OS con sonido del sistema ──────────────────────────────
 self.addEventListener('push', function(event) {
   if (!event.data) return;
   let data = {};
@@ -54,8 +59,8 @@ self.addEventListener('push', function(event) {
   event.waitUntil(
     self.registration.showNotification(data.title || '🔔 ¡Nuevo pedido!', {
       body: data.body || '¡Un pedido está esperando tu respuesta!',
-      icon: '/icon-rider-512.svg',
-      badge: '/icon-rider-512.svg',
+      icon: '/icon-192.png',
+      badge: '/icon-192.png',
       tag: 'pedido-nuevo',
       renotify: true,
       requireInteraction: true,
