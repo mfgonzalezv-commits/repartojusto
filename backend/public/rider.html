@@ -980,9 +980,7 @@ function _beep(freq, dur, offset = 0) {
   if (!audioCtx) return;
   const osc = audioCtx.createOscillator();
   const gain = audioCtx.createGain();
-  // Compresor para maximizar volumen sin distorsión
-  const comp = audioCtx.createDynamicsCompressor();
-  osc.connect(gain); gain.connect(comp); comp.connect(audioCtx.destination);
+  osc.connect(gain); gain.connect(audioCtx.destination);
   osc.frequency.value = freq;
   gain.gain.setValueAtTime(1.0, audioCtx.currentTime + offset);
   gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + offset + dur);
