@@ -231,6 +231,62 @@ router.delete('/tarjeta', auth, solo('negocio'), async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+// ── GET /api/negocios/clientes ─────────────────────────────────────────────
+router.get('/clientes', auth, solo('negocio'), async (req, res, next) => {
+  try {
+    const neg = await _getNegocio(req.user.id);
+    const { rows } = await db(
+      `SELECT c.*, COUNT(p.id) AS pedidos_count,
+              MAX(p.created_at) AS ultimo_pedido
+       FROM clientes c
+       LEFT JOIN pedidos p ON p.cliente_id = c.id
+       WHERE c.negocio_id = $1
+       GROUP BY c.id
+       ORDER BY MAX(p.created_at) DESC NULLS LAST`,
+      [neg.id]
+    );
+    res.json(rows);
+  } catch (err) { next(err); }
+});
+
+// ── GET /api/negocios/resumen?periodo=hoy|semana|mes|todo ─────────────────
+router.get('/resumen', auth, solo('negocio'), async (req, res, next) => {
+  try {
+    const neg = await _getNegocio(req.user.id);
+    const periodo = req.query.periodo || 'mes';
+    const filtros = {
+      hoy:    `AND p.created_at >= CURRENT_DATE`,
+      semana: `AND p.created_at >= date_trunc('week', NOW())`,
+      mes:    `AND p.created_at >= date_trunc('month', NOW())`,
+      todo:   '',
+    };
+    const filtro = filtros[periodo] || filtros.mes;
+
+    const { rows: [kpi] } = await db(
+      `SELECT
+         COUNT(*) FILTER (WHERE p.estado = 'entregado')                        AS entregados,
+         COUNT(*) FILTER (WHERE p.estado = 'cancelado')                        AS cancelados,
+         COUNT(*) FILTER (WHERE p.estado NOT IN ('entregado','cancelado'))      AS en_curso,
+         COALESCE(SUM(p.cargo_negocio) FILTER (WHERE p.estado = 'entregado'),0) AS gasto_total,
+         COALESCE(SUM(500)             FILTER (WHERE p.estado = 'entregado'),0) AS gasto_plataforma,
+         COALESCE(SUM(p.tarifa_entrega) FILTER (WHERE p.estado = 'entregado'),0) AS gasto_envios
+       FROM pedidos p
+       WHERE p.negocio_id = $1 ${filtro}`,
+      [neg.id]
+    );
+
+    const { rows: porDia } = await db(
+      `SELECT DATE(p.created_at) AS dia, COUNT(*) AS total
+       FROM pedidos p
+       WHERE p.negocio_id = $1 AND p.estado = 'entregado' ${filtro}
+       GROUP BY dia ORDER BY dia`,
+      [neg.id]
+    );
+
+    res.json({ kpi, porDia });
+  } catch (err) { next(err); }
+});
+
 // Exportar cobros y calcularCargos para usar en pedidos.js
 module.exports = router;
 module.exports.cobros = cobros;

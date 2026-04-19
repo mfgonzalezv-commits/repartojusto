@@ -325,6 +325,14 @@
       /* Auth card: compacto */
       .auth-card { padding: 32px 20px; margin: 16px; }
     }
+  .kpi-resumen { background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center }
+  .kpi-r-val { font-size:26px;font-weight:800;color:var(--text1) }
+  .kpi-r-lbl { font-size:12px;color:var(--text3);margin-top:4px }
+  .kpi-r-val.amarillo { color:var(--amarillo) }
+  .cliente-card { background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px }
+  .cliente-nombre { font-weight:700;font-size:15px;margin-bottom:4px }
+  .cliente-info { font-size:13px;color:var(--text3);line-height:1.6 }
+  .periodo-btn.active { background:var(--amarillo);color:var(--negro);border-color:var(--amarillo) }
   </style>
 </head>
 <body>
@@ -415,6 +423,8 @@
       <button class="tab tab-nuevo-btn" data-tab="nuevo">+ Nuevo pedido</button>
       <button class="tab active" data-tab="pedidos">Pedidos activos</button>
       <button class="tab" data-tab="historial">Historial</button>
+      <button class="tab" data-tab="resumen">📊 Resumen</button>
+      <button class="tab" data-tab="clientes">👥 Clientes</button>
       <button class="tab" data-tab="cuenta">Mi cuenta</button>
     </div>
     <div class="topbar-info">
@@ -465,6 +475,40 @@
               <div class="empty"><div class="empty-icon">📋</div><div class="empty-text">Sin historial aún</div></div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Tab: Resumen -->
+      <div id="tab-resumen" style="display:none;padding:12px;overflow-y:auto">
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+          <button class="btn btn-outline btn-sm periodo-btn active" data-p="hoy">Hoy</button>
+          <button class="btn btn-outline btn-sm periodo-btn" data-p="semana">Esta semana</button>
+          <button class="btn btn-outline btn-sm periodo-btn" data-p="mes">Este mes</button>
+          <button class="btn btn-outline btn-sm periodo-btn" data-p="todo">Todo</button>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+          <div class="kpi-resumen"><div class="kpi-r-val" id="r-entregados">—</div><div class="kpi-r-lbl">Pedidos entregados</div></div>
+          <div class="kpi-resumen"><div class="kpi-r-val" id="r-cancelados">—</div><div class="kpi-r-lbl">Cancelados</div></div>
+          <div class="kpi-resumen"><div class="kpi-r-val amarillo" id="r-gasto">—</div><div class="kpi-r-lbl">Total pagado</div></div>
+          <div class="kpi-resumen"><div class="kpi-r-val" id="r-plataforma">—</div><div class="kpi-r-lbl">Costo plataforma</div></div>
+          <div class="kpi-resumen" style="grid-column:1/-1"><div class="kpi-r-val" id="r-envios">—</div><div class="kpi-r-lbl">Gasto en envíos (riders)</div></div>
+        </div>
+        <div class="card" style="margin-bottom:0">
+          <div class="card-header"><h3>Pedidos entregados por día</h3></div>
+          <div class="card-body" style="padding:12px">
+            <canvas id="grafico-resumen" height="160"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Clientes -->
+      <div id="tab-clientes" style="display:none;padding:12px;overflow-y:auto">
+        <div style="margin-bottom:12px">
+          <input id="buscar-cliente" type="search" placeholder="🔍 Buscar por nombre o teléfono..."
+            style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--card);color:var(--text1);box-sizing:border-box">
+        </div>
+        <div id="list-clientes">
+          <div class="empty"><div class="empty-icon">👥</div><div class="empty-text">Cargando clientes...</div></div>
         </div>
       </div>
 
@@ -1116,11 +1160,13 @@ function switchTab(name) {
   document.querySelectorAll('.bottom-nav-btn, .bottom-nav-nuevo').forEach(t => {
     t.classList.toggle('active', t.dataset.tab === name);
   });
-  ['pedidos', 'historial', 'nuevo', 'cuenta'].forEach(n => {
+  ['pedidos', 'historial', 'nuevo', 'cuenta', 'resumen', 'clientes'].forEach(n => {
     $(`tab-${n}`).style.display = n === name ? 'block' : 'none';
   });
   if (name === 'historial') cargarHistorial();
-  if (name === 'cuenta') cargarMiCuenta();
+  if (name === 'cuenta')    cargarMiCuenta();
+  if (name === 'resumen')   cargarResumen();
+  if (name === 'clientes')  cargarClientes();
   if (name === 'nuevo') setTimeout(() => { if (mapaSelector) mapaSelector.invalidateSize(); }, 100);
 }
 
@@ -2322,6 +2368,82 @@ async function enviarCalifNegocio() {
     toast('✅ Calificación enviada', 'success');
   } catch (e) { toast(e.message, 'error'); }
 }
+
+// ══════════ RESUMEN ══════════
+let periodoActual = 'hoy';
+let graficoResumen = null;
+
+document.querySelectorAll('.periodo-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.periodo-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    periodoActual = btn.dataset.p;
+    cargarResumen();
+  });
+});
+
+async function cargarResumen() {
+  try {
+    const { kpi, porDia } = await apiFetch(`/negocios/resumen?periodo=${periodoActual}`);
+    const fmt = n => '$' + parseInt(n).toLocaleString('es-CL');
+    $('r-entregados').textContent  = kpi.entregados;
+    $('r-cancelados').textContent  = kpi.cancelados;
+    $('r-gasto').textContent       = fmt(kpi.gasto_total);
+    $('r-plataforma').textContent  = fmt(kpi.gasto_plataforma);
+    $('r-envios').textContent      = fmt(kpi.gasto_envios);
+
+    const labels = porDia.map(r => r.dia.slice(5)); // MM-DD
+    const valores = porDia.map(r => parseInt(r.total));
+
+    if (graficoResumen) graficoResumen.destroy();
+    const ctx = document.getElementById('grafico-resumen').getContext('2d');
+    graficoResumen = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{ label: 'Pedidos', data: valores, backgroundColor: '#FFCC00', borderRadius: 6 }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } },
+        responsive: true, maintainAspectRatio: false
+      }
+    });
+  } catch(e) { toast('Error cargando resumen: ' + e.message, 'error'); }
+}
+
+// ══════════ CLIENTES ══════════
+let clientesData = [];
+
+async function cargarClientes() {
+  try {
+    clientesData = await apiFetch('/negocios/clientes');
+    renderClientes(clientesData);
+  } catch(e) { toast('Error cargando clientes: ' + e.message, 'error'); }
+}
+
+function renderClientes(lista) {
+  const fmt = d => d ? new Date(d).toLocaleDateString('es-CL') : '—';
+  $('list-clientes').innerHTML = lista.length ? lista.map(c => `
+    <div class="cliente-card">
+      <div class="cliente-nombre">${c.nombre}</div>
+      <div class="cliente-info">
+        📞 ${c.telefono || '—'}<br>
+        📍 ${c.direccion || '—'}<br>
+        📦 ${c.pedidos_count || 0} pedidos · Último: ${fmt(c.ultimo_pedido)}
+        ${c.notas ? `<br>📝 ${c.notas}` : ''}
+      </div>
+    </div>
+  `).join('') : '<div class="empty"><div class="empty-icon">👥</div><div class="empty-text">Sin clientes registrados aún</div></div>';
+}
+
+$('buscar-cliente').addEventListener('input', e => {
+  const q = e.target.value.toLowerCase();
+  renderClientes(clientesData.filter(c =>
+    (c.nombre || '').toLowerCase().includes(q) ||
+    (c.telefono || '').includes(q)
+  ));
+});
 </script>
 
 <!-- ── MODAL CALIFICACIÓN RIDER ──────────────────────────────────────── -->
