@@ -923,18 +923,33 @@ let audioCtx = null;
 
 function activarSonido() {
   try {
-    // Crear AudioContext directamente en el gesto — Chrome lo permite aquí
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    // Tocar un beep de confirmación
     _beep(880, 0.15, 0);
     _beep(1200, 0.15, 0.2);
     audioDesbloqueado = true;
-    const btn = document.getElementById('btn-sonido');
-    if (btn) { btn.textContent = '🔔 Sonido ON'; btn.style.background = '#16a34a'; btn.onclick = null; btn.style.cursor = 'default'; }
+    localStorage.setItem('rj_sonido_on', '1');
+    _btnSonidoOn();
     pedirPermisoNotif();
     suscribirPush();
   } catch(e) { toast('No se pudo activar el sonido: ' + e.message, 'error'); }
 }
+
+function _btnSonidoOn() {
+  const btn = document.getElementById('btn-sonido');
+  if (btn) { btn.textContent = '🔔 Sonido ON'; btn.style.background = '#16a34a'; btn.onclick = null; btn.style.cursor = 'default'; }
+}
+
+// Al volver a la app desde otra pantalla, reactivar audio con el primer toque
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && localStorage.getItem('rj_sonido_on') === '1' && !audioDesbloqueado) {
+    const btn = document.getElementById('btn-sonido');
+    if (btn) { btn.textContent = '🔔 Toca aquí'; btn.style.background = '#f59e0b'; btn.onclick = activarSonido; btn.style.cursor = 'pointer'; }
+    document.addEventListener('touchstart', function _reactivar() {
+      activarSonido();
+      document.removeEventListener('touchstart', _reactivar);
+    }, { once: true, passive: true });
+  }
+});
 
 function iniciarAudioCtx() {}
 
