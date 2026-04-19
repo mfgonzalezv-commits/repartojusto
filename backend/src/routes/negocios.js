@@ -234,10 +234,10 @@ router.delete('/tarjeta', auth, solo('negocio'), async (req, res, next) => {
 // ── GET /api/negocios/clientes ─────────────────────────────────────────────
 router.get('/clientes', auth, solo('negocio'), async (req, res, next) => {
   try {
-    const neg = await _getNegocio(req.user.id);
+    const { rows: [neg] } = await db(`SELECT id FROM negocios WHERE usuario_id = $1`, [req.usuario.id]);
+    if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });
     const { rows } = await db(
-      `SELECT c.*, COUNT(p.id) AS pedidos_count,
-              MAX(p.created_at) AS ultimo_pedido
+      `SELECT c.*, COUNT(p.id) AS pedidos_count, MAX(p.created_at) AS ultimo_pedido
        FROM clientes c
        LEFT JOIN pedidos p ON p.cliente_id = c.id
        WHERE c.negocio_id = $1
@@ -252,7 +252,9 @@ router.get('/clientes', auth, solo('negocio'), async (req, res, next) => {
 // ── GET /api/negocios/resumen?periodo=hoy|semana|mes|todo ─────────────────
 router.get('/resumen', auth, solo('negocio'), async (req, res, next) => {
   try {
-    const neg = await _getNegocio(req.user.id);
+    const { rows: [neg] } = await db(`SELECT id FROM negocios WHERE usuario_id = $1`, [req.usuario.id]);
+    if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });
+
     const periodo = req.query.periodo || 'mes';
     const filtros = {
       hoy:    `AND p.created_at >= CURRENT_DATE`,
@@ -264,9 +266,9 @@ router.get('/resumen', auth, solo('negocio'), async (req, res, next) => {
 
     const { rows: [kpi] } = await db(
       `SELECT
-         COUNT(*) FILTER (WHERE p.estado = 'entregado')                        AS entregados,
-         COUNT(*) FILTER (WHERE p.estado = 'cancelado')                        AS cancelados,
-         COUNT(*) FILTER (WHERE p.estado NOT IN ('entregado','cancelado'))      AS en_curso,
+         COUNT(*) FILTER (WHERE p.estado = 'entregado')                         AS entregados,
+         COUNT(*) FILTER (WHERE p.estado = 'cancelado')                         AS cancelados,
+         COUNT(*) FILTER (WHERE p.estado NOT IN ('entregado','cancelado'))       AS en_curso,
          COALESCE(SUM(p.cargo_negocio) FILTER (WHERE p.estado = 'entregado'),0) AS gasto_total,
          COALESCE(SUM(500)             FILTER (WHERE p.estado = 'entregado'),0) AS gasto_plataforma,
          COALESCE(SUM(p.tarifa_entrega) FILTER (WHERE p.estado = 'entregado'),0) AS gasto_envios
