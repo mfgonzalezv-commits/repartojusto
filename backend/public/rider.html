@@ -901,6 +901,12 @@ let vibracionInterval = null;
 let wakeLock = null;
 let audioCtx = null;
 
+// Inicializar audio en el primer toque (cubre reload con sesión guardada)
+document.addEventListener('touchstart', function _initAudio() {
+  iniciarAudioCtx();
+  document.removeEventListener('touchstart', _initAudio);
+}, { once: true, passive: true });
+
 // Registrar Service Worker para notificaciones a nivel OS
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(reg => {
@@ -1232,6 +1238,9 @@ $('toggle-disponible').addEventListener('change', async (e) => {
   label.textContent = disponible ? 'Online' : 'Offline';
   label.className = disponible ? 'switch-label on' : 'switch-label';
 
+  // Inicializar audio ANTES de cualquier await — Chrome solo acepta gesto síncrono
+  if (disponible) iniciarAudioCtx();
+
   try {
     const pos = await getCurrentPos().catch(() => null);
     await apiFetch('/riders/disponibilidad', {
@@ -1240,8 +1249,6 @@ $('toggle-disponible').addEventListener('change', async (e) => {
     });
 
     if (disponible) {
-      iniciarAudioCtx();   // activar audio desde gesto del usuario
-      pedirPermisoNotif(); // pedir permiso notificaciones
       iniciarGPS();
       cargarDisponibles();
       iniciarTurno();
