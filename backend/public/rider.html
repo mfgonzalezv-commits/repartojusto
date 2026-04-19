@@ -932,6 +932,35 @@ function iniciarAudioCtx() {
     }
   } catch {}
   pedirPermisoNotif();
+  suscribirPush();
+}
+
+async function suscribirPush() {
+  if (!('PushManager' in window) || !swRegistration) return;
+  try {
+    // Obtener clave pública del servidor
+    const { key } = await apiFetch('/riders/vapid-public-key');
+    if (!key) return;
+
+    // Suscribir al navegador
+    const sub = await swRegistration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: _urlBase64ToUint8Array(key),
+    });
+
+    // Guardar suscripción en el servidor
+    await apiFetch('/riders/push-subscription', {
+      method: 'POST',
+      body: JSON.stringify({ subscription: sub }),
+    });
+  } catch {}
+}
+
+function _urlBase64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+  const rawData = atob(base64);
+  return Uint8Array.from([...rawData].map(c => c.charCodeAt(0)));
 }
 
 function sonarAlarma() {

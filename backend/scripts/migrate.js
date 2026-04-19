@@ -152,6 +152,7 @@ const migrations = [
   `ALTER TABLE negocios ADD COLUMN IF NOT EXISTS mostrar_costo_seguimiento BOOLEAN DEFAULT false`,
   `ALTER TABLE pedidos  ADD COLUMN IF NOT EXISTS cargo_negocio INTEGER DEFAULT 0`,
   `ALTER TABLE pedidos  ADD COLUMN IF NOT EXISTS cargo_cliente  INTEGER DEFAULT 0`,
+  `ALTER TABLE riders   ADD COLUMN IF NOT EXISTS push_subscription JSONB`,
 
   // ── Restricciones adicionales (idempotente) ───────────────────────────────
   `DO $$ BEGIN

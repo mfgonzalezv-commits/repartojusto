@@ -10,6 +10,7 @@
  */
 
 const { query: db } = require('../config/database');
+const { sendPush } = require('../utils/webpush');
 
 const OFERTA_SEGUNDOS = 30;
 const MAX_PEDIDOS_SIMULTANEOS = 3;
@@ -17,12 +18,12 @@ const MAX_PEDIDOS_SIMULTANEOS = 3;
 // Map: pedido_id → { timer: TimeoutID|null, ofrecidos: Set<number> }
 const cascadas = new Map();
 
-// ── Rider disponible más cercano al negocio, con prioridad por score ─────────
+// ── Rider disponible más cercano, retorna también su push_subscription ────────
 // Riders con mejor calificación obtienen hasta 20% de ventaja sobre la distancia.
 // Ej: rider 1 km con score 100 compite como si estuviera a 0.8 km.
 async function _riderMasCercano(negLat, negLng, ofrecidos) {
   const { rows } = await db(
-    `SELECT r.id
+    `SELECT r.id, r.push_subscription
      FROM riders r
      LEFT JOIN LATERAL (
        SELECT ROUND(
@@ -80,10 +81,21 @@ async function _ofrecerSiguiente(pedido, io) {
     return;
   }
 
-  io.to(`rider:${rider.id}`).emit('pedido:oferta', {
-    ..._payload(pedido),
-    segundos: OFERTA_SEGUNDOS,
-  });
+  const ofertaPayload = { ..._payload(pedido), segundos: OFERTA_SEGUNDOS };
+  io.to(`rider:${rider.id}`).emit('pedido:oferta', ofertaPayload);
+
+  // Push notification al celular del rider (llega aunque la app esté cerrada)
+  if (rider.push_subscription) {
+    sendPush(rider.push_subscription, {
+      title: '🔔 ¡Nuevo pedido!',
+      body: `$${parseInt(pedido.tarifa_entrega).toLocaleString('es-CL')} — Tienes ${OFERTA_SEGUNDOS}s para aceptar`,
+      pedido_id: pedido.id,
+    }).catch(err => {
+      if (err && err.expired) {
+        db(`UPDATE riders SET push_subscription = NULL WHERE id = $1`, [rider.id]).catch(() => {});
+      }
+    });
+  }
 
   cascada.timer = setTimeout(async () => {
     // Tiempo expirado — pasar al siguiente

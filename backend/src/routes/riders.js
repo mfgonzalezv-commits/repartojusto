@@ -173,4 +173,22 @@ function haversineRiders(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.asin(Math.sqrt(a));
 }
 
+// ── POST /api/riders/push-subscription — guardar suscripción Web Push ────────
+router.post('/push-subscription', auth, solo('rider'), async (req, res, next) => {
+  try {
+    const { subscription } = req.body;
+    if (!subscription) return res.status(400).json({ error: 'Suscripción requerida' });
+    await db(
+      `UPDATE riders SET push_subscription = $1 WHERE usuario_id = $2`,
+      [JSON.stringify(subscription), req.user.id]
+    );
+    res.json({ ok: true });
+  } catch (e) { next(e); }
+});
+
+// ── GET /api/riders/vapid-public-key — clave pública para suscripción ────────
+router.get('/vapid-public-key', (req, res) => {
+  res.json({ key: process.env.VAPID_PUBLIC_KEY });
+});
+
 module.exports = router;
