@@ -460,6 +460,7 @@
     <div class="topbar-brand"><img src="/logo-rj.jpg" style="height:26px;border-radius:4px;vertical-align:middle;margin-right:7px">RJ Rider</div>
     <div class="topbar-right">
       <span id="turno-timer" style="display:none;font-size:11px;color:var(--teal-mid);font-weight:600;background:#2d2d2a;padding:4px 10px;border-radius:20px"></span>
+      <button id="btn-sonido" onclick="activarSonido()" style="background:#DC2626;color:#fff;border:none;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">🔇 Activar sonido</button>
       <div class="switch-wrap">
         <span class="switch-label" id="switch-label">Offline</span>
         <label class="switch">
@@ -903,12 +904,6 @@ let vibracionInterval = null;
 let wakeLock = null;
 let audioDesbloqueado = false;
 
-// Desbloquear audio en el primer toque (cubre reload con sesión guardada)
-document.addEventListener('touchstart', function _initAudio() {
-  iniciarAudioCtx();
-  document.removeEventListener('touchstart', _initAudio);
-}, { once: true, passive: true });
-
 // Registrar Service Worker para notificaciones a nivel OS
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(reg => {
@@ -924,30 +919,30 @@ function pedirPermisoNotif() {
   }
 }
 
-function iniciarAudioCtx() {
-  // Desbloquear <audio> con gesto real — Chrome lo requiere antes de poder .play()
+function activarSonido() {
   const audio = document.getElementById('alarma-audio');
-  if (audio && !audioDesbloqueado) {
-    audio.play().then(() => { audio.pause(); audio.currentTime = 0; audioDesbloqueado = true; }).catch(() => {});
-  }
-  pedirPermisoNotif();
-  suscribirPush();
+  if (!audio) return;
+  audio.play().then(() => {
+    audioDesbloqueado = true;
+    const btn = document.getElementById('btn-sonido');
+    if (btn) { btn.textContent = '🔔 Sonido ON'; btn.style.background = '#16a34a'; btn.onclick = null; btn.style.cursor = 'default'; }
+    pedirPermisoNotif();
+    suscribirPush();
+  }).catch(() => { toast('No se pudo activar el sonido', 'error'); });
 }
+
+function iniciarAudioCtx() {}
 
 async function suscribirPush() {
   if (!('PushManager' in window)) return;
   try {
-    // Esperar a que el SW esté listo (resuelve race condition)
     const reg = await navigator.serviceWorker.ready;
-
     const { key } = await apiFetch('/riders/vapid-public-key');
     if (!key) return;
-
     const sub = await reg.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: _urlBase64ToUint8Array(key),
     });
-
     await apiFetch('/riders/push-subscription', {
       method: 'POST',
       body: JSON.stringify({ subscription: sub }),
@@ -963,6 +958,7 @@ function _urlBase64ToUint8Array(base64String) {
 }
 
 function sonarAlarma() {
+  if (!audioDesbloqueado) return;
   const audio = document.getElementById('alarma-audio');
   if (!audio) return;
   try { audio.currentTime = 0; audio.play().catch(() => {}); } catch {}
