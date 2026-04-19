@@ -105,7 +105,7 @@
     .badge-abierto.open { background: var(--amarillo); color: var(--negro); }
     .badge-abierto.closed { background: var(--red-bg); color: var(--red); }
 
-    .main { padding: 16px; max-width: 1600px; margin: 0 auto; height: calc(100vh - 56px); overflow: hidden; }
+    .main { padding: 16px; max-width: 1600px; margin: 0 auto; height: calc(100vh - 56px); overflow-y: auto; }
 
     /* ── TABS (ahora en topbar) ── */
     .tab {
@@ -503,7 +503,7 @@
       </div>
 
       <!-- Tab: Clientes -->
-      <div id="tab-clientes" style="display:none;padding:12px;overflow-y:auto;height:calc(100vh - 120px)">
+      <div id="tab-clientes" style="display:none;padding:12px">
         <div style="margin-bottom:12px">
           <input id="buscar-cliente" type="search" placeholder="🔍 Buscar por nombre o teléfono..."
             style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;background:var(--card);color:var(--text1);box-sizing:border-box">
