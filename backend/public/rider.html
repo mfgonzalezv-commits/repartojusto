@@ -899,6 +899,7 @@ let notifPermiso = false;
 let swRegistration = null;
 let vibracionInterval = null;
 let wakeLock = null;
+let audioCtx = null;
 
 // Registrar Service Worker para notificaciones a nivel OS
 if ('serviceWorker' in navigator) {
@@ -916,14 +917,21 @@ function pedirPermisoNotif() {
 }
 
 function iniciarAudioCtx() {
-  // Solo pedir permiso de notificaciones — el sonido lo maneja el OS
+  // Crear AudioContext durante gesto del usuario para que Chrome no lo bloquee
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    } else if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  } catch {}
   pedirPermisoNotif();
 }
 
 function sonarAlarma() {
-  // Usar Web Audio API para generar tono (no depende de archivo externo)
   try {
-    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const ctx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if (ctx.state === 'suspended') ctx.resume();
     const tiempos = [0, 0.15, 0.30, 0.50, 0.65, 0.80, 1.0, 1.15];
     tiempos.forEach((t, i) => {
       const osc = ctx.createOscillator();
@@ -936,7 +944,6 @@ function sonarAlarma() {
       osc.start(ctx.currentTime + t);
       osc.stop(ctx.currentTime + t + 0.12);
     });
-    setTimeout(() => ctx.close(), 2000);
   } catch {}
 }
 
@@ -978,8 +985,8 @@ function iniciarAlertas(tarifa) {
   if (notifPermiso) {
     const opts = {
       body: tarifa ? `Tarifa: $${parseInt(tarifa).toLocaleString('es-CL')} — ¡Acepta ahora!` : '¡Un pedido está esperando!',
-      icon: '/favicon.ico',
-      badge: '/favicon.ico',
+      icon: '/icon-192.png',
+      badge: '/icon-192.png',
       tag: 'pedido-nuevo',
       renotify: true,
       requireInteraction: true,
