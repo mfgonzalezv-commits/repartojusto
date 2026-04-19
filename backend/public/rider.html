@@ -340,6 +340,8 @@
 </head>
 <body>
 
+<audio id="alarma-audio" src="/alarma.wav" preload="auto"></audio>
+
 <!-- ═══════════════════ LOGIN ═══════════════════ -->
 <div id="auth-screen">
   <!-- LOGIN -->
@@ -899,9 +901,9 @@ let notifPermiso = false;
 let swRegistration = null;
 let vibracionInterval = null;
 let wakeLock = null;
-let audioCtx = null;
+let audioDesbloqueado = false;
 
-// Inicializar audio en el primer toque (cubre reload con sesión guardada)
+// Desbloquear audio en el primer toque (cubre reload con sesión guardada)
 document.addEventListener('touchstart', function _initAudio() {
   iniciarAudioCtx();
   document.removeEventListener('touchstart', _initAudio);
@@ -923,14 +925,11 @@ function pedirPermisoNotif() {
 }
 
 function iniciarAudioCtx() {
-  // Crear AudioContext durante gesto del usuario para que Chrome no lo bloquee
-  try {
-    if (!audioCtx) {
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    } else if (audioCtx.state === 'suspended') {
-      audioCtx.resume();
-    }
-  } catch {}
+  // Desbloquear <audio> con gesto real — Chrome lo requiere antes de poder .play()
+  const audio = document.getElementById('alarma-audio');
+  if (audio && !audioDesbloqueado) {
+    audio.play().then(() => { audio.pause(); audio.currentTime = 0; audioDesbloqueado = true; }).catch(() => {});
+  }
   pedirPermisoNotif();
   suscribirPush();
 }
@@ -964,22 +963,9 @@ function _urlBase64ToUint8Array(base64String) {
 }
 
 function sonarAlarma() {
-  try {
-    const ctx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
-    if (ctx.state === 'suspended') ctx.resume();
-    const tiempos = [0, 0.15, 0.30, 0.50, 0.65, 0.80, 1.0, 1.15];
-    tiempos.forEach((t, i) => {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.frequency.value = i % 2 === 0 ? 1200 : 900;
-      gain.gain.setValueAtTime(0.6, ctx.currentTime + t);
-      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + t + 0.12);
-      osc.start(ctx.currentTime + t);
-      osc.stop(ctx.currentTime + t + 0.12);
-    });
-  } catch {}
+  const audio = document.getElementById('alarma-audio');
+  if (!audio) return;
+  try { audio.currentTime = 0; audio.play().catch(() => {}); } catch {}
 }
 
 function flashPantalla() {
