@@ -18,7 +18,10 @@ async function sendPush(subscription, payload) {
   _configurar();
   if (!subscription || !vapidConfigurado) return;
   try {
-    await webpush.sendNotification(subscription, JSON.stringify(payload));
+    await webpush.sendNotification(subscription, JSON.stringify(payload), {
+      urgency: 'high',
+      TTL: 60,
+    });
   } catch (err) {
     if (err.statusCode === 410 || err.statusCode === 404) {
       throw { expired: true };
