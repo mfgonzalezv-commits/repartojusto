@@ -964,9 +964,15 @@ function _urlBase64ToUint8Array(base64String) {
 
 function sonarAlarma() {
   if (!audioDesbloqueado || !audioCtx) return;
-  // AudioContext creado en gesto del usuario — puede sonar desde cualquier contexto
-  const tiempos = [0, 0.18, 0.36, 0.60, 0.78, 0.96];
-  tiempos.forEach((t, i) => _beep(i % 2 === 0 ? 1200 : 900, 0.14, t));
+  const play = () => {
+    const tiempos = [0, 0.18, 0.36, 0.60, 0.78, 0.96];
+    tiempos.forEach((t, i) => _beep(i % 2 === 0 ? 1200 : 900, 0.14, t));
+  };
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume().then(play);
+  } else {
+    play();
+  }
 }
 
 function _beep(freq, dur, offset = 0) {
