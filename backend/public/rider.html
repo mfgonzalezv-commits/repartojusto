@@ -963,6 +963,7 @@ function _urlBase64ToUint8Array(base64String) {
 }
 
 function sonarAlarma() {
+  toast('🔊 ctx:' + (audioCtx ? audioCtx.state : 'NULL') + ' ok:' + audioDesbloqueado, 'info');
   if (!audioDesbloqueado || !audioCtx) return;
   const play = () => {
     const tiempos = [0, 0.18, 0.36, 0.60, 0.78, 0.96];
