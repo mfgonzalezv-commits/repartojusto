@@ -544,7 +544,6 @@
     <div class="topbar-right">
       <span id="turno-timer" style="display:none;font-size:11px;color:var(--teal-mid);font-weight:600;background:#2d2d2a;padding:4px 10px;border-radius:20px"></span>
       <button onclick="document.getElementById('wizard').style.display='block'" style="background:#334155;color:#fff;border:none;border-radius:20px;padding:6px 10px;font-size:12px;cursor:pointer" title="Configurar notificaciones">⚙️</button>
-      <button id="btn-sonido" onclick="activarSonido()" style="background:#DC2626;color:#fff;border:none;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">🔇 Activar sonido</button>
       <div class="switch-wrap">
         <span class="switch-label" id="switch-label">Offline</span>
         <label class="switch">
@@ -1019,15 +1018,12 @@ function activarSonido() {
 }
 
 function _btnSonidoOn() {
-  const btn = document.getElementById('btn-sonido');
-  if (btn) { btn.textContent = '🔔 Sonido ON'; btn.style.background = '#16a34a'; btn.onclick = null; btn.style.cursor = 'default'; }
+  // Sonido integrado en toggle Online — nada que actualizar
 }
 
 // Al volver a la app desde otra pantalla, reactivar audio con el primer toque
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible' && localStorage.getItem('rj_sonido_on') === '1' && !audioDesbloqueado) {
-    const btn = document.getElementById('btn-sonido');
-    if (btn) { btn.textContent = '🔔 Toca aquí'; btn.style.background = '#f59e0b'; btn.onclick = activarSonido; btn.style.cursor = 'pointer'; }
     document.addEventListener('touchstart', function _reactivar() {
       activarSonido();
       document.removeEventListener('touchstart', _reactivar);
@@ -1373,8 +1369,8 @@ $('toggle-disponible').addEventListener('change', async (e) => {
   label.textContent = disponible ? 'Online' : 'Offline';
   label.className = disponible ? 'switch-label on' : 'switch-label';
 
-  // Inicializar audio ANTES de cualquier await — Chrome solo acepta gesto síncrono
-  if (disponible) iniciarAudioCtx();
+  // Activar audio y push ANTES de cualquier await — Chrome solo acepta gesto síncrono
+  if (disponible) activarSonido();
 
   try {
     const pos = await getCurrentPos().catch(err => { toast('⚠️ GPS: ' + (err.message || err.code), 'error'); return null; });
