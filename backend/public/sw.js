@@ -1,7 +1,7 @@
 // Service Worker — Reparto Justo Rider PWA
-// v4 — audio element + push notifications
+// v5 — historial agrupado por fecha
 
-const CACHE = 'rj-rider-v4';
+const CACHE = 'rj-rider-v5';
 const PRECACHE = ['/rider.html', '/manifest-rider.json', '/alarma.wav'];
 
 // ── Instalación ───────────────────────────────────────────────────────────────
