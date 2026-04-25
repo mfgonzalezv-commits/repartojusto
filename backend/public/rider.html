@@ -1907,30 +1907,78 @@ $('btn-refresh-dis').addEventListener('click', () => { if (disponible) cargarDis
 // ══════════ HISTORIAL ══════════
 async function cargarHistorial() {
   try {
-    const data = await apiFetch('/riders/pedidos?estado=entregado&limit=30');
+    const data = await apiFetch('/riders/pedidos?estado=entregado&limit=100');
     const container = $('lista-historial');
     if (!data.length) {
       container.innerHTML = '<div class="empty"><div class="empty-icon">📋</div><div class="empty-text">Sin entregas aún</div></div>';
       return;
     }
-    container.innerHTML = data.map(p => {
-      const durMin = (p.retiro_at && p.entregado_at)
-        ? Math.max(0, Math.round((new Date(p.entregado_at) - new Date(p.retiro_at)) / 60000))
-        : null;
+
+    // Agrupar por fecha local
+    const grupos = {};
+    data.forEach(p => {
+      const fecha = new Date(p.entregado_at || p.created_at);
+      const key = fecha.toLocaleDateString('es-CL', { timeZone: 'America/Santiago', year: 'numeric', month: '2-digit', day: '2-digit' });
+      if (!grupos[key]) grupos[key] = [];
+      grupos[key].push(p);
+    });
+
+    const fmtFechaLabel = key => {
+      const hoy = new Date().toLocaleDateString('es-CL', { timeZone: 'America/Santiago', year: 'numeric', month: '2-digit', day: '2-digit' });
+      const ayer = new Date(Date.now() - 86400000).toLocaleDateString('es-CL', { timeZone: 'America/Santiago', year: 'numeric', month: '2-digit', day: '2-digit' });
+      if (key === hoy) return 'Hoy';
+      if (key === ayer) return 'Ayer';
+      const [d, m, y] = key.split('-');
+      return new Date(`${y}-${m}-${d}`).toLocaleDateString('es-CL', { weekday: 'long', day: 'numeric', month: 'long' });
+    };
+
+    container.innerHTML = Object.entries(grupos).map(([key, pedidos]) => {
+      const totalDia = pedidos.reduce((s, p) => s + (p.tarifa_entrega || 0), 0);
+      const id = 'hd-' + key.replace(/\//g, '-');
+      const detalles = pedidos.map(p => {
+        const durMin = (p.retiro_at && p.entregado_at)
+          ? Math.max(0, Math.round((new Date(p.entregado_at) - new Date(p.retiro_at)) / 60000))
+          : null;
+        const hora = new Date(p.entregado_at || p.created_at).toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Santiago' });
+        return `
+          <div class="hist-item" style="border-left:3px solid var(--teal-mid);margin-left:8px;padding-left:12px">
+            <div class="hist-left">
+              <div class="hist-negocio">${p.nombre_comercial}</div>
+              <div class="hist-dir">${p.direccion_entrega}</div>
+              ${durMin !== null ? `<div style="font-size:11px;color:var(--teal-mid);margin-top:2px;font-weight:500">⏱ ${durMin} min · ${p.distancia_km ?? '?'} km</div>` : ''}
+            </div>
+            <div class="hist-right">
+              <div class="hist-tarifa">${fmt(p.tarifa_entrega)}</div>
+              <div class="hist-fecha">${hora}</div>
+            </div>
+          </div>`;
+      }).join('');
+
       return `
-        <div class="hist-item">
-          <div class="hist-left">
-            <div class="hist-negocio">${p.nombre_comercial}</div>
-            <div class="hist-dir">${p.direccion_entrega}</div>
-            ${durMin !== null ? `<div style="font-size:11px;color:var(--teal-mid);margin-top:2px;font-weight:500">⏱ ${durMin} min · ${p.distancia_km} km</div>` : ''}
+        <div style="margin-bottom:8px;background:#1e2d3d;border-radius:10px;overflow:hidden">
+          <div onclick="toggleHistDia('${id}')" style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;cursor:pointer;user-select:none">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:#e2e8f0">${fmtFechaLabel(key)}</div>
+              <div style="font-size:11px;color:#94a3b8;margin-top:2px">${pedidos.length} entrega${pedidos.length > 1 ? 's' : ''}</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:15px;font-weight:800;color:var(--teal-mid)">${fmt(totalDia)}</div>
+              <div id="${id}-chevron" style="font-size:11px;color:#94a3b8;text-align:right;margin-top:2px">▼ ver detalle</div>
+            </div>
           </div>
-          <div class="hist-right">
-            <div class="hist-tarifa">${fmt(p.tarifa_entrega)}</div>
-            <div class="hist-fecha">${timeAgo(p.entregado_at || p.created_at)}</div>
-          </div>
+          <div id="${id}" style="display:none">${detalles}</div>
         </div>`;
     }).join('');
+
   } catch (e) { toast(e.message, 'error'); }
+}
+
+function toggleHistDia(id) {
+  const el = document.getElementById(id);
+  const chevron = document.getElementById(id + '-chevron');
+  const abierto = el.style.display !== 'none';
+  el.style.display = abierto ? 'none' : 'block';
+  if (chevron) chevron.textContent = abierto ? '▼ ver detalle' : '▲ ocultar';
 }
 
 // ══════════ PERFIL ══════════
