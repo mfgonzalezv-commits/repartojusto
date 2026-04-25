@@ -1,8 +1,8 @@
 // Service Worker — Reparto Justo Rider PWA
 // v5 — historial agrupado por fecha
 
-const CACHE = 'rj-rider-v5';
-const PRECACHE = ['/rider.html', '/manifest-rider.json', '/alarma.wav'];
+const CACHE = 'rj-rider-v6';
+const PRECACHE = ['/manifest-rider.json', '/alarma.wav'];
 
 // ── Instalación ───────────────────────────────────────────────────────────────
 self.addEventListener('install', (e) => {
