@@ -130,7 +130,9 @@ iniciarScheduler(io);
 
 // Iniciar servidor
 const PORT = config.PORT;
-server.listen(PORT, '0.0.0.0', () => {
+server.listen(PORT, '0.0.0.0', async () => {
+  // Migrar DB en segundo plano para no bloquear el health check
+  try { await require('./scripts/migrate')(); } catch (e) { console.error('Migrate error:', e.message); }
   const { networkInterfaces } = require('os');
   const nets = networkInterfaces();
   let localIP = 'localhost';

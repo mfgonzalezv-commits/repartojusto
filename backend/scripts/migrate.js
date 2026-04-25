@@ -237,11 +237,16 @@ async function migrate() {
     console.log('\n✅ Migraciones completadas.');
   } finally {
     client.release();
-    await pool.end();
+    if (require.main === module) await pool.end();
   }
 }
 
-migrate().catch(err => {
-  console.error('\n❌ Error en migración:', err.message);
-  process.exit(1);
+if (require.main === module) {
+  migrate().catch(err => {
+    console.error('\n❌ Error en migración:', err.message);
+    process.exit(1);
+  });
+}
+
+module.exports = migrate;
 });
