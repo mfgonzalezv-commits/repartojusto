@@ -1,8 +1,14 @@
 const router = require('express').Router();
-const Anthropic = require('@anthropic-ai/sdk');
 const { auth } = require('../middleware/auth');
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+let client = null;
+function getClient() {
+  if (!client) {
+    const Anthropic = require('@anthropic-ai/sdk');
+    client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  }
+  return client;
+}
 
 const SISTEMA_NEGOCIO = `Eres el asistente de soporte de RepartoJusto, una plataforma de delivery chilena sin comisiones por venta.
 Estás ayudando a un NEGOCIO (restaurante, tienda, etc.) que usa la plataforma para despachar pedidos.
@@ -46,7 +52,7 @@ router.post('/', auth, async (req, res, next) => {
       { role: 'user', content: mensaje }
     ];
 
-    const response = await client.messages.create({
+    const response = await getClient().messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 300,
       system: sistema,
