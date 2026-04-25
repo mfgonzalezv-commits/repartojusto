@@ -371,16 +371,12 @@
       </div>
     </div>
 
-    <!-- Paso 3: Notificaciones flotantes Xiaomi -->
+    <!-- Paso 3: Notificaciones flotantes — instrucciones por marca -->
     <div class="wz-paso" id="wz-flotante">
       <div class="wz-icon" id="wz-flotante-icon">📱</div>
       <div style="flex:1">
-        <div class="wz-titulo">Activar banner emergente (Xiaomi)</div>
-        <div class="wz-desc">
-          1. Mantén presionado el ícono de <b>Chrome</b> → <b>Info de la app</b><br>
-          2. Toca <b>Notificaciones</b> → activa <b>"Mostrar en pantalla"</b><br>
-          3. Vuelve atrás → <b>Batería</b> → selecciona <b>"Sin restricciones"</b>
-        </div>
+        <div class="wz-titulo" id="wz-flotante-titulo">Activar banner emergente</div>
+        <div class="wz-desc" id="wz-flotante-desc">Cargando instrucciones para tu teléfono…</div>
         <button class="wz-btn" onclick="wizCheckFlotante()">Ya lo configuré ✓</button>
       </div>
     </div>
@@ -543,7 +539,7 @@
     <div class="topbar-brand"><img src="/logo-rj.jpg" style="height:26px;border-radius:4px;vertical-align:middle;margin-right:7px">RJ Rider</div>
     <div class="topbar-right">
       <span id="turno-timer" style="display:none;font-size:11px;color:var(--teal-mid);font-weight:600;background:#2d2d2a;padding:4px 10px;border-radius:20px"></span>
-      <button onclick="document.getElementById('wizard').style.display='block'" style="background:#334155;color:#fff;border:none;border-radius:20px;padding:6px 10px;font-size:12px;cursor:pointer" title="Configurar notificaciones">⚙️</button>
+      <button onclick="abrirWizard()" style="background:#334155;color:#fff;border:none;border-radius:20px;padding:6px 10px;font-size:12px;cursor:pointer" title="Configurar notificaciones">⚙️</button>
       <div class="switch-wrap">
         <span class="switch-label" id="switch-label">Offline</span>
         <label class="switch">
@@ -2173,15 +2169,98 @@ async function wizPedirGPS() {
   }
 }
 
+function abrirWizard() {
+  rellenarInstruccionesFlotante();
+  // Re-verificar estado actual de permisos
+  const notifOk = Notification.permission === 'granted';
+  const sonidoOk = audioDesbloqueado;
+  const isPWA = window.matchMedia('(display-mode: standalone)').matches;
+  if (isPWA) wizCheck('pwa', true);
+  if (notifOk) wizCheck('notif', true);
+  if (localStorage.getItem('rj_flotante_ok') === '1') wizCheck('flotante', true);
+  if (sonidoOk) wizCheck('sonido', true);
+  document.getElementById('wizard').style.display = 'block';
+}
+
 function wizFinalizar() {
   localStorage.setItem(WZ_KEY, '1');
   document.getElementById('wizard').style.display = 'none';
+}
+
+function detectarMarcaTelefono() {
+  const ua = navigator.userAgent;
+  if (/MIUI|MiuiBrowser|Xiaomi|Redmi|POCO/i.test(ua)) return 'xiaomi';
+  if (/Samsung|SM-[A-Z]/i.test(ua)) return 'samsung';
+  if (/Huawei|HMSCore|EMUI/i.test(ua)) return 'huawei';
+  if (/OPPO|CPH\d|Realme/i.test(ua)) return 'oppo';
+  if (/Android/i.test(ua)) return 'android';
+  return 'otro';
+}
+
+function rellenarInstruccionesFlotante() {
+  const marca = detectarMarcaTelefono();
+  const titulo = document.getElementById('wz-flotante-titulo');
+  const desc   = document.getElementById('wz-flotante-desc');
+  if (!titulo || !desc) return;
+
+  const instrucciones = {
+    xiaomi: {
+      titulo: 'Activar banner emergente (Xiaomi/Redmi)',
+      pasos: [
+        'Mantén presionado el ícono de <b>Chrome</b> → <b>Info de la app</b>',
+        'Toca <b>Notificaciones</b> → activa <b>"Mostrar en pantalla"</b> y <b>"Notificaciones flotantes"</b>',
+        'Vuelve atrás → toca <b>Batería</b> → selecciona <b>"Sin restricciones"</b>',
+        'En <b>Ajustes → Batería</b>, busca Chrome y desactiva el ahorro de batería'
+      ]
+    },
+    samsung: {
+      titulo: 'Activar banner emergente (Samsung)',
+      pasos: [
+        'Ve a <b>Ajustes → Aplicaciones → Chrome</b>',
+        'Toca <b>Notificaciones</b> → activa <b>"Mostrar como emergente"</b>',
+        'Ve a <b>Ajustes → Cuidado del dispositivo → Batería</b>',
+        'Busca Chrome → selecciona <b>"Sin restricciones"</b>'
+      ]
+    },
+    huawei: {
+      titulo: 'Activar banner emergente (Huawei)',
+      pasos: [
+        'Ve a <b>Ajustes → Aplicaciones → Chrome</b>',
+        'Toca <b>Notificaciones</b> → activa <b>"Notificaciones con banner"</b>',
+        'Ve a <b>Ajustes → Batería → Inicio de aplicaciones</b>',
+        'Busca Chrome → desactiva la gestión automática y activa las 3 opciones manualmente'
+      ]
+    },
+    oppo: {
+      titulo: 'Activar banner emergente (OPPO/Realme)',
+      pasos: [
+        'Ve a <b>Ajustes → Aplicaciones → Chrome</b>',
+        'Toca <b>Notificaciones → Notificaciones de aplicación</b>',
+        'Activa <b>"Pantalla flotante"</b> o <b>"Banner"</b>',
+        'Ve a <b>Ajustes → Batería → Optimización de batería</b> → desactiva para Chrome'
+      ]
+    },
+    android: {
+      titulo: 'Activar banner emergente',
+      pasos: [
+        'Mantén presionado el ícono de <b>Chrome</b> → toca <b>ⓘ</b> o <b>"Info de la app"</b>',
+        'Toca <b>Notificaciones</b> → activa <b>"Mostrar notificaciones"</b> y el banner o emergente',
+        'Ve a <b>Ajustes del teléfono → Batería</b> → busca Chrome y desactiva la optimización',
+        'Si Chrome está en <b>segundo plano</b>, asegúrate de que no lo cierre automáticamente'
+      ]
+    }
+  };
+
+  const info = instrucciones[marca] || instrucciones.android;
+  titulo.textContent = info.titulo;
+  desc.innerHTML = info.pasos.map((p, i) => `${i+1}. ${p}`).join('<br>');
 }
 
 function mostrarWizardSiNecesario() {
   const hecho = localStorage.getItem(WZ_KEY);
   const notifOk = Notification.permission === 'granted';
   const sonidoOk = localStorage.getItem('rj_sonido_on') === '1';
+  rellenarInstruccionesFlotante();
   // Mostrar wizard si no se completó antes o faltan permisos críticos
   if (!hecho || !notifOk || !sonidoOk) {
     document.getElementById('wizard').style.display = 'block';
