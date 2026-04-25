@@ -1,13 +1,36 @@
 const router = require('express').Router();
+const https = require('https');
 const { auth } = require('../middleware/auth');
 
-let client = null;
-function getClient() {
-  if (!client) {
-    const Anthropic = require('@anthropic-ai/sdk');
-    client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  }
-  return client;
+function llamarClaude(system, messages) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 300,
+      system,
+      messages,
+    });
+    const req = https.request({
+      hostname: 'api.anthropic.com',
+      path: '/v1/messages',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'Content-Length': Buffer.byteLength(body),
+      },
+    }, res => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try { resolve(JSON.parse(data)); } catch (e) { reject(e); }
+      });
+    });
+    req.on('error', reject);
+    req.write(body);
+    req.end();
+  });
 }
 
 const SISTEMA_NEGOCIO = `Eres el asistente de soporte de RepartoJusto, una plataforma de delivery chilena sin comisiones por venta.
@@ -52,13 +75,8 @@ router.post('/', auth, async (req, res, next) => {
       { role: 'user', content: mensaje }
     ];
 
-    const response = await getClient().messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 300,
-      system: sistema,
-      messages,
-    });
-
+    const response = await llamarClaude(sistema, messages);
+    if (response.error) return res.status(500).json({ error: response.error.message });
     res.json({ respuesta: response.content[0].text });
   } catch (err) { next(err); }
 });
