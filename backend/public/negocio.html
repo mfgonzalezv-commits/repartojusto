@@ -2485,5 +2485,115 @@ $('buscar-cliente').addEventListener('input', e => {
 
 <!-- Socket.io client (se carga desde el servidor) -->
 <script src="/socket.io/socket.io.js"></script>
+
+<!-- ── SOPORTE CHAT ──────────────────────────────────────────── -->
+<style>
+  #soporte-btn {
+    position: fixed; bottom: 24px; right: 24px; z-index: 9000;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--amarillo); color: var(--negro);
+    border: none; font-size: 22px; cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .2s;
+  }
+  #soporte-btn:hover { transform: scale(1.08); }
+  #soporte-box {
+    position: fixed; bottom: 86px; right: 24px; z-index: 9000;
+    width: 320px; background: white; border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    display: none; flex-direction: column; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  #soporte-box.open { display: flex; }
+  .soporte-header {
+    background: var(--negro); color: white;
+    padding: 12px 16px; font-size: 14px; font-weight: 700;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .soporte-header span { font-size: 12px; color: #aaa; font-weight: 400; }
+  #soporte-msgs {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 8px;
+    max-height: 320px; min-height: 120px;
+  }
+  .msg-user {
+    align-self: flex-end; background: var(--amarillo);
+    color: var(--negro); padding: 8px 12px; border-radius: 12px 12px 2px 12px;
+    font-size: 13px; max-width: 80%;
+  }
+  .msg-bot {
+    align-self: flex-start; background: #f4f4f4;
+    color: #222; padding: 8px 12px; border-radius: 12px 12px 12px 2px;
+    font-size: 13px; max-width: 80%;
+  }
+  .soporte-input-row {
+    display: flex; gap: 6px; padding: 10px 12px;
+    border-top: 1px solid var(--border);
+  }
+  #soporte-input {
+    flex: 1; border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 10px; font-size: 13px; font-family: inherit;
+    outline: none;
+  }
+  #soporte-send {
+    background: var(--amarillo); border: none; border-radius: 8px;
+    padding: 8px 12px; cursor: pointer; font-size: 16px;
+    color: var(--negro);
+  }
+</style>
+
+<button id="soporte-btn" onclick="toggleSoporte()" title="Soporte">💬</button>
+<div id="soporte-box">
+  <div class="soporte-header">
+    🤖 Asistente RepartoJusto
+    <span>Responde al instante</span>
+  </div>
+  <div id="soporte-msgs">
+    <div class="msg-bot">Hola 👋 ¿En qué te puedo ayudar?</div>
+  </div>
+  <div class="soporte-input-row">
+    <input id="soporte-input" type="text" placeholder="Escribe tu consulta..." onkeydown="if(event.key==='Enter')enviarSoporte()">
+    <button id="soporte-send" onclick="enviarSoporte()">➤</button>
+  </div>
+</div>
+
+<script>
+let soporteHistorial = [];
+
+function toggleSoporte() {
+  const box = document.getElementById('soporte-box');
+  box.classList.toggle('open');
+  if (box.classList.contains('open')) document.getElementById('soporte-input').focus();
+}
+
+async function enviarSoporte() {
+  const input = document.getElementById('soporte-input');
+  const msgs = document.getElementById('soporte-msgs');
+  const texto = input.value.trim();
+  if (!texto) return;
+
+  input.value = '';
+  msgs.innerHTML += `<div class="msg-user">${texto}</div>`;
+  msgs.innerHTML += `<div class="msg-bot" id="soporte-typing">...</div>`;
+  msgs.scrollTop = msgs.scrollHeight;
+
+  soporteHistorial.push({ rol: 'user', contenido: texto });
+
+  try {
+    const data = await apiFetch('/soporte', {
+      method: 'POST',
+      body: JSON.stringify({ mensaje: texto, historial: soporteHistorial })
+    });
+    document.getElementById('soporte-typing').remove();
+    msgs.innerHTML += `<div class="msg-bot">${data.respuesta}</div>`;
+    soporteHistorial.push({ rol: 'assistant', contenido: data.respuesta });
+  } catch(e) {
+    document.getElementById('soporte-typing').remove();
+    msgs.innerHTML += `<div class="msg-bot">Error al contactar soporte. Intenta de nuevo.</div>`;
+  }
+  msgs.scrollTop = msgs.scrollHeight;
+}
+</script>
 </body>
 </html>

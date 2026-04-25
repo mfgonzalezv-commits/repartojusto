@@ -23,7 +23,8 @@
     "redis": "^4.6.11",
     "socket.io": "^4.7.2",
     "uuid": "^9.0.1",
-    "web-push": "^3.6.7"
+    "web-push": "^3.6.7",
+    "@anthropic-ai/sdk": "^0.30.0"
   },
   "devDependencies": {
     "jest": "^29.7.0",
