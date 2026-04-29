@@ -21,8 +21,8 @@ router.post('/enviar', auth, solo('admin'), async (req, res) => {
     const { address: smtpIp } = await dnsLookup('smtp.gmail.com', { family: 4 });
     const transporter = nodemailer.createTransport({
       host: smtpIp,
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       tls: { servername: 'smtp.gmail.com' },
       auth: {
         user: process.env.GMAIL_USER,
