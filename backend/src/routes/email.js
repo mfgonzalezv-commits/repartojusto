@@ -1,7 +1,10 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const dns = require('dns');
+const { promisify } = require('util');
 const { auth, solo } = require('../middleware/auth');
 
+const dnsLookup = promisify(dns.lookup);
 const router = express.Router();
 
 // POST /api/email/enviar — solo admin
@@ -14,11 +17,13 @@ router.post('/enviar', auth, solo('admin'), async (req, res) => {
     return res.status(503).json({ error: 'Email no configurado en el servidor' });
   }
   try {
+    // Forzar IPv4: resolver hostname antes de conectar
+    const { address: smtpIp } = await dnsLookup('smtp.gmail.com', { family: 4 });
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
+      host: smtpIp,
       port: 587,
       secure: false,
-      family: 4,
+      tls: { servername: 'smtp.gmail.com' },
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD
