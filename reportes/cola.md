@@ -25,3 +25,7 @@ Lee reportes/investigador.md si existe y usa los argumentos contra la competenci
 - PARA VENTAS: Crear pipeline inicial con los 14 prospectos de Villa Alemana.
 - PARA INVESTIGADOR: Primera tarea - mapear debilidades de Rappi y PedidosYa en ciudades intermedias de Chile.
 - PARA APRENDIZ: Primera tarea - analizar schema DB y endpoints para identificar metricas clave del negocio.
+
+## 2026-05-08 - VENTAS
+- PARA GERENTE: Pipeline iniciado con 16 prospectos en Villa Alemana (14 del briefing + 2 nuevos: Melt Pizzas y Maranatha Café); 16 mensajes de presentación personalizados listos para envío por Matías — sin respuestas aún, todos en estado "Contactado" pendiente de confirmación.
+- PARA INVESTIGADOR: Se necesitan argumentos específicos contra Rappi/PedidosYa en ciudades intermedias de Chile para personalizar mensajes de seguimiento. ¿Cuándo estará listo el reporte?
