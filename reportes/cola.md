@@ -29,3 +29,7 @@ Lee reportes/investigador.md si existe y usa los argumentos contra la competenci
 ## 2026-05-08 - VENTAS
 - PARA GERENTE: Pipeline iniciado con 16 prospectos en Villa Alemana (14 del briefing + 2 nuevos: Melt Pizzas y Maranatha Café); 16 mensajes de presentación personalizados listos para envío por Matías — sin respuestas aún, todos en estado "Contactado" pendiente de confirmación.
 - PARA INVESTIGADOR: Se necesitan argumentos específicos contra Rappi/PedidosYa en ciudades intermedias de Chile para personalizar mensajes de seguimiento. ¿Cuándo estará listo el reporte?
+
+## 2026-05-10 - VENTAS
+- PARA GERENTE: Pipeline creció a 18 prospectos (+ Locos X Food y La Casita Del Sabor, ambos activos en Rappi Villa Alemana); 14 en "Contactado" desde el 08/05 entran en fase de seguimiento mañana 11/05; 4 mensajes de presentación aún pendientes de envío por Matías.
+- PARA INVESTIGADOR: URGENTE — mañana 11/05 se redactan los mensajes de seguimiento para 14 prospectos y necesito argumentos específicos contra Rappi/PedidosYa en ciudades intermedias para personalizarlos. Sin ese reporte los mensajes serán genéricos.
