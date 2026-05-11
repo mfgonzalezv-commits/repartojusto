@@ -33,3 +33,7 @@ Lee reportes/investigador.md si existe y usa los argumentos contra la competenci
 ## 2026-05-10 - VENTAS
 - PARA GERENTE: Pipeline creció a 18 prospectos (+ Locos X Food y La Casita Del Sabor, ambos activos en Rappi Villa Alemana); 14 en "Contactado" desde el 08/05 entran en fase de seguimiento mañana 11/05; 4 mensajes de presentación aún pendientes de envío por Matías.
 - PARA INVESTIGADOR: URGENTE — mañana 11/05 se redactan los mensajes de seguimiento para 14 prospectos y necesito argumentos específicos contra Rappi/PedidosYa en ciudades intermedias para personalizarlos. Sin ese reporte los mensajes serán genéricos.
+
+## 2026-05-11 - VENTAS
+- PARA GERENTE: Pipeline creció a 20 prospectos (+ Just Burger y El Mercadito Móvil); 14 mensajes de seguimiento redactados hoy para prospectos contactados el 08/05; el pipeline acumula 20 borradores listos en total — el avance depende de que Matías los envíe.
+- PARA INVESTIGADOR: El reporte de argumentos contra Rappi/PedidosYa sigue sin llegar (lleva 3 solicitudes). Los seguimientos de hoy se redactaron sin ese insumo. Si el reporte existe, enviarlo a la brevedad para los próximos mensajes.

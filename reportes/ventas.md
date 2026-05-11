@@ -1,41 +1,57 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-05-10
-**Pipeline total:** 18 prospectos
-**Por estado:** Nuevos: 4 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-05-11
+**Pipeline total:** 20 prospectos
+**Por estado:** Nuevos: 6 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
-- Revisé cola.md: el Investigador aún no ha entregado su reporte (investigador.md no existe). Se mantiene el pedido en cola.
-- Revisé pipeline: 14 prospectos en "Contactado" desde 2026-05-08 (2 días). No cumplen aún los 3 días para seguimiento — se accionan mañana 2026-05-11.
-- Prospectos en "Nuevo": Melt Pizzas y Maranatha Café tienen mensajes de presentación listos desde el 2026-05-08. Se mantienen en borradores pendientes de envío por Matías.
-- Búsqueda de nuevos prospectos: encontré 2 negocios activos en Rappi Villa Alemana — Locos X Food y La Casita Del Sabor. Ambos ya hacen delivery, candidatos ideales para el argumento de ahorro en comisiones.
-- Redacté mensajes de presentación personalizados para los 2 nuevos prospectos y los agregué al pipeline.
+- Revisé cola.md: el Investigador aún no entregó su reporte (investigador.md no existe). Se mantiene el pedido desde el 10/05 como URGENTE.
+- Los 14 prospectos contactados el 2026-05-08 cumplieron 3 días sin respuesta hoy. Se redactaron 14 mensajes de seguimiento personalizados por rubro, listos para que Matías los envíe.
+- Los 4 borradores de presentación para #15-18 (Melt Pizzas, Maranatha Café, Locos X Food, La Casita Del Sabor) siguen pendientes de envío por Matías desde el 08/05 y 10/05.
+- Búsqueda de nuevos prospectos en Villa Alemana: encontré 2 candidatos — Just Burger (Rappi, rating 4.6) y El Mercadito Móvil (frutas/verduras). Ambos agregados al pipeline con mensajes de presentación redactados.
 
 ---
 
 ## Borradores listos para Matías
 
-| # | Negocio | Tipo de mensaje | Urgencia |
-|---|---|---|---|
-| 15 | Melt Pizzas | Presentación | Alta — pendiente desde 2026-05-08 |
-| 16 | Maranatha Café | Presentación | Alta — pendiente desde 2026-05-08 |
-| 17 | Locos X Food | Presentación | Normal — recién agregado hoy |
-| 18 | La Casita Del Sabor | Presentación | Normal — recién agregado hoy |
+### Urgentes — Seguimientos (hoy 2026-05-11)
+14 mensajes de seguimiento personalizados para los prospectos contactados hace 3 días. Todos están en `reportes/prospectos.md`.
 
-**Acción urgente para mañana 2026-05-11:** Los 14 prospectos contactados el 08/05 cumplen 3 días sin respuesta. El agente redactará mensajes de seguimiento para todos en la próxima ejecución diaria.
+| # | Negocio | Tipo | Argumento clave |
+|---|---|---|---|
+| 1 | Fuente de Soda El Rápido | Seguimiento | Ahorro $1.000/pedido vs Rappi |
+| 2 | Pollería Don Pollo | Seguimiento | Ahorro $46.000/mes con 20 pedidos semanales |
+| 3 | Farmacia Cruz Verde | Seguimiento | Autonomía de sucursal local |
+| 4 | Pizza House | Seguimiento | Ahorro $3.360/pedido en pizzas de $12.000 |
+| 5 | Sushi Zen | Seguimiento | Ahorro $300.000+/mes con tickets altos |
+| 6 | Botillería El Copihue | Seguimiento | Ventaja en fines de semana (alta demanda) |
+| 7 | Minimercado La Esquina | Seguimiento | Complemento o primera plataforma |
+| 8 | Pastelería Dulce Hogar | Seguimiento | Riders locales + ahorro $6.500/torta vs Rappi |
+| 9 | Rotisería El Gaucho | Seguimiento | Ahorro de $26.100 diarios en comisiones |
+| 10 | Café El Árbol | Seguimiento | Apertura de segmento delivery con costo mínimo |
+| 11 | Veterinaria Huellitas | Seguimiento | Nicho delivery mascotas en crecimiento |
+| 12 | Librería El Saber | Seguimiento | Pedidos urgentes + peak escolar |
+| 13 | Ferretería Los Maestros | Seguimiento | 10 entregas/semana = solo $5.000 en comisiones |
+| 14 | Heladería Glacial | Seguimiento | Preparación anticipada para verano |
+
+### Pendientes anteriores — Presentaciones (#15-18)
+Redactados entre 08/05 y 10/05. Prioridad alta — llevan 1-3 días sin ser enviados.
+
+### Nuevos hoy — Presentaciones (#19-20)
+- Just Burger (Av. Valparaíso 1057, Villa Alemana) — en Rappi con rating 4.6, prospecto de alta calidad
+- El Mercadito Móvil (Villa Alemana) — nicho diferenciado de frutas y verduras
 
 ---
 
 ## Nuevos prospectos agregados hoy
 
-1. **Locos X Food** — Comida rápida — Villa Alemana — encontrado en Rappi. Ya tiene delivery activo; argumento clave: "cada pedido en Rappi les cuesta ~28% de comisión, con nosotros $500 fijos siempre".
+1. **Just Burger** — Comida rápida — Av. Valparaíso 1057, Villa Alemana — encontrado en Rappi (rating 4.6, +65 opiniones). Alto volumen activo de pedidos; argumento de migración muy fuerte. Nota: verificar si la dirección coincide con Melt Pizzas (#15) o si son negocios distintos.
 
-2. **La Casita Del Sabor** — Comida casera — Villa Alemana — encontrado en Rappi. Misma situación: cliente activo en plataforma cara, sensible al argumento de ahorro directo por pedido.
+2. **El Mercadito Móvil** — Frutas y verduras — Villa Alemana — nicho sin competencia directa en el pipeline. Enfoque: bajo costo de entrada al delivery y demanda creciente de productos frescos a domicilio.
 
 ---
 
 ## Para el Gerente
-
-Pipeline creció a 18 prospectos: 14 contactados (seguimiento arranca mañana 11/05), 4 en "Nuevo" con mensajes listos; el reporte del Investigador sigue sin llegar y bloquea personalización de mensajes de seguimiento con argumentos específicos contra Rappi/PedidosYa en ciudades intermedias.
+Pipeline de 20 prospectos: 14 en "Contactado" con 14 seguimientos redactados hoy, 6 en "Nuevo" con mensajes de presentación pendientes de envío — el avance del pipeline depende de que Matías envíe los borradores acumulados; el reporte del Investigador sigue sin llegar y es necesario para personalizar mensajes futuros.
