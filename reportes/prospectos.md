@@ -181,4 +181,4 @@
 
 **Just Burger (agregado 2026-05-11):** Encontrado en Rappi (Av. Valparaíso 1057, Villa Alemana). Rating 4.6 sobre más de 65 opiniones. Alta calificación indica volumen activo de pedidos — ahorro por migración muy significativo. Dirección coincide con Melt Pizzas (#15) — confirmar si es correcto o si comparten local.
 
-**El Mercadito Móvil (agregado 2026-05-11):** Delivery de frutas y verduras frescas en Villa Alemana. Nicho diferenciado, sin competencia directa en nuestra plataforma. Puede no estar en Rappi/PedidosYa — argumento de costo de entrada mínimo vs. cero delivery. Verificar presencia en otras apps antes de contactar.
+**El Mercadito Móvil (agregado 2026-05-11):** Delivery de frutas y verduras frescas en Villa Alemana. Nicho diferenciado, sin competencia directa en el pipeline. Puede no estar en Rappi/PedidosYa — argumento de costo de entrada mínimo vs. cero delivery. Verificar presencia en otras apps antes de contactar.
