@@ -1,57 +1,54 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-05-11
-**Pipeline total:** 20 prospectos
-**Por estado:** Nuevos: 6 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-05-14
+**Pipeline total:** 22 prospectos
+**Por estado:** Nuevos: 8 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
-- Revisé cola.md: el Investigador aún no entregó su reporte (investigador.md no existe). Se mantiene el pedido desde el 10/05 como URGENTE.
-- Los 14 prospectos contactados el 2026-05-08 cumplieron 3 días sin respuesta hoy. Se redactaron 14 mensajes de seguimiento personalizados por rubro, listos para que Matías los envíe.
-- Los 4 borradores de presentación para #15-18 (Melt Pizzas, Maranatha Café, Locos X Food, La Casita Del Sabor) siguen pendientes de envío por Matías desde el 08/05 y 10/05.
-- Búsqueda de nuevos prospectos en Villa Alemana: encontré 2 candidatos — Just Burger (Rappi, rating 4.6) y El Mercadito Móvil (frutas/verduras). Ambos agregados al pipeline con mensajes de presentación redactados.
+- Revisé cola.md: no hay reporte del Investigador disponible (investigador.md sigue sin existir). Los mensajes de seguimiento del 11/05 se redactaron sin argumentos específicos contra la competencia.
+- Los 14 prospectos "Contactado" llevan 6 días desde el primer contacto (08/05). Los seguimientos redactados el 11/05 siguen en cola de borradores sin confirmación de envío. Se redactó una segunda ola de mensajes más directos y con cálculo de ahorro concreto para los 4 negocios con mayor potencial (Pollería Don Pollo, Pizza House, Sushi Zen, Rotisería El Gaucho).
+- Los 6 prospectos "Nuevo" (#15-20) con borradores del 10/05 y 11/05 siguen pendientes de primer contacto.
+- Búsqueda de nuevos prospectos en Villa Alemana: se encontraron 2 candidatos activos en delivery — Maju Sushi & Burger y Sushi Point Delivery. Ambos agregados al pipeline (#21 y #22) con mensajes de presentación redactados.
 
 ---
 
 ## Borradores listos para Matías
 
-### Urgentes — Seguimientos (hoy 2026-05-11)
-14 mensajes de seguimiento personalizados para los prospectos contactados hace 3 días. Todos están en `reportes/prospectos.md`.
+### PRIORIDAD ALTA — hoy (2026-05-14)
+4 mensajes de 2ª ola para prospectos contactados el 08/05 sin respuesta + 2 presentaciones nuevas:
 
 | # | Negocio | Tipo | Argumento clave |
 |---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Seguimiento | Ahorro $1.000/pedido vs Rappi |
-| 2 | Pollería Don Pollo | Seguimiento | Ahorro $46.000/mes con 20 pedidos semanales |
-| 3 | Farmacia Cruz Verde | Seguimiento | Autonomía de sucursal local |
-| 4 | Pizza House | Seguimiento | Ahorro $3.360/pedido en pizzas de $12.000 |
-| 5 | Sushi Zen | Seguimiento | Ahorro $300.000+/mes con tickets altos |
-| 6 | Botillería El Copihue | Seguimiento | Ventaja en fines de semana (alta demanda) |
-| 7 | Minimercado La Esquina | Seguimiento | Complemento o primera plataforma |
-| 8 | Pastelería Dulce Hogar | Seguimiento | Riders locales + ahorro $6.500/torta vs Rappi |
-| 9 | Rotisería El Gaucho | Seguimiento | Ahorro de $26.100 diarios en comisiones |
-| 10 | Café El Árbol | Seguimiento | Apertura de segmento delivery con costo mínimo |
-| 11 | Veterinaria Huellitas | Seguimiento | Nicho delivery mascotas en crecimiento |
-| 12 | Librería El Saber | Seguimiento | Pedidos urgentes + peak escolar |
-| 13 | Ferretería Los Maestros | Seguimiento | 10 entregas/semana = solo $5.000 en comisiones |
-| 14 | Heladería Glacial | Seguimiento | Preparación anticipada para verano |
+| 2 | Pollería Don Pollo | 2ª Seguimiento | Ahorro $46.000/mes con 20 pedidos semanales |
+| 4 | Pizza House | 2ª Seguimiento | Ahorro $25.740/mes con 3 pizzas/día delivery |
+| 5 | Sushi Zen | 2ª Seguimiento | Ahorro $200.000+/mes con 10 pedidos semanales $20k |
+| 9 | Rotisería El Gaucho | 2ª Seguimiento | Ahorro $522.000/mes con 10 pedidos diarios |
+| 21 | Maju Sushi & Burger | Presentación | Ahorro $3.750/pedido vs comisión Rappi 25% |
+| 22 | Sushi Point Delivery | Presentación | Ahorro $4.540/pedido en pedido de $18.000 |
 
-### Pendientes anteriores — Presentaciones (#15-18)
-Redactados entre 08/05 y 10/05. Prioridad alta — llevan 1-3 días sin ser enviados.
+### PENDIENTES DEL 11/05 — enviar si aún no se enviaron
+10 seguimientos para prospectos #1, 3, 6, 7, 8, 10, 11, 12, 13, 14 listos en prospectos.md.
 
-### Nuevos hoy — Presentaciones (#19-20)
-- Just Burger (Av. Valparaíso 1057, Villa Alemana) — en Rappi con rating 4.6, prospecto de alta calidad
-- El Mercadito Móvil (Villa Alemana) — nicho diferenciado de frutas y verduras
+### PENDIENTES DEL 10-11/05 — prospectos Nuevo sin primer contacto
+Presentaciones para: #15 Melt Pizzas, #16 Maranatha Café, #17 Locos X Food, #18 La Casita Del Sabor, #19 Just Burger, #20 El Mercadito Móvil.
 
 ---
 
 ## Nuevos prospectos agregados hoy
 
-1. **Just Burger** — Comida rápida — Av. Valparaíso 1057, Villa Alemana — encontrado en Rappi (rating 4.6, +65 opiniones). Alto volumen activo de pedidos; argumento de migración muy fuerte. Nota: verificar si la dirección coincide con Melt Pizzas (#15) o si son negocios distintos.
+1. **Maju Sushi & Burger** — Sushi y hamburguesas — Villa Alemana — encontrado en plataformas de delivery online. Combo que funciona bien en delivery; sensible al argumento de comisiones si ya está en Rappi/PedidosYa.
 
-2. **El Mercadito Móvil** — Frutas y verduras — Villa Alemana — nicho sin competencia directa en el pipeline. Enfoque: bajo costo de entrada al delivery y demanda creciente de productos frescos a domicilio.
+2. **Sushi Point Delivery** — Sushi / japonesa — Villa Alemana — negocio delivery-first, particularmente sensible al costo por pedido ya que todo su volumen pasa por plataformas.
+
+---
+
+## Alerta operativa
+
+El pipeline acumula 28 borradores pendientes de envío. Si los mensajes no están siendo enviados, el trabajo de prospección no genera resultado real. Se recomienda establecer con Matías un mecanismo de confirmación de envíos para poder actualizar los estados del pipeline y saber cuándo escalar a 2ª y 3ª ola.
 
 ---
 
 ## Para el Gerente
-Pipeline de 20 prospectos: 14 en "Contactado" con 14 seguimientos redactados hoy, 6 en "Nuevo" con mensajes de presentación pendientes de envío — el avance del pipeline depende de que Matías envíe los borradores acumulados; el reporte del Investigador sigue sin llegar y es necesario para personalizar mensajes futuros.
+Pipeline en 22 prospectos con 14 en "Contactado" desde el 08/05; 28 borradores acumulados listos para envío — el cuello de botella es la confirmación de envíos por Matías, sin la cual el pipeline no puede avanzar de estado ni medirse el alcance real.

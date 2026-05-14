@@ -1,33 +1,77 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-05-11
+**Actualizado:** 2026-05-14
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Seguimiento redactado 2026-05-11 |
-| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación pendiente de envío |
-| 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación pendiente de envío |
-| 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Presentación pendiente de envío |
-| 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Presentación pendiente de envío |
-| 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 2026-05-11 |
-| 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Presentación redactada 2026-05-11 |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | 2ª ola redactada 2026-05-14 |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | 2ª ola redactada 2026-05-14 |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | 2ª ola redactada 2026-05-14 |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | 2ª ola redactada 2026-05-14 |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Seguimiento 11/05 pendiente envío Matías |
+| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación 10/05 pendiente envío Matías |
+| 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación 10/05 pendiente envío Matías |
+| 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Presentación 10/05 pendiente envío Matías |
+| 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Presentación 10/05 pendiente envío Matías |
+| 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación 11/05 pendiente envío Matías |
+| 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Presentación 11/05 pendiente envío Matías |
+| 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 2026-05-14 |
+| 22 | Sushi Point Delivery | Sushi / japonesa | Villa Alemana | Nuevo | — | Presentación redactada 2026-05-14 |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### 2ª OLA DE SEGUIMIENTO (2026-05-14) — para prospectos contactados el 08/05, 6 días sin respuesta
+
+> Nota para Matías: Los prospectos 1-14 llevan 6 días sin respuesta confirmada. Los seguimientos del 11/05 siguen pendientes de envío. Los mensajes a continuación son una segunda oleada más directa para los 4 negocios con mayor potencial de ahorro. Si los del 11/05 aún no se enviaron, enviar primero esos y omitir estos.
+
+---
+
+**[2] Pollería Don Pollo — 2ª Seguimiento:**
+"Hola, buen día! Les escribimos una última vez desde RepartoJusto. La cuenta es simple: con 20 pedidos semanales de $10.000 promedio, Rappi cobra $56.000 al mes en comisiones. Con nosotros serían $10.000 — una diferencia de $46.000 que se queda en el negocio. Sin contrato, sin costo de registro. El registro toma 10 minutos en repartojusto-production.up.railway.app ¿Lo hacemos juntos esta semana?"
+
+---
+
+**[4] Pizza House — 2ª Seguimiento:**
+"Hola! De RepartoJusto, les dejamos el número final antes de no molestarlos más: si venden 3 pizzas de $12.000 por día en delivery, Rappi les cobra $30.240 al mes en comisiones. Con nosotros son $4.500 — una diferencia de $25.740 que se queda en la caja. Registro gratis, sin contrato. repartojusto-production.up.railway.app ¿Le damos?"
+
+---
+
+**[5] Sushi Zen — 2ª Seguimiento:**
+"Hola! RepartoJusto nuevamente, por última vez por ahora. Un pedido de sushi de $20.000 en Rappi les deja $14.400 (se llevan $5.600). Con nosotros les deja $19.500 — diferencia de $5.100 por pedido. Con 10 pedidos semanales son más de $200.000 al mes que se quedan en el restaurante en vez de irse a la app. Registro gratuito sin contrato: repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — 2ª Seguimiento:**
+"Hola! De RepartoJusto, un último mensaje: si tienen 10 pedidos de delivery diarios a $8.000 promedio, Rappi les cobra cerca de $672.000 al mes en comisiones (28%). Con nosotros eso baja a $150.000. La diferencia de $522.000 mensual es significativa. Sin contrato, registro gratis. ¿5 minutos para conversar? repartojusto-production.up.railway.app"
+
+---
+
+### Mensajes de PRESENTACIÓN — Nuevos de hoy (2026-05-14)
+
+---
+
+**[21] Maju Sushi & Burger — Mensaje de presentación:**
+"Hola, buenos días! Les escribe RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos como restaurante de sushi y hamburguesas — un combo que funciona excelente en delivery. Si están en Rappi o PedidosYa, esas plataformas cobran entre 25% y 30% por cada pedido vendido. Nosotros cobramos $500 fijos, sin importar el monto. Para un combo de $15.000, la diferencia es $3.750 menos de comisión por pedido. Registro completamente gratuito, sin contrato. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[22] Sushi Point Delivery — Mensaje de presentación:**
+"Hola! Les contacta RepartoJusto, nueva plataforma de delivery local en Villa Alemana. Para un negocio especializado en delivery de sushi, la estructura de costos es clave: Rappi y PedidosYa cobran 25-30% de comisión por pedido. Con RepartoJusto pagan $500 fijos, siempre. Para un pedido de sushi de $18.000, con Rappi pierden $5.040 — con nosotros, $500. La diferencia se acumula rápido. Registro gratuito, sin contrato. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
 
 ### Mensajes de SEGUIMIENTO (2026-05-11) — para prospectos contactados el 08/05
 
@@ -127,7 +171,7 @@
 
 ---
 
-### Mensajes de PRESENTACIÓN — Nuevos de hoy (2026-05-11)
+### Mensajes de PRESENTACIÓN — Nuevos de 2026-05-11
 
 ---
 
@@ -145,13 +189,13 @@
 
 **Fuente de Soda El Rápido:** Negocio de comida rápida en zona céntrica de Av. Álvarez. Alto volumen potencial de pedidos pequeños/medianos.
 
-**Pollería Don Pollo:** Pollerías tienen demanda constante, pedidos promedio $8.000-$15.000. Muy sensibles al ahorro en comisiones.
+**Pollería Don Pollo:** Pollerías tienen demanda constante, pedidos promedio $8.000-$15.000. Muy sensibles al ahorro en comisiones. PRIORIDAD: 2ª ola enviada 14/05.
 
 **Farmacia Cruz Verde:** Cadena nacional — puede tener política de delivery propia. Explorar si la sucursal local tiene autonomía para sumarse.
 
-**Pizza House:** Pizza es el rubro estrella en delivery. Si ya está en Rappi/UberEats, el ahorro por pedido es el argumento clave.
+**Pizza House:** Pizza es el rubro estrella en delivery. Si ya está en Rappi/UberEats, el ahorro por pedido es el argumento clave. PRIORIDAD: 2ª ola enviada 14/05.
 
-**Sushi Zen:** Ticket promedio alto ($15.000-$25.000). El ahorro vs. Rappi puede ser de $4.000-$7.000 por pedido.
+**Sushi Zen:** Ticket promedio alto ($15.000-$25.000). El ahorro vs. Rappi puede ser de $4.000-$7.000 por pedido. PRIORIDAD: 2ª ola enviada 14/05.
 
 **Botillería El Copihue:** Demanda de delivery concentrada en fines de semana noche. Explorar disponibilidad de riders en esos horarios.
 
@@ -159,7 +203,7 @@
 
 **Pastelería Dulce Hogar:** Pedidos especiales (tortas de cumpleaños, etc.) son de alto valor. Delivery puntual es crítico.
 
-**Rotisería El Gaucho:** Almuerzo/cena. Horario pico: 12:30-14:30 y 19:30-21:30.
+**Rotisería El Gaucho:** Almuerzo/cena. Horario pico: 12:30-14:30 y 19:30-21:30. PRIORIDAD: 2ª ola enviada 14/05.
 
 **Café El Árbol:** Desayunos y almuerzos. Oportunidad de abrir un segmento nuevo si no tienen delivery activo.
 
@@ -182,3 +226,7 @@
 **Just Burger (agregado 2026-05-11):** Encontrado en Rappi (Av. Valparaíso 1057, Villa Alemana). Rating 4.6 sobre más de 65 opiniones. Alta calificación indica volumen activo de pedidos — ahorro por migración muy significativo. Dirección coincide con Melt Pizzas (#15) — confirmar si es correcto o si comparten local.
 
 **El Mercadito Móvil (agregado 2026-05-11):** Delivery de frutas y verduras frescas en Villa Alemana. Nicho diferenciado, sin competencia directa en el pipeline. Puede no estar en Rappi/PedidosYa — argumento de costo de entrada mínimo vs. cero delivery. Verificar presencia en otras apps antes de contactar.
+
+**Maju Sushi & Burger (agregado 2026-05-14):** Restaurante de sushi y hamburguesas encontrado en plataformas de delivery en Villa Alemana. Combo que funciona bien en delivery. Verificar si está en Rappi/PedidosYa para personalizar el argumento de migración.
+
+**Sushi Point Delivery (agregado 2026-05-14):** Especializado en sushi y comida japonesa con enfoque delivery en Villa Alemana. Al ser delivery-first, son particularmente sensibles a las comisiones por pedido. Verificar plataformas actuales.
