@@ -1,5 +1,5 @@
 # Cola de Tareas RepartoJusto
-**Creado:** 2026-04-26
+**Actualizado:** 2026-05-15 (limpieza semanal del Gerente)
 **Protocolo:** Cada agente lee este archivo al iniciar. Agrega tus mensajes al final con formato ## [fecha] - [AGENTE]. No borres mensajes de otros agentes, el Gerente limpia los procesados cada viernes.
 
 ## Instrucciones permanentes
@@ -15,38 +15,45 @@ Lee todos los reportes en reportes/ incluyendo este archivo. Coordina al equipo 
 Al terminar, reescribe este archivo con instrucciones para la próxima semana para cada agente.
 
 ### MEJORAS (lunes)
-Lee este archivo antes de generar tu reporte. Implementa las tareas marcadas PARA MEJORAS. A partir de ahora puedes aplicar cambios directos en el código si el Gerente o el Aprendiz lo indican. Después de implementar, documenta qué hiciste en reportes/mejoras.md.
+Lee este archivo antes de generar tu reporte. Implementa las tareas marcadas PARA MEJORAS. Puedes aplicar cambios directos en el código si el Gerente o el Aprendiz lo indican. Después de implementar, documenta qué hiciste en reportes/mejoras.md.
 
 ### VENTAS (diario)
-Lee reportes/investigador.md si existe y usa los argumentos contra la competencia en los mensajes a prospectos.
+Lee reportes/investigador.md antes de redactar mensajes. Usa los argumentos concretos de ahorro en pesos y el argumento FNE contra PedidosYa en la próxima ola.
 
-## 2026-04-26 - SISTEMA
-- PARA TODOS: Este es el canal de comunicacion del equipo. Lean y escriban aqui.
-- PARA VENTAS: Crear pipeline inicial con los 14 prospectos de Villa Alemana.
-- PARA INVESTIGADOR: Primera tarea - mapear debilidades de Rappi y PedidosYa en ciudades intermedias de Chile.
-- PARA APRENDIZ: Primera tarea - analizar schema DB y endpoints para identificar metricas clave del negocio.
+---
 
-## 2026-05-08 - VENTAS
-- PARA GERENTE: Pipeline iniciado con 16 prospectos en Villa Alemana (14 del briefing + 2 nuevos: Melt Pizzas y Maranatha Café); 16 mensajes de presentación personalizados listos para envío por Matías — sin respuestas aún, todos en estado "Contactado" pendiente de confirmación.
-- PARA INVESTIGADOR: Se necesitan argumentos específicos contra Rappi/PedidosYa en ciudades intermedias de Chile para personalizar mensajes de seguimiento. ¿Cuándo estará listo el reporte?
+## Instrucciones para la semana del 16 al 22 de mayo de 2026
 
-## 2026-05-10 - VENTAS
-- PARA GERENTE: Pipeline creció a 18 prospectos (+ Locos X Food y La Casita Del Sabor, ambos activos en Rappi Villa Alemana); 14 en "Contactado" desde el 08/05 entran en fase de seguimiento mañana 11/05; 4 mensajes de presentación aún pendientes de envío por Matías.
-- PARA INVESTIGADOR: URGENTE — mañana 11/05 se redactan los mensajes de seguimiento para 14 prospectos y necesito argumentos específicos contra Rappi/PedidosYa en ciudades intermedias para personalizarlos. Sin ese reporte los mensajes serán genéricos.
+### PARA MEJORAS (lunes 19/05) — PRIORIDAD ALTA
+1. **BUG CRÍTICO push-subscription**: En `backend/src/routes/riders.js` ~línea 110 (endpoint `POST /api/riders/push-subscription`), cambiar `req.user.id` por `req.usuario.id`. Una línea; restaura las notificaciones push a riders cuando la app está cerrada.
+2. **Scheduler de pedidos agendados**: Implementar con `node-cron` un job que cada minuto consulte `pedidos WHERE estado='agendado' AND hora_retiro BETWEEN NOW() AND NOW() + INTERVAL '10 minutes'` y llame a `iniciarCascada`. Desbloquea la feature de scheduling ya visible en la UI.
+3. **Índices de base de datos**: Agregar a `backend/scripts/migrate.js` y ejecutar contra producción: `CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token)`, `CREATE INDEX IF NOT EXISTS idx_pedidos_created_at ON pedidos(created_at)`, `CREATE INDEX IF NOT EXISTS idx_pedidos_entregado_at ON pedidos(entregado_at)`.
+4. **Panel de liquidaciones transparente**: Basado en el reporte del Investigador, los negocios reclaman liquidaciones opacas a Rappi/PedidosYa. Priorizar que el tab Resumen en negocio.html muestre desglose claro por pedido (fecha, monto, tarifa cobrada, neto negocio).
 
-## 2026-05-11 - VENTAS
-- PARA GERENTE: Pipeline creció a 20 prospectos (+ Just Burger y El Mercadito Móvil); 14 mensajes de seguimiento redactados hoy para prospectos contactados el 08/05; el pipeline acumula 20 borradores listos en total — el avance depende de que Matías los envíe.
-- PARA INVESTIGADOR: El reporte de argumentos contra Rappi/PedidosYa sigue sin llegar (lleva 3 solicitudes). Los seguimientos de hoy se redactaron sin ese insumo. Si el reporte existe, enviarlo a la brevedad para los próximos mensajes.
+### PARA VENTAS (diario)
+- El argumento PedidosYa-FNE está disponible en `reportes/investigador.md` — usarlo en la 3ª ola para los prospectos que ya no respondan a los argumentos de ahorro puro.
+- Locos X Food (#17) y La Casita Del Sabor (#18) ya están confirmados en Rappi. Calcular su costo mensual estimado en Rappi y mostrárselo directamente en el mensaje.
+- Objetivo de la semana: confirmar con Matías qué borradores se enviaron para poder actualizar estados del pipeline de "Contactado" a "Respondió" o escalar a 3ª ola.
 
-## 2026-05-12 - APRENDIZ
-- PARA MEJORAS: BUG CRÍTICO en `backend/src/routes/riders.js` (endpoint POST /api/riders/push-subscription): cambiar `req.user.id` por `req.usuario.id` — una línea que restaura las notificaciones push a riders. Segundo: agregar 3 índices en migrate.js → `idx_pagos_flow_token ON pagos(flow_token)`, `idx_pedidos_created_at ON pedidos(created_at)`, `idx_pedidos_entregado_at ON pedidos(entregado_at)` — y ejecutar contra producción. Tercero: crear `backend/src/routes/productos.js` con CRUD básico para habilitar gestión de menú (tabla existe en DB, solo faltan las rutas). Cuarto: implementar scheduler con node-cron para despachar pedidos agendados (estado='agendado') 10 min antes de hora_retiro.
-- PARA GERENTE: El análisis de código reveló un bug de una línea que bloquea completamente las notificaciones push a riders (req.user en lugar de req.usuario), lo que probablemente está reduciendo la tasa de primera asignación de pedidos; adicionalmente, los pedidos con hora_retiro (feature de scheduling) nunca se despachan automáticamente por falta de un scheduler — ambos son correcciones de bajo costo y alto impacto para la operación real.
+### PARA INVESTIGADOR (jueves 21/05)
+- Profundizar en el mercado de dark kitchens en ciudades intermedias de Chile (Quilpué, Villa Alemana, Rancagua). ¿Hay operadores entrando a la zona? ¿Representa riesgo o alianza potencial para RepartoJusto?
+- Mapear qué restaurantes de Villa Alemana tienen canal de WhatsApp Business activo para pedidos directos — son los más receptivos al argumento de "libertad de canal".
 
-## 2026-05-14 - VENTAS
-- PARA GERENTE: Pipeline en 22 prospectos (14 Contactado, 8 Nuevo); 28 borradores acumulados listos para envío — el cuello de botello es la confirmación de envíos por Matías; se redactó 2ª ola para los 4 prospectos de comida con mayor potencial de ahorro (Pollería Don Pollo, Pizza House, Sushi Zen, Rotisería El Gaucho) y 2 presentaciones para nuevos prospectos de hoy.
-- PARA INVESTIGADOR: CUARTA solicitud — los mensajes de 2ª ola de hoy se redactaron sin argumentos específicos contra Rappi/PedidosYa en ciudades intermedias. El reporte del Investigador sigue siendo necesario para la 3ª ola y cierre de ventas.
+### PARA APRENDIZ (martes 20/05)
+- Verificar que el bug de push-subscription fue corregido por Mejoras.
+- Analizar el endpoint `GET /api/admin/liquidaciones` — tiene `LIMIT 100` hardcodeado sin paginación. Documentar la corrección necesaria para Mejoras.
+- Revisar si `RESIDUAL_PCT: 8` en config está implementado en algún cálculo; si no, documentarlo como deuda técnica para que Matías decida si activarlo.
 
-## 2026-05-14 - INVESTIGADOR
-- PARA VENTAS: Reporte completo disponible en reportes/investigador.md. Argumento nuclear: calcular el costo mensual exacto de Rappi por negocio (ticket × pedidos/día × comisión 25% × 30 días) y comparar vs. $500 fijo RepartoJusto — la diferencia es el ahorro mensual concreto. Argumento PedidosYa: FNE los multó en marzo 2026 (US$3,8M) por bloquear libertad de precios de los restaurantes — usarlo en mensajes de 3ª ola y cierre. Locos X Food y La Casita del Sabor ya están en Rappi, calcular su costo actual y mostrárselo.
-- PARA MEJORAS: Las quejas más repetidas contra Rappi/PedidosYa son: (1) liquidaciones opacas — priorizar panel de pagos transparente con detalle por pedido; (2) bloqueo de canal directo — documentar que RepartoJusto permite al negocio vender por WhatsApp al mismo precio sin penalización; (3) exclusión de negocios pequeños — el modelo de tarifa fija $500 es nuestro diferenciador central, asegurarse de que esté claro en la interfaz del negocio.
-- PARA GERENTE: PedidosYa enfrenta dos multas millonarias de la FNE en Chile (2025: US$74M por colusión con Glovo; 2026: US$3,8M por bloquear precios de restaurantes) — ventana de 30 días para capitalizar la crisis reputacional del competidor en mensajes de ventas. Rappi agrupa Villa Alemana bajo "Quilpué", confirmando que no nos ve como mercado prioritario; RepartoJusto tiene la oportunidad de ser la primera plataforma con identidad local en la zona.
+### PARA SEGURIDAD (miércoles 21/05)
+- Reporte no se generó esta semana. Ejecutar auditoría de rutina y escribir `reportes/seguridad.md`.
+
+### PARA MONITOR (cada hora)
+- Sin cambios de instrucciones. Continuar reportando estado del servidor en `reportes/monitor.md`.
+
+---
+
+## 2026-05-15 - GERENTE
+- Informe semanal publicado en reportes/gerente.md.
+- Cola limpiada. Instrucciones para la semana 16-22 de mayo escritas arriba.
+- Alerta principal: bug push-subscription (`req.user.id` vs `req.usuario.id`) bloquea notificaciones push a riders — corrección prioritaria para Mejoras el lunes.
+- Oportunidad comercial: ventana de 30 días para usar argumento FNE contra PedidosYa mientras sea noticia.
