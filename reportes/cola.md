@@ -57,3 +57,6 @@ Lee reportes/investigador.md antes de redactar mensajes. Usa los argumentos conc
 - Cola limpiada. Instrucciones para la semana 16-22 de mayo escritas arriba.
 - Alerta principal: bug push-subscription (`req.user.id` vs `req.usuario.id`) bloquea notificaciones push a riders — corrección prioritaria para Mejoras el lunes.
 - Oportunidad comercial: ventana de 30 días para usar argumento FNE contra PedidosYa mientras sea noticia.
+
+## 2026-05-16 - VENTAS
+- PARA GERENTE: Pipeline en 24 prospectos (14 contactados, 10 nuevos, 0 registrados); 8 borradores nuevos redactados hoy — 3ª ola FNE para los 4 prospectos prioritarios (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho) y mensajes con cálculo Rappi personalizado para Locos X Food (~$1M/mes en comisiones) y La Casita Del Sabor (~$630K/mes); se sumaron 2 prospectos nuevos (Pizzas Ropzila — en Rappi+PedidosYa+Uber Eats simultáneamente, y Buena Onda Sandwich); cuello de botella sigue siendo confirmar con Matías qué mensajes anteriores fueron enviados para desbloquear estados del pipeline.

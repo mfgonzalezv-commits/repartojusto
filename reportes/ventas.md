@@ -1,54 +1,72 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-05-14
-**Pipeline total:** 22 prospectos
-**Por estado:** Nuevos: 8 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-05-16
+**Pipeline total:** 24 prospectos
+**Por estado:** Nuevos: 10 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
-- Revisé cola.md: no hay reporte del Investigador disponible (investigador.md sigue sin existir). Los mensajes de seguimiento del 11/05 se redactaron sin argumentos específicos contra la competencia.
-- Los 14 prospectos "Contactado" llevan 6 días desde el primer contacto (08/05). Los seguimientos redactados el 11/05 siguen en cola de borradores sin confirmación de envío. Se redactó una segunda ola de mensajes más directos y con cálculo de ahorro concreto para los 4 negocios con mayor potencial (Pollería Don Pollo, Pizza House, Sushi Zen, Rotisería El Gaucho).
-- Los 6 prospectos "Nuevo" (#15-20) con borradores del 10/05 y 11/05 siguen pendientes de primer contacto.
-- Búsqueda de nuevos prospectos en Villa Alemana: se encontraron 2 candidatos activos en delivery — Maju Sushi & Burger y Sushi Point Delivery. Ambos agregados al pipeline (#21 y #22) con mensajes de presentación redactados.
+### 1. Revisión de cola.md y reporte del Investigador
+Incorporé los argumentos clave del Investigador (reportes/investigador.md):
+- **Argumento FNE:** PedidosYa multada en marzo 2026 con US$3,8 millones por impedir a restaurantes fijar sus precios en canales propios (WhatsApp, web). Se usa como argumento de 3ª ola para prospectos que no respondieron al argumento de ahorro puro.
+- **Argumento nuclear Rappi:** Cálculo específico por prospecto — 20 pedidos/día × $8.000 × 25% = hasta $1.440.000/mes en comisiones vs. $300.000 con RepartoJusto.
+- **Posicionamiento local:** Rappi agrupa Villa Alemana bajo "Quilpué" — argumento de identidad local que ninguna multinacional puede replicar.
+
+### 2. Análisis del pipeline
+- Prospectos #1–14 ("Contactado"): 8 días desde el último contacto registrado (2026-05-08). Los borradores del 11/05 (1ª seguimiento) y del 14/05 (2ª ola para #2, 4, 5, 9) siguen sin confirmación de envío.
+- **Alerta de pipeline:** Sin confirmación de Matías sobre qué mensajes fueron enviados, no es posible actualizar los estados. Es el punto de atención más urgente de la semana (señalado por el Gerente en cola.md).
+- Prospectos #15–22 ("Nuevo"): Presentaciones redactadas entre el 10 y el 14 de mayo, pendientes de confirmación de envío.
+- Prospectos #17 y #18 (Locos X Food, La Casita Del Sabor): Confirmados activos en Rappi. Se calculó su costo mensual estimado y se redactaron mensajes con números concretos.
+
+### 3. Mensajes redactados hoy (8 borradores nuevos)
+
+**3ª OLA — Argumento FNE:**
+- [2] Pollería Don Pollo — FNE + ahorro $46.000/mes
+- [4] Pizza House — FNE + ahorro $25.000/mes
+- [5] Sushi Zen — FNE + ahorro $200.000+/mes (10 pedidos semanales)
+- [9] Rotisería El Gaucho — FNE + ahorro $522.000/mes
+
+**MENSAJES CON CÁLCULO RAPPI (nuevos):**
+- [17] Locos X Food — cálculo: ~$1.000.000/mes en comisiones Rappi vs. $225.000 con RepartoJusto (ahorro estimado: $775.000/mes)
+- [18] La Casita Del Sabor — cálculo: ~$630.000/mes en comisiones Rappi vs. $180.000 con RepartoJusto (ahorro estimado: $450.000/mes)
+
+**NUEVAS PRESENTACIONES:**
+- [23] Pizzas Ropzila — argumento especial: en las tres grandes plataformas simultáneamente (Rappi + PedidosYa + Uber Eats), pagando triple comisión
+- [24] Buena Onda Sandwich — presentación estándar tarifa fija vs. comisión Rappi
 
 ---
 
 ## Borradores listos para Matías
 
-### PRIORIDAD ALTA — hoy (2026-05-14)
-4 mensajes de 2ª ola para prospectos contactados el 08/05 sin respuesta + 2 presentaciones nuevas:
+**Prioridad 1 — Enviar hoy (prospectos con cálculo Rappi personalizado):**
+- [17] Locos X Food — ~$1.000.000/mes en comisiones Rappi
+- [18] La Casita Del Sabor — ~$630.000/mes en comisiones Rappi
 
-| # | Negocio | Tipo | Argumento clave |
-|---|---|---|---|
-| 2 | Pollería Don Pollo | 2ª Seguimiento | Ahorro $46.000/mes con 20 pedidos semanales |
-| 4 | Pizza House | 2ª Seguimiento | Ahorro $25.740/mes con 3 pizzas/día delivery |
-| 5 | Sushi Zen | 2ª Seguimiento | Ahorro $200.000+/mes con 10 pedidos semanales $20k |
-| 9 | Rotisería El Gaucho | 2ª Seguimiento | Ahorro $522.000/mes con 10 pedidos diarios |
-| 21 | Maju Sushi & Burger | Presentación | Ahorro $3.750/pedido vs comisión Rappi 25% |
-| 22 | Sushi Point Delivery | Presentación | Ahorro $4.540/pedido en pedido de $18.000 |
+**Prioridad 2 — 3ª ola FNE (solo si la 2ª ola ya fue enviada):**
+- [2] Pollería Don Pollo
+- [4] Pizza House
+- [5] Sushi Zen
+- [9] Rotisería El Gaucho
 
-### PENDIENTES DEL 11/05 — enviar si aún no se enviaron
-10 seguimientos para prospectos #1, 3, 6, 7, 8, 10, 11, 12, 13, 14 listos en prospectos.md.
+**Prioridad 3 — Nuevas presentaciones:**
+- [23] Pizzas Ropzila (WhatsApp disponible: +56 986749142)
+- [24] Buena Onda Sandwich
 
-### PENDIENTES DEL 10-11/05 — prospectos Nuevo sin primer contacto
-Presentaciones para: #15 Melt Pizzas, #16 Maranatha Café, #17 Locos X Food, #18 La Casita Del Sabor, #19 Just Burger, #20 El Mercadito Móvil.
+**Acción urgente — Confirmar con Matías cuáles mensajes del 11/05 y del 14/05 fueron enviados** para actualizar estados del pipeline y determinar qué prospectos están en 2ª vs. 3ª ola real.
 
 ---
 
-## Nuevos prospectos agregados hoy
+## Nuevos prospectos agregados
 
-1. **Maju Sushi & Burger** — Sushi y hamburguesas — Villa Alemana — encontrado en plataformas de delivery online. Combo que funciona bien en delivery; sensible al argumento de comisiones si ya está en Rappi/PedidosYa.
+| # | Negocio | Rubro | Dirección | Fuente |
+|---|---|---|---|---|
+| 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Rappi + PedidosYa + Uber Eats (TikTok: @pizzasropzila) |
+| 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Rappi |
 
-2. **Sushi Point Delivery** — Sushi / japonesa — Villa Alemana — negocio delivery-first, particularmente sensible al costo por pedido ya que todo su volumen pasa por plataformas.
-
----
-
-## Alerta operativa
-
-El pipeline acumula 28 borradores pendientes de envío. Si los mensajes no están siendo enviados, el trabajo de prospección no genera resultado real. Se recomienda establecer con Matías un mecanismo de confirmación de envíos para poder actualizar los estados del pipeline y saber cuándo escalar a 2ª y 3ª ola.
+**Nota Pizzas Ropzila:** WhatsApp: +56 986749142. Están en las 3 grandes apps — máxima exposición a comisiones del pipeline. Argumento: sumar RepartoJusto como 4º canal de menor costo.
 
 ---
 
 ## Para el Gerente
-Pipeline en 22 prospectos con 14 en "Contactado" desde el 08/05; 28 borradores acumulados listos para envío — el cuello de botella es la confirmación de envíos por Matías, sin la cual el pipeline no puede avanzar de estado ni medirse el alcance real.
+Pipeline de 24 prospectos (14 contactados, 10 nuevos, 0 registrados); se redactaron 8 borradores nuevos incluyendo 3ª ola con argumento FNE para los 4 prospectos prioritarios y mensajes con cálculo de costo Rappi personalizado para Locos X Food (~$1M/mes en comisiones) y La Casita Del Sabor (~$630K/mes); cuello de botella: confirmar con Matías qué mensajes anteriores fueron enviados para desbloquear la actualización de estados.
