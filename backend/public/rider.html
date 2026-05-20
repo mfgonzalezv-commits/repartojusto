@@ -840,6 +840,13 @@ async function apiFetch(path, opts = {}) {
       headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}), ...(opts.headers || {}) }
     });
     const data = await res.json().catch(() => ({}));
+    if (res.status === 401) {
+      localStorage.removeItem('rj_rider_token');
+      localStorage.removeItem('rj_rider_usuario');
+      localStorage.removeItem('rj_disponible');
+      location.reload();
+      return;
+    }
     if (!res.ok) throw new Error(data.error || 'Error del servidor');
     return data;
   } catch (e) {
