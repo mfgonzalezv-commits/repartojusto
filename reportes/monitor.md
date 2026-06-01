@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-01T22:08:35Z
-**Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** HTTP 403 — "Host not in allowlist". La red del entorno de ejecución bloqueó la solicitud saliente hacia repartojusto-production.up.railway.app. El estado real del servidor es desconocido; ejecutar la verificación desde un entorno con acceso de red sin restricciones.
+**Última verificación:** 2026-06-01T23:08:40Z
+**Estado:** ❌ CAÍDO
+**Detalle:** HTTP 403 — "Host not in allowlist". El entorno de ejecución remoto bloqueó la solicitud saliente a https://repartojusto-production.up.railway.app/health por política de red del sandbox. No fue posible verificar el estado real del servidor.
