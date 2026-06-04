@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-03T23:08:48Z
+**Última verificación:** 2026-06-04T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 — "Host not in allowlist" (el entorno de ejecución bloqueó la solicitud saliente hacia repartojusto-production.up.railway.app; el servidor no fue alcanzable)
+**Detalle:** HTTP 403 — "Host not in allowlist" (solicitud bloqueada por la política de red del entorno de ejecución remoto; no se pudo alcanzar el servidor)
