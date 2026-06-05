@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-05T00:03:14Z
+**Última verificación:** 2026-06-05T01:02:26Z
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 — "Host not in allowlist". El servidor responde pero bloquea la IP del agente. Verificar manualmente desde un host autorizado.
+**Detalle:** HTTP 403 — "Host not in allowlist" (el entorno de ejecución remoto está bloqueado por la política de red de Railway)
