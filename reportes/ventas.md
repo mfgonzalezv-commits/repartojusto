@@ -1,72 +1,92 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-05-16
-**Pipeline total:** 24 prospectos
-**Por estado:** Nuevos: 10 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-07
+**Pipeline total:** 26 prospectos
+**Por estado:** Nuevos: 12 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
-### 1. Revisión de cola.md y reporte del Investigador
-Incorporé los argumentos clave del Investigador (reportes/investigador.md):
-- **Argumento FNE:** PedidosYa multada en marzo 2026 con US$3,8 millones por impedir a restaurantes fijar sus precios en canales propios (WhatsApp, web). Se usa como argumento de 3ª ola para prospectos que no respondieron al argumento de ahorro puro.
-- **Argumento nuclear Rappi:** Cálculo específico por prospecto — 20 pedidos/día × $8.000 × 25% = hasta $1.440.000/mes en comisiones vs. $300.000 con RepartoJusto.
-- **Posicionamiento local:** Rappi agrupa Villa Alemana bajo "Quilpué" — argumento de identidad local que ninguna multinacional puede replicar.
+### 1. Revisión de cola.md e investigador.md
 
-### 2. Análisis del pipeline
-- Prospectos #1–14 ("Contactado"): 8 días desde el último contacto registrado (2026-05-08). Los borradores del 11/05 (1ª seguimiento) y del 14/05 (2ª ola para #2, 4, 5, 9) siguen sin confirmación de envío.
-- **Alerta de pipeline:** Sin confirmación de Matías sobre qué mensajes fueron enviados, no es posible actualizar los estados. Es el punto de atención más urgente de la semana (señalado por el Gerente en cola.md).
-- Prospectos #15–22 ("Nuevo"): Presentaciones redactadas entre el 10 y el 14 de mayo, pendientes de confirmación de envío.
-- Prospectos #17 y #18 (Locos X Food, La Casita Del Sabor): Confirmados activos en Rappi. Se calculó su costo mensual estimado y se redactaron mensajes con números concretos.
+Instrucciones vigentes del Gerente (semana 16-22 mayo, aún aplicables):
+- Usar argumento FNE contra PedidosYa para prospectos que no responden al ahorro puro.
+- Locos X Food (#17) y La Casita Del Sabor (#18) ya estaban confirmados en Rappi — mensajes con cálculo personalizado ya redactados el 16/05.
+- Objetivo: confirmar con Matías qué borradores se enviaron.
 
-### 3. Mensajes redactados hoy (8 borradores nuevos)
+Del investigador.md (reporte 14/05, vigente):
+- Argumento FNE: PedidosYa multada US$3,8M por controlar precios de restaurantes socios.
+- Rappi agrupa Villa Alemana bajo "Quilpué" — argumento de identidad local.
+- Uber Eats cobra 30% de comisión — aplica a nuevos prospectos encontrados en Uber Eats.
 
-**3ª OLA — Argumento FNE:**
-- [2] Pollería Don Pollo — FNE + ahorro $46.000/mes
-- [4] Pizza House — FNE + ahorro $25.000/mes
-- [5] Sushi Zen — FNE + ahorro $200.000+/mes (10 pedidos semanales)
-- [9] Rotisería El Gaucho — FNE + ahorro $522.000/mes
+### 2. Estado del pipeline — alerta crítica
 
-**MENSAJES CON CÁLCULO RAPPI (nuevos):**
-- [17] Locos X Food — cálculo: ~$1.000.000/mes en comisiones Rappi vs. $225.000 con RepartoJusto (ahorro estimado: $775.000/mes)
-- [18] La Casita Del Sabor — cálculo: ~$630.000/mes en comisiones Rappi vs. $180.000 con RepartoJusto (ahorro estimado: $450.000/mes)
+Han pasado **22 días** desde el último reporte de ventas (2026-05-16). El pipeline tiene borradores acumulados de cuatro fechas distintas (10/05, 11/05, 14/05, 16/05) sin confirmación de cuáles fueron enviados por Matías.
 
-**NUEVAS PRESENTACIONES:**
-- [23] Pizzas Ropzila — argumento especial: en las tres grandes plataformas simultáneamente (Rappi + PedidosYa + Uber Eats), pagando triple comisión
-- [24] Buena Onda Sandwich — presentación estándar tarifa fija vs. comisión Rappi
+Situación por grupo:
+- **Prospectos #1-14 ("Contactado"):** Último contacto registrado 08/05 — 30 días sin actualización. Pueden tener de 0 a 3 mensajes enviados (incógnita). Se redactaron hoy mensajes de "Reactivación Junio" para los 4 prioritarios.
+- **Prospectos #15-24 ("Nuevo"):** Borradores listos desde el 10-16/05, sin confirmación de envío. Todos llevan más de 3 semanas pendientes de acción confirmada.
+
+### 3. Mensajes redactados hoy (6 borradores nuevos)
+
+**REACTIVACIÓN JUNIO — Prospectos prioritarios:**
+- [2] Pollería Don Pollo — FNE + ahorro $46.000/mes + gancho de continuidad
+- [4] Pizza House — FNE + ahorro $25.000/mes + gancho de continuidad
+- [5] Sushi Zen — FNE + ahorro $200.000+/mes + gancho de continuidad
+- [9] Rotisería El Gaucho — ahorro $522.000/mes + llamado final
+
+**NUEVAS PRESENTACIONES (prospectos 07/06):**
+- [25] Sin Miedo Burgers — activo en Uber Eats (30% comisión), ahorro estimado $600.000+/mes
+- [26] El Clandestino-Gastronomía Peruana — activo en Uber Eats, ticket alto comida peruana
+
+### 4. Nuevos prospectos encontrados hoy
+
+Búsqueda en Uber Eats Villa Alemana 2026:
+
+| # | Negocio | Rubro | Fuente | Argumento clave |
+|---|---|---|---|---|
+| 25 | Sin Miedo Burgers | Hamburguesas | Uber Eats | 30% comisión UberEats → ahorro $600K+/mes |
+| 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Uber Eats | Ticket alto + comisión 25-30% = argumento fuerte |
 
 ---
 
 ## Borradores listos para Matías
 
-**Prioridad 1 — Enviar hoy (prospectos con cálculo Rappi personalizado):**
-- [17] Locos X Food — ~$1.000.000/mes en comisiones Rappi
-- [18] La Casita Del Sabor — ~$630.000/mes en comisiones Rappi
+### PRIORIDAD 1 — Reactivación Junio (enviar YA — llevan 30 días sin contacto confirmado)
+- **[2] Pollería Don Pollo — Reactivación Junio** (en prospectos.md, sección 07/06)
+- **[4] Pizza House — Reactivación Junio** (en prospectos.md, sección 07/06)
+- **[5] Sushi Zen — Reactivación Junio** (en prospectos.md, sección 07/06)
+- **[9] Rotisería El Gaucho — Reactivación Junio** (en prospectos.md, sección 07/06)
 
-**Prioridad 2 — 3ª ola FNE (solo si la 2ª ola ya fue enviada):**
-- [2] Pollería Don Pollo
-- [4] Pizza House
-- [5] Sushi Zen
-- [9] Rotisería El Gaucho
+### PRIORIDAD 2 — Alta oportunidad de ahorro (si aún no se enviaron los del 16/05)
+- **[17] Locos X Food** — ~$1.000.000/mes en comisiones Rappi
+- **[18] La Casita Del Sabor** — ~$630.000/mes en comisiones Rappi
+- **[23] Pizzas Ropzila** — WhatsApp +56 986749142 (en Rappi + PedidosYa + Uber Eats)
 
-**Prioridad 3 — Nuevas presentaciones:**
-- [23] Pizzas Ropzila (WhatsApp disponible: +56 986749142)
-- [24] Buena Onda Sandwich
+### PRIORIDAD 3 — Nuevas presentaciones de hoy
+- **[25] Sin Miedo Burgers** (presentación 07/06)
+- **[26] El Clandestino-Gastronomía Peruana** (presentación 07/06)
 
-**Acción urgente — Confirmar con Matías cuáles mensajes del 11/05 y del 14/05 fueron enviados** para actualizar estados del pipeline y determinar qué prospectos están en 2ª vs. 3ª ola real.
+### ACCIÓN URGENTE PARA MATÍAS
+Confirmar cuáles de los siguientes borradores ya fueron enviados para actualizar los estados del pipeline:
+- Mensajes del 10/05 (#15, #16, versiones originales de #17 y #18)
+- Mensajes del 11/05 (#1-14 seguimiento, #19, #20)
+- Mensajes del 14/05 (#2, 4, 5, 9 segunda ola; #21, #22)
+- Mensajes del 16/05 (#2, 4, 5, 9 tercera ola FNE; #17, #18 con cálculo Rappi; #23, #24)
+
+Sin esa confirmación, el pipeline está paralizado en "Contactado" para todos los prospectos #1-14.
 
 ---
 
 ## Nuevos prospectos agregados
 
-| # | Negocio | Rubro | Dirección | Fuente |
+| # | Negocio | Rubro | Fuente | Dirección |
 |---|---|---|---|---|
-| 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Rappi + PedidosYa + Uber Eats (TikTok: @pizzasropzila) |
-| 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Rappi |
-
-**Nota Pizzas Ropzila:** WhatsApp: +56 986749142. Están en las 3 grandes apps — máxima exposición a comisiones del pipeline. Argumento: sumar RepartoJusto como 4º canal de menor costo.
+| 25 | Sin Miedo Burgers | Hamburguesas | Uber Eats Villa Alemana | Villa Alemana (verificar dirección exacta) |
+| 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Uber Eats Villa Alemana | Villa Alemana (verificar dirección exacta) |
 
 ---
 
 ## Para el Gerente
-Pipeline de 24 prospectos (14 contactados, 10 nuevos, 0 registrados); se redactaron 8 borradores nuevos incluyendo 3ª ola con argumento FNE para los 4 prospectos prioritarios y mensajes con cálculo de costo Rappi personalizado para Locos X Food (~$1M/mes en comisiones) y La Casita Del Sabor (~$630K/mes); cuello de botella: confirmar con Matías qué mensajes anteriores fueron enviados para desbloquear la actualización de estados.
+
+Pipeline en 26 prospectos (14 contactados, 12 nuevos, 0 registrados); cuello de botella crítico: 22 días sin confirmación de Matías sobre envíos — borradores acumulados de 4 fechas distintas sin actualización de estados; se redactaron 6 nuevos mensajes (reactivación junio para los 4 prioritarios + presentaciones para 2 nuevos prospectos encontrados en Uber Eats Villa Alemana); **acción más urgente: Matías debe confirmar qué mensajes del período 10-16/05 se enviaron para desbloquear el pipeline**.
