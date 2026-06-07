@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-07T11:03:10Z
+**Última verificación:** 2026-06-07T12:04:39Z
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 — "Host not in allowlist" (el servidor responde pero rechaza la solicitud por restricción de dominio; el endpoint /health no está accesible desde este origen)
+**Detalle:** HTTP 403 — "Host not in allowlist". El ambiente de ejecución remoto bloqueó la solicitud saliente hacia repartojusto-production.up.railway.app. El endpoint /health no pudo ser verificado desde este entorno de red restringido.
