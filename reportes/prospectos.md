@@ -1,23 +1,23 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-07
+**Actualizado:** 2026-06-09
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron — 30 días sin actualización |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 07/06 |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 — enfoque autonomía sucursal |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 07/06 |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 07/06 |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 07/06 |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Confirmar con Matías si mensajes anteriores se enviaron |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Mensaje con cálculo Rappi redactado 16/05 — PRIORIDAD |
@@ -30,10 +30,74 @@
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Presentación redactada 16/05 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
+| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 09/06 — usa argumento FNE+tarifa |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 09/06 — usa argumento FNE |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-09)
+
+> **NOTA PARA MATÍAS:** Hoy se completa la cobertura de reactivación de junio para todos los Contactados activos. Los prospectos #12 (Librería El Saber) y #14 (Heladería Glacial) se difieren a agosto por ser negocios estacionales. Los borradores de #2, 4, 5, 9 ya estaban listos desde el 07/06. Los 2 nuevos prospectos (#27, #28) fueron encontrados hoy en PedidosYa y se agregan al pipeline.
+>
+> **Recordatorio:** La confirmación de qué mensajes de mayo y junio ya se enviaron sigue siendo el cuello de botella principal para actualizar estados del pipeline.
+
+---
+
+#### REACTIVACIÓN JUNIO — Contactados sin borradores previos de junio
+
+**[1] Fuente de Soda El Rápido — Reactivación Junio:**
+"Hola Fuente de Soda El Rápido! De RepartoJusto, les escribimos en mayo un par de veces. Última oportunidad de junio: si hoy están en Rappi o PedidosYa con 10 pedidos diarios de $5.000 promedio, le están pagando a esas plataformas hasta $420.000 al mes en comisiones (28%). Con RepartoJusto ese costo baja a $150.000 — un ahorro de $270.000 mensuales que se queda en el negocio. Dato nuevo: en marzo 2026 la FNE multó a PedidosYa con US$3,8 millones por impedir que sus locales socios pusieran precios distintos en WhatsApp — nosotros nunca hacemos eso. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Cinco minutos esta semana?"
+
+---
+
+**[3] Farmacia Cruz Verde — Reactivación Junio:**
+"Hola Farmacia Cruz Verde Villa Alemana! Les contacta RepartoJusto. En mayo les escribimos sobre nuestra plataforma de delivery local. Una pregunta directa: ¿tiene esta sucursal autonomía para sumar plataformas de delivery locales, o las decisiones de este tipo son centralizadas? Si hay margen, somos $500 fijos por entrega — sin contrato, sin porcentaje sobre la venta. Las farmacias con delivery de medicamentos tienen demanda constante, especialmente en horarios nocturnos y fines de semana con el frío de junio. repartojusto-production.up.railway.app"
+
+---
+
+**[6] Botillería El Copihue — Reactivación Junio:**
+"Hola Botillería El Copihue! Les escribe RepartoJusto, los contactamos en mayo. Con el frío de junio, el delivery de botillerías sube fuerte los jueves, viernes y sábados por la noche. Un número concreto: con 15 pedidos los viernes y sábados de $10.000 promedio, Rappi o PedidosYa les cobra hasta $168.000 al mes en comisiones. Con RepartoJusto son $30.000. Sin contrato, registro gratis — pueden comenzar solo para el fin de semana si quieren probar sin comprometerse. repartojusto-production.up.railway.app ¿Le damos?"
+
+---
+
+**[7] Minimercado La Esquina — Reactivación Junio:**
+"Hola Minimercado La Esquina! De RepartoJusto. En junio el delivery de minimarket está en su punto más alto — la gente prefiere pedir desde casa con el frío. El costo con nosotros: $500 fijo por pedido entregado. Si tienen 10 entregas diarias de $6.000 promedio, la diferencia vs. Rappi supera los $350.000 al mes que se quedan en el negocio en vez de irse a la app. Sin comisión porcentual, sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[8] Pastelería Dulce Hogar — Reactivación Junio:**
+"Hola Pastelería Dulce Hogar! Les escribe RepartoJusto. Junio tiene muchos cumpleaños y eventos — peak de tortas a domicilio. Un argumento concreto: para una torta de $20.000 pedida por Rappi, la comisión es de hasta $5.600 (28%). Con RepartoJusto son $500 fijos, siempre. La diferencia se nota especialmente en productos de alto valor como los suyos. Nuestros riders son locales en Villa Alemana y conocen el sector — importante para entregas delicadas. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Esta semana lo vemos?"
+
+---
+
+**[10] Café El Árbol — Reactivación Junio:**
+"Hola Café El Árbol! De RepartoJusto, les escribimos hace un mes. En junio los desayunos y almuerzos a domicilio suben fuerte — la gente evita el frío. Un café con delivery activo puede captar pedidos de clientes que no vendrían físicamente en días fríos de la semana. Costo: $500 fijo por pedido entregado, sin porcentaje sobre la venta. Para un desayuno de $4.500, la diferencia vs. Rappi (28%) es de más de $700 por pedido que se queda en el negocio. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[11] Veterinaria Huellitas — Reactivación Junio:**
+"Hola Veterinaria Huellitas! De RepartoJusto, los contactamos en mayo. Con el invierno, los dueños de mascotas prefieren pedir desde casa — alimentos, medicamentos, accesorios. El delivery de veterinaria tiene demanda constante. Con nosotros: $500 fijo por pedido entregado, sin porcentaje sobre el valor de venta. Para un pedido de alimento de $15.000, la diferencia vs. una app de porcentaje (28%) es de $3.700 que se queda en el negocio. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Han pensado en activar delivery?"
+
+---
+
+**[13] Ferretería Los Maestros — Reactivación Junio:**
+"Hola Ferretería Los Maestros! De RepartoJusto. Junio es temporada de obras interiores — la gente mejora calefacción y aislación en casa y necesita materiales sin perder tiempo en desplazarse. Ofrecer delivery local puede diferenciarlos de otras ferreterías en Villa Alemana. Costo: $500 fijos por pedido entregado, sin comisión sobre el valor de la venta. Para un pedido de $20.000 de materiales, la diferencia vs. una app de porcentaje es enorme. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Le interesa conversar?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-09)
+
+**[27] Tribeca Sushi — Presentación:**
+"Hola Tribeca Sushi! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en PedidosYa — hay una información reciente que creemos importante compartirles: en marzo 2026 la FNE multó a PedidosYa con US$3,8 millones por impedir que sus restaurantes socios cobraran precios distintos en sus propios canales (WhatsApp, web propia). Con RepartoJusto nunca ocurre eso — libertad total de precios. Y los números son concretos: para un pedido de sushi de $18.000, PedidosYa cobra hasta $5.040 de comisión (28%). Con nosotros son $500 siempre. Sin contrato, registro gratuito, pueden mantener PedidosYa en paralelo. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[28] La Esquina Con Sabor — Presentación:**
+"Hola La Esquina Con Sabor! Los encontró RepartoJusto en PedidosYa — completos y comida rápida en Villa Alemana. Una pregunta directa: ¿saben cuánto les cobra PedidosYa por cada pedido vendido? En marzo 2026 la FNE los multó por controlar los precios de sus socios restaurantes (US$3,8 millones de multa) — básicamente les impedía vender más barato por otros canales. Con RepartoJusto: $500 fijo por pedido entregado, sin porcentaje, sin restricciones de precio. Para un completo de $4.500, la diferencia vs. PedidosYa puede ser de $700 a $900 por pedido que se queda en el negocio. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
@@ -246,33 +310,33 @@
 
 ## Notas por negocio
 
-**Fuente de Soda El Rápido:** Negocio de comida rápida en zona céntrica de Av. Álvarez. Alto volumen potencial de pedidos pequeños/medianos.
+**Fuente de Soda El Rápido:** Negocio de comida rápida en zona céntrica de Av. Álvarez. Alto volumen potencial de pedidos pequeños/medianos. Reactivación junio redactada 09/06.
 
 **Pollería Don Pollo:** Pollerías tienen demanda constante, pedidos promedio $8.000-$15.000. Muy sensibles al ahorro en comisiones. PRIORIDAD: Reactivación junio redactada 07/06.
 
-**Farmacia Cruz Verde:** Cadena nacional — puede tener política de delivery propia. Explorar si la sucursal local tiene autonomía para sumarse.
+**Farmacia Cruz Verde:** Cadena nacional — puede tener política de delivery propia. Explorar si la sucursal local tiene autonomía para sumarse. Reactivación junio 09/06 con enfoque en autonomía de sucursal.
 
 **Pizza House:** Pizza es el rubro estrella en delivery. Si ya está en Rappi/UberEats, el ahorro por pedido es el argumento clave. PRIORIDAD: Reactivación junio redactada 07/06.
 
 **Sushi Zen:** Ticket promedio alto ($15.000-$25.000). El ahorro vs. Rappi puede ser de $4.000-$7.000 por pedido. PRIORIDAD: Reactivación junio redactada 07/06.
 
-**Botillería El Copihue:** Demanda de delivery concentrada en fines de semana noche. Explorar disponibilidad de riders en esos horarios.
+**Botillería El Copihue:** Demanda de delivery concentrada en fines de semana noche. Argumento del frío de invierno: más gente en casa = más delivery. Reactivación junio redactada 09/06.
 
-**Minimercado La Esquina:** Delivery de minimarket muy solicitado. Competencia directa con apps de supermercado, pero con atención local.
+**Minimercado La Esquina:** Delivery de minimarket muy solicitado en invierno. Competencia directa con apps de supermercado, pero con atención local. Reactivación junio redactada 09/06.
 
-**Pastelería Dulce Hogar:** Pedidos especiales (tortas de cumpleaños, etc.) son de alto valor. Delivery puntual es crítico.
+**Pastelería Dulce Hogar:** Pedidos especiales (tortas de cumpleaños, etc.) son de alto valor. Delivery puntual es crítico. Junio = peak de eventos con tortas. Reactivación redactada 09/06.
 
 **Rotisería El Gaucho:** Almuerzo/cena. Horario pico: 12:30-14:30 y 19:30-21:30. PRIORIDAD: Reactivación junio redactada 07/06.
 
-**Café El Árbol:** Desayunos y almuerzos. Oportunidad de abrir un segmento nuevo si no tienen delivery activo.
+**Café El Árbol:** Desayunos y almuerzos. Invierno = peak de cafeterías con delivery. Reactivación junio redactada 09/06.
 
-**Veterinaria Huellitas:** Nicho interesante para delivery de insumos para mascotas. Pedidos de mediano valor.
+**Veterinaria Huellitas:** Nicho interesante para delivery de insumos para mascotas. Pedidos de mediano valor. Reactivación junio redactada 09/06.
 
-**Librería El Saber:** Demanda estacional (inicio de clases). Puede ser buena prueba piloto en época escolar.
+**Librería El Saber:** Demanda estacional (inicio de clases). DIFERIR hasta agosto 2026 para sincronizar con inicio de año escolar. Próximo contacto: agosto 2026.
 
-**Ferretería Los Maestros:** Delivery de ferreterías está creciendo. Público objetivo: maestros y dueños de casa.
+**Ferretería Los Maestros:** Delivery de ferreterías está creciendo. Invierno = temporada de obras interiores. Reactivación junio redactada 09/06.
 
-**Heladería Glacial:** Negocio estacional (verano). Con junio en curso, hay que preparar antes que llegue noviembre. Siguiente intento en agosto.
+**Heladería Glacial:** Negocio estacional (verano). DIFERIR hasta agosto 2026 para preparar temporada verano 2026/27. Próximo contacto: agosto 2026.
 
 **Melt Pizzas (#15):** Encontrado en Rappi. Rating 4.1. Ya tiene delivery activo — argumento de migración/complemento fuerte.
 
@@ -297,3 +361,7 @@
 **Sin Miedo Burgers (#25, agregado 07/06):** Hamburguesas activo en Uber Eats Villa Alemana. Uber Eats cobra 30% de comisión — argumento de ahorro potente. Con 10 entregas/día ahorro estimado >$600.000/mes vs. RepartoJusto. Encontrado en búsqueda Uber Eats Villa Alemana.
 
 **El Clandestino-Gastronomía Peruana (#26, agregado 07/06):** Restaurante de comida peruana activo en plataformas de delivery en Villa Alemana. Ticket promedio alto para comida peruana ($8.000-$12.000). Comisión de 25-30% duele más en rubros con ticket alto. Encontrado en Uber Eats Villa Alemana.
+
+**Tribeca Sushi (#27, agregado 09/06):** Sushi restaurant encontrado en PedidosYa Villa Alemana. Ticket promedio alto. Argumento doble: FNE multó a PedidosYa (especialmente relevante para negocio que YA está en PedidosYa) + ahorro por pedido. Fuente: pedidosya.cl/restaurantes/villa-alemana.
+
+**La Esquina Con Sabor (#28, agregado 09/06):** Completos y comida rápida chilena activo en PedidosYa Villa Alemana. Ticket promedio ~$4.000-$5.500. El argumento FNE es especialmente poderoso porque están en PedidosYa (la plataforma multada). Fuente: pedidosya.cl/restaurantes/villa-alemana.

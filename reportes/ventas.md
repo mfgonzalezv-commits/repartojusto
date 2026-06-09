@@ -1,92 +1,84 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-07
-**Pipeline total:** 26 prospectos
-**Por estado:** Nuevos: 12 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-09
+**Pipeline total:** 28 prospectos
+**Por estado:** Nuevos: 14 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
 ### 1. Revisión de cola.md e investigador.md
+- Argumento FNE del Investigador incorporado en todos los borradores de hoy.
+- Instrucción del Gerente aplicada: ola de reactivación junio completada para todos los Contactados activos.
+- Contexto estacional nuevo: invierno de junio = peak de delivery (frío → gente queda en casa) incorporado en cada mensaje.
 
-Instrucciones vigentes del Gerente (semana 16-22 mayo, aún aplicables):
-- Usar argumento FNE contra PedidosYa para prospectos que no responden al ahorro puro.
-- Locos X Food (#17) y La Casita Del Sabor (#18) ya estaban confirmados en Rappi — mensajes con cálculo personalizado ya redactados el 16/05.
-- Objetivo: confirmar con Matías qué borradores se enviaron.
+### 2. Análisis del pipeline
+- 14 Contactados (todos desde 2026-05-08, 32 días): #2, 4, 5, 9 ya tenían reactivación junio del 07/06. Los 10 restantes sin borrador de junio.
+- 2 prospectos estacionales diferidos: #12 Librería El Saber y #14 Heladería Glacial → reactivar en agosto 2026.
+- 12 Nuevos (#15-26): todos con borradores de mayo/junio pendientes de confirmación de envío.
 
-Del investigador.md (reporte 14/05, vigente):
-- Argumento FNE: PedidosYa multada US$3,8M por controlar precios de restaurantes socios.
-- Rappi agrupa Villa Alemana bajo "Quilpué" — argumento de identidad local.
-- Uber Eats cobra 30% de comisión — aplica a nuevos prospectos encontrados en Uber Eats.
+### 3. Mensajes redactados hoy (9 borradores nuevos)
 
-### 2. Estado del pipeline — alerta crítica
+**Reactivación Junio — Contactados sin borrador previo de junio:**
+- [1] Fuente de Soda El Rápido — ahorro $270.000/mes + argumento FNE
+- [3] Farmacia Cruz Verde — pregunta de autonomía de sucursal + temporada invernal
+- [6] Botillería El Copihue — delivery nocturno fines de semana + cálculo ($168.000 vs. $30.000/mes)
+- [7] Minimercado La Esquina — invierno = peak delivery minimarket + ahorro estimado $354.000/mes
+- [8] Pastelería Dulce Hogar — junio = peak tortas + cálculo ($5.600 vs. $500 por torta de $20.000)
+- [10] Café El Árbol — desayunos/almuerzos delivery en invierno + ahorro $700/pedido
+- [11] Veterinaria Huellitas — frío = dueños piden desde casa + ahorro $3.700/pedido $15.000
+- [13] Ferretería Los Maestros — obras interiores en invierno + argumento diferenciación
 
-Han pasado **22 días** desde el último reporte de ventas (2026-05-16). El pipeline tiene borradores acumulados de cuatro fechas distintas (10/05, 11/05, 14/05, 16/05) sin confirmación de cuáles fueron enviados por Matías.
+**Presentaciones — Nuevos prospectos encontrados hoy:**
+- [27] Tribeca Sushi (PedidosYa) — doble argumento: FNE multó a PedidosYa (donde ESTÁN) + ahorro $4.540/pedido $18.000
+- [28] La Esquina Con Sabor (PedidosYa) — completos/comida rápida, argumento FNE + ahorro $700-$900/pedido
 
-Situación por grupo:
-- **Prospectos #1-14 ("Contactado"):** Último contacto registrado 08/05 — 30 días sin actualización. Pueden tener de 0 a 3 mensajes enviados (incógnita). Se redactaron hoy mensajes de "Reactivación Junio" para los 4 prioritarios.
-- **Prospectos #15-24 ("Nuevo"):** Borradores listos desde el 10-16/05, sin confirmación de envío. Todos llevan más de 3 semanas pendientes de acción confirmada.
-
-### 3. Mensajes redactados hoy (6 borradores nuevos)
-
-**REACTIVACIÓN JUNIO — Prospectos prioritarios:**
-- [2] Pollería Don Pollo — FNE + ahorro $46.000/mes + gancho de continuidad
-- [4] Pizza House — FNE + ahorro $25.000/mes + gancho de continuidad
-- [5] Sushi Zen — FNE + ahorro $200.000+/mes + gancho de continuidad
-- [9] Rotisería El Gaucho — ahorro $522.000/mes + llamado final
-
-**NUEVAS PRESENTACIONES (prospectos 07/06):**
-- [25] Sin Miedo Burgers — activo en Uber Eats (30% comisión), ahorro estimado $600.000+/mes
-- [26] El Clandestino-Gastronomía Peruana — activo en Uber Eats, ticket alto comida peruana
-
-### 4. Nuevos prospectos encontrados hoy
-
-Búsqueda en Uber Eats Villa Alemana 2026:
+### 4. Nuevos prospectos encontrados
+Búsqueda en PedidosYa Villa Alemana 2026:
 
 | # | Negocio | Rubro | Fuente | Argumento clave |
 |---|---|---|---|---|
-| 25 | Sin Miedo Burgers | Hamburguesas | Uber Eats | 30% comisión UberEats → ahorro $600K+/mes |
-| 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Uber Eats | Ticket alto + comisión 25-30% = argumento fuerte |
+| 27 | Tribeca Sushi | Sushi | PedidosYa | FNE multó a PedidosYa + ahorro $4.540/pedido |
+| 28 | La Esquina Con Sabor | Comida rápida/completos | PedidosYa | FNE + ahorro $700-$900 por pedido de $4.500 |
 
 ---
 
 ## Borradores listos para Matías
 
-### PRIORIDAD 1 — Reactivación Junio (enviar YA — llevan 30 días sin contacto confirmado)
-- **[2] Pollería Don Pollo — Reactivación Junio** (en prospectos.md, sección 07/06)
-- **[4] Pizza House — Reactivación Junio** (en prospectos.md, sección 07/06)
-- **[5] Sushi Zen — Reactivación Junio** (en prospectos.md, sección 07/06)
-- **[9] Rotisería El Gaucho — Reactivación Junio** (en prospectos.md, sección 07/06)
+### PRIORIDAD 1 — Ya pagando comisiones a plataformas multadas/conocidas
+1. **[27] Tribeca Sushi** — Presentación 09/06 (en PedidosYa → FNE muy relevante)
+2. **[28] La Esquina Con Sabor** — Presentación 09/06 (en PedidosYa → FNE muy relevante)
+3. **[17] Locos X Food** — Cálculo Rappi (borrador 16/05, aún pendiente)
+4. **[18] La Casita Del Sabor** — Cálculo Rappi (borrador 16/05, aún pendiente)
 
-### PRIORIDAD 2 — Alta oportunidad de ahorro (si aún no se enviaron los del 16/05)
-- **[17] Locos X Food** — ~$1.000.000/mes en comisiones Rappi
-- **[18] La Casita Del Sabor** — ~$630.000/mes en comisiones Rappi
-- **[23] Pizzas Ropzila** — WhatsApp +56 986749142 (en Rappi + PedidosYa + Uber Eats)
+### PRIORIDAD 2 — Reactivación Junio (borradores 07/06 y 09/06)
+5. [1] Fuente de Soda El Rápido — Reactivación Junio
+6. [2] Pollería Don Pollo — Reactivación Junio (07/06)
+7. [4] Pizza House — Reactivación Junio (07/06)
+8. [5] Sushi Zen — Reactivación Junio (07/06)
+9. [6] Botillería El Copihue — Reactivación Junio
+10. [7] Minimercado La Esquina — Reactivación Junio
+11. [8] Pastelería Dulce Hogar — Reactivación Junio
+12. [9] Rotisería El Gaucho — Reactivación Junio (07/06)
+13. [10] Café El Árbol — Reactivación Junio
+14. [11] Veterinaria Huellitas — Reactivación Junio
+15. [13] Ferretería Los Maestros — Reactivación Junio
+16. [3] Farmacia Cruz Verde — Reactivación Junio (pregunta sobre autonomía)
 
-### PRIORIDAD 3 — Nuevas presentaciones de hoy
-- **[25] Sin Miedo Burgers** (presentación 07/06)
-- **[26] El Clandestino-Gastronomía Peruana** (presentación 07/06)
-
-### ACCIÓN URGENTE PARA MATÍAS
-Confirmar cuáles de los siguientes borradores ya fueron enviados para actualizar los estados del pipeline:
-- Mensajes del 10/05 (#15, #16, versiones originales de #17 y #18)
-- Mensajes del 11/05 (#1-14 seguimiento, #19, #20)
-- Mensajes del 14/05 (#2, 4, 5, 9 segunda ola; #21, #22)
-- Mensajes del 16/05 (#2, 4, 5, 9 tercera ola FNE; #17, #18 con cálculo Rappi; #23, #24)
-
-Sin esa confirmación, el pipeline está paralizado en "Contactado" para todos los prospectos #1-14.
+### RECORDATORIO ACTIVO
+Confirmar con Matías qué mensajes de mayo/junio se enviaron para actualizar estados del pipeline. Sin esa confirmación, los 14 Contactados siguen congelados en ese estado.
 
 ---
 
-## Nuevos prospectos agregados
+## Nuevos prospectos agregados hoy
 
-| # | Negocio | Rubro | Fuente | Dirección |
+| # | Negocio | Rubro | Dirección | Fuente |
 |---|---|---|---|---|
-| 25 | Sin Miedo Burgers | Hamburguesas | Uber Eats Villa Alemana | Villa Alemana (verificar dirección exacta) |
-| 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Uber Eats Villa Alemana | Villa Alemana (verificar dirección exacta) |
+| 27 | Tribeca Sushi | Sushi | Villa Alemana | PedidosYa Villa Alemana |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana | PedidosYa Villa Alemana |
 
 ---
 
 ## Para el Gerente
 
-Pipeline en 26 prospectos (14 contactados, 12 nuevos, 0 registrados); cuello de botella crítico: 22 días sin confirmación de Matías sobre envíos — borradores acumulados de 4 fechas distintas sin actualización de estados; se redactaron 6 nuevos mensajes (reactivación junio para los 4 prioritarios + presentaciones para 2 nuevos prospectos encontrados en Uber Eats Villa Alemana); **acción más urgente: Matías debe confirmar qué mensajes del período 10-16/05 se enviaron para desbloquear el pipeline**.
+Pipeline en 28 prospectos (14 contactados, 14 nuevos, 0 registrados); hoy se completó la cobertura total de reactivación junio para los 12 Contactados activos (#1, 3, 6, 7, 8, 10, 11, 13 borradores nuevos + #2, 4, 5, 9 del 07/06), incorporando ángulo invernal y argumento FNE en todos; se diferieron 2 prospectos estacionales a agosto (#12 Librería, #14 Heladería); 2 nuevos prospectos agregados desde PedidosYa (Tribeca Sushi y La Esquina Con Sabor, ambos en la plataforma multada por FNE); cuello de botella sigue siendo la confirmación de Matías sobre mensajes enviados.
