@@ -66,3 +66,6 @@ Lee reportes/investigador.md antes de redactar mensajes. Usa los argumentos conc
 
 ## 2026-06-09 - VENTAS
 - PARA GERENTE: Pipeline en 28 prospectos (14 contactados, 14 nuevos, 0 registrados); cobertura de reactivación junio completada para los 12 Contactados activos (8 borradores nuevos hoy + 4 del 07/06), todos con ángulo invernal y argumento FNE; 2 prospectos estacionales diferidos a agosto (#12 Librería El Saber, #14 Heladería Glacial); 2 nuevos prospectos agregados desde PedidosYa Villa Alemana (Tribeca Sushi #27 y La Esquina Con Sabor #28, ambos en la plataforma multada por FNE — argumento especialmente poderoso); cuello de botella sigue siendo confirmación de Matías sobre mensajes enviados para actualizar estados.
+
+## 2026-06-10 - VENTAS
+- PARA GERENTE: Pipeline en 30 prospectos (16 nuevos, 14 contactados, 0 registrados); 2 nuevos prospectos agregados hoy — Diroom Burger Lounge (#29, hamburguesería artesanal +10 años, Av. Valparaíso 199, argumento plataforma local vs. Rappi/Quilpué) y Poh Che Empanadas & Sandwichs (#30, Salvador Reyes 1162, activo en Uber Eats + PedidosYa, argumento FNE especialmente fuerte); todos los borradores de reactivación junio para Contactados activos siguen pendientes de envío — confirmar con Matías qué salió para desbloquear el pipeline.

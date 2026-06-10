@@ -1,84 +1,53 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-09
-**Pipeline total:** 28 prospectos
-**Por estado:** Nuevos: 14 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-10
+**Pipeline total:** 30 prospectos
+**Por estado:** Nuevos: 16 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
-### 1. Revisión de cola.md e investigador.md
-- Argumento FNE del Investigador incorporado en todos los borradores de hoy.
-- Instrucción del Gerente aplicada: ola de reactivación junio completada para todos los Contactados activos.
-- Contexto estacional nuevo: invierno de junio = peak de delivery (frío → gente queda en casa) incorporado en cada mensaje.
-
-### 2. Análisis del pipeline
-- 14 Contactados (todos desde 2026-05-08, 32 días): #2, 4, 5, 9 ya tenían reactivación junio del 07/06. Los 10 restantes sin borrador de junio.
-- 2 prospectos estacionales diferidos: #12 Librería El Saber y #14 Heladería Glacial → reactivar en agosto 2026.
-- 12 Nuevos (#15-26): todos con borradores de mayo/junio pendientes de confirmación de envío.
-
-### 3. Mensajes redactados hoy (9 borradores nuevos)
-
-**Reactivación Junio — Contactados sin borrador previo de junio:**
-- [1] Fuente de Soda El Rápido — ahorro $270.000/mes + argumento FNE
-- [3] Farmacia Cruz Verde — pregunta de autonomía de sucursal + temporada invernal
-- [6] Botillería El Copihue — delivery nocturno fines de semana + cálculo ($168.000 vs. $30.000/mes)
-- [7] Minimercado La Esquina — invierno = peak delivery minimarket + ahorro estimado $354.000/mes
-- [8] Pastelería Dulce Hogar — junio = peak tortas + cálculo ($5.600 vs. $500 por torta de $20.000)
-- [10] Café El Árbol — desayunos/almuerzos delivery en invierno + ahorro $700/pedido
-- [11] Veterinaria Huellitas — frío = dueños piden desde casa + ahorro $3.700/pedido $15.000
-- [13] Ferretería Los Maestros — obras interiores en invierno + argumento diferenciación
-
-**Presentaciones — Nuevos prospectos encontrados hoy:**
-- [27] Tribeca Sushi (PedidosYa) — doble argumento: FNE multó a PedidosYa (donde ESTÁN) + ahorro $4.540/pedido $18.000
-- [28] La Esquina Con Sabor (PedidosYa) — completos/comida rápida, argumento FNE + ahorro $700-$900/pedido
-
-### 4. Nuevos prospectos encontrados
-Búsqueda en PedidosYa Villa Alemana 2026:
-
-| # | Negocio | Rubro | Fuente | Argumento clave |
-|---|---|---|---|---|
-| 27 | Tribeca Sushi | Sushi | PedidosYa | FNE multó a PedidosYa + ahorro $4.540/pedido |
-| 28 | La Esquina Con Sabor | Comida rápida/completos | PedidosYa | FNE + ahorro $700-$900 por pedido de $4.500 |
+- Leído cola.md (instrucciones Gerente semana 16-22/05) e investigador.md — argumentos FNE y ahorro concreto en pesos incorporados.
+- Revisado pipeline completo: 14 Contactados con borradores de reactivación junio listos desde 07/06 y 09/06; 14 Nuevos con presentaciones redactadas (mayo–junio), todos pendientes de confirmación de envío.
+- Búsqueda de 2 nuevos prospectos en Villa Alemana vía WebSearch: identificados **Diroom Burger Lounge** (Av. Valparaíso 199, hamburguesería artesanal +10 años) y **Poh Che Empanadas & Sandwichs** (Salvador Reyes 1162, activo en Uber Eats + PedidosYa).
+- Redactados 2 mensajes de presentación personalizados para nuevos prospectos #29 y #30.
+- Actualizados reportes/prospectos.md, reportes/ventas.md y reportes/cola.md.
 
 ---
 
 ## Borradores listos para Matías
 
-### PRIORIDAD 1 — Ya pagando comisiones a plataformas multadas/conocidas
-1. **[27] Tribeca Sushi** — Presentación 09/06 (en PedidosYa → FNE muy relevante)
-2. **[28] La Esquina Con Sabor** — Presentación 09/06 (en PedidosYa → FNE muy relevante)
-3. **[17] Locos X Food** — Cálculo Rappi (borrador 16/05, aún pendiente)
-4. **[18] La Casita Del Sabor** — Cálculo Rappi (borrador 16/05, aún pendiente)
+### Nuevos de hoy (2026-06-10)
 
-### PRIORIDAD 2 — Reactivación Junio (borradores 07/06 y 09/06)
-5. [1] Fuente de Soda El Rápido — Reactivación Junio
-6. [2] Pollería Don Pollo — Reactivación Junio (07/06)
-7. [4] Pizza House — Reactivación Junio (07/06)
-8. [5] Sushi Zen — Reactivación Junio (07/06)
-9. [6] Botillería El Copihue — Reactivación Junio
-10. [7] Minimercado La Esquina — Reactivación Junio
-11. [8] Pastelería Dulce Hogar — Reactivación Junio
-12. [9] Rotisería El Gaucho — Reactivación Junio (07/06)
-13. [10] Café El Árbol — Reactivación Junio
-14. [11] Veterinaria Huellitas — Reactivación Junio
-15. [13] Ferretería Los Maestros — Reactivación Junio
-16. [3] Farmacia Cruz Verde — Reactivación Junio (pregunta sobre autonomía)
+**[29] Diroom Burger Lounge — Presentación:**
+"Hola Diroom! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los conocemos — más de 10 años haciendo hamburguesas artesanales 100% carne nacional en Av. Valparaíso 199. Una pregunta directa: ¿tienen delivery activo en Rappi o Uber Eats? Si es así, un número concreto: para una hamburguesa artesanal de $12.000, Rappi cobra hasta $3.360 de comisión (28%) por cada pedido. Con RepartoJusto son $500 fijos, siempre. Y a diferencia de Rappi — que los agrupa bajo 'Quilpué' en su app — somos 100% locales en Villa Alemana. Sin contrato, registro gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
 
-### RECORDATORIO ACTIVO
-Confirmar con Matías qué mensajes de mayo/junio se enviaron para actualizar estados del pipeline. Sin esa confirmación, los 14 Contactados siguen congelados en ese estado.
+**[30] Poh Che Empanadas & Sandwichs — Presentación:**
+"Hola Poh Che! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en Uber Eats y PedidosYa — muy bien posicionados. Un dato reciente que creemos importante: en marzo 2026 la FNE multó a PedidosYa con US$3,8 millones por controlar los precios de sus restaurantes socios y bloquearles vender más barato en sus propios canales. Con RepartoJusto eso no existe: libertad total de precios, siempre. Y el número concreto: para un pedido de $6.000 en empanadas y sándwichs, Uber Eats cobra $1.800 de comisión (30%) — con nosotros son $500 siempre. Con 15 pedidos diarios, son más de $500.000 al mes que se quedan en el negocio en vez de irse a la app. Sin contrato, registro completamente gratuito. Pueden mantener Uber Eats y PedidosYa y sumar RepartoJusto como canal de menor costo. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
-## Nuevos prospectos agregados hoy
+### Pendientes de días anteriores (sin confirmación de envío)
 
-| # | Negocio | Rubro | Dirección | Fuente |
+**Reactivación junio (Contactados #1-#13 activos):** 10 borradores del 09/06 + 4 del 07/06. Ver prospectos.md sección "MENSAJES DEL DÍA 2026-06-07" y "2026-06-09".
+
+**Nuevos #27 y #28 (Tribeca Sushi, La Esquina Con Sabor):** Presentaciones 09/06 con argumento FNE (ambos en PedidosYa, la plataforma multada).
+
+**Nuevos #25 y #26 (Sin Miedo Burgers, El Clandestino):** Presentaciones 07/06.
+
+**Acumulado mayo (Nuevos #15-#24):** Presentaciones y seguimientos entre 10/05 y 16/05. Sin confirmación de envío.
+
+---
+
+## Nuevos prospectos agregados
+
+| # | Negocio | Rubro | Dirección | Argumento principal |
 |---|---|---|---|---|
-| 27 | Tribeca Sushi | Sushi | Villa Alemana | PedidosYa Villa Alemana |
-| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana | PedidosYa Villa Alemana |
+| 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | +10 años de trayectoria, ticket alto; Rappi los agrupa bajo "Quilpué" — RepartoJusto es la plataforma 100% local de VA |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Activo en Uber Eats + PedidosYa simultáneamente; argumento FNE especialmente potente (están en la plataforma multada) |
 
 ---
 
 ## Para el Gerente
 
-Pipeline en 28 prospectos (14 contactados, 14 nuevos, 0 registrados); hoy se completó la cobertura total de reactivación junio para los 12 Contactados activos (#1, 3, 6, 7, 8, 10, 11, 13 borradores nuevos + #2, 4, 5, 9 del 07/06), incorporando ángulo invernal y argumento FNE en todos; se diferieron 2 prospectos estacionales a agosto (#12 Librería, #14 Heladería); 2 nuevos prospectos agregados desde PedidosYa (Tribeca Sushi y La Esquina Con Sabor, ambos en la plataforma multada por FNE); cuello de botella sigue siendo la confirmación de Matías sobre mensajes enviados.
+Pipeline en 30 prospectos (16 nuevos, 14 contactados, 0 registrados); cobertura de borradores completa para todos los Contactados activos (reactivación junio redactada 07/06 y 09/06) y presentaciones para todos los Nuevos incluyendo los 2 de hoy; el único cuello de botella sigue siendo confirmar con Matías qué mensajes se enviaron efectivamente — sin esa confirmación los estados del pipeline no avanzan y los 0 registrados no reflejan el verdadero progreso comercial.

@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-09
+**Actualizado:** 2026-06-10
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -32,10 +32,30 @@
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 09/06 — usa argumento FNE+tarifa |
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 09/06 — usa argumento FNE |
+| 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — ángulo local vs. Rappi/Quilpué |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — doble plataforma Uber Eats+PedidosYa, argumento FNE |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-10)
+
+> **NOTA PARA MATÍAS:** Hoy se agregan 2 nuevos prospectos con sus mensajes de presentación. Los borradores de reactivación junio para los 12 Contactados activos y las presentaciones para los Nuevos #27 y #28 siguen pendientes de envío desde el 07/06 y 09/06 respectivamente. El cuello de botella sigue siendo confirmar cuáles mensajes anteriores ya salieron para poder actualizar estados del pipeline.
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-10)
+
+**[29] Diroom Burger Lounge — Presentación:**
+"Hola Diroom! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los conocemos — más de 10 años haciendo hamburguesas artesanales 100% carne nacional en Av. Valparaíso 199. Una pregunta directa: ¿tienen delivery activo en Rappi o Uber Eats? Si es así, un número concreto: para una hamburguesa artesanal de $12.000, Rappi cobra hasta $3.360 de comisión (28%) por cada pedido. Con RepartoJusto son $500 fijos, siempre. Y a diferencia de Rappi — que los agrupa bajo 'Quilpué' en su app — somos 100% locales en Villa Alemana. Sin contrato, registro gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[30] Poh Che Empanadas & Sandwichs — Presentación:**
+"Hola Poh Che! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en Uber Eats y PedidosYa — muy bien posicionados. Un dato reciente que creemos importante: en marzo 2026 la FNE multó a PedidosYa con US$3,8 millones por controlar los precios de sus restaurantes socios y bloquearles vender más barato en sus propios canales. Con RepartoJusto eso no existe: libertad total de precios, siempre. Y el número concreto: para un pedido de $6.000 en empanadas y sándwichs, Uber Eats cobra $1.800 de comisión (30%) — con nosotros son $500 siempre. Con 15 pedidos diarios, son más de $500.000 al mes que se quedan en el negocio en vez de irse a la app. Sin contrato, registro completamente gratuito. Pueden mantener Uber Eats y PedidosYa y sumar RepartoJusto como canal de menor costo. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -365,3 +385,7 @@
 **Tribeca Sushi (#27, agregado 09/06):** Sushi restaurant encontrado en PedidosYa Villa Alemana. Ticket promedio alto. Argumento doble: FNE multó a PedidosYa (especialmente relevante para negocio que YA está en PedidosYa) + ahorro por pedido. Fuente: pedidosya.cl/restaurantes/villa-alemana.
 
 **La Esquina Con Sabor (#28, agregado 09/06):** Completos y comida rápida chilena activo en PedidosYa Villa Alemana. Ticket promedio ~$4.000-$5.500. El argumento FNE es especialmente poderoso porque están en PedidosYa (la plataforma multada). Fuente: pedidosya.cl/restaurantes/villa-alemana.
+
+**Diroom Burger Lounge (#29, agregado 10/06):** Hamburguesería artesanal con más de 10 años de trayectoria en Villa Alemana. Av. Valparaíso 199. Tiene sitio web propio (diroom.cl) e Instagram (@diroom_chile_). Teléfono: (32) 295 0030. Ticket promedio alto ($10.000-$15.000). Ángulo diferenciador: Rappi los agrupa bajo "Quilpué" — RepartoJusto es la plataforma 100% local de Villa Alemana. Potencialmente en Rappi/Uber Eats — confirmar al contactar.
+
+**Poh Che Empanadas & Sandwichs (#30, agregado 10/06):** Local de empanadas, sándwichs, completos y chorrillanas en Salvador Reyes 1162, Villa Alemana. Teléfono: +56 32 324 2360. Confirmado en Uber Eats Y PedidosYa simultáneamente — pagan doble comisión. Argumento FNE especialmente poderoso (están en la plataforma que fue multada). Ticket promedio $4.000-$7.000. Con 15 pedidos/día el ahorro vs. Uber Eats (30%) supera $500.000/mes. Fuente: ubereats.com + pedidosya.cl Villa Alemana.
