@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-11T20:03:25Z
+**Última verificación:** 2026-06-11T21:03:30Z
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 — "Host not in allowlist" (el entorno de ejecución remota bloqueó la petición saliente; verificar política de red o acceder desde un entorno sin restricciones)
+**Detalle:** HTTP 403 — Host not in allowlist (petición bloqueada por política de red del entorno de ejecución; no se pudo verificar el servidor)
