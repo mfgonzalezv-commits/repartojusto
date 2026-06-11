@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-11T19:03:35Z
+**Última verificación:** 2026-06-11T20:03:25Z
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 — "Host not in allowlist" (el host del agente no está autorizado por el servidor; el endpoint /health existe pero rechaza conexiones desde este origen)
+**Detalle:** HTTP 403 — "Host not in allowlist" (el entorno de ejecución remota bloqueó la petición saliente; verificar política de red o acceder desde un entorno sin restricciones)
