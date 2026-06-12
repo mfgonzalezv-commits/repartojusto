@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-12T07:03:13Z
+**Última verificación:** 2026-06-12T08:03:26Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a repartojusto-production.up.railway.app — host no permitido en la política de egress del entorno de ejecución (HTTP 403 de red, no del servidor). Verificar manualmente o configurar egress en las settings del entorno.
+**Detalle:** Error de red — host `repartojusto-production.up.railway.app` no está en la lista de egress permitidos del entorno de ejecución remoto. No fue posible alcanzar el endpoint `/health`. HTTP 403 devuelto por el proxy de red (no por el servidor de Railway).
