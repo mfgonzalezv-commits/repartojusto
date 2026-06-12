@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-12T11:03:07Z
+**Última verificación:** 2026-06-12T12:03:56Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — host `repartojusto-production.up.railway.app` no está en la lista de egress permitidos del entorno de ejecución remoto. No fue posible alcanzar el endpoint `/health`. HTTP 403 devuelto por el proxy de red (no por el servidor de Railway).
+**Detalle:** HTTP 403 — Host bloqueado por política de red egress del entorno de ejecución. El dominio `repartojusto-production.up.railway.app` debe añadirse al allowlist de egress para que el monitor pueda alcanzarlo.
