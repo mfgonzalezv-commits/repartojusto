@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-12T12:03:56Z
+**Última verificación:** 2026-06-12T13:03:33Z
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 — Host bloqueado por política de red egress del entorno de ejecución. El dominio `repartojusto-production.up.railway.app` debe añadirse al allowlist de egress para que el monitor pueda alcanzarlo.
+**Detalle:** No se pudo conectar a repartojusto-production.up.railway.app — el entorno de ejecución remoto bloqueó la conexión saliente (host no en lista de egress permitidos). No se obtuvo respuesta HTTP del servidor de producción.
