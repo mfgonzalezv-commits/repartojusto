@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-13T19:02:46Z
+**Última verificación:** 2026-06-13T20:02:47Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo alcanzar el servidor — host bloqueado por política de egress del entorno de ejecución (HTTP 403: "Host not in allowlist: repartojusto-production.up.railway.app"). Agregar el host a la configuración de red para permitir acceso.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — Host bloqueado por política de red egress del entorno de ejecución (acceso externo no permitido).
