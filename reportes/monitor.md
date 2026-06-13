@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-13T06:02:56Z
+**Última verificación:** 2026-06-13T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — host `repartojusto-production.up.railway.app` no está en el allowlist de egress del entorno de ejecución. No fue posible completar el GET /health. Código HTTP recibido: 403 (bloqueado por proxy de red, no por el servidor de destino).
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el entorno de ejecución remoto bloqueó la solicitud: host no incluido en la lista de egress permitidos (HTTP 403 interno). No se obtuvo respuesta del servidor de producción.
