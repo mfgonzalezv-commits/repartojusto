@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-13T00:03:57Z
+**Última verificación:** 2026-06-13T01:02:54Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — el entorno de ejecución remoto bloqueó la conexión saliente a `repartojusto-production.up.railway.app`. Política de egress no permite ese host. No se pudo obtener respuesta HTTP del servidor.
+**Detalle:** HTTP 403 — Host no permitido en egress de red del entorno de ejecución: `repartojusto-production.up.railway.app` no está en el allowlist de salida. No se pudo verificar el servidor.
