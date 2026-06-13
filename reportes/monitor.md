@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-12T23:02:37Z
+**Última verificación:** 2026-06-13T00:03:57Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el entorno de ejecución remoto bloqueó la solicitud (host no está en el allowlist de egress de red). HTTP 403 del proxy de red del sandbox. No es una respuesta del servidor de producción.
+**Detalle:** Error de red — el entorno de ejecución remoto bloqueó la conexión saliente a `repartojusto-production.up.railway.app`. Política de egress no permite ese host. No se pudo obtener respuesta HTTP del servidor.
