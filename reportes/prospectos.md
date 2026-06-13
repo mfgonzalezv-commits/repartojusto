@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-10
+**Actualizado:** 2026-06-13
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -20,8 +20,8 @@
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
-| 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Mensaje con cálculo Rappi redactado 16/05 — PRIORIDAD |
-| 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Mensaje con cálculo Rappi redactado 16/05 — PRIORIDAD |
+| 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Reactivación junio redactada 13/06 — PRIORIDAD (refresh del 16/05) |
+| 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Reactivación junio redactada 13/06 — ALTA PRIORIDAD (refresh del 16/05) |
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 11/05, pendiente confirmación Matías |
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Presentación redactada 11/05, pendiente confirmación Matías |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
@@ -34,10 +34,44 @@
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 09/06 — usa argumento FNE |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — ángulo local vs. Rappi/Quilpué |
 | 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — doble plataforma Uber Eats+PedidosYa, argumento FNE |
+| 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — listado bajo Quilpué en Rappi, argumento local + FNE |
+| 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — negocio delivery-first, ticket alto sushi |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-13)
+
+> **NOTA PARA MATÍAS:** Hoy se agregan 2 nuevos prospectos encontrados en plataformas activas (Barrio Chino #31 — en Rappi listado bajo Quilpué; Tempura Sushi #32 — delivery-first activo en Villa Alemana). También se actualizan los mensajes para los 2 prospectos de MÁXIMA PRIORIDAD que tienen drafts desde el 16/05 sin confirmación de envío (#17 Locos X Food y #18 La Casita Del Sabor) — versiones junio con contexto invierno.
+>
+> **Recordatorio:** Confirmar cuáles mensajes de mayo y junio ya se enviaron sigue siendo el cuello de botella del pipeline. Sin esa confirmación, no es posible avanzar estados.
+
+---
+
+#### REACTIVACIÓN JUNIO — Prospectos PRIORIDAD con drafts del 16/05 sin confirmar
+
+**[17] Locos X Food — Reactivación Junio (versión actualizada 13/06):**
+"Hola Locos X Food! Les escribe RepartoJusto — les contactamos en mayo pero creemos que vale la pena insistir con números concretos. Junio es temporada fuerte para comida rápida en delivery: el frío mantiene a los clientes en casa. Para un negocio con el volumen de ustedes, estimamos unos 15 pedidos diarios de $9.000 promedio → le están entregando a Rappi aproximadamente $1.000.000 al mes en comisiones (28%). Con RepartoJusto ese costo baja a $225.000. La diferencia: $775.000 al mes que se quedan en el negocio en vez de irse a la app. Sin contrato, registro gratuito, pueden seguir en Rappi y sumar RepartoJusto como canal de menor costo. repartojusto-production.up.railway.app ¿Esta semana lo conversamos?"
+
+---
+
+**[18] La Casita Del Sabor — Reactivación Junio (versión actualizada 13/06):**
+"Hola La Casita Del Sabor! Les escribe RepartoJusto, los contactamos en mayo. En junio la comida casera en delivery tiene peak fuerte — los clientes buscan almuerzo caliente sin salir al frío. Los números concretos para ustedes: con unas 12 entregas diarias de $7.000 promedio, Rappi les cobra cerca de $630.000 al mes en comisiones (28%). Con RepartoJusto ese costo baja a $180.000 — son $450.000 mensuales que se quedan en el negocio. Sin contrato, registro gratis, pueden mantener Rappi y sumar nuestra plataforma como canal de menor costo. repartojusto-production.up.railway.app ¿Hablamos esta semana?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-13)
+
+**[31] Barrio Chino Villa Alemana — Presentación:**
+"Hola Barrio Chino! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi y PedidosYa — y tenemos algo importante que mostrarles: en Rappi, su restaurante aparece listado bajo la categoría 'Quilpué', no Villa Alemana. Eso significa que un cliente local buscando comida china en Villa Alemana podría no encontrarlos. Con RepartoJusto son 100% visibles como negocio de Villa Alemana. Y los números: con pedidos de $10.000 promedio y 15 entregas diarias, Rappi les cobra ~$1.260.000 al mes en comisiones (28%). Con nosotros son $225.000. Además, PedidosYa fue multada en marzo 2026 por la FNE con US$3,8 millones por controlar los precios de sus socios — con RepartoJusto total libertad de precios. Sin contrato, registro gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[32] Tempura Sushi & Sándwich Delivery — Presentación:**
+"Hola Tempura Sushi! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Siendo un negocio delivery-first como el suyo, la estructura de costos impacta directamente cada pedido. Con sushi de ticket alto ($12.000-$18.000), la diferencia entre 28-30% de comisión y $500 fijos es enorme. Para 15 entregas diarias, Rappi o Uber Eats cobran entre $900.000 y $1.300.000 al mes en comisiones. Con RepartoJusto son $225.000, siempre. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. Sin contrato, registro completamente gratuito, pueden mantener sus plataformas actuales y sumar RepartoJusto como canal de menor costo. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -389,3 +423,7 @@
 **Diroom Burger Lounge (#29, agregado 10/06):** Hamburguesería artesanal con más de 10 años de trayectoria en Villa Alemana. Av. Valparaíso 199. Tiene sitio web propio (diroom.cl) e Instagram (@diroom_chile_). Teléfono: (32) 295 0030. Ticket promedio alto ($10.000-$15.000). Ángulo diferenciador: Rappi los agrupa bajo "Quilpué" — RepartoJusto es la plataforma 100% local de Villa Alemana. Potencialmente en Rappi/Uber Eats — confirmar al contactar.
 
 **Poh Che Empanadas & Sandwichs (#30, agregado 10/06):** Local de empanadas, sándwichs, completos y chorrillanas en Salvador Reyes 1162, Villa Alemana. Teléfono: +56 32 324 2360. Confirmado en Uber Eats Y PedidosYa simultáneamente — pagan doble comisión. Argumento FNE especialmente poderoso (están en la plataforma que fue multada). Ticket promedio $4.000-$7.000. Con 15 pedidos/día el ahorro vs. Uber Eats (30%) supera $500.000/mes. Fuente: ubereats.com + pedidosya.cl Villa Alemana.
+
+**Barrio Chino Villa Alemana (#31, agregado 13/06):** Restaurante de comida china en Madrid 300, Villa Alemana. Teléfono: +56 997902765. Instagram: @barriochino.va. Confirmado en Rappi Y PedidosYa. ARGUMENTO KILLER: en Rappi aparece listado bajo la categoría "Quilpué" en vez de "Villa Alemana" — invisibilidad local. RepartoJusto es la única plataforma 100% local. Ticket promedio $8.000-$12.000 (comida china). Con 15 pedidos/día el ahorro frente a Rappi (28%) supera $1.000.000/mes. Argumento FNE también aplicable (en PedidosYa). Fuente: rappi.cl + facebook.com + instagram.
+
+**Tempura Sushi & Sándwich Delivery (#32, agregado 13/06):** Negocio delivery-first de sushi y sándwich en Av. Valparaíso 102, Local 3, Villa Alemana. Tiene Facebook activo. Negocio orientado 100% a delivery — las comisiones de plataforma son su costo principal. Ticket promedio sushi: $12.000-$18.000 (muy alto → máximo ahorro por pedido). Ticket sándwich: $4.000-$6.000. Potencialmente activo en Rappi o Uber Eats — confirmar al contactar. Fuente: Facebook + horario-de-apertura.cl Villa Alemana.
