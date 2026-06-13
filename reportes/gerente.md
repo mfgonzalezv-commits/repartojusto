@@ -1,24 +1,24 @@
 # Informe Ejecutivo RepartoJusto
-**Semana del:** 9 al 15 de mayo de 2026
+**Semana del:** 6 al 12 de junio de 2026
 
 ---
 
 ## Estado General: ⚠️ Atención Requerida
-La plataforma sigue respondiendo HTTP 403 desde acceso externo — el servidor está activo en Railway pero bloqueado para el equipo de agentes; el cuello de botella comercial esta semana es la confirmación de envíos de mensajes a prospectos por parte de Matías.
+La plataforma opera en Railway sin incidentes técnicos, pero el pipeline comercial sigue bloqueado esperando confirmación de Matías, y dos bugs críticos de producto llevan tres semanas sin corrección.
 
 ---
 
 ## Lo que pasó esta semana
 
-- **Pipeline comercial creció a 22 prospectos en Villa Alemana.** El equipo de ventas identificó y redactó mensajes para 22 negocios locales. Cuatro de ellos (Pollería Don Pollo, Pizza House, Sushi Zen, Rotisería El Gaucho) ya recibieron una segunda ola de mensajes con argumentos de ahorro calculados en pesos concretos. El pipeline tiene 28 borradores listos — el avance depende de que Matías los envíe.
+- **Pipeline comercial alcanzó 30 prospectos identificados en Villa Alemana.** El agente de Ventas corrió tres veces esta semana (lunes 7, miércoles 9 y jueves 10) y sumó 6 nuevos negocios al radar: Sin Miedo Burgers, El Clandestino (gastronomía peruana), Tribeca Sushi, La Esquina Con Sabor, Diroom Burger Lounge y Poh Che Empanadas. Los mensajes de presentación para todos están listos en `reportes/prospectos.md`. El pipeline total es: 14 contactados + 16 nuevos = 30 negocios. **Ninguno está en estado "Registrado" aún.**
 
-- **Inteligencia competitiva lista para usar.** El agente Investigador publicó su primer reporte completo: PedidosYa enfrenta dos multas millonarias de la FNE en Chile (una por colusión, otra por bloquear libertad de precios de restaurantes). Es el momento de usar ese argumento en mensajes de ventas mientras el tema esté en la prensa. Adicionalmente, Rappi agrupa Villa Alemana bajo "Quilpué" — señal de que no la considera un mercado prioritario. RepartoJusto puede posicionarse como la primera plataforma con identidad local en la zona.
+- **Reactivación junio completada para todos los contactados activos.** Los 12 prospectos con conversación iniciada en mayo tienen un mensaje personalizado de reactivación, redactado con el argumento de la multa FNE a PedidosYa y cálculos de ahorro en pesos concretos por negocio. El agente de Ventas también identificó el mejor momento estacional: botillerías y cafeterías tienen peak de invierno en junio. Todos los mensajes están listos — la acción pendiente es que Matías los envíe.
 
-- **Detectado un bug crítico que bloquea las notificaciones push a riders.** El agente Aprendiz encontró que las notificaciones push a los repartidores nunca llegan cuando la app está cerrada, debido a un error de una sola línea en el código (`req.user.id` en lugar de `req.usuario.id`). Esto puede estar reduciendo la tasa de primera asignación de pedidos — los riders solo reciben ofertas si tienen la app abierta en ese momento. Este fix es prioridad máxima para la semana que viene.
+- **Sin cambios técnicos en el código esta semana.** El único movimiento en el repositorio fueron los commits del monitor (horario) y ventas. No hubo ninguna corrección de bugs ni mejora de producto. El código es idéntico al de la semana pasada.
 
-- **Pedidos agendados nunca se despachan.** La plataforma permite crear pedidos con hora de retiro programada, pero el mecanismo automático que los activa 10 minutos antes nunca fue implementado. Es un diferenciador competitivo real que está dormido en el código.
+- **El bug de notificaciones push a riders sigue sin corregir — tercera semana consecutiva.** Cuando los riders cierran la app no reciben ofertas de pedidos. La corrección es una línea de código. Cada semana que pasa, la tasa de primera asignación queda por debajo de su potencial real.
 
-- **Dos agentes no corrieron esta semana.** El agente de Mejoras (lunes) y el agente de Seguridad (miércoles) no generaron reportes. No hay registro de correcciones aplicadas al código ni de auditoría de seguridad esta semana.
+- **El servidor responde 403 solo para los agentes, no para usuarios reales.** El monitor reporta "caído" porque el entorno de ejecución no tiene permiso de red para alcanzar Railway. La plataforma está operativa para negocios, riders y clientes; el problema es de configuración del entorno de análisis, no del producto.
 
 ---
 
@@ -30,36 +30,35 @@ La plataforma sigue respondiendo HTTP 403 desde acceso externo — el servidor e
 | Notificaciones Xiaomi — requiere permiso manual | ⚙️ En seguimiento |
 | Audio en Chrome móvil | ✅ Resuelto |
 | Zona horaria Railway vs Chile | ✅ Resuelto |
-| Servidor responde 403 desde acceso externo | 🔴 Pendiente — sin cambios |
-| Push notifications a riders no llegan (bug una línea) | 🔴 Nuevo — sin corregir |
-| Pedidos agendados no se despachan (sin scheduler) | 🔴 Nuevo — sin corregir |
+| Servidor responde 403 desde entorno de agentes | ⚙️ Problema de configuración interna — Railway opera con normalidad |
+| Bug push-subscription riders (`req.user.id`) | 🔴 Semana 3 sin corrección |
+| Pedidos agendados no se despachan (sin scheduler) | 🔴 Semana 3 sin corrección |
+| Incentivos a riders no se registran contablemente | 🔴 Sin corrección |
 
 ---
 
 ## Alertas
 
-🚨 **Bug crítico en notificaciones push a riders** — `backend/src/routes/riders.js` ~línea 110. Cambiar `req.user.id` por `req.usuario.id`. Una línea de código; impacto directo en la tasa de asignación de pedidos.
+🚨 **Agentes Mejoras y Seguridad no han corrido en tres semanas.** No existe `reportes/mejoras.md` ni `reportes/seguridad.md`. Todos los bugs identificados por el Aprendiz el 12/05 siguen abiertos. Sin auditoría de seguridad activa.
 
-🚨 **28 borradores de ventas sin enviar** — el pipeline comercial está paralizado esperando confirmación de Matías. Sin envíos, el trabajo de prospección no genera resultados.
+🚨 **28+ borradores acumulados sin enviar** — presentaciones y reactivaciones desde mayo hasta hoy. El pipeline comercial tiene 30 prospectos mapeados y argumentos preparados, pero 0 registros. El cuello de botella es la confirmación de Matías.
 
-⚠️ **Agentes Mejoras y Seguridad no corrieron** — `reportes/mejoras.md` y `reportes/seguridad.md` no existen. Sin mejoras implementadas ni auditoría de seguridad esta semana.
-
-⚠️ **Ventana de oportunidad de 30 días** — La crisis legal de PedidosYa con la FNE (multas US$3,8M y US$74M) es noticia ahora. Usar ese argumento en la 3ª ola de mensajes antes de que pierda vigencia.
+⚠️ **Ventana FNE-PedidosYa en su última semana útil** — la multa de US$3,8M fue noticia en marzo 2026. A este ritmo el tema perderá vigencia antes de usarse en los mensajes.
 
 ---
 
 ## Decisiones tomadas
 
-- El agente Investigador completó por primera vez el mapeo de debilidades de Rappi y PedidosYa en la zona — argumento de ventas nuclear disponible para próximas oleadas.
-- El agente Ventas escaló a segunda ola para los 4 prospectos con mayor potencial de ahorro mensual (cálculos en pesos concretos por negocio).
-- El agente Aprendiz identificó 10 ineficiencias en el código; priorizó 4 correcciones de alta relación costo/impacto para el agente Mejoras.
+- El agente de Ventas incorporó el argumento de la multa FNE en todos los mensajes de reactivación de junio y en las presentaciones de nuevos prospectos en PedidosYa (#27, #28, #30).
+- Los prospectos Librería El Saber (#12) y Heladería Glacial (#14) fueron postergados a agosto — decisión acertada dada su estacionalidad.
+- El monitor pasó a verificación horaria — útil una vez que se resuelva el problema de allowlist de red.
 
 ---
 
 ## Prioridades próxima semana
 
-1. **Matías: enviar los 28 borradores pendientes** — sin esto el pipeline no avanza. Los mensajes de primera presentación y seguimiento están listos en `reportes/prospectos.md`.
-2. **Mejoras: corregir bug push-subscription** — `req.user.id` → `req.usuario.id` en `backend/src/routes/riders.js` ~línea 110. Una línea, impacto alto en asignación de pedidos.
-3. **Mejoras: implementar scheduler de pedidos agendados** — `node-cron` que active pedidos con `estado='agendado'` 10 minutos antes de `hora_retiro`. Desbloquea un diferenciador competitivo real.
-4. **Mejoras: agregar 3 índices a la base de datos** — `idx_pagos_flow_token`, `idx_pedidos_created_at`, `idx_pedidos_entregado_at`. Mejora el rendimiento de pagos y métricas admin.
-5. **Ventas: preparar 3ª ola con argumento PedidosYa-FNE** — aprovechar la ventana de 30 días mientras la multa sea noticia. Argumento nuclear disponible en `reportes/investigador.md`.
+1. **Matías: enviar al menos los 14 mensajes de reactivación junio a los Contactados** — están listos, son urgentes y el argumento FNE pierde fuerza con cada semana que pasa. Lista en `reportes/prospectos.md`.
+2. **Mejoras: corregir bug push-subscription** — `backend/src/routes/riders.js` ~línea 110: cambiar `req.user.id` por `req.usuario.id`. Una línea, lleva tres semanas pendiente.
+3. **Mejoras: implementar scheduler de pedidos agendados** — `node-cron` que active pedidos con `estado='agendado'` 10 minutos antes de `hora_retiro`. Feature dormida que es diferenciador real frente a Rappi.
+4. **Seguridad: correr auditoría** — llevan tres semanas sin revisar el código. La plataforma maneja pagos y datos de usuarios.
+5. **Confirmar a Matías qué mensajes salieron en mayo** — sin ese dato el pipeline no puede avanzar de estados y los 0 registros no reflejan el trabajo real acumulado.
