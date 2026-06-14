@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-14T10:02:31Z
+**Última verificación:** 2026-06-14T11:02:45Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red en el entorno de ejecución — host `repartojusto-production.up.railway.app` no está en la lista de egress permitidos. No se pudo completar el health check. Agregar el host en la configuración de red del entorno (Network Egress Settings) para habilitar el monitoreo.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el entorno de ejecución bloqueó el acceso (HTTP 403: Host not in allowlist). Configurar egress de red para permitir este host, o verificar manualmente el endpoint.
