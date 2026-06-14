@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-14T03:02:39Z
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** Error de red en el entorno de ejecución — host `repartojusto-production.up.railway.app` no está en la lista de egress permitidos. HTTP 403: "Host not in allowlist". Para habilitar, agregar el host a la política de egress del entorno en code.claude.com.
+**Última verificación:** 2026-06-14T04:02:58Z
+**Estado:** ❌ CAÍDO
+**Detalle:** HTTP 403 — Host no permitido por política de egress del entorno de ejecución. El host `repartojusto-production.up.railway.app` debe agregarse a la lista de egress permitidos. No se pudo verificar el endpoint `/health`.
