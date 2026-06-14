@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-13
+**Actualizado:** 2026-06-14
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -36,10 +36,44 @@
 | 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — doble plataforma Uber Eats+PedidosYa, argumento FNE |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — listado bajo Quilpué en Rappi, argumento local + FNE |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — negocio delivery-first, ticket alto sushi |
+| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — en PedidosYa (argumento FNE directo), 20 años de trayectoria |
+| 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-14)
+
+> **NOTA PARA MATÍAS:** Hoy se agregan 2 nuevos prospectos encontrados en directorios locales de Villa Alemana: Casa Festa (#33, activo en PedidosYa — argumento FNE especialmente relevante) y Petit Bak Comidas A Domicilio (#34, delivery-first en Av. Valparaíso). También se redactan mensajes de junio frescos para #15 Melt Pizzas y #16 Maranatha Café, cuyas presentaciones de mayo (35+ días sin confirmar) pueden no haberse enviado.
+>
+> **Recordatorio crítico:** Ya van 35+ días desde los primeros borradores de mayo (10/05). Confirmar qué mensajes salieron es el paso más urgente para desbloquear el pipeline. Basta con una respuesta rápida del tipo "envié del #1 al #14" o "no mandé nada aún" para poder actualizar todos los estados.
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-14)
+
+**[33] Casa Festa Cocina y Repostería — Presentación:**
+"Hola Casa Festa! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los conocemos de la calle Madrid 1090 — llevan más de 20 años haciendo tortas, pizzas, empanadas y paellas de calidad en Villa Alemana. Los vemos activos en PedidosYa, y hay un dato reciente que creemos importante compartirles: en marzo 2026 la FNE multó a PedidosYa con US$3,8 millones por impedir que sus restaurantes socios cobraran precios distintos en sus propios canales (WhatsApp, web propia). Con RepartoJusto eso no existe: libertad total de precios, siempre. Y el número concreto: para una torta de $25.000, PedidosYa cobra hasta $7.000 de comisión (28%). Con nosotros son $500 fijos, siempre. Sin contrato, registro completamente gratuito, pueden mantener PedidosYa y sumar RepartoJusto como canal de menor costo. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[34] Petit Bak Comidas A Domicilio — Presentación:**
+"Hola Petit Bak! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Siendo un negocio orientado a comidas a domicilio en Av. Valparaíso, la estructura de costos de cada entrega impacta directamente la rentabilidad. Si trabajan con Rappi, PedidosYa o Uber Eats, hoy pagan entre 25% y 30% por cada pedido vendido. Con RepartoJusto el costo es $500 fijo por pedido entregado — sin porcentaje sobre la venta, sin contrato, registro completamente gratuito. Para un pedido de $8.000, la diferencia puede ser de hasta $1.900 por entrega que se queda en el negocio en vez de irse a la app. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### MENSAJES FRESCOS JUNIO — Nuevos #15 y #16 (presentaciones mayo sin confirmar, 35+ días)
+
+**[15] Melt Pizzas — Presentación Junio (versión actualizada 14/06):**
+"Hola Melt Pizzas! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los vemos activos en Rappi — en junio el delivery de pizza tiene peak fuerte con el frío. Un cálculo directo: con 10 pizzas de $12.000 al día, hoy le están pagando a Rappi aproximadamente $400.000 al mes en comisiones (28%). Con RepartoJusto ese costo baja a $150.000 — más de $250.000 al mes que se quedan en el negocio. Sin contrato, registro gratis, pueden mantener Rappi y sumar RepartoJusto como canal paralelo. repartojusto-production.up.railway.app ¿Esta semana lo conversamos?"
+
+---
+
+**[16] Maranatha Café — Presentación Junio (versión actualizada 14/06):**
+"Hola Maranatha Café! Les escribe RepartoJusto, plataforma de delivery local en Villa Alemana. Con el frío de junio, los desayunos y almuerzos a domicilio tienen uno de sus peaks más altos del año — la gente prefiere pedir desde casa. Con RepartoJusto el costo es $500 fijo por pedido entregado, sin porcentaje sobre la venta. Para un desayuno de $5.000, la diferencia vs. Rappi o PedidosYa (28%) es de $900 por pedido que se queda en el negocio. Sin contrato, registro completamente gratis. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
@@ -427,3 +461,7 @@
 **Barrio Chino Villa Alemana (#31, agregado 13/06):** Restaurante de comida china en Madrid 300, Villa Alemana. Teléfono: +56 997902765. Instagram: @barriochino.va. Confirmado en Rappi Y PedidosYa. ARGUMENTO KILLER: en Rappi aparece listado bajo la categoría "Quilpué" en vez de "Villa Alemana" — invisibilidad local. RepartoJusto es la única plataforma 100% local. Ticket promedio $8.000-$12.000 (comida china). Con 15 pedidos/día el ahorro frente a Rappi (28%) supera $1.000.000/mes. Argumento FNE también aplicable (en PedidosYa). Fuente: rappi.cl + facebook.com + instagram.
 
 **Tempura Sushi & Sándwich Delivery (#32, agregado 13/06):** Negocio delivery-first de sushi y sándwich en Av. Valparaíso 102, Local 3, Villa Alemana. Tiene Facebook activo. Negocio orientado 100% a delivery — las comisiones de plataforma son su costo principal. Ticket promedio sushi: $12.000-$18.000 (muy alto → máximo ahorro por pedido). Ticket sándwich: $4.000-$6.000. Potencialmente activo en Rappi o Uber Eats — confirmar al contactar. Fuente: Facebook + horario-de-apertura.cl Villa Alemana.
+
+**Casa Festa Cocina y Repostería (#33, agregado 14/06):** Tortas, pizzas, empanadas, paellas y comida gourmet en Madrid 1090, Villa Alemana. Teléfono: (32) 2950116. Email: casafestaventas@gmail.com. Facebook: @casafestacocinareposteria. Más de 20 años de trayectoria — negocio establecido y de alto ticket. Confirmado en PedidosYa — argumento FNE directo y especialmente relevante (están en la plataforma multada). Ticket promedio tortas: $20.000-$30.000, pizzas: $10.000-$15.000. Con 10 pedidos/día, el ahorro vs. PedidosYa (28%) supera $350.000/mes. Fuente: mundochileno.com + casafesta.cl + PedidosYa Villa Alemana.
+
+**Petit Bak Comidas A Domicilio (#34, agregado 14/06):** Negocio de comidas a domicilio en Av. Valparaíso 1202, Oficina 9, Villa Alemana. Delivery-focused desde el nombre. Plataformas actuales por confirmar al contactar. Ticket promedio estimado: $5.000-$10.000. Fuente: mundochileno.com/villa-alemana/comida+a+domicilio.
