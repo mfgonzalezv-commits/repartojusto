@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-14
+**Actualizado:** 2026-06-15
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -38,10 +38,44 @@
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — negocio delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — en PedidosYa (argumento FNE directo), 20 años de trayectoria |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
+| 35 | Buena Onda Sushi | Sushi | Huanhuali 997, Villa Alemana | Nuevo | — | Presentación redactada 15/06 — en Uber Eats + Rappi, argumento doble comisión |
+| 36 | Miel Delivery | Repostería / cocktails | Villa Alemana (Peña Blanca, Belloto) | Nuevo | — | Presentación redactada 15/06 — delivery-first por WhatsApp, argumento canal propio sin comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-15)
+
+> **NOTA PARA MATÍAS:** Hoy se agregan 2 prospectos nuevos — Buena Onda Sushi (#35, activo en Uber Eats Y Rappi simultáneamente, Huanhuali 997) y Miel Delivery (#36, delivery-first por WhatsApp con repostería y cocktails, sin plataformas grandes). También se redactan versiones junio frescas para #21 Maju Sushi & Burger y #23 Pizzas Ropzila, cuyos drafts de mayo (32-30 días) no tienen confirmación de envío.
+>
+> **Recordatorio:** Ya son 36+ días desde los primeros borradores de mayo (10/05). Cualquier confirmación de Matías sobre qué mensajes salieron (aunque sea "no envié nada aún") desbloquea el pipeline completo.
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-15)
+
+**[35] Buena Onda Sushi — Presentación:**
+"Hola Buena Onda Sushi! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en Uber Eats y Rappi simultáneamente — excelente presencia digital. Una pregunta concreta: ¿cuánto le pagan en total a esas dos plataformas por mes? Con rolls de sushi de $12.000-$18.000 promedio, Uber Eats cobra 30% y Rappi entre 25-28% por cada pedido. Para 15 entregas diarias, pueden estar pagando más de $900.000 al mes solo en comisiones. Con RepartoJusto suman un tercer canal por $500 fijos por pedido entregado — sin porcentaje, sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes en Huanhuali. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[36] Miel Delivery — Presentación:**
+"Hola Miel Delivery! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@miel_delivery) — tortas, repostería y cocktails con delivery propio por WhatsApp, excelente. Tienen exactamente el modelo que más les conviene: canal directo. Con RepartoJusto pueden potenciarlo sumando una plataforma local sin los costos de Rappi o PedidosYa (25-30% de comisión por pedido). Nuestro modelo: $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una torta de $22.000, la diferencia vs. Rappi es de más de $5.600 por pedido que se queda en el negocio. Sin contrato, registro completamente gratuito, y conservan su canal WhatsApp sin restricciones de precio. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### REFRESH JUNIO — Nuevos con drafts de mayo sin confirmar (30+ días)
+
+**[21] Maju Sushi & Burger — Versión Junio (15/06, actualización del 14/05):**
+"Hola Maju Sushi & Burger! Les escribe RepartoJusto, los contactamos en mayo. Retomamos porque junio es temporada fuerte para delivery de sushi: el frío mantiene a los clientes en casa. Para un combo sushi + hamburguesa de $15.000-$18.000, la diferencia entre pagar 28% a Rappi ($4.200-$5.040) y pagar $500 fijos con nosotros es significativa — por pedido y acumulada al mes. Con 15 entregas diarias, son más de $600.000 mensuales que podrían quedarse en el negocio en vez de irse a la app. Sin contrato, registro gratuito, pueden mantener sus plataformas actuales y sumar RepartoJusto como canal de menor costo. repartojusto-production.up.railway.app ¿Esta semana lo conversamos?"
+
+---
+
+**[23] Pizzas Ropzila — Versión Junio (15/06, actualización del 16/05):**
+"Hola Ropzila! De RepartoJusto, los contactamos en mayo. Junio es peak de pizza en delivery: el frío pone a la gente en casa. Si tienen 20 pedidos diarios de $12.000 promedio distribuidos en sus 3 plataformas actuales, pueden estar pagando más de $2.000.000 al mes combinado en comisiones (28-30% cada app). Con RepartoJusto suman un canal más por $500 fijos por pedido — sin porcentaje. Cada pedido que llega por RepartoJusto en vez de por Rappi les ahorra hasta $2.860. Sin contrato, sin comisión, registro gratuito. repartojusto-production.up.railway.app ¿Esta semana le damos?"
 
 ---
 
@@ -465,3 +499,7 @@
 **Casa Festa Cocina y Repostería (#33, agregado 14/06):** Tortas, pizzas, empanadas, paellas y comida gourmet en Madrid 1090, Villa Alemana. Teléfono: (32) 2950116. Email: casafestaventas@gmail.com. Facebook: @casafestacocinareposteria. Más de 20 años de trayectoria — negocio establecido y de alto ticket. Confirmado en PedidosYa — argumento FNE directo y especialmente relevante (están en la plataforma multada). Ticket promedio tortas: $20.000-$30.000, pizzas: $10.000-$15.000. Con 10 pedidos/día, el ahorro vs. PedidosYa (28%) supera $350.000/mes. Fuente: mundochileno.com + casafesta.cl + PedidosYa Villa Alemana.
 
 **Petit Bak Comidas A Domicilio (#34, agregado 14/06):** Negocio de comidas a domicilio en Av. Valparaíso 1202, Oficina 9, Villa Alemana. Delivery-focused desde el nombre. Plataformas actuales por confirmar al contactar. Ticket promedio estimado: $5.000-$10.000. Fuente: mundochileno.com/villa-alemana/comida+a+domicilio.
+
+**Buena Onda Sushi (#35, agregado 15/06):** Restaurante de sushi en Huanhuali 997, Villa Alemana. Confirmado en Uber Eats Y Rappi simultáneamente — pagan doble comisión. Facebook: @buenaondasushi. Ticket promedio sushi: $12.000-$18.000 (alto). Con 15 entregas/día, el ahorro vs. Uber Eats (30%) + Rappi (28%) puede superar $900.000/mes vs. RepartoJusto. Argumento doble comisión es el más potente. Fuente: ubereats.com + rappi.cl Villa Alemana.
+
+**Miel Delivery (#36, agregado 15/06):** Negocio delivery-first de tortas, repostería, cocktails y aperitivos vegetarianos. Zona: Villa Alemana, Peña Blanca y Belloto. Facebook: @mieldelivery. Instagram: @miel_delivery. WhatsApp: +56956355774. Opera principalmente por canal directo (WhatsApp) — NO está en las grandes plataformas. Argumento principal: potenciar su canal directo con logística sin pagar comisiones porcentuales. Para una torta de $22.000, la diferencia vs. Rappi (28%) es $5.600 por pedido. Negocio con identidad local fuerte — muy alineado con propuesta de valor RepartoJusto. Fuente: facebook.com/mieldelivery + instagram @miel_delivery.
