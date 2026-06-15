@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-15T00:00:00Z
+**Última verificación:** 2026-06-15T02:03:00Z
 **Estado:** ❌ NO VERIFICADO
 **Detalle:** No se pudo alcanzar https://repartojusto-production.up.railway.app/health — el entorno de ejecución bloqueó la conexión saliente (host no en allowlist de egress). HTTP 403 desde proxy de red del sandbox. Estado real del servidor desconocido.
