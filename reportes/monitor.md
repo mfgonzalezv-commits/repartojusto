@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-16T00:00:00Z
-**Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar — el entorno de ejecución bloqueó el acceso saliente a `repartojusto-production.up.railway.app` (egress policy: host not in allowlist). HTTP 403 desde el proxy de red, no desde el servidor de destino. Se requiere agregar el host a la configuración de egress del entorno para poder verificar el endpoint `/health`.
+**Última verificación:** 2026-06-16T01:02:55Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El entorno de ejecución remota bloqueó la solicitud saliente — `repartojusto-production.up.railway.app` no está en la lista de hosts permitidos (egress policy). No se pudo determinar el estado real del servidor. Acción requerida: agregar el host a la configuración de red del entorno en code.claude.com.
