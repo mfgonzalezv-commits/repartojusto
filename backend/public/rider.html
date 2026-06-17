@@ -1117,6 +1117,7 @@ function liberarWakeLock() {
 
 function iniciarAlertas(tarifa) {
   if (vibracionInterval) return; // ya activa, no duplicar
+  if (!audioDesbloqueado) return; // sonido no activado, no disparar alertas visuales
   // 1. Sonido
   sonarAlarma();
   // 2. Flash visual de pantalla
