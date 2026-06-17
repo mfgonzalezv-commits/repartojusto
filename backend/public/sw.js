@@ -1,7 +1,7 @@
 // Service Worker — Reparto Justo Rider PWA
-// v5 — historial agrupado por fecha
+// v7 — postMessage para despertar audio en tab
 
-const CACHE = 'rj-rider-v6';
+const CACHE = 'rj-rider-v7';
 const PRECACHE = ['/manifest-rider.json', '/alarma.wav'];
 
 // ── Instalación ───────────────────────────────────────────────────────────────
@@ -51,20 +51,28 @@ self.addEventListener('notificationclick', function(event) {
   );
 });
 
-// ── Push: notificación OS con sonido del sistema ──────────────────────────────
+// ── Push: notificación OS + despertar audio en la tab ────────────────────────
 self.addEventListener('push', function(event) {
   if (!event.data) return;
   let data = {};
   try { data = event.data.json(); } catch { data = { title: '¡Nuevo pedido!', body: event.data.text() }; }
-  event.waitUntil(
-    self.registration.showNotification(data.title || '🔔 ¡Nuevo pedido!', {
-      body: data.body || '¡Un pedido está esperando tu respuesta!',
-      icon: '/icon-192.png',
-      badge: '/icon-192.png',
-      tag: 'pedido-nuevo',
-      renotify: true,
-      requireInteraction: true,
-      vibrate: [400, 100, 400, 100, 800, 200, 400],
-    })
-  );
+
+  const notifPromise = self.registration.showNotification(data.title || '🔔 ¡Nuevo pedido!', {
+    body: data.body || '¡Un pedido está esperando tu respuesta!',
+    icon: '/icon-192.png',
+    badge: '/icon-192.png',
+    tag: 'pedido-nuevo',
+    renotify: true,
+    requireInteraction: true,
+    vibrate: [400, 100, 400, 100, 800, 200, 400],
+  });
+
+  // Despertar la tab del rider (si está abierta en segundo plano) para que suene alarma.wav
+  const wakePromise = self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clients => {
+    clients.filter(c => c.url.includes('rider')).forEach(c => {
+      c.postMessage({ type: 'PEDIDO_PUSH', data });
+    });
+  });
+
+  event.waitUntil(Promise.all([notifPromise, wakePromise]));
 });
