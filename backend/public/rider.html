@@ -797,6 +797,8 @@ let token = localStorage.getItem('rj_rider_token');
 let usuario = JSON.parse(localStorage.getItem('rj_rider_usuario') || 'null');
 let socket = null;
 let disponible = false;
+let pedidosConocidos = new Set(); // IDs ya vistos — alarma solo para nuevos
+let listaInicializada = false;    // primera carga no alarma
 let pedidoActivo = null;
 let watchId = null;
 let mapaNav = null;
@@ -1397,6 +1399,8 @@ $('toggle-disponible').addEventListener('change', async (e) => {
     });
 
     if (disponible) {
+      pedidosConocidos = new Set();
+      listaInicializada = false; // primer poll tras ir online no alarma
       iniciarGPS();
       cargarDisponibles();
       iniciarTurno();
@@ -1856,11 +1860,19 @@ const COMPAT_LABEL = {
 
 function renderDisponibles(pedidos) {
   const container = $('lista-disponibles');
-  const hayCompatibles = pedidos.some(p => p.compatibilidad !== null);
-  if (!hayCompatibles && !ofertaActual) {
-    detenerAlertas(); // lista vacía → parar alarma
-  } else if (hayCompatibles && !vibracionInterval && !ofertaActual) {
-    iniciarAlertas(pedidos.find(p => p.compatibilidad !== null)?.tarifa_entrega); // fallback: socket no llegó
+  const compatibles = pedidos.filter(p => p.compatibilidad !== null);
+  if (!compatibles.length && !ofertaActual) {
+    detenerAlertas();
+    pedidosConocidos = new Set();
+  } else if (compatibles.length) {
+    const nuevos = compatibles.filter(p => !pedidosConocidos.has(p.id));
+    if (!listaInicializada) {
+      // Primera carga o primer poll tras ir online: registrar sin alarmar
+      listaInicializada = true;
+    } else if (nuevos.length > 0 && !ofertaActual) {
+      iniciarAlertas(nuevos[0].tarifa_entrega);
+    }
+    pedidosConocidos = new Set(compatibles.map(p => p.id));
   }
   if (!pedidos.length) {
     container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">Sin pedidos disponibles ahora</div></div>';
