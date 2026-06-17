@@ -3,541 +3,447 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reparto Justo — Brochure</title>
+<title>Reparto Justo — Brochure 1/4 carta</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --amarillo: #FFCC00;
-    --negro: #1C1C1C;
-    --navy: #0F172A;
-    --rojo: #DC2626;
-    --verde: #16A34A;
-    --gris: #F4F6F8;
-    --text2: #64748B;
-  }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Inter', sans-serif;
-    color: var(--negro);
-    background: white;
+    background: #CBD5E1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 40px 20px;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  /* ── PÁGINAS ── */
-  .page {
-    width: 210mm;
-    min-height: 297mm;
-    padding: 14mm 16mm;
-    background: white;
-    position: relative;
-    overflow: hidden;
-    page-break-after: always;
+  .label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #64748B;
+    margin-bottom: 8px;
   }
-  .page:last-child { page-break-after: auto; }
 
-  /* ── HEADER ── */
-  .header {
-    background: var(--navy);
-    border-radius: 14px;
-    padding: 18px 24px;
+  /* ── CARA ── */
+  .cara {
+    width: 108mm;
+    height: 140mm;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 40px rgba(0,0,0,.25);
+  }
+
+  /* ══ CARA 1 — FRENTE ══ */
+  .cara-1 {
+    background: linear-gradient(155deg, #0F172A 0%, #1B3A5C 55%, #0F172A 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 7mm 7mm 6mm;
+  }
+
+  /* acento decorativo */
+  .cara-1::before {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(255,204,0,.08);
+    pointer-events: none;
+  }
+  .cara-1::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: -30px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: rgba(255,204,0,.05);
+    pointer-events: none;
+  }
+
+  .c1-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 18px;
+    margin-bottom: 6mm;
   }
   .brand {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 22px;
-    color: var(--amarillo);
+    font-size: 14px;
+    color: #FFCC00;
+    letter-spacing: -.01em;
   }
   .brand span { color: white; }
-  .header-tagline {
-    font-size: 11px;
-    color: rgba(255,255,255,.55);
-    text-align: right;
-    line-height: 1.5;
-  }
-  .header-tagline strong { color: var(--amarillo); display: block; font-size: 13px; }
-
-  /* ── HERO P1 ── */
-  .hero {
-    text-align: center;
-    padding: 20px 10px 18px;
-  }
-  .hero h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    font-weight: 900;
-    line-height: 1.12;
-    margin-bottom: 10px;
-  }
-  .hero h1 em { color: var(--amarillo); font-style: normal; background: var(--navy); padding: 2px 8px; border-radius: 6px; }
-  .hero p {
-    font-size: 13px;
-    color: var(--text2);
-    max-width: 480px;
-    margin: 0 auto;
-    line-height: 1.65;
+  .badge-sin {
+    background: rgba(255,204,0,.15);
+    border: 1px solid rgba(255,204,0,.35);
+    border-radius: 20px;
+    font-size: 8px;
+    font-weight: 700;
+    color: #FFCC00;
+    padding: 3px 8px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
   }
 
-  /* ── ALERTA ── */
-  .alerta {
-    background: #FEF2F2;
-    border: 1.5px solid #FECACA;
-    border-radius: 10px;
-    padding: 11px 18px;
-    font-size: 12px;
-    color: var(--rojo);
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 18px;
-  }
-  .alerta strong { font-weight: 900; }
-
-  /* ── SECCIÓN TÍTULO ── */
-  .sec-titulo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 900;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .sec-titulo::after {
-    content: '';
+  .c1-hero {
     flex: 1;
-    height: 2px;
-    background: var(--gris);
-    border-radius: 2px;
-  }
-
-  /* ── CARDS PROBLEMA ── */
-  .prob-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
-  .prob-card {
-    background: #FFF5F5;
-    border: 1.5px solid #FECACA;
-    border-radius: 12px;
-    padding: 14px 12px;
-  }
-  .prob-card .emoji { font-size: 22px; margin-bottom: 6px; }
-  .prob-card h3 { font-size: 11px; font-weight: 800; color: var(--rojo); margin-bottom: 5px; }
-  .prob-card p { font-size: 10px; color: #6B2222; line-height: 1.5; }
-  .prob-card .cifra { font-size: 22px; font-weight: 900; color: var(--rojo); font-family: 'Montserrat', sans-serif; margin: 6px 0 2px; }
-
-  /* ── COMPARACIÓN ── */
-  .comp-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 6px;
-  }
-  .comp-card { border-radius: 14px; padding: 16px 14px; position: relative; }
-  .comp-card.ellos { background: white; border: 2px solid #FECACA; }
-  .comp-card.nosotros { background: var(--navy); color: white; border: 2px solid var(--amarillo); }
-  .comp-badge {
-    position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
-    background: var(--amarillo); color: var(--negro);
-    font-size: 9px; font-weight: 900; padding: 3px 12px; border-radius: 20px;
-    white-space: nowrap; font-family: 'Montserrat', sans-serif;
-  }
-  .comp-label { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 3px; }
-  .comp-card.ellos .comp-label { color: var(--rojo); }
-  .comp-card.nosotros .comp-label { color: var(--amarillo); }
-  .comp-nombre { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 900; margin-bottom: 12px; }
-  .comp-card.ellos .comp-nombre { color: var(--rojo); }
-  .comp-card.nosotros .comp-nombre { color: white; }
-  .comp-item {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,.06); font-size: 11px; gap: 6px;
-  }
-  .comp-card.nosotros .comp-item { border-color: rgba(255,255,255,.08); }
-  .comp-item:last-child { border-bottom: none; }
-  .comp-item .lbl { color: var(--text2); flex: 1; }
-  .comp-card.nosotros .comp-item .lbl { color: rgba(255,255,255,.55); }
-  .comp-item .val { font-weight: 700; text-align: right; font-size: 11px; }
-  .comp-item .val.mal { color: var(--rojo); }
-  .comp-item .val.bien { color: #16A34A; }
-  .comp-card.nosotros .comp-item .val.bien { color: #4ade80; }
-  .comp-total {
-    margin-top: 10px; padding: 10px; border-radius: 8px;
-    font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 900;
-    text-align: center;
-  }
-  .comp-card.ellos .comp-total { background: #FEF2F2; color: var(--rojo); }
-  .comp-card.nosotros .comp-total { background: rgba(255,204,0,.12); color: var(--amarillo); }
-  .comp-nota { font-size: 9px; color: var(--text2); text-align: center; margin-top: 6px; }
-
-  /* ── AHORRO DESTACADO ── */
-  .ahorro-box {
-    background: linear-gradient(135deg, var(--navy), #1e3a5f);
-    border-radius: 12px;
-    padding: 14px 20px;
-    color: white;
-    text-align: center;
-    margin-top: 14px;
-  }
-  .ahorro-box .num {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    font-weight: 900;
-    color: var(--amarillo);
-    line-height: 1;
-  }
-  .ahorro-box p { font-size: 11px; color: rgba(255,255,255,.65); margin-top: 4px; }
-
-  /* ── PÁGINA 2 ── */
-
-  /* pasos */
-  .pasos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
-  .paso {
-    background: var(--gris);
-    border-radius: 12px;
-    padding: 14px 10px;
-    text-align: center;
-  }
-  .paso-num {
-    width: 32px; height: 32px; border-radius: 50%;
-    background: var(--amarillo); color: var(--negro);
-    font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 15px;
-    display: flex; align-items: center; justify-content: center; margin: 0 auto 8px;
-  }
-  .paso-icon { font-size: 20px; margin-bottom: 6px; }
-  .paso h3 { font-size: 11px; font-weight: 800; margin-bottom: 4px; }
-  .paso p { font-size: 10px; color: var(--text2); line-height: 1.5; }
-
-  /* beneficios */
-  .bene-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
-  .bene-card {
-    border: 1.5px solid #E2E8F0;
-    border-radius: 10px;
-    padding: 12px 10px;
-  }
-  .bene-icon { font-size: 20px; margin-bottom: 6px; }
-  .bene-card h3 { font-size: 11px; font-weight: 800; margin-bottom: 4px; }
-  .bene-card p { font-size: 10px; color: var(--text2); line-height: 1.5; }
-
-  /* precio */
-  .precio-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-bottom: 16px;
-  }
-  .precio-card {
-    background: var(--navy);
-    color: white;
-    border-radius: 14px;
-    padding: 20px 18px;
-    border: 2px solid var(--amarillo);
-  }
-  .precio-monto {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 52px; font-weight: 900;
-    color: var(--amarillo); line-height: 1;
-  }
-  .precio-por { font-size: 11px; color: rgba(255,255,255,.45); margin-top: 4px; margin-bottom: 16px; }
-  .precio-item {
-    display: flex; align-items: flex-start; gap: 8px;
-    font-size: 11px; padding: 7px 0;
-    border-bottom: 1px solid rgba(255,255,255,.07);
-  }
-  .precio-item:last-child { border-bottom: none; }
-  .precio-check { color: #4ade80; font-size: 13px; flex-shrink: 0; }
-
-  .garantia-card {
-    background: var(--gris);
-    border-radius: 14px;
-    padding: 20px 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
   }
-  .garantia-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px; font-weight: 900;
+  .c1-eyebrow {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(255,204,0,.65);
+    margin-bottom: 5px;
   }
-  .garantia-item {
-    display: flex; align-items: center; gap: 8px; font-size: 11px;
-  }
-  .garantia-item .check { color: var(--verde); font-size: 15px; }
-
-  /* CTA final */
-  .cta-final {
-    background: var(--amarillo);
-    border-radius: 14px;
-    padding: 18px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .cta-final h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px; font-weight: 900;
-    color: var(--negro); line-height: 1.2;
-  }
-  .cta-final p { font-size: 11px; color: rgba(0,0,0,.55); margin-top: 4px; }
-  .cta-url {
-    background: var(--negro);
-    color: var(--amarillo);
+  .c1-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 12px;
-    padding: 12px 20px;
-    border-radius: 10px;
-    white-space: nowrap;
-    text-align: center;
+    font-size: 20px;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 8px;
+  }
+  .c1-title em {
+    font-style: normal;
+    color: #FFCC00;
+  }
+  .c1-sub {
+    font-size: 9px;
+    color: rgba(255,255,255,.55);
+    line-height: 1.6;
+    margin-bottom: 6mm;
+  }
+
+  /* comparación mini */
+  .comp-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 5mm;
+  }
+  .comp-box {
+    flex: 1;
+    border-radius: 8px;
+    padding: 8px 9px;
+  }
+  .comp-box.ellos {
+    background: rgba(220,38,38,.12);
+    border: 1px solid rgba(220,38,38,.3);
+  }
+  .comp-box.nosotros {
+    background: rgba(255,204,0,.1);
+    border: 1px solid rgba(255,204,0,.35);
+  }
+  .comp-who {
+    font-size: 7.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 3px;
+  }
+  .comp-box.ellos .comp-who { color: #F87171; }
+  .comp-box.nosotros .comp-who { color: #FFCC00; }
+  .comp-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .comp-box.ellos .comp-price { color: #F87171; }
+  .comp-box.nosotros .comp-price { color: #FFCC00; }
+  .comp-detail {
+    font-size: 7.5px;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+  .comp-box.ellos .comp-detail { color: rgba(248,113,113,.7); }
+  .comp-box.nosotros .comp-detail { color: rgba(255,204,0,.6); }
+
+  /* ahorro pill */
+  .ahorro-pill {
+    background: #FFCC00;
+    border-radius: 6px;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ahorro-pill .num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: #0F172A;
+    line-height: 1;
+  }
+  .ahorro-pill .txt {
+    font-size: 8px;
+    color: rgba(15,23,42,.65);
+    line-height: 1.4;
+    text-align: right;
+    max-width: 55mm;
+  }
+
+  /* ══ CARA 2 — DORSO ══ */
+  .cara-2 {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 7mm 7mm 6mm;
+    border: 2px solid #0F172A;
+  }
+
+  .c2-header {
+    background: #0F172A;
+    margin: -7mm -7mm 6mm;
+    padding: 5mm 7mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .c2-header .brand { font-size: 13px; }
+  .c2-tag {
+    font-size: 7.5px;
+    color: rgba(255,255,255,.5);
+    text-align: right;
     line-height: 1.5;
   }
-  .cta-url span { display: block; font-size: 10px; color: rgba(255,204,0,.6); font-weight: 600; }
+  .c2-tag strong { color: #FFCC00; display: block; }
 
-  /* footer página */
-  .page-footer {
-    position: absolute;
-    bottom: 8mm;
-    left: 16mm; right: 16mm;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .c2-sec {
+    font-family: 'Montserrat', sans-serif;
     font-size: 9px;
-    color: rgba(0,0,0,.3);
-    border-top: 1px solid #E2E8F0;
-    padding-top: 6px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #0F172A;
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #FFCC00;
   }
-  .page-num { font-weight: 700; }
+
+  /* pasos */
+  .pasos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 5mm;
+  }
+  .paso {
+    background: #F8FAFC;
+    border-radius: 7px;
+    padding: 7px 8px;
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .paso-n {
+    width: 18px; height: 18px;
+    background: #0F172A;
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 9px;
+    color: #FFCC00;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .paso-txt h4 {
+    font-size: 8.5px;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 2px;
+  }
+  .paso-txt p { font-size: 7.5px; color: #64748B; line-height: 1.45; }
+
+  /* precio box */
+  .precio-box {
+    background: #0F172A;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4mm;
+  }
+  .precio-num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: #FFCC00;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .precio-info { flex: 1; }
+  .precio-info p {
+    font-size: 8px;
+    color: rgba(255,255,255,.55);
+    line-height: 1.5;
+  }
+  .precio-checks {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+  }
+  .precio-checks span {
+    font-size: 7.5px;
+    color: #4ade80;
+    font-weight: 600;
+  }
+
+  /* CTA */
+  .cta-box {
+    background: #FFCC00;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .cta-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    color: #0F172A;
+    line-height: 1.2;
+  }
+  .cta-box p { font-size: 7.5px; color: rgba(15,23,42,.6); margin-top: 2px; }
+  .cta-qr {
+    background: #0F172A;
+    border-radius: 6px;
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
 
   /* ── PRINT ── */
   @media print {
-    body { margin: 0; }
-    .page { margin: 0; border-radius: 0; }
+    body { background: white; padding: 0; gap: 0; }
+    .label { display: none; }
+    .cara { box-shadow: none; border-radius: 0; page-break-after: always; width: 108mm; height: 140mm; }
+    .cara:last-of-type { page-break-after: auto; }
   }
 
   @page {
-    size: A4;
+    size: 108mm 140mm;
     margin: 0;
   }
 </style>
 </head>
 <body>
 
-<!-- ══════════════ PÁGINA 1 ══════════════ -->
-<div class="page">
+<div class="label">Cara delantera — imprimir</div>
 
-  <div class="header">
-    <div class="brand"><img src="/logo-rj.jpg" style="height:28px;border-radius:4px;vertical-align:middle;margin-right:6px">Reparto<span>Justo</span></div>
-    <div class="header-tagline">
-      <strong>Delivery sin comisiones</strong>
-      para restaurantes · farmacias · minimarkets
-    </div>
+<!-- ══ CARA 1: FRENTE ══ -->
+<div class="cara cara-1">
+
+  <div class="c1-top">
+    <div class="brand">Reparto<span>Justo</span></div>
+    <div class="badge-sin">Sin comisiones</div>
   </div>
 
-  <div class="hero">
-    <h1>Tu negocio merece quedarse<br>con <em>su propia ganancia</em></h1>
-    <p>Las grandes aplicaciones de delivery cobran hasta el 30% de tu venta en comisiones. Con Reparto Justo pagas $500 fijos por pedido y nada más.</p>
-  </div>
+  <div class="c1-hero">
+    <div class="c1-eyebrow">Para restaurantes · farmacias · minimarkets</div>
+    <div class="c1-title">Tu ganancia<br>es <em>tuya.</em><br>No de ellos.</div>
+    <div class="c1-sub">Las grandes apps se llevan hasta el 30% de tu venta. Con Reparto Justo pagas una tarifa fija y punto.</div>
 
-  <div class="alerta">
-    🔴 Con 100 pedidos de $10.000 promedio, las grandes apps se llevan <strong>$300.000 al mes</strong> solo en comisiones — más cobros adicionales a tus clientes.
-  </div>
-
-  <div class="sec-titulo">El problema real</div>
-
-  <div class="prob-grid">
-    <div class="prob-card">
-      <div class="emoji">💸</div>
-      <h3>30% de comisión sobre tu venta</h3>
-      <p>No cobran por la entrega, cobran un porcentaje de lo que tú vendiste. Con ticket $10.000:</p>
-      <div class="cifra">$3.000</div>
-      <p>se llevan por cada pedido.</p>
+    <div class="comp-row">
+      <div class="comp-box ellos">
+        <div class="comp-who">Grandes apps</div>
+        <div class="comp-price">30%</div>
+        <div class="comp-detail">de tu venta por pedido</div>
+      </div>
+      <div class="comp-box nosotros">
+        <div class="comp-who">Reparto Justo</div>
+        <div class="comp-price">$500</div>
+        <div class="comp-detail">fijo por pedido, nada más</div>
+      </div>
     </div>
-    <div class="prob-card">
-      <div class="emoji">😤</div>
-      <h3>También cobran al cliente</h3>
-      <p>Además de cobrarte a ti, le cobran un cargo extra al cliente por "uso de plataforma".</p>
-      <div class="cifra">+$1.000</div>
-      <p>extra que paga tu cliente.</p>
-    </div>
-    <div class="prob-card">
-      <div class="emoji">📉</div>
-      <h3>Lo que pierdes al año</h3>
-      <p>Solo en comisión, con 100 pedidos mensuales de $10.000 promedio, estás regalando:</p>
-      <div class="cifra">$3.600.000</div>
-      <p>al año. Para ellos.</p>
-    </div>
-  </div>
 
-  <div class="sec-titulo">Comparación directa</div>
-
-  <div class="comp-wrap">
-    <div class="comp-card ellos">
-      <div class="comp-label">Lo que pagas hoy</div>
-      <div class="comp-nombre">Grandes Aplicaciones</div>
-      <div class="comp-item"><span class="lbl">Comisión sobre tu venta (30%)</span><span class="val mal">$3.000 por pedido</span></div>
-      <div class="comp-item"><span class="lbl">Cobro adicional al cliente</span><span class="val mal">~$1.000 extra</span></div>
-      <div class="comp-item"><span class="lbl">¿Quién gana más?</span><span class="val mal">❌ Ellos</span></div>
-      <div class="comp-item"><span class="lbl">Datos de tus clientes</span><span class="val mal">❌ Son de ellos</span></div>
-      <div class="comp-item"><span class="lbl">Control de tu operación</span><span class="val mal">❌ Limitado</span></div>
-      <div class="comp-total">$300.000 al mes</div>
+    <div class="ahorro-pill">
+      <div class="num">$250.000</div>
+      <div class="txt">de ahorro mensual<br>con 100 pedidos/mes de $10.000</div>
     </div>
-    <div class="comp-card nosotros">
-      <div class="comp-badge">✓ La alternativa inteligente</div>
-      <div class="comp-label">Lo que pagas con nosotros</div>
-      <div class="comp-nombre">Reparto Justo</div>
-      <div class="comp-item"><span class="lbl">Cargo plataforma por pedido</span><span class="val bien">$500 fijo</span></div>
-      <div class="comp-item"><span class="lbl">Cobro adicional al cliente</span><span class="val bien">✅ $0</span></div>
-      <div class="comp-item"><span class="lbl">¿Quién gana más?</span><span class="val bien">✅ Tú</span></div>
-      <div class="comp-item"><span class="lbl">Datos de tus clientes</span><span class="val bien">✅ Son tuyos</span></div>
-      <div class="comp-item"><span class="lbl">Control de tu operación</span><span class="val bien">✅ Total</span></div>
-      <div class="comp-total">$50.000 al mes</div>
-    </div>
-  </div>
-  <p class="comp-nota">* Basado en 100 pedidos/mes con ticket promedio $10.000</p>
-
-  <div class="ahorro-box">
-    <div class="num">$250.000</div>
-    <p>de ahorro mensual solo en comisión de plataforma · $3.000.000 al año</p>
-  </div>
-
-  <div class="page-footer">
-    <span>Reparto Justo — Delivery sin comisiones · repartojusto-production.up.railway.app</span>
-    <span class="page-num">1 / 2</span>
   </div>
 
 </div>
 
-<!-- ══════════════ PÁGINA 2 ══════════════ -->
-<div class="page">
+<div class="label">Cara trasera — imprimir al dorso</div>
 
-  <div class="header">
-    <div class="brand"><img src="/logo-rj.jpg" style="height:28px;border-radius:4px;vertical-align:middle;margin-right:6px">Reparto<span>Justo</span></div>
-    <div class="header-tagline">
-      <strong>Delivery sin comisiones</strong>
-      para restaurantes · farmacias · minimarkets
+<!-- ══ CARA 2: DORSO ══ -->
+<div class="cara cara-2">
+
+  <div class="c2-header">
+    <div class="brand">Reparto<span>Justo</span></div>
+    <div class="c2-tag"><strong>Delivery sin comisiones</strong>Villa Alemana · Quilpué · Limache</div>
+  </div>
+
+  <div class="c2-sec">Cómo funciona</div>
+
+  <div class="pasos">
+    <div class="paso">
+      <div class="paso-n">1</div>
+      <div class="paso-txt">
+        <h4>Te registras</h4>
+        <p>Sin contrato. En menos de 5 minutos.</p>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">2</div>
+      <div class="paso-txt">
+        <h4>Publicas el pedido</h4>
+        <p>Ingresas la dirección. Rider asignado al instante.</p>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">3</div>
+      <div class="paso-txt">
+        <h4>El rider entrega</h4>
+        <p>Seguimiento en tiempo real para ti y tu cliente.</p>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">4</div>
+      <div class="paso-txt">
+        <h4>Te quedas con todo</h4>
+        <p>Sin % sobre tu venta. Solo $500 de plataforma.</p>
+      </div>
     </div>
   </div>
 
-  <div class="sec-titulo">Cómo funciona</div>
-
-  <div class="pasos-grid">
-    <div class="paso">
-      <div class="paso-icon">📝</div>
-      <div class="paso-num">1</div>
-      <h3>Te registras en minutos</h3>
-      <p>Creas tu cuenta y configuras tu negocio. Sin contratos ni mensualidades.</p>
-    </div>
-    <div class="paso">
-      <div class="paso-icon">📦</div>
-      <div class="paso-num">2</div>
-      <h3>Publicas el pedido</h3>
-      <p>Ingresas la dirección del cliente. El sistema asigna al rider más cercano al instante.</p>
-    </div>
-    <div class="paso">
-      <div class="paso-icon">🛵</div>
-      <div class="paso-num">3</div>
-      <h3>El rider entrega</h3>
-      <p>Tú y tu cliente siguen la entrega en tiempo real desde el celular.</p>
-    </div>
-    <div class="paso">
-      <div class="paso-icon">💰</div>
-      <div class="paso-num">4</div>
-      <h3>La ganancia es tuya</h3>
-      <p>Sin comisión sobre lo que vendiste. Solo $500 de plataforma. El resto, para ti.</p>
+  <div class="precio-box">
+    <div class="precio-num">$500</div>
+    <div class="precio-info">
+      <p>por pedido publicado · sin mensualidad</p>
+      <div class="precio-checks">
+        <span>✓ Sin comisión sobre tus ventas</span>
+        <span>✓ Riders calificados con score</span>
+        <span>✓ Seguimiento en tiempo real</span>
+      </div>
     </div>
   </div>
 
-  <div class="sec-titulo">Todo incluido desde el primer pedido</div>
-
-  <div class="bene-grid">
-    <div class="bene-card">
-      <div class="bene-icon">📍</div>
-      <h3>Seguimiento en tiempo real</h3>
-      <p>Tú y tu cliente ven al rider en el mapa. Menos llamadas, más confianza.</p>
-    </div>
-    <div class="bene-card">
-      <div class="bene-icon">⭐</div>
-      <h3>Riders calificados</h3>
-      <p>Cada rider tiene score de calidad. Los mejores reciben tus pedidos primero.</p>
-    </div>
-    <div class="bene-card">
-      <div class="bene-icon">⏰</div>
-      <h3>Pedidos agendados</h3>
-      <p>Programa entregas a una hora específica. El sistema busca rider 10 min antes.</p>
-    </div>
-    <div class="bene-card">
-      <div class="bene-icon">👥</div>
-      <h3>Directorio de clientes</h3>
-      <p>El sistema guarda a tus clientes. Busca por teléfono y llena el formulario solo.</p>
-    </div>
-    <div class="bene-card">
-      <div class="bene-icon">💬</div>
-      <h3>Chat con el rider</h3>
-      <p>Comunicación directa durante la entrega. Sin intermediarios.</p>
-    </div>
-    <div class="bene-card">
-      <div class="bene-icon">📊</div>
-      <h3>Historial y reportes</h3>
-      <p>Todos tus pedidos y gastos en un panel claro. Decide con datos reales.</p>
-    </div>
-  </div>
-
-  <div class="sec-titulo">Precio único · Sin letra chica</div>
-
-  <div class="precio-wrap">
-    <div class="precio-card">
-      <div class="precio-monto">$500</div>
-      <div class="precio-por">por pedido publicado · cargo de plataforma</div>
-      <div class="precio-item"><span class="precio-check">✓</span><span>Sin comisión sobre tus ventas</span></div>
-      <div class="precio-item"><span class="precio-check">✓</span><span>Sin mensualidad ni contrato mínimo</span></div>
-      <div class="precio-item"><span class="precio-check">✓</span><span>Tarifa de envío va directo al rider</span></div>
-      <div class="precio-item"><span class="precio-check">✓</span><span>Tú decides quién paga el envío</span></div>
-      <div class="precio-item"><span class="precio-check">✓</span><span>Seguimiento, chat y reportes incluidos</span></div>
-    </div>
-    <div class="garantia-card">
-      <h3>Empieza sin riesgo</h3>
-      <div class="garantia-item"><span class="check">✅</span><span>Sin costo de registro</span></div>
-      <div class="garantia-item"><span class="check">✅</span><span>Primer pedido en modo gratuito</span></div>
-      <div class="garantia-item"><span class="check">✅</span><span>Listo en menos de 5 minutos</span></div>
-      <div class="garantia-item"><span class="check">✅</span><span>Sin contrato de permanencia</span></div>
-      <div class="garantia-item"><span class="check">✅</span><span>Cancela cuando quieras</span></div>
-      <div class="garantia-item"><span class="check">✅</span><span>Soporte directo incluido</span></div>
-    </div>
-  </div>
-
-  <div class="cta-final">
+  <div class="cta-box">
     <div>
-      <h2>¿Listo para quedarte<br>con tu ganancia?</h2>
-      <p>Regístrate hoy · En 5 minutos estás operando · Sin tarjeta de crédito para empezar</p>
+      <h3>Empieza hoy<br>sin costo</h3>
+      <p>repartojusto-production.up.railway.app</p>
     </div>
-    <div class="cta-url">
-      repartojusto-production<br>.up.railway.app
-      <span>Entra desde tu celular o computador</span>
-    </div>
-  </div>
-
-  <div class="page-footer">
-    <span>Reparto Justo — Delivery sin comisiones · Villa Alemana · Quilpué · Limache y alrededores</span>
-    <span class="page-num">2 / 2</span>
+    <div class="cta-qr">🛵</div>
   </div>
 
 </div>
