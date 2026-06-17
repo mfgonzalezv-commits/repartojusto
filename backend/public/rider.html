@@ -1860,19 +1860,18 @@ const COMPAT_LABEL = {
 
 function renderDisponibles(pedidos) {
   const container = $('lista-disponibles');
-  const compatibles = pedidos.filter(p => p.compatibilidad !== null);
-  if (!compatibles.length && !ofertaActual) {
+  const tomables = pedidos.filter(p => p.compatibilidad !== null);
+  if (!tomables.length && !ofertaActual) {
     detenerAlertas();
     pedidosConocidos = new Set();
-  } else if (compatibles.length) {
-    const nuevos = compatibles.filter(p => !pedidosConocidos.has(p.id));
+  } else if (tomables.length) {
+    const nuevos = tomables.filter(p => !pedidosConocidos.has(p.id));
     if (!listaInicializada) {
-      // Primera carga o primer poll tras ir online: registrar sin alarmar
       listaInicializada = true;
     } else if (nuevos.length > 0 && !ofertaActual) {
       iniciarAlertas(nuevos[0].tarifa_entrega);
     }
-    pedidosConocidos = new Set(compatibles.map(p => p.id));
+    pedidosConocidos = new Set(tomables.map(p => p.id));
   }
   if (!pedidos.length) {
     container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">Sin pedidos disponibles ahora</div></div>';
