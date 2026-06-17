@@ -28,6 +28,7 @@
     background: linear-gradient(155deg, #0F172A 0%, #1B3A5C 55%, #0F172A 100%);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 6mm 7mm 6mm;
     position: relative;
   }
@@ -86,6 +87,40 @@
     margin-bottom: 3mm;
   }
   .title em { font-style: normal; color: #FFCC00; }
+
+  /* RESUMEN */
+  .resumen {
+    font-size: 8px;
+    color: rgba(255,255,255,.55);
+    line-height: 1.6;
+    margin-bottom: 3mm;
+    padding-bottom: 3mm;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  /* CONTACTO */
+  .contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding-top: 2mm;
+  }
+  .contacto-wsp {
+    background: #25D366;
+    border-radius: 5px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 700;
+    color: white;
+  }
+  .contacto-web {
+    font-size: 7.5px;
+    color: rgba(255,255,255,.35);
+  }
 
   /* COMPARACIÓN */
   .comp-row {
@@ -236,6 +271,8 @@
   <div class="eyebrow">Para restaurantes · farmacias · minimarkets</div>
   <div class="title">Tu ganancia<br>es <em>tuya.</em> No de ellos.</div>
 
+  <div class="resumen">Reparto Justo es una plataforma de delivery local sin comisiones. Los negocios pagan solo $500 por pedido — sin porcentaje sobre la venta. Los riders reciben tarifa directa por km. Sin intermediarios, sin letra chica.</div>
+
   <div class="comp-row">
     <div class="comp-box ellos">
       <div class="comp-who">Grandes apps</div>
@@ -279,6 +316,11 @@
       <p>repartojusto-production.up.railway.app</p>
     </div>
     <div class="cta-btn">Regístrate<br>gratis →</div>
+  </div>
+
+  <div class="contacto">
+    <div class="contacto-wsp">💬 +56 9 6194 5288</div>
+    <div class="contacto-web">· repartojusto-production.up.railway.app</div>
   </div>
 
 </div>
