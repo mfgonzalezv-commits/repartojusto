@@ -222,32 +222,51 @@
 
   /* CTA */
   .cta {
-    background: white;
+    background: #FFCC00;
     border-radius: 7px;
-    padding: 7px 10px;
+    padding: 8px 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px;
+    gap: 6px;
   }
   .cta h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 10px;
+    font-size: 10.5px;
     color: #0F172A;
-    line-height: 1.3;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .cta-divider {
+    width: 24px;
+    height: 2px;
+    background: rgba(15,23,42,.2);
+    border-radius: 2px;
+  }
+  .cta-bottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
   .cta-qr img {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     display: block;
     border-radius: 4px;
+    border: 2px solid #0F172A;
   }
-  .cta-qr p {
-    font-size: 6px;
-    color: #94A3B8;
-    text-align: center;
-    margin-top: 2px;
+  .cta-qr-txt {
+    font-size: 7.5px;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.5;
+  }
+  .cta-qr-txt span {
+    display: block;
+    font-size: 6.5px;
+    font-weight: 500;
+    color: rgba(15,23,42,.55);
   }
 
   @media print {
@@ -305,9 +324,15 @@
 
   <div class="cta">
     <h3>Comienza tu periodo<br>de prueba sin costo</h3>
-    <div class="cta-qr">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=88x88&margin=4&data=https://repartojusto-production.up.railway.app/negocio.html" alt="QR registro">
-      <p>Escanea para<br>registrarte</p>
+    <div class="cta-divider"></div>
+    <div class="cta-bottom">
+      <div class="cta-qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=88x88&margin=4&data=https://repartojusto-production.up.railway.app/negocio.html" alt="QR registro">
+      </div>
+      <div class="cta-qr-txt">
+        Escanea y regístrate<br>en 5 minutos
+        <span>Sin tarjeta · Sin contrato</span>
+      </div>
     </div>
   </div>
 
