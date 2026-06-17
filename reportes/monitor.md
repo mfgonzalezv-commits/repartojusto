@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-17T08:03:16Z
-**Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** HTTP 403 del filtro de egress del sandbox — "Host not in allowlist: repartojusto-production.up.railway.app". El entorno remoto de Claude Code bloquea la solicitud saliente. No es posible confirmar si el servidor está operativo desde este entorno. Para habilitar la verificación: agregar el host al allowlist de egress en la configuración del entorno remoto.
+**Última verificación:** 2026-06-17T00:00:00Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a repartojusto-production.up.railway.app — el entorno de ejecución bloqueó el egreso de red hacia ese host (HTTP 403 por política de red del sandbox). El servidor puede estar operativo pero no es verificable desde este entorno sin habilitar el host en la configuración de egress.
