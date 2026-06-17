@@ -1158,7 +1158,7 @@ function iniciarPolling() {
   if (pollingInterval) clearInterval(pollingInterval);
   pollingInterval = setInterval(() => {
     if (disponible && !pedidoActivo) cargarDisponibles();
-  }, 8000); // cada 8 segundos
+  }, 3000); // cada 3 segundos
 }
 
 function detenerPolling() {
@@ -1177,9 +1177,8 @@ function conectarSocket() {
   socket.on('pedido:nuevo', (data) => {
     if (disponible && !pedidoActivo) {
       socket.emit('rider:pedir_disponibles');
+      iniciarAlertas(data.tarifa_entrega);
       toast('📦 ¡Nuevo pedido disponible!', 'success');
-      sonarAlarma();
-      if (navigator.vibrate) navigator.vibrate([400, 100, 400, 100, 800]);
     }
   });
   socket.on('pedidos:disponibles', (pedidos) => {
