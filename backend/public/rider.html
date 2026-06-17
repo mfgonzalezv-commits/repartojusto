@@ -1186,9 +1186,15 @@ function conectarSocket() {
   });
   socket.on('pedido:nuevo', (data) => {
     if (disponible && !pedidoActivo) {
-      socket.emit('rider:pedir_disponibles'); // trae la lista y dispara alarma vía renderDisponibles
+      iniciarAlertas(data.tarifa_entrega); // alarma INMEDIATA, sin esperar la lista
+      socket.emit('rider:pedir_disponibles'); // actualizar lista en paralelo
       toast('📦 ¡Nuevo pedido disponible!', 'success');
     }
+  });
+
+  // Otro rider tomó el pedido → parar alarma si la lista queda vacía
+  socket.on('pedido:tomado', () => {
+    cargarDisponibles(); // renderDisponibles parará la alarma si no quedan pedidos
   });
   socket.on('pedidos:disponibles', (pedidos) => {
     renderDisponibles(pedidos);
@@ -1851,11 +1857,10 @@ const COMPAT_LABEL = {
 function renderDisponibles(pedidos) {
   const container = $('lista-disponibles');
   const hayCompatibles = pedidos.some(p => p.compatibilidad !== null);
-  // Alarma ON cuando hay pedidos tomables, OFF cuando la lista queda vacía
-  if (hayCompatibles && !ofertaActual) {
-    iniciarAlertas(pedidos.find(p => p.compatibilidad !== null)?.tarifa_entrega);
-  } else if (!hayCompatibles && !ofertaActual) {
-    detenerAlertas();
+  if (!hayCompatibles && !ofertaActual) {
+    detenerAlertas(); // lista vacía → parar alarma
+  } else if (hayCompatibles && !vibracionInterval && !ofertaActual) {
+    iniciarAlertas(pedidos.find(p => p.compatibilidad !== null)?.tarifa_entrega); // fallback: socket no llegó
   }
   if (!pedidos.length) {
     container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">Sin pedidos disponibles ahora</div></div>';

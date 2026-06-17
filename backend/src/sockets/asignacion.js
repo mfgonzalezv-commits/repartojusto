@@ -84,8 +84,9 @@ async function _ofrecerSiguiente(pedido, io) {
       `SELECT push_subscription FROM riders WHERE disponible = true AND push_subscription IS NOT NULL`
     );
     const pushPayload = {
-      title: '📦 ¡Pedido disponible!',
-      body: `$${parseInt(pedido.tarifa_entrega).toLocaleString('es-CL')} — Entra a la app para tomarlo`,
+      title: '🔔 ¡NUEVO PEDIDO!',
+      body: `$${parseInt(pedido.tarifa_entrega).toLocaleString('es-CL')} disponible — Entra ahora para tomarlo`,
+      urgency: 'high',
     };
     for (const r of ridersConPush) {
       sendPush(r.push_subscription, pushPayload).catch(() => {});
@@ -191,6 +192,9 @@ async function aceptarOferta(pedido_id, rider_id, io) {
   io.to(`negocio:${pedido.negocio_id}`).emit('pedido:actualizado', {
     id: pedido.id, estado: 'asignado', rider_id,
   });
+
+  // Avisar a todos los riders para que paren su alarma sobre este pedido
+  io.emit('pedido:tomado', { pedido_id });
 
   return { ok: true, pedido };
 }
