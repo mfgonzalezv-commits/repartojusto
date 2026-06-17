@@ -1108,13 +1108,14 @@ function liberarWakeLock() {
 }
 
 function iniciarAlertas(tarifa) {
+  if (vibracionInterval) return; // ya activa, no duplicar
   // 1. Sonido
   sonarAlarma();
   // 2. Flash visual de pantalla
   flashPantalla();
   // 3. Vibración fuerte inmediata
   if (navigator.vibrate) navigator.vibrate([400, 100, 400, 100, 800, 200, 400, 100, 400]);
-  // 4. Repetir sonido + vibración cada 4s mientras dura la oferta
+  // 4. Repetir sonido + vibración cada 4s indefinidamente hasta que detenerAlertas() sea llamado
   vibracionInterval = setInterval(() => {
     sonarAlarma();
     flashPantalla();
@@ -1176,8 +1177,7 @@ function conectarSocket() {
   });
   socket.on('pedido:nuevo', (data) => {
     if (disponible && !pedidoActivo) {
-      socket.emit('rider:pedir_disponibles');
-      iniciarAlertas(data.tarifa_entrega);
+      socket.emit('rider:pedir_disponibles'); // trae la lista y dispara alarma vía renderDisponibles
       toast('📦 ¡Nuevo pedido disponible!', 'success');
     }
   });
@@ -1841,6 +1841,13 @@ const COMPAT_LABEL = {
 
 function renderDisponibles(pedidos) {
   const container = $('lista-disponibles');
+  const hayCompatibles = pedidos.some(p => p.compatibilidad !== null);
+  // Alarma ON cuando hay pedidos tomables, OFF cuando la lista queda vacía
+  if (hayCompatibles && !ofertaActual) {
+    iniciarAlertas(pedidos.find(p => p.compatibilidad !== null)?.tarifa_entrega);
+  } else if (!hayCompatibles && !ofertaActual) {
+    detenerAlertas();
+  }
   if (!pedidos.length) {
     container.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">Sin pedidos disponibles ahora</div></div>';
     return;
