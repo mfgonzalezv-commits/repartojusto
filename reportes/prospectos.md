@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-15
+**Actualizado:** 2026-06-18
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -40,10 +40,66 @@
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
 | 35 | Buena Onda Sushi | Sushi | Huanhuali 997, Villa Alemana | Nuevo | — | Presentación redactada 15/06 — en Uber Eats + Rappi, argumento doble comisión |
 | 36 | Miel Delivery | Repostería / cocktails | Villa Alemana (Peña Blanca, Belloto) | Nuevo | — | Presentación redactada 15/06 — delivery-first por WhatsApp, argumento canal propio sin comisión |
+| 37 | Star Food Burger | Hamburguesas | Maturana 312, Villa Alemana | Nuevo | — | Presentación redactada 18/06 — en Uber Eats + Rappi, argumento doble comisión |
+| 38 | Mako Sushi Delivery | Sushi | Pasaje El Ciruelillo 1384, Villa Alemana | Nuevo | — | Presentación redactada 18/06 — en Uber Eats + Rappi, ticket alto sushi, argumento ahorro mensual |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-18)
+
+> **NOTA PARA MATÍAS:** Hoy se agregan 2 nuevos prospectos encontrados en Uber Eats y Rappi Villa Alemana: Star Food Burger (#37, Maturana 312, hamburguesería activa en ambas plataformas) y Mako Sushi Delivery (#38, Pasaje El Ciruelillo 1384, sushi delivery-first activo en Uber Eats + Rappi). También se redactan mensajes de cierre de junio para los 4 Contactados PRIORIDAD (#2, #4, #5, #9 — llevan 41 días sin confirmación de contacto) y recordatorios finales de junio para los 2 Nuevos confirmados en Rappi (#17 Locos X Food, #18 La Casita Del Sabor).
+>
+> **Estado del cuello de botella:** Llevamos 41 días (desde 08/05) sin confirmación de qué mensajes se enviaron. La confirmación más urgente es sobre #2 Don Pollo, #4 Pizza House, #5 Sushi Zen y #9 El Gaucho — sin saber en qué ola están, no es posible calibrar el tono correcto. Basta con "enviados del #1 al #14" o "no mandé nada aún" para desbloquear el pipeline completo.
+
+---
+
+#### CIERRE DE JUNIO — Contactados PRIORIDAD (últimas oportunidades del mes)
+
+**[2] Pollería Don Pollo — Cierre de Junio:**
+"Hola Don Pollo! Último mensaje de RepartoJusto en junio — sin presión. Si en algún momento les rondan los números: con 20 pedidos semanales de $10.000, Rappi se lleva ~$46.000 al mes en comisiones. Con nosotros son $10.000. Sin contrato, registro gratis, 10 minutos para activarse. repartojusto-production.up.railway.app ¿Esta semana o en julio?"
+
+---
+
+**[4] Pizza House — Cierre de Junio:**
+"Hola Pizza House! Cerramos junio con un dato simple: 10 pizzas de $12.000 al día en Rappi = ~$250.000 al mes en comisiones pagadas a la app. Con RepartoJusto son $150.000. Diferencia: $100.000 que se quedan en el negocio, todos los meses. Sin contrato, registro completamente gratis. repartojusto-production.up.railway.app ¿Esta semana?"
+
+---
+
+**[5] Sushi Zen — Cierre de Junio:**
+"Hola Sushi Zen! Último de RepartoJusto por junio. El sushi está en peak de delivery este mes con el frío. Para un roll de $20.000, Rappi cobra $5.600 de comisión — con nosotros son $500 fijos siempre. Con 10 pedidos semanales son más de $200.000 al mes que se quedan en el local. repartojusto-production.up.railway.app ¿Conversamos antes de que termine el mes?"
+
+---
+
+**[9] Rotisería El Gaucho — Cierre de Junio:**
+"Hola El Gaucho! Cerrando junio. El número que no cambia: 10 pedidos diarios de $8.000 en Rappi = $672.000/mes en comisiones. Con RepartoJusto son $150.000 — más de $500.000 al mes que se quedan en el negocio. Sin contrato, registro gratis. ¿Esta semana le damos? repartojusto-production.up.railway.app"
+
+---
+
+#### RECORDATORIO FINAL JUNIO — Nuevos confirmados en Rappi
+
+**[17] Locos X Food — Recordatorio Final Junio:**
+"Hola Locos X Food! Les escribe RepartoJusto. Antes de cerrar junio, un número concreto: con el volumen que los vemos tener en Rappi, estimamos que hoy le pagan entre $800.000 y $1.000.000 al mes en comisiones (28%). Con RepartoJusto ese costo baja a $225.000. Son entre $575.000 y $775.000 al mes que se quedarían en el negocio. Sin contrato, registro gratuito. repartojusto-production.up.railway.app ¿Esta semana conversamos?"
+
+---
+
+**[18] La Casita Del Sabor — Recordatorio Final Junio:**
+"Hola La Casita Del Sabor! De RepartoJusto. Número directo antes de cerrar junio: si tienen 12 entregas diarias de $7.000 en Rappi, le pagan a Rappi ~$630.000 al mes en comisiones. Con nosotros son $180.000. Diferencia: $450.000 mensuales que se quedan en el negocio. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Cinco minutos esta semana?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-18)
+
+**[37] Star Food Burger — Presentación:**
+"Hola Star Food Burger! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en Uber Eats Y Rappi — excelente presencia en plataformas. Un cálculo directo: con hamburguesas de $10.000 promedio, Uber Eats cobra 30% ($3.000) y Rappi 28% ($2.800) por cada pedido. Para 10 entregas diarias combinadas entre ambas apps, pueden estar pagando más de $700.000 al mes solo en comisiones. Con RepartoJusto suman un tercer canal local por $500 fijos por pedido entregado — sin porcentaje, sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes en Maturana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[38] Mako Sushi Delivery — Presentación:**
+"Hola Mako Sushi! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en Uber Eats Y Rappi simultáneamente — muy bien posicionados. Para sushi de ticket promedio de $15.000, Uber Eats cobra 30% ($4.500) por pedido — con RepartoJusto son $500 fijos siempre. Para 15 entregas diarias, la diferencia frente a Uber Eats supera los $850.000 al mes que se quedan en el negocio en vez de irse a la app. Sin contrato, registro completamente gratuito, conservan sus plataformas actuales y suman RepartoJusto como canal de menor costo. 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -503,3 +559,7 @@
 **Buena Onda Sushi (#35, agregado 15/06):** Restaurante de sushi en Huanhuali 997, Villa Alemana. Confirmado en Uber Eats Y Rappi simultáneamente — pagan doble comisión. Facebook: @buenaondasushi. Ticket promedio sushi: $12.000-$18.000 (alto). Con 15 entregas/día, el ahorro vs. Uber Eats (30%) + Rappi (28%) puede superar $900.000/mes vs. RepartoJusto. Argumento doble comisión es el más potente. Fuente: ubereats.com + rappi.cl Villa Alemana.
 
 **Miel Delivery (#36, agregado 15/06):** Negocio delivery-first de tortas, repostería, cocktails y aperitivos vegetarianos. Zona: Villa Alemana, Peña Blanca y Belloto. Facebook: @mieldelivery. Instagram: @miel_delivery. WhatsApp: +56956355774. Opera principalmente por canal directo (WhatsApp) — NO está en las grandes plataformas. Argumento principal: potenciar su canal directo con logística sin pagar comisiones porcentuales. Para una torta de $22.000, la diferencia vs. Rappi (28%) es $5.600 por pedido. Negocio con identidad local fuerte — muy alineado con propuesta de valor RepartoJusto. Fuente: facebook.com/mieldelivery + instagram @miel_delivery.
+
+**Star Food Burger (#37, agregado 18/06):** Hamburguesería en Maturana 312, Villa Alemana. Confirmado en Uber Eats Y Rappi simultáneamente — pagan doble comisión. Ticket promedio estimado $9.000-$12.000. Con 10 entregas diarias, el ahorro vs. Uber Eats (30%) supera $700.000/mes vs. RepartoJusto. Argumento doble plataforma es el más potente. Fuente: ubereats.com + rappi.cl Villa Alemana.
+
+**Mako Sushi Delivery (#38, agregado 18/06):** Restaurante delivery-first de sushi en Pasaje El Ciruelillo 1384, Sector Troncos Viejos, Villa Alemana. Confirmado en Uber Eats Y Rappi simultáneamente. Disponible también en Banqueterias.com. Ticket promedio sushi: $14.000-$18.000 (muy alto → máximo ahorro por pedido). Con 15 entregas diarias, el ahorro vs. Uber Eats (30%) supera $850.000/mes vs. RepartoJusto. Negocio delivery-first — estructura de costos muy sensible a comisiones. Fuente: ubereats.com + rappi.cl + mundochileno.com Villa Alemana.
