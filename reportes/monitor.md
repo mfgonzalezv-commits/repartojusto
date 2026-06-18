@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-18T13:02:23Z
-**Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** El entorno de ejecución remoto bloqueó la solicitud — `repartojusto-production.up.railway.app` no está en la lista de hosts permitidos (egress policy). HTTP 403 devuelto por el proxy de red del sandbox, no por el servidor de producción. Para habilitar el monitoreo externo, añadir el host en la configuración de Network Egress del entorno en code.claude.com.
+**Última verificación:** 2026-06-18T14:02:14Z
+**Estado:** ❌ CAÍDO
+**Detalle:** Error de red — el entorno de ejecución remoto bloqueó la petición saliente. HTTP 403: "Host not in allowlist: repartojusto-production.up.railway.app. Add this host to your network egress settings to allow access." No fue posible verificar el endpoint /health.
