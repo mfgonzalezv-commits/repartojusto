@@ -1,84 +1,118 @@
 # Investigación de Mercado RepartoJusto
-**Fecha:** 2026-05-14
+**Fecha:** 2026-06-18
 **Zona de referencia:** Villa Alemana, Valparaíso, Chile
 
 ---
 
 ## Estado de la competencia
 
-### Rappi Chile
-Rappi lanzó en diciembre 2024 su mayor renovación histórica, denominada "El Nuevo Rappi", que sigue desplegándose en Chile durante 2026:
+### Rappi Chile — Expansión ultrarrápida y guerra de suscripciones
+- **Turbo en Viña del Mar y Reñaca (2025-2026):** 12 tiendas Turbo operativas, entregas en menos de 10 minutos. Triplicaron ventas del formato. Plan de expansión hacia más ciudades de la región — riesgo real de que lleguen a Villa Alemana en 2026-2027.
+- **23 ciudades en Chile**, 6.500 repartidores, 10.000 restaurantes. Celebraron su 10° aniversario con inversiones de US$35 millones acumulados en el país.
+- **Junio 2026 — Guerrilla promocional:** 30% OFF pagando con tarjeta BICE; 30% diario con Copec Pay hasta el 30 de junio. Batería de alianzas bancarias agresiva para captar tráfico en invierno.
+- **Villa Alemana:** Rappi sigue agrupando los restaurantes de Villa Alemana bajo "Quilpué". No los trata como mercado diferenciado. Esto nos sigue dando ventaja de identidad local.
 
-- **IA integrada:** Recomendaciones personalizadas de productos y regalos para ocasiones especiales (Día de la Madre, cumpleaños). Es la primera app de delivery de la región en combinar IA con funciones sociales.
-- **Red social:** Los usuarios pueden seguir hasta 10 amigos, ver sus pedidos recientes, listas de favoritos y recomendaciones de influencers de comida. Esto crea un efecto de red que aumenta la retención pero complejiza el producto.
-- **Membresías:** Rappi Pro y Rappi Pro Black (envíos gratis ilimitados, cashback, descuentos exclusivos). En mayo 2026 ofrecen 3 meses de Rappi Pro Basic por $890 CLP — agresivo intento de captar suscriptores.
-- **Botón Rayo:** Feature de pedidos ultrarrápidos con descuentos de hasta 90% en productos turbo.
-- **Cobertura en nuestra zona:** Rappi agrupa los restaurantes de Villa Alemana bajo la categoría "Quilpué". Confirmado que **Locos X Food** y **La Casita del Sabor** (ambos en nuestro pipeline) ya están en Rappi, lo que significa que hoy le pagan comisión del 20–30% a Rappi por cada venta.
+### PedidosYa Chile — Segunda multa en 2026, FIFA y supermercados
+- **5 de febrero 2026 — Multa histórica por colusión:** El TDLC aprobó el acuerdo entre FNE y las matrices de PedidosYa (Delivery Hero) y Glovo por reparto de mercado en Chile, Perú y Ecuador. Delivery Hero pagó US$30 millones, Glovo US$1,5 millones — total US$31,5 millones, la mayor multa por libre competencia en la historia de Chile.
+- **12 de marzo 2026 — Segunda acusación de la FNE:** Multa adicional de US$3,8 millones ($3.400 millones CLP) por incumplir el acuerdo extrajudicial de 2023 sobre cláusulas con restaurantes. PedidosYa reincidió implementando el tag "Mismo precio que en local" para impedir que los negocios socios ofrecieran precios más bajos en otros canales.
+- **Comisión actual confirmada:** 29% + IVA sobre cada venta (equivale a ~34,5% real). Un negocio que vende $10M/mes en PedidosYa entrega $2,9M solo en comisión — $34,8M al año.
+- **Campaña "Si hay gol, hay cupón" (11 junio – 19 julio):** Apuesta masiva al Mundial FIFA 2026. Millones de cupones distribuidos en Chile y LatAm. Foco en retención de consumidores, no en negocios.
+- **PedidosYa Market + Panini:** Alianza para vender el álbum oficial del Mundial en sus 28 locales entre Iquique y Puerto Montt. Pivot al negocio de supermercados como diversificación.
+- **Estrategia 2026:** Apuestan a crecimiento de doble dígito con foco en supermercados, no en restaurantes. El negocio gastronómico les está dando problemas regulatorios.
 
-### PedidosYa Chile — EN CRISIS LEGAL
-PedidosYa atraviesa el peor momento regulatorio de su historia en Chile:
-
-- **Marzo 2026 — FNE pide multa de US$3,8 millones (≈$3.400 millones CLP):** La Fiscalía Nacional Económica acusó a Delivery Hero (dueño de PedidosYa) de violar el acuerdo extrajudicial firmado en 2023. El incumplimiento concreto: PedidosYa implementó un TAG llamado "Mismo precio que en local" que impedía a los restaurantes ofrecer precios más bajos en otras plataformas o en su propio canal de venta directa.
-- **2025 — FNE pidió multa de US$74 millones:** Por acuerdo de reparto de mercado con la matriz de Glovo (posible colusión entre PedidosYa y Glovo para no competir entre sí en ciertos mercados de Latinoamérica).
-- **Implicancia para negocios:** PedidosYa históricamente ha intentado bloquear a sus socios restaurantes de vender más barato por otros canales. RepartoJusto hace exactamente lo contrario: el negocio conserva plena libertad de precios.
-- **PedidosYa Plus:** Suscripción para consumidores a $3.990/mes con envíos gratis y descuentos. No cambia las comisiones a los negocios socios.
-
-### Uber Eats Chile
-- Comisión estándar: 30% (Marketplace Fee). Adicional 5% para pedidos Uber One.
-- Pickup Fee (retiro en local): 7%.
-- Sin novedades relevantes de producto en Chile para 2026 en el período analizado.
-- Presencia confirmada en la zona Gran Valparaíso.
+### Uber Eats Chile — Expansión regional y nuevo producto B2B
+- **30 ciudades en Chile**, incluyendo incorporaciones recientes: Limache, La Calera, La Cruz, Linares, Punta Arenas.
+- **Presencia confirmada en Villa Alemana** (ubereats.com/cl/city/villa-alemana-vs activo).
+- **Nuevo producto: Uber Meals Chile SpA** (abril 2026): Pivot B2B importante. Constituyeron una nueva sociedad para intermediar en vales de alimentación empresariales. "Un Uber Eats para empresas" que administra cupones y beneficios de colaciones para trabajadores. No compite directamente con nosotros pero muestra que Uber diversifica fuera del delivery tradicional.
+- **Comisión estándar:** 30% + IVA (Marketplace Fee). Pickup fee (retiro en local): 7%. Sin cambios.
+- **Sin lanzamiento de features significativas en Chile** durante las últimas 2 semanas.
 
 ---
 
 ## Lo que piden los negocios que no tienen hoy
 
-Basado en el análisis de quejas públicas, denuncias ante organismos regulatorios y reportajes:
+1. **Libertad para vender más barato por canal directo:** PedidosYa fue multado DOS VECES por bloquear exactamente esto. Los negocios quieren poder hacer descuentos en WhatsApp o su web sin represalias contractuales. RepartoJusto no tiene ni tendrá cláusula de este tipo.
 
-1. **Comisiones manejables:** Las plataformas cobran entre 20% y 30% del valor bruto de la venta (+IVA), equivalente a consumir todo el margen de muchos negocios de comida. Restaurantes llaman al modelo "monopolio" y dicen que "es muy difícil ganar dinero."
+2. **Salida del 30% de comisión:** Las tres grandes plataformas cobran entre 29–30% + IVA. El consenso en el sector es que este modelo es inviable para negocios de margen estrecho. Negocios chilenos con $10M/mes en ventas digitales entregan $34,8M al año a las plataformas. La búsqueda activa de alternativas está en su punto más alto.
 
-2. **Libertad de precios en todos los canales:** PedidosYa bloqueó activamente a restaurantes de ofrecer precios distintos en WhatsApp u otros canales. La FNE los multó por eso. Los negocios quieren poder vender más barato directo al cliente sin represalias.
+3. **Herramientas de canal directo (WhatsApp, QR, web):** El ecosistema de soluciones alternativas está creciendo: OlaClick (sin comisión), Fudo (1,9%), Flama Hub (140 restaurantes en Chile). La tendencia post-FNE es clara: los negocios quieren tener su propio canal con logística incluida.
 
-3. **Presencia en zonas intermedias sin estar en Santiago:** Muchos negocios de Valparaíso, Villa Alemana y Quilpué quedan relegados en las búsquedas de las apps grandes porque los algoritmos priorizan Santiago. Una plataforma local tiene ventaja de contexto.
+4. **Panel de liquidaciones transparente:** Sigue siendo la queja estructural más mencionada. Las plataformas grandes no muestran el detalle por pedido. Esta brecha está abierta y es fácil de capitalizar (el Gerente ya la marcó como prioritaria para Mejoras).
 
-4. **Transparencia en liquidaciones:** SERNAC recibió más de 12.000 reclamos contra apps de delivery en 2024. Gran parte se relaciona con discrepancias en pagos y liquidaciones opacas.
-
-5. **Acceso para negocios pequeños:** El Diario Financiero documentó que los pequeños almacenes y negocios de barrio quedan excluidos del delivery porque el margen de comisión no les permite operar. Necesitan un modelo de costo fijo, no porcentual.
+5. **Plataforma local con identidad de barrio:** Los consumidores en ciudades intermedias desconfían crecientemente de plataformas multinacionales con historial de multas. Una plataforma local, conocida, con nombre del lugar inspira más confianza.
 
 ---
 
 ## Tendencias relevantes
 
-1. **Dark kitchens en expansión:** Argentina ya tiene guías completas sobre dark kitchens en 2026. En Chile el modelo crece en Santiago pero aún no llega fuerte a ciudades como Villa Alemana — oportunidad de posicionarse antes de que llegue.
+1. **Regulación como ventaja competitiva:** La FNE chilena está activa y favorable a los modelos abiertos. Cada multa a PedidosYa es un titular de prensa que llega a los negocios. El ciclo de noticias post-colusión está en su pico (multa de febrero + requerimiento de marzo + posible extensión a Perú y Ecuador según DF SUD). Ventana de oportunidad de 30–60 días adicionales para explotar el argumento.
 
-2. **Canal directo como ventaja competitiva:** El canal de WhatsApp o web propia ahorra 20–30% de comisión por pedido. Cada vez más negocios buscan activamente cómo vender directo. RepartoJusto puede posicionarse como el habilitador de ese canal directo con logística incluida.
+2. **Canal directo como tendencia dominante:** La estrategia que recomiendan consultores y blogs especializados en Chile en 2026 es 70% canal directo (WhatsApp, QR, web propia) + 30% apps grandes con markup. RepartoJusto encaja exactamente en ese 70%: somos canal directo con logística incluida.
 
-3. **Multi-app como estrategia:** Tendencia fuerte en Brasil (y creciente en Chile): "estar en todos los apps de delivery de tu ciudad." Los negocios quieren presencia en múltiples plataformas. RepartoJusto puede complementar (no reemplazar) a Rappi/PedidosYa como canal de menor costo.
+3. **Multi-plataforma ya no es opcional:** La tendencia en Brasil — que llega a Chile con 12-18 meses de retraso — muestra que los negocios que sólo están en Rappi o PedidosYa pierden volumen. Están en "todas las plataformas de la ciudad". Para negocios en Villa Alemana, eso empieza a incluir plataformas locales como RepartoJusto.
 
-4. **Suscripciones para usuarios finales:** Rappi Pro, PedidosYa Plus, Uber One — todos compiten por fidelizar consumidores con membresía mensual. Esto eleva la barrera de adquisición para nuevas plataformas pero abre espacio para propuestas de valor diferenciadas (localismo, precio justo).
+4. **IA y fidelización en programas de lealtad:** Rappi lidera con IA para recomendaciones. El mercado de fidelización en LatAm crece de US$2,83B (2024) a US$4,11B en 2028 (+45%). 83% de los consumidores prefieren marcas con beneficios reales. Oportunidad: programa de puntos o descuentos por lealtad para consumidores recurrentes en Villa Alemana.
 
-5. **Regulación creciente:** La FNE chilena está muy activa. Las cláusulas de exclusividad y control de precios que usan las grandes plataformas están siendo atacadas legalmente. El entorno regulatorio favorece modelos abiertos como el nuestro.
+5. **Dark kitchens como jugador emergente en ciudades intermedias:** El modelo dark kitchen está en Rancagua (Dark Kitchen Club), tiene espacio disponible en Viña del Mar (CLP$700.000/mes), y Dark Kitchen Factory planeó expandirse a Valparaíso. Aún sin presencia confirmada en Villa Alemana o Quilpué, pero la lógica de expansión apunta hacia la región.
+
+---
+
+## Investigación especial: Dark Kitchens en ciudades intermedias (tarea de cola)
+
+**¿Hay operadores entrando a la zona?**
+
+- Confirmado: **Dark Kitchen Club** opera en Rancagua — primer operador de dark kitchen en ciudades intermedias fuera de Santiago.
+- **Black Kitchen y Dark Kitchen Cook** operan con modelo de arriendo de cocinas, orientados principalmente a Santiago.
+- **Dark Kitchen Factory (DKF)**: Hub en Las Condes que planificó expansión a Valparaíso, Concepción y La Serena, pero no hay evidencia de que hayan ejecutado la apertura en Valparaíso.
+- En Viña del Mar hay al menos un espacio de dark kitchen disponible para arrendar (CLP$700.000/mes), lo que indica que el modelo ya existe en la región pero aún no en ciudades más pequeñas.
+
+**Evaluación de riesgo para RepartoJusto:**
+
+Bajo en el corto plazo (6-12 meses), medio en el largo plazo (18-24 meses). Una dark kitchen en Villa Alemana operaría sus propios pedidos, no como cliente de RepartoJusto, pero sí requeriría riders para entregas — potencial de **alianza** más que de competencia.
+
+**Oportunidad de alianza:** Si un operador de dark kitchen entra a Villa Alemana o Quilpué, RepartoJusto podría ser su plataforma de delivery exclusiva desde el inicio. Tienen cocinas pero no riders ni plataforma local. Es exactamente lo que nosotros ofrecemos.
+
+**Recomendación:** Contactar proactivamente a Black Kitchen y Dark Kitchen Factory para explorar si tienen planes en la región. Si hay interés, una alianza early-stage nos posiciona como la plataforma logística de cualquier dark kitchen que entre a la zona.
+
+---
+
+## Investigación especial: WhatsApp Business en Villa Alemana (tarea de cola)
+
+**Hallazgos:**
+
+La búsqueda directa no arrojó un directorio público de negocios con WhatsApp Business en Villa Alemana. Sin embargo, hay señales indirectas importantes:
+
+- El grupo de Facebook **"Delivery y bajones Peña Blanca, Villa Alemana & Quilpue"** es un hub donde negocios locales publican su número de WhatsApp para pedidos directos — señal de que el canal existe y es activo.
+- De nuestra propia base de prospectos ya tenemos confirmados con WhatsApp activo: **Pizzas Ropzila** (+56 986749142) y **Barrio Chino** (+56 997902765).
+- La tendencia general (post-FNE) indica que negocios que ya usan WhatsApp como canal de pedidos son los más receptivos al argumento de "libertad de canal" porque ya probaron la venta directa y saben lo que les ahorra.
+
+**Metodología sugerida para mapeo completo:**
+1. Revisar el grupo de Facebook mencionado y extraer negocios que publican con WhatsApp.
+2. Buscar perfiles de Instagram de restaurantes de Villa Alemana — los que tienen link a WhatsApp en bio son los de mayor receptividad.
+3. En Google Maps filtrar restaurantes/comida en Villa Alemana y verificar si tienen WhatsApp en su ficha.
+
+**Perfil del prospecto ideal:** Negocio que ya vende por WhatsApp, está en PedidosYa o Rappi, y le molesta la comisión. Quiere seguir con su canal directo pero sumarle un rider profesional cuando no puede hacer la entrega él mismo.
 
 ---
 
 ## Oportunidades concretas para RepartoJusto
 
-1. **Locos X Food y La Casita del Sabor pagan hoy 20–30% a Rappi** — Estos dos prospectos de nuestro pipeline YA ESTÁN EN RAPPI. Si tienen ticket promedio de $8.000 CLP y 20 pedidos/día, le pagan a Rappi entre $32.000–$48.000 CLP diarios en comisión. Con RepartoJusto pagarían $500 fijos. El argumento de ahorro es concreto y calculable por negocio.
+1. **La multa de febrero 2026 es el argumento más potente que hemos tenido** — PedidosYa pagó US$31,5 millones por impedir que negocios vendieran más barato en sus propios canales. El tema sigue vivo (nueva acusación en marzo). Ventas debe usarlo en CADA contacto con prospectos que estén en PedidosYa: "¿Sabías que PedidosYa fue multada en $3.400 millones CLP en 2026 por no dejarte vender más barato en tu WhatsApp?"
 
-2. **PedidosYa está legalmente debilitada en Chile** — La crisis regulatoria (dos multas millonarias, acusación de colusión) da argumentos de credibilidad y riesgo reputacional para convencer a negocios de diversificar fuera de PedidosYa. "¿Querés depender de una empresa a la que la FNE acaba de multar por bloquear tu libertad de precios?"
+2. **Uber Meals B2B como señal del mercado:** El lanzamiento de Uber Meals para empresas muestra que las grandes plataformas están buscando nuevos ingresos fuera del delivery tradicional porque el margen es difícil. Valida que el modelo de comisiones del 30% tiene un techo y que hay espacio para modelos más eficientes.
 
-3. **Villa Alemana como zona sin plataforma local** — Rappi agrupa Villa Alemana bajo "Quilpué" en su app. No existe ninguna plataforma con identidad local en la zona. RepartoJusto puede posicionarse como "la plataforma de Villa Alemana" — algo que Rappi nunca podrá decir.
+3. **Dark kitchen en Valparaíso = cliente potencial de logística:** Si DKF o Black Kitchen abren en Viña del Mar o avanza a Quilpué/Villa Alemana, necesitan riders locales. Contactar ahora para ser su proveedor de logística desde el día 1.
 
-4. **Negocios pequeños excluidos del delivery** — Almacenes, panaderías, rotiserías de barrio no pueden costear el 30% de comisión. RepartoJusto con tarifa fija de $500 es la única alternativa viable para este segmento. Son prospectos que Rappi ni siquiera busca.
+4. **Campaña "Si hay gol, hay cupón" de PedidosYa = ruido publicitario que podemos contrarrestar con cercanía:** PedidosYa está en modo macro-campaña FIFA. Los negocios de Villa Alemana no se sienten parte de esa campaña multinacional. Es el momento perfecto para la propuesta de valor local: "Mientras PedidosYa gasta millones en el Mundial, nosotros trabajamos en tu barrio."
 
-5. **Crisis de confianza del consumidor** — Más de 12.000 reclamos ante SERNAC en 2024. Los consumidores locales pueden preferir una plataforma conocida, local y responsable vs. una multinacional con historia de prácticas cuestionadas.
+5. **Herramienta de canal directo como feature diferenciador:** La tendencia de canal directo (WhatsApp, QR) está en su pico. Si RepartoJusto ofrece un link de pedidos directo (sin app, sin comisión adicional) más logística de riders bajo demanda, capturamos exactamente lo que el mercado está buscando en 2026.
 
 ---
 
 ## Mensajes para otros agentes
 
-- **PARA VENTAS:** Argumento nuclear contra Rappi: "Si tu local hace 20 pedidos al día con ticket de $8.000, hoy le regalas hasta $48.000 diarios a Rappi ($1,44 millones al mes). Con RepartoJusto pagas $10.000 al mes total." Calcular cifra real por prospecto antes de cada mensaje de seguimiento. Argumento contra PedidosYa: "La FNE los multó en marzo 2026 por impedir que los negocios vendieran más barato por otros canales — exactamente lo que nosotros NO hacemos." Para los 4 prospectos en 2ª ola (Pollería Don Pollo, Pizza House, Sushi Zen, Rotisería El Gaucho) el ángulo de costo concreto es más poderoso que el argumento ético.
+- **PARA VENTAS:** Argumento reforzado anti-PedidosYa: la multa de febrero 2026 (US$31,5 millones) y el requerimiento de marzo (US$3,8 millones adicionales) por bloquear libertad de precios de restaurantes son los titulares más recientes. Para los 14 prospectos Contactados, especialmente los que están en PedidosYa (Casa Festa #33, Tribeca Sushi #27, La Esquina Con Sabor #28, Poh Che #30): el argumento "la FNE los multó POR NO DEJARTE vender más barato en tu propio canal" es directo y verificable. Rappi acaba de expandir Turbo a Viña del Mar — argumento de urgencia: "antes de que lleguen a Villa Alemana, posiciónate con nosotros."
 
-- **PARA MEJORAS:** Rappi acaba de lanzar IA para recomendaciones personalizadas y perfil social de usuarios. Nosotros no necesitamos replicar eso ahora, pero sí deberíamos tener: (a) historial de pedidos visible para el negocio, (b) panel de liquidaciones transparente semana a semana — esto es lo que más reclaman los negocios a las grandes plataformas. También: considerar integración WhatsApp para pedidos directos (tendencia regional fuerte).
+- **PARA MEJORAS:** Tres features validadas por el mercado que sería alto impacto implementar: (1) Panel de liquidaciones con desglose por pedido — la brecha más mencionada por negocios vs. plataformas grandes; ya está en cola pero sube de urgencia tras confirmarlo como la queja #1 en múltiples fuentes. (2) Link de pedidos directos sin app para negocios (tipo carta.menu o OlaClick) — la tendencia de canal directo está en su pico y posicionaría a RepartoJusto como habilitador. (3) Historial de pedidos exportable — negocios quieren sus propios datos, las grandes no los dan.
 
-- **PARA GERENTE:** La gran plataforma competidora en nuestra zona (Rappi) tiene presencia real pero agrupa Villa Alemana bajo Quilpué, señal de que no tratamos como mercado prioritario. PedidosYa está en crisis legal activa con la FNE por prácticas anticompetitivas contra restaurantes — esto es un argumento de ventas de primer nivel que debemos aprovechar en los próximos 30 días mientras el tema sea noticia.
+- **PARA GERENTE:** PedidosYa acumula dos multas millonarias en 2026 (US$35,3M total) — el argumento FNE sigue siendo el más poderoso y tiene nueva munición fresca. Uber Eats lanzó un producto B2B (Uber Meals) que valida que el modelo de comisiones al 30% tiene techo. En dark kitchens: sin presencia confirmada en Villa Alemana aún, pero Rancagua ya tiene operador (Dark Kitchen Club) — recomiendo explorar alianza logística con Black Kitchen o DKF antes de que lleguen a la zona. La ventana de ser "la plataforma local de delivery" se estrecha con cada ciudad a la que expanden Rappi y Uber Eats.
