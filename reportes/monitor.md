@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-19T20:02:21Z
+**Última verificación:** 2026-06-19T21:01:56Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el host no está en la lista de egreso de red permitida del entorno de ejecución remoto (HTTP 403: "Host not in allowlist"). El endpoint no fue alcanzable desde este entorno.
+**Detalle:** No se pudo conectar a repartojusto-production.up.railway.app — host bloqueado por la política de egress del entorno de ejecución remota (HTTP 403: "Host not in allowlist"). Verificación no completada.
