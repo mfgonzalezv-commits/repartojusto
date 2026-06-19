@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-18
+**Actualizado:** 2026-06-19
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -22,12 +22,12 @@
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Reactivación junio redactada 13/06 — PRIORIDAD (refresh del 16/05) |
 | 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Reactivación junio redactada 13/06 — ALTA PRIORIDAD (refresh del 16/05) |
-| 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 11/05, pendiente confirmación Matías |
-| 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Presentación redactada 11/05, pendiente confirmación Matías |
+| 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
+| 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Versión junio redactada 19/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
-| 22 | Sushi Point Delivery | Sushi / japonesa | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
+| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 — tel. (32) 324 0504 |
 | 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Presentación redactada 16/05. WhatsApp: +56 986749142 |
-| 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Presentación redactada 16/05 |
+| 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 09/06 — usa argumento FNE+tarifa |
@@ -42,10 +42,52 @@
 | 36 | Miel Delivery | Repostería / cocktails | Villa Alemana (Peña Blanca, Belloto) | Nuevo | — | Presentación redactada 15/06 — delivery-first por WhatsApp, argumento canal propio sin comisión |
 | 37 | Star Food Burger | Hamburguesas | Maturana 312, Villa Alemana | Nuevo | — | Presentación redactada 18/06 — en Uber Eats + Rappi, argumento doble comisión |
 | 38 | Mako Sushi Delivery | Sushi | Pasaje El Ciruelillo 1384, Villa Alemana | Nuevo | — | Presentación redactada 18/06 — en Uber Eats + Rappi, ticket alto sushi, argumento ahorro mensual |
+| 39 | La Taquilla | Comida mexicana / tacos | Villa Alemana | Nuevo | — | Presentación redactada 19/06 — en Uber Eats, argumento tarifa fija vs. 30% comisión |
+| 40 | Pastelería La Selecta | Pastelería | Villa Alemana | Nuevo | — | Presentación redactada 19/06 — en Uber Eats, argumento ticket alto tortas vs. tarifa fija |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-19)
+
+> **NOTA PARA MATÍAS:** Hoy incorporamos los nuevos argumentos del Investigador (18/06): (1) Rappi Turbo acaba de llegar a Viña del Mar — argumento de urgencia para posicionarse antes de que expandan a Villa Alemana; (2) PedidosYa acumula US$35,3M en multas FNE en 2026 (dos multas: US$31,5M en febrero por colusión con Glovo + US$3,8M en marzo por controlar precios de restaurantes). Se redactan versiones junio con estos argumentos para los 4 Nuevos con drafts más antiguos sin confirmar (#19, #20, #22, #24 — 34-39 días sin contacto confirmado). También se agregan 2 nuevos prospectos encontrados en Uber Eats Villa Alemana: La Taquilla (#39, comida mexicana) y Pastelería La Selecta (#40, pastelería de ticket alto).
+
+---
+
+#### REFRESH JUNIO — Nuevos con drafts de mayo sin confirmar (34-39 días)
+
+**[19] Just Burger — Versión Junio (19/06, actualización del 11/05, 39 días):**
+"Hola Just Burger! De RepartoJusto, los contactamos en mayo. Una novedad que vale la pena compartir: Rappi acaba de lanzar Rappi Turbo en Viña del Mar — cuando llegue a Villa Alemana, sus comisiones (28%) no bajan. Con RepartoJusto el costo es siempre $500 fijo por pedido, sin importar lo que hagan las otras plataformas. Para una hamburguesa de $10.000, son $2.300 por pedido que se quedan en el negocio en vez de irse a Rappi. Con 10 pedidos diarios, más de $690.000 al mes. Sin contrato, registro gratis, pueden mantener Rappi y sumar RepartoJusto como canal local. repartojusto-production.up.railway.app ¿Esta semana conversamos?"
+
+---
+
+**[20] El Mercadito Móvil — Versión Junio (19/06, actualización del 11/05, 39 días):**
+"Hola El Mercadito Móvil! Les contacta RepartoJusto de vuelta. Junio es uno de los mejores meses para delivery de frutas y verduras frescas — con el frío la gente prefiere recibir su canasta en casa. Con RepartoJusto el costo es $500 fijo por pedido entregado, sin porcentaje sobre la venta. Para una canasta de $10.000, la diferencia vs. Rappi (28%) son $2.300 que se quedan en el negocio por cada pedido. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Les interesa sumarse?"
+
+---
+
+**[22] Sushi Point Delivery — Versión Junio (19/06, actualización del 14/05, 36 días):**
+"Hola Sushi Point Delivery! Les escribe RepartoJusto, los contactamos en mayo. Una novedad relevante: Rappi acaba de expandir Rappi Turbo a Viña del Mar. Cuando llegue a Villa Alemana, el modelo de 28% de comisión no cambia — pero el volumen por Rappi puede crecer y con él sus costos. Es el momento de sumar un canal local de costo fijo: $500 por pedido siempre. Para sushi de $18.000, la diferencia vs. Rappi es de $4.540 por pedido que se queda en el negocio. Con 15 entregas diarias, más de $680.000 al mes. Sin contrato, registro gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[24] Buena Onda Sandwich — Versión Junio (19/06, actualización del 16/05, 34 días):**
+"Hola Buena Onda Sandwich! De RepartoJusto, los contactamos en mayo. Dato nuevo: Rappi acaba de expandir Rappi Turbo a Viña del Mar — cuando llegue a Villa Alemana, la presencia de Rappi crece pero sus comisiones (28%) no bajan. Con RepartoJusto tienen un canal local fijo: $500 por pedido entregado, sin porcentaje. Para un sándwich de $5.500, la diferencia vs. Rappi son $1.040 que se quedan en el negocio por pedido. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Esta semana le damos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-19)
+
+**[39] La Taquilla — Presentación:**
+"Hola La Taquilla! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en Uber Eats — muy bien. ¿Saben que Uber Eats cobra 30% de comisión por cada pedido? Para un plato o combo de $8.000, eso son $2.400 que se van a la app, no al negocio. Con RepartoJusto pagan $500 fijos por pedido entregado, siempre. Con 10 entregas diarias, el ahorro puede superar los $570.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[40] Pastelería La Selecta — Presentación:**
+"Hola Pastelería La Selecta! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats — excelente. Para pastelería de alto valor (tortas, pasteles de $15.000 a $30.000), las comisiones duelen más: Uber Eats cobra 30%, lo que significa hasta $9.000 de comisión por una torta de $30.000. Con RepartoJusto son $500 fijos siempre, sin importar el valor del pedido. La diferencia es especialmente grande en productos de ticket alto como los suyos. Nuestros riders son locales en Villa Alemana y cuidan los pedidos delicados. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -563,3 +605,7 @@
 **Star Food Burger (#37, agregado 18/06):** Hamburguesería en Maturana 312, Villa Alemana. Confirmado en Uber Eats Y Rappi simultáneamente — pagan doble comisión. Ticket promedio estimado $9.000-$12.000. Con 10 entregas diarias, el ahorro vs. Uber Eats (30%) supera $700.000/mes vs. RepartoJusto. Argumento doble plataforma es el más potente. Fuente: ubereats.com + rappi.cl Villa Alemana.
 
 **Mako Sushi Delivery (#38, agregado 18/06):** Restaurante delivery-first de sushi en Pasaje El Ciruelillo 1384, Sector Troncos Viejos, Villa Alemana. Confirmado en Uber Eats Y Rappi simultáneamente. Disponible también en Banqueterias.com. Ticket promedio sushi: $14.000-$18.000 (muy alto → máximo ahorro por pedido). Con 15 entregas diarias, el ahorro vs. Uber Eats (30%) supera $850.000/mes vs. RepartoJusto. Negocio delivery-first — estructura de costos muy sensible a comisiones. Fuente: ubereats.com + rappi.cl + mundochileno.com Villa Alemana.
+
+**La Taquilla (#39, agregado 19/06):** Restaurante de comida mexicana / tacos activo en Uber Eats en Villa Alemana. Ticket promedio estimado $7.000-$10.000. Uber Eats cobra 30% de comisión. Con 10 entregas diarias, el ahorro vs. Uber Eats puede superar $570.000/mes vs. RepartoJusto. Fuente: ubereats.com/cl/store/la-taquilla-villa-alemana. Confirmar dirección exacta al contactar.
+
+**Pastelería La Selecta (#40, agregado 19/06):** Pastelería activa en Uber Eats en Villa Alemana. Especialidad: tortas y pasteles de ticket alto ($15.000-$30.000). Argumento clave: a mayor ticket, mayor impacto de la comisión porcentual (30% Uber Eats = hasta $9.000 por torta de $30.000 vs. $500 fijos con RepartoJusto). Negocio de pedidos delicados — riders locales que conocen el sector es diferenciador importante. Fuente: ubereats.com/cl/store/pasteleria-la-selecta Villa Alemana. Confirmar dirección exacta al contactar.

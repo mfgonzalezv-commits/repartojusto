@@ -1,41 +1,61 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-18
-**Pipeline total:** 38 prospectos
-**Por estado:** Nuevos: 24 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-19
+**Pipeline total:** 40 prospectos
+**Por estado:** Nuevos: 26 | Contactados: 14 | Interesados: 0 | Registrados: 0
+
+---
 
 ## Acciones del día
 
-- Leí cola.md e investigador.md: instrucción activa de usar argumento FNE en 3ª ola y calcular costo Rappi personalizado para #17 y #18.
-- Revisé el pipeline completo: 38 prospectos tras agregar 2 nuevos hoy. El cuello de botella sigue siendo la confirmación de Matías sobre qué mensajes fueron enviados (41 días desde el primer contacto del 08/05).
-- Redacté 8 borradores:
-  - 4 mensajes de **cierre de junio** para los Contactados PRIORIDAD (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho) — mensajes cortos, directos, con el número concreto de ahorro mensual.
-  - 2 mensajes de **recordatorio final junio** para los Nuevos MÁXIMA PRIORIDAD confirmados en Rappi (#17 Locos X Food, #18 La Casita Del Sabor) — cálculo de comisión mensual personalizado.
-  - 2 mensajes de **presentación** para los nuevos prospectos (#37 Star Food Burger, #38 Mako Sushi Delivery) — ambos activos en Uber Eats + Rappi simultáneamente, argumento doble comisión.
-- Encontré 2 nuevos prospectos vía búsqueda en Uber Eats y Rappi Villa Alemana.
+### 1. Lectura de cola.md e incorporación de argumentos del Investigador
+Se incorporaron los argumentos entregados por el Investigador el 18/06:
+- **Rappi Turbo en Viña del Mar**: Rappi acaba de expandir su servicio Turbo a Viña del Mar. Argumento de urgencia: "antes de que lleguen a Villa Alemana, posiciónate con nosotros." Usado en los 4 borradores de refresh junio (prospectos #19, #22, #24) y disponible para futuros contactos.
+- **PedidosYa acumula US$35,3M en multas FNE en 2026**: Dos multas este año — US$31,5M en febrero por colusión con Glovo + US$3,8M en marzo por controlar precios. Argumento exacto para prospectos en PedidosYa: "La FNE los multó $3.400 millones CLP en 2026 por impedirte vender más barato en tu propio WhatsApp — nosotros nunca te hacemos eso." Especialmente potente para #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che y #33 Casa Festa.
+
+### 2. Borradores redactados hoy (6 mensajes)
+
+**Refresh junio con argumento Rappi Turbo (4 borradores):**
+- **#19 Just Burger** — versión junio (39 días sin contacto confirmado): incorpora argumento Rappi Turbo Viña del Mar + cálculo $690.000/mes vs. Rappi
+- **#20 El Mercadito Móvil** — versión junio (39 días): ángulo invierno + costo fijo vs. porcentaje
+- **#22 Sushi Point Delivery** — versión junio (36 días): incorpora argumento Rappi Turbo + cálculo $680.000/mes con 15 entregas sushi
+- **#24 Buena Onda Sandwich** — versión junio (34 días): argumento Rappi Turbo + ahorro $1.040/pedido de sándwich
+
+**Nuevos prospectos (2 presentaciones):**
+- **#39 La Taquilla** — presentación: comida mexicana en Uber Eats (30%), ahorro $570.000+/mes con 10 entregas
+- **#40 Pastelería La Selecta** — presentación: pastelería ticket alto en Uber Eats, argumento diferenciado para tortas ($9.000 comisión vs. $500 fijo)
+
+### 3. Nuevos prospectos agregados
+- **#39 La Taquilla** (comida mexicana / tacos, Uber Eats Villa Alemana)
+- **#40 Pastelería La Selecta** (pastelería ticket alto, Uber Eats Villa Alemana)
+Fuente: búsqueda Uber Eats Villa Alemana categorías comida rápida y panadería/pastelería.
+
+---
 
 ## Borradores listos para Matías
 
-**Cierre de junio — Contactados PRIORIDAD (mensajes cortos, últimos del mes):**
-- [2] Pollería Don Pollo — mensaje corto recordatorio, sin presión
-- [4] Pizza House — cálculo ahorro $100.000/mes en 10 pizzas diarias
-- [5] Sushi Zen — peak invierno + diferencia $200.000/mes con 10 pedidos semanales
-- [9] Rotisería El Gaucho — diferencia $522.000/mes con 10 pedidos diarios
+**6 mensajes para enviar hoy:**
 
-**Recordatorio final junio — Nuevos en Rappi (máxima prioridad):**
-- [17] Locos X Food — estimado $800K-$1M/mes en comisiones Rappi vs. $225.000 RepartoJusto
-- [18] La Casita Del Sabor — $630.000/mes en comisiones Rappi vs. $180.000 RepartoJusto
+1. **#19 Just Burger** — refresh junio con argumento Rappi Turbo (actualización del 11/05, 39 días sin confirmar)
+2. **#20 El Mercadito Móvil** — refresh junio con argumento invierno (actualización del 11/05, 39 días)
+3. **#22 Sushi Point Delivery** — refresh junio con argumento Rappi Turbo (actualización del 14/05, 36 días)
+4. **#24 Buena Onda Sandwich** — refresh junio con argumento Rappi Turbo (actualización del 16/05, 34 días)
+5. **#39 La Taquilla** — presentación inicial (nuevo)
+6. **#40 Pastelería La Selecta** — presentación inicial (nuevo)
 
-**Presentaciones — Nuevos del día:**
-- [37] Star Food Burger (Maturana 312) — Uber Eats + Rappi, $700.000+/mes en comisiones estimadas
-- [38] Mako Sushi Delivery (El Ciruelillo 1384) — Uber Eats + Rappi, $850.000+/mes en comisiones estimadas
+**Mensajes acumulados de días anteriores aún pendientes de confirmación:**
+- 18/06: 8 mensajes (cierres junio #2, #4, #5, #9 + recordatorios #17, #18 + presentaciones #37, #38)
+- Período 07/06-15/06: múltiples borradores para contactados y nuevos
+- Cuello de botella crítico: 42 días sin confirmación de Matías sobre envíos desde el 08/05
+
+---
 
 ## Nuevos prospectos agregados
-
-| # | Negocio | Rubro | Dirección | Fuente |
+| # | Negocio | Rubro | Plataforma | Argumento clave |
 |---|---|---|---|---|
-| 37 | Star Food Burger | Hamburguesas | Maturana 312, Villa Alemana | Uber Eats + Rappi |
-| 38 | Mako Sushi Delivery | Sushi | Pasaje El Ciruelillo 1384, Villa Alemana | Uber Eats + Rappi |
+| 39 | La Taquilla | Comida mexicana | Uber Eats | 30% vs $500 fijo, ahorro $570K+/mes con 10 entregas |
+| 40 | Pastelería La Selecta | Pastelería | Uber Eats | Ticket alto tortas → máximo impacto de comisión vs. tarifa fija |
+
+---
 
 ## Para el Gerente
-
-Pipeline en 38 prospectos (24 nuevos, 14 contactados, 0 registrados); 8 borradores redactados hoy — 4 cierres de junio para Contactados PRIORIDAD + 2 recordatorios finales para #17/#18 (en Rappi, costo estimado $600K-$1M/mes) + 2 presentaciones para nuevos encontrados en Uber Eats+Rappi; cuello de botella crítico persiste: 41 días sin confirmación de Matías sobre mensajes enviados paraliza actualización de estados.
+Pipeline en 40 prospectos (26 nuevos, 14 contactados, 0 registrados); 6 borradores nuevos redactados hoy — 4 refreshes junio con argumento Rappi Turbo para Nuevos más antiguos (#19, #20, #22, #24) + 2 presentaciones para prospectos encontrados en Uber Eats Villa Alemana (La Taquilla #39 y Pastelería La Selecta #40); argumento Rappi Turbo Viña del Mar disponible como palanca de urgencia; cuello de botella crítico: 42 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
