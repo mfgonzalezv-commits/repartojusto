@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-19T10:02:16Z
-**Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** HTTP 403 — Host no permitido en egress de red del agente: `repartojusto-production.up.railway.app`. El entorno de ejecución remoto bloqueó la conexión saliente antes de alcanzar el servidor. Agregar el host a la configuración de network egress en Claude Code on the web para habilitar el monitoreo.
+**Última verificación:** 2026-06-19T11:02:16Z
+**Estado:** ❌ CAÍDO
+**Detalle:** HTTP 403 — Host no permitido por política de red del entorno de ejecución. "Host not in allowlist: repartojusto-production.up.railway.app". El endpoint no pudo ser alcanzado; se requiere agregar el host a la configuración de egress de red.
