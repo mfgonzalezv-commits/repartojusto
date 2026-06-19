@@ -1,24 +1,24 @@
 # Informe Ejecutivo RepartoJusto
-**Semana del:** 6 al 12 de junio de 2026
+**Semana del:** 13 al 19 de junio de 2026
 
 ---
 
 ## Estado General: ⚠️ Atención Requerida
-La plataforma opera en Railway sin incidentes técnicos, pero el pipeline comercial sigue bloqueado esperando confirmación de Matías, y dos bugs críticos de producto llevan tres semanas sin corrección.
+La plataforma opera con normalidad y tuvo mejoras técnicas significativas esta semana, pero se detectaron dos vulnerabilidades críticas de seguridad que requieren corrección urgente, y el pipeline comercial sigue bloqueado esperando confirmación de Matías.
 
 ---
 
 ## Lo que pasó esta semana
 
-- **Pipeline comercial alcanzó 30 prospectos identificados en Villa Alemana.** El agente de Ventas corrió tres veces esta semana (lunes 7, miércoles 9 y jueves 10) y sumó 6 nuevos negocios al radar: Sin Miedo Burgers, El Clandestino (gastronomía peruana), Tribeca Sushi, La Esquina Con Sabor, Diroom Burger Lounge y Poh Che Empanadas. Los mensajes de presentación para todos están listos en `reportes/prospectos.md`. El pipeline total es: 14 contactados + 16 nuevos = 30 negocios. **Ninguno está en estado "Registrado" aún.**
+- **Se reparó el sistema de alarmas para riders — problema de fondo resuelto.** El agente técnico realizó 6+ correcciones al sistema de notificación sonora: la alarma ahora suena de forma permanente hasta que el pedido sea tomado por algún rider (antes podía silenciarse sola), el polling bajó de 8 a 3 segundos para respuesta más rápida, y el Service Worker fue actualizado a v7 para despertar la app incluso cuando el rider tiene la pantalla apagada. Esto resuelve el problema de fondo por el que los riders no se enteraban de pedidos nuevos en tiempo real.
 
-- **Reactivación junio completada para todos los contactados activos.** Los 12 prospectos con conversación iniciada en mayo tienen un mensaje personalizado de reactivación, redactado con el argumento de la multa FNE a PedidosYa y cálculos de ahorro en pesos concretos por negocio. El agente de Ventas también identificó el mejor momento estacional: botillerías y cafeterías tienen peak de invierno en junio. Todos los mensajes están listos — la acción pendiente es que Matías los envíe.
+- **Se creó material impreso para prospectar negocios en la calle.** Se diseñó un brochure en formato 1/4 carta (tamaño manejable) con fondo navy y amarillo, que incluye QR de registro, resumen de la propuesta y contacto WhatsApp. Permite a Matías repartir material físico en Villa Alemana sin depender de mensajes digitales.
 
-- **Sin cambios técnicos en el código esta semana.** El único movimiento en el repositorio fueron los commits del monitor (horario) y ventas. No hubo ninguna corrección de bugs ni mejora de producto. El código es idéntico al de la semana pasada.
+- **El agente de Mejoras corrió por primera vez e identificó 5 problemas en el código.** Dos son críticos de seguridad (ver Alertas). Los otros tres son mejoras de rendimiento, privacidad de datos de clientes y persistencia del chat entre rider y negocio.
 
-- **El bug de notificaciones push a riders sigue sin corregir — tercera semana consecutiva.** Cuando los riders cierran la app no reciben ofertas de pedidos. La corrección es una línea de código. Cada semana que pasa, la tasa de primera asignación queda por debajo de su potencial real.
+- **Pipeline comercial sumó 2 nuevos prospectos, ahora en 38 negocios.** Se incorporaron Star Food Burger (Maturana 312) y Mako Sushi Delivery (El Ciruelillo 1384), ambos activos en Uber Eats y Rappi simultáneamente — los mensajes de presentación están redactados. El total es 38 negocios mapeados: 14 contactados, 24 nuevos, 0 registrados.
 
-- **El servidor responde 403 solo para los agentes, no para usuarios reales.** El monitor reporta "caído" porque el entorno de ejecución no tiene permiso de red para alcanzar Railway. La plataforma está operativa para negocios, riders y clientes; el problema es de configuración del entorno de análisis, no del producto.
+- **El mes de junio cierra la semana que viene — ventana comercial urgente.** Los 4 negocios prioritarios (Don Pollo, Pizza House, Sushi Zen, El Gaucho) tienen mensajes de cierre de junio redactados y listos. Son los que llevan más tiempo en el pipeline (42 días). Si se envían esta semana, llegan en el último tramo del mes cuando el argumento de "cerrar junio" todavía tiene fuerza.
 
 ---
 
@@ -26,39 +26,42 @@ La plataforma opera en Railway sin incidentes técnicos, pero el pipeline comerc
 
 | Problema | Estado |
 |---|---|
-| Service Worker — app rider no actualizaba | ✅ Resuelto (SW v6) |
-| Notificaciones Xiaomi — requiere permiso manual | ⚙️ En seguimiento |
+| Service Worker — app rider no actualizaba | ✅ Resuelto (SW v7 esta semana) |
+| Alarma de pedido nuevo en riders | ✅ Resuelto esta semana (6 fixes, polling 3s, alarma permanente) |
+| Notificaciones Xiaomi — requiere permiso manual | ⚙️ En seguimiento — no tiene solución técnica |
 | Audio en Chrome móvil | ✅ Resuelto |
 | Zona horaria Railway vs Chile | ✅ Resuelto |
 | Servidor responde 403 desde entorno de agentes | ⚙️ Problema de configuración interna — Railway opera con normalidad |
-| Bug push-subscription riders (`req.user.id`) | 🔴 Semana 3 sin corrección |
-| Pedidos agendados no se despachan (sin scheduler) | 🔴 Semana 3 sin corrección |
-| Incentivos a riders no se registran contablemente | 🔴 Sin corrección |
+| Pedidos agendados no se despachan (sin scheduler) | 🔴 Pendiente |
+| Chat entre rider y negocio se pierde al reiniciar servidor | 🔴 Pendiente |
 
 ---
 
 ## Alertas
 
-🚨 **Agentes Mejoras y Seguridad no han corrido en tres semanas.** No existe `reportes/mejoras.md` ni `reportes/seguridad.md`. Todos los bugs identificados por el Aprendiz el 12/05 siguen abiertos. Sin auditoría de seguridad activa.
+🚨 **Vulnerabilidad crítica #1 — Webhook de pagos sin protección.** El webhook que Flow usa para confirmar pagos no verifica que el mensaje venga realmente de Flow. Cualquier persona con la URL puede enviar un POST falso y marcar un pago como completado sin haber pagado. Requiere corrección esta semana.
 
-🚨 **28+ borradores acumulados sin enviar** — presentaciones y reactivaciones desde mayo hasta hoy. El pipeline comercial tiene 30 prospectos mapeados y argumentos preparados, pero 0 registros. El cuello de botella es la confirmación de Matías.
+🚨 **Vulnerabilidad crítica #2 — Login sin límite de intentos.** El formulario de acceso para negocios, riders y admin no tiene restricción de intentos fallidos. Un atacante puede probar miles de contraseñas de forma automatizada. Requiere corrección esta semana.
 
-⚠️ **Ventana FNE-PedidosYa en su última semana útil** — la multa de US$3,8M fue noticia en marzo 2026. A este ritmo el tema perderá vigencia antes de usarse en los mensajes.
+⚠️ **42 días sin confirmación de Matías** sobre qué mensajes se enviaron en mayo. El pipeline tiene 38 negocios mapeados y 0 registrados. El cuello de botella es exclusivamente la confirmación de Matías — no hay nada más que los agentes puedan hacer hasta recibir esa respuesta.
+
+⚠️ **Junio cierra en 12 días** — el argumento estacional (invierno + frío) y los mensajes de cierre de mes tienen fecha de vencimiento real.
 
 ---
 
 ## Decisiones tomadas
 
-- El agente de Ventas incorporó el argumento de la multa FNE en todos los mensajes de reactivación de junio y en las presentaciones de nuevos prospectos en PedidosYa (#27, #28, #30).
-- Los prospectos Librería El Saber (#12) y Heladería Glacial (#14) fueron postergados a agosto — decisión acertada dada su estacionalidad.
-- El monitor pasó a verificación horaria — útil una vez que se resuelva el problema de allowlist de red.
+- El sistema de alarma del rider fue refactorizado completo: alarma permanente, polling 3s, SW v7 con despertar desde segundo plano.
+- Se creó brochure físico en formato 1/4 carta para distribución presencial en Villa Alemana.
+- Los prospectos Librería El Saber (#12) y Heladería Glacial (#14) se mantienen diferidos hasta agosto.
+- El agente de Mejoras retomó actividad — sus 5 recomendaciones están documentadas en `reportes/mejoras.md` con el código exacto listo para aplicar.
 
 ---
 
 ## Prioridades próxima semana
 
-1. **Matías: enviar al menos los 14 mensajes de reactivación junio a los Contactados** — están listos, son urgentes y el argumento FNE pierde fuerza con cada semana que pasa. Lista en `reportes/prospectos.md`.
-2. **Mejoras: corregir bug push-subscription** — `backend/src/routes/riders.js` ~línea 110: cambiar `req.user.id` por `req.usuario.id`. Una línea, lleva tres semanas pendiente.
-3. **Mejoras: implementar scheduler de pedidos agendados** — `node-cron` que active pedidos con `estado='agendado'` 10 minutos antes de `hora_retiro`. Feature dormida que es diferenciador real frente a Rappi.
-4. **Seguridad: correr auditoría** — llevan tres semanas sin revisar el código. La plataforma maneja pagos y datos de usuarios.
-5. **Confirmar a Matías qué mensajes salieron en mayo** — sin ese dato el pipeline no puede avanzar de estados y los 0 registros no reflejan el trabajo real acumulado.
+1. **Matías: enviar mensajes de cierre de junio esta semana** — al menos los 4 prioritarios (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho). Están listos en `reportes/prospectos.md`. Es urgente antes de que cierre el mes.
+2. **Mejoras: corregir webhook de Flow** — agregar verificación HMAC. Código exacto en `reportes/mejoras.md`, mejora #1. Es la corrección más urgente de seguridad.
+3. **Mejoras: agregar rate limiting al login** — 10 intentos por 15 minutos. Código exacto en `reportes/mejoras.md`, mejora #2. Requiere instalar `express-rate-limit`.
+4. **Mejoras: implementar scheduler de pedidos agendados** — feature diferenciadora frente a Rappi que lleva meses inactiva.
+5. **Matías: confirmar qué mensajes se enviaron en mayo** — cualquier respuesta (aunque sea "no envié ninguno") desbloquea la actualización de estados de los 14 Contactados.
