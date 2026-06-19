@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-19T18:02:19Z
+**Última verificación:** 2026-06-19T19:02:04Z
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 — Host no permitido por política de red del agente: "Host not in allowlist: repartojusto-production.up.railway.app". No se pudo verificar el endpoint /health. Agregar el host a la configuración de egress de red para permitir acceso.
+**Detalle:** HTTP 403 — "Host not in allowlist: repartojusto-production.up.railway.app". El entorno de ejecución remoto bloqueó la conexión saliente por política de red. No se pudo verificar el endpoint /health.
