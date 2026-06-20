@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-20T10:02:18Z
-**Estado:** ⚠️ INDETERMINADO
-**Detalle:** No se pudo completar el health check. El entorno de ejecución remoto bloqueó la solicitud saliente a `repartojusto-production.up.railway.app` (HTTP 403 — host no incluido en la lista de egress permitidos). Acción requerida: agregar el host a la configuración de red egress del entorno de Claude Code en la web.
+**Última verificación:** 2026-06-20T11:02:18Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — host bloqueado por política de egress de red del entorno remoto (respuesta 403 de proxy). Verificación no completada.
