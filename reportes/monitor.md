@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-20T00:00:00Z
+**Última verificación:** 2026-06-20T07:02:46Z
 **Estado:** ❌ CAÍDO
-**Detalle:** El entorno de ejecución remota bloqueó la conexión saliente — HTTP 403: "Host not in allowlist: repartojusto-production.up.railway.app. Add this host to your network egress settings to allow access." No fue posible verificar `/health`. Para habilitar el monitoreo, agregar el host a la configuración de egress en https://code.claude.com/docs/en/claude-code-on-the-web.
+**Detalle:** No se pudo verificar — host `repartojusto-production.up.railway.app` bloqueado por política de egress de red del entorno de ejecución (HTTP 403: "Host not in allowlist"). El health check no pudo completarse. Agregar el host al allowlist de egress en la configuración del entorno para habilitar el monitoreo.
