@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-20T03:02:21Z
+**Última verificación:** 2026-06-20T00:00:00Z
 **Estado:** ❌ NO VERIFICABLE
-**Detalle:** La solicitud GET a https://repartojusto-production.up.railway.app/health fue bloqueada por la política de egreso de red del entorno remoto (HTTP 403 del proxy). Host no en la allowlist de egreso. No se pudo determinar el estado real del servidor. Para habilitar este monitor, agregar `repartojusto-production.up.railway.app` a la configuración de egreso en code.claude.com.
+**Detalle:** El entorno de ejecución remoto bloqueó la solicitud saliente. HTTP 403 — "Host not in allowlist: repartojusto-production.up.railway.app. Add this host to your network egress settings to allow access." No fue posible determinar si el servidor está operativo o caído. Se requiere habilitar egreso de red hacia ese host en la configuración del entorno.
