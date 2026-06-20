@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-19
+**Actualizado:** 2026-06-20
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -30,13 +30,13 @@
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
-| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 09/06 — usa argumento FNE+tarifa |
-| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 09/06 — usa argumento FNE |
+| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Versión 20/06 FNE doble multa ($3.400M CLP) redactada |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión 20/06 FNE doble multa redactada |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — ángulo local vs. Rappi/Quilpué |
-| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — doble plataforma Uber Eats+PedidosYa, argumento FNE |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — doble plataforma Uber Eats+PedidosYa |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — listado bajo Quilpué en Rappi, argumento local + FNE |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — negocio delivery-first, ticket alto sushi |
-| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — en PedidosYa (argumento FNE directo), 20 años de trayectoria |
+| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — 20 años trayectoria, ticket alto |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
 | 35 | Buena Onda Sushi | Sushi | Huanhuali 997, Villa Alemana | Nuevo | — | Presentación redactada 15/06 — en Uber Eats + Rappi, argumento doble comisión |
 | 36 | Miel Delivery | Repostería / cocktails | Villa Alemana (Peña Blanca, Belloto) | Nuevo | — | Presentación redactada 15/06 — delivery-first por WhatsApp, argumento canal propio sin comisión |
@@ -44,10 +44,52 @@
 | 38 | Mako Sushi Delivery | Sushi | Pasaje El Ciruelillo 1384, Villa Alemana | Nuevo | — | Presentación redactada 18/06 — en Uber Eats + Rappi, ticket alto sushi, argumento ahorro mensual |
 | 39 | La Taquilla | Comida mexicana / tacos | Villa Alemana | Nuevo | — | Presentación redactada 19/06 — en Uber Eats, argumento tarifa fija vs. 30% comisión |
 | 40 | Pastelería La Selecta | Pastelería | Villa Alemana | Nuevo | — | Presentación redactada 19/06 — en Uber Eats, argumento ticket alto tortas vs. tarifa fija |
+| 41 | Pita Kebab | Comida árabe / mediterránea | Santiago 906 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 20/06 — en Uber Eats, primero en comida árabe VA, argumento tarifa fija vs. 30% |
+| 42 | Mascofood | Delivery alimentos para mascotas | V Región (Villa Alemana) | Nuevo | — | Presentación redactada 20/06 — canal propio WhatsApp, sin plataformas grandes, argumento potenciar sin comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-20)
+
+> **NOTA PARA MATÍAS:** Hoy incorporamos el argumento clave del Investigador (18/06): PedidosYa acumula **dos** multas de la FNE en 2026 — US$31,5M en febrero por colusión con Glovo + US$3,8M en marzo por control de precios a restaurantes = **US$35,3M total** (~$3.400M CLP). Los 4 prospectos confirmados en PedidosYa (#27, #28, #30, #33) reciben versiones actualizadas con este argumento completo — más poderoso que las versiones anteriores que solo mencionaban la multa de US$3,8M. También se agregan 2 prospectos nuevos encontrados hoy: Pita Kebab (#41, comida árabe en Uber Eats, primero del rubro en Villa Alemana) y Mascofood (#42, delivery de alimentos para mascotas con canal propio por WhatsApp, sin plataformas grandes). Pipeline en 42 prospectos.
+
+---
+
+#### ACTUALIZACIÓN FNE DOBLE MULTA — Prospectos en PedidosYa (20/06)
+
+**[27] Tribeca Sushi — Versión 20/06 (FNE doble multa $3.400M CLP):**
+"Hola Tribeca Sushi! Les escribe RepartoJusto de vuelta. Una actualización importante desde nuestra presentación anterior: PedidosYa acumula dos multas de la FNE en 2026 — US$31,5M en febrero por colusión con Glovo para controlar el mercado, y US$3,8M en marzo por impedir que sus restaurantes socios cobren precios distintos en WhatsApp o web propia. En total: más de $3.400 millones de pesos chilenos en sanciones este año. El argumento es claro: están en una plataforma que la autoridad chilena ha multado dos veces por prácticas anticompetitivas. Con RepartoJusto: $500 fijos por pedido, libertad total de precios, sin contrato. Para sushi de $18.000, el ahorro vs. PedidosYa (28%) es $4.540 por pedido. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[28] La Esquina Con Sabor — Versión 20/06 (FNE doble multa $3.400M CLP):**
+"Hola La Esquina Con Sabor! De RepartoJusto, actualización relevante: PedidosYa acumula US$35,3 millones en multas de la FNE en 2026 ($3.400 millones CLP). Primera multa en febrero: US$31,5M por colusión con Glovo para dominar el mercado y limitar competencia. Segunda multa en marzo: US$3,8M por impedir que restaurantes vendieran más barato en sus propios canales (WhatsApp, web). Dos veces sancionados por la autoridad chilena en el mismo año. Con RepartoJusto: $500 fijos por pedido entregado, sin restricción de precios, sin contrato. Para completos y comida rápida de $4.500 promedio, el ahorro vs. PedidosYa (28%) es $760 por pedido que se queda en el local. repartojusto-production.up.railway.app ¿Cinco minutos esta semana?"
+
+---
+
+**[30] Poh Che Empanadas & Sandwichs — Versión 20/06 (FNE doble multa $3.400M CLP):**
+"Hola Poh Che! De RepartoJusto, novedad importante: PedidosYa acumula dos multas de la FNE en 2026 — US$31,5M en febrero por colusión con Glovo + US$3,8M en marzo por controlar los precios de sus restaurantes socios. Total: más de $3.400 millones CLP en sanciones en un año. Están en dos plataformas costosas (Uber Eats + PedidosYa) y una de ellas ha sido sancionada dos veces por la autoridad anticompetitiva de Chile. Con RepartoJusto: $500 fijos por pedido, libertad total de precios, sin contrato. Pueden mantener ambas plataformas y sumar RepartoJusto como canal de menor costo. Para un pedido de empanadas de $6.000, el ahorro vs. PedidosYa (28%) es $1.180 por pedido. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[33] Casa Festa Cocina y Repostería — Versión 20/06 (FNE doble multa $3.400M CLP):**
+"Hola Casa Festa! De RepartoJusto, actualización desde nuestra presentación anterior: PedidosYa acumula dos multas de la FNE en 2026. Primera: US$31,5M en febrero por colusión con Glovo para controlar el mercado. Segunda: US$3,8M en marzo por impedir que restaurantes socios cobraran precios distintos en WhatsApp o web propia. Total: más de $3.400 millones CLP sancionados en un año. Con más de 20 años de trayectoria en Madrid 1090, Casa Festa merece una plataforma que respete su libertad comercial total. Con RepartoJusto: $500 fijos por pedido entregado, sin restricciones de precio, sin contrato. Para una torta de $25.000, el ahorro vs. PedidosYa (28%) es $6.500 por pedido. repartojusto-production.up.railway.app ¿Conversamos? (Tel: (32) 2950116 / casafestaventas@gmail.com)"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-20)
+
+**[41] Pita Kebab — Presentación:**
+"Hola Pita Kebab! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats — los primeros en comida árabe auténtica (shawarma, falafel, mediterráneo) en Villa Alemana, ¡excelente propuesta diferenciada! Un dato concreto: Uber Eats cobra 30% de comisión por cada pedido. Para un pita o shawarma de $7.000, eso son $2.100 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Con 15 entregas diarias, el ahorro puede superar los $490.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana — igual que ustedes en Santiago 906. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[42] Mascofood — Presentación:**
+"Hola Mascofood! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y V Región. Los encontramos en Instagram (@mascofood.delivery) — delivery propio de alimentos y artículos para mascotas por WhatsApp, excelente modelo. Tienen el canal directo correcto: sin comisiones de Rappi o PedidosYa (25-30% por pedido). Con RepartoJusto pueden potenciar ese canal directo con logística más robusta a $500 fijos por pedido entregado — sin porcentaje sobre la venta, sin contrato. Para un pedido de alimento de $20.000, la diferencia vs. Rappi (28%) es $5.100 por pedido que se queda en el negocio. Conservan su WhatsApp y canales propios, y suman RepartoJusto como plataforma de bajo costo para Villa Alemana y alrededores. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -609,3 +651,7 @@
 **La Taquilla (#39, agregado 19/06):** Restaurante de comida mexicana / tacos activo en Uber Eats en Villa Alemana. Ticket promedio estimado $7.000-$10.000. Uber Eats cobra 30% de comisión. Con 10 entregas diarias, el ahorro vs. Uber Eats puede superar $570.000/mes vs. RepartoJusto. Fuente: ubereats.com/cl/store/la-taquilla-villa-alemana. Confirmar dirección exacta al contactar.
 
 **Pastelería La Selecta (#40, agregado 19/06):** Pastelería activa en Uber Eats en Villa Alemana. Especialidad: tortas y pasteles de ticket alto ($15.000-$30.000). Argumento clave: a mayor ticket, mayor impacto de la comisión porcentual (30% Uber Eats = hasta $9.000 por torta de $30.000 vs. $500 fijos con RepartoJusto). Negocio de pedidos delicados — riders locales que conocen el sector es diferenciador importante. Fuente: ubereats.com/cl/store/pasteleria-la-selecta Villa Alemana. Confirmar dirección exacta al contactar.
+
+**Pita Kebab (#41, agregado 20/06):** Restaurante de comida árabe/mediterránea — los primeros en el rubro en Villa Alemana. Dirección: Santiago 906 Local 3, Villa Alemana. Teléfono: +56 32 318 3450. Instagram: @pitakebak.cl. Facebook: @pitakebabva. Confirmado en Uber Eats (ubereats.com/cl/store/pita-kebab). Rubro diferenciado — shawarma, falafel, pita. Ticket promedio estimado: $6.000-$10.000. Con 15 entregas diarias, el ahorro vs. Uber Eats (30%) supera $490.000/mes vs. RepartoJusto. Ser los primeros en árabe en VA es argumento de posicionamiento local fuerte. Fuente: ubereats.com + mundochileno.com + facebook.com/pitakebabva.
+
+**Mascofood (#42, agregado 20/06):** Delivery de alimentos y artículos para mascotas en V Región (incluye Villa Alemana). Instagram: @mascofood.delivery. Sitio web: mascofood.cl. Teléfono: +56 9 6222 6757. Horario: L-S desde 19:00h. Opera principalmente por canal propio (WhatsApp, web) — NO está en Rappi/PedidosYa/Uber Eats. Ticket mínimo envío gratis: $15.000 → ticket promedio estimado $15.000-$30.000. Argumento principal: potenciar canal directo con logística RepartoJusto sin comisión porcentual. Similar a Miel Delivery (#36) — negocio con identidad directa muy alineado con propuesta RepartoJusto. Fuente: mascofood.cl + instagram @mascofood.delivery.
