@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-21T21:02:00Z
-**Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar — el host `repartojusto-production.up.railway.app` no está en la allowlist de egress del entorno de ejecución remoto (HTTP 403 de red). No es posible confirmar estado real del servidor. Acción requerida: agregar el host a la política de red del ambiente Cloud.
+**Última verificación:** 2026-06-21T22:01:54Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** Error de egreso de red en el entorno de ejecución remoto: "Host not in allowlist: repartojusto-production.up.railway.app". El entorno cloud no tiene permiso de salida hacia ese host. El estado real del servidor es desconocido — este no es un fallo del servidor sino una restricción del entorno. Para habilitar el monitoreo, agregar `repartojusto-production.up.railway.app` a la política de egress de red en la configuración del entorno remoto.
