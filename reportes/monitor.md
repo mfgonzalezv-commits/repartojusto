@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-20T23:02:18Z
-**Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 — El host `repartojusto-production.up.railway.app` no está permitido por la política de egress del entorno remoto. Error: "Host not in allowlist". No fue posible confirmar si el servidor está operativo. Se requiere agregar el host a la allowlist de red del ambiente de ejecución.
+**Última verificación:** 2026-06-21T00:02:28Z
+**Estado:** ❌ ERROR DE RED
+**Detalle:** HTTP 403 — Host no permitido en la política de egress del entorno de ejecución remoto. El host `repartojusto-production.up.railway.app` no está en la allowlist de red saliente. No fue posible verificar el endpoint /health.
