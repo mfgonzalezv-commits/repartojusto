@@ -1,18 +1,18 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-20
+**Actualizado:** 2026-06-21
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 07/06 |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 — enfoque autonomía sucursal |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 07/06 |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 07/06 |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 07/06 |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
@@ -46,10 +46,54 @@
 | 40 | Pastelería La Selecta | Pastelería | Villa Alemana | Nuevo | — | Presentación redactada 19/06 — en Uber Eats, argumento ticket alto tortas vs. tarifa fija |
 | 41 | Pita Kebab | Comida árabe / mediterránea | Santiago 906 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 20/06 — en Uber Eats, primero en comida árabe VA, argumento tarifa fija vs. 30% |
 | 42 | Mascofood | Delivery alimentos para mascotas | V Región (Villa Alemana) | Nuevo | — | Presentación redactada 20/06 — canal propio WhatsApp, sin plataformas grandes, argumento potenciar sin comisión |
+| 43 | Kami Sushi | Sushi | Villa Alemana | Nuevo | — | Presentación redactada 21/06 — en Uber Eats, ticket alto sushi, argumento ahorro mensual |
+| 44 | Jona Sandwich | Sándwiches / comida rápida | Villa Alemana | Nuevo | — | Presentación redactada 21/06 — en Rappi, argumento tarifa fija vs. 28% comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-21)
+
+> **NOTA PARA MATÍAS:** Hoy arrancamos julio con mensajes de inicio de mes para los 4 Contactados PRIORIDAD (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho). Julio es el mes más frío — peak de delivery en todos los rubros de comida, argumento estacional directo. También se agregan 2 nuevos prospectos encontrados hoy en Uber Eats y Rappi Villa Alemana: **Kami Sushi (#43)** activo en Uber Eats (sushi, ticket alto) y **Jona Sandwich (#44)** activo en Rappi (sándwiches). Pipeline total: **44 prospectos**.
+>
+> **Recordatorio urgente:** Llevamos 44 días (desde 08/05) sin confirmación de qué mensajes fueron enviados. El cuello de botella sigue siendo el mismo. Una respuesta rápida de Matías — aunque sea "no mandé nada aún" — desbloquea el pipeline completo.
+
+---
+
+#### ARRANQUE DE JULIO — Contactados PRIORIDAD (nueva oportunidad de inicio de mes)
+
+**[2] Pollería Don Pollo — Arranque de Julio:**
+"Hola Don Pollo! Arranque de julio de RepartoJusto. Julio es el mes más frío del año — y el frío es delivery. Un solo número para empezar el mes: con 20 pedidos semanales de $10.000, Rappi se lleva ~$46.000 al mes en comisiones. Con nosotros son $10.000. Son $36.000 mensuales que se quedan en el negocio desde el primer pedido. Sin contrato, registro gratis, 10 minutos para activarse. ¿Empezamos julio con RepartoJusto? repartojusto-production.up.railway.app"
+
+---
+
+**[4] Pizza House — Arranque de Julio:**
+"Hola Pizza House! Julio es el mes con más frío — y el frío es el mejor vendedor de pizzas. Un cálculo directo para arrancar el mes: 10 pizzas de $12.000 al día en Rappi = $250.000/mes en comisiones pagadas a la app. Con RepartoJusto ese costo baja a $150.000. $100.000 al mes que se quedan en el local, todos los meses, empezando cuando quieran. Sin contrato, registro completamente gratis. ¿Julio es el mes? repartojusto-production.up.railway.app"
+
+---
+
+**[5] Sushi Zen — Arranque de Julio:**
+"Hola Sushi Zen! Julio es el peak de delivery de sushi en Chile — el frío asegura que los clientes prefieren pedir desde casa. Con 10 pedidos semanales de $20.000, la diferencia entre Rappi ($5.600 comisión/pedido) y RepartoJusto ($500 fijos) es más de $200.000 al mes. $200.000 que se quedan en el local, no en la app. Sin contrato, registro gratuito. ¿Este julio lo hacemos? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Arranque de Julio:**
+"Hola El Gaucho! Arranque de julio. En invierno la rotisería en delivery tiene sus mejores semanas — almuerzos y cenas que nadie quiere preparar con frío. El número que no cambia: 10 pedidos diarios de $8.000 en Rappi = $672.000/mes en comisiones. Con RepartoJusto son $150.000. Más de $500.000 mensuales que se quedan en el negocio. Sin contrato, registro gratis. ¿Es este el mes? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-21)
+
+**[43] Kami Sushi — Presentación:**
+"Hola Kami Sushi! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats — propuesta diferenciada de sushi para Villa Alemana. Dato directo: Uber Eats cobra 30% de comisión por cada pedido. Para un pedido de sushi de $15.000, eso son $4.500 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Con 15 entregas diarias, el ahorro puede superar los $900.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana — misma ciudad, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[44] Jona Sandwich — Presentación:**
+"Hola Jona Sandwich! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en Rappi — excelente. Un número concreto: con sándwichs de $6.000 promedio, Rappi cobra hasta $1.680 de comisión por pedido (28%). Con RepartoJusto son $500 fijos, siempre. Con 15 entregas diarias, el ahorro vs. Rappi supera los $440.000 al mes — que se quedan en el negocio en vez de irse a la app. Sin contrato, registro completamente gratuito, y pueden mantener Rappi como canal paralelo. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -655,3 +699,7 @@
 **Pita Kebab (#41, agregado 20/06):** Restaurante de comida árabe/mediterránea — los primeros en el rubro en Villa Alemana. Dirección: Santiago 906 Local 3, Villa Alemana. Teléfono: +56 32 318 3450. Instagram: @pitakebak.cl. Facebook: @pitakebabva. Confirmado en Uber Eats (ubereats.com/cl/store/pita-kebab). Rubro diferenciado — shawarma, falafel, pita. Ticket promedio estimado: $6.000-$10.000. Con 15 entregas diarias, el ahorro vs. Uber Eats (30%) supera $490.000/mes vs. RepartoJusto. Ser los primeros en árabe en VA es argumento de posicionamiento local fuerte. Fuente: ubereats.com + mundochileno.com + facebook.com/pitakebabva.
 
 **Mascofood (#42, agregado 20/06):** Delivery de alimentos y artículos para mascotas en V Región (incluye Villa Alemana). Instagram: @mascofood.delivery. Sitio web: mascofood.cl. Teléfono: +56 9 6222 6757. Horario: L-S desde 19:00h. Opera principalmente por canal propio (WhatsApp, web) — NO está en Rappi/PedidosYa/Uber Eats. Ticket mínimo envío gratis: $15.000 → ticket promedio estimado $15.000-$30.000. Argumento principal: potenciar canal directo con logística RepartoJusto sin comisión porcentual. Similar a Miel Delivery (#36) — negocio con identidad directa muy alineado con propuesta RepartoJusto. Fuente: mascofood.cl + instagram @mascofood.delivery.
+
+**Kami Sushi (#43, agregado 21/06):** Restaurante de sushi activo en Uber Eats en Villa Alemana. Propuesta diferenciada (formato sushi con ingredientes variados). Ticket promedio estimado: $12.000-$18.000. Uber Eats cobra 30% de comisión — con 15 entregas diarias, el ahorro vs. Uber Eats puede superar $900.000/mes vs. RepartoJusto. Dirección exacta y teléfono por confirmar al contactar. Fuente: ubereats.com/cl/store/kami-sushi-villa-alemana.
+
+**Jona Sandwich (#44, agregado 21/06):** Local de sándwiches activo en Rappi en Villa Alemana. Ticket promedio estimado: $5.000-$7.000. Rappi cobra 28% de comisión. Con 15 entregas diarias, el ahorro vs. Rappi supera $440.000/mes vs. RepartoJusto. Dirección exacta por confirmar al contactar. Fuente: rappi.cl/restaurantes/delivery/63745-jona-sandwich-villa-alemana.
