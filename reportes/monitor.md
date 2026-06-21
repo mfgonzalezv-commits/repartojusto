@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-21T00:00:00Z
-**Estado:** ❌ ERROR DE RED
-**Detalle:** No se pudo conectar a `repartojusto-production.up.railway.app`. El host no está en la allowlist de egress de red del entorno remoto — la solicitud fue bloqueada antes de llegar al servidor. No es posible determinar si el servicio está operativo. Acción requerida: agregar el dominio a la configuración de egress de red en code.claude.com para habilitar el monitoreo.
+**Última verificación:** 2026-06-21T04:02:09Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — Host no está en la lista de egreso de red del entorno de ejecución (HTTP 403: "Host not in allowlist"). Verificación de salud no completada.
