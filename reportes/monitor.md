@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-21T00:00:00Z
-**Estado:** ❌ NO VERIFICADO
-**Detalle:** El entorno de ejecución remota bloqueó la conexión saliente a `repartojusto-production.up.railway.app` por política de egress de red (respuesta del proxy: "Host not in allowlist"). El servidor puede estar operativo pero no se pudo confirmar desde este entorno. Para habilitar el monitoreo, agregar el host a la allowlist de egress en la configuración del entorno remoto (https://code.claude.com/docs/en/claude-code-on-the-web).
+**Última verificación:** 2026-06-21T21:02:00Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar — el host `repartojusto-production.up.railway.app` no está en la allowlist de egress del entorno de ejecución remoto (HTTP 403 de red). No es posible confirmar estado real del servidor. Acción requerida: agregar el host a la política de red del ambiente Cloud.
