@@ -1,22 +1,22 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-21
+**Actualizado:** 2026-06-22
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 — enfoque autonomía sucursal |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 — enfoque autonomía sucursal |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Reactivación junio redactada 09/06 |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
@@ -48,10 +48,74 @@
 | 42 | Mascofood | Delivery alimentos para mascotas | V Región (Villa Alemana) | Nuevo | — | Presentación redactada 20/06 — canal propio WhatsApp, sin plataformas grandes, argumento potenciar sin comisión |
 | 43 | Kami Sushi | Sushi | Villa Alemana | Nuevo | — | Presentación redactada 21/06 — en Uber Eats, ticket alto sushi, argumento ahorro mensual |
 | 44 | Jona Sandwich | Sándwiches / comida rápida | Villa Alemana | Nuevo | — | Presentación redactada 21/06 — en Rappi, argumento tarifa fija vs. 28% comisión |
+| 45 | Sazón del Inka | Comida peruana | Quinta Williamson 16, Villa Alemana | Nuevo | — | Presentación redactada 22/06 — en Rappi, ticket alto ceviche/lomo saltado, ahorro $550K+/mes |
+| 46 | Sazón Nazca La Casona | Comida peruana | Av. Valparaíso 1190, Villa Alemana | Nuevo | — | Presentación redactada 22/06 — en Rappi, tel. +56 9 5335 7012, ticket alto peruana |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-22)
+
+> **NOTA PARA MATÍAS:** Hoy se completa la cobertura de "Arranque de Julio" para los 8 Contactados secundarios (#1 Fuente de Soda, #3 Farmacia Cruz Verde, #6 Botillería El Copihue, #7 Minimercado La Esquina, #8 Pastelería Dulce Hogar, #10 Café El Árbol, #11 Veterinaria Huellitas, #13 Ferretería Los Maestros) — cada uno con argumento estacional específico para su rubro en invierno. Los 4 PRIORIDAD (#2, #4, #5, #9) ya tienen sus mensajes de Arranque de Julio desde el 21/06. También se agregan 2 nuevos prospectos encontrados en Rappi Villa Alemana: **Sazón del Inka (#45)** (cocina peruana de ticket alto, Quinta Williamson 16) y **Sazón Nazca La Casona (#46)** (restaurante peruano, Av. Valparaíso 1190, tel. +56 9 5335 7012). Pipeline total: **46 prospectos**.
+>
+> **Recordatorio urgente:** Llevamos 45 días (desde 08/05) sin confirmación de qué mensajes fueron enviados. El cuello de botella sigue siendo el mismo.
+
+---
+
+#### ARRANQUE DE JULIO — Contactados secundarios (nueva oportunidad de inicio de mes)
+
+**[1] Fuente de Soda El Rápido — Arranque de Julio:**
+"Hola Fuente de Soda El Rápido! RepartoJusto, arranque de julio. Julio es el mes más frío del año — y el frío es delivery. Con 10 pedidos diarios de $5.000 en Rappi o PedidosYa, pagan más de $400.000 al mes solo en comisiones. Con RepartoJusto son $150.000 — más de $250.000 al mes que se quedan en el negocio. Sin contrato, registro gratis, 10 minutos para activarse. ¿Empezamos julio con RepartoJusto? repartojusto-production.up.railway.app"
+
+---
+
+**[3] Farmacia Cruz Verde — Arranque de Julio:**
+"Hola Farmacia Cruz Verde Villa Alemana! De RepartoJusto. Julio es el peak de gripes, resfríos y bronquitis — el mes en que más personas buscan medicamentos a domicilio sin salir al frío. Una pregunta para arrancar el mes: ¿tiene esta sucursal autonomía para agregar plataformas de delivery locales, o las decisiones son centralizadas? Si hay margen, $500 fijos por entrega puede cubrir el aumento de demanda de julio sin costo porcentual sobre la venta. repartojusto-production.up.railway.app"
+
+---
+
+**[6] Botillería El Copihue — Arranque de Julio:**
+"Hola Botillería El Copihue! Arranque de julio de RepartoJusto. Julio es el mejor mes para delivery de botillería: noches frías, viernes y sábados la gente prefiere quedarse en casa. Con 20 pedidos de fin de semana de $10.000 promedio, Rappi cobra ~$112.000 al mes en comisiones. Con nosotros son $20.000 — $92.000 que se quedan en el negocio solo en fines de semana. Sin contrato, pueden arrancar solo los viernes y sábados si quieren probar. repartojusto-production.up.railway.app ¿Este julio?"
+
+---
+
+**[7] Minimercado La Esquina — Arranque de Julio:**
+"Hola Minimercado La Esquina! De RepartoJusto, arranque de julio. Julio es el mes más frío del año — y el mes con más delivery de minimarket. La gente no quiere salir al frío por arroz, aceite o leche. Con 10 pedidos diarios de $6.000 promedio, la diferencia entre pagar 28% a Rappi ($504.000/mes) y $500 fijos con nosotros ($150.000) es $354.000 al mes que se quedan en el negocio. Sin contrato, registro completamente gratis. repartojusto-production.up.railway.app ¿Este julio le damos?"
+
+---
+
+**[8] Pastelería Dulce Hogar — Arranque de Julio:**
+"Hola Pastelería Dulce Hogar! De RepartoJusto. Julio es mes de cumpleaños y ya empieza la planificación para Fiestas Patrias de agosto — el peak de tortas del segundo semestre. Para una torta de $22.000, Rappi cobra hasta $6.160 de comisión (28%). Con nosotros son $500 fijos, siempre. Nuestros riders son locales en Villa Alemana y cuidan los pedidos delicados. Sin contrato, registro completamente gratis. repartojusto-production.up.railway.app ¿Arrancamos julio juntos?"
+
+---
+
+**[10] Café El Árbol — Arranque de Julio:**
+"Hola Café El Árbol! RepartoJusto, arranque de julio. Julio es el peak absoluto de cafeterías con delivery: nadie quiere salir al frío a desayunar o almorzar. Para un desayuno de $5.000, Rappi cobra $1.400 de comisión (28%) — con nosotros son $500 fijos, siempre. Con 10 pedidos al día, el ahorro supera $270.000 al mes. Sin contrato, registro completamente gratis. repartojusto-production.up.railway.app ¿Este julio lo hacemos?"
+
+---
+
+**[11] Veterinaria Huellitas — Arranque de Julio:**
+"Hola Veterinaria Huellitas! De RepartoJusto, arranque de julio. En invierno los dueños de mascotas prefieren aún más pedir desde casa — delivery de alimentos, medicamentos y accesorios tiene su peak en julio. Con RepartoJusto: $500 fijo por pedido entregado, sin porcentaje sobre la venta. Para un pedido de alimento de $18.000, la diferencia vs. una app con porcentaje (28%) es $4.540 que se queda en el negocio. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Este julio activamos el delivery?"
+
+---
+
+**[13] Ferretería Los Maestros — Arranque de Julio:**
+"Hola Ferretería Los Maestros! De RepartoJusto, arranque de julio. Julio es el peak de ferretería en invierno: calefacción, aislación, reparaciones domésticas — los maestros y propietarios necesitan materiales sin perder tiempo en desplazarse. Ofrecer delivery local puede diferenciarte de otras ferreterías en Villa Alemana. Con RepartoJusto: $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pedido de $15.000, la diferencia vs. una app de porcentaje (28%) es $3.700 que se queda en el negocio. Sin contrato, registro gratis. repartojusto-production.up.railway.app ¿Este julio lo activamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-22)
+
+**[45] Sazón del Inka — Presentación:**
+"Hola Sazón del Inka! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi — excelente cocina peruana en Quinta Williamson. Un dato directo: Rappi cobra 28% de comisión por cada pedido. Para un ceviche mixto o lomo saltado de $12.000-$15.000, eso son $3.360 a $4.200 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Con 12 entregas diarias, el ahorro puede superar $550.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi y sumar RepartoJusto como canal de menor costo. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[46] Sazón Nazca La Casona — Presentación:**
+"Hola Sazón Nazca La Casona! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Av. Valparaíso 1190. Dato concreto: Rappi cobra 28% de comisión por cada pedido. Para platos peruanos de $10.000-$15.000 promedio (ceviche, lomo saltado, risottos de mariscos), eso son $2.800 a $4.200 que se van a la app por pedido. Con RepartoJusto son $500 fijos, siempre. Con 12 entregas diarias, el ahorro puede superar $480.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi y sumar nuestra plataforma como canal de menor costo. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -703,3 +767,7 @@
 **Kami Sushi (#43, agregado 21/06):** Restaurante de sushi activo en Uber Eats en Villa Alemana. Propuesta diferenciada (formato sushi con ingredientes variados). Ticket promedio estimado: $12.000-$18.000. Uber Eats cobra 30% de comisión — con 15 entregas diarias, el ahorro vs. Uber Eats puede superar $900.000/mes vs. RepartoJusto. Dirección exacta y teléfono por confirmar al contactar. Fuente: ubereats.com/cl/store/kami-sushi-villa-alemana.
 
 **Jona Sandwich (#44, agregado 21/06):** Local de sándwiches activo en Rappi en Villa Alemana. Ticket promedio estimado: $5.000-$7.000. Rappi cobra 28% de comisión. Con 15 entregas diarias, el ahorro vs. Rappi supera $440.000/mes vs. RepartoJusto. Dirección exacta por confirmar al contactar. Fuente: rappi.cl/restaurantes/delivery/63745-jona-sandwich-villa-alemana.
+
+**Sazón del Inka (#45, agregado 22/06):** Restaurante de cocina peruana de alta calidad en Quinta Williamson 16, Villa Alemana. Confirmado en Rappi (rappi.cl/restaurantes/900088859-sazon-del-inka). Sitio web: sazondelinka.cl. Instagram: @sazondelinka. Menú de alto ticket: ceviches mixtos, lomo saltado, arroces con mariscos, risottos, pastas. Ticket promedio estimado: $10.000-$18.000 (muy alto → máximo ahorro por pedido). Con 12 entregas diarias el ahorro vs. Rappi (28%) supera $550.000/mes vs. RepartoJusto. Fuente: rappi.cl Villa Alemana + sazondelinka.cl.
+
+**Sazón Nazca La Casona (#46, agregado 22/06):** Restaurante peruano en Av. Valparaíso 1190, Villa Alemana. Teléfono: +56 9 5335 7012. Confirmado en Rappi (rappi.cl/restaurantes/900092182-sazon-nazca-la-casona). Sitio web: lacasonasn.cl. Instagram: @snlacasona. Facebook: @lacasona.sazonnazca. Cocina peruana auténtica — ceviches, lomos saltados, arroces de mariscos. Ticket promedio estimado: $10.000-$15.000 (alto). Con 12 entregas diarias el ahorro vs. Rappi (28%) supera $480.000/mes vs. RepartoJusto. Fuente: rappi.cl + baress.cl + puconadomicilio.cl Villa Alemana.

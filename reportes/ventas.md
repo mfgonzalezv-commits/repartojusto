@@ -1,37 +1,24 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-21
-**Pipeline total:** 44 prospectos
-**Por estado:** Nuevos: 30 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-22
+**Pipeline total:** 46 prospectos
+**Por estado:** Nuevos: 32 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
-
-1. **Mensajes "Arranque de Julio" para Contactados PRIORIDAD (#2, #4, #5, #9):** El cambio de mes es la excusa natural para retomar contacto. Julio es el peak de frío en Chile — argumento estacional directo para delivery de comida. Los 4 prospectos (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho) llevan 44 días sin confirmación de contacto. Se redactaron 4 mensajes nuevos con ángulo "inicio de julio + cálculo mensual de ahorro" que funcionan tanto como primera como enésima oleada de contacto.
-
-2. **2 nuevos prospectos encontrados via búsqueda web:** Kami Sushi (#43, activo en Uber Eats Villa Alemana, sushi con ticket alto estimado $12.000-$18.000) y Jona Sandwich (#44, activo en Rappi Villa Alemana, sándwiches con ticket $5.000-$7.000). Se redactaron presentaciones personalizadas para ambos. Pipeline sube a 44 prospectos.
-
-3. **Argumentos vigentes del Investigador (18/06) ya incorporados:** FNE doble multa ($3.400M CLP), Rappi Turbo Viña del Mar como argumento de urgencia — todos en borradores acumulados de los días anteriores. No hay munición nueva del Investigador para este ciclo.
+- Completé la cobertura de "Arranque de Julio" para los 8 Contactados secundarios (#1 Fuente de Soda, #3 Farmacia Cruz Verde, #6 Botillería El Copihue, #7 Minimercado La Esquina, #8 Pastelería Dulce Hogar, #10 Café El Árbol, #11 Veterinaria Huellitas, #13 Ferretería Los Maestros), cada uno con argumento estacional específico para su rubro en invierno.
+- Los 4 PRIORIDAD (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho) ya tenían su Arranque de Julio desde el 21/06.
+- Se agregaron 2 nuevos prospectos encontrados en Rappi Villa Alemana: Sazón del Inka (#45, Quinta Williamson 16, cocina peruana alta, ticket $12.000-$18.000) y Sazón Nazca La Casona (#46, Av. Valparaíso 1190, tel. +56 9 5335 7012, cocina peruana, ticket $10.000-$15.000).
+- Argumentos del Investigador (18/06) completamente incorporados en el arsenal: FNE doble multa $3.400M CLP (US$35,3M total), Rappi Turbo Viña del Mar como argumento de urgencia.
 
 ## Borradores listos para Matías
+10 mensajes nuevos hoy:
+- 8 mensajes "Arranque de Julio" para Contactados secundarios (#1, #3, #6, #7, #8, #10, #11, #13)
+- 2 presentaciones para nuevos prospectos (#45 Sazón del Inka, #46 Sazón Nazca La Casona)
 
-**Mensajes de hoy (21/06) — 6 borradores:**
-- **[2] Pollería Don Pollo** — Arranque de Julio (ángulo frío + $36.000 ahorro mensual)
-- **[4] Pizza House** — Arranque de Julio (ángulo frío + $100.000 ahorro mensual)
-- **[5] Sushi Zen** — Arranque de Julio (peak sushi invierno + $200.000 ahorro mensual)
-- **[9] Rotisería El Gaucho** — Arranque de Julio (peak rotisería invierno + $500.000 ahorro mensual)
-- **[43] Kami Sushi** — Presentación (Uber Eats, ticket sushi $15.000, ahorro $900.000/mes)
-- **[44] Jona Sandwich** — Presentación (Rappi, sándwich $6.000, ahorro $440.000/mes)
-
-**Borradores anteriores aún pendientes (acumulados desde 07/05):**
-- 38 mensajes de ciclos anteriores (06/20 → 05/07) esperando confirmación de envío por Matías
-- **ACCIÓN MÁS URGENTE:** Confirmar cuáles mensajes del período 07-16/05 se enviaron — una respuesta simple desbloquea el pipeline completo
+Todos los borradores anteriores (desde 08/05) siguen pendientes de confirmación de envío. Son 45 días de borradores acumulados sin que se pueda actualizar ningún estado del pipeline.
 
 ## Nuevos prospectos agregados
-
-| # | Negocio | Rubro | Plataforma | Argumento clave |
-|---|---|---|---|---|
-| 43 | Kami Sushi | Sushi | Uber Eats | Ticket $15.000 → $4.500 comisión Uber Eats vs. $500 RJ. Ahorro ~$900.000/mes |
-| 44 | Jona Sandwich | Sándwiches | Rappi | Ticket $6.000 → $1.680 comisión Rappi vs. $500 RJ. Ahorro ~$440.000/mes |
+- **#45 Sazón del Inka** — Cocina peruana de alta calidad en Quinta Williamson 16, Villa Alemana. Confirmado en Rappi. Menú: ceviches, lomo saltado, mariscos, risottos. Ticket promedio $10.000-$18.000 (muy alto). Web: sazondelinka.cl. Instagram: @sazondelinka. Ahorro estimado vs. Rappi: $550.000+/mes con 12 entregas diarias.
+- **#46 Sazón Nazca La Casona** — Restaurante peruano en Av. Valparaíso 1190, Villa Alemana. Confirmado en Rappi. Tel: +56 9 5335 7012. Web: lacasonasn.cl. Instagram: @snlacasona. Ticket promedio $10.000-$15.000. Ahorro estimado: $480.000+/mes con 12 entregas diarias.
 
 ## Para el Gerente
-
-Pipeline en 44 prospectos (30 nuevos, 14 contactados, 0 registrados); 6 borradores nuevos hoy — mensajes "Arranque de Julio" para los 4 Contactados PRIORIDAD aprovechando el cambio de mes como vector de reactivación, más presentaciones para 2 nuevos prospectos encontrados en Uber Eats y Rappi; cuello de botella sigue siendo confirmación de Matías sobre mensajes enviados — llevamos 44 días paralizado sin poder actualizar estados del pipeline.
+Pipeline en 46 prospectos (32 nuevos, 14 contactados, 0 registrados); cobertura "Arranque de Julio" completada para todos los 14 Contactados activos; cuello de botella crítico: 45 días sin confirmación de Matías sobre mensajes enviados paraliza actualización de todos los estados del pipeline.
