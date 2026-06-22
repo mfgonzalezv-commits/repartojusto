@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-22T12:03:18Z
-**Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — acceso bloqueado por política de red del entorno de ejecución (Host not in allowlist). Se requiere configurar egress de red para permitir este host.
+**Última verificación:** 2026-06-22T13:02:44Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** GET https://repartojusto-production.up.railway.app/health bloqueado por política de egreso de red del entorno remoto (HTTP 403 — "Host not in allowlist"). Estado real del servidor desconocido. Agregar el host al egreso de red en las settings del entorno de Claude Code para habilitar el monitoreo.
