@@ -1,13 +1,28 @@
 # Mejoras RepartoJusto
-**Fecha:** 2026-06-15
-**Estado:** 5 mejoras identificadas — 2 críticas de seguridad, 1 de rendimiento, 2 de UX/privacidad
+**Fecha:** 2026-06-22
+**Estado:** 5 mejoras identificadas — 1 bug activo que rompe push notifications, 3 vulnerabilidades de seguridad, 1 de rendimiento
 
 ---
 
-## 1. [CRÍTICO] Webhook Flow sin verificación de firma HMAC
+## 1. Bug activo: `req.user` debería ser `req.usuario` — rompe push subscriptions de riders
 
-**Archivo:** `backend/src/routes/pagos.js`, línea 124  
-**Beneficio:** Impide que cualquier actor externo marque pagos como completados enviando un POST falso al webhook.
+**Archivo:** `backend/src/routes/riders.js`, línea 183
+**Beneficio:** Corrige un `TypeError` en producción que impide que los riders registren su suscripción Web Push, dejándolos sin notificaciones de nuevos pedidos.
+
+```js
+// ACTUAL (línea 183) — lanza TypeError: Cannot read properties of undefined:
+[JSON.stringify(subscription), req.user.id]
+
+// CORRECTO — el middleware auth.js usa req.usuario, no req.user:
+[JSON.stringify(subscription), req.usuario.id]
+```
+
+---
+
+## 2. Seguridad: Webhook de Flow acepta POSTs sin verificar firma HMAC
+
+**Archivo:** `backend/src/routes/pagos.js`, línea 124
+**Beneficio:** Impide que un atacante marque pagos como completados enviando un token válido al webhook sin haber pagado realmente.
 
 ```js
 // AGREGAR al inicio del archivo (ya existe require('crypto'))
@@ -35,10 +50,10 @@ router.post('/webhook', async (req, res, next) => {
 
 ---
 
-## 2. [CRÍTICO] Login sin rate limiting — vulnerable a brute force
+## 3. Seguridad: Login sin rate limiting — vulnerable a fuerza bruta
 
-**Archivo:** `backend/src/routes/auth.js`, línea 100  
-**Beneficio:** Bloquea ataques de fuerza bruta en credenciales de negocios, riders y admin.
+**Archivo:** `backend/src/routes/auth.js`, línea 100
+**Beneficio:** Bloquea ataques de fuerza bruta sobre credenciales de negocios, riders y admin con solo agregar un middleware estándar.
 
 ```js
 // AGREGAR al inicio del archivo
@@ -65,15 +80,35 @@ router.post('/login',
 
 ---
 
-## 3. [RENDIMIENTO] Rider escribe en BD en cada actualización GPS
+## 4. Seguridad: JWT_SECRET con valor débil hardcodeado como fallback
 
-**Archivo:** `backend/src/sockets/index.js`, línea 67  
-**Beneficio:** Reduce escrituras a PostgreSQL hasta 10× cuando un rider transmite ubicación cada segundo, sin afectar la fluidez del tracking en tiempo real.
+**Archivo:** `backend/src/config/index.js`, línea 16
+**Beneficio:** Evita que el servidor arranque en producción con un secreto JWT conocido públicamente que permitiría forjar tokens de cualquier usuario.
 
 ```js
-// REEMPLAZAR el handler completo 'rider:ubicacion' (líneas 67–98):
+// ACTUAL (línea 16) — arranque silencioso con secreto débil:
+JWT_SECRET: process.env.JWT_SECRET || 'secret_key_change_in_production',
+
+// CORRECTO — lanzar error en inicio si no está configurado:
+JWT_SECRET: (() => {
+  if (!process.env.JWT_SECRET) {
+    throw new Error('JWT_SECRET no configurado en variables de entorno');
+  }
+  return process.env.JWT_SECRET;
+})(),
+```
+
+---
+
+## 5. Rendimiento: Rider escribe en PostgreSQL en cada actualización GPS
+
+**Archivo:** `backend/src/sockets/index.js`, línea 67
+**Beneficio:** Reduce escrituras a PostgreSQL hasta 10× cuando riders transmiten ubicación cada segundo, sin afectar la fluidez del mapa en tiempo real para los negocios.
+
+```js
+// REEMPLAZAR el handler 'rider:ubicacion' completo (líneas 67–98):
 const _lastDbWrite = new Map(); // rider_id → timestamp
-const GPS_THROTTLE_MS = 10_000;
+const GPS_THROTTLE_MS = 10_000; // escribir en BD máximo cada 10s
 
 socket.on('rider:ubicacion', async ({ lat, lng }) => {
   if (rol !== 'rider' || !socket.rider_id) return;
@@ -86,7 +121,7 @@ socket.on('rider:ubicacion', async ({ lat, lng }) => {
       [socket.rider_id]
     );
 
-    // Emitir a clientes siempre (sin esperar BD)
+    // Emitir a clientes siempre — sin esperar escritura en BD
     rows.forEach((pedido) => {
       io.to(`negocio:${pedido.negocio_id}`)
         .to(`pedido:${pedido.id}`)
@@ -112,112 +147,4 @@ socket.on('rider:ubicacion', async ({ lat, lng }) => {
     console.error('❌ Error al actualizar ubicación:', err.message);
   }
 });
-```
-
----
-
-## 4. [SEGURIDAD/PRIVACIDAD] GET /pedidos/:id expone datos de clientes sin verificar ownership
-
-**Archivo:** `backend/src/routes/pedidos.js`, línea 374  
-**Beneficio:** Evita que un rider o negocio ajeno pueda leer el teléfono y dirección de clientes de pedidos que no le corresponden.
-
-```js
-// REEMPLAZAR el handler GET /:id completo (líneas 374–392):
-router.get('/:id', auth, async (req, res, next) => {
-  try {
-    const { rows } = await db(
-      `SELECT p.*,
-              n.nombre_comercial, n.direccion AS direccion_retiro,
-              n.lat AS neg_lat, n.lng AS neg_lng, n.mostrar_costo_seguimiento,
-              u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
-              ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
-       FROM pedidos p
-       JOIN negocios n ON n.id = p.negocio_id
-       LEFT JOIN riders ri ON ri.id = p.rider_id
-       LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id
-       WHERE p.id = $1`,
-      [req.params.id]
-    );
-    if (!rows[0]) return res.status(404).json({ error: 'Pedido no encontrado' });
-
-    const pedido = rows[0];
-    const { id: usuarioId, rol } = req.usuario;
-
-    if (rol === 'negocio') {
-      const { rows: [neg] } = await db(
-        'SELECT id FROM negocios WHERE usuario_id = $1', [usuarioId]
-      );
-      if (!neg || neg.id !== pedido.negocio_id)
-        return res.status(403).json({ error: 'Sin acceso a este pedido' });
-    } else if (rol === 'rider') {
-      const { rows: [rid] } = await db(
-        'SELECT id FROM riders WHERE usuario_id = $1', [usuarioId]
-      );
-      if (!rid || rid.id !== pedido.rider_id)
-        return res.status(403).json({ error: 'Sin acceso a este pedido' });
-    }
-    // admin: acceso libre
-
-    res.json(pedido);
-  } catch (err) { next(err); }
-});
-```
-
----
-
-## 5. [UX] Chat en memoria sin persistencia — historial se pierde al reiniciar el servidor
-
-**Archivo:** `backend/src/sockets/index.js`, línea 14  
-**Beneficio:** Los mensajes de coordinación entre rider y negocio sobreviven a reinicios del servidor, mejorando la confiabilidad del canal de comunicación en entregas activas.
-
-```js
-// REEMPLAZAR la lógica in-memory del chat (líneas 153–172) con persistencia en BD:
-
-// chat:unirse — cargar historial desde BD
-socket.on('chat:unirse', async ({ pedido_id }) => {
-  if (!pedido_id) return;
-  socket.join(`pedido:${pedido_id}`);
-  try {
-    const { rows } = await db(
-      `SELECT desde, nombre, texto, created_at AS hora
-       FROM chat_mensajes
-       WHERE pedido_id = $1
-       ORDER BY created_at ASC
-       LIMIT 50`,
-      [pedido_id]
-    );
-    socket.emit('chat:historial', rows);
-  } catch {}
-});
-
-// chat:enviar — guardar en BD y emitir
-const MAX_CHAT_CHARS = 500;
-socket.on('chat:enviar', async ({ pedido_id, texto }) => {
-  if (!pedido_id || !texto) return;
-  const textoLimpio = String(texto).trim().slice(0, MAX_CHAT_CHARS);
-  if (!textoLimpio) return;
-  const desde = rol === 'rider' ? 'rider' : 'negocio';
-  const msg = { desde, nombre, texto: textoLimpio, hora: new Date().toISOString() };
-
-  try {
-    await db(
-      `INSERT INTO chat_mensajes (pedido_id, desde, nombre, texto)
-       VALUES ($1, $2, $3, $4)`,
-      [pedido_id, desde, nombre, textoLimpio]
-    );
-  } catch {}
-
-  io.to(`pedido:${pedido_id}`).emit('chat:mensaje', msg);
-});
-
-// Nota: requiere migración:
-// CREATE TABLE chat_mensajes (
-//   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-//   pedido_id UUID NOT NULL REFERENCES pedidos(id) ON DELETE CASCADE,
-//   desde TEXT NOT NULL,
-//   nombre TEXT NOT NULL,
-//   texto TEXT NOT NULL,
-//   created_at TIMESTAMPTZ DEFAULT NOW()
-// );
-// CREATE INDEX ON chat_mensajes (pedido_id, created_at);
 ```
