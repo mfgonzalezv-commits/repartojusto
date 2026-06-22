@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-22T04:02:21Z
+**Última verificación:** 2026-06-22T00:00:00Z
 **Estado:** ❌ NO VERIFICABLE
-**Detalle:** Error de egreso de red en el entorno de ejecución remoto: "Host not in allowlist: repartojusto-production.up.railway.app". El entorno cloud no tiene permiso de salida hacia ese host. El estado real del servidor es desconocido — este no es un fallo del servidor sino una restricción del entorno. Para habilitar el monitoreo, agregar `repartojusto-production.up.railway.app` a la política de egress de red en la configuración del entorno remoto.
+**Detalle:** No se pudo alcanzar https://repartojusto-production.up.railway.app/health — el entorno de ejecución remota bloqueó la conexión saliente (egress policy: host no está en la lista blanca). Respuesta del proxy: 403 "Host not in allowlist". El servidor de producción puede estar operativo, pero esta sesión remota no tiene permiso de red para alcanzarlo. Acción recomendada: agregar el host a la configuración de egress de la sesión programada.
