@@ -1,74 +1,121 @@
 # Análisis Interno RepartoJusto
-**Fecha:** 2026-05-12
+**Fecha:** 2026-06-23
 **Agente:** Aprendiz
-**Fuente:** Análisis estático de código (API bloqueada por allowlist en entorno de análisis)
 
 ---
 
 ## Métricas del sistema
 
-**Sin acceso a API real** — la URL de producción responde HTTP 403 desde el entorno de análisis (Host not in allowlist). El agente Monitor confirma el mismo problema desde las 10:03 del 2026-05-12. Todas las métricas son estimaciones basadas en análisis de código.
-
-**Estructura confirmada en código:**
-- 10 tablas PostgreSQL activas: `usuarios`, `negocios`, `riders`, `pedidos`, `productos`, `clientes`, `pagos`, `liquidaciones`, `calificaciones` + tablas auxiliares
-- 10 rutas REST implementadas: auth, pedidos, riders, negocios, pagos, admin, clientes, calificaciones, soporte, email
-- Motor de asignación en cascada operativo con soporte Web Push
-- Sistema de chat en tiempo real vía Socket.io
-- 5 estrategias de cobro configurables por negocio
+Sin acceso directo a la API de producción — el host `repartojusto-production.up.railway.app` no está en el allowlist de red del entorno de ejecución. Análisis basado en código fuente y git log.
 
 ---
 
-## Patrones detectados
+## Verificaciones específicas encargadas (cola.md semana 16-22/05)
 
-### Lo que funciona bien
-- El motor de asignación en cascada (`sockets/asignacion.js`) está bien diseñado: ofrece pedidos por proximidad con bonificación por calificación (20% de ventaja), timeout de 30s y fallback a broadcast público.
-- Los triggers de `updated_at` están correctamente definidos en migrate.js.
-- Los índices críticos de negocio están presentes: `idx_pedidos_negocio`, `idx_pedidos_rider`, `idx_pedidos_estado`, `idx_riders_disponible`.
-- El middleware `errorHandler.js` captura correctamente errores de PostgreSQL (23505, 23503) y JWT.
-- Las calificaciones de riders usan un sistema booleano multi-dimensión que alimenta el algoritmo de asignación — coherente con el modelo de negocio.
+### 1. Bug push-subscription — NO CORREGIDO
 
-### Patrones problemáticos recurrentes
-- **Doble query innecesaria**: 6 endpoints hacen primero un SELECT para obtener `negocio_id` o `rider_id`, luego la query principal. Patrón repetido en negocios.js (3 veces) y riders.js (2 veces).
-- **Haversine triplicado**: Tres implementaciones distintas del cálculo de distancia en pedidos.js (`haversineKm`), riders.js (`haversineRiders`), y asignacion.js (aproximación plana). Además, asignacion.js usa una aproximación cartesiana en SQL (`(lat1-lat2)^2 + (lng1-lng2)^2 * cos(lat)`) que introduce error creciente a distancias mayores.
-- **Feature completamente muda**: Tabla `productos` en migrate.js → sin rutas en `src/routes/` → los negocios no pueden gestionar menús por API.
+**Estado:** Bug sigue activo en producción.
+
+`backend/src/routes/riders.js:183` — El endpoint `POST /api/riders/push-subscription` usa `req.user.id` en lugar de `req.usuario.id`:
+
+```js
+// ACTUAL (línea 183) — lanza TypeError en cada intento de suscripción:
+[JSON.stringify(subscription), req.user.id]
+```
+
+El reporte de Mejoras del 2026-06-22 identificó el problema correctamente pero no aplicó la corrección en el código. Los riders siguen sin poder recibir notificaciones push cuando la app está cerrada. Corrección pendiente de 1 línea.
+
+---
+
+### 2. LIMIT 100 en /api/admin/liquidaciones — CONFIRMADO, sin paginación
+
+**Archivo:** `backend/src/routes/admin.js` — endpoint `GET /api/admin/liquidaciones`
+
+```js
+// Sin parámetros de paginación:
+LIMIT 100
+```
+
+El endpoint no acepta `page` ni `limit` como query params. A medida que la plataforma escale y haya más liquidaciones registradas, las más antiguas quedarán invisibles para el admin sin ningún aviso al usuario. Corrección necesaria: agregar paginación estándar `page/limit` idéntica a los otros endpoints de admin.
+
+**Corrección sugerida para Mejoras:**
+```js
+// Agregar a destructuring de req.query:
+const { page = 1, limit = 50 } = req.query;
+const offset = (page - 1) * limit;
+// Reemplazar query con parámetros:
+ORDER BY l.created_at DESC
+LIMIT $1 OFFSET $2
+// params: [limit, offset]
+```
+
+---
+
+### 3. RESIDUAL_PCT: 8 — DEUDA TÉCNICA confirmada
+
+**Archivo:** `backend/src/config/index.js:40`
+
+```js
+RESIDUAL_PCT: parseFloat(process.env.RESIDUAL_PCT) || 8,
+```
+
+La variable existe en config pero **no es referenciada en ningún archivo de rutas ni de sockets**. Búsqueda exhaustiva en `backend/src/` confirma cero usos. No hay cálculo de residual en pedidos, pagos ni liquidaciones. Esto parece ser un modelo de negocio que no llegó a implementarse.
+
+**Acción para Matías:** Decidir si activar el 8% residual (implica cambios en `pedidos.js` al crear pedido y en `admin.js` al calcular ingresos) o documentarlo como feature descartada para no generar confusión futura.
+
+---
+
+## Patrones detectados en el código
+
+### Scheduler de pedidos agendados — IMPLEMENTADO correctamente
+
+`backend/src/sockets/asignacion.js:264` — `iniciarScheduler` usa `setInterval` cada 60 segundos y consulta pedidos con `estado='agendado'` cuya `hora_retiro` esté dentro de los próximos `ANTICIPACION_MIN` minutos. El servidor lo lanza en startup (`server.js:132`). Feature funcional.
+
+**Advertencia:** La comparación de `hora_retiro TIME` contra `NOW() AT TIME ZONE 'America/Santiago'::time` puede producir falsos positivos si un pedido se agenda cerca de medianoche (la ventana de 2 minutos hacia atrás puede saltar al día anterior). Sin índice en `(estado, hora_retiro)`, la query hace full scan de la tabla `pedidos` cada minuto.
+
+### Índices faltantes — NO APLICADOS
+
+Los tres índices que Mejoras debía agregar en la semana 19/05 siguen sin estar en `migrate.js`:
+- `idx_pagos_flow_token` — necesario en `pagos.js` para el webhook de Flow que busca por token
+- `idx_pedidos_created_at` — necesario en `admin/metricas/ingresos` y `admin/pedidos`
+- `idx_pedidos_entregado_at` — necesario en `admin/liquidar` y cálculo de saldo rider
+
+### Error silencioso en incentivos
+
+`backend/src/routes/admin.js` — endpoint `POST /api/admin/riders/:id/incentivo`: el INSERT en `pagos` hace `.catch(() => {})` que descarta silenciosamente errores sin log. Si el INSERT falla (por ejemplo, si el rider no tiene pedidos entregados), el admin no recibe ninguna señal de que el registro de pago falló, aunque el saldo sí se actualiza.
+
+### Panel desglose liquidaciones para negocios — NO IMPLEMENTADO
+
+`GET /api/negocios/resumen` devuelve solo KPIs agregados (total entregados, gasto_total, gasto_plataforma, gasto_envios, pedidos por día). No hay desglose por pedido individual (fecha, monto, tarifa cobrada, neto negocio). El Investigador validó que esta es la queja #1 de negocios contra Rappi/PedidosYa. Feature pendiente de alta prioridad.
 
 ---
 
 ## Ineficiencias concretas
 
-| # | Archivo:línea | Problema | Impacto estimado |
-|---|---|---|---|
-| **1** | `backend/src/routes/riders.js:~110` | **BUG CRÍTICO**: `req.user.id` debería ser `req.usuario.id` en el endpoint `POST /api/riders/push-subscription`. Las suscripciones push NUNCA se guardan en DB. | Las notificaciones push a riders no llegan cuando la app está cerrada → riders pierden ofertas → pedidos quedan sin asignar |
-| **2** | `backend/src/sockets/index.js:14` | Chat en memoria (`new Map()`). Historial destruido en cada redeploy de Railway. | Mala UX: riders y negocios pierden el contexto de la conversación en cada deploy |
-| **3** | `backend/src/config/index.js:39` + código | `REDIS_URL` configurado pero Redis nunca importado en ningún archivo. Sin rate limiting, sin caching. | Queries de `/api/admin/metricas` (4 queries paralelas) corren sin caché en cada carga del dashboard |
-| **4** | `backend/scripts/migrate.js` | Falta `CREATE INDEX ON pagos(flow_token)`. Todos los webhooks y confirmaciones de pago hacen sequential scan. | Cada pago requiere full table scan en pagos; escala mal con volumen |
-| **5** | `backend/scripts/migrate.js` | Falta `CREATE INDEX ON pedidos(created_at)` y `ON pedidos(entregado_at)`. Ambas columnas usadas en WHERE de métricas y liquidaciones. | Queries de métricas y liquidaciones hacen seq scan en la tabla más grande |
-| **6** | `backend/src/routes/admin.js:~130` | `POST /api/admin/riders/:id/incentivo` inserta en `pagos` con columnas `rider_id` y `tipo` que NO existen en el schema. El `.catch(() => {})` oculta el error silenciosamente. | El registro contable de incentivos nunca se crea; imposible auditar bonos |
-| **7** | `backend/src/routes/pedidos.js:~200` + `backend/src/sockets` | Pedidos en estado `agendado` (con `hora_retiro`) no tienen scheduler que los active. El comment dice "el scheduler lo lanzará 10 min antes" pero ese scheduler no existe en el código. | Los negocios pueden crear pedidos agendados pero nunca se despachan automáticamente |
-| **8** | `backend/src/config/index.js:43` | `RESIDUAL_PCT: 8` definido pero no utilizado en ningún cálculo de `calcularCargos()` ni en las queries de ingresos. | La lógica de negocio del 8% residual no está implementada |
-| **9** | `backend/src/routes/negocios.js:138,165,200` | Tres endpoints hacen dos queries separadas para obtener `negocio_id` antes de la query principal. Mismo patrón en riders.js. | Latencia innecesaria: ~2-5ms por request adicional en cada operación de negocio |
-| **10** | `backend/src/routes/admin.js:~200` | `GET /api/admin/liquidaciones` tiene `LIMIT 100` hardcodeado sin paginación. | Si se superan 100 liquidaciones, las más antiguas son invisibles para admin |
+| Archivo:línea | Problema | Impacto estimado |
+|---|---|---|
+| `src/routes/riders.js:183` | `req.user.id` → `req.usuario.id` — TypeError en prod | Riders sin push notifications (100% de falla) |
+| `src/routes/admin.js:~170` | `LIMIT 100` hardcodeado en liquidaciones sin paginación | Ocultamiento de datos al escalar |
+| `scripts/migrate.js` | Faltan `idx_pagos_flow_token`, `idx_pedidos_created_at`, `idx_pedidos_entregado_at` | Full scan en queries frecuentes de admin y Flow |
+| `src/sockets/asignacion.js:240` | Full scan pedidos cada 60s sin índice en `(estado, hora_retiro)` | Degradación progresiva con volumen de pedidos agendados |
+| `src/config/index.js:40` | `RESIDUAL_PCT` definido pero nunca usado | Confusión de modelo de negocio / deuda técnica |
+| `src/routes/admin.js` incentivo | `.catch(() => {})` silencia error de INSERT en pagos | Auditoría financiera incompleta sin aviso |
+| `src/routes/negocios.js:252` | Resumen solo agrega, sin desglose por pedido | Diferenciador de producto no aprovechado |
 
 ---
 
 ## Oportunidades de mejora basadas en datos
 
-1. **Fix bug push-subscription → impacto inmediato en conversión de asignaciones**: Si las notificaciones push no llegan (BUG #1), los riders solo reciben ofertas cuando tienen la app activa. Corregir `req.user.id` → `req.usuario.id` en una línea de código restaura la funcionalidad completa de push, mejorando la tasa de asignación en el primer intento.
+1. **Desglose por pedido en panel negocio** — El Investigador confirmó que es la queja #1 de negocios contra plataformas. El schema ya tiene `cargo_negocio`, `cargo_cliente`, `tarifa_entrega`, `app_fee` por pedido — solo falta exponerlos en un endpoint `/api/negocios/pedidos?estado=entregado&page=1`.
 
-2. **Implementar scheduler de pedidos agendados → desbloquea feature de scheduling**: Los negocios pueden crear pedidos con `hora_retiro` pero nunca se despachan. Un job simple con `node-cron` que consulte `pedidos WHERE estado='agendado' AND hora_retiro BETWEEN NOW() AND NOW()+10min` y llame a `iniciarCascada` activaría esta feature sin cambios de schema.
+2. **Índice compuesto en pedidos agendados** — `CREATE INDEX idx_pedidos_agendados ON pedidos(estado, hora_retiro) WHERE estado='agendado'` — eliminaría el full scan del scheduler y mejoraría el rendimiento del webhook de Flow simultáneamente.
 
-3. **Agregar 3 índices críticos → mejora queries de métricas y pagos**: `pagos(flow_token)`, `pedidos(created_at)`, `pedidos(entregado_at)`. Son ALTER TABLE de minutos; impacto en performance de admin dashboard y procesamiento de webhooks Flow.
-
-4. **Usar Redis para caching de métricas admin**: Los 4 queries de `/api/admin/metricas` podrían cachearse 60 segundos en Redis (ya configurado en infra, solo falta el código). Reduciría carga en PostgreSQL con cada refresh del dashboard.
-
-5. **Crear `src/routes/productos.js` → habilitar gestión de menú**: La tabla existe, los índices existen, pero no hay endpoints. Es el único feature de schema completamente sin API. Los negocios necesitan gestionar su menú y actualmente es imposible.
-
-6. **Centralizar cálculo de distancia**: Tres implementaciones distintas de haversine aumentan riesgo de inconsistencia en decisiones de asignación. Extraer a `src/utils/distancia.js` y usar la implementación trigonométrica correcta (no la aproximación cartesiana de asignacion.js).
+3. **Corrección de 1 línea que restaura push notifications** — El bug `req.user.id` en riders.js:183 lleva al menos 5 semanas sin corregirse. Impacto directo en retención de riders que no reciben alertas de nuevos pedidos.
 
 ---
 
 ## Mensajes para otros agentes
 
-- **PARA MEJORAS**: Prioridad 1 — BUG CRÍTICO en `backend/src/routes/riders.js` línea ~110: cambiar `req.user.id` por `req.usuario.id` en el endpoint `POST /api/riders/push-subscription`. Una línea, impacto alto. Prioridad 2 — agregar `CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token)` y `CREATE INDEX IF NOT EXISTS idx_pedidos_created_at ON pedidos(created_at)` y `idx_pedidos_entregado_at ON pedidos(entregado_at)` al migrate.js y ejecutar en producción. Prioridad 3 — crear `backend/src/routes/productos.js` con CRUD básico (GET/POST/PUT/DELETE) para desbloquear gestión de menú.
+- **PARA MEJORAS:** URGENTE — bug `req.user.id` en `backend/src/routes/riders.js:183` sigue sin corregir (identificado 22/06, no aplicado). Cambiar a `req.usuario.id`. También: agregar paginación a `GET /api/admin/liquidaciones` en `admin.js` — reemplazar `LIMIT 100` por `LIMIT $1 OFFSET $2` con `page/limit` desde query params. Agregar los 3 índices faltantes al migrate.js: `idx_pagos_flow_token ON pagos(flow_token)`, `idx_pedidos_created_at ON pedidos(created_at)`, `idx_pedidos_entregado_at ON pedidos(entregado_at)`.
 
-- **PARA GERENTE**: El sistema tiene 10 rutas REST operativas y un motor de asignación sofisticado, pero un bug de una línea en riders.js (`req.user.id` vs `req.usuario.id`) bloquea completamente las notificaciones push a riders, lo que puede estar afectando la tasa de primera asignación. Adicionalmente, la feature de pedidos agendados existe en schema y UI pero nunca se activa por falta de scheduler — es trabajo de 2-3 horas que desbloquea un diferenciador competitivo real.
+- **PARA GERENTE:** Bug de push-subscription lleva 5+ semanas sin corregirse a pesar de estar documentado — los riders no reciben alertas de pedidos sin app abierta; corrección es 1 línea. `RESIDUAL_PCT: 8` en config nunca se implementó en ningún cálculo — requiere decisión de Matías antes de activarlo o eliminarlo.
