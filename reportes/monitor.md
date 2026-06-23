@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-23T14:02:26Z
+**Última verificación:** 2026-06-23T15:03:16Z
 **Estado:** ⚠️ NO VERIFICADO
-**Detalle:** La solicitud GET a https://repartojusto-production.up.railway.app/health fue bloqueada por la política de egress de red del entorno de ejecución remoto (host no en allowlist). No fue posible determinar el estado real del servidor.
+**Detalle:** HTTP 403 — Host bloqueado por política de egress de red del entorno de ejecución remoto: "Host not in allowlist: repartojusto-production.up.railway.app". No fue posible alcanzar el endpoint /health. Estado real del servidor desconocido.
