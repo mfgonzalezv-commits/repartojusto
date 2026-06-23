@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-22
+**Actualizado:** 2026-06-23
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -20,8 +20,8 @@
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
-| 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Reactivación junio redactada 13/06 — PRIORIDAD (refresh del 16/05) |
-| 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Reactivación junio redactada 13/06 — ALTA PRIORIDAD (refresh del 16/05) |
+| 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Arranque julio redactado 23/06 — PRIORIDAD |
+| 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Arranque julio redactado 23/06 — ALTA PRIORIDAD |
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Versión junio redactada 19/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
@@ -50,10 +50,44 @@
 | 44 | Jona Sandwich | Sándwiches / comida rápida | Villa Alemana | Nuevo | — | Presentación redactada 21/06 — en Rappi, argumento tarifa fija vs. 28% comisión |
 | 45 | Sazón del Inka | Comida peruana | Quinta Williamson 16, Villa Alemana | Nuevo | — | Presentación redactada 22/06 — en Rappi, ticket alto ceviche/lomo saltado, ahorro $550K+/mes |
 | 46 | Sazón Nazca La Casona | Comida peruana | Av. Valparaíso 1190, Villa Alemana | Nuevo | — | Presentación redactada 22/06 — en Rappi, tel. +56 9 5335 7012, ticket alto peruana |
+| 47 | Sushi Like Delivery | Sushi | Latorre 292 esq. Madrid, Villa Alemana | Nuevo | — | Presentación redactada 23/06 — canal propio (sushilike.cl), tel. +56 32 2122263, argumento logística local |
+| 48 | La Mano de Mamá | Comida casera chilena / fusión | Bernardo Leighton 20 Local 5, Villa Alemana | Nuevo | — | Presentación redactada 23/06 — 31K seguidores Instagram, canal propio, argumento potenciar sin comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-23)
+
+> **NOTA PARA MATÍAS:** Hoy se agregan 2 nuevos prospectos encontrados con búsqueda activa: **Sushi Like Delivery (#47)** — sushi con canal de delivery propio en Latorre 292 (sushilike.cl, tel. +56 32 2122263) y **La Mano de Mamá (#48)** — comida casera chilena con 31.000 seguidores en Instagram (@lamanodemama_va), fuerte identidad local en Bernardo Leighton 20. Ambos operan principalmente por canal directo (sin las grandes plataformas) — el argumento es potenciar su logística sin pagar comisiones porcentuales. También se redactan mensajes de **Arranque de Julio** para #17 Locos X Food y #18 La Casita Del Sabor, los 2 Nuevos de mayor ROI estimado ($575K-$775K y $450K de ahorro mensual respectivamente). Pipeline total: **48 prospectos**.
+>
+> **Recordatorio:** Llevamos 46 días (desde 08/05) sin confirmación de qué mensajes fueron enviados. Cualquier señal de Matías — aunque sea "no envié nada aún" — desbloquea el pipeline completo.
+
+---
+
+#### ARRANQUE DE JULIO — Nuevos PRIORIDAD con mayor ROI estimado
+
+**[17] Locos X Food — Arranque de Julio (23/06):**
+"Hola Locos X Food! RepartoJusto, arranque de julio. Julio es el mes más frío del año — y el frío es el mejor momento para comida rápida en delivery. Para un negocio con el volumen de ustedes en Rappi, estimamos que hoy le pagan entre $800.000 y $1.000.000 al mes en comisiones (28%). Con RepartoJusto ese costo baja a $225.000. Son entre $575.000 y $775.000 al mes que se quedan en el negocio en vez de irse a la app — todos los meses, desde el primero. Sin contrato, registro gratuito, pueden seguir en Rappi y sumar RepartoJusto como canal de menor costo. ¿Empezamos julio con RepartoJusto? repartojusto-production.up.railway.app"
+
+---
+
+**[18] La Casita Del Sabor — Arranque de Julio (23/06):**
+"Hola La Casita Del Sabor! De RepartoJusto, arranque de julio. El frío de julio es el mejor aliado de la comida casera en delivery — la gente prefiere pedir un almuerzo caliente desde casa antes que cocinar con frío. El número directo para ustedes: con unas 12 entregas diarias de $7.000 en Rappi, le pagan a Rappi ~$630.000 al mes en comisiones. Con RepartoJusto ese costo baja a $180.000 — $450.000 al mes que se quedan en el negocio, empezando cuando quieran. Sin contrato, registro completamente gratuito. ¿Este julio hacemos el cambio? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-23)
+
+**[47] Sushi Like Delivery — Presentación:**
+"Hola Sushi Like Delivery! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Latorre 292 — sushi delivery con canal propio (sushilike.cl) muy bien montado. Una propuesta concreta: RepartoJusto puede sumarle logística de riders locales a ese canal por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pedido de sushi de $15.000, la diferencia vs. Rappi o Uber Eats (28-30%) es entre $3.700 y $4.000 que se queda en el negocio por cada entrega. Julio es el peak de sushi delivery en Chile — el frío trae más pedidos desde casa. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[48] La Mano de Mamá — Presentación:**
+"Hola La Mano de Mamá! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los vemos en Instagram (@lamanodemama_va) — comida casera chilena y fusión con una comunidad de 31.000 personas! Un negocio con esa identidad de barrio merece una plataforma local, no una multinacional que se lleva el 28-30% de cada pedido. Con RepartoJusto el costo es $500 fijo por pedido entregado, sin porcentaje sobre la venta. Para un almuerzo o menú de $5.500, la diferencia vs. Rappi (28%) son más de $1.000 por pedido que se quedan en el negocio. Julio es el mes con más pedidos de almuerzos caseros — el frío hace que la gente prefiera pedir desde casa. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
@@ -771,3 +805,7 @@
 **Sazón del Inka (#45, agregado 22/06):** Restaurante de cocina peruana de alta calidad en Quinta Williamson 16, Villa Alemana. Confirmado en Rappi (rappi.cl/restaurantes/900088859-sazon-del-inka). Sitio web: sazondelinka.cl. Instagram: @sazondelinka. Menú de alto ticket: ceviches mixtos, lomo saltado, arroces con mariscos, risottos, pastas. Ticket promedio estimado: $10.000-$18.000 (muy alto → máximo ahorro por pedido). Con 12 entregas diarias el ahorro vs. Rappi (28%) supera $550.000/mes vs. RepartoJusto. Fuente: rappi.cl Villa Alemana + sazondelinka.cl.
 
 **Sazón Nazca La Casona (#46, agregado 22/06):** Restaurante peruano en Av. Valparaíso 1190, Villa Alemana. Teléfono: +56 9 5335 7012. Confirmado en Rappi (rappi.cl/restaurantes/900092182-sazon-nazca-la-casona). Sitio web: lacasonasn.cl. Instagram: @snlacasona. Facebook: @lacasona.sazonnazca. Cocina peruana auténtica — ceviches, lomos saltados, arroces de mariscos. Ticket promedio estimado: $10.000-$15.000 (alto). Con 12 entregas diarias el ahorro vs. Rappi (28%) supera $480.000/mes vs. RepartoJusto. Fuente: rappi.cl + baress.cl + puconadomicilio.cl Villa Alemana.
+
+**Sushi Like Delivery (#47, agregado 23/06):** Restaurante de sushi con delivery propio en Latorre 292, Esquina Madrid, Villa Alemana. Teléfono: +56 32 2122263. Sitio web: sushilike.cl. Instagram: @sushi.like.delivery. Facebook: sushilike.delivery.v.a. Canal directo propio — no confirmado en Rappi/Uber Eats/PedidosYa. Ticket promedio sushi: $12.000-$18.000. Argumento principal: potenciar su canal de delivery propio con logística RepartoJusto sin pagar comisión porcentual. Similar a Miel Delivery (#36) y Mascofood (#42) — negocio con canal directo muy alineado con propuesta de valor de RepartoJusto. Fuente: instagram.com/sushi.like.delivery + sushilike.cl.
+
+**La Mano de Mamá (#48, agregado 23/06):** Negocio de comida casera chilena y fusión en Bernardo Leighton 20, Local 5, Villa Alemana. Instagram: @lamanodemama_va (¡31.000 seguidores! — mayor audiencia de cualquier prospecto del pipeline). Horario: lunes a domingo 10:00-16:30. Foco en almuerzos y menús del día. Canal de delivery propio — plataformas actuales por confirmar. Ticket promedio estimado: $4.500-$7.000 (almuerzo casero). Argumento: comunidad de barrio enorme + canal directo + julio es el peak de almuerzos caseros en delivery. 31K seguidores implica volumen de pedidos significativo. Fuente: instagram.com/lamanodemama_va.

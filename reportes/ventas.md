@@ -1,24 +1,33 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-22
-**Pipeline total:** 46 prospectos
-**Por estado:** Nuevos: 32 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-23
+**Pipeline total:** 48 prospectos
+**Por estado:** Nuevos: 34 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
-- Completé la cobertura de "Arranque de Julio" para los 8 Contactados secundarios (#1 Fuente de Soda, #3 Farmacia Cruz Verde, #6 Botillería El Copihue, #7 Minimercado La Esquina, #8 Pastelería Dulce Hogar, #10 Café El Árbol, #11 Veterinaria Huellitas, #13 Ferretería Los Maestros), cada uno con argumento estacional específico para su rubro en invierno.
-- Los 4 PRIORIDAD (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho) ya tenían su Arranque de Julio desde el 21/06.
-- Se agregaron 2 nuevos prospectos encontrados en Rappi Villa Alemana: Sazón del Inka (#45, Quinta Williamson 16, cocina peruana alta, ticket $12.000-$18.000) y Sazón Nazca La Casona (#46, Av. Valparaíso 1190, tel. +56 9 5335 7012, cocina peruana, ticket $10.000-$15.000).
-- Argumentos del Investigador (18/06) completamente incorporados en el arsenal: FNE doble multa $3.400M CLP (US$35,3M total), Rappi Turbo Viña del Mar como argumento de urgencia.
+
+- Se agregaron 2 nuevos prospectos encontrados con búsqueda activa en plataformas y redes sociales:
+  - **Sushi Like Delivery (#47)** — sushi con canal de delivery propio en Latorre 292 esq. Madrid, Villa Alemana (sushilike.cl, tel. +56 32 2122263). Opera principalmente por canal directo, sin confirmar en grandes plataformas.
+  - **La Mano de Mamá (#48)** — comida casera chilena y fusión en Bernardo Leighton 20 Local 5, Villa Alemana. Instagram @lamanodemama_va con **31.000 seguidores** — la audiencia más grande de todo el pipeline, señal de volumen activo de pedidos. Horario L-D 10:00-16:30.
+- Se redactaron mensajes de **Arranque de Julio** para los 2 Nuevos de mayor ROI estimado:
+  - #17 Locos X Food: ahorro estimado $575K-$775K/mes vs. Rappi
+  - #18 La Casita Del Sabor: ahorro estimado $450K/mes vs. Rappi
+- Argumento estacional "julio = mes más frío = peak de delivery" incorporado en todos los mensajes del día.
+- Se incorporó el argumento de canal directo (potenciar logística sin comisión porcentual) para los 2 nuevos prospectos, ambos con delivery propio sin presencia confirmada en grandes plataformas.
 
 ## Borradores listos para Matías
-10 mensajes nuevos hoy:
-- 8 mensajes "Arranque de Julio" para Contactados secundarios (#1, #3, #6, #7, #8, #10, #11, #13)
-- 2 presentaciones para nuevos prospectos (#45 Sazón del Inka, #46 Sazón Nazca La Casona)
 
-Todos los borradores anteriores (desde 08/05) siguen pendientes de confirmación de envío. Son 45 días de borradores acumulados sin que se pueda actualizar ningún estado del pipeline.
+4 mensajes nuevos hoy:
+- **[17] Locos X Food — Arranque de Julio:** $575K-$775K ahorro/mes vs. Rappi, arranque de mes
+- **[18] La Casita Del Sabor — Arranque de Julio:** $450K ahorro/mes vs. Rappi, peak de comida casera en julio
+- **[47] Sushi Like Delivery — Presentación:** canal propio + logística RepartoJusto, $3.700-$4.000 ahorro/pedido
+- **[48] La Mano de Mamá — Presentación:** 31K seguidores Instagram, canal directo, $1.000+/pedido ahorro vs. Rappi
+
+Todos los borradores anteriores (desde 08/05) siguen pendientes de confirmación de envío. Son **46 días** de borradores acumulados. La acción más urgente para Matías es confirmar cuáles mensajes del período 08-16/05 fueron enviados — cualquier señal desbloquea el pipeline completo.
 
 ## Nuevos prospectos agregados
-- **#45 Sazón del Inka** — Cocina peruana de alta calidad en Quinta Williamson 16, Villa Alemana. Confirmado en Rappi. Menú: ceviches, lomo saltado, mariscos, risottos. Ticket promedio $10.000-$18.000 (muy alto). Web: sazondelinka.cl. Instagram: @sazondelinka. Ahorro estimado vs. Rappi: $550.000+/mes con 12 entregas diarias.
-- **#46 Sazón Nazca La Casona** — Restaurante peruano en Av. Valparaíso 1190, Villa Alemana. Confirmado en Rappi. Tel: +56 9 5335 7012. Web: lacasonasn.cl. Instagram: @snlacasona. Ticket promedio $10.000-$15.000. Ahorro estimado: $480.000+/mes con 12 entregas diarias.
+
+- **#47 Sushi Like Delivery** — Sushi con canal propio en Latorre 292 esq. Madrid, Villa Alemana. Tel: +56 32 2122263. Web: sushilike.cl. Instagram: @sushi.like.delivery. Opera por canal directo — argumento potenciar logística sin comisión. Ticket estimado: $12.000-$18.000.
+- **#48 La Mano de Mamá** — Comida casera chilena y fusión, Bernardo Leighton 20 Local 5, Villa Alemana. Instagram: @lamanodemama_va (31K seguidores — mayor audiencia del pipeline). L-D 10:00-16:30. Canal directo propio. Ticket estimado: $4.500-$7.000.
 
 ## Para el Gerente
-Pipeline en 46 prospectos (32 nuevos, 14 contactados, 0 registrados); cobertura "Arranque de Julio" completada para todos los 14 Contactados activos; cuello de botella crítico: 45 días sin confirmación de Matías sobre mensajes enviados paraliza actualización de todos los estados del pipeline.
+Pipeline en 48 prospectos (34 nuevos, 14 contactados, 0 registrados); 2 nuevos prospectos con canal de delivery directo propio agregados (#47 Sushi Like, #48 La Mano de Mamá — esta última con 31K seguidores en Instagram, mayor potencial de volumen del pipeline); cuello de botella crítico: 46 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados.
