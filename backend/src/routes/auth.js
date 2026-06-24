@@ -6,6 +6,30 @@ const { query: db, transaction } = require('../config/database');
 const config = require('../config');
 const { auth } = require('../middleware/auth');
 
+// Rate limiter en memoria: max 10 intentos por IP cada 15 minutos
+const loginAttempts = new Map();
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
+const RATE_LIMIT_MAX = 10;
+const loginRateLimit = (req, res, next) => {
+  const ip = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  const entry = loginAttempts.get(ip);
+  if (entry) {
+    if (now - entry.firstAttempt < RATE_LIMIT_WINDOW_MS) {
+      if (entry.count >= RATE_LIMIT_MAX) {
+        const retryAfter = Math.ceil((RATE_LIMIT_WINDOW_MS - (now - entry.firstAttempt)) / 1000);
+        return res.status(429).json({ error: 'Demasiados intentos. Intenta en unos minutos.', retryAfter });
+      }
+      entry.count++;
+    } else {
+      loginAttempts.set(ip, { count: 1, firstAttempt: now });
+    }
+  } else {
+    loginAttempts.set(ip, { count: 1, firstAttempt: now });
+  }
+  next();
+};
+
 // Helper: lanza error de validación si hay campos inválidos
 const validar = (req, res, next) => {
   const errores = validationResult(req);
@@ -98,6 +122,7 @@ router.post('/registro/rider',
 
 // ── POST /api/auth/login ──────────────────────────────────────────────────
 router.post('/login',
+  loginRateLimit,
   [
     body('email').isEmail().normalizeEmail(),
     body('password').notEmpty(),

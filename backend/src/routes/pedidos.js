@@ -300,7 +300,7 @@ router.put('/:id/liberar', auth, solo('rider', 'admin'), async (req, res, next) 
 
 // ── PUT /api/pedidos/:id/cancelar ─────────────────────────────────────────
 router.put('/:id/cancelar',
-  auth,
+  auth, solo('negocio', 'admin'),
   [body('motivo').optional().trim()],
   validar,
   async (req, res, next) => {
@@ -387,7 +387,23 @@ router.get('/:id', auth, async (req, res, next) => {
       [req.params.id]
     );
     if (!rows[0]) return res.status(404).json({ error: 'Pedido no encontrado' });
-    res.json(rows[0]);
+
+    const pedido = rows[0];
+    const rol = req.usuario.rol;
+
+    if (rol === 'negocio') {
+      const { rows: [neg] } = await db('SELECT id FROM negocios WHERE usuario_id = $1', [req.usuario.id]);
+      if (!neg || neg.id !== pedido.negocio_id) {
+        return res.status(403).json({ error: 'Sin acceso a este pedido' });
+      }
+    } else if (rol === 'rider') {
+      const { rows: [rider] } = await db('SELECT id FROM riders WHERE usuario_id = $1', [req.usuario.id]);
+      if (!rider || rider.id !== pedido.rider_id) {
+        return res.status(403).json({ error: 'Sin acceso a este pedido' });
+      }
+    }
+
+    res.json(pedido);
   } catch (err) { next(err); }
 });
 

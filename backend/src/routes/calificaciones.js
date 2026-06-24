@@ -50,25 +50,28 @@ router.post('/',
       if (pedido.estado !== 'entregado') return res.status(400).json({ error: 'Solo se puede calificar pedidos entregados' });
       if (!pedido.rider_id) return res.status(400).json({ error: 'Este pedido no tiene rider asignado' });
 
-      // Si viene autenticado como negocio, verificar que es su pedido
-      if (req.headers.authorization) {
+      // Calificaciones tipo 'negocio' requieren autenticación y ownership
+      if (tipo === 'negocio') {
+        if (!req.headers.authorization) {
+          return res.status(401).json({ error: 'Autenticación requerida para calificar como negocio' });
+        }
         try {
           const jwt = require('jsonwebtoken');
           const config = require('../config');
           const token = req.headers.authorization.replace('Bearer ', '');
           const decoded = jwt.verify(token, config.JWT_SECRET);
-          if (decoded.rol === 'negocio' && tipo !== 'negocio') {
-            return res.status(403).json({ error: 'El negocio solo puede calificar como negocio' });
+          if (decoded.rol !== 'negocio') {
+            return res.status(403).json({ error: 'Solo negocios pueden calificar como negocio' });
           }
-          if (decoded.rol === 'negocio') {
-            const { rows: [neg] } = await db(
-              'SELECT id FROM negocios WHERE usuario_id = $1', [decoded.id]
-            );
-            if (!neg || neg.id !== pedido.negocio_id) {
-              return res.status(403).json({ error: 'No es tu pedido' });
-            }
+          const { rows: [neg] } = await db(
+            'SELECT id FROM negocios WHERE usuario_id = $1', [decoded.id]
+          );
+          if (!neg || neg.id !== pedido.negocio_id) {
+            return res.status(403).json({ error: 'No es tu pedido' });
           }
-        } catch {}
+        } catch (jwtErr) {
+          return res.status(401).json({ error: 'Token inválido o expirado' });
+        }
       }
 
       // Guardar calificación (UNIQUE pedido_id + tipo evita duplicados)
