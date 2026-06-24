@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-23
+**Actualizado:** 2026-06-24
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -26,7 +26,7 @@
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Versión junio redactada 19/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
 | 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 — tel. (32) 324 0504 |
-| 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Presentación redactada 16/05. WhatsApp: +56 986749142 |
+| 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — en Rappi+PedidosYa+Uber Eats, WhatsApp: +56 986749142 |
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
@@ -34,7 +34,7 @@
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión 20/06 FNE doble multa redactada |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — ángulo local vs. Rappi/Quilpué |
 | 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — doble plataforma Uber Eats+PedidosYa |
-| 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — listado bajo Quilpué en Rappi, argumento local + FNE |
+| 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — listado bajo Quilpué en Rappi, tel. +56 997902765 |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — negocio delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — 20 años trayectoria, ticket alto |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
@@ -52,10 +52,44 @@
 | 46 | Sazón Nazca La Casona | Comida peruana | Av. Valparaíso 1190, Villa Alemana | Nuevo | — | Presentación redactada 22/06 — en Rappi, tel. +56 9 5335 7012, ticket alto peruana |
 | 47 | Sushi Like Delivery | Sushi | Latorre 292 esq. Madrid, Villa Alemana | Nuevo | — | Presentación redactada 23/06 — canal propio (sushilike.cl), tel. +56 32 2122263, argumento logística local |
 | 48 | La Mano de Mamá | Comida casera chilena / fusión | Bernardo Leighton 20 Local 5, Villa Alemana | Nuevo | — | Presentación redactada 23/06 — 31K seguidores Instagram, canal propio, argumento potenciar sin comisión |
+| 49 | Tradiciones Peruanas | Comida peruana | Av. Valparaíso 855, Villa Alemana | Nuevo | — | Presentación redactada 24/06 — en Uber Eats, ceviche/lomo saltado ticket alto, ahorro $500K+/mes |
+| 50 | La Ruta Gastronómica | Comida chilena tradicional | Av. Valparaíso 989, Villa Alemana | Nuevo | — | Presentación redactada 24/06 — en Uber Eats, comida chilena peak julio, argumento tarifa fija vs. 30% |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-24)
+
+> **NOTA PARA MATÍAS:** Hoy se redactan 4 mensajes: **Arranque de Julio** para los 2 Nuevos con mayor potencial de ahorro que aún no tenían mensaje julio (#31 Barrio Chino ~$1M/mes y #23 Pizzas Ropzila en 3 plataformas simultáneas), más **presentaciones** para 2 nuevos prospectos encontrados en Uber Eats: **Tradiciones Peruanas (#49)** — comida peruana en Av. Valparaíso 855 y **La Ruta Gastronómica (#50)** — comida chilena tradicional en Av. Valparaíso 989 (peak de demanda en julio por el frío). Pipeline total: **50 prospectos**.
+>
+> **Recordatorio:** Llevamos 47 días (desde 08/05) sin confirmación de mensajes enviados. El cuello de botella sigue siendo el mismo.
+
+---
+
+#### ARRANQUE DE JULIO — Nuevos con mayor ROI sin mensaje julio previo
+
+**[31] Barrio Chino Villa Alemana — Arranque de Julio (24/06):**
+"Hola Barrio Chino! RepartoJusto, arranque de julio. Julio es el mejor mes del año para comida china en delivery — las noches frías llenan las cocinas de pedidos. Pero hay algo que nos preocupa mostrarles: si un cliente busca 'comida china Villa Alemana' en Rappi, su restaurante aparece listado bajo 'Quilpué', no Villa Alemana. Un cliente local que quiere pedir esta noche puede no encontrarlos. Con RepartoJusto son 100% visibles como negocio de Villa Alemana — mismo barrio, mismos clientes. Y el número de julio: con 15 pedidos de $10.000 promedio, Rappi les cobra ~$1.260.000 al mes en comisiones (28%). Con nosotros son $225.000. Más de $1.000.000 mensuales que se quedan en el negocio. Sin contrato, registro completamente gratuito. ¿Este julio lo cambiamos? repartojusto-production.up.railway.app"
+
+---
+
+**[23] Pizzas Ropzila — Arranque de Julio (24/06):**
+"Hola Ropzila! Arranque de julio de RepartoJusto — julio es el peak de pizza en Chile. El frío es el mejor vendedor de pizzas. Tienen algo que pocas pizzerías en Villa Alemana tienen: presencia activa en Rappi, PedidosYa Y Uber Eats al mismo tiempo. Eso es excelente para el volumen. El problema: están pagando comisión en las tres. Con 20 pedidos diarios de $12.000 promedio entre las 3 apps, pueden estar entregando más de $2.000.000 al mes solo en comisiones. Con RepartoJusto suman un cuarto canal por $500 fijos por pedido — sin porcentaje. Cada pedido que llega por RepartoJusto en vez de las apps les ahorra hasta $2.860. Sin contrato, registro completamente gratuito. ¿Este julio le damos? repartojusto-production.up.railway.app (WhatsApp: +56 986749142)"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-24)
+
+**[49] Tradiciones Peruanas — Presentación:**
+"Hola Tradiciones Peruanas! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats en Av. Valparaíso 855 — cocina peruana con ceviche, lomo saltado y arroces de mariscos. Un número directo: Uber Eats cobra 30% de comisión por cada pedido. Para un plato de $12.000, eso son $3.600 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Julio es el mejor mes para la cocina peruana en delivery — el frío lleva a la gente a pedir platos reconfortantes desde casa. Con 12 entregas diarias, el ahorro puede superar los $500.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[50] La Ruta Gastronómica — Presentación:**
+"Hola La Ruta Gastronómica! Les contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats en Av. Valparaíso 989 — pastel de choclo, cazuelas y platos de fondo chilenos. Julio es el mes con más pedidos de comida chilena en delivery — el frío hace que la gente prefiera pedir desde casa antes que cocinar. Dato concreto: Uber Eats cobra 30% de comisión por cada pedido. Para un plato de $7.000, eso son $2.100 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos, siempre. Con 10 entregas diarias, el ahorro puede superar los $520.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana — igual que ustedes. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -809,3 +843,7 @@
 **Sushi Like Delivery (#47, agregado 23/06):** Restaurante de sushi con delivery propio en Latorre 292, Esquina Madrid, Villa Alemana. Teléfono: +56 32 2122263. Sitio web: sushilike.cl. Instagram: @sushi.like.delivery. Facebook: sushilike.delivery.v.a. Canal directo propio — no confirmado en Rappi/Uber Eats/PedidosYa. Ticket promedio sushi: $12.000-$18.000. Argumento principal: potenciar su canal de delivery propio con logística RepartoJusto sin pagar comisión porcentual. Similar a Miel Delivery (#36) y Mascofood (#42) — negocio con canal directo muy alineado con propuesta de valor de RepartoJusto. Fuente: instagram.com/sushi.like.delivery + sushilike.cl.
 
 **La Mano de Mamá (#48, agregado 23/06):** Negocio de comida casera chilena y fusión en Bernardo Leighton 20, Local 5, Villa Alemana. Instagram: @lamanodemama_va (¡31.000 seguidores! — mayor audiencia de cualquier prospecto del pipeline). Horario: lunes a domingo 10:00-16:30. Foco en almuerzos y menús del día. Canal de delivery propio — plataformas actuales por confirmar. Ticket promedio estimado: $4.500-$7.000 (almuerzo casero). Argumento: comunidad de barrio enorme + canal directo + julio es el peak de almuerzos caseros en delivery. 31K seguidores implica volumen de pedidos significativo. Fuente: instagram.com/lamanodemama_va.
+
+**Tradiciones Peruanas (#49, agregado 24/06):** Restaurante de cocina peruana en Av. Valparaíso 855, Villa Alemana. Confirmado en Uber Eats (ubereats.com/cl/store/tradiciones-peruanas-villa-alemana). Platos de alta calidad: ceviche, causas, lomo saltado, arroces con mariscos, pastas. Ticket promedio estimado: $10.000-$15.000 (comida peruana = ticket alto). Uber Eats cobra 30% de comisión — con 12 entregas diarias el ahorro vs. Uber Eats puede superar $500.000/mes vs. RepartoJusto. Julio = peak de cocina peruana en delivery (platos reconfortantes para el frío). Fuente: ubereats.com/cl/store/tradiciones-peruanas-villa-alemana.
+
+**La Ruta Gastronómica (#50, agregado 24/06):** Restaurante de comida chilena tradicional en Av. Valparaíso 989, Villa Alemana. Confirmado en Uber Eats (ubereats.com/cl/store/la-ruta-gastronomica-villa-alemana). Especialidad: pastel de choclo, cazuelas, platos de fondo chilenos. Ticket promedio estimado: $6.000-$9.000. Uber Eats cobra 30% de comisión. Con 10 entregas diarias el ahorro vs. Uber Eats puede superar $520.000/mes vs. RepartoJusto. Julio = peak absoluto de comida chilena tradicional en delivery (el frío lleva a la gente a pedir desde casa). Fuente: ubereats.com/cl/store/la-ruta-gastronomica-villa-alemana.

@@ -1,33 +1,45 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-23
-**Pipeline total:** 48 prospectos
-**Por estado:** Nuevos: 34 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-24
+**Pipeline total:** 50 prospectos
+**Por estado:** Nuevos: 36 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-- Se agregaron 2 nuevos prospectos encontrados con búsqueda activa en plataformas y redes sociales:
-  - **Sushi Like Delivery (#47)** — sushi con canal de delivery propio en Latorre 292 esq. Madrid, Villa Alemana (sushilike.cl, tel. +56 32 2122263). Opera principalmente por canal directo, sin confirmar en grandes plataformas.
-  - **La Mano de Mamá (#48)** — comida casera chilena y fusión en Bernardo Leighton 20 Local 5, Villa Alemana. Instagram @lamanodemama_va con **31.000 seguidores** — la audiencia más grande de todo el pipeline, señal de volumen activo de pedidos. Horario L-D 10:00-16:30.
-- Se redactaron mensajes de **Arranque de Julio** para los 2 Nuevos de mayor ROI estimado:
-  - #17 Locos X Food: ahorro estimado $575K-$775K/mes vs. Rappi
-  - #18 La Casita Del Sabor: ahorro estimado $450K/mes vs. Rappi
-- Argumento estacional "julio = mes más frío = peak de delivery" incorporado en todos los mensajes del día.
-- Se incorporó el argumento de canal directo (potenciar logística sin comisión porcentual) para los 2 nuevos prospectos, ambos con delivery propio sin presencia confirmada en grandes plataformas.
+- Revisión de `reportes/cola.md` e `reportes/investigador.md` — argumento FNE doble multa ($3.400M CLP) ya incorporado en olas previas. Sin nuevas instrucciones del Investigador o Gerente desde 23/06.
+- Redactados 4 borradores:
+  - **Arranque de Julio para #31 Barrio Chino** — argumento killer: aparecen listados bajo "Quilpué" en Rappi, con julio = peak de comida china, ahorro estimado >$1M/mes.
+  - **Arranque de Julio para #23 Pizzas Ropzila** — en 3 plataformas simultáneas, pagan comisión triple, julio = peak de pizza; WhatsApp disponible (+56 986749142).
+  - **Presentación para #49 Tradiciones Peruanas** — encontrado en Uber Eats (Av. Valparaíso 855), cocina peruana ticket alto, ahorro estimado $500K+/mes.
+  - **Presentación para #50 La Ruta Gastronómica** — encontrado en Uber Eats (Av. Valparaíso 989), comida chilena tradicional, julio = peak estacional por frío.
+- Búsqueda activa en Uber Eats Villa Alemana: encontrados 2 nuevos prospectos (ver arriba).
+- Pipeline actualizado a 50 prospectos.
 
 ## Borradores listos para Matías
 
-4 mensajes nuevos hoy:
-- **[17] Locos X Food — Arranque de Julio:** $575K-$775K ahorro/mes vs. Rappi, arranque de mes
-- **[18] La Casita Del Sabor — Arranque de Julio:** $450K ahorro/mes vs. Rappi, peak de comida casera en julio
-- **[47] Sushi Like Delivery — Presentación:** canal propio + logística RepartoJusto, $3.700-$4.000 ahorro/pedido
-- **[48] La Mano de Mamá — Presentación:** 31K seguidores Instagram, canal directo, $1.000+/pedido ahorro vs. Rappi
+| Prospecto | Tipo | Canal sugerido |
+|---|---|---|
+| #31 Barrio Chino (tel. +56 997902765) | Arranque Julio | WhatsApp / llamada |
+| #23 Pizzas Ropzila (WhatsApp +56 986749142) | Arranque Julio | WhatsApp directo |
+| #49 Tradiciones Peruanas | Presentación | Contacto presencial / Instagram |
+| #50 La Ruta Gastronómica | Presentación | Contacto presencial / Uber Eats |
 
-Todos los borradores anteriores (desde 08/05) siguen pendientes de confirmación de envío. Son **46 días** de borradores acumulados. La acción más urgente para Matías es confirmar cuáles mensajes del período 08-16/05 fueron enviados — cualquier señal desbloquea el pipeline completo.
+**Prioridad de envío:**
+1. #31 Barrio Chino — tiene número de teléfono, mayor ahorro del día (~$1M/mes), argumento Quilpué es único y potente
+2. #23 Pizzas Ropzila — tiene WhatsApp directo, en 3 plataformas = máxima urgencia de argumento costo
+3. #49 Tradiciones Peruanas — presentación primera ola
+4. #50 La Ruta Gastronómica — presentación primera ola
 
 ## Nuevos prospectos agregados
 
-- **#47 Sushi Like Delivery** — Sushi con canal propio en Latorre 292 esq. Madrid, Villa Alemana. Tel: +56 32 2122263. Web: sushilike.cl. Instagram: @sushi.like.delivery. Opera por canal directo — argumento potenciar logística sin comisión. Ticket estimado: $12.000-$18.000.
-- **#48 La Mano de Mamá** — Comida casera chilena y fusión, Bernardo Leighton 20 Local 5, Villa Alemana. Instagram: @lamanodemama_va (31K seguidores — mayor audiencia del pipeline). L-D 10:00-16:30. Canal directo propio. Ticket estimado: $4.500-$7.000.
+- **#49 Tradiciones Peruanas** — Comida peruana, Av. Valparaíso 855, Villa Alemana. En Uber Eats. Ticket alto ($10K-$15K), ahorro estimado >$500K/mes vs. tarifa fija. Fuente: Uber Eats Villa Alemana.
+- **#50 La Ruta Gastronómica** — Comida chilena tradicional, Av. Valparaíso 989, Villa Alemana. En Uber Eats. Peak estacional julio = platos calientes chilenos. Fuente: Uber Eats Villa Alemana.
+
+## Contexto del pipeline
+
+- **Cuello de botella crítico:** 47 días (desde 08/05) sin confirmación de Matías sobre mensajes enviados. Los 14 Contactados tienen Arranque de Julio redactado (del 21-22/06); los Nuevos prioritarios tienen mensajes desde mayo-junio sin confirmar.
+- **Cobertura Arranque de Julio completa:** Los 14 Contactados + Nuevos clave tienen mensajes de julio redactados.
+- **Próxima acción recomendada:** Matías confirma qué mensajes se enviaron para actualizar estados del pipeline completo.
 
 ## Para el Gerente
-Pipeline en 48 prospectos (34 nuevos, 14 contactados, 0 registrados); 2 nuevos prospectos con canal de delivery directo propio agregados (#47 Sushi Like, #48 La Mano de Mamá — esta última con 31K seguidores en Instagram, mayor potencial de volumen del pipeline); cuello de botella crítico: 46 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados.
+
+Pipeline en 50 prospectos (36 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy — Arranque de Julio para #31 Barrio Chino (~$1M/mes ahorro, argumento Rappi-los-lista-bajo-Quilpué) y #23 Pizzas Ropzila (en Rappi+PedidosYa+Uber Eats, WhatsApp disponible), más presentaciones para 2 nuevos en Uber Eats (Tradiciones Peruanas y La Ruta Gastronómica); cuello de botella crítico: 47 días sin confirmación de Matías bloquea actualización de todos los estados del pipeline.
