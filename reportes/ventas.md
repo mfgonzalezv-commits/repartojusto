@@ -1,45 +1,45 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-24
-**Pipeline total:** 50 prospectos
-**Por estado:** Nuevos: 36 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-25
+**Pipeline total:** 52 prospectos
+**Por estado:** Nuevos: 38 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-- Revisión de `reportes/cola.md` e `reportes/investigador.md` — argumento FNE doble multa ($3.400M CLP) ya incorporado en olas previas. Sin nuevas instrucciones del Investigador o Gerente desde 23/06.
+- Revisión de `reportes/cola.md` e `reportes/investigador.md` — sin nuevas instrucciones del Investigador o Gerente desde el 23/06; argumento FNE doble multa ($3.400M CLP) ya incorporado en olas anteriores; argumento Rappi Turbo Viña del Mar activo desde 19/06.
 - Redactados 4 borradores:
-  - **Arranque de Julio para #31 Barrio Chino** — argumento killer: aparecen listados bajo "Quilpué" en Rappi, con julio = peak de comida china, ahorro estimado >$1M/mes.
-  - **Arranque de Julio para #23 Pizzas Ropzila** — en 3 plataformas simultáneas, pagan comisión triple, julio = peak de pizza; WhatsApp disponible (+56 986749142).
-  - **Presentación para #49 Tradiciones Peruanas** — encontrado en Uber Eats (Av. Valparaíso 855), cocina peruana ticket alto, ahorro estimado $500K+/mes.
-  - **Presentación para #50 La Ruta Gastronómica** — encontrado en Uber Eats (Av. Valparaíso 989), comida chilena tradicional, julio = peak estacional por frío.
-- Búsqueda activa en Uber Eats Villa Alemana: encontrados 2 nuevos prospectos (ver arriba).
-- Pipeline actualizado a 50 prospectos.
+  - **Cierre junio / Arranque Julio para #22 Sushi Point Delivery** — sushi ticket alto ($18K), julio = peak, ahorro estimado $455K/mes vs. Rappi. Tiene teléfono: (32) 324 0504.
+  - **Cierre junio / Arranque Julio para #15 Melt Pizzas** — pizzería activa en Rappi (Av. Valparaíso 1057), julio = peak pizza, ahorro estimado $250K+/mes.
+  - **Presentación para #51 Barrio Chino Fusión** — encontrado en Uber Eats (distinto de #31 Barrio Chino Rappi), comida china fusión, 30% comisión Uber Eats, peak julio.
+  - **Presentación para #52 Frango** — sándwiches + helados en Buenos Aires 785 Local 2, local físico con potencial delivery, argumento $500 fijo vs. 28-30%.
+- Búsqueda activa en Uber Eats y directorios locales Villa Alemana: encontrados 2 nuevos prospectos.
+- Pipeline actualizado a 52 prospectos.
 
 ## Borradores listos para Matías
 
-| Prospecto | Tipo | Canal sugerido |
-|---|---|---|
-| #31 Barrio Chino (tel. +56 997902765) | Arranque Julio | WhatsApp / llamada |
-| #23 Pizzas Ropzila (WhatsApp +56 986749142) | Arranque Julio | WhatsApp directo |
-| #49 Tradiciones Peruanas | Presentación | Contacto presencial / Instagram |
-| #50 La Ruta Gastronómica | Presentación | Contacto presencial / Uber Eats |
+| Prospecto | Tipo | Canal sugerido | Prioridad |
+|---|---|---|---|
+| #22 Sushi Point Delivery — tel. (32) 324 0504 | Cierre junio / Arranque julio | Llamada telefónica directa | ALTA — tiene teléfono |
+| #15 Melt Pizzas — Av. Valparaíso 1057 | Cierre junio / Arranque julio | Contacto presencial / Rappi | ALTA — peak pizza julio |
+| #51 Barrio Chino Fusión | Presentación | Uber Eats / contacto presencial | MEDIA |
+| #52 Frango | Presentación | Contacto presencial — Buenos Aires 785 | MEDIA |
 
-**Prioridad de envío:**
-1. #31 Barrio Chino — tiene número de teléfono, mayor ahorro del día (~$1M/mes), argumento Quilpué es único y potente
-2. #23 Pizzas Ropzila — tiene WhatsApp directo, en 3 plataformas = máxima urgencia de argumento costo
-3. #49 Tradiciones Peruanas — presentación primera ola
-4. #50 La Ruta Gastronómica — presentación primera ola
+**Prioridad de envío hoy:**
+1. **#22 Sushi Point Delivery** — tiene número, sushi es el rubro más rentable del pipeline (ticket $18K), a 5 días del peak julio
+2. **#15 Melt Pizzas** — julio es el mejor mes para pizza, la presentación de mayo puede no haberse enviado
+3. **#51 Barrio Chino Fusión** — prospecto nuevo, primer contacto
+4. **#52 Frango** — prospecto nuevo, primer contacto
 
 ## Nuevos prospectos agregados
 
-- **#49 Tradiciones Peruanas** — Comida peruana, Av. Valparaíso 855, Villa Alemana. En Uber Eats. Ticket alto ($10K-$15K), ahorro estimado >$500K/mes vs. tarifa fija. Fuente: Uber Eats Villa Alemana.
-- **#50 La Ruta Gastronómica** — Comida chilena tradicional, Av. Valparaíso 989, Villa Alemana. En Uber Eats. Peak estacional julio = platos calientes chilenos. Fuente: Uber Eats Villa Alemana.
+- **#51 Barrio Chino Fusión** — Comida china fusión, Villa Alemana. Activo en Uber Eats (store page confirmada). Distinto de #31 Barrio Chino (que está en Rappi bajo Quilpué). Ticket medio alto, peak julio. Fuente: Uber Eats Villa Alemana categoría comida china.
+- **#52 Frango** — Sándwiches y helados, Buenos Aires 785 Local 2, Villa Alemana. Local físico con potencial delivery. Fuente: directorio búsqueda delivery Villa Alemana.
 
 ## Contexto del pipeline
 
-- **Cuello de botella crítico:** 47 días (desde 08/05) sin confirmación de Matías sobre mensajes enviados. Los 14 Contactados tienen Arranque de Julio redactado (del 21-22/06); los Nuevos prioritarios tienen mensajes desde mayo-junio sin confirmar.
-- **Cobertura Arranque de Julio completa:** Los 14 Contactados + Nuevos clave tienen mensajes de julio redactados.
-- **Próxima acción recomendada:** Matías confirma qué mensajes se enviaron para actualizar estados del pipeline completo.
+- **48 días sin confirmación de Matías** (desde 08/05) sobre qué borradores fueron enviados. Todos los estados de los 14 Contactados y varios Nuevos dependen de esa confirmación.
+- **Cobertura "Arranque de Julio" completada:** Los 14 Contactados tienen mensajes de julio (21-22/06). Los Nuevos prioritarios con mayor ROI tienen mensajes de julio o refresh junio.
+- **5 días para fin de mes:** Julio arranca el 01/07 — todos los mensajes de hoy y los anteriores usan el cambio de mes como vector de urgencia.
 
 ## Para el Gerente
 
-Pipeline en 50 prospectos (36 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy — Arranque de Julio para #31 Barrio Chino (~$1M/mes ahorro, argumento Rappi-los-lista-bajo-Quilpué) y #23 Pizzas Ropzila (en Rappi+PedidosYa+Uber Eats, WhatsApp disponible), más presentaciones para 2 nuevos en Uber Eats (Tradiciones Peruanas y La Ruta Gastronómica); cuello de botella crítico: 47 días sin confirmación de Matías bloquea actualización de todos los estados del pipeline.
+Pipeline en 52 prospectos (38 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy — Cierre de Junio / Arranque de Julio para #22 Sushi Point Delivery (tel. (32) 324 0504, sushi ticket alto, ahorro $455K/mes) y #15 Melt Pizzas (pizza en Rappi peak julio), más presentaciones para 2 nuevos encontrados en Uber Eats (Barrio Chino Fusión #51 y Frango #52 en Buenos Aires 785); cuello de botella crítico: 48 días sin confirmación de Matías bloquea actualización de todos los estados del pipeline.

@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-24
+**Actualizado:** 2026-06-25
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -18,14 +18,14 @@
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
-| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
+| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Cierre junio / Arranque julio redactado 25/06 — en Rappi |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Arranque julio redactado 23/06 — PRIORIDAD |
 | 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Arranque julio redactado 23/06 — ALTA PRIORIDAD |
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Versión junio redactada 19/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
-| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 — tel. (32) 324 0504 |
+| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | Cierre junio / Arranque julio redactado 25/06 — tel. (32) 324 0504 |
 | 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — en Rappi+PedidosYa+Uber Eats, WhatsApp: +56 986749142 |
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
@@ -54,10 +54,44 @@
 | 48 | La Mano de Mamá | Comida casera chilena / fusión | Bernardo Leighton 20 Local 5, Villa Alemana | Nuevo | — | Presentación redactada 23/06 — 31K seguidores Instagram, canal propio, argumento potenciar sin comisión |
 | 49 | Tradiciones Peruanas | Comida peruana | Av. Valparaíso 855, Villa Alemana | Nuevo | — | Presentación redactada 24/06 — en Uber Eats, ceviche/lomo saltado ticket alto, ahorro $500K+/mes |
 | 50 | La Ruta Gastronómica | Comida chilena tradicional | Av. Valparaíso 989, Villa Alemana | Nuevo | — | Presentación redactada 24/06 — en Uber Eats, comida chilena peak julio, argumento tarifa fija vs. 30% |
+| 51 | Barrio Chino Fusión | Comida china fusión | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 25/06 — distinto de #31, activo en Uber Eats, peak julio comida china |
+| 52 | Frango | Sándwiches / helados | Buenos Aires 785 Local 2, Villa Alemana | Nuevo | — | Presentación redactada 25/06 — local físico, posible Rappi/Uber Eats, argumento tarifa fija |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-25)
+
+> **NOTA PARA MATÍAS:** Quedan 5 días de junio — hoy arrancamos "Cierre de Junio / Arranque de Julio" para 2 Nuevos con alto ROI y sin mensaje de julio previo: **#22 Sushi Point Delivery** (tiene teléfono: (32) 324 0504 — sushi de ticket alto, julio es peak) y **#15 Melt Pizzas** (en Rappi, Av. Valparaíso 1057, pizza en temporada más fuerte del año). Se agregan también 2 nuevos prospectos encontrados hoy: **Barrio Chino Fusión (#51)** — restaurante de comida china fusión activo en Uber Eats (distinto de #31 Barrio Chino Rappi) y **Frango (#52)** — sándwiches y helados en Buenos Aires 785 Local 2. Pipeline total: **52 prospectos**.
+>
+> **Recordatorio:** 48 días sin confirmación de qué mensajes fueron enviados. La acción más urgente sigue siendo que Matías confirme qué borradores de los períodos 10/05–24/06 se enviaron.
+
+---
+
+#### CIERRE DE JUNIO / ARRANQUE DE JULIO — Nuevos con alto ROI sin mensaje de julio
+
+**[22] Sushi Point Delivery — Cierre de Junio / Arranque de Julio (25/06):**
+"Hola Sushi Point Delivery! De RepartoJusto, los contactamos hace algunas semanas. Junio cierra en 5 días y julio arranca con el peak más alto del año para sushi en delivery — las noches de julio son el momento exacto para que los clientes pidan sushi desde casa. El número concreto: con sushi de $18.000 promedio y 15 entregas diarias en Rappi, pueden estar pagando más de $680.000 al mes solo en comisiones (28%). Con RepartoJusto son $225.000 — $455.000 mensuales que se quedan en el negocio en vez de irse a la app. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. ¿Este julio lo hacemos? repartojusto-production.up.railway.app (Tel: (32) 324 0504)"
+
+---
+
+**[15] Melt Pizzas — Cierre de Junio / Arranque de Julio (25/06):**
+"Hola Melt Pizzas! De RepartoJusto — quedan 5 días de junio y julio arranca el lunes. Julio es el peak absoluto de pizza en delivery en Chile: el frío garantiza que la gente prefiera pedir desde casa. Los números para Av. Valparaíso 1057: con 10 pizzas de $12.000 diarias en Rappi, le pagan a Rappi ~$400.000 al mes en comisiones (28%). Con RepartoJusto ese costo baja a $150.000 — más de $250.000 al mes que se quedan en el negocio desde el primer pedido. Sin contrato, registro completamente gratis, pueden mantener Rappi y sumar RepartoJusto como canal local de menor costo. ¿Arrancamos julio juntos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-25)
+
+**[51] Barrio Chino Fusión — Presentación:**
+"Hola Barrio Chino Fusión! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats — cocina china fusión, propuesta diferenciada que tiene su peak más alto del año en julio con las noches frías. Dato directo: Uber Eats cobra 30% de comisión por cada pedido. Para un plato de $10.000, eso son $3.000 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Con 15 entregas diarias, el ahorro puede superar los $600.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[52] Frango — Presentación:**
+"Hola Frango! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Buenos Aires 785 — sándwiches y helados, una combinación perfecta para delivery. Si trabajan con plataformas como Rappi, PedidosYa o Uber Eats, hoy pagan entre 28-30% de comisión por cada pedido. Con RepartoJusto el costo es $500 fijo por pedido entregado — sin porcentaje sobre la venta, sin contrato. Para un pedido de $7.000 (sándwich + bebida), la diferencia vs. Rappi (28%) son $1.460 que se quedan en el negocio por cada entrega. Julio es el peak de sándwiches calientes en delivery — el frío hace que la gente prefiera pedir desde casa. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
