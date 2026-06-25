@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-25T10:02:33Z
+**Última verificación:** 2026-06-25T11:02:28Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar — el proxy del entorno de ejecución bloqueó el túnel HTTPS hacia repartojusto-production.up.railway.app con HTTP 403 Forbidden. No se obtuvo respuesta del servidor de producción.
+**Detalle:** Error de red — el proxy del entorno de ejecución bloqueó la conexión a repartojusto-production.up.railway.app con HTTP 403 Forbidden (CONNECT tunnel failed). No fue posible obtener respuesta del servidor. Verificar manualmente o desde un entorno con acceso a Railway.
