@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-25
+**Actualizado:** 2026-06-26
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -56,10 +56,44 @@
 | 50 | La Ruta Gastronómica | Comida chilena tradicional | Av. Valparaíso 989, Villa Alemana | Nuevo | — | Presentación redactada 24/06 — en Uber Eats, comida chilena peak julio, argumento tarifa fija vs. 30% |
 | 51 | Barrio Chino Fusión | Comida china fusión | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 25/06 — distinto de #31, activo en Uber Eats, peak julio comida china |
 | 52 | Frango | Sándwiches / helados | Buenos Aires 785 Local 2, Villa Alemana | Nuevo | — | Presentación redactada 25/06 — local físico, posible Rappi/Uber Eats, argumento tarifa fija |
+| 53 | Mandala Sushi Express | Sushi | Av. Valparaíso 1732, Villa Alemana | Nuevo | — | Presentación redactada 26/06 — en Uber Eats, tablas y rolls ticket alto, tel. +56 9 8648 4265 |
+| 54 | Fusion Restobar | Restobar (pizza/sushi/venezolana) | Buenos Aires 753, Villa Alemana | Nuevo | — | Presentación redactada 26/06 — en PedidosYa + Uber Eats, argumento FNE/TDLC + doble comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-26)
+
+> **NOTA PARA MATÍAS:** Último viernes de junio. Hoy se incorpora el argumento más fresco del Investigador (25/06): **PedidosYa fue al TDLC diciendo que no hizo nada malo** tras acumular dos multas FNE en 2026 — argumento especialmente poderoso para los prospectos que ya están en PedidosYa. También se incorpora el contraste **FIFA vs. tarifa fija local** para julio. Se redactan versiones actualizadas para **#27 Tribeca Sushi** y **#33 Casa Festa** (ambos en PedidosYa), más presentaciones para 2 nuevos encontrados hoy: **Mandala Sushi Express (#53)** — sushi en Uber Eats Av. Valparaíso 1732, tel. +56 9 8648 4265 — y **Fusion Restobar (#54)** — restobar en PedidosYa + Uber Eats en Buenos Aires 753, argumento doble comisión + FNE/TDLC. Pipeline total: **54 prospectos**.
+>
+> **Recordatorio:** 49 días sin confirmación de mensajes enviados (desde 08/05). Julio arranca el lunes — todos los mensajes de Arranque de Julio para los 14 Contactados siguen disponibles desde 21-22/06.
+
+---
+
+#### VERSIONES TDLC/FIFA — Prospectos en PedidosYa (26/06)
+
+**[27] Tribeca Sushi — Versión TDLC/FIFA (26/06):**
+"Hola Tribeca Sushi! RepartoJusto, actualización importante. PedidosYa acumuló dos multas de la FNE en 2026 ($3.400 millones CLP) por controlarte los precios — y ahora está en tribunales (TDLC) diciendo que no hizo nada malo. Mientras tanto, la plataforma gasta millones en publicidad del Mundial FIFA. Nosotros hacemos lo contrario: somos 100% locales en Villa Alemana, trabajando con tarifa fija mientras julio trae el mejor mes de sushi en delivery. Para sushi de $18.000, el ahorro vs. PedidosYa (28%) es $4.540 por pedido. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[33] Casa Festa Cocina y Repostería — Versión TDLC/FIFA (26/06):**
+"Hola Casa Festa! De RepartoJusto. Una actualización que creemos importante para alguien con 20+ años de trayectoria: PedidosYa acumuló dos multas de la FNE en 2026 por controlarte los precios, y hoy está en tribunales diciendo que no hizo nada malo. Una empresa con más de 20 años en Madrid 1090 merece una plataforma que no tenga ese historial regulatorio. Con RepartoJusto: libertad total de precios, $500 fijos por pedido, sin contrato. Para una torta de $25.000, el ahorro vs. PedidosYa (28%) es $6.500 por pedido. repartojusto-production.up.railway.app ¿Hablamos esta semana? (Tel: (32) 2950116 / casafestaventas@gmail.com)"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-26)
+
+**[53] Mandala Sushi Express — Presentación:**
+"Hola Mandala Sushi Express! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats en Av. Valparaíso 1732 — sushi de calidad con tablas, rolls especiales y SushiBurger, una propuesta muy diferenciada en Villa Alemana. Un dato directo: Uber Eats cobra 30% de comisión por cada pedido. Para una tabla o roll especial de $12.900, eso son $3.870 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre. Con 15 entregas diarias, el ahorro puede superar los $660.000 al mes. Julio es el peak de sushi en delivery — el frío asegura que los clientes prefieren pedir desde casa. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[54] Fusion Restobar — Presentación:**
+"Hola Fusion Restobar! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en PedidosYa Y Uber Eats — carta amplia con pizzas artesanales, sushi, gastronomía venezolana y coctelería. Excelente propuesta diferenciada en Buenos Aires 753. Dos datos que les importan: (1) Están pagando comisión en dos plataformas simultáneamente: Uber Eats (30%) + PedidosYa (28%). Para un Ocean Roll de $12.900, eso son entre $3.600 y $3.870 que se van a la app por pedido. (2) PedidosYa acumula dos multas de la FNE en 2026 ($3.400M CLP por controlarte los precios) y hoy está en tribunales negando los cargos — una plataforma con ese historial merece cuestionarse. Con RepartoJusto: $500 fijos por pedido, libertad total de precios, sin contrato. Con 15 entregas diarias, el ahorro vs. solo una de las dos apps puede superar los $700.000 al mes. Somos 100% locales en Villa Alemana — el mismo barrio. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -881,3 +915,11 @@
 **Tradiciones Peruanas (#49, agregado 24/06):** Restaurante de cocina peruana en Av. Valparaíso 855, Villa Alemana. Confirmado en Uber Eats (ubereats.com/cl/store/tradiciones-peruanas-villa-alemana). Platos de alta calidad: ceviche, causas, lomo saltado, arroces con mariscos, pastas. Ticket promedio estimado: $10.000-$15.000 (comida peruana = ticket alto). Uber Eats cobra 30% de comisión — con 12 entregas diarias el ahorro vs. Uber Eats puede superar $500.000/mes vs. RepartoJusto. Julio = peak de cocina peruana en delivery (platos reconfortantes para el frío). Fuente: ubereats.com/cl/store/tradiciones-peruanas-villa-alemana.
 
 **La Ruta Gastronómica (#50, agregado 24/06):** Restaurante de comida chilena tradicional en Av. Valparaíso 989, Villa Alemana. Confirmado en Uber Eats (ubereats.com/cl/store/la-ruta-gastronomica-villa-alemana). Especialidad: pastel de choclo, cazuelas, platos de fondo chilenos. Ticket promedio estimado: $6.000-$9.000. Uber Eats cobra 30% de comisión. Con 10 entregas diarias el ahorro vs. Uber Eats puede superar $520.000/mes vs. RepartoJusto. Julio = peak absoluto de comida chilena tradicional en delivery (el frío lleva a la gente a pedir desde casa). Fuente: ubereats.com/cl/store/la-ruta-gastronomica-villa-alemana.
+
+**Barrio Chino Fusión (#51, agregado 25/06):** Restaurante de comida china fusión activo en Uber Eats en Villa Alemana. Distinto de Barrio Chino Villa Alemana (#31, que está en Rappi listado bajo Quilpué). Ticket promedio estimado: $8.000-$12.000. Uber Eats cobra 30% de comisión. Con 15 entregas diarias, el ahorro vs. Uber Eats puede superar los $600.000/mes vs. RepartoJusto. Peak julio para comida china en delivery. Fuente: Uber Eats Villa Alemana categoría comida china.
+
+**Frango (#52, agregado 25/06):** Local de sándwiches y helados en Buenos Aires 785 Local 2, Villa Alemana. A 32 metros de Fusion Restobar (#54). Local físico con potencial delivery. Plataformas actuales por confirmar al contactar. Ticket promedio estimado: $5.000-$8.000. Argumento base: $500 fijo vs. 28-30% porcentual. Fuente: directorio delivery Villa Alemana.
+
+**Mandala Sushi Express (#53, agregado 26/06):** Restaurante de sushi en Av. Valparaíso 1732 (paradero 10), Villa Alemana. Teléfono: +56 9 8648 4265. Sitio web: mandalasushiexpress.cl. Facebook: facebook.com/LaCalidadVaPorDentro. TikTok: @mandalasushiexpress. Confirmado en Uber Eats (ubereats.com/cl/store/mandala-sushi-express-villa-alemana). Menú: tablas, rolls especiales, SushiBurger, handrolls, ceviche, salsas especiales. Ticket de referencia: tabla ~$12.900, rolls de $12.000-$18.000. Con 15 entregas diarias, el ahorro vs. Uber Eats (30%) supera $660.000/mes vs. RepartoJusto. Tiene canal TikTok activo — buena presencia digital. Fuente: ubereats.com + mandalasushiexpress.cl + TikTok @mandalasushiexpress.
+
+**Fusion Restobar (#54, agregado 26/06):** Restobar con carta amplia — pizzas artesanales, sushi, gastronomía venezolana, cocina cantonesa china y coctelería. Buenos Aires 753, Villa Alemana (a metros de Frango #52 en Buenos Aires 785). Sitio web: fusionrestobar.cl. Instagram: @fusionrestorante. Facebook: @BarFusionRestaurante. Horario: lun-vie 14:00-22:00, fin de semana horario extendido. Confirmado en PedidosYa Y Uber Eats simultáneamente — doble comisión. Rating 4.4/5 (425 evaluaciones). Ticket de referencia: Ocean Roll $12.900, Pepito mixto $14.900, Pizza $7.900, Tabla $15.900. ARGUMENTOS DOBLES: (1) doble comisión (PedidosYa 28% + Uber Eats 30%) — con 15 entregas/día el ahorro vs. una sola app supera $700.000/mes; (2) FNE/TDLC — están en PedidosYa, la plataforma multada dos veces en 2026 y hoy en juicio ante el TDLC negando cargos. Uno de los mejores prospectos del pipeline para argumento FNE combinado con doble plataforma. Fuente: pedidosya.cl + ubereats.com + fusionrestobar.cl + TikTok @larutadelosnachos.

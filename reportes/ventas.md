@@ -1,45 +1,46 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-25
-**Pipeline total:** 52 prospectos
-**Por estado:** Nuevos: 38 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-26
+**Pipeline total:** 54 prospectos
+**Por estado:** Nuevos: 40 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-- Revisión de `reportes/cola.md` e `reportes/investigador.md` — sin nuevas instrucciones del Investigador o Gerente desde el 23/06; argumento FNE doble multa ($3.400M CLP) ya incorporado en olas anteriores; argumento Rappi Turbo Viña del Mar activo desde 19/06.
+- Leído `reportes/cola.md` e `reportes/investigador.md` — incorporados argumentos frescos del Investigador (25/06): PedidosYa fue a juicio ante TDLC negando los cargos + contraste FIFA Mundial para julio ("mientras ellos gastan millones en fútbol, nosotros trabajamos en tu barrio con tarifa fija").
 - Redactados 4 borradores:
-  - **Cierre junio / Arranque Julio para #22 Sushi Point Delivery** — sushi ticket alto ($18K), julio = peak, ahorro estimado $455K/mes vs. Rappi. Tiene teléfono: (32) 324 0504.
-  - **Cierre junio / Arranque Julio para #15 Melt Pizzas** — pizzería activa en Rappi (Av. Valparaíso 1057), julio = peak pizza, ahorro estimado $250K+/mes.
-  - **Presentación para #51 Barrio Chino Fusión** — encontrado en Uber Eats (distinto de #31 Barrio Chino Rappi), comida china fusión, 30% comisión Uber Eats, peak julio.
-  - **Presentación para #52 Frango** — sándwiches + helados en Buenos Aires 785 Local 2, local físico con potencial delivery, argumento $500 fijo vs. 28-30%.
-- Búsqueda activa en Uber Eats y directorios locales Villa Alemana: encontrados 2 nuevos prospectos.
-- Pipeline actualizado a 52 prospectos.
+  - **Versión TDLC/FIFA para #27 Tribeca Sushi** — en PedidosYa, argumento: "fue multada dos veces y ahora en tribunales diciendo que no hizo nada malo", ahorro $4.540 por pedido sushi $18K.
+  - **Versión TDLC/FIFA para #33 Casa Festa** — en PedidosYa, 20+ años de trayectoria merecen plataforma sin historial regulatorio, ahorro $6.500 por torta $25K. Tiene tel. (32) 2950116 y email casafestaventas@gmail.com.
+  - **Presentación para #53 Mandala Sushi Express** — sushi en Uber Eats Av. Valparaíso 1732, tablas y rolls ticket alto ($12K-$18K), tel. +56 9 8648 4265, ahorro estimado $660K+/mes.
+  - **Presentación para #54 Fusion Restobar** — restobar en PedidosYa + Uber Eats Buenos Aires 753, argumento doble comisión + FNE/TDLC, ahorro $700K+/mes vs. una de las dos apps.
+- Búsqueda activa en Uber Eats y PedidosYa Villa Alemana: encontrados 2 nuevos prospectos.
+- Pipeline actualizado a 54 prospectos.
 
 ## Borradores listos para Matías
 
-| Prospecto | Tipo | Canal sugerido | Prioridad |
-|---|---|---|---|
-| #22 Sushi Point Delivery — tel. (32) 324 0504 | Cierre junio / Arranque julio | Llamada telefónica directa | ALTA — tiene teléfono |
-| #15 Melt Pizzas — Av. Valparaíso 1057 | Cierre junio / Arranque julio | Contacto presencial / Rappi | ALTA — peak pizza julio |
-| #51 Barrio Chino Fusión | Presentación | Uber Eats / contacto presencial | MEDIA |
-| #52 Frango | Presentación | Contacto presencial — Buenos Aires 785 | MEDIA |
+| Prospecto | Tipo | Argumento principal | Canal sugerido | Prioridad |
+|---|---|---|---|---|
+| #27 Tribeca Sushi | Versión TDLC/FIFA | PedidosYa en juicio "no hizo nada malo" + julio peak sushi | PedidosYa / contacto directo | ALTA — FNE argumento máximo |
+| #33 Casa Festa — tel. (32) 2950116 | Versión TDLC/FIFA | 20 años trayectoria + PedidosYa con historial negativo | Teléfono / email | ALTA — tiene contacto directo |
+| #53 Mandala Sushi Express — tel. +56 9 8648 4265 | Presentación | Uber Eats 30% vs $500 fijo, julio peak sushi | Teléfono | ALTA — tiene número |
+| #54 Fusion Restobar | Presentación | Doble comisión (2 plataformas) + FNE/TDLC (en PedidosYa) | fusionrestobar.cl / presencial Buenos Aires 753 | MUY ALTA — doble argumento |
 
 **Prioridad de envío hoy:**
-1. **#22 Sushi Point Delivery** — tiene número, sushi es el rubro más rentable del pipeline (ticket $18K), a 5 días del peak julio
-2. **#15 Melt Pizzas** — julio es el mejor mes para pizza, la presentación de mayo puede no haberse enviado
-3. **#51 Barrio Chino Fusión** — prospecto nuevo, primer contacto
-4. **#52 Frango** — prospecto nuevo, primer contacto
+1. **#54 Fusion Restobar** — en PedidosYa + Uber Eats, argumento doble más poderoso del pipeline reciente
+2. **#53 Mandala Sushi Express** — tiene número de teléfono, sushi ticket alto, julio = peak
+3. **#33 Casa Festa** — tiene teléfono y email directo, en PedidosYa, 20 años de historia
+4. **#27 Tribeca Sushi** — FNE/TDLC para prospecto que ya recibió versiones anteriores
 
 ## Nuevos prospectos agregados
 
-- **#51 Barrio Chino Fusión** — Comida china fusión, Villa Alemana. Activo en Uber Eats (store page confirmada). Distinto de #31 Barrio Chino (que está en Rappi bajo Quilpué). Ticket medio alto, peak julio. Fuente: Uber Eats Villa Alemana categoría comida china.
-- **#52 Frango** — Sándwiches y helados, Buenos Aires 785 Local 2, Villa Alemana. Local físico con potencial delivery. Fuente: directorio búsqueda delivery Villa Alemana.
+- **Mandala Sushi Express (#53)**: Sushi delivery en Av. Valparaíso 1732, Villa Alemana. Activo en Uber Eats. Tiene sitio web propio (mandalasushiexpress.cl) y TikTok activo (@mandalasushiexpress). Teléfono: +56 9 8648 4265. Tablas, rolls especiales, SushiBurger — ticket $12K-$18K. Ahorro estimado $660K+/mes vs. RepartoJusto.
+- **Fusion Restobar (#54)**: Restobar con pizzas artesanales, sushi, gastronomía venezolana y coctelería. Buenos Aires 753, Villa Alemana. Activo en PedidosYa Y Uber Eats simultáneamente. Rating 4.4/5 (425 evaluaciones). Sitio: fusionrestobar.cl. Instagram: @fusionrestorante. Ocean Roll $12.900, Pizza $7.900. Uno de los mejores prospectos del pipeline para argumento FNE combinado con doble plataforma.
 
 ## Contexto del pipeline
 
-- **48 días sin confirmación de Matías** (desde 08/05) sobre qué borradores fueron enviados. Todos los estados de los 14 Contactados y varios Nuevos dependen de esa confirmación.
-- **Cobertura "Arranque de Julio" completada:** Los 14 Contactados tienen mensajes de julio (21-22/06). Los Nuevos prioritarios con mayor ROI tienen mensajes de julio o refresh junio.
-- **5 días para fin de mes:** Julio arranca el 01/07 — todos los mensajes de hoy y los anteriores usan el cambio de mes como vector de urgencia.
+- **49 días sin confirmación de Matías** (desde 08/05) sobre qué borradores fueron enviados. Todos los estados de los 14 Contactados y todos los Nuevos dependen de esa confirmación.
+- **Julio arranca el lunes 30/06**: Los 14 Contactados tienen mensajes de "Arranque de Julio" desde 21-22/06 listos para envío.
+- **Argumento FNE/TDLC actualizado**: PedidosYa en juicio ante TDLC negando cargos (noticias de semana 22-26/06) — prolonga ciclo de noticias hasta al menos el fallo judicial. Aplica directamente a #27, #28, #30, #33, #54.
+- **Contraste FIFA**: Rappi y PedidosYa en modo Mundial FIFA en julio — ángulo de contraste "plataforma local vs. multinacional" especialmente poderoso este mes.
 
 ## Para el Gerente
 
-Pipeline en 52 prospectos (38 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy — Cierre de Junio / Arranque de Julio para #22 Sushi Point Delivery (tel. (32) 324 0504, sushi ticket alto, ahorro $455K/mes) y #15 Melt Pizzas (pizza en Rappi peak julio), más presentaciones para 2 nuevos encontrados en Uber Eats (Barrio Chino Fusión #51 y Frango #52 en Buenos Aires 785); cuello de botella crítico: 48 días sin confirmación de Matías bloquea actualización de todos los estados del pipeline.
+Pipeline en 54 prospectos (40 nuevos, 14 contactados, 0 registrados); argumentos TDLC (PedidosYa en juicio) + contraste FIFA incorporados hoy en versiones para #27 y #33; 2 nuevos prospectos de alta calidad (Mandala Sushi Express con teléfono y Fusion Restobar con doble comisión + FNE/TDLC); cuello de botella crítico: 49 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
