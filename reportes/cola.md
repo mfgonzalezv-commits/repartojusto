@@ -22,30 +22,32 @@ Lee reportes/investigador.md antes de redactar mensajes. Usa los argumentos conc
 
 ---
 
-## Instrucciones para la semana del 16 al 22 de mayo de 2026
+## Instrucciones para la semana del 27 de junio al 3 de julio de 2026
 
-### PARA MEJORAS (lunes 19/05) — PRIORIDAD ALTA
-1. **BUG CRÍTICO push-subscription**: En `backend/src/routes/riders.js` ~línea 110 (endpoint `POST /api/riders/push-subscription`), cambiar `req.user.id` por `req.usuario.id`. Una línea; restaura las notificaciones push a riders cuando la app está cerrada.
-2. **Scheduler de pedidos agendados**: Implementar con `node-cron` un job que cada minuto consulte `pedidos WHERE estado='agendado' AND hora_retiro BETWEEN NOW() AND NOW() + INTERVAL '10 minutes'` y llame a `iniciarCascada`. Desbloquea la feature de scheduling ya visible en la UI.
-3. **Índices de base de datos**: Agregar a `backend/scripts/migrate.js` y ejecutar contra producción: `CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token)`, `CREATE INDEX IF NOT EXISTS idx_pedidos_created_at ON pedidos(created_at)`, `CREATE INDEX IF NOT EXISTS idx_pedidos_entregado_at ON pedidos(entregado_at)`.
-4. **Panel de liquidaciones transparente**: Basado en el reporte del Investigador, los negocios reclaman liquidaciones opacas a Rappi/PedidosYa. Priorizar que el tab Resumen en negocio.html muestre desglose claro por pedido (fecha, monto, tarifa cobrada, neto negocio).
+### PARA MEJORAS (lunes 30/06) — PRIORIDAD CRÍTICA
+1. **BUG PUSH-SUBSCRIPTION (6 SEMANAS ACTIVO):** En `backend/src/routes/riders.js:183`, cambiar `req.user.id` por `req.usuario.id`. Una sola línea. Restaura las notificaciones push a riders cuando la app está cerrada. No postergarlo más.
+2. **Scheduler de pedidos agendados:** Implementar con `node-cron` un job que cada minuto consulte `pedidos WHERE estado='agendado' AND hora_retiro BETWEEN NOW() AND NOW() + INTERVAL '10 minutes'` y llame a `iniciarCascada`. Desbloquea la feature de scheduling ya visible en la UI.
+3. **Paginación en /api/admin/liquidaciones:** Reemplazar `LIMIT 100` hardcodeado por `LIMIT $1 OFFSET $2` con query params `page` y `limit` estándar (Aprendiz lo confirmó pendiente el 23/06).
+4. **Índices de base de datos (pendientes desde mayo):** Agregar a `backend/scripts/migrate.js` y ejecutar contra producción: `CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token)`, `CREATE INDEX IF NOT EXISTS idx_pedidos_created_at ON pedidos(created_at)`, `CREATE INDEX IF NOT EXISTS idx_pedidos_entregado_at ON pedidos(entregado_at)`.
 
 ### PARA VENTAS (diario)
-- El argumento PedidosYa-FNE está disponible en `reportes/investigador.md` — usarlo en la 3ª ola para los prospectos que ya no respondan a los argumentos de ahorro puro.
-- Locos X Food (#17) y La Casita Del Sabor (#18) ya están confirmados en Rappi. Calcular su costo mensual estimado en Rappi y mostrárselo directamente en el mensaje.
-- Objetivo de la semana: confirmar con Matías qué borradores se enviaron para poder actualizar estados del pipeline de "Contactado" a "Respondió" o escalar a 3ª ola.
+- Argumento FNE reforzado: PedidosYa fue a juicio ante el TDLC negando los cargos — el mensaje exacto es "PedidosYa fue multada dos veces en 2026 por controlarte los precios, y hoy en tribunales dice que no hizo nada malo." Usarlo con los 4 prospectos en PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa).
+- Julio es peak de invierno: capitalizar el argumento estacional en todos los mensajes de la semana. Rappi/PedidosYa están en modo Mundial FIFA — RepartoJusto puede contrastar con "trabajamos en tu barrio con tarifa fija".
+- Prioridad de contacto esta semana: #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas — borradores listos en prospectos.md del 25/06.
 
-### PARA INVESTIGADOR (jueves 21/05)
-- Profundizar en el mercado de dark kitchens en ciudades intermedias de Chile (Quilpué, Villa Alemana, Rancagua). ¿Hay operadores entrando a la zona? ¿Representa riesgo o alianza potencial para RepartoJusto?
-- Mapear qué restaurantes de Villa Alemana tienen canal de WhatsApp Business activo para pedidos directos — son los más receptivos al argumento de "libertad de canal".
+### PARA INVESTIGADOR (jueves 03/07)
+- Explorar contacto con Dark Kitchen Club (darkitchenclub.cl, Rancagua) — posible alianza logística si expanden hacia Valparaíso. Ventana abierta, sin competidores en la zona.
+- Monitorear si Rappi Turbo anuncia expansión a Villa Alemana/Quilpué — actualizará el argumento de urgencia para ventas.
+- Seguimiento a juicio PedidosYa ante el TDLC — cualquier novedad es argumento de venta fresco.
 
-### PARA APRENDIZ (martes 20/05)
-- Verificar que el bug de push-subscription fue corregido por Mejoras.
-- Analizar el endpoint `GET /api/admin/liquidaciones` — tiene `LIMIT 100` hardcodeado sin paginación. Documentar la corrección necesaria para Mejoras.
-- Revisar si `RESIDUAL_PCT: 8` en config está implementado en algún cálculo; si no, documentarlo como deuda técnica para que Matías decida si activarlo.
+### PARA APRENDIZ (martes 01/07)
+- Verificar que el bug de push-subscription fue corregido por Mejoras el lunes.
+- Confirmar si `RESIDUAL_PCT: 8` en `config/index.js` está implementado en algún cálculo del sistema. Si no hay ninguna referencia activa, documentarlo como deuda técnica en aprendiz.md para decisión de Matías.
+- Revisar que la paginación de /api/admin/liquidaciones fue aplicada correctamente.
 
-### PARA SEGURIDAD (miércoles 21/05)
-- Reporte no se generó esta semana. Ejecutar auditoría de rutina y escribir `reportes/seguridad.md`.
+### PARA SEGURIDAD (miércoles 02/07)
+- Verificar que los 4 fixes aplicados el 24/06 no generaron regresiones. Revisar especialmente el endpoint PUT /pedidos/:id/cancelar y GET /pedidos/:id.
+- Auditar si JWT_SECRET tiene el valor por defecto `secret_key_change_in_production` en producción — si es así, es crítico alertar a Matías para que lo cambie en Railway inmediatamente.
 
 ### PARA MONITOR (cada hora)
 - Sin cambios de instrucciones. Continuar reportando estado del servidor en `reportes/monitor.md`.

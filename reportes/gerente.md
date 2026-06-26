@@ -1,24 +1,26 @@
 # Informe Ejecutivo RepartoJusto
-**Semana del:** 13 al 19 de junio de 2026
+**Semana del:** 20 al 26 de junio de 2026
+**Generado:** viernes 27 de junio de 2026
 
 ---
 
-## Estado General: ⚠️ Atención Requerida
-La plataforma opera con normalidad y tuvo mejoras técnicas significativas esta semana, pero se detectaron dos vulnerabilidades críticas de seguridad que requieren corrección urgente, y el pipeline comercial sigue bloqueado esperando confirmación de Matías.
+## Estado General: ⚠️ Operativo con alertas
+
+La plataforma sigue activa en producción (Railway). Esta semana se corrigieron 4 vulnerabilidades de seguridad graves. Sin embargo, hay un bug que lleva 6 semanas sin corregirse que deja a los riders sin alertas de nuevos pedidos.
 
 ---
 
 ## Lo que pasó esta semana
 
-- **Se reparó el sistema de alarmas para riders — problema de fondo resuelto.** El agente técnico realizó 6+ correcciones al sistema de notificación sonora: la alarma ahora suena de forma permanente hasta que el pedido sea tomado por algún rider (antes podía silenciarse sola), el polling bajó de 8 a 3 segundos para respuesta más rápida, y el Service Worker fue actualizado a v7 para despertar la app incluso cuando el rider tiene la pantalla apagada. Esto resuelve el problema de fondo por el que los riders no se enteraban de pedidos nuevos en tiempo real.
+1. **Se blindó la plataforma contra 4 ataques críticos.** El agente de seguridad auditó el código el miércoles y aplicó correcciones directas: un rider ya no puede cancelar los pedidos de otros negocios, las calificaciones ahora requieren identidad verificada, los datos de clientes (teléfonos, direcciones) solo son visibles para quienes deben verlos, y el login ya tiene protección contra intentos masivos de contraseña.
 
-- **Se creó material impreso para prospectar negocios en la calle.** Se diseñó un brochure en formato 1/4 carta (tamaño manejable) con fondo navy y amarillo, que incluye QR de registro, resumen de la propuesta y contacto WhatsApp. Permite a Matías repartir material físico en Villa Alemana sin depender de mensajes digitales.
+2. **Un bug de notificaciones push a riders lleva 6 semanas sin corregirse.** Fue identificado el 19 de mayo, documentado dos veces más (Mejoras el 22/06, Aprendiz el 23/06), y sigue activo. El efecto práctico: cuando un rider cierra la app del celular, no recibe la alerta del nuevo pedido. La corrección es una sola línea de código en riders.js:183.
 
-- **El agente de Mejoras corrió por primera vez e identificó 5 problemas en el código.** Dos son críticos de seguridad (ver Alertas). Los otros tres son mejoras de rendimiento, privacidad de datos de clientes y persistencia del chat entre rider y negocio.
+3. **El pipeline comercial llegó a 52 prospectos — ninguno registrado aún.** El agente de ventas generó borradores para todos los contactados y nuevos prioritarios, aprovechando el argumento de inicio de julio (peak de delivery en invierno). El pipeline crece, pero ningún negocio se ha registrado porque Matías no ha confirmado qué mensajes se enviaron en los últimos 48 días.
 
-- **Pipeline comercial sumó 2 nuevos prospectos, ahora en 38 negocios.** Se incorporaron Star Food Burger (Maturana 312) y Mako Sushi Delivery (El Ciruelillo 1384), ambos activos en Uber Eats y Rappi simultáneamente — los mensajes de presentación están redactados. El total es 38 negocios mapeados: 14 contactados, 24 nuevos, 0 registrados.
+4. **La competencia acelera — Rappi invierte US$15 millones.** Anuncia 5 nuevas tiendas Turbo en Chile (ya activas en Viña del Mar, Reñaca y Concón). PedidosYa, en cambio, fue a juicio en el TDLC negándose a pagar su multa por controlar precios de restaurantes, lo que mantiene viva esa noticia como argumento de venta para RepartoJusto.
 
-- **El mes de junio cierra la semana que viene — ventana comercial urgente.** Los 4 negocios prioritarios (Don Pollo, Pizza House, Sushi Zen, El Gaucho) tienen mensajes de cierre de junio redactados y listos. Son los que llevan más tiempo en el pipeline (42 días). Si se envían esta semana, llegan en el último tramo del mes cuando el argumento de "cerrar junio" todavía tiene fuerza.
+5. **El mercado valida el modelo.** Flama Hub, startup chilena de optimización de delivery, llegó a 140 restaurantes con apoyo de CORFO. Esto confirma que los negocios buscan activamente alternativas a Rappi y PedidosYa, y que hay disposición a pagar por esa alternativa.
 
 ---
 
@@ -26,42 +28,41 @@ La plataforma opera con normalidad y tuvo mejoras técnicas significativas esta 
 
 | Problema | Estado |
 |---|---|
-| Service Worker — app rider no actualizaba | ✅ Resuelto (SW v7 esta semana) |
-| Alarma de pedido nuevo en riders | ✅ Resuelto esta semana (6 fixes, polling 3s, alarma permanente) |
-| Notificaciones Xiaomi — requiere permiso manual | ⚙️ En seguimiento — no tiene solución técnica |
-| Audio en Chrome móvil | ✅ Resuelto |
-| Zona horaria Railway vs Chile | ✅ Resuelto |
-| Servidor responde 403 desde entorno de agentes | ⚙️ Problema de configuración interna — Railway opera con normalidad |
-| Pedidos agendados no se despachan (sin scheduler) | 🔴 Pendiente |
-| Chat entre rider y negocio se pierde al reiniciar servidor | 🔴 Pendiente |
+| Service Worker rider (actualizaciones no llegaban) | ✅ Resuelto desde semanas anteriores |
+| Alarma de pedido nuevo en riders | ✅ Resuelto — polling 3s, alarma permanente |
+| Notificaciones push Xiaomi — permiso manual | ⚠️ Sin solución técnica posible — riders deben activarlo en Ajustes |
+| AudioContext en Chrome móvil | ✅ Resuelto — toggle Online activa audio y push simultáneamente |
+| **Riders sin push cuando la app está cerrada** | ❌ **Bug activo 6 semanas — riders.js:183, 1 línea sin corregir** |
+| Webhook de Flow sin verificación de firma HMAC | ⚠️ Pendiente — requiere configurar FLOW_WEBHOOK_SECRET en Railway |
+| JWT_SECRET con valor débil como fallback | ⚠️ Pendiente — riesgo en producción si variable no está configurada |
+| Servidor inaccesible desde entorno de agentes | ⚙️ Problema del proxy de CI — Railway opera con normalidad |
 
 ---
 
 ## Alertas
 
-🚨 **Vulnerabilidad crítica #1 — Webhook de pagos sin protección.** El webhook que Flow usa para confirmar pagos no verifica que el mensaje venga realmente de Flow. Cualquier persona con la URL puede enviar un POST falso y marcar un pago como completado sin haber pagado. Requiere corrección esta semana.
+🔴 **Bug push riders (6 semanas activo):** `req.user.id` debe ser `req.usuario.id` en `backend/src/routes/riders.js:183`. Cada semana que pasa, los riders operan sin alertas de pedidos cuando el celular está bloqueado. Es una sola línea — debe corregirse el lunes.
 
-🚨 **Vulnerabilidad crítica #2 — Login sin límite de intentos.** El formulario de acceso para negocios, riders y admin no tiene restricción de intentos fallidos. Un atacante puede probar miles de contraseñas de forma automatizada. Requiere corrección esta semana.
+🟡 **Webhook de pagos sin firma:** En producción con Flow real, un atacante podría marcar pagos como completados sin haber pagado. Hoy estamos en sandbox, pero hay que configurar `FLOW_WEBHOOK_SECRET` en Railway antes de activar cobros reales. El agente de seguridad dejó el código listo.
 
-⚠️ **42 días sin confirmación de Matías** sobre qué mensajes se enviaron en mayo. El pipeline tiene 38 negocios mapeados y 0 registrados. El cuello de botella es exclusivamente la confirmación de Matías — no hay nada más que los agentes puedan hacer hasta recibir esa respuesta.
+🟡 **48 días sin confirmación de Matías** sobre qué mensajes de ventas se enviaron. El pipeline tiene 52 prospectos mapeados y 0 registrados. Sin esa confirmación, Ventas no puede actualizar estados ni escalar el tono de seguimiento.
 
-⚠️ **Junio cierra en 12 días** — el argumento estacional (invierno + frío) y los mensajes de cierre de mes tienen fecha de vencimiento real.
+🟡 **RESIDUAL_PCT: 8%** está definido en la configuración del sistema pero nunca se implementó en ningún cálculo. Matías debe decidir si activarlo o eliminarlo — es una deuda técnica que genera confusión.
 
 ---
 
 ## Decisiones tomadas
 
-- El sistema de alarma del rider fue refactorizado completo: alarma permanente, polling 3s, SW v7 con despertar desde segundo plano.
-- Se creó brochure físico en formato 1/4 carta para distribución presencial en Villa Alemana.
-- Los prospectos Librería El Saber (#12) y Heladería Glacial (#14) se mantienen diferidos hasta agosto.
-- El agente de Mejoras retomó actividad — sus 5 recomendaciones están documentadas en `reportes/mejoras.md` con el código exacto listo para aplicar.
+- Seguridad aplicó 4 correcciones directamente al código esta semana (cancelación de pedidos restringida por rol; calificaciones con autenticación obligatoria; protección por ownership en GET /pedidos/:id; rate limiting en login).
+- La corrección del webhook de Flow fue documentada pero no aplicada, a la espera de que se configure la variable de entorno en Railway.
+- Ventas completó la cobertura de "Arranque de Julio" para todos los contactados y nuevos prioritarios — los mensajes están listos para enviar.
 
 ---
 
 ## Prioridades próxima semana
 
-1. **Matías: enviar mensajes de cierre de junio esta semana** — al menos los 4 prioritarios (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho). Están listos en `reportes/prospectos.md`. Es urgente antes de que cierre el mes.
-2. **Mejoras: corregir webhook de Flow** — agregar verificación HMAC. Código exacto en `reportes/mejoras.md`, mejora #1. Es la corrección más urgente de seguridad.
-3. **Mejoras: agregar rate limiting al login** — 10 intentos por 15 minutos. Código exacto en `reportes/mejoras.md`, mejora #2. Requiere instalar `express-rate-limit`.
-4. **Mejoras: implementar scheduler de pedidos agendados** — feature diferenciadora frente a Rappi que lleva meses inactiva.
-5. **Matías: confirmar qué mensajes se enviaron en mayo** — cualquier respuesta (aunque sea "no envié ninguno") desbloquea la actualización de estados de los 14 Contactados.
+1. **Mejoras: corregir bug push-subscription** — 1 línea en `backend/src/routes/riders.js:183`, cambiar `req.user.id` por `req.usuario.id`. Llevan 6 semanas los riders sin alertas cuando cierran la app.
+2. **Matías: confirmar qué mensajes de ventas se enviaron** — cualquier respuesta desbloquea el pipeline completo de 52 prospectos. Si se pueden enviar los borradores de julio esta semana, el peak de invierno juega a favor.
+3. **Matías: configurar FLOW_WEBHOOK_SECRET en Railway** — necesario antes de activar cobros reales con Flow. El código está listo.
+4. **Mejoras: implementar scheduler de pedidos agendados** — feature diferenciadora que lleva meses inactiva en la UI pero sin lógica detrás.
+5. **Matías: decidir sobre RESIDUAL_PCT: 8%** — activar o eliminar. Hoy no se cobra, hoy no se registra en ningún cálculo.
