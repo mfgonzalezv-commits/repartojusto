@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-26T21:02:16Z
+**Última verificación:** 2026-06-26T22:03:21Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy del entorno de ejecución rechazó el túnel CONNECT con HTTP 403 (dominio externo bloqueado por política de red). No es posible determinar el estado real del servidor desde este entorno.
+**Detalle:** curl error 56 (connection reset by peer) — HTTP 000, sin respuesta del servidor en https://repartojusto-production.up.railway.app/health
