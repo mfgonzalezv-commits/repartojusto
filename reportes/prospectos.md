@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-26
+**Actualizado:** 2026-06-27
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -28,12 +28,12 @@
 | 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | Cierre junio / Arranque julio redactado 25/06 — tel. (32) 324 0504 |
 | 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — en Rappi+PedidosYa+Uber Eats, WhatsApp: +56 986749142 |
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
-| 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
-| 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Presentación redactada 07/06 |
+| 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
+| 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Versión 20/06 FNE doble multa ($3.400M CLP) redactada |
-| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión 20/06 FNE doble multa redactada |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión TDLC/FIFA redactada 27/06 |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — ángulo local vs. Rappi/Quilpué |
-| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — doble plataforma Uber Eats+PedidosYa |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión TDLC/FIFA redactada 27/06 — doble plataforma Uber Eats+PedidosYa |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — listado bajo Quilpué en Rappi, tel. +56 997902765 |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — negocio delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — 20 años trayectoria, ticket alto |
@@ -58,10 +58,56 @@
 | 52 | Frango | Sándwiches / helados | Buenos Aires 785 Local 2, Villa Alemana | Nuevo | — | Presentación redactada 25/06 — local físico, posible Rappi/Uber Eats, argumento tarifa fija |
 | 53 | Mandala Sushi Express | Sushi | Av. Valparaíso 1732, Villa Alemana | Nuevo | — | Presentación redactada 26/06 — en Uber Eats, tablas y rolls ticket alto, tel. +56 9 8648 4265 |
 | 54 | Fusion Restobar | Restobar (pizza/sushi/venezolana) | Buenos Aires 753, Villa Alemana | Nuevo | — | Presentación redactada 26/06 — en PedidosYa + Uber Eats, argumento FNE/TDLC + doble comisión |
+| 55 | Churros de Lautaro | Churros / postres | Lautaro 301, Villa Alemana | Nuevo | — | Presentación redactada 27/06 — en Rappi, producto invernal peak julio |
+| 56 | DeVita Panadería | Panadería | Villa Alemana | Nuevo | — | Presentación redactada 27/06 — canal propio Facebook, argumento tarifa fija vs. porcentual |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-27)
+
+> **NOTA PARA MATÍAS:** Hoy arranca la semana final de junio — mañana empieza julio. Se redactan 6 mensajes: (1) versiones **TDLC/FIFA** para los 2 prospectos en PedidosYa que aún no tenían el argumento del Gerente (#28 La Esquina Con Sabor y #30 Poh Che — versiones anteriores del 20/06 solo tenían FNE doble multa, no el juicio TDLC); (2) **Arranque de Julio** para #25 Sin Miedo Burgers y #26 El Clandestino (presentaciones del 07/06, 52 días sin contacto posterior, peak julio en hamburguesas y cocina peruana respectivamente); (3) **presentaciones** para 2 nuevos prospectos: **Churros de Lautaro (#55)** — churros en Rappi Lautaro 301, producto ideal para invierno y sin representación en el pipeline, y **DeVita Panadería (#56)** — panadería con canal propio en Facebook, categoría no cubierta en el pipeline. Pipeline total: **56 prospectos**.
+>
+> **Recordatorio:** 50 días sin confirmación de mensajes enviados (desde 08/05). Julio arranca el martes — los mensajes de Arranque de Julio para todos los 14 Contactados y los Nuevos prioritarios están listos desde 21-25/06.
+
+---
+
+#### VERSIONES TDLC/FIFA — Prospectos en PedidosYa (27/06)
+
+**[28] La Esquina Con Sabor — Versión TDLC/FIFA (27/06):**
+"Hola La Esquina Con Sabor! De RepartoJusto, actualización de esta semana. PedidosYa fue multada dos veces en 2026 por controlarte los precios ($3.400 millones CLP), y hoy está en tribunales (TDLC) diciendo que no hizo nada malo. Mientras tanto, la plataforma gasta millones en publicidad del Mundial FIFA. Nosotros hacemos lo contrario: somos 100% locales en Villa Alemana, trabajando con tarifa fija mientras julio es el mejor mes para completos y comida rápida en delivery — el frío hace que la gente prefiera pedir desde casa. Para un completo de $4.500, el ahorro vs. PedidosYa (28%) es $760 por pedido que se queda en el negocio. Con RepartoJusto: $500 fijos siempre, sin restricciones de precio, sin contrato. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[30] Poh Che Empanadas & Sandwichs — Versión TDLC/FIFA (27/06):**
+"Hola Poh Che! De RepartoJusto, actualización importante. PedidosYa fue multada dos veces en 2026 por controlarte los precios ($3.400 millones CLP), y hoy en tribunales dice que no hizo nada malo. Encima gasta millones en publicidad del Mundial FIFA. RepartoJusto hace lo contrario: 100% local en Villa Alemana, tarifa fija. Julio es el peak de empanadas y comida chilena en delivery — el frío llena las cocinas de pedidos. Ustedes están en Uber Eats + PedidosYa pagando doble comisión. Para un pedido de empanadas de $6.000, el ahorro vs. PedidosYa (28%) es $1.180 por pedido que se queda en el negocio. Con RepartoJusto: $500 fijos siempre, libertad total de precios, sin contrato. Pueden mantener ambas plataformas y sumar RepartoJusto como canal de menor costo. repartojusto-production.up.railway.app ¿Hablamos? (Tel: +56 32 324 2360)"
+
+---
+
+#### ARRANQUE DE JULIO — Nuevos con presentación antigua sin versión julio (27/06)
+
+**[25] Sin Miedo Burgers — Arranque de Julio (27/06):**
+"Hola Sin Miedo Burgers! De RepartoJusto — les contactamos hace unas semanas y queríamos retomar con el arranque de julio. Julio es el peak de delivery en Chile: el frío es el mejor vendedor de hamburguesas. Los vemos activos en Uber Eats — genial. El número concreto para julio: con hamburguesas de $9.000 y 10 entregas diarias en Uber Eats (30%), pagan ~$810.000/mes en comisiones a la app. Con RepartoJusto ese costo baja a $150.000 — más de $660.000 al mes que se quedan en el negocio. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana. ¿Este julio arrancamos? repartojusto-production.up.railway.app"
+
+---
+
+**[26] El Clandestino-Gastronomía Peruana — Arranque de Julio (27/06):**
+"Hola El Clandestino! RepartoJusto, arranque de julio. Julio es el mejor mes del año para la cocina peruana en delivery: el frío hace que la gente quiera ceviche, lomo saltado y caldos reconfortantes desde casa. Los vemos en plataformas de delivery — el rubro tiene ticket promedio alto, lo que significa que las comisiones porcentuales duelen más por pedido. Para un combinado peruano de $12.000, Uber Eats cobra $3.600 de comisión (30%). Con RepartoJusto son $500 fijos, siempre. Con 10 entregas diarias en julio, el ahorro puede superar $930.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener sus plataformas actuales y sumar RepartoJusto como canal de menor costo. ¿Este julio lo intentamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-27)
+
+**[55] Churros de Lautaro — Presentación:**
+"Hola Churros de Lautaro! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Lautaro 301 — churros con delivery, un producto perfectamente diseñado para el invierno. ¿Saben que Rappi cobra 28% de comisión por cada pedido? Para una caja de churros de $6.000, eso son $1.680 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Julio es el peak de postres y snacks calientes en delivery — el frío hace que la gente quiera un churro caliente en casa sin salir. Con 15 entregas diarias, el ahorro vs. Rappi puede superar los $350.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[56] DeVita Panadería — Presentación:**
+"Hola DeVita Panadería! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los vemos con presencia en redes sociales con delivery de pan, repostería y productos de panadería a domicilio — excelente. Una propuesta concreta: si hoy trabajan con plataformas como Uber Eats o Rappi (que cobran 28-30% por pedido), con RepartoJusto el costo es $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pedido de $5.000 (pan + pasteles), Rappi cobra hasta $1.400 de comisión — con nosotros son $500 siempre. Julio es temporada alta de panadería con delivery: el frío trae más pedidos de desayunos y onces a domicilio. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -923,3 +969,7 @@
 **Mandala Sushi Express (#53, agregado 26/06):** Restaurante de sushi en Av. Valparaíso 1732 (paradero 10), Villa Alemana. Teléfono: +56 9 8648 4265. Sitio web: mandalasushiexpress.cl. Facebook: facebook.com/LaCalidadVaPorDentro. TikTok: @mandalasushiexpress. Confirmado en Uber Eats (ubereats.com/cl/store/mandala-sushi-express-villa-alemana). Menú: tablas, rolls especiales, SushiBurger, handrolls, ceviche, salsas especiales. Ticket de referencia: tabla ~$12.900, rolls de $12.000-$18.000. Con 15 entregas diarias, el ahorro vs. Uber Eats (30%) supera $660.000/mes vs. RepartoJusto. Tiene canal TikTok activo — buena presencia digital. Fuente: ubereats.com + mandalasushiexpress.cl + TikTok @mandalasushiexpress.
 
 **Fusion Restobar (#54, agregado 26/06):** Restobar con carta amplia — pizzas artesanales, sushi, gastronomía venezolana, cocina cantonesa china y coctelería. Buenos Aires 753, Villa Alemana (a metros de Frango #52 en Buenos Aires 785). Sitio web: fusionrestobar.cl. Instagram: @fusionrestorante. Facebook: @BarFusionRestaurante. Horario: lun-vie 14:00-22:00, fin de semana horario extendido. Confirmado en PedidosYa Y Uber Eats simultáneamente — doble comisión. Rating 4.4/5 (425 evaluaciones). Ticket de referencia: Ocean Roll $12.900, Pepito mixto $14.900, Pizza $7.900, Tabla $15.900. ARGUMENTOS DOBLES: (1) doble comisión (PedidosYa 28% + Uber Eats 30%) — con 15 entregas/día el ahorro vs. una sola app supera $700.000/mes; (2) FNE/TDLC — están en PedidosYa, la plataforma multada dos veces en 2026 y hoy en juicio ante el TDLC negando cargos. Uno de los mejores prospectos del pipeline para argumento FNE combinado con doble plataforma. Fuente: pedidosya.cl + ubereats.com + fusionrestobar.cl + TikTok @larutadelosnachos.
+
+**Churros de Lautaro (#55, agregado 27/06):** Negocio de churros con delivery activo en Rappi en Villa Alemana. Dirección: Lautaro 301, Villa Alemana. Fuente: rappi.cl/restaurantes/900087190-churros-de-lautaro. Producto 100% invernal — churros calientes son ideal para entrega a domicilio en invierno/julio. Categoría sin representación previa en el pipeline. Ticket promedio estimado: $4.000-$8.000. Rappi cobra 28% de comisión — con 15 entregas diarias, el ahorro vs. Rappi puede superar $350.000/mes vs. RepartoJusto. También se encontró competidor Valentino Churros en Rappi y Churrísimo en Uber Eats — posible expansión del segmento. Argumento clave: julio es peak absoluto de snacks calientes en delivery.
+
+**DeVita Panadería (#56, agregado 27/06):** Panadería con delivery propio en Villa Alemana. Facebook: facebook.com/DeVita.Panaderia. Aparece en la categoría de Panadería de Uber Eats Villa Alemana. Plataformas actuales por confirmar al contactar. Ticket promedio estimado: $3.000-$8.000 (pan + repostería + productos de panadería). Categoría (panadería/cafetería) no representada en el pipeline. Argumento principal: julio es peak de desayunos y onces a domicilio por el frío. Si trabajan con Rappi/Uber Eats (28-30%), el ahorro con tarifa fija $500 es especialmente atractivo en pedidos de bajo ticket. Diferenciador: riders locales que cuidan pedidos frágiles (marraquetas, tortas, etc.).
