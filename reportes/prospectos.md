@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-27
+**Actualizado:** 2026-06-28
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -32,10 +32,10 @@
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Versión 20/06 FNE doble multa ($3.400M CLP) redactada |
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión TDLC/FIFA redactada 27/06 |
-| 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Presentación redactada 10/06 — ángulo local vs. Rappi/Quilpué |
+| 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
 | 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión TDLC/FIFA redactada 27/06 — doble plataforma Uber Eats+PedidosYa |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — listado bajo Quilpué en Rappi, tel. +56 997902765 |
-| 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Presentación redactada 13/06 — negocio delivery-first, ticket alto sushi |
+| 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — 20 años trayectoria, ticket alto |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
 | 35 | Buena Onda Sushi | Sushi | Huanhuali 997, Villa Alemana | Nuevo | — | Presentación redactada 15/06 — en Uber Eats + Rappi, argumento doble comisión |
@@ -60,10 +60,44 @@
 | 54 | Fusion Restobar | Restobar (pizza/sushi/venezolana) | Buenos Aires 753, Villa Alemana | Nuevo | — | Presentación redactada 26/06 — en PedidosYa + Uber Eats, argumento FNE/TDLC + doble comisión |
 | 55 | Churros de Lautaro | Churros / postres | Lautaro 301, Villa Alemana | Nuevo | — | Presentación redactada 27/06 — en Rappi, producto invernal peak julio |
 | 56 | DeVita Panadería | Panadería | Villa Alemana | Nuevo | — | Presentación redactada 27/06 — canal propio Facebook, argumento tarifa fija vs. porcentual |
+| 57 | Empanadas Belle | Empanadas | Londres 930, Villa Alemana | Nuevo | — | Presentación redactada 28/06 — en Rappi, peak julio empanadas, argumento tarifa fija vs. 28% |
+| 58 | Mevas Raíces | Empanadas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 28/06 — en Rappi, empanadas de especialidad, peak invernal julio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-28)
+
+> **NOTA PARA MATÍAS:** Último domingo antes de julio — el martes arranca el mes. Hoy se redactan **Arranque de Julio** para los 2 Nuevos con presentaciones más antiguas sin versión de julio: **#29 Diroom Burger Lounge** (18 días sin mensaje, hamburguesería artesanal 10 años, ángulo Quilpué único) y **#32 Tempura Sushi & Sándwich Delivery** (15 días sin mensaje, delivery-first con sushi de ticket alto). También se agregan **presentaciones** para 2 nuevos prospectos encontrados hoy en Rappi: **Empanadas Belle (#57)** — empanadas en Londres 930, producto con peak absoluto en julio, y **Mevas Raíces (#58)** — segunda empanadera del pipeline con especialidades únicas. Pipeline total: **58 prospectos**.
+>
+> **Recordatorio URGENTE de la semana (Gerente):** Enviar ESTA SEMANA los borradores del 25/06 a los 2 prioritarios: **#22 Sushi Point Delivery (tel. (32) 324 0504)** y **#15 Melt Pizzas** — mensajes "Cierre Junio/Arranque Julio" listos y esperando. Julio arranca el martes. Los "Arranque de Julio" para los 14 Contactados también están listos desde el 21-22/06.
+
+---
+
+#### ARRANQUE DE JULIO — Nuevos sin versión de julio (14+ días sin mensaje)
+
+**[29] Diroom Burger Lounge — Arranque de Julio (28/06):**
+"Hola Diroom! RepartoJusto, arranque de julio. Más de 10 años haciendo hamburguesas artesanales 100% carne nacional en Villa Alemana merecen una plataforma local de verdad. Julio es el peak de delivery de hamburguesas: el frío lleva a la gente a pedir desde casa. Para una hamburguesa artesanal de $12.000, Rappi cobra hasta $3.360 de comisión (28%) por cada pedido. Con RepartoJusto son $500 fijos siempre — y a diferencia de Rappi, que los lista bajo 'Quilpué', somos 100% locales en Villa Alemana. Con 10 entregas diarias en julio, el ahorro puede superar $860.000 al mes. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Este julio lo hacemos?"
+
+---
+
+**[32] Tempura Sushi & Sándwich Delivery — Arranque de Julio (28/06):**
+"Hola Tempura Sushi! RepartoJusto, arranque de julio. Para un negocio delivery-first como el suyo, julio es el mejor mes del año: el frío empuja la demanda de sushi desde casa. Para sushi de $15.000 promedio, Rappi o Uber Eats cobran entre $4.200 y $4.500 de comisión (28-30%) por pedido. Con RepartoJusto son $500 fijos siempre. Con 15 entregas diarias en julio, el ahorro puede superar los $800.000 al mes — que se quedan en el negocio en vez de irse a la app. Sin contrato, registro completamente gratuito, y pueden mantener sus plataformas actuales sumando RepartoJusto como canal de menor costo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-28)
+
+**[57] Empanadas Belle — Presentación:**
+"Hola Empanadas Belle! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Londres 930 — empanadas de pino, mechada y pollo. Julio es el mes con más pedidos de empanadas en Chile: el frío pone a todo el mundo en casa y las empanadas calientes son delivery puro. Dato directo: Rappi cobra 28% de comisión por cada pedido. Para una docena de empanadas de $8.000, eso son $2.240 que se van a la app. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Con 15 entregas diarias en julio, el ahorro vs. Rappi puede superar los $440.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[58] Mevas Raíces — Presentación:**
+"Hola Mevas Raíces! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi — empanadas de espinaca con queso, pino y pollo. Un producto con peak absoluto en julio: el frío es el mejor vendedor de empanadas. Dato concreto: Rappi cobra 28% de comisión por cada pedido. Para un pedido de $7.000 en empanadas, eso son $1.960 que se van a la app. Con RepartoJusto son $500 fijos, siempre. Con 15 entregas diarias en julio, el ahorro vs. Rappi puede superar los $430.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -973,3 +1007,7 @@
 **Churros de Lautaro (#55, agregado 27/06):** Negocio de churros con delivery activo en Rappi en Villa Alemana. Dirección: Lautaro 301, Villa Alemana. Fuente: rappi.cl/restaurantes/900087190-churros-de-lautaro. Producto 100% invernal — churros calientes son ideal para entrega a domicilio en invierno/julio. Categoría sin representación previa en el pipeline. Ticket promedio estimado: $4.000-$8.000. Rappi cobra 28% de comisión — con 15 entregas diarias, el ahorro vs. Rappi puede superar $350.000/mes vs. RepartoJusto. También se encontró competidor Valentino Churros en Rappi y Churrísimo en Uber Eats — posible expansión del segmento. Argumento clave: julio es peak absoluto de snacks calientes en delivery.
 
 **DeVita Panadería (#56, agregado 27/06):** Panadería con delivery propio en Villa Alemana. Facebook: facebook.com/DeVita.Panaderia. Aparece en la categoría de Panadería de Uber Eats Villa Alemana. Plataformas actuales por confirmar al contactar. Ticket promedio estimado: $3.000-$8.000 (pan + repostería + productos de panadería). Categoría (panadería/cafetería) no representada en el pipeline. Argumento principal: julio es peak de desayunos y onces a domicilio por el frío. Si trabajan con Rappi/Uber Eats (28-30%), el ahorro con tarifa fija $500 es especialmente atractivo en pedidos de bajo ticket. Diferenciador: riders locales que cuidan pedidos frágiles (marraquetas, tortas, etc.).
+
+**Empanadas Belle (#57, agregado 28/06):** Empanadaría en Londres 930, Villa Alemana. Confirmada en Rappi (rappi.cl/restaurantes/900101197-empanadas-belle). Menú: pino, mechada con queso, pollo con queso. Ticket promedio estimado: $6.000-$10.000 (venta por docena o media docena). Rappi cobra 28% de comisión — con 15 entregas diarias, el ahorro vs. Rappi puede superar $440.000/mes. Julio = peak absoluto de empanadas en Chile (frío + invierno). Primera empanadaría confirmada en Rappi en el pipeline (Casa Festa tiene empanadas pero es negocio mixto). Fuente: rappi.cl/restaurantes/900101197-empanadas-belle + búsqueda Rappi Villa Alemana.
+
+**Mevas Raíces (#58, agregado 28/06):** Empanadaría con especialidades en Villa Alemana. Confirmada en Rappi (rappi.cl/restaurantes/900098793-mevas-raices). Menú: empanadas de espinaca con queso, pino y pollo con queso — propuesta diferenciada (incluye opciones vegetarianas). Ticket promedio estimado: $5.000-$9.000. Rappi cobra 28% de comisión — con 15 entregas diarias, el ahorro vs. Rappi puede superar $430.000/mes. Julio = peak de empanadas en delivery. Segunda empanadaría del pipeline — el rubro tiene volumen alto en julio y agosto (Fiestas Patrias). Fuente: rappi.cl/restaurantes/900098793-mevas-raices + búsqueda Rappi Villa Alemana.
