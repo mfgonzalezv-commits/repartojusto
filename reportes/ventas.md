@@ -1,45 +1,58 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-28 (domingo)
-**Pipeline total:** 58 prospectos
-**Por estado:** Nuevos: 44 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-29 (lunes — último día de junio)
+**Pipeline total:** 60 prospectos
+**Por estado:** Nuevos: 46 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
-- Leída cola.md: argumentos del Investigador (FNE/TDLC, FIFA vs. tarifa local) ya incorporados en borradores de 26-27/06 para los 4 prospectos en PedidosYa (#27, #28, #30, #33). Sin argumentos nuevos hoy — se aplica el arsenal de la semana.
-- Revisado pipeline: los 14 Contactados tienen "Arranque de Julio" redactado desde 21-22/06, pendiente confirmación de envío por Matías. Prioridades del Gerente esta semana: #22 Sushi Point Delivery y #15 Melt Pizzas (mensajes del 25/06 listos).
-- Redactados 4 mensajes nuevos: 2 "Arranque de Julio" para Nuevos con borradores más antiguos sin versión de julio (#29 Diroom — 18 días sin actualización, #32 Tempura Sushi — 15 días sin actualización) y 2 presentaciones para nuevos prospectos.
-- Encontrados 2 nuevos prospectos en Rappi Villa Alemana: Empanadas Belle (#57, Londres 930) y Mevas Raíces (#58) — primera y segunda empanadaría del pipeline, rubro con peak absoluto en julio y agosto (Fiestas Patrias a la vuelta).
-- Dato extra encontrado en búsquedas: Sushi Point (#22) también aparece en PedidosYa — agrega argumento FNE/TDLC a sus próximos mensajes.
+**Contexto de hoy:** Último día de junio. Julio arranca mañana martes — peak máximo de delivery en Chile por el frío. Todos los borradores de "Arranque de Julio" para los 14 Contactados están listos desde 21-22/06. Esta semana es crítica para que Matías envíe los mensajes acumulados.
+
+**Nuevos argumentos incorporados (cola.md):**
+- Argumento TDLC: PedidosYa en juicio ante el TDLC negando las multas — "PedidosYa fue multada dos veces en 2026 por controlarte los precios, y hoy en tribunales dice que no hizo nada malo." Aplicado a prospectos en PedidosYa (#27, #28, #30, #33, #54 y #60 nuevo hoy).
+- Contraste FIFA/invierno: Rappi/PedidosYa en modo Mundial FIFA, RepartoJusto en modo invierno local.
+- Julio = peak estacional en todos los rubros de comida.
+
+**Mensajes redactados hoy (4 borradores):**
+1. **#16 Maranatha Café** — Arranque de Julio (café, último día de junio, 15 días desde draft anterior del 14/06)
+2. **#20 El Mercadito Móvil** — Arranque de Julio (frutas y verduras, peak verduras invierno, 10 días desde draft anterior del 19/06)
+3. **#59 Sandwichería Ñam Fuente de Soda** — Presentación (nuevo, fuente de soda Av. Valparaíso 584, peak completos julio)
+4. **#60 Master Sándwich Villa Alemana** — Presentación (nuevo, EN PedidosYa confirmado, argumento FNE/TDLC máxima potencia)
+
+**Búsqueda de nuevos prospectos:**
+- Fuente: búsqueda web en PedidosYa, Uber Eats y directorios locales de Villa Alemana
+- #59 Sandwichería Ñam: fuente de soda establecida en Av. Valparaíso 584, peak julio completos/churrascos, tel. (32) 2470466
+- #60 Master Sándwich: en PedidosYa (72 reseñas Chilopina), tel. (32) 311 9036 / WhatsApp +56 958528950 disponibles — mejor prospecto PedidosYa del día por argumento FNE/TDLC
 
 ---
 
 ## Borradores listos para Matías
 
-### Nuevos hoy (28/06)
-1. **[#29] Diroom Burger Lounge — Arranque de Julio** | hamburguesería artesanal 10 años, ángulo Quilpué único, ahorro estimado ~$860K/mes | tel. (32) 295 0030
-2. **[#32] Tempura Sushi & Sándwich Delivery — Arranque de Julio** | delivery-first, sushi ticket alto, ahorro estimado ~$800K/mes
-3. **[#57] Empanadas Belle — Presentación** | Londres 930, Rappi, peak julio empanadas, ahorro estimado ~$440K/mes
-4. **[#58] Mevas Raíces — Presentación** | Rappi, empanadas de especialidad (opción vegetariana), ahorro estimado ~$430K/mes
+**HOY (29/06):**
+- #16 Maranatha Café — Arranque de Julio
+- #20 El Mercadito Móvil — Arranque de Julio
+- #59 Sandwichería Ñam — Presentación
+- #60 Master Sándwich — Presentación (en PedidosYa — FNE/TDLC)
 
-### PRIORIDAD URGENTE (Gerente) — enviar antes del martes:
-- **#22 Sushi Point Delivery** — borrador "Cierre Junio/Arranque Julio" del 25/06, tel. **(32) 324 0504** ← julio arranca martes
-- **#15 Melt Pizzas** — borrador "Cierre Junio/Arranque Julio" del 25/06
+**PRIORIDAD ESTA SEMANA (del Gerente):**
+- #22 Sushi Point Delivery (tel. (32) 324 0504) — borrador "Cierre Junio/Arranque Julio" listo desde 25/06
+- #15 Melt Pizzas — borrador "Cierre Junio/Arranque Julio" listo desde 25/06
+- Los 14 Contactados (#1-#14 activos) — todos con "Arranque Julio" desde 21-22/06
 
-### Listos desde 21-22/06 (todos los Contactados):
-- Arranque de Julio para los 14 Contactados activos — ver prospectos.md sección 21-22/06
+**TOTAL BORRADORES ACUMULADOS PENDIENTES:** ~50 mensajes listos (mayo-junio 2026, ninguno confirmado enviado)
 
 ---
 
-## Nuevos prospectos agregados
+## Nuevos prospectos agregados hoy
 
-1. **Empanadas Belle (#57)** — Londres 930, Villa Alemana. Confirmado en Rappi. Menú: pino, mechada con queso, pollo con queso. Ticket promedio estimado $6.000-$10.000. Peak: julio + agosto (Fiestas Patrias). Primera empanadaría pura del pipeline.
-
-2. **Mevas Raíces (#58)** — Villa Alemana. Confirmado en Rappi. Empanadas de especialidad: espinaca con queso, pino, pollo con queso. Diferenciador: opción vegetariana. Ticket estimado $5.000-$9.000. Segunda empanadaría del pipeline.
+| # | Negocio | Por qué es interesante |
+|---|---|---|
+| #59 | Sandwichería Ñam Fuente de Soda | Fuente de soda clásica, Av. Valparaíso 584, peak julio completos/churrascos, tel. disponible |
+| #60 | Master Sándwich Villa Alemana | EN PedidosYa (72 reseñas), argumento FNE/TDLC directo y poderoso, WhatsApp disponible |
 
 ---
 
 ## Para el Gerente
 
-Pipeline en 58 prospectos (44 nuevos, 14 contactados, 0 registrados) — 51 días sin confirmación de Matías sobre mensajes enviados; acción más urgente: enviar esta semana los borradores del 25/06 a #22 Sushi Point Delivery y #15 Melt Pizzas (prioridades del Gerente), y los "Arranque de Julio" del 21-22/06 para los 14 Contactados antes de que termine el lunes.
+Pipeline en 60 prospectos (hito); 14 Contactados con "Arranque Julio" listo desde hace 8 días — la semana del 30/06 al 04/07 es la ventana crítica para que Matías envíe esta ola completa antes de que el argumento estacional de "primer lunes de julio" pierda vigencia.

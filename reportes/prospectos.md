@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-28
+**Actualizado:** 2026-06-29
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -19,11 +19,11 @@
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Cierre junio / Arranque julio redactado 25/06 — en Rappi |
-| 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Presentación redactada 10/05, pendiente confirmación Matías |
+| 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Arranque julio redactado 23/06 — PRIORIDAD |
 | 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Arranque julio redactado 23/06 — ALTA PRIORIDAD |
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
-| 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Versión junio redactada 19/06 |
+| 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
 | 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | Cierre junio / Arranque julio redactado 25/06 — tel. (32) 324 0504 |
 | 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — en Rappi+PedidosYa+Uber Eats, WhatsApp: +56 986749142 |
@@ -62,10 +62,44 @@
 | 56 | DeVita Panadería | Panadería | Villa Alemana | Nuevo | — | Presentación redactada 27/06 — canal propio Facebook, argumento tarifa fija vs. porcentual |
 | 57 | Empanadas Belle | Empanadas | Londres 930, Villa Alemana | Nuevo | — | Presentación redactada 28/06 — en Rappi, peak julio empanadas, argumento tarifa fija vs. 28% |
 | 58 | Mevas Raíces | Empanadas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 28/06 — en Rappi, empanadas de especialidad, peak invernal julio |
+| 59 | Sandwichería Ñam Fuente de Soda | Sandwichería / fuente de soda | Av. Valparaíso 584, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — local clásico VA, tel. (32) 2470466, peak completos en julio |
+| 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — en PedidosYa (confirmado), argumento FNE/TDLC directo, 72 reseñas, tel. (32) 311 9036 / WhatsApp +56 958528950 |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-29)
+
+> **NOTA PARA MATÍAS:** Hoy es el **ÚLTIMO DÍA DE JUNIO** — mañana martes 1 de julio arranca el mes más importante del año para delivery. Se redactan 4 mensajes: (1) **Arranque de Julio** para **#16 Maranatha Café** (café en Santiago 906, draft más antiguo sin versión julio, 15 días desde último mensaje) y **#20 El Mercadito Móvil** (frutas y verduras, julio peak de verduras de invierno); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Sandwichería Ñam Fuente de Soda (#59)** — fuente de soda clásica en Av. Valparaíso 584, tel. (32) 2470466 — y **Master Sándwich Villa Alemana (#60)** — en PedidosYa confirmado, 72 reseñas, argumento FNE/TDLC de máxima potencia, tel. (32) 311 9036 / WhatsApp +56 958528950. Pipeline total: **60 prospectos**.
+>
+> **RECORDATORIO CRÍTICO:** Julio arranca mañana. Los mensajes "Arranque de Julio" para los 14 Contactados están listos desde 21-22/06. Los prioritarios del Gerente — **#22 Sushi Point Delivery (tel. (32) 324 0504)** y **#15 Melt Pizzas** — tienen borradores del 25/06 esperando. Enviar esta semana.
+
+---
+
+#### ARRANQUE DE JULIO — Nuevos con mensajes más antiguos (último día de junio)
+
+**[16] Maranatha Café — Arranque de Julio (29/06):**
+"Hola Maranatha Café! RepartoJusto — hoy es el último día de junio. Mañana arranca julio y con él el peak más fuerte del año para cafés con delivery: el frío máximo del invierno hace que la gente prefiera recibir su desayuno, almuerzo u once desde casa en vez de salir al frío. Si trabajan con Rappi, PedidosYa o Uber Eats, cada pedido de $5.000 les cuesta hasta $1.400 en comisiones (28%). Con RepartoJusto son $500 fijos, siempre. Con 10 pedidos al día, el ahorro supera los $270.000 al mes — empezando el martes si quieren. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Este julio lo hacemos?"
+
+---
+
+**[20] El Mercadito Móvil — Arranque de Julio (29/06):**
+"Hola El Mercadito Móvil! RepartoJusto — hoy es el último día de junio. Julio es el mes más frío del año y el momento en que la gente menos quiere salir al mercado a comprar frutas y verduras. Las verduras de temporada (zapallo, papa, cebolla, betarraga) tienen su mayor demanda en julio, y todos sus clientes preferirían recibirlas en casa si pudieran. Con RepartoJusto: $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una canasta de $8.000, la diferencia vs. Rappi (28%) son $1.740 por pedido que se quedan en el negocio. Sin contrato, registro completamente gratuito. ¿Este julio le damos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-06-29)
+
+**[59] Sandwichería Ñam Fuente de Soda — Presentación:**
+"Hola Sandwichería Ñam! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Av. Valparaíso 584 — fuente de soda con churrascos, completos y comida clásica chilena. Julio es el peak absoluto de completos y churrascos en delivery: cuando hace frío, la gente pide lo que la reconforta, desde casa. Si trabajan con plataformas como Rappi o PedidosYa, cada completo de $4.000 les cuesta hasta $1.120 en comisiones (28%). Con RepartoJusto son $500 fijos, siempre, sin importar el valor del pedido. Con 15 entregas diarias, el ahorro vs. una plataforma grande puede superar los $310.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Conversamos? (Tel: (32) 2470466)"
+
+---
+
+**[60] Master Sándwich Villa Alemana — Presentación:**
+"Hola Master Sándwich! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en PedidosYa — 72 reseñas en Chilopina: un historial de calidad serio. Tenemos un dato importante para alguien con esa trayectoria: PedidosYa fue multada dos veces en 2026 por la FNE ($3.400 millones CLP) por controlar los precios de sus restaurantes socios, y hoy está en tribunales (TDLC) diciendo que no hizo nada malo. Con RepartoJusto es todo lo contrario: libertad total de precios y $500 fijos por pedido — sin porcentaje, sin restricciones. Julio es el peak de churrascos, chorrillanas y comida rápida en delivery. Para un churrasco de $6.000, PedidosYa cobra hasta $2.070 de comisión (28%+IVA). Con nosotros son $500 siempre. Con 15 entregas diarias, el ahorro puede superar los $460.000 al mes. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
