@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-29T05:02:30Z
+**Última verificación:** 2026-06-29T06:03:31Z
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 Forbidden desde el proxy — el entorno de ejecución remoto no tiene acceso de red a Railway (repartojusto-production.up.railway.app). No se pudo verificar el endpoint /health.
+**Detalle:** curl exit code 56 (recv error) — HTTP 000. El servidor no respondió en https://repartojusto-production.up.railway.app/health
