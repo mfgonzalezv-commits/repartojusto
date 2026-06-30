@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-06-29T23:02:34Z
+**Última verificación:** 2026-06-30T00:02:47Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy del entorno de ejecución bloqueó el túnel CONNECT con HTTP 403 (curl exit 56, "policy denial or upstream failure"). No es posible determinar el estado real del servidor desde este contenedor; esto es la segunda verificación consecutiva bloqueada por política de red (anterior: 22:02 UTC).
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del entorno de ejecución bloqueó la conexión con HTTP 403 Forbidden en el túnel CONNECT hacia railway.app (curl exit 56). Tercera verificación consecutiva bloqueada por política de red del contenedor; el estado real del servidor no puede confirmarse desde este entorno.
