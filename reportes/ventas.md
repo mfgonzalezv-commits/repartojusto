@@ -1,58 +1,67 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-29 (lunes — último día de junio)
-**Pipeline total:** 60 prospectos
-**Por estado:** Nuevos: 46 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-06-30 (lunes — último día de junio)
+**Pipeline total:** 62 prospectos
+**Por estado:** Nuevos: 48 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
-**Contexto de hoy:** Último día de junio. Julio arranca mañana martes — peak máximo de delivery en Chile por el frío. Todos los borradores de "Arranque de Julio" para los 14 Contactados están listos desde 21-22/06. Esta semana es crítica para que Matías envíe los mensajes acumulados.
+### Argumentos incorporados
+- **TDLC reforzado (Gerente + Investigador):** "PedidosYa fue multada dos veces en 2026 por controlarte los precios, y hoy en el TDLC dice que no hizo nada malo" — incorporado en las 2 presentaciones de nuevos prospectos (#61 y #62, ambos en PedidosYa).
+- **Julio = peak invierno:** Argumento estacional en todos los mensajes del día. Es el último día de junio — el contexto "Julio arranca mañana" es irremplazable como vector de urgencia.
+- **Rappi/PedidosYa en modo FIFA vs. nosotros en modo invierno local:** Contraste incorporado en los mensajes de los 4 PRIORIDAD Contactados.
 
-**Nuevos argumentos incorporados (cola.md):**
-- Argumento TDLC: PedidosYa en juicio ante el TDLC negando las multas — "PedidosYa fue multada dos veces en 2026 por controlarte los precios, y hoy en tribunales dice que no hizo nada malo." Aplicado a prospectos en PedidosYa (#27, #28, #30, #33, #54 y #60 nuevo hoy).
-- Contraste FIFA/invierno: Rappi/PedidosYa en modo Mundial FIFA, RepartoJusto en modo invierno local.
-- Julio = peak estacional en todos los rubros de comida.
+### Mensajes redactados (6 total)
 
-**Mensajes redactados hoy (4 borradores):**
-1. **#16 Maranatha Café** — Arranque de Julio (café, último día de junio, 15 días desde draft anterior del 14/06)
-2. **#20 El Mercadito Móvil** — Arranque de Julio (frutas y verduras, peak verduras invierno, 10 días desde draft anterior del 19/06)
-3. **#59 Sandwichería Ñam Fuente de Soda** — Presentación (nuevo, fuente de soda Av. Valparaíso 584, peak completos julio)
-4. **#60 Master Sándwich Villa Alemana** — Presentación (nuevo, EN PedidosYa confirmado, argumento FNE/TDLC máxima potencia)
+**Seguimientos urgentes — Contactados PRIORIDAD (último día de junio):**
+- **[2] Pollería Don Pollo:** "Julio arranca mañana" — mensaje corto y directo, número concreto ($36K/mes ahorro), sin presión.
+- **[4] Pizza House:** "Último día de junio / peak pizza" — cálculo $250K vs. $150K/mes en comisiones.
+- **[5] Sushi Zen:** "Mañana arranca el peak de sushi" — $200K/mes que se quedan en el negocio.
+- **[9] Rotisería El Gaucho:** "Julio arranca mañana" — $500K/mes ahorro, frío = delivery de rotisería.
 
-**Búsqueda de nuevos prospectos:**
-- Fuente: búsqueda web en PedidosYa, Uber Eats y directorios locales de Villa Alemana
-- #59 Sandwichería Ñam: fuente de soda establecida en Av. Valparaíso 584, peak julio completos/churrascos, tel. (32) 2470466
-- #60 Master Sándwich: en PedidosYa (72 reseñas Chilopina), tel. (32) 311 9036 / WhatsApp +56 958528950 disponibles — mejor prospecto PedidosYa del día por argumento FNE/TDLC
+**Presentaciones — Nuevos prospectos del día:**
+- **[61] Pollo Campo Villa Alemana:** En PedidosYa, pollos a la parrilla, argumento FNE/TDLC + peak julio, ahorro estimado ~$460K/mes con 10 entregas/día.
+- **[62] El Señor De Los Completos:** En PedidosYa, completos y chorrillanas, argumento FNE/TDLC + máxima demanda julio, ahorro estimado ~$580K/mes con 20 entregas/día.
+
+---
+
+## Nuevos prospectos agregados
+
+- **#61 Pollo Campo Villa Alemana** — pollos a la parrilla, activo en PedidosYa, argumento FNE/TDLC de máxima potencia, peak invierno julio.
+- **#62 El Señor De Los Completos** — completos y comida chilena, activo en PedidosYa, argumento FNE/TDLC, producto con mayor demanda en julio.
+
+Ambos encontrados en PedidosYa durante búsqueda activa del día. La coincidencia de ambos en PedidosYa potencia el argumento TDLC (especialmente relevante esta semana mientras el juicio está en curso).
 
 ---
 
 ## Borradores listos para Matías
 
-**HOY (29/06):**
-- #16 Maranatha Café — Arranque de Julio
-- #20 El Mercadito Móvil — Arranque de Julio
-- #59 Sandwichería Ñam — Presentación
-- #60 Master Sándwich — Presentación (en PedidosYa — FNE/TDLC)
+### PRIORIDAD CRÍTICA esta semana (directriz del Gerente):
+1. **#22 Sushi Point Delivery** — borrador "Cierre Junio/Arranque Julio" listo desde el **25/06**, tel. (32) 324 0504. Julio arranca mañana: es el último momento para el argumento estacional.
+2. **#15 Melt Pizzas** — borrador "Cierre Junio/Arranque Julio" listo desde el **25/06**, en Rappi, Av. Valparaíso 1057.
 
-**PRIORIDAD ESTA SEMANA (del Gerente):**
-- #22 Sushi Point Delivery (tel. (32) 324 0504) — borrador "Cierre Junio/Arranque Julio" listo desde 25/06
-- #15 Melt Pizzas — borrador "Cierre Junio/Arranque Julio" listo desde 25/06
-- Los 14 Contactados (#1-#14 activos) — todos con "Arranque Julio" desde 21-22/06
+### Urgentes de hoy (30/06):
+3. **[2] Pollería Don Pollo** — "Julio arranca mañana" (mensaje corto, alta urgencia)
+4. **[4] Pizza House** — "Último día de junio / peak pizza"
+5. **[5] Sushi Zen** — "Mañana arranca el peak de sushi"
+6. **[9] Rotisería El Gaucho** — "Julio arranca mañana" ($500K/mes ahorro)
+7. **[61] Pollo Campo Villa Alemana** — Presentación + FNE/TDLC + peak julio
+8. **[62] El Señor De Los Completos** — Presentación + FNE/TDLC + completos peak julio
 
-**TOTAL BORRADORES ACUMULADOS PENDIENTES:** ~50 mensajes listos (mayo-junio 2026, ninguno confirmado enviado)
+### También listos (borradores previos del 21-29/06):
+- Todos los Contactados (#1-#14): mensajes "Arranque de Julio" listos desde 21-22/06
+- Nuevos prioritarios: #17 Locos X Food (~$575-775K/mes ahorro), #18 La Casita Del Sabor (~$450K), #31 Barrio Chino (tel. +56 997902765, ~$1M/mes)
+- Prospectos PedidosYa con TDLC: #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa — versiones TDLC/FIFA listas desde 26-27/06
 
 ---
 
-## Nuevos prospectos agregados hoy
+## Cuello de botella (sin cambios)
 
-| # | Negocio | Por qué es interesante |
-|---|---|---|
-| #59 | Sandwichería Ñam Fuente de Soda | Fuente de soda clásica, Av. Valparaíso 584, peak julio completos/churrascos, tel. disponible |
-| #60 | Master Sándwich Villa Alemana | EN PedidosYa (72 reseñas), argumento FNE/TDLC directo y poderoso, WhatsApp disponible |
+53 días sin confirmación de Matías sobre qué mensajes del período 08/05–29/06 fueron enviados. La ventana "Julio arranca mañana" es la oportunidad más clara del mes para desbloquear el pipeline — cualquier mensaje enviado hoy o mañana que obtenga respuesta actualiza estados de inmediato.
 
 ---
 
 ## Para el Gerente
 
-Pipeline en 60 prospectos (hito); 14 Contactados con "Arranque Julio" listo desde hace 8 días — la semana del 30/06 al 04/07 es la ventana crítica para que Matías envíe esta ola completa antes de que el argumento estacional de "primer lunes de julio" pierda vigencia.
+Pipeline en 62 prospectos (48 nuevos, 14 contactados, 0 registrados). 6 borradores redactados hoy: urgencia "Julio arranca mañana" para los 4 PRIORIDAD Contactados (#2, #4, #5, #9) + presentaciones FNE/TDLC para 2 nuevos en PedidosYa (Pollo Campo #61 y El Señor De Los Completos #62). Julio arranca mañana — la ventana del argumento estacional es única. Acción más urgente: Matías enviar esta semana los borradores del 25/06 para #22 Sushi Point Delivery y #15 Melt Pizzas.

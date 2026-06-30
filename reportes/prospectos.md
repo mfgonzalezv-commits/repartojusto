@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-29
+**Actualizado:** 2026-06-30
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -64,10 +64,54 @@
 | 58 | Mevas Raíces | Empanadas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 28/06 — en Rappi, empanadas de especialidad, peak invernal julio |
 | 59 | Sandwichería Ñam Fuente de Soda | Sandwichería / fuente de soda | Av. Valparaíso 584, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — local clásico VA, tel. (32) 2470466, peak completos en julio |
 | 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — en PedidosYa (confirmado), argumento FNE/TDLC directo, 72 reseñas, tel. (32) 311 9036 / WhatsApp +56 958528950 |
+| 61 | Pollo Campo Villa Alemana | Pollos a la parrilla | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, pollos asados peak julio invierno, ahorro ~$460K/mes |
+| 62 | El Señor De Los Completos | Comida chilena / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, completos peak julio, ahorro ~$580K/mes |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-06-30)
+
+> **NOTA PARA MATÍAS:** Hoy es el **ÚLTIMO DÍA DE JUNIO** — mañana martes 1 de julio arranca el mes más importante del año para delivery. Se redactan 6 mensajes: (1) **"Julio arranca mañana"** urgente para los 4 Contactados PRIORIDAD (#2 Don Pollo, #4 Pizza House, #5 Sushi Zen, #9 El Gaucho — todos con borradores anteriores listos, hoy el contexto es irremplazable: es literalmente el último día); (2) **presentaciones con argumento FNE/TDLC** para 2 nuevos prospectos encontrados en PedidosYa: **Pollo Campo Villa Alemana (#61)** — pollos a la parrilla, peak absoluto en julio y argumento FNE/TDLC de máxima potencia — y **El Señor De Los Completos (#62)** — completos y chorrillanas, producto con mayor demanda en julio, también en PedidosYa. Pipeline total: **62 prospectos**.
+>
+> **RECORDATORIO CRÍTICO DEL GERENTE:** Los borradores del 25/06 para **#22 Sushi Point Delivery (tel. (32) 324 0504)** y **#15 Melt Pizzas** son la prioridad de esta semana. Julio arranca MAÑANA — son los borradores con mayor ventana de impacto de todo el pipeline. Enviar hoy o mañana martes.
+
+---
+
+#### "JULIO ARRANCA MAÑANA" — Contactados PRIORIDAD (30/06, último día de junio)
+
+**[2] Pollería Don Pollo — Último día de junio / Julio mañana:**
+"Hola Don Pollo! RepartoJusto — hoy es el último día de junio. Mañana martes arranca julio, el mes más frío del año y el peak de delivery. Semana perfecta para dar el paso. Un solo número: con 20 pedidos semanales de $10.000, la diferencia entre pagar a Rappi y $500 con nosotros es más de $36.000 al mes que se quedan en el local. Sin contrato. Registro gratis en 10 minutos. repartojusto-production.up.railway.app ¿Este julio?"
+
+---
+
+**[4] Pizza House — Último día de junio / Julio mañana:**
+"Hola Pizza House! Último día de junio — mañana arranca julio, el peak de pizza en delivery. El frío es el mejor vendedor de pizzas. El número de este mes: 10 pizzas de $12.000 al día en Rappi = ~$250.000/mes en comisiones a la app. Con RepartoJusto son $150.000. $100.000 mensuales que se quedan en el local, desde el primer pedido. Sin contrato, registro completamente gratis. ¿Empezamos este julio? repartojusto-production.up.railway.app"
+
+---
+
+**[5] Sushi Zen — Último día de junio / Julio mañana:**
+"Hola Sushi Zen! Último día de junio — mañana arranca el peak de sushi en delivery. Las noches frías de julio son el momento en que los clientes prefieren pedir sushi desde casa. Con 10 pedidos semanales de $20.000 en Rappi: más de $200.000 al mes que se van a la app en comisiones. Con RepartoJusto: esos $200.000 se quedan en el negocio, todos los meses. Sin contrato, registro gratis. ¿Este julio lo hacemos? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Último día de junio / Julio mañana:**
+"Hola El Gaucho! Último día de junio — julio arranca mañana con el peak de almuerzos y cenas en delivery. Con frío, nadie quiere cocinar. El número que no cambia: 10 pedidos diarios de $8.000 en Rappi = $672.000/mes en comisiones. Con RepartoJusto son $150.000. Más de $500.000 mensuales que se quedan en el negocio. Sin contrato, registro gratis. ¿Es este el mes? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones con argumento FNE/TDLC (2026-06-30)
+
+**[61] Pollo Campo Villa Alemana — Presentación:**
+"Hola Pollo Campo! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en PedidosYa — pollos a la parrilla, un producto con peak absoluto en julio: el frío convierte un pollo asado caliente a domicilio en el pedido ideal. Un dato que les importa si están en PedidosYa: la FNE los multó dos veces en 2026 por controlar los precios de sus restaurantes socios ($3.400 millones CLP en sanciones), y hoy en el TDLC dicen que no hicieron nada malo. Con RepartoJusto es al revés: $500 fijos por pedido, libertad total de precios, sin restricciones. Para un pollo entero de $12.000, PedidosYa cobra hasta $3.480 de comisión (29%). Con nosotros son $500 siempre. Con 10 entregas diarias, el ahorro puede superar $460.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener PedidosYa y sumar RepartoJusto como canal de menor costo. 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[62] El Señor De Los Completos — Presentación:**
+"Hola El Señor De Los Completos! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en PedidosYa — completos, churrascos y comida chilena clásica: el producto con más demanda en julio. El frío convierte cada completo en un pedido de delivery perfecto. Un dato urgente para alguien en PedidosYa: la FNE los multó dos veces en 2026 por controlar los precios de sus restaurantes socios ($3.400 millones CLP en total), y hoy en tribunales (TDLC) dicen que no hicieron nada malo. Con RepartoJusto: libertad total de precios, $500 fijos por pedido, sin restricciones. Para un completo o chorrillana de $5.000, PedidosYa cobra hasta $1.450 de comisión (29%). Con nosotros son $500 siempre. Con 20 entregas diarias de completos en julio, el ahorro puede superar los $580.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener PedidosYa y sumar RepartoJusto como canal de menor costo. 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
