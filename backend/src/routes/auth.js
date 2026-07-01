@@ -6,29 +6,43 @@ const { query: db, transaction } = require('../config/database');
 const config = require('../config');
 const { auth } = require('../middleware/auth');
 
-// Rate limiter en memoria: max 10 intentos por IP cada 15 minutos
-const loginAttempts = new Map();
-const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
-const RATE_LIMIT_MAX = 10;
-const loginRateLimit = (req, res, next) => {
-  const ip = req.ip || req.connection.remoteAddress;
-  const now = Date.now();
-  const entry = loginAttempts.get(ip);
-  if (entry) {
-    if (now - entry.firstAttempt < RATE_LIMIT_WINDOW_MS) {
-      if (entry.count >= RATE_LIMIT_MAX) {
-        const retryAfter = Math.ceil((RATE_LIMIT_WINDOW_MS - (now - entry.firstAttempt)) / 1000);
-        return res.status(429).json({ error: 'Demasiados intentos. Intenta en unos minutos.', retryAfter });
+// Rate limiter genérico en memoria
+function crearRateLimiter({ windowMs, max, mensaje }) {
+  const store = new Map();
+  return (req, res, next) => {
+    const ip = req.ip || req.connection.remoteAddress;
+    const now = Date.now();
+    const entry = store.get(ip);
+    if (entry) {
+      if (now - entry.firstAttempt < windowMs) {
+        if (entry.count >= max) {
+          const retryAfter = Math.ceil((windowMs - (now - entry.firstAttempt)) / 1000);
+          return res.status(429).json({ error: mensaje, retryAfter });
+        }
+        entry.count++;
+      } else {
+        store.set(ip, { count: 1, firstAttempt: now });
       }
-      entry.count++;
     } else {
-      loginAttempts.set(ip, { count: 1, firstAttempt: now });
+      store.set(ip, { count: 1, firstAttempt: now });
     }
-  } else {
-    loginAttempts.set(ip, { count: 1, firstAttempt: now });
-  }
-  next();
-};
+    next();
+  };
+}
+
+// Max 10 intentos de login por IP cada 15 minutos
+const loginRateLimit = crearRateLimiter({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  mensaje: 'Demasiados intentos. Intenta en unos minutos.',
+});
+
+// Max 5 registros por IP por hora (previene creación masiva de cuentas)
+const registroRateLimit = crearRateLimiter({
+  windowMs: 60 * 60 * 1000,
+  max: 5,
+  mensaje: 'Demasiados registros desde esta IP. Intenta más tarde.',
+});
 
 // Helper: lanza error de validación si hay campos inválidos
 const validar = (req, res, next) => {
@@ -49,6 +63,7 @@ const generarToken = (usuario) =>
 
 // ── POST /api/auth/registro/negocio ───────────────────────────────────────
 router.post('/registro/negocio',
+  registroRateLimit,
   [
     body('email').isEmail().normalizeEmail(),
     body('password').isLength({ min: 6 }),
@@ -86,6 +101,7 @@ router.post('/registro/negocio',
 
 // ── POST /api/auth/registro/rider ─────────────────────────────────────────
 router.post('/registro/rider',
+  registroRateLimit,
   [
     body('email').isEmail().normalizeEmail(),
     body('password').isLength({ min: 6 }),

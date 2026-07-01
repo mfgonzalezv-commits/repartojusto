@@ -13,7 +13,13 @@ module.exports = {
   REDIS_URL: process.env.REDIS_URL,
 
   // JWT
-  JWT_SECRET: process.env.JWT_SECRET || 'secret_key_change_in_production',
+  JWT_SECRET: process.env.JWT_SECRET ||
+    (() => {
+      if ((process.env.NODE_ENV || 'development') === 'production') {
+        throw new Error('FATAL: JWT_SECRET no definido. El servidor no puede iniciar en producción sin esta variable.');
+      }
+      return 'dev_only_insecure_secret';
+    })(),
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '7d',
 
   // Google Maps

@@ -180,7 +180,7 @@ router.post('/push-subscription', auth, solo('rider'), async (req, res, next) =>
     if (!subscription) return res.status(400).json({ error: 'Suscripción requerida' });
     await db(
       `UPDATE riders SET push_subscription = $1 WHERE usuario_id = $2`,
-      [JSON.stringify(subscription), req.user.id]
+      [JSON.stringify(subscription), req.usuario.id]
     );
     res.json({ ok: true });
   } catch (e) { next(e); }

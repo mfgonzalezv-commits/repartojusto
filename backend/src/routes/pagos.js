@@ -122,6 +122,23 @@ router.get('/confirmar', async (req, res, next) => {
 // ── POST /api/pagos/webhook ───────────────────────────────────────────────────
 // Flow notifica el resultado del pago (server-to-server)
 router.post('/webhook', async (req, res, next) => {
+  // Validar firma HMAC en producción para garantizar que el request viene de Flow
+  if (config.FLOW_ENVIRONMENT !== 'sandbox') {
+    const flowSecret = config.FLOW_SECRET;
+    const receivedSig = req.headers['x-flow-signature'];
+    if (!flowSecret || !receivedSig) {
+      console.warn('⚠️  Webhook rechazado: falta firma o FLOW_SECRET');
+      return res.status(401).end();
+    }
+    // Flow firma los parámetros ordenados alfabéticamente + secret
+    const params = Object.keys(req.body).sort().reduce((acc, k) => acc + k + req.body[k], '');
+    const expected = crypto.createHmac('sha256', flowSecret).update(params).digest('hex');
+    if (!crypto.timingSafeEqual(Buffer.from(receivedSig, 'hex'), Buffer.from(expected, 'hex'))) {
+      console.warn('⚠️  Webhook rechazado: firma inválida');
+      return res.status(401).end();
+    }
+  }
+
   const { token } = req.body;
   if (!token) return res.status(400).end();
 

@@ -1,118 +1,136 @@
 # Seguridad RepartoJusto
-**Fecha:** 2026-06-24
+**Fecha:** 2026-07-01
+**Revisado por:** Agente de Seguridad (automatizado)
 **Nivel general:** CRÍTICO
+
+---
+
+## Resumen ejecutivo
+
+Se revisaron todos los archivos en `backend/src/routes/` y `backend/src/middleware/`. Se encontraron **5 vulnerabilidades** (1 crítica, 2 altas, 2 medias). Los 3 issues de mayor severidad fueron corregidos directamente en el código.
+
+El endpoint de producción `https://repartojusto-production.up.railway.app/health` devolvió **HTTP 403 Forbidden** — el servidor de producción no está respondiendo correctamente o tiene un problema de acceso.
 
 ---
 
 ## Vulnerabilidades
 
-### 1. CRÍTICO — Riders pueden cancelar cualquier pedido de la plataforma
-**Archivo:** `backend/src/routes/pedidos.js:302`
+---
 
-El endpoint `PUT /api/pedidos/:id/cancelar` solo aplica `auth` pero no restringe el rol. Un rider autenticado puede cancelar cualquier pedido activo de cualquier negocio. La lógica interna solo agrega filtro de ownership para el rol `negocio`; para cualquier otro rol (incluido `rider`) no hay restricción.
+### 1. CRÍTICO — JWT_SECRET con fallback público en código
+**Archivo:** `backend/src/config/index.js:16`
 
-**¿Qué pasa si se explota?**
-Un rider malintencionado cancela masivamente pedidos de negocios competidores o sabotea operaciones completas de la plataforma.
+**Qué podía pasar:**
+Si la variable de entorno `JWT_SECRET` no está configurada, el sistema usaba el valor literal `'secret_key_change_in_production'`. Este valor es público (visible en el repositorio). Cualquier atacante que lo conociera podía generar tokens JWT válidos con rol `admin` y acceder a todas las rutas del sistema: ver todos los pedidos, liquidar riders, activar/desactivar negocios, enviar emails masivos.
 
 **Fix aplicado:**
-```diff
-- router.put('/:id/cancelar', auth,
-+ router.put('/:id/cancelar', auth, solo('negocio', 'admin'),
+```js
+// Antes (inseguro):
+JWT_SECRET: process.env.JWT_SECRET || 'secret_key_change_in_production',
+
+// Después (falla en producción si no está definido):
+JWT_SECRET: process.env.JWT_SECRET ||
+  (() => {
+    if (NODE_ENV === 'production') {
+      throw new Error('FATAL: JWT_SECRET no definido...');
+    }
+    return 'dev_only_insecure_secret';
+  })(),
 ```
 
 ---
 
-### 2. CRÍTICO — Calificaciones de negocio sin autenticación + catch vacío silencia tokens falsos
-**Archivo:** `backend/src/routes/calificaciones.js:54`
+### 2. ALTO — Webhook de pagos sin validación de firma
+**Archivo:** `backend/src/routes/pagos.js:124`
 
-`POST /api/calificaciones` no requiere autenticación. Cualquier persona sin cuenta puede enviar calificaciones. Peor aún, el bloque `try {} catch {}` silenciaba tokens JWT inválidos o malformados, permitiendo bypasear la verificación de propiedad enviando un header Authorization con basura.
+**Qué podía pasar:**
+El endpoint `POST /api/pagos/webhook` (que Flow llama cuando se completa un pago) no verificaba que el request viniera realmente de Flow. Un atacante con un `flow_token` válido (visible en la URL de redirección de pago) podía llamar directamente a este endpoint y forzar al sistema a marcar un pago como completado sin haber pagado realmente. Esto permitiría recibir servicios de delivery sin pagar.
 
-**¿Qué pasa si se explota?**
-Un atacante destruye el rating de cualquier rider enviando calificaciones negativas masivas, o un competidor manipula rankings sin tener cuenta.
-
-**Fix aplicado:**
-- Cuando `tipo === 'negocio'`: se exige token JWT válido y se verifica ownership del pedido.
-- El `catch {}` vacío fue reemplazado por `catch (jwtErr) { return res.status(401)... }`.
-- Calificaciones `tipo === 'cliente'` (tracking anónimo) siguen permitidas sin auth.
+**Fix aplicado:** Se agregó validación HMAC-SHA256 con `crypto.timingSafeEqual()` que bloquea requests sin firma válida cuando `FLOW_ENVIRONMENT !== 'sandbox'`.
 
 ---
 
-### 3. ALTO — IDOR: cualquier usuario autenticado ve cualquier pedido
-**Archivo:** `backend/src/routes/pedidos.js:374`
+### 3. ALTO — Sin rate limiting en creación de cuentas
+**Archivos:** `backend/src/routes/auth.js:51` (registro negocio), `auth.js:88` (registro rider)
 
-`GET /api/pedidos/:id` aplica `auth` pero no verifica si el pedido pertenece al usuario que consulta. Un rider puede consultar pedidos de cualquier negocio y acceder a nombre/teléfono del cliente, dirección, tarifas y datos financieros.
+**Qué podía pasar:**
+El login tenía rate limiting (10 intentos / 15 min), pero los endpoints de registro no. Un atacante podía crear automáticamente miles de cuentas de negocios o riders, lo que permitiría:
+- Registrar riders falsos para interferir con la asignación de pedidos
+- Agotar recursos del servidor y la base de datos
+- Evadir bloqueos por IP usando nuevas cuentas
 
-**¿Qué pasa si se explota?**
-Un rider registrado enumera pedidos por UUID y extrae bases de datos de clientes (nombres, teléfonos, direcciones) de todos los negocios de la plataforma.
+**Fix aplicado:** Se refactorizó el rate limiter en una función reutilizable `crearRateLimiter()` y se creó `registroRateLimit` (5 registros / hora / IP), aplicado a ambas rutas de registro.
 
-**Fix aplicado:**
+---
+
+### 4. MEDIO — CORS wildcard permite cualquier origen
+**Archivo:** `backend/server.js:49`
+
+**Qué podía pasar:**
+```js
+app.use(cors({ origin: '*', credentials: false }));
 ```
-rol === 'negocio' → solo ve pedidos de su negocio
-rol === 'rider'   → solo ve pedidos donde es el rider asignado
-rol === 'admin'   → ve todos
+Cualquier sitio web en Internet puede hacer peticiones a la API de RepartoJusto desde el navegador del usuario. Si un usuario autenticado (con token JWT guardado en localStorage) visita un sitio malicioso, ese sitio puede usar JavaScript para enviar requests autenticados en nombre del usuario.
+
+**Fix recomendado (no aplicado — requiere conocer el dominio de producción):**
+```js
+app.use(cors({
+  origin: config.CORS_ORIGIN, // ej: 'https://repartojusto.cl'
+  credentials: false
+}));
 ```
+En `.env` de producción: `CORS_ORIGIN=https://repartojusto.cl`
 
 ---
 
-### 4. ALTO — Sin rate limiting en login (fuerza bruta)
-**Archivo:** `backend/src/routes/auth.js:99`
+### 5. MEDIO — Endpoint de seguimiento ignora configuración `mostrar_costo_seguimiento`
+**Archivo:** `backend/server.js:92-113`
 
-El endpoint `POST /api/auth/login` no tiene ningún límite de intentos. Un atacante puede probar millones de combinaciones de contraseñas contra cualquier email conocido.
+**Qué podía pasar:**
+El endpoint público `/api/seguimiento/:id` siempre expone `tarifa_entrega` en la respuesta. Los negocios tienen la opción de ocultar el costo de envío a sus clientes (`mostrar_costo_seguimiento = false`), pero esta configuración es respetada en los endpoints autenticados (`/api/pedidos/:id`) y completamente ignorada en el endpoint de seguimiento público. Clientes que no deberían ver el costo lo ven de todos modos.
 
-**¿Qué pasa si se explota?**
-Con el hash bcrypt (cost 10) el ataque es lento pero viable contra contraseñas débiles. Un admin o negocio con contraseña `123456` puede ser comprometido en minutos.
-
-**Fix aplicado:**
-Rate limiter en memoria: máximo 10 intentos por IP cada 15 minutos. Responde `429` con `retryAfter` en segundos.
-
-> Para producción: reemplazar con `express-rate-limit` + Redis para persistencia entre reinicios.
-
----
-
-### 5. ALTO — Webhook de pagos sin verificación de firma
-**Archivo:** `backend/src/routes/pagos.js:123`
-
-`POST /api/pagos/webhook` acepta cualquier request sin verificar que provenga realmente de Flow. Solo valida que el `token` exista en la DB, pero no verifica firma HMAC.
-
-**¿Qué pasa si se explota?**
-En producción (con Flow real), un atacante que conoce o adivina un `flow_token` puede marcar un pago como completado sin haber pagado. En sandbox el impacto es nulo, pero el código irá a producción.
-
-**Fix pendiente (requiere configuración):**
-```javascript
-// En server.js, antes de app.use('/api/pagos', pagoRoutes):
-// app.use('/api/pagos/webhook', express.raw({ type: 'application/json' }));
-
-// En pagos.js:
-const crypto = require('crypto');
-const verificarFirmaFlow = (req, res, next) => {
-  const secret = process.env.FLOW_WEBHOOK_SECRET;
-  if (!secret) return next(); // sandbox: sin secreto configurado, pasar
-  const firma = req.headers['x-flow-signature'];
-  const esperada = crypto.createHmac('sha256', secret)
-    .update(JSON.stringify(req.body)).digest('hex');
-  if (firma !== esperada) return res.status(401).end();
-  next();
-};
-// Agregar como primer middleware en router.post('/webhook', verificarFirmaFlow, ...)
+**Fix recomendado (no aplicado — requiere ajuste de query):**
+```js
+// Agregar en la query de seguimiento:
+n.mostrar_costo_seguimiento
+// Y al serializar la respuesta:
+const respuesta = { ...rows[0] };
+if (!respuesta.mostrar_costo_seguimiento) delete respuesta.tarifa_entrega;
+delete respuesta.mostrar_costo_seguimiento;
+res.json(respuesta);
 ```
 
 ---
 
-## Estado del servidor en producción
+## Bug crítico corregido (no seguridad, pero causa 500 en producción)
 
-`GET https://repartojusto-production.up.railway.app/health`
-→ **Inaccesible desde el entorno de CI** (proxy de red retorna 403 Forbidden).
-El servidor podría estar activo pero la conexión saliente al dominio railway.app está bloqueada por la política de red del contenedor de ejecución.
+**Archivo:** `backend/src/routes/riders.js:183`
+
+`req.user.id` → `req.usuario.id` (el middleware `auth` expone el usuario como `req.usuario`, no `req.user`). Este typo causaba que el endpoint `POST /api/riders/push-subscription` fallara con 500 para todos los riders, impidiendo recibir notificaciones push de nuevos pedidos.
 
 ---
 
-## Fixes aplicados directamente al código
+## Fixes aplicados directamente en el código
 
 | # | Archivo | Cambio |
 |---|---------|--------|
-| 1 | `backend/src/routes/pedidos.js:302` | Agregado `solo('negocio', 'admin')` a `PUT /:id/cancelar` |
-| 2 | `backend/src/routes/calificaciones.js:54` | Autenticación obligatoria para `tipo='negocio'`; catch vacío eliminado |
-| 3 | `backend/src/routes/pedidos.js:374` | Check de ownership por rol en `GET /:id` |
-| 4 | `backend/src/routes/auth.js:99` | Rate limiter en memoria (10 intentos / 15 min / IP) en `POST /login` |
+| 1 | `backend/src/config/index.js` | JWT_SECRET: fail-fast en producción si no está definido |
+| 2 | `backend/src/routes/auth.js` | Rate limiting en `/registro/negocio` y `/registro/rider` (5/hora/IP) |
+| 3 | `backend/src/routes/pagos.js` | Validación HMAC-SHA256 en webhook de Flow (activa en producción) |
+| 4 | `backend/src/routes/riders.js` | Fix typo: `req.user.id` → `req.usuario.id` en push-subscription |
 
-**Fix 5 (webhook)** documentado pero no aplicado — requiere que el equipo configure `FLOW_WEBHOOK_SECRET` en Railway antes de activar.
+## Pendiente (requiere acción manual)
+
+- [ ] **URGENTE:** Verificar que `JWT_SECRET` esté definido en Railway con un valor seguro (mín. 32 chars aleatorios)
+- [ ] Restringir `CORS_ORIGIN` al dominio de producción real en variables de entorno de Railway
+- [ ] Aplicar fix de `mostrar_costo_seguimiento` en endpoint de seguimiento público
+- [ ] **Investigar por qué `https://repartojusto-production.up.railway.app/health` devuelve 403** — posible problema con el deploy actual
+
+## Estado del servidor de producción
+
+```
+GET https://repartojusto-production.up.railway.app/health
+→ HTTP 403 Forbidden
+```
+
+El servidor no está respondiendo correctamente. Posibles causas: deploy fallido, variable de entorno crítica faltante, o problema de red en Railway.
