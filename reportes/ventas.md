@@ -1,67 +1,68 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-06-30 (lunes — último día de junio)
-**Pipeline total:** 62 prospectos
-**Por estado:** Nuevos: 48 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-07-01 (martes — primer día de julio)
+**Pipeline total:** 64 prospectos
+**Por estado:** Nuevos: 50 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
 ### Argumentos incorporados
-- **TDLC reforzado (Gerente + Investigador):** "PedidosYa fue multada dos veces en 2026 por controlarte los precios, y hoy en el TDLC dice que no hizo nada malo" — incorporado en las 2 presentaciones de nuevos prospectos (#61 y #62, ambos en PedidosYa).
-- **Julio = peak invierno:** Argumento estacional en todos los mensajes del día. Es el último día de junio — el contexto "Julio arranca mañana" es irremplazable como vector de urgencia.
-- **Rappi/PedidosYa en modo FIFA vs. nosotros en modo invierno local:** Contraste incorporado en los mensajes de los 4 PRIORIDAD Contactados.
+- **"Julio arrancó HOY":** Es el 1 de julio — argumento estacional en su punto máximo. Todos los mensajes del día usan el ángulo "hoy arrancó el mes más frío / peak de delivery".
+- **TDLC vigente:** Argumento "PedidosYa fue multada dos veces en 2026 y hoy en tribunales dice que no hizo nada malo" sigue activo mientras el juicio TDLC continúa. Incorporado en presentaciones de nuevos prospectos #63 y #64 (canal propio → argumento de libertad, no TDLC directo).
+- **Prioridades del Gerente atendidas:** #22 Sushi Point Delivery y #15 Melt Pizzas reciben versiones frescas del día "Julio 1 / es hoy" — reemplaza los borradores del 25/06 con contexto temporal irrepetible.
 
 ### Mensajes redactados (6 total)
 
-**Seguimientos urgentes — Contactados PRIORIDAD (último día de junio):**
-- **[2] Pollería Don Pollo:** "Julio arranca mañana" — mensaje corto y directo, número concreto ($36K/mes ahorro), sin presión.
-- **[4] Pizza House:** "Último día de junio / peak pizza" — cálculo $250K vs. $150K/mes en comisiones.
-- **[5] Sushi Zen:** "Mañana arranca el peak de sushi" — $200K/mes que se quedan en el negocio.
-- **[9] Rotisería El Gaucho:** "Julio arranca mañana" — $500K/mes ahorro, frío = delivery de rotisería.
+**Prioridades del Gerente — "Julio 1 / es hoy":**
+- **[22] Sushi Point Delivery:** "Julio arrancó hoy" — $455K/mes ahorro, tel. (32) 324 0504 disponible.
+- **[15] Melt Pizzas:** "Julio arrancó hoy" — $250K/mes ahorro, peak pizza mes más frío.
+
+**Seguimientos urgentes — Contactados PRIORIDAD:**
+- **[2] Pollería Don Pollo:** "Hoy es julio" — mensaje corto y directo, 54 días sin confirmación de contacto.
+- **[9] Rotisería El Gaucho:** "Hoy es julio" — $500K/mes ahorro, frío = almuerzos y cenas por delivery.
 
 **Presentaciones — Nuevos prospectos del día:**
-- **[61] Pollo Campo Villa Alemana:** En PedidosYa, pollos a la parrilla, argumento FNE/TDLC + peak julio, ahorro estimado ~$460K/mes con 10 entregas/día.
-- **[62] El Señor De Los Completos:** En PedidosYa, completos y chorrillanas, argumento FNE/TDLC + máxima demanda julio, ahorro estimado ~$580K/mes con 20 entregas/día.
+- **[63] R Chengdu:** Comida china con canal propio (Instagram @rchengdu), sin grandes plataformas detectadas. Argumento: logística local + $500 fijo vs. % porcentual si se suman a Rappi/UE.
+- **[64] Desayuno a domicilio:** Primer negocio de desayunos en el pipeline, WhatsApp +56962520384. Argumento: segmento desayunos con poca competencia delivery + invierno = nadie quiere salir al frío.
 
 ---
 
 ## Nuevos prospectos agregados
 
-- **#61 Pollo Campo Villa Alemana** — pollos a la parrilla, activo en PedidosYa, argumento FNE/TDLC de máxima potencia, peak invierno julio.
-- **#62 El Señor De Los Completos** — completos y comida chilena, activo en PedidosYa, argumento FNE/TDLC, producto con mayor demanda en julio.
+- **#63 R Chengdu** — Comida china con delivery propio (Instagram @rchengdu), Villa Alemana. Canal directo sin grandes plataformas detectadas. Argumento: potenciar logística sin comisión porcentual. Peak julio garantizado.
+- **#64 Desayuno a domicilio Villa Alemana** — Desayunos a domicilio en VA y Quilpué, WhatsApp +56962520384. Primero de la categoría "desayunos" en el pipeline. Nicho de baja competencia delivery + peak invierno.
 
-Ambos encontrados en PedidosYa durante búsqueda activa del día. La coincidencia de ambos en PedidosYa potencia el argumento TDLC (especialmente relevante esta semana mientras el juicio está en curso).
+Ambos encontrados vía búsqueda activa en redes sociales e Instagram.
 
 ---
 
 ## Borradores listos para Matías
 
-### PRIORIDAD CRÍTICA esta semana (directriz del Gerente):
-1. **#22 Sushi Point Delivery** — borrador "Cierre Junio/Arranque Julio" listo desde el **25/06**, tel. (32) 324 0504. Julio arranca mañana: es el último momento para el argumento estacional.
-2. **#15 Melt Pizzas** — borrador "Cierre Junio/Arranque Julio" listo desde el **25/06**, en Rappi, Av. Valparaíso 1057.
+### PRIORIDAD MÁXIMA — hoy mismo (directriz del Gerente):
+1. **[22] Sushi Point Delivery** — borrador "Julio 1 / es hoy" (01/07), tel. (32) 324 0504. Ventana estacional máxima: hoy es el primer día del mes peak de sushi.
+2. **[15] Melt Pizzas** — borrador "Julio 1 / es hoy" (01/07), en Rappi, Av. Valparaíso 1057.
 
-### Urgentes de hoy (30/06):
-3. **[2] Pollería Don Pollo** — "Julio arranca mañana" (mensaje corto, alta urgencia)
-4. **[4] Pizza House** — "Último día de junio / peak pizza"
-5. **[5] Sushi Zen** — "Mañana arranca el peak de sushi"
-6. **[9] Rotisería El Gaucho** — "Julio arranca mañana" ($500K/mes ahorro)
-7. **[61] Pollo Campo Villa Alemana** — Presentación + FNE/TDLC + peak julio
-8. **[62] El Señor De Los Completos** — Presentación + FNE/TDLC + completos peak julio
+### Urgentes del día (01/07):
+3. **[2] Pollería Don Pollo** — "Hoy es julio" (corto, directo)
+4. **[9] Rotisería El Gaucho** — "Hoy es julio" ($500K/mes ahorro)
+5. **[63] R Chengdu** — Presentación canal propio + logística local
+6. **[64] Desayuno a domicilio** — Presentación primer desayuno delivery pipeline
 
-### También listos (borradores previos del 21-29/06):
-- Todos los Contactados (#1-#14): mensajes "Arranque de Julio" listos desde 21-22/06
-- Nuevos prioritarios: #17 Locos X Food (~$575-775K/mes ahorro), #18 La Casita Del Sabor (~$450K), #31 Barrio Chino (tel. +56 997902765, ~$1M/mes)
-- Prospectos PedidosYa con TDLC: #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa — versiones TDLC/FIFA listas desde 26-27/06
+### También listos (borradores previos vigentes):
+- Todos los Contactados (#1-#14): mensajes "Arranque Julio" del 21-22/06 + seguimientos 30/06
+- #17 Locos X Food (~$575-775K/mes ahorro), #18 La Casita Del Sabor (~$450K)
+- #31 Barrio Chino (tel. +56 997902765, ~$1M/mes), #23 Pizzas Ropzila (WhatsApp +56 986749142)
+- Prospectos PedidosYa con TDLC: #27, #28, #30, #33, #54, #60, #61, #62
 
 ---
 
 ## Cuello de botella (sin cambios)
 
-53 días sin confirmación de Matías sobre qué mensajes del período 08/05–29/06 fueron enviados. La ventana "Julio arranca mañana" es la oportunidad más clara del mes para desbloquear el pipeline — cualquier mensaje enviado hoy o mañana que obtenga respuesta actualiza estados de inmediato.
+54 días sin confirmación de Matías sobre qué mensajes del período 08/05–30/06 fueron enviados. Hoy es el primer día de julio — la ventana estacional "Julio 1 / es hoy" es única e irrepetible: durará solo hoy. Los 2 mensajes para #22 y #15 tienen el mayor ROI posible del pipeline esta semana.
 
 ---
 
 ## Para el Gerente
 
-Pipeline en 62 prospectos (48 nuevos, 14 contactados, 0 registrados). 6 borradores redactados hoy: urgencia "Julio arranca mañana" para los 4 PRIORIDAD Contactados (#2, #4, #5, #9) + presentaciones FNE/TDLC para 2 nuevos en PedidosYa (Pollo Campo #61 y El Señor De Los Completos #62). Julio arranca mañana — la ventana del argumento estacional es única. Acción más urgente: Matías enviar esta semana los borradores del 25/06 para #22 Sushi Point Delivery y #15 Melt Pizzas.
+Pipeline en 64 prospectos (50 nuevos, 14 contactados, 0 registrados). 6 borradores redactados hoy: "Julio 1 / es hoy" para las 2 prioridades del Gerente (#22 Sushi Point Delivery, tel. (32) 324 0504, y #15 Melt Pizzas) + seguimientos para #2 Don Pollo y #9 El Gaucho + presentaciones para 2 nuevos (R Chengdu comida china canal propio, y Desayuno a domicilio primer desayuno del pipeline). Acción más urgente: Matías enviar HOY los mensajes del 01/07 para #22 y #15 — el argumento "primer día de julio" es irrepetible.

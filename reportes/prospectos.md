@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-06-30
+**Actualizado:** 2026-07-01
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -18,14 +18,14 @@
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
-| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Cierre junio / Arranque julio redactado 25/06 — en Rappi |
+| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Julio 1 / es hoy" redactado 01/07 — PRIORIDAD GERENTE, en Rappi |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Arranque julio redactado 23/06 — PRIORIDAD |
 | 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Arranque julio redactado 23/06 — ALTA PRIORIDAD |
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
-| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | Cierre junio / Arranque julio redactado 25/06 — tel. (32) 324 0504 |
+| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | "Julio 1 / es hoy" redactado 01/07 — PRIORIDAD GERENTE, tel. (32) 324 0504 |
 | 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — en Rappi+PedidosYa+Uber Eats, WhatsApp: +56 986749142 |
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
@@ -66,10 +66,54 @@
 | 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — en PedidosYa (confirmado), argumento FNE/TDLC directo, 72 reseñas, tel. (32) 311 9036 / WhatsApp +56 958528950 |
 | 61 | Pollo Campo Villa Alemana | Pollos a la parrilla | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, pollos asados peak julio invierno, ahorro ~$460K/mes |
 | 62 | El Señor De Los Completos | Comida chilena / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, completos peak julio, ahorro ~$580K/mes |
+| 63 | R Chengdu | Comida china | Villa Alemana (canal propio Instagram @rchengdu) | Nuevo | — | Presentación redactada 01/07 — sin grandes plataformas detectadas, canal directo propio, argumento logística local sin comisión |
+| 64 | Desayuno a domicilio Villa Alemana | Desayunos a domicilio | Villa Alemana / Quilpué (canal WhatsApp propio) | Nuevo | — | Presentación redactada 01/07 — primer negocio de desayunos en el pipeline, WhatsApp +56962520384, argumento canal directo + peak invierno |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-01)
+
+> **NOTA PARA MATÍAS:** Hoy es el **PRIMER DÍA DE JULIO** — el argumento estacional tiene su máxima potencia ahora mismo. Se redactan 6 mensajes: (1) **"Julio arrancó HOY"** para las 2 PRIORIDADES del Gerente (#22 Sushi Point Delivery, tel. (32) 324 0504, y #15 Melt Pizzas — ambos con borradores previos del 25/06, hoy el contexto "Julio 1 / es hoy" es irremplazable); (2) **"Es hoy"** para los 2 Contactados PRIORIDAD más urgentes (#2 Don Pollo y #9 El Gaucho, llevan 54 días sin confirmación de contacto); (3) **presentaciones** para 2 nuevos prospectos encontrados en búsqueda activa hoy: **R Chengdu (#63)** — comida china con canal propio en Instagram sin grandes plataformas, y **Desayuno a domicilio (#64)** — primer negocio de desayunos del pipeline, WhatsApp disponible. Pipeline total: **64 prospectos**.
+
+---
+
+#### "JULIO ARRANCÓ HOY" — Prioridades del Gerente (01/07)
+
+**[22] Sushi Point Delivery — Julio 1 / Es hoy (01/07):**
+"Hola Sushi Point Delivery! RepartoJusto — hoy es el 1 de julio. Arranca el mes con más pedidos de sushi en Chile: el frío hace que las noches de julio sean el peak absoluto de delivery. El número concreto para este mes: con sushi de $18.000 y 15 entregas diarias en Rappi, pagan más de $680.000 al mes en comisiones. Con RepartoJusto ese costo baja a $225.000 — $455.000 mensuales que se quedan en el negocio. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. ¿Arrancamos este julio? repartojusto-production.up.railway.app | Tel: (32) 324 0504"
+
+---
+
+**[15] Melt Pizzas — Julio 1 / Es hoy (01/07):**
+"Hola Melt Pizzas! Julio arrancó hoy. El primer día del mes más frío del año — el mes con más pedidos de pizza en delivery en Chile. Un cálculo directo para Av. Valparaíso 1057: con 10 pizzas de $12.000 al día en Rappi, pagan ~$400.000 al mes en comisiones (28%). Con RepartoJusto ese costo baja a $150.000 — más de $250.000 al mes que se quedan en el negocio, desde el primer pedido. Sin contrato, registro completamente gratuito, pueden mantener Rappi y sumar RepartoJusto como canal local de menor costo. ¿Empezamos este julio? repartojusto-production.up.railway.app"
+
+---
+
+#### "ES HOY" — Contactados PRIORIDAD (01/07)
+
+**[2] Pollería Don Pollo — Julio 1 / Es hoy (01/07):**
+"Hola Don Pollo! Julio llegó — hoy es el primer día. El mes más frío del año, el peak de delivery. Un solo número: con 20 pedidos semanales de $10.000 en Rappi, la diferencia entre pagar a Rappi (28%) y pagar $500 con RepartoJusto es más de $36.000 al mes que se quedan en el local. Sin contrato, registro gratis, 10 minutos. ¿Este julio? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Julio 1 / Es hoy (01/07):**
+"Hola El Gaucho! Hoy es julio. El frío arrancó de verdad — y con frío nadie quiere cocinar. El número sigue siendo el mismo: 10 pedidos diarios de $8.000 en Rappi = $672.000/mes en comisiones. Con RepartoJusto son $150.000. Más de $500.000 mensuales que se quedan en el negocio. Sin contrato, registro gratis. ¿Empezamos este mes? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-01)
+
+**[63] R Chengdu — Presentación:**
+"Hola R Chengdu! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@rchengdu) — comida china con delivery propio. Una propuesta directa: RepartoJusto puede sumarle riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30%, con nosotros el costo es siempre $500, sin importar el valor del pedido. Julio es el peak de comida china en delivery — el frío de invierno lleva a la gente a pedir desde casa. Para un plato de $10.000, el ahorro vs. una app de porcentaje (28%) es $2.300 por cada entrega que se queda en el negocio. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[64] Desayuno a domicilio Villa Alemana — Presentación:**
+"Hola! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos ofreciendo desayunos a domicilio en Villa Alemana y Quilpué — un segmento donde hay muy poca competencia de delivery. Una propuesta concreta: RepartoJusto puede apoyar sus entregas con riders locales por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un desayuno de $6.000, la diferencia vs. Rappi o PedidosYa (28%) son $1.180 que se quedan en el negocio por cada entrega. Julio, con el frío invernal, es el momento en que más personas prefieren un desayuno caliente en casa sin salir al frío. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Conversamos? (WhatsApp: +56962520384)"
 
 ---
 
