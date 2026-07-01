@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-01T19:08:48Z
+**Última verificación:** 2026-07-01T20:08:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** curl error 56 — el proxy del entorno de ejecución bloqueó el túnel CONNECT hacia repartojusto-production.up.railway.app:443 (HTTP 403 Forbidden desde proxy). No fue posible verificar el endpoint /health desde este entorno.
+**Detalle:** curl exit code 56 (fallo de red / conexión rechazada) — HTTP 000 (sin respuesta). El servidor no es alcanzable desde el entorno de ejecución.
