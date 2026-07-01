@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-01T03:08:21Z
+**Última verificación:** 2026-07-01T04:08:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** El endpoint no respondió — la solicitud fue bloqueada por la política de red del entorno de ejecución (proxy devolvió 403 Forbidden). No se pudo establecer conexión con repartojusto-production.up.railway.app:443. HTTP code: 000, curl exit code: 56.
+**Detalle:** No se pudo alcanzar https://repartojusto-production.up.railway.app/health — el proxy del entorno de ejecución bloqueó la conexión saliente (CONNECT tunnel failed, HTTP 403). No es posible confirmar estado del servidor desde este entorno.
