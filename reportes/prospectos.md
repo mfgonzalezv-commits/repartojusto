@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-01
+**Actualizado:** 2026-07-02
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -7,8 +7,8 @@
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 — enfoque autonomía sucursal |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
@@ -20,7 +20,7 @@
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Julio 1 / es hoy" redactado 01/07 — PRIORIDAD GERENTE, en Rappi |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
-| 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Arranque julio redactado 23/06 — PRIORIDAD |
+| 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
 | 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Arranque julio redactado 23/06 — ALTA PRIORIDAD |
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -34,7 +34,7 @@
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión TDLC/FIFA redactada 27/06 |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
 | 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión TDLC/FIFA redactada 27/06 — doble plataforma Uber Eats+PedidosYa |
-| 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — listado bajo Quilpué en Rappi, tel. +56 997902765 |
+| 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — 20 años trayectoria, ticket alto |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
@@ -68,10 +68,54 @@
 | 62 | El Señor De Los Completos | Comida chilena / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, completos peak julio, ahorro ~$580K/mes |
 | 63 | R Chengdu | Comida china | Villa Alemana (canal propio Instagram @rchengdu) | Nuevo | — | Presentación redactada 01/07 — sin grandes plataformas detectadas, canal directo propio, argumento logística local sin comisión |
 | 64 | Desayuno a domicilio Villa Alemana | Desayunos a domicilio | Villa Alemana / Quilpué (canal WhatsApp propio) | Nuevo | — | Presentación redactada 01/07 — primer negocio de desayunos en el pipeline, WhatsApp +56962520384, argumento canal directo + peak invierno |
+| 65 | Nei Sushi Delivery | Sushi | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 02/07 — en Rappi, sushi ticket alto, julio peak máximo, ahorro ~$700K/mes vs. 28% Rappi |
+| 66 | ConchetuBurger Villa Alemana | Hamburguesas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 02/07 — en Rappi, hamburguesería local, julio peak hamburguesas, ahorro ~$610K/mes |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-02)
+
+> **NOTA PARA MATÍAS:** Hoy jueves 2 de julio — segunda jornada del peak de julio. Se redactan 6 mensajes: (1) **seguimientos "Julio día 2"** para los 2 Contactados PRIORIDAD que no tuvieron mensaje ayer (#4 Pizza House y #5 Sushi Zen, último borrador del 21/06 — 11 días sin mensaje nuevo) y (2) **seguimientos de julio** para 2 Nuevos de alto valor sin mensaje reciente (#17 Locos X Food, ~$575K-$775K/mes; #31 Barrio Chino, tel. +56 997902765, ~$1M/mes y argumento exclusivo Rappi los lista bajo Quilpué); (3) **presentaciones** para 2 nuevos prospectos encontrados hoy en Rappi: **Nei Sushi Delivery (#65)** — sushi en Villa Alemana, julio peak, y **ConchetuBurger Villa Alemana (#66)** — hamburguesería local con identidad propia. Pipeline total: **66 prospectos**.
+
+---
+
+#### SEGUIMIENTOS JULIO DÍA 2 — Contactados PRIORIDAD (02/07)
+
+**[4] Pizza House — Seguimiento Julio Día 2 (02/07):**
+"Hola Pizza House! RepartoJusto, segundo día de julio. El frío de esta semana es el mejor momento del año para pizza en delivery — y los pedidos no bajan. Un número claro para esta temporada: 10 pizzas de $12.000 al día en Rappi = $250.000/mes que se van a la app en comisiones. Con RepartoJusto ese costo baja a $150.000 — $100.000 más que se quedan en el local, cada mes, desde el primero. Sin contrato, registro completamente gratis. ¿Esta semana arrancamos? repartojusto-production.up.railway.app"
+
+---
+
+**[5] Sushi Zen — Seguimiento Julio Día 2 (02/07):**
+"Hola Sushi Zen! RepartoJusto, julio arrancó y el peak de sushi también. Esta semana, con el frío máximo del año, es el momento exacto en que los clientes prefieren pedir sushi desde casa. La diferencia sigue siendo la misma: 10 pedidos semanales de $20.000 en Rappi → más de $200.000 al mes que se van a la app. Con RepartoJusto: esos $200.000 se quedan en el negocio. Sin contrato, registro gratis. ¿Este julio lo hacemos? repartojusto-production.up.railway.app"
+
+---
+
+#### SEGUIMIENTOS JULIO — Nuevos PRIORIDAD (02/07)
+
+**[17] Locos X Food — Seguimiento Julio (02/07):**
+"Hola Locos X Food! RepartoJusto, julio en marcha. La primera semana del mes más frío del año es el peak del año para comida rápida en delivery. El número que estimamos para ustedes: entre $575.000 y $775.000 al mes que hoy se van a Rappi en comisiones, y que podrían quedarse en el negocio. Sin contrato, registro gratuito, pueden mantener Rappi y sumar RepartoJusto como canal local de $500 fijos. ¿Cinco minutos esta semana? repartojusto-production.up.railway.app"
+
+---
+
+**[31] Barrio Chino Villa Alemana — Seguimiento Julio (02/07):**
+"Hola Barrio Chino! RepartoJusto, julio arrancó y con él el peak de comida china en delivery. El frío de esta semana llena los pedidos. Y el problema de Rappi no cambia: los siguen listando bajo 'Quilpué', no Villa Alemana — sus clientes locales pueden no encontrarlos cuando buscan. Con RepartoJusto son 100% visibles como negocio de Villa Alemana. El número de julio: 15 pedidos de $10.000 en Rappi = más de $1.000.000 al mes en comisiones. Con nosotros son $225.000. Sin contrato, registro completamente gratis. ¿Hablamos? repartojusto-production.up.railway.app (Tel: +56 997902765)"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-02)
+
+**[65] Nei Sushi Delivery — Presentación:**
+"Hola Nei Sushi Delivery! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi — sushi delivery activo en Villa Alemana. Un dato directo: Rappi cobra 28% de comisión por cada pedido. Para un combo o roll de $15.000, eso son $4.200 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Esta primera semana de julio es el peak absoluto de sushi en delivery en Chile — el frío convierte las noches de julio en el momento exacto para pedir sushi desde casa. Con 15 entregas diarias en julio, el ahorro vs. Rappi puede superar los $700.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[66] ConchetuBurger Villa Alemana — Presentación:**
+"Hola ConchetuBurger! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi — hamburguesas con una identidad local bien marcada. Dato concreto: Rappi cobra 28% de comisión por cada pedido. Para una hamburguesa de $9.000, eso son $2.520 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre. Esta primera semana de julio es peak de delivery de hamburguesas — el frío del invierno lleva a los clientes a pedir desde casa. Con 10 entregas diarias en julio, el ahorro vs. Rappi puede superar los $610.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 

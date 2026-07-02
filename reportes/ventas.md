@@ -1,68 +1,72 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-07-01 (martes — primer día de julio)
-**Pipeline total:** 64 prospectos
-**Por estado:** Nuevos: 50 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-07-02 (jueves — día 2 de julio, segunda jornada del peak)
+**Pipeline total:** 66 prospectos
+**Por estado:** Nuevos: 52 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
 ### Argumentos incorporados
-- **"Julio arrancó HOY":** Es el 1 de julio — argumento estacional en su punto máximo. Todos los mensajes del día usan el ángulo "hoy arrancó el mes más frío / peak de delivery".
-- **TDLC vigente:** Argumento "PedidosYa fue multada dos veces en 2026 y hoy en tribunales dice que no hizo nada malo" sigue activo mientras el juicio TDLC continúa. Incorporado en presentaciones de nuevos prospectos #63 y #64 (canal propio → argumento de libertad, no TDLC directo).
-- **Prioridades del Gerente atendidas:** #22 Sushi Point Delivery y #15 Melt Pizzas reciben versiones frescas del día "Julio 1 / es hoy" — reemplaza los borradores del 25/06 con contexto temporal irrepetible.
+- **"Julio Día 2 / Peak en curso":** Segunda jornada del mes más frío — el argumento estacional sigue activo con máxima vigencia. Todos los mensajes de seguimiento usan el ángulo "julio arrancó y el peak está en marcha esta semana".
+- **TDLC vigente (actualización Investigador 25/06):** "PedidosYa fue multada dos veces en 2026 por controlarte los precios, y hoy en tribunales dice que no hizo nada malo." Argumento activo en todos los prospectos PedidosYa del pipeline.
+- **Rappi lista bajo Quilpué:** Argumento único para #31 Barrio Chino — sus clientes locales no los encuentran cuando buscan comida china en Villa Alemana.
+- **Cobertura de Contactados completada:** Los 4 Contactados PRIORIDAD (#2, #4, #5, #9) tienen mensajes de julio. Ayer (#2, #9); hoy (#4, #5).
 
 ### Mensajes redactados (6 total)
 
-**Prioridades del Gerente — "Julio 1 / es hoy":**
-- **[22] Sushi Point Delivery:** "Julio arrancó hoy" — $455K/mes ahorro, tel. (32) 324 0504 disponible.
-- **[15] Melt Pizzas:** "Julio arrancó hoy" — $250K/mes ahorro, peak pizza mes más frío.
+**Seguimientos Julio Día 2 — Contactados PRIORIDAD:**
+- **[4] Pizza House:** "Segundo día de julio" — $100K/mes ahorro, pizza peak semana del frío.
+- **[5] Sushi Zen:** "Julio arrancó y el peak de sushi también" — $200K/mes que se quedan en el negocio.
 
-**Seguimientos urgentes — Contactados PRIORIDAD:**
-- **[2] Pollería Don Pollo:** "Hoy es julio" — mensaje corto y directo, 54 días sin confirmación de contacto.
-- **[9] Rotisería El Gaucho:** "Hoy es julio" — $500K/mes ahorro, frío = almuerzos y cenas por delivery.
+**Seguimientos Julio — Nuevos PRIORIDAD:**
+- **[17] Locos X Food:** "Julio en marcha / primera semana" — entre $575K-$775K/mes en comisiones Rappi estimadas.
+- **[31] Barrio Chino:** "Peak comida china + argumento Rappi los lista bajo Quilpué" — ~$1M/mes ahorro, tel. +56 997902765.
 
 **Presentaciones — Nuevos prospectos del día:**
-- **[63] R Chengdu:** Comida china con canal propio (Instagram @rchengdu), sin grandes plataformas detectadas. Argumento: logística local + $500 fijo vs. % porcentual si se suman a Rappi/UE.
-- **[64] Desayuno a domicilio:** Primer negocio de desayunos en el pipeline, WhatsApp +56962520384. Argumento: segmento desayunos con poca competencia delivery + invierno = nadie quiere salir al frío.
+- **[65] Nei Sushi Delivery:** Sushi en Rappi Villa Alemana, julio peak, ahorro ~$700K/mes vs. 28%.
+- **[66] ConchetuBurger Villa Alemana:** Hamburguesería local en Rappi, julio peak, ahorro ~$610K/mes.
 
 ---
 
 ## Nuevos prospectos agregados
 
-- **#63 R Chengdu** — Comida china con delivery propio (Instagram @rchengdu), Villa Alemana. Canal directo sin grandes plataformas detectadas. Argumento: potenciar logística sin comisión porcentual. Peak julio garantizado.
-- **#64 Desayuno a domicilio Villa Alemana** — Desayunos a domicilio en VA y Quilpué, WhatsApp +56962520384. Primero de la categoría "desayunos" en el pipeline. Nicho de baja competencia delivery + peak invierno.
+- **#65 Nei Sushi Delivery** — Sushi delivery en Rappi Villa Alemana. Categoría con peak máximo en julio. Perfil ideal: en Rappi pagando 28%, sushi ticket alto, julio = peak de demand. Encontrado en búsqueda activa Rappi Villa Alemana.
+- **#66 ConchetuBurger Villa Alemana** — Hamburguesería local en Rappi Villa Alemana. Identidad marcada de barrio. Julio = peak de hamburguesas delivery. Perfil: en Rappi pagando 28%, argumento tarifa fija de alto impacto.
 
-Ambos encontrados vía búsqueda activa en redes sociales e Instagram.
+Ambos encontrados vía búsqueda activa en Rappi Villa Alemana.
 
 ---
 
 ## Borradores listos para Matías
 
-### PRIORIDAD MÁXIMA — hoy mismo (directriz del Gerente):
-1. **[22] Sushi Point Delivery** — borrador "Julio 1 / es hoy" (01/07), tel. (32) 324 0504. Ventana estacional máxima: hoy es el primer día del mes peak de sushi.
-2. **[15] Melt Pizzas** — borrador "Julio 1 / es hoy" (01/07), en Rappi, Av. Valparaíso 1057.
+### Del día de hoy (02/07):
+1. **[4] Pizza House** — "Segundo día de julio / peak pizza en marcha" (Contactado PRIORIDAD)
+2. **[5] Sushi Zen** — "Julio arrancó y el peak de sushi también" (Contactado PRIORIDAD)
+3. **[17] Locos X Food** — "Julio en marcha" ($575K-$775K/mes estimado, 28% Rappi)
+4. **[31] Barrio Chino** — "Peak comida china + Rappi los lista bajo Quilpué" (tel. +56 997902765)
+5. **[65] Nei Sushi Delivery** — Presentación inicial (en Rappi, julio peak sushi)
+6. **[66] ConchetuBurger** — Presentación inicial (en Rappi, julio peak hamburguesas)
 
-### Urgentes del día (01/07):
-3. **[2] Pollería Don Pollo** — "Hoy es julio" (corto, directo)
-4. **[9] Rotisería El Gaucho** — "Hoy es julio" ($500K/mes ahorro)
-5. **[63] R Chengdu** — Presentación canal propio + logística local
-6. **[64] Desayuno a domicilio** — Presentación primer desayuno delivery pipeline
+### PRIORIDAD MÁXIMA — borradores previos urgentes:
+- **[22] Sushi Point Delivery** — "Julio 1 / es hoy" (01/07), tel. (32) 324 0504 — prioritario Gerente
+- **[15] Melt Pizzas** — "Julio 1 / es hoy" (01/07), en Rappi Av. Valparaíso 1057 — prioritario Gerente
+- **[2] Pollería Don Pollo** — "Hoy es julio" (01/07)
+- **[9] Rotisería El Gaucho** — "Hoy es julio" (01/07)
 
-### También listos (borradores previos vigentes):
-- Todos los Contactados (#1-#14): mensajes "Arranque Julio" del 21-22/06 + seguimientos 30/06
-- #17 Locos X Food (~$575-775K/mes ahorro), #18 La Casita Del Sabor (~$450K)
-- #31 Barrio Chino (tel. +56 997902765, ~$1M/mes), #23 Pizzas Ropzila (WhatsApp +56 986749142)
+### También listos (todos los Contactados y Nuevos clave):
+- Todos los 14 Contactados tienen mensajes julio (21-22/06 + 01/07 + 02/07)
 - Prospectos PedidosYa con TDLC: #27, #28, #30, #33, #54, #60, #61, #62
+- #23 Pizzas Ropzila (WhatsApp +56 986749142), #31 Barrio Chino (tel. +56 997902765)
 
 ---
 
 ## Cuello de botella (sin cambios)
 
-54 días sin confirmación de Matías sobre qué mensajes del período 08/05–30/06 fueron enviados. Hoy es el primer día de julio — la ventana estacional "Julio 1 / es hoy" es única e irrepetible: durará solo hoy. Los 2 mensajes para #22 y #15 tienen el mayor ROI posible del pipeline esta semana.
+Llevamos 55 días (desde 08/05) sin confirmación de Matías sobre qué mensajes se enviaron. El pipeline entero está paralizado en términos de actualización de estados. La acción más urgente sigue siendo que Matías confirme — aunque sea con "no envié nada aún" — para desbloquear la gestión del pipeline.
 
 ---
 
 ## Para el Gerente
 
-Pipeline en 64 prospectos (50 nuevos, 14 contactados, 0 registrados). 6 borradores redactados hoy: "Julio 1 / es hoy" para las 2 prioridades del Gerente (#22 Sushi Point Delivery, tel. (32) 324 0504, y #15 Melt Pizzas) + seguimientos para #2 Don Pollo y #9 El Gaucho + presentaciones para 2 nuevos (R Chengdu comida china canal propio, y Desayuno a domicilio primer desayuno del pipeline). Acción más urgente: Matías enviar HOY los mensajes del 01/07 para #22 y #15 — el argumento "primer día de julio" es irrepetible.
+Pipeline en 66 prospectos (52 nuevos, 14 contactados, 0 registrados); cobertura julio completada para los 4 Contactados PRIORIDAD (#2, #4, #5, #9 — todos con mensajes del 01-02/07); 2 nuevos prospectos de Rappi Villa Alemana agregados (Nei Sushi Delivery #65 y ConchetuBurger #66); acción crítica de la semana sigue siendo que Matías envíe los borradores del 01/07 para #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas.
