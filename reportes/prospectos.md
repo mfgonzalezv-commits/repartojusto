@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-02
+**Actualizado:** 2026-07-03
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -30,13 +30,13 @@
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
-| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Versión 20/06 FNE doble multa ($3.400M CLP) redactada |
-| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión TDLC/FIFA redactada 27/06 |
+| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Versión Uber/Delivery Hero redactada 03/07 — argumento máxima potencia: Uber compra dueña PedidosYa |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión Uber/Delivery Hero redactada 03/07 — argumento incertidumbre PedidosYa 2027 |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
-| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión TDLC/FIFA redactada 27/06 — doble plataforma Uber Eats+PedidosYa |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión Uber/Delivery Hero redactada 03/07 — en Uber Eats+PedidosYa, una de las dos puede quedar en manos de Uber |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
-| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Versión 20/06 FNE doble multa redactada — 20 años trayectoria, ticket alto |
+| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Versión Uber/Delivery Hero redactada 03/07 — 20 años trayectoria, merecen certeza comercial |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
 | 35 | Buena Onda Sushi | Sushi | Huanhuali 997, Villa Alemana | Nuevo | — | Presentación redactada 15/06 — en Uber Eats + Rappi, argumento doble comisión |
 | 36 | Miel Delivery | Repostería / cocktails | Villa Alemana (Peña Blanca, Belloto) | Nuevo | — | Presentación redactada 15/06 — delivery-first por WhatsApp, argumento canal propio sin comisión |
@@ -70,10 +70,54 @@
 | 64 | Desayuno a domicilio Villa Alemana | Desayunos a domicilio | Villa Alemana / Quilpué (canal WhatsApp propio) | Nuevo | — | Presentación redactada 01/07 — primer negocio de desayunos en el pipeline, WhatsApp +56962520384, argumento canal directo + peak invierno |
 | 65 | Nei Sushi Delivery | Sushi | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 02/07 — en Rappi, sushi ticket alto, julio peak máximo, ahorro ~$700K/mes vs. 28% Rappi |
 | 66 | ConchetuBurger Villa Alemana | Hamburguesas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 02/07 — en Rappi, hamburguesería local, julio peak hamburguesas, ahorro ~$610K/mes |
+| 67 | Transito Food | Comida rápida / completos | Av. Valparaíso 1798, Villa Alemana | Nuevo | — | Presentación redactada 03/07 — en Rappi, completos y sándwiches, julio peak comida rápida, ahorro ~$370K/mes |
+| 68 | Comida China Fu Shun | Comida china | Santiago 715, Villa Alemana | Nuevo | — | Presentación redactada 03/07 — en Rappi, cocina china, julio peak comida china, ahorro ~$370K/mes |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-03)
+
+> **NOTA PARA MATÍAS:** Hoy viernes 3 de julio — el Investigador publicó esta mañana el **argumento más poderoso del año para prospectos en PedidosYa**: Uber ofreció US$11.600 millones para comprar Delivery Hero, la empresa dueña de PedidosYa. Si se aprueba (12-18 meses), PedidosYa puede cambiar de dueño, de nombre y de comisiones sin que los negocios socios tengan voz ni voto. Se redactan **4 versiones Uber/Delivery Hero** para los prospectos en PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa) y **presentaciones** para 2 nuevos prospectos encontrados en Rappi hoy: **Transito Food (#67)** — completos y sándwiches en Av. Valparaíso 1798 — y **Comida China Fu Shun (#68)** — cocina china en Santiago 715. Pipeline total: **68 prospectos**.
+>
+> **NOTA ADICIONAL:** #60 Master Sándwich (en PedidosYa confirmado) también debería recibir este argumento — quedó fuera de hoy para no saturar, prioridad para el lunes 06/07.
+
+---
+
+#### VERSIONES UBER/DELIVERY HERO — Prospectos en PedidosYa (03/07)
+
+**[27] Tribeca Sushi — Versión Uber/Delivery Hero (03/07):**
+"Hola Tribeca Sushi! Novedad importante de RepartoJusto — y les compete directamente si están en PedidosYa. Esta semana se confirmó que Uber ofreció US$11.600 millones para comprar Delivery Hero, la empresa dueña de PedidosYa. Si la operación se aprueba (12 a 18 meses), PedidosYa puede cambiar de dueño, de nombre y de comisiones — sin que ustedes tengan voz ni voto. Y recuerden: PedidosYa ya fue multada dos veces en 2026 por controlarte los precios ($3.400M CLP), y hoy en tribunales dice que no hizo nada malo. En 2027 no sabrán con quién hacen negocios ni a qué precio. Con RepartoJusto son siempre $500 por pedido entregado, sin sorpresas, sin cambios de dueño. Julio es el peak de sushi — el momento justo para tener un canal local estable. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[28] La Esquina Con Sabor — Versión Uber/Delivery Hero (03/07):**
+"Hola La Esquina Con Sabor! Novedad que les incumbe si están en PedidosYa: Uber ofreció US$11.600 millones para comprar Delivery Hero, la dueña de PedidosYa. Si se aprueba, en 12-18 meses PedidosYa puede cambiar de dueño, de comisiones, de todo — sin que nadie les consulte. Una empresa ya multada dos veces en 2026 por controlarte los precios ($3.400M CLP), que hoy en tribunales niega los cargos, y que mañana puede ser parte de Uber. Con RepartoJusto: $500 fijos siempre por pedido, libertad total de precios, sin sorpresas. Julio es peak de completos y comida rápida — el momento de diversificar a un canal local sin incertidumbre. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[30] Poh Che Empanadas & Sandwichs — Versión Uber/Delivery Hero (03/07):**
+"Hola Poh Che! Novedad de esta semana que les importa: Uber ofreció US$11.600 millones para comprar Delivery Hero, la empresa dueña de PedidosYa. Si se aprueba, en 12-18 meses PedidosYa puede cambiar de dueño, de nombre y de comisiones. Están en Uber Eats + PedidosYa: una de las dos ya fue multada dos veces en 2026 por la FNE ($3.400M CLP) por controlarte los precios, y mañana puede quedar en manos de la otra. RepartoJusto es independiente, 100% local en Villa Alemana — siempre $500 fijos por pedido, sin cambios de dueño, sin sorpresas. Julio es peak de empanadas. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos? (Tel: +56 32 324 2360)"
+
+---
+
+**[33] Casa Festa Cocina y Repostería — Versión Uber/Delivery Hero (03/07):**
+"Hola Casa Festa! Una novedad de esta semana para alguien con 20+ años de trayectoria que merece hacer negocios con certeza: Uber ofreció US$11.600 millones para comprar Delivery Hero, la dueña de PedidosYa. Si se aprueba, en 12-18 meses no sabrán con quién negocian ni a qué comisión. Una empresa ya multada dos veces en 2026 por la FNE por controlarte los precios ($3.400M CLP), que hoy en tribunales dice que no hizo nada malo, y que mañana puede tener otro dueño. Con RepartoJusto: $500 fijos siempre, libertad total de precios, sin cambios de condiciones. 20 años construyendo un negocio merecen una plataforma estable. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos esta semana? (Tel: (32) 2950116 / casafestaventas@gmail.com)"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-03)
+
+**[67] Transito Food — Presentación:**
+"Hola Transito Food! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Av. Valparaíso 1798 — completos, sándwiches y comida rápida. Julio es el peak absoluto de completos y sándwiches en Chile: el frío hace que la gente prefiera pedir desde casa. Un dato directo: Rappi cobra 28% de comisión por cada pedido. Para un completo de $4.500, eso son $1.260 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Con 15 entregas diarias, el ahorro vs. Rappi puede superar los $370.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[68] Comida China Fu Shun — Presentación:**
+"Hola Comida China Fu Shun! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Santiago 715 — cocina china con delivery activo en Villa Alemana. Julio es el peak de comida china en delivery: el frío trae las noches perfectas para pedir desde casa. Un dato concreto: Rappi cobra 28% de comisión por cada pedido. Para un plato de $9.000, eso son $2.520 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre. Con 12 entregas diarias, el ahorro puede superar los $370.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
