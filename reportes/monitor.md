@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-03T13:08:38Z
+**Última verificación:** 2026-07-03T14:08:12 UTC
 **Estado:** ❌ CAÍDO
-**Detalle:** HTTP 403 Forbidden — el endpoint /health no respondió con 200 OK. El entorno de ejecución bloqueó la conexión saliente a railway.app a través del proxy (CONNECT tunnel failed, 403). No se pudo confirmar si el servidor está operativo.
+**Detalle:** No se pudo establecer conexión con https://repartojusto-production.up.railway.app/health — el proxy del entorno de ejecución bloqueó la solicitud (HTTP 403 Forbidden en el túnel CONNECT). No fue posible determinar el estado real del servidor de producción.
