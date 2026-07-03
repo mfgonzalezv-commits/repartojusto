@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-03T00:00:00Z
-**Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar al servidor. El proxy del entorno de ejecución bloqueó la conexión con HTTP 403 (CONNECT tunnel failed). No es posible determinar el estado real del servidor desde este entorno.
+**Última verificación:** 2026-07-03T03:08:41Z
+**Estado:** ⚠️ SIN VERIFICAR
+**Detalle:** No se pudo conectar a `repartojusto-production.up.railway.app` — el host está bloqueado por la política de egress del proxy del entorno de ejecución (HTTP 403 en CONNECT tunnel). El estado real del servidor es desconocido desde este entorno.
