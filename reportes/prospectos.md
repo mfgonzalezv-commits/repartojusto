@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-03
+**Actualizado:** 2026-07-04
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -63,7 +63,7 @@
 | 57 | Empanadas Belle | Empanadas | Londres 930, Villa Alemana | Nuevo | — | Presentación redactada 28/06 — en Rappi, peak julio empanadas, argumento tarifa fija vs. 28% |
 | 58 | Mevas Raíces | Empanadas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 28/06 — en Rappi, empanadas de especialidad, peak invernal julio |
 | 59 | Sandwichería Ñam Fuente de Soda | Sandwichería / fuente de soda | Av. Valparaíso 584, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — local clásico VA, tel. (32) 2470466, peak completos en julio |
-| 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — en PedidosYa (confirmado), argumento FNE/TDLC directo, 72 reseñas, tel. (32) 311 9036 / WhatsApp +56 958528950 |
+| 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | Versión Uber/Delivery Hero redactada 04/07 — en PedidosYa (confirmado), argumento triple FNE+TDLC+fusión Uber, 72 reseñas, tel. (32) 311 9036 / WhatsApp +56 958528950 |
 | 61 | Pollo Campo Villa Alemana | Pollos a la parrilla | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, pollos asados peak julio invierno, ahorro ~$460K/mes |
 | 62 | El Señor De Los Completos | Comida chilena / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, completos peak julio, ahorro ~$580K/mes |
 | 63 | R Chengdu | Comida china | Villa Alemana (canal propio Instagram @rchengdu) | Nuevo | — | Presentación redactada 01/07 — sin grandes plataformas detectadas, canal directo propio, argumento logística local sin comisión |
@@ -72,10 +72,46 @@
 | 66 | ConchetuBurger Villa Alemana | Hamburguesas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 02/07 — en Rappi, hamburguesería local, julio peak hamburguesas, ahorro ~$610K/mes |
 | 67 | Transito Food | Comida rápida / completos | Av. Valparaíso 1798, Villa Alemana | Nuevo | — | Presentación redactada 03/07 — en Rappi, completos y sándwiches, julio peak comida rápida, ahorro ~$370K/mes |
 | 68 | Comida China Fu Shun | Comida china | Santiago 715, Villa Alemana | Nuevo | — | Presentación redactada 03/07 — en Rappi, cocina china, julio peak comida china, ahorro ~$370K/mes |
+| 69 | Alemán Experto | Sandwichería / bar / restaurante | Villa Alemana (canal propio delivery.alemanexperto.cl) | Nuevo | — | Presentación redactada 04/07 — canal delivery propio, menú alemán-chileno fusión, contacto@alemanexperto.cl |
+| 70 | Dano Sandwich | Sandwichería | Villa Alemana (Instagram @danosandwich.oficial) | Nuevo | — | Presentación redactada 04/07 — canal Instagram propio, sin grandes plataformas detectadas |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-04)
+
+> **NOTA PARA MATÍAS:** Hoy viernes 4 de julio — primer viernes del mes más frío del año, fin de semana peak. Se redactan **4 mensajes**: (1) Versión **Uber/Delivery Hero** para **#60 Master Sándwich Villa Alemana** (en PedidosYa, 72 reseñas — quedó pendiente del 03/07 como "para el lunes" pero el argumento es igualmente poderoso hoy); (2) **Seguimiento "Viernes de julio"** para **#6 Botillería El Copihue** (el fin de semana invernal es el peak exacto para botillería delivery — argumento temporal irremplazable hoy); (3) **Presentaciones** para 2 nuevos prospectos encontrados hoy: **Alemán Experto (#69)** — sandwichería/bar/restaurante con canal de delivery propio en Villa Alemana (delivery.alemanexperto.cl, menú amplio alemán-chileno) y **Dano Sandwich (#70)** — sandwichería con delivery propio por Instagram (@danosandwich.oficial), sin grandes plataformas. Pipeline total: **70 prospectos**.
+>
+> **RECORDATORIO DE SEMANA:** Los mensajes más urgentes de esta semana para #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas están listos desde el 01/07. Si no salieron esta semana, quedan para el lunes 07/07.
+
+---
+
+#### VERSIÓN UBER/DELIVERY HERO — Prospecto en PedidosYa (04/07)
+
+**[60] Master Sándwich Villa Alemana — Versión Uber/Delivery Hero (04/07):**
+"Hola Master Sándwich! RepartoJusto — novedad importante de esta semana para alguien en PedidosYa con 72 reseñas y trayectoria seria. Se acumulan tres datos: (1) La FNE multó a PedidosYa dos veces en 2026 por controlarte los precios ($3.400 millones CLP en total); (2) Hoy están en el TDLC diciendo que no hicieron nada malo; (3) Esta semana: Uber ofreció US$11.600 millones para comprar Delivery Hero, la empresa dueña de PedidosYa. Si la operación se aprueba en 12-18 meses, no sabrán con quién hacen negocios ni a qué comisión. Con RepartoJusto son siempre $500 por pedido, sin sorpresas, sin cambios de dueño. Hoy viernes — primer fin de semana de julio, el mes más frío del año — es exactamente cuando los clientes quieren un churrasco o sandwich caliente desde casa. Con 15 entregas diarias, el ahorro puede superar $460.000 al mes. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos? (Tel: (32) 311 9036 / WhatsApp +56 958528950)"
+
+---
+
+#### SEGUIMIENTO "VIERNES DE JULIO" — Contactado (04/07)
+
+**[6] Botillería El Copihue — Viernes de julio / peak fin de semana (04/07):**
+"Hola Botillería El Copihue! RepartoJusto — hoy es viernes, el primer fin de semana de julio. El mejor escenario para delivery de botillería del año: frío máximo de invierno + la gente prefiere quedarse en casa. Si trabajan con plataformas que cobran porcentaje, cada pedido de $10.000 les cuesta hasta $2.800 en comisiones (28%). Con RepartoJusto son $500 fijos por pedido completo, sin importar el monto. Para 20 pedidos de fin de semana, la diferencia supera $90.000 al mes — solo en sábados y domingos. Sin contrato, sin exclusividad, pueden probar solo los fines de semana. ¿Este fin de semana arrancamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-04)
+
+**[69] Alemán Experto — Presentación:**
+"Hola Alemán Experto! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos con canal de delivery propio muy bien montado (delivery.alemanexperto.cl) — sándwiches clásicos, hamburguesas artesanales, platos alemanes, opciones veganas, carta amplia. Excelente propuesta. Una oferta concreta: RepartoJusto puede sumar riders locales a ese canal por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30% por pedido, con nosotros el costo es siempre $500 — sin importar si el pedido vale $6.000 o $18.000. Para una hamburguesa artesanal de $10.000, la diferencia vs. una app de porcentaje son $2.300 que se quedan en el negocio por cada entrega. Hoy es el primer viernes de julio — el peak de sándwiches y comida reconfortante del año: el frío invernal lleva a la gente a pedir desde casa. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Hablamos? (contacto@alemanexperto.cl)"
+
+---
+
+**[70] Dano Sandwich — Presentación:**
+"Hola Dano Sandwich! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los vemos en Instagram (@danosandwich.oficial) — sándwiches con delivery propio. Una propuesta directa: RepartoJusto puede sumar logística de riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o PedidosYa que cobran 28-30% de cada pedido, con nosotros el costo es siempre $500 — sin importar si el sándwich vale $4.000 o $10.000. Hoy es viernes, el primer fin de semana del mes más frío del año: el peak exacto de sándwiches en delivery en Chile. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
