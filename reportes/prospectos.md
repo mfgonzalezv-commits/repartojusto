@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-04
+**Actualizado:** 2026-07-05
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -18,14 +18,14 @@
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
-| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Julio 1 / es hoy" redactado 01/07 — PRIORIDAD GERENTE, en Rappi |
+| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Primer sábado de julio" redactado 05/07 — PRIORIDAD GERENTE, en Rappi |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
 | 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Arranque julio redactado 23/06 — ALTA PRIORIDAD |
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
-| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | "Julio 1 / es hoy" redactado 01/07 — PRIORIDAD GERENTE, tel. (32) 324 0504 |
+| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | "Primer sábado de julio" redactado 05/07 — PRIORIDAD GERENTE, tel. (32) 324 0504 |
 | 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — en Rappi+PedidosYa+Uber Eats, WhatsApp: +56 986749142 |
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
@@ -74,10 +74,44 @@
 | 68 | Comida China Fu Shun | Comida china | Santiago 715, Villa Alemana | Nuevo | — | Presentación redactada 03/07 — en Rappi, cocina china, julio peak comida china, ahorro ~$370K/mes |
 | 69 | Alemán Experto | Sandwichería / bar / restaurante | Villa Alemana (canal propio delivery.alemanexperto.cl) | Nuevo | — | Presentación redactada 04/07 — canal delivery propio, menú alemán-chileno fusión, contacto@alemanexperto.cl |
 | 70 | Dano Sandwich | Sandwichería | Villa Alemana (Instagram @danosandwich.oficial) | Nuevo | — | Presentación redactada 04/07 — canal Instagram propio, sin grandes plataformas detectadas |
+| 71 | Fresco Mar | Mariscos / cocina marina | Villa Alemana / Belloto / Quilpué (Instagram @frescomar.delivery) | Nuevo | — | Presentación redactada 05/07 — primer mariscos en el pipeline, peak invierno, canal propio Instagram |
+| 72 | SushiSun Villa Alemana | Sushi | D. Portales 1267, Villa Alemana (villaalemana.sushisun.cl) | Nuevo | — | Presentación redactada 05/07 — canal propio web, sushi ticket alto, primer sábado julio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-05)
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 5 de julio** — el primer fin de semana del mes más frío del año. Sábado invernal = escenario perfecto para delivery: frío + gente en casa + noche de fin de semana. Se redactan **4 mensajes**: (1) **"Primer sábado de julio"** para las 2 PRIORIDADES del Gerente que siguen sin confirmación de envío (#22 Sushi Point Delivery, tel. (32) 324 0504, y #15 Melt Pizzas — borradores previos del 01/07, hoy el ángulo de sábado es el mejor de la semana); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Fresco Mar (#71)** — único negocio de mariscos en el pipeline, delivery a Villa Alemana/Belloto/Quilpué por Instagram (@frescomar.delivery) — y **SushiSun Villa Alemana (#72)** — sushi con canal web propio en D. Portales 1267 (villaalemana.sushisun.cl). Pipeline total: **72 prospectos**.
+>
+> **RECORDATORIO:** #22 Sushi Point Delivery y #15 Melt Pizzas llevan borradores activos desde el 25/06 (11 días). Son las 2 prioridades del Gerente — un sábado de julio es el momento ideal para enviarlos.
+
+---
+
+#### "PRIMER SÁBADO DE JULIO" — Prioridades del Gerente (05/07)
+
+**[22] Sushi Point Delivery — Primer sábado de julio (05/07):**
+"Hola Sushi Point Delivery! RepartoJusto — hoy es sábado, el primer fin de semana de julio. El escenario ideal para sushi en delivery: frío máximo del invierno + noche de fin de semana + clientes en casa. Cada sábado de julio en Rappi, con sushi de $18.000 y 10 pedidos, pagan más de $50.000 en comisiones solo en ese día. En el mes, ese costo supera los $680.000. Con RepartoJusto son $225.000 al mes — $455.000 mensuales que se quedan en el negocio. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. ¿Este sábado arrancamos? repartojusto-production.up.railway.app | Tel: (32) 324 0504"
+
+---
+
+**[15] Melt Pizzas — Primer sábado de julio (05/07):**
+"Hola Melt Pizzas! RepartoJusto — hoy sábado, primer fin de semana de julio. La noche perfecta para pizza en delivery: frío de invierno + fin de semana + nadie quiere cocinar. Los números para Av. Valparaíso 1057: 10 pizzas de $12.000 en Rappi = ~$400.000 al mes en comisiones a la app (28%). Con RepartoJusto ese costo baja a $150.000 — $250.000 mensuales que se quedan en el negocio, desde el primer pedido. Sin contrato, registro completamente gratuito, pueden mantener Rappi y sumar RepartoJusto como canal local de menor costo. ¿Este fin de semana empezamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-05)
+
+**[71] Fresco Mar — Presentación:**
+"Hola Fresco Mar! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@frescomar.delivery) — mariscos y comida del mar con delivery a Villa Alemana, Belloto, Quilpué y la zona. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Julio es el mejor mes del año para mariscos en delivery: el frío invernal convierte una paila marina, un chupe o un caldillo en el plato de confort perfecto para pedir en casa. Un producto premium con peak claro en invierno. A diferencia de Rappi o Uber Eats que cobran 28-30% por pedido, con RepartoJusto el costo es siempre $500 — para un plato de $15.000, la diferencia son $3.750 que se quedan en el negocio por cada entrega. Hoy sábado, primer fin de semana de julio — el peak del año. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona, mismos clientes que los suyos. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[72] SushiSun Villa Alemana — Presentación:**
+"Hola SushiSun Villa Alemana! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en D. Portales 1267 con su propio sitio web (villaalemana.sushisun.cl) — sushi con canal directo bien montado. Una propuesta concreta: si trabajan con Rappi o Uber Eats, hoy pagan entre 28-30% de comisión por cada pedido. Con RepartoJusto el costo es $500 fijos por pedido entregado — sin porcentaje sobre la venta. Para un combo sushi de $14.000, la diferencia vs. Rappi (28%) son $3.420 que se quedan en el negocio por cada entrega. Hoy es sábado, el primer fin de semana de julio — el peak de sushi en delivery del año: el frío invernal convierte cada noche de fin de semana en el momento ideal para pedir sushi en casa. Con 15 entregas en julio, el ahorro mensual puede superar los $640.000. Sin contrato, registro completamente gratuito, pueden mantener sus plataformas actuales y sumar RepartoJusto como canal de menor costo. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
