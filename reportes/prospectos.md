@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-05
+**Actualizado:** 2026-07-06
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -11,9 +11,9 @@
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
@@ -76,10 +76,44 @@
 | 70 | Dano Sandwich | Sandwichería | Villa Alemana (Instagram @danosandwich.oficial) | Nuevo | — | Presentación redactada 04/07 — canal Instagram propio, sin grandes plataformas detectadas |
 | 71 | Fresco Mar | Mariscos / cocina marina | Villa Alemana / Belloto / Quilpué (Instagram @frescomar.delivery) | Nuevo | — | Presentación redactada 05/07 — primer mariscos en el pipeline, peak invierno, canal propio Instagram |
 | 72 | SushiSun Villa Alemana | Sushi | D. Portales 1267, Villa Alemana (villaalemana.sushisun.cl) | Nuevo | — | Presentación redactada 05/07 — canal propio web, sushi ticket alto, primer sábado julio |
+| 73 | Ramé Sushi Villa Alemana | Sushi | Villa Alemana (@rame.sushi.villaalemana, canal propio Instagram) | Nuevo | — | Presentación redactada 06/07 — delivery Ma-Sá 12:00-23:00, zona VA/Quilpué/Peñablanca, canal directo propio |
+| 74 | Hanasaki Sushi | Sushi | Peña Blanca / Villa Alemana (@hanasakisushi, canal propio Instagram) | Nuevo | — | Presentación redactada 06/07 — delivery Lu-Sá 12:00-22:30, zona Peña Blanca/VA/Quilpué, canal directo propio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-06)
+
+> **NOTA PARA MATÍAS:** Hoy es **domingo 6 de julio** — segundo día del primer fin de semana de julio. El domingo de invierno es el peak de delivery en negocios de reconfort: tortas familiares, café de once y postres calientes. Se redactan **4 mensajes**: (1) **"Domingo de julio"** para **#8 Pastelería Dulce Hogar** (el rubro más alineado al domingo familiar: tortas y pasteles de reunión) y **#10 Café El Árbol** (domingo + invierno + nadie quiere salir = peak perfecto de café delivery); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Ramé Sushi Villa Alemana (#73)** — sushi con canal propio Instagram (@rame.sushi.villaalemana), delivery Ma-Sá — y **Hanasaki Sushi (#74)** — sushi con canal propio Instagram (@hanasakisushi), zona Peña Blanca/Villa Alemana/Quilpué. Pipeline total: **74 prospectos**.
+>
+> **RECORDATORIO:** Los borradores más urgentes siguen siendo #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas — llevan 11 días con borradores activos. Lunes 07/07 es la próxima ventana ideal.
+
+---
+
+#### DOMINGO DE JULIO — Contactados sin mensaje fresco de julio (06/07)
+
+**[8] Pastelería Dulce Hogar — Domingo de julio (06/07):**
+"Hola Pastelería Dulce Hogar! De RepartoJusto — hoy es domingo de julio, el día más especial del año para tortas y pasteles en delivery: frío máximo de invierno + familia reunida en casa + el postre perfecto que nadie quiere salir a buscar al frío. Un número concreto: para una torta de $20.000, Rappi o Uber Eats cobran hasta $6.000 de comisión (28-30%) por pedido. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Con 10 pedidos de domingo en julio, el ahorro solo en ese día puede superar $170.000 al mes. Julio tiene 4 domingos — todos con el mismo peak. Sin contrato, registro completamente gratuito. ¿Este julio lo hacemos? repartojusto-production.up.railway.app"
+
+---
+
+**[10] Café El Árbol — Domingo de julio (06/07):**
+"Hola Café El Árbol! De RepartoJusto — hoy domingo de julio, el día en que nadie quiere salir al frío a buscar su café o desayuno. El escenario ideal para delivery de café y once: invierno + domingo en casa + la comodidad de pedir sin salir. Si trabajan con plataformas como Rappi o Uber Eats, cada pedido de $5.000 les cuesta hasta $1.400 en comisiones (28%). Con RepartoJusto son $500 fijos siempre. Con 15 pedidos en julio entre desayunos y onces, el ahorro puede superar los $350.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-06)
+
+**[73] Ramé Sushi Villa Alemana — Presentación:**
+"Hola Ramé Sushi! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@rame.sushi.villaalemana) — sushi delivery activo en Villa Alemana, Quilpué y Peñablanca con canal propio bien establecido. Una propuesta concreta: si trabajan con plataformas como Rappi o Uber Eats, hoy pagan entre 28-30% de comisión por cada pedido. Con RepartoJusto el costo es $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un combo o roll de $14.000, el ahorro vs. Rappi (28%) es $3.420 por cada entrega que se queda en el negocio. Julio es el peak absoluto de sushi delivery en Chile — las noches frías convierten cada fin de semana en el momento ideal para pedir sushi desde casa. Con 15 entregas diarias, el ahorro mensual puede superar los $640.000. Sin contrato, registro completamente gratuito, pueden mantener sus canales actuales y sumar RepartoJusto como logística local de menor costo. Somos 100% locales en la zona — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[74] Hanasaki Sushi — Presentación:**
+"Hola Hanasaki Sushi! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@hanasakisushi) — sushi delivery con cobertura en Peña Blanca, Villa Alemana y Quilpué, operación establecida y canal propio. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30% de comisión, con nosotros el costo es siempre $500, sin importar si el pedido vale $8.000 o $20.000. Para un roll de $12.000, el ahorro vs. Uber Eats (30%) son $3.100 por cada entrega que se queda en el negocio. Julio es el mejor mes del año para sushi delivery — el frío garantiza que los clientes prefieren pedir desde casa. Con 12 entregas diarias, el ahorro mensual puede superar los $460.000. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona — conocemos a sus clientes. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
