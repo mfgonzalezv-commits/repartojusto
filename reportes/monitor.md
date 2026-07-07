@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-07T00:00:00Z
+**Última verificación:** 2026-07-07T09:08:28Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del agente bloqueó la conexión saliente (HTTP 403 en el túnel CONNECT). No fue posible determinar si el servidor Railway está operativo. Revisar manualmente o desde una red sin restricciones.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del agente bloqueó la conexión saliente (HTTP 403 en el túnel CONNECT, curl error 56). No es posible determinar el estado real del servidor desde este entorno. Verificar manualmente o desde una red sin restricciones.
