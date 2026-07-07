@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-06
+**Actualizado:** 2026-07-07
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -78,10 +78,44 @@
 | 72 | SushiSun Villa Alemana | Sushi | D. Portales 1267, Villa Alemana (villaalemana.sushisun.cl) | Nuevo | — | Presentación redactada 05/07 — canal propio web, sushi ticket alto, primer sábado julio |
 | 73 | Ramé Sushi Villa Alemana | Sushi | Villa Alemana (@rame.sushi.villaalemana, canal propio Instagram) | Nuevo | — | Presentación redactada 06/07 — delivery Ma-Sá 12:00-23:00, zona VA/Quilpué/Peñablanca, canal directo propio |
 | 74 | Hanasaki Sushi | Sushi | Peña Blanca / Villa Alemana (@hanasakisushi, canal propio Instagram) | Nuevo | — | Presentación redactada 06/07 — delivery Lu-Sá 12:00-22:30, zona Peña Blanca/VA/Quilpué, canal directo propio |
+| 75 | Pollos On Fire | Pollos asados / comida rápida | Peñablanca / Villa Alemana (pollosonfire.cl, @pollosonfire) | Nuevo | — | Presentación redactada 07/07 — canal propio web+Instagram, pollo asado al carbón, ahorro ~$580K/mes vs. Uber Eats |
+| 76 | El Pollo Gordo | Pollería peruana | Av. Valparaíso 333, Villa Alemana | Nuevo | — | Presentación redactada 07/07 — pollería peruana con delivery activo, tel. +56981843232 |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-07)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 7 de julio** — primer lunes de la segunda semana del mes más frío del año. Lunes = inicio de semana laboral: los negocios hacen balance del fin de semana y están abiertos a conversaciones. Se redactan **4 mensajes**: (1) **"Lunes de julio"** para las 2 PRIORIDADES del Gerente que siguen sin confirmación de envío — **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** (borradores activos desde el 25/06, 12 días consecutivos con borradores distintos); (2) **presentaciones** para 2 nuevos prospectos de pollo asado encontrados hoy: **Pollos On Fire (#75)** — pollos asados al carbón en Peñablanca/Villa Alemana con canal propio (pollosonfire.cl + @pollosonfire) — y **El Pollo Gordo (#76)** — pollería peruana en Av. Valparaíso 333 con delivery activo, tel. +56981843232. Pipeline total: **76 prospectos**.
+>
+> **ACCIÓN URGENTE:** El Gerente marcó explícitamente el lunes 07/07 como la próxima ventana para enviar #22 y #15. Si se envían hoy quedan 3 semanas completas de julio por delante para hacer seguimiento con el peak invernal activo.
+
+---
+
+#### "LUNES DE JULIO" — Prioridades del Gerente (07/07)
+
+**[22] Sushi Point Delivery — Lunes 7 de julio (07/07):**
+"Hola Sushi Point Delivery! RepartoJusto — arranque de semana, segunda semana de julio. El peak de sushi en delivery está en su punto más alto del año: el frío de julio hace que cada noche sea el momento ideal para pedir desde casa. El número de este mes para ustedes: con sushi de $18.000 y 15 entregas diarias en Rappi (28%), pagan más de $680.000 al mes en comisiones — solo a Rappi. Con RepartoJusto ese costo baja a $225.000. Son $455.000 mensuales que se quedan en el negocio, no en la app. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo y probar. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. ¿Esta semana arrancamos? repartojusto-production.up.railway.app | Tel: (32) 324 0504"
+
+---
+
+**[15] Melt Pizzas — Lunes 7 de julio (07/07):**
+"Hola Melt Pizzas! RepartoJusto — comienzo de semana, segunda semana de julio. El frío de este mes es el mejor vendedor de pizzas del año: la gente prefiere pedir desde casa antes que salir al frío. El cálculo para Av. Valparaíso 1057: con 10 pizzas de $12.000 al día en Rappi (28%), pagan ~$400.000 al mes en comisiones a la app. Con RepartoJusto ese costo baja a $150.000 — $250.000 al mes que se quedan en el local, desde el primer pedido. Sin contrato, registro completamente gratuito, pueden mantener Rappi y sumar RepartoJusto como canal local de menor costo. ¿Esta semana empezamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-07)
+
+**[75] Pollos On Fire — Presentación:**
+"Hola Pollos On Fire! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@pollosonfire) y en pollosonfire.cl — pollos asados al carbón con canal propio bien montado en Peñablanca y Villa Alemana. Una propuesta concreta: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30% por pedido, con nosotros el costo es siempre $500 — sin importar si el pedido vale $8.000 o $20.000. Para un pollo entero con acompañamientos de $12.000, la diferencia vs. Uber Eats (30%) son $3.100 que se quedan en el negocio por cada entrega. Julio es el peak absoluto del pollo asado en delivery: el frío invernal convierte un pollo al carbón caliente a domicilio en el pedido perfecto para la familia. Con 15 entregas diarias, el ahorro mensual puede superar los $580.000. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[76] El Pollo Gordo — Presentación:**
+"Hola El Pollo Gordo! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Av. Valparaíso 333 — pollería peruana con delivery activo en Villa Alemana. Una propuesta directa: RepartoJusto puede apoyar sus entregas con riders locales por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o PedidosYa que cobran 28-30% por pedido, con nosotros el costo es siempre $500 — sin importar si el pedido vale $6.000 o $18.000. Para un pollo entero peruano de $10.000, la diferencia vs. una plataforma grande (28%) son $2.300 que se quedan en el negocio por cada entrega. Julio es el peak del pollo asado en delivery: con el frío del invierno, la gente prefiere pedir un pollo caliente desde casa antes que salir al frío. Con 10 entregas diarias, el ahorro mensual puede superar los $370.000. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Conversamos? (Tel: +56981843232)"
 
 ---
 
