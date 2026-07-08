@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-07
+**Actualizado:** 2026-07-08
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -80,10 +80,44 @@
 | 74 | Hanasaki Sushi | Sushi | Peña Blanca / Villa Alemana (@hanasakisushi, canal propio Instagram) | Nuevo | — | Presentación redactada 06/07 — delivery Lu-Sá 12:00-22:30, zona Peña Blanca/VA/Quilpué, canal directo propio |
 | 75 | Pollos On Fire | Pollos asados / comida rápida | Peñablanca / Villa Alemana (pollosonfire.cl, @pollosonfire) | Nuevo | — | Presentación redactada 07/07 — canal propio web+Instagram, pollo asado al carbón, ahorro ~$580K/mes vs. Uber Eats |
 | 76 | El Pollo Gordo | Pollería peruana | Av. Valparaíso 333, Villa Alemana | Nuevo | — | Presentación redactada 07/07 — pollería peruana con delivery activo, tel. +56981843232 |
+| 77 | Miti Mota Villa Alemana | Sandwichería / comida rápida | Santa Ana 2-22, Villa Alemana | Nuevo | — | Presentación redactada 08/07 — en Rappi + Uber Eats, 10+ años, completos y sándwiches peak julio, web miti-mota.cl |
+| 78 | Terraza Florencia | Restaurante / comida chilena | Av. Valparaíso 180, Villa Alemana | Nuevo | — | Presentación redactada 08/07 — en Rappi + web propia terrazza.cl + Instagram @terrazaflorencia.cl, tel. +56 9 9032 6724 |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-08)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 8 de julio** — segunda semana del mes más frío del año. Los martes de julio son el arranque de la semana activa: el frío ya está instalado, los negocios hacen balance del fin de semana y están abiertos a conversar. Se redactan **4 mensajes**: (1) **"Martes de julio"** para las 2 PRIORIDADES del Gerente — **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** — que llevan **13 días consecutivos con borradores activos sin confirmación de envío**; (2) **presentaciones** para 2 nuevos prospectos encontrados hoy en Rappi + Uber Eats: **Miti Mota Villa Alemana (#77)** — sandwichería clásica con más de 10 años en Santa Ana 2-22, en Rappi + Uber Eats, completos y sándwiches (peak julio) — y **Terraza Florencia (#78)** — restaurante en Av. Valparaíso 180, en Rappi con canal propio terrazza.cl + @terrazaflorencia.cl. Pipeline total: **78 prospectos**.
+>
+> **ACCIÓN URGENTE:** Los borradores de #22 y #15 llevan 13 días consecutivos activos. Son la prioridad establecida por el Gerente — enviarlos esta semana.
+
+---
+
+#### "MARTES DE JULIO" — Prioridades del Gerente (08/07)
+
+**[22] Sushi Point Delivery — Martes de julio (08/07):**
+"Hola Sushi Point Delivery! RepartoJusto — martes 8 de julio, segunda semana del mes más frío del año. Los martes de julio son el arranque de la semana con más demanda de delivery sostenida: el frío ya está asentado, los clientes están en modo 'pedir en casa' hasta el domingo. El cálculo sigue igual y cada semana que pasa lo confirma: con sushi de $18.000 y 15 entregas diarias en Rappi (28%), pagan más de $680.000 al mes solo a la app. Con RepartoJusto ese costo baja a $225.000 — $455.000 mensuales que se quedan en el negocio. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. ¿Esta semana damos el paso? repartojusto-production.up.railway.app | Tel: (32) 324 0504"
+
+---
+
+**[15] Melt Pizzas — Martes de julio (08/07):**
+"Hola Melt Pizzas! RepartoJusto — martes 8 de julio, segunda semana del mes más frío. El frío ya está instalado y los pedidos de pizza en delivery son consistentes toda la semana — no solo los fines de semana. El número para Av. Valparaíso 1057: con 10 pizzas de $12.000 al día en Rappi (28%), pagan ~$400.000 al mes en comisiones a la app. Con RepartoJusto ese costo baja a $150.000 — $250.000 al mes que se quedan en el local, desde el primer pedido. Sin contrato, registro completamente gratuito, pueden mantener Rappi y sumar RepartoJusto como canal local de menor costo. ¿Esta semana empezamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-08)
+
+**[77] Miti Mota Villa Alemana — Presentación:**
+"Hola Miti Mota! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi y Uber Eats — sandwichería y fuente de soda con más de 10 años en Santa Ana 2-22: uno de los locales más establecidos del rubro en Villa Alemana. Una propuesta directa: si están en Rappi + Uber Eats, hoy pagan comisión del 28-30% en ambas plataformas por cada pedido. Para un sándwich o completo de $5.000, eso son entre $1.400 y $1.500 que se van a la app por cada entrega — en cada una de las dos. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el valor. Julio es el peak absoluto de completos y sándwiches en Chile: el frío hace que los clientes prefieran pedir desde casa. Con 20 entregas diarias, el ahorro vs. Rappi puede superar los $280.000 al mes — y si se bajan de una de las dos plataformas grandes, la diferencia es mucho mayor. Sin contrato, registro completamente gratuito, pueden mantener sus canales y sumar RepartoJusto. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[78] Terraza Florencia — Presentación:**
+"Hola Terraza Florencia! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Av. Valparaíso 180 — restaurante con presencia activa en delivery y canal propio (terrazza.cl + @terrazaflorencia.cl). Una propuesta concreta: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi que cobra 28% de comisión por cada pedido, con nosotros el costo es siempre $500 — sin importar si el pedido vale $8.000 o $25.000. Para un plato de $15.000, la diferencia vs. Rappi (28%) son $3.700 que se quedan en el negocio por cada entrega. Julio es peak de delivery de restaurantes: el frío invernal hace que los clientes prefieran pedir en casa antes que salir al frío. Sin contrato, registro completamente gratuito, pueden mantener Rappi y sumar RepartoJusto como canal de menor costo con sus propios clientes. Somos 100% locales en Villa Alemana, igual que ustedes. repartojusto-production.up.railway.app ¿Hablamos? (Tel: +56 9 9032 6724)"
 
 ---
 
