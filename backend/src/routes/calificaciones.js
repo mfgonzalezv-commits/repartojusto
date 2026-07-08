@@ -3,6 +3,24 @@ const { body, validationResult } = require('express-validator');
 const { query: db } = require('../config/database');
 const { auth, solo } = require('../middleware/auth');
 
+// Máximo 5 calificaciones por IP cada 15 minutos (previene spam de ratings)
+const califRateLimitStore = new Map();
+const califRateLimit = (req, res, next) => {
+  const ip = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  const windowMs = 15 * 60 * 1000;
+  const entry = califRateLimitStore.get(ip);
+  if (entry && now - entry.first < windowMs) {
+    if (entry.count >= 5) {
+      return res.status(429).json({ error: 'Demasiados intentos. Intenta en unos minutos.' });
+    }
+    entry.count++;
+  } else {
+    califRateLimitStore.set(ip, { count: 1, first: now });
+  }
+  next();
+};
+
 // Feriados fijos chilenos (MM-DD)
 const FERIADOS_FIJOS = ['01-01','05-01','05-21','06-29','08-15','09-18','09-19',
   '10-12','10-31','11-01','12-08','12-25'];
@@ -21,6 +39,7 @@ function esFeriado(fecha) {
 // ── POST /api/calificaciones ──────────────────────────────────────────────
 // Negocio o cliente califican a un rider por un pedido
 router.post('/',
+  califRateLimit,
   [
     body('pedido_id').isUUID(),
     body('tipo').isIn(['negocio','cliente']),
@@ -228,7 +247,8 @@ async function calcularScore(riderId) {
 }
 
 // ── GET /api/calificaciones/rider/:id/score ───────────────────────────────
-router.get('/rider/:id/score', async (req, res, next) => {
+// Solo admin: los riders usan /mi-score; métricas internas no deben ser públicas
+router.get('/rider/:id/score', auth, solo('admin'), async (req, res, next) => {
   try {
     const data = await calcularScore(req.params.id);
     if (!data) return res.status(404).json({ error: 'Rider no encontrado' });

@@ -46,7 +46,8 @@ app.use(helmet({
   crossOriginResourcePolicy: false,
   contentSecurityPolicy: false   // los frontends usan scripts inline
 }));
-app.use(cors({ origin: '*', credentials: false }));
+// Usar CORS_ORIGIN del entorno; en producción debe estar configurado explícitamente
+app.use(cors({ origin: config.CORS_ORIGIN, credentials: false }));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
