@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-08
+**Actualizado:** 2026-07-09
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -10,11 +10,11 @@
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
@@ -82,10 +82,44 @@
 | 76 | El Pollo Gordo | Pollería peruana | Av. Valparaíso 333, Villa Alemana | Nuevo | — | Presentación redactada 07/07 — pollería peruana con delivery activo, tel. +56981843232 |
 | 77 | Miti Mota Villa Alemana | Sandwichería / comida rápida | Santa Ana 2-22, Villa Alemana | Nuevo | — | Presentación redactada 08/07 — en Rappi + Uber Eats, 10+ años, completos y sándwiches peak julio, web miti-mota.cl |
 | 78 | Terraza Florencia | Restaurante / comida chilena | Av. Valparaíso 180, Villa Alemana | Nuevo | — | Presentación redactada 08/07 — en Rappi + web propia terrazza.cl + Instagram @terrazaflorencia.cl, tel. +56 9 9032 6724 |
+| 79 | Bravatta Italiana | Restaurante italiano | Santiago 550, Villa Alemana | Nuevo | — | Presentación redactada 09/07 — en Rappi, primer italiano del pipeline, pasta/risotto peak confort julio |
+| 80 | Rincón Peruano | Comida peruana | Av. Valparaíso 1415, Villa Alemana | Nuevo | — | Presentación redactada 09/07 — en Rappi, comida peruana caliente peak julio, ahorro ~$380K/mes |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-09)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 9 de julio** — mitad de la segunda semana de julio, el mes más frío del año. El miércoles invernal es el día de mayor volumen sostenido de la semana: el frío ya está instalado, los clientes están en modo delivery toda la semana. Se redactan **4 mensajes**: (1) **"Miércoles de julio"** para 2 Contactados sin mensaje fresco desde el 22/06 (17 días) — **#7 Minimercado La Esquina** (almacén/minimarket, Lynch 445, ángulo canastas básicas en invierno) y **#11 Veterinaria Huellitas** (veterinaria, Av. Álvarez 3200, ángulo alimentos y accesorios para mascotas en invierno); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy en Rappi: **Bravatta Italiana (#79)** — primer restaurante italiano del pipeline, Santiago 550, pasta y comida de confort peak invierno — y **Rincón Peruano (#80)** — comida peruana, Av. Valparaíso 1415, lomo saltado y ceviche caliente en pleno julio. Pipeline total: **80 prospectos**.
+>
+> **RECORDATORIO:** Los borradores más urgentes siguen siendo **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** — llevan **14 días consecutivos con borradores activos sin confirmación de envío**. Enviar esta semana.
+
+---
+
+#### "MIÉRCOLES DE JULIO" — Contactados sin mensaje fresco (09/07)
+
+**[7] Minimercado La Esquina — Miércoles de julio (09/07):**
+"Hola Minimercado La Esquina! De RepartoJusto — miércoles 9 de julio, plena mitad de la semana del mes más frío del año. En julio la gente prefiere pedir lo básico por delivery antes de salir al frío: abarrotes, lácteos, bebidas, lo de todos los días. Si trabajan con plataformas que cobran porcentaje, cada pedido de $8.000 les cuesta hasta $2.240 en comisiones (28%). Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el monto. Para 10 entregas diarias, el ahorro puede superar los $220.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[11] Veterinaria Huellitas — Miércoles de julio (09/07):**
+"Hola Veterinaria Huellitas! De RepartoJusto — miércoles de julio. El frío intenso de este mes hace que los dueños de mascotas prefieran recibir alimento, accesorios y medicamentos en casa antes de salir con sus peludos al frío. Si hoy entregan por plataformas de porcentaje, cada bolsa de alimento de $15.000 les cuesta hasta $4.200 en comisiones (28%). Con RepartoJusto son $500 fijos por pedido, sin importar el valor. Para 8 entregas diarias en julio, el ahorro puede superar los $270.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — el negocio y los clientes son del mismo barrio. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-09)
+
+**[79] Bravatta Italiana — Presentación:**
+"Hola Bravatta Italiana! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Santiago 550 — restaurante italiano con delivery activo en Villa Alemana. Propuesta directa: Rappi cobra 28% de comisión por cada pedido. Para una pasta o risotto de $12.000, eso son $3.360 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Julio es el mes perfecto para comida italiana en delivery: el frío invernal convierte un plato de pasta o lasaña caliente en el pedido ideal para una noche en casa. Con 10 entregas diarias en julio, el ahorro vs. Rappi puede superar los $430.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo y probar. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[80] Rincón Peruano — Presentación:**
+"Hola Rincón Peruano! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Av. Valparaíso 1415 — comida peruana con delivery activo en Villa Alemana. Una propuesta concreta: Rappi cobra 28% de comisión por cada pedido. Para un lomo saltado o ceviche de $11.000, eso son $3.080 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre. Julio es el peak de comida peruana caliente en delivery: el frío invernal hace que los clientes prefieran un lomo saltado humeante a domicilio antes que salir al frío. Con 12 entregas diarias, el ahorro vs. Rappi puede superar los $380.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 

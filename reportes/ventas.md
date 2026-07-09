@@ -1,24 +1,37 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-07-08 (martes — segunda semana de julio)
-**Pipeline total:** 78 prospectos
-**Por estado:** Nuevos: 64 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-07-09 (miércoles — segunda semana de julio)
+**Pipeline total:** 80 prospectos
+**Por estado:** Nuevos: 66 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
-- Leídos cola.md e investigador.md: argumentos activos incorporados — Uber/Delivery Hero (US$11.600M compra dueña PedidosYa, incertidumbre 12-18 meses), FNE doble multa + TDLC activo para prospectos PedidosYa, peak invernal julio como vector de conversión, argumento "micro-placer predecible con tarifa fija"
-- Redactados 4 borradores: "Martes de julio" para las 2 PRIORIDADES del Gerente (#22 Sushi Point Delivery, tel. (32) 324 0504, y #15 Melt Pizzas) + presentaciones para 2 nuevos prospectos encontrados en Rappi y Uber Eats
-- Agregados al pipeline: #77 Miti Mota Villa Alemana (sandwichería clásica 10+ años, Rappi + Uber Eats, Santa Ana 2-22) y #78 Terraza Florencia (restaurante Av. Valparaíso 180, Rappi + web propia terrazza.cl + @terrazaflorencia.cl)
+
+### Argumentos incorporados desde cola.md / Investigador
+- Argumento FNE reforzado con ángulo TDLC vigente: PedidosYa en juicio ante el TDLC negando multa US$3,8M — prolonga ciclo de noticias todo el segundo semestre.
+- Argumento Uber/Delivery Hero (US$11.600M) activo para los 5 prospectos en PedidosYa (#27, #28, #30, #33, #60). Ya incorporado en semanas anteriores, sigue vigente.
+- Peak invernal de julio capitalizado en todos los mensajes de hoy.
+
+### Seguimientos redactados (Contactados sin mensaje reciente)
+- **#7 Minimercado La Esquina** (Lynch 445) — "Miércoles de julio": ángulo canastas básicas en invierno, ahorro ~$220K/mes. Último mensaje: 22/06 (17 días).
+- **#11 Veterinaria Huellitas** (Av. Álvarez 3200) — "Miércoles de julio": ángulo alimento y accesorios para mascotas en invierno, ahorro ~$270K/mes. Último mensaje: 22/06 (17 días).
+
+### Nuevos prospectos agregados hoy
+- **#79 Bravatta Italiana** — Rappi, Santiago 550, Villa Alemana. Primer restaurante italiano del pipeline. Pasta/risotto = comida de confort peak julio. Ahorro estimado ~$430K/mes vs. Rappi.
+- **#80 Rincón Peruano** — Rappi, Av. Valparaíso 1415, Villa Alemana. Comida peruana caliente (lomo saltado, ceviche). Ahorro estimado ~$380K/mes vs. Rappi.
 
 ## Borradores listos para Matías
-1. **[22] Sushi Point Delivery** — "Martes 8 de julio" — PRIORIDAD GERENTE — 13 días consecutivos con borradores activos — ahorro estimado $455K/mes vs. Rappi — tel. (32) 324 0504
-2. **[15] Melt Pizzas** — "Martes 8 de julio" — PRIORIDAD GERENTE — 13 días consecutivos con borradores activos — ahorro estimado $250K/mes vs. Rappi — Rappi Av. Valparaíso 1057
-3. **[77] Miti Mota Villa Alemana** — Presentación — Sandwichería 10+ años — en Rappi + Uber Eats — Santa Ana 2-22 — completos/sándwiches peak julio — ahorro $280K+/mes vs. Rappi solo
-4. **[78] Terraza Florencia** — Presentación — Restaurante — Av. Valparaíso 180 — en Rappi + canal propio terrazza.cl — tel. +56 9 9032 6724 — ahorro $3.700/pedido de $15.000 vs. Rappi (28%)
+4 mensajes redactados hoy, todos en prospectos.md sección "MENSAJES DEL DÍA (2026-07-09)":
+1. **#7 Minimercado La Esquina** — seguimiento miércoles de julio (almacén, Lynch 445)
+2. **#11 Veterinaria Huellitas** — seguimiento miércoles de julio (veterinaria, Av. Álvarez 3200)
+3. **#79 Bravatta Italiana** — presentación (restaurante italiano, Rappi, Santiago 550)
+4. **#80 Rincón Peruano** — presentación (comida peruana, Rappi, Av. Valparaíso 1415)
+
+**PRIORIDAD CRÍTICA — llevan 14 días consecutivos con borradores activos sin confirmación:**
+- **#22 Sushi Point Delivery** (tel. (32) 324 0504) — borradores desde 25/06
+- **#15 Melt Pizzas** — borradores desde 25/06
 
 ## Nuevos prospectos agregados
-| # | Negocio | Rubro | Dirección | Argumento clave |
-|---|---|---|---|---|
-| 77 | Miti Mota Villa Alemana | Sandwichería / comida rápida | Santa Ana 2-22, Villa Alemana | 10+ años de trayectoria — en Rappi + Uber Eats (comisión doble) — completos y sándwiches con peak absoluto en julio — web propia miti-mota.cl |
-| 78 | Terraza Florencia | Restaurante / comida chilena | Av. Valparaíso 180, Villa Alemana | En Rappi (28%) + canal propio terrazza.cl + @terrazaflorencia.cl — restaurante establecido — ahorro $3.700 por pedido de $15K vs. Rappi — tel. +56 9 9032 6724 |
+1. **Bravatta Italiana** — Restaurante italiano, Rappi, Santiago 550, Villa Alemana
+2. **Rincón Peruano** — Comida peruana, Rappi, Av. Valparaíso 1415, Villa Alemana
 
 ## Para el Gerente
-Pipeline en 78 prospectos (64 nuevos, 14 contactados, 0 registrados); borradores "Martes de julio" redactados para las 2 prioridades del Gerente (#22 Sushi Point y #15 Melt Pizzas) — llevan 13 días consecutivos con borradores activos sin confirmación de envío — esta semana es la ventana más concreta del mes para que Matías los envíe con el peak invernal en máximo.
+Pipeline en 80 prospectos (66 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy — seguimientos "Miércoles de julio" para #7 Minimercado La Esquina y #11 Veterinaria Huellitas (sin mensaje desde 22/06, 17 días) + presentaciones para los 2 nuevos: Bravatta Italiana (primer italiano del pipeline, Rappi) y Rincón Peruano (comida peruana, Rappi); cuello de botella crítico: 62 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline — #22 Sushi Point Delivery y #15 Melt Pizzas llevan 14 días consecutivos con borradores activos sin envío confirmado.
