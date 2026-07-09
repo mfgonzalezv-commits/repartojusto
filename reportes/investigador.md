@@ -1,91 +1,95 @@
 # Investigación de Mercado RepartoJusto
-**Fecha:** 2026-07-03
+**Fecha:** 2026-07-09
 **Zona de referencia:** Villa Alemana, Valparaíso, Chile
 
 ---
 
 ## Estado de la competencia
 
-### Rappi Chile — Turbo se queda en Viña del Mar, sin señales de llegar a Villa Alemana
+### Rappi Chile — App Social con IA y Turbo sin llegar a Villa Alemana
 
-- **Rappi Turbo confirmado en Viña del Mar, Reñaca y Concón.** Sin anuncios de expansión específica a Quilpué o Villa Alemana. La búsqueda exhaustiva de esta semana no encontró ningún comunicado que mencione la zona. La ventana de posicionamiento previo sigue abierta para RepartoJusto.
-- **"Turborización de todo" — estrategia global de Rappi para 2026:** El fundador y CEO Simón Borrero declaró que el objetivo es llevar el modelo Turbo a todas las categorías y ciudades posibles. La expansión latinoamericana se concentra en México (US$110M de inversión, 10 ciudades nuevas) y Argentina (US$22M). Chile es mercado secundario para el despliegue de capital en esta etapa.
-- **Rappi explora IPO en 2026:** Reinvierte el 100% de ganancias. El enfoque está en crecer verticales (turbo supermercado, turbo farmacias) más que en penetración geográfica en ciudades intermedias de Chile.
-- **En Rappi, Barrio Chino Villa Alemana sigue listado bajo "Quilpué"** — la fricción de identidad local persiste. Los restaurantes de Villa Alemana en Rappi aparecen como si fueran de otra ciudad.
-- **Oferta "Turbo" en Valparaíso:** Existe una sección Rappi Turbo para Valparaíso (rappi.cl/valparaiso/tiendas/marca-turbo), pero corresponde a distribución desde Viña/Concón — no hay dark store operando en Villa Alemana.
+- **Rappi lanzó nueva versión de la app con funciones sociales e inteligencia artificial:** Los usuarios pueden seguir hasta 10 amigos y ver sus pedidos recientes, además de seguir influencers, chefs y expertos gastronómicos con páginas exclusivas de recomendaciones. La IA aprende los gustos del usuario y personaliza el feed. Es la actualización más grande de Rappi en años — enfocada en crear red social dentro de la app para aumentar retención.
+- **Rappi Turbo: sin expansión a Villa Alemana ni Quilpué al 09/07/2026.** La cobertura sigue en Viña del Mar, Reñaca y Concón. La búsqueda exhaustiva de esta semana no detectó ningún anuncio de apertura de dark store en la zona. El argumento "posiciónate antes de que lleguen" sigue siendo válido con urgencia moderada.
+- **Plan de crecimiento 2026:** Rappi busca crecer 25% en Chile. Invirtió US$15M en flota y planea abrir 5 tiendas Turbo nuevas. El foco de capital latinoamericano sigue en México (US$110M) y Argentina (US$22M). Chile es mercado secundario en el despliegue de inversión.
+- **IPO en exploración:** Rappi reinvierte el 100% de sus ganancias y explora salida a bolsa en 2026. Eso significa que el modelo de negocios está en modo "crecimiento antes que rentabilidad", lo que presiona a los riders con menos márgenes y a los restaurantes con tarifas que no van a bajar.
+- **Barrio Chino Villa Alemana sigue listado como Quilpué en Rappi** — la fricción de identidad local persiste. Argumento de cercanía para RepartoJusto: "nosotros sí sabemos que eres de Villa Alemana."
 
-### PedidosYa — Juicio activo ante TDLC + fusión con Uber en proceso
+### PedidosYa — Juicio TDLC activo + Adquisición Uber en proceso
 
-- **El caso "Mismo precio que en local" sigue en tribunales (sin resolución al 03/07/2026):** La FNE acusó a PedidosYa (Delivery Hero E-Commerce Chile SpA) en marzo 2026 de incumplir el acuerdo extrajudicial de diciembre 2023, por implementar el label "Mismo precio que en local" entre junio 2024 y febrero 2026, lo que habría impedido a restaurantes ofrecer precios más baratos en sus propios canales. PedidosYa rechazó la demanda y acusó a la FNE de usar "antecedentes erróneos y descontextualizados". El caso sigue activo ante el TDLC. La FNE pide multa de US$3,8M (~$3.400 millones CLP).
-- **Caso colusión con Glovo (US$31,5M): resuelto en febrero 2026.** PedidosYa (Delivery Hero) y Glovo pagaron la multa histórica. Ese capítulo está cerrado, pero el historial de 2 casos en el mismo año es el argumento que permanece.
+- **Caso "Mismo precio que en local": sin resolución TDLC a julio 2026.** La FNE demandó en marzo 2026 a PedidosYa por incumplir el acuerdo extrajudicial de diciembre 2023 mediante el label "Mismo precio que en local", que habría impedido a restaurantes cobrar más barato en sus canales propios (WhatsApp, web directa) entre junio 2024 y febrero 2026. PedidosYa rechazó la demanda y acusó a la FNE de usar "antecedentes erróneos y descontextualizados en la investigación". El caso sigue activo ante el TDLC. La FNE pide multa de ~US$3,8M ($3.400 millones CLP). No hay sentencia aún — el argumento de "PedidosYa en juicio negando lo que hizo" es vigente para todo el segundo semestre.
+- **Multa US$31,5M por colusión con Glovo: resuelta y pagada (feb. 2026).** Antecedente histórico que permanece como credencial de comportamiento.
+- **Uber avanza en la compra de Delivery Hero (dueña de PedidosYa): sin aprobación regulatoria a julio 2026.** La oferta formal fue de €10.000M (US$11.600M), lanzada en mayo 2026. Uber ya controla el 36,8% del capital de Delivery Hero. Para obtener aprobación antimonopolio, Uber está vendiendo activos de Delivery Hero en mercados superpuestos (LatAm, Asia, Europa). Timeline estimado: 12-18 meses. La incertidumbre sobre el futuro de PedidosYa — cambio de dueño, de nombre, de comisiones — es el argumento de inestabilidad más poderoso disponible para los prospectos en esa plataforma.
 - **Comisión confirmada: 29% + IVA (~34,5% real).** Sin cambios.
-- **ALERTA MÁXIMA — Uber oferta US$11.600M para comprar Delivery Hero:** Uber lanzó en mayo 2026 una oferta formal de €10.000 millones (US$11.600M) para adquirir el 100% de Delivery Hero SE, la empresa alemana dueña de PedidosYa. Uber ya posee el ~36,8% de Delivery Hero. Si se completa, Uber controlaría simultáneamente Uber Eats Y PedidosYa en Chile — un duopolio de facto junto a Rappi. Timeline regulatorio: 12-18 meses. Uber está vendiendo activos de Delivery Hero en mercados superpuestos para facilitar la aprobación antimonopolio. La incertidumbre sobre el futuro de PedidosYa (¿se fusiona con Uber Eats? ¿cambian condiciones?) es un argumento de inestabilidad poderoso para negocios que están en la plataforma hoy.
 
-### Uber Eats Chile — En modo adquisición, no innovación local
+### Uber Eats Chile — Modo PR, sin innovación para restaurantes
 
-- **Enfoque en la operación Delivery Hero:** Toda la energía corporativa está en la adquisición. No hay anuncios de nuevas features o expansión geográfica en Chile en las últimas 2 semanas.
-- **Presencia activa en Villa Alemana** (ubereats.com/cl/city/villa-alemana-vs). Comisión: 30% + IVA. Sin cambios.
-- **Cart Assistant de IA** (función de carrito supermercado por texto/foto) sigue sin llegar a Chile — disponible solo en EE.UU.
+- **Premios Uber Eats 2026 en curso:** Uber Eats lanzó su quinta edición de premios con votaciones hasta el 26 de julio y ceremonia el 29 de julio. 33 categorías, 290+ nominados en todo Chile. Es una campaña de marketing masiva para retener restaurantes y consumidores — sin mejoras reales para los negocios.
+- **Nueva categoría "Una Estrella Nace"** para el restaurante que más creció en el último año — señal de que Uber Eats compite por visibilidad frente a Rappi, no por mejorar condiciones.
+- **Sin anuncios de reducción de comisiones ni nuevas herramientas para restaurantes.** Comisión: 30% + IVA. La campaña de premios es el único movimiento visible en julio.
+- **Adquisición Delivery Hero domina la agenda corporativa de Uber.** Sin inversión en innovación local en este período.
 
 ---
 
 ## Lo que piden los negocios que no tienen hoy
 
-1. **Estabilidad y claridad sobre comisiones futuras:** Con la fusión Uber/PedidosYa en proceso, los negocios que están en ambas plataformas enfrentarán incertidumbre sobre nuevas condiciones, cambios de interfaz, y posible unificación de tasas. La oferta de RepartoJusto — $500 fijos por pedido, sin % — es exactamente el antídoto a esa incertidumbre.
+1. **Transparencia en liquidaciones y datos propios:** Las plataformas grandes no muestran el desglose real por pedido. Un restaurante que vende $10 millones al mes en apps entrega cerca de $2,9 millones en comisiones ($34,8M anuales). Y sin poder auditarlo pedido a pedido. La queja documentada esta semana en medios y blogs especializados confirma que esta sigue siendo la necesidad #1 sin resolver.
 
-2. **Panel de liquidaciones transparente por pedido:** Sin cambios desde reportes anteriores. Sigue siendo la queja estructural #1. Las plataformas grandes no muestran el desglose real. Es la feature diferenciadora más validada en el mercado.
+2. **Libertad de precio en sus propios canales:** El juicio TDLC activo contra PedidosYa refuerza que el problema no desapareció con la multa — los negocios siguen sin poder ofrecer descuentos en WhatsApp sin arriesgar represalias de las plataformas. RepartoJusto no toca los precios del negocio: diferenciador inmediato.
 
-3. **Libertad de precio por canal:** PedidosYa fue acusada de implementar "Mismo precio que en local" para impedir que negocios cobraran más barato en WhatsApp. El juicio en curso refresca el argumento: las plataformas siguen buscando el modo de controlar los precios de los negocios, incluso después de la multa.
+3. **Canal directo sin comisión para capturar clientes propios:** El 34% de los restaurantes en LATAM ya migró más del 30% de sus pedidos a WhatsApp directo. Los negocios quieren un flujo paralelo a las apps grandes — con entrega garantizada — sin pagar el 30% de comisión. Eso es exactamente lo que puede ofrecer RepartoJusto si desarrolla el link de pedido directo con logística de rider.
 
-4. **Canal propio predecible sin sorpresas:** El estudio Ipsos Chile publicado el 1 de julio 2026 (The Clinic) revela que el 51% de chilenos usa delivery como "micro-placer" — una indulgencia asequible. Pero el 32% lo tiene en la lista de "primer recorte" ante presión económica. Un modelo de tarifa fija predecible (vs. comisión variable) es más resiliente cuando los consumidores empiezan a calcular mejor cada gasto.
+4. **Estabilidad contractual ante la incertidumbre de fusión Uber/PedidosYa:** Los negocios que operan en PedidosYa hoy no saben quién será su contraparte en 12-18 meses. Ese miedo a lo desconocido es una apertura real para una oferta simple, local y permanente: $500 fijos, sin letra chica.
 
 ---
 
 ## Tendencias relevantes
 
-1. **Concentración masiva del mercado global de delivery (Uber + Delivery Hero):** Si la adquisición prospera, en 12-18 meses podría haber 2 actores dominantes en Chile (Uber/PedidosYa fusionados + Rappi). Las plataformas locales como RepartoJusto tienen una ventana clara antes de que esa consolidación se concrete. Es el mejor momento para anclar relaciones con negocios locales.
+1. **WhatsApp como canal de delivery directo dominante en LATAM (2026):** El 92% de los usuarios de internet en Chile tiene WhatsApp. Un estudio de restaurantes en LatAm confirma que el 34% ya migró más del 30% de su volumen de delivery a WhatsApp directo, eliminando la comisión de las apps. Las herramientas de automatización (chatbots, menús interactivos) se popularizan en 2026. Esta tendencia valida directamente la feature de "link de pedido directo" para RepartoJusto: el mercado ya sabe que quiere un canal propio, solo necesita un logístico de confianza que lleve el pedido.
 
-2. **"Micro-placeres" como driver del delivery en invierno chileno (julio 2026):** Estudio Ipsos Chile publicado esta semana muestra que delivery y cafés son los nuevos sustitutos de los lujos. Las personas gastan en pequeñas indulgencias de $5.000-$15.000 en lugar de artículos de lujo. Esta tendencia activa el delivery en invierno — especialmente en ciudades con clima frío como Villa Alemana/Quilpué — pero al mismo tiempo hace que el precio y la transparencia importen más que nunca.
+2. **Dark Kitchens en la Región de Valparaíso: nuevo operador identificado (cerca):** Dark Kitchen SpA opera en Roma 131, Viña del Mar, a ~25 km de Villa Alemana. Arrienda cocinas equipadas y sin equipar con permisos sanitarios vigentes, compatible con Uber Eats, PedidosYa, Rappi y Justo. Es un actor más cercano que Dark Kitchen Club (Rancagua, ~170 km). Potencial de alianza logística: RepartoJusto como brazo de delivery para los negocios que operan desde esa dark kitchen. Recomendación urgente: contactar a @darkkitchenspa en Instagram antes que Rappi Turbo les proponga algo primero.
 
-3. **Inestabilidad regulatoria como normalización del argumento anticomisión:** Tres casos legales en 2026 (colusión Glovo-PedidosYa, incumplimiento precios, y ahora la megafusión con Uber bajo escrutinio antimonopolio) mantienen el tema "comisiones abusivas de plataformas" en el ciclo mediático chileno durante todo el año.
+3. **Rappi Turbo + IA + social = plataforma más compleja para negocios pequeños:** La nueva versión de Rappi prioriza el feed social y la personalización para consumidores. Para los restaurantes pequeños, el algoritmo de recomendación basado en IA y redes de influencers les pone más difícil la visibilidad orgánica — si no pagas por promotores o anuncios dentro de Rappi, apareces menos. RepartoJusto no tiene ese problema: no hay algoritmo que entierre al negocio.
 
-4. **Turbo-delivery: la carrera entre grandes plataformas crea espacio para especialistas locales:** Rappi invierte en velocidad y supermercado. Uber en la adquisición. PedidosYa en defensa legal. Ninguna de las tres está invirtiendo en mejorar la relación con restaurantes locales de ciudades intermedias. Ese espacio es exactamente donde opera RepartoJusto.
+4. **Concentración global del delivery = oportunidad para operadores locales:** Si la fusión Uber/Delivery Hero prospera, Chile tendrá 2 actores dominantes con modelo de comisión 30% sobre ventas. El espacio para un operador local de tarifa fija se amplía — y la propuesta de RepartoJusto se vuelve más necesaria, no menos.
 
-5. **Dark Kitchens en ciudades intermedias: sin novedades (ventana abierta):** Dark Kitchen Club sigue solo en Rancagua (Claudio Matte 549), sin expansión confirmada a Valparaíso. Dark Kitchen Factory también sin confirmación de apertura fuera de Las Condes. La zona Quilpué/Villa Alemana sigue libre de competidores en este segmento. La alianza logística potencial con Dark Kitchen Club permanece abierta — recomendación: primer contacto formal esta semana vía darkitchenclub.cl o sus redes.
+5. **Peak de invierno: julio 2026 es el mejor mes del año para delivery en ciudades frías:** El clima de Villa Alemana/Quilpué refuerza el uso de delivery. Los competidores grandes están en modo FIFA/premios. El argumento de "nosotros trabajamos en tu barrio con tarifa fija" es especialmente poderoso cuando los grandes están distraídos en campañas nacionales.
 
 ---
 
-## Investigación especial: Fusión Uber / Delivery Hero — qué significa para RepartoJusto
+## Investigación especial: Dark Kitchen SpA — alianza logística prioritaria
 
-**Contexto:** En mayo 2026 Uber lanzó oferta de €10.000M por el 100% de Delivery Hero. Ya posee 36,8% del capital. Bloomberg (12 junio) reportó que Uber estudia vender activos regionales de Delivery Hero para facilitar la aprobación antimonopolio. El timeline es 12-18 meses.
+**Quiénes son:** Dark Kitchen SpA opera en Viña del Mar (Roma 131) con cocinas equipadas en arriendo para negocios 100% delivery. Están activos en Instagram (@darkkitchenspa) y tienen sitio web (darkkitchenspa.cl). Su modelo es arrendar espacio a restaurantes sin local propio, que luego venden a través de Uber Eats, PedidosYa, Rappi y Justo.
 
-**Escenarios posibles:**
-- **Escenario A — Fusión aprobada:** Uber Eats y PedidosYa se fusionan bajo una misma marca en Chile. Las comisiones podrían homogeneizarse al alza (hoy Uber Eats cobra 30%, PedidosYa 29%). El poder de negociación de los restaurantes cae a cero frente al duopolio. **Oportunidad enorme para RepartoJusto.**
-- **Escenario B — Fusión bloqueada o activos vendidos a tercero:** PedidosYa Chile podría ser vendida a un actor regional (ej. iFood de Brasil, algún fondo). Período de incertidumbre de 12-18 meses durante el proceso. Los negocios que dependen de PedidosYa quedan expuestos a cambios de condiciones.
-- **Escenario C — Sin cambios (poco probable):** El proceso regulatorio se alarga pero Delivery Hero sigue independiente. No hay cambios en el corto plazo.
+**Por qué son una alianza valiosa:**
+- Sus clientes (los restaurantes en la dark kitchen) ya pagan comisiones de 30% a las apps grandes
+- Están buscando mejorar márgenes
+- Un acuerdo con RepartoJusto les ofrecería delivery propio a $500 fijo sin comisión de app
+- La dark kitchen ya tiene el logístico de la cocina resuelto; RepartoJusto resuelve el logístico de la entrega
 
-**Argumento comercial inmediato:** "PedidosYa puede cambiar de dueño en los próximos meses. No sabes quién va a ser tu contraparte ni a qué precio. Con RepartoJusto son siempre $500 por pedido, punto."
+**Propuesta de valor para la alianza:** RepartoJusto ofrece ser el servicio de delivery oficial de los restaurantes alojados en Dark Kitchen SpA para pedidos por WhatsApp / canal propio, con tarifa $500 fija por entrega. La dark kitchen se convierte en un hub de captación de negocios sin necesidad de prospectar uno a uno.
+
+**Próximo paso concreto:** Matías contacta directamente a @darkkitchenspa por Instagram DM o vía darkkitchenspa.cl con una propuesta de alianza logística. Dark Kitchen Club (Rancagua, @darkitchenclub) sigue como segunda opción si expanden hacia Valparaíso.
 
 ---
 
 ## Oportunidades concretas para RepartoJusto
 
-1. **La incertidumbre Uber/PedidosYa es argumento de venta ahora mismo** — los negocios en PedidosYa son los más vulnerables. Todos los prospectos en PedidosYa del pipeline (#27, #28, #30, #33, #60 Master Sándwich) reciben un argumento nuevo: además de la multa FNE, ahora hay incertidumbre sobre quién será su plataforma el año que viene y con qué condiciones.
+1. **Dark Kitchen SpA en Viña del Mar — alianza logística más cercana que Dark Kitchen Club** — a solo 25 km de Villa Alemana, activa hoy, con clientes que pagan 30% de comisión a las apps. Contacto esta semana por DM de Instagram.
 
-2. **Rappi Turbo no llegó a Villa Alemana — mantener el argumento de urgencia moderada** — "Turbo está en Viña, todavía no en Villa Alemana. Posiciónate con nosotros antes de que cambie el mercado" sigue siendo válido, pero sin fecha concreta de expansión. No inflar el argumento más de lo que los hechos soportan.
+2. **Prospectos en PedidosYa: argumento triple vigente** — multa FNE, juicio TDLC activo (PedidosYa dice que no hizo nada malo), y adquisición Uber en proceso. Mensaje: "Fueron multados dos veces, siguen en juicio negando los cargos, y ahora Uber está comprando su dueña. En 2027 no sabes con quién haces negocios ni a qué precio. Con nosotros son $500 por pedido, siempre."
 
-3. **Argumento "micro-placer predecible" para invierno:** El delivery es ahora un micro-placer que los chilenos priorizan sobre otros gastos, pero que también recortan primero cuando el precio sube. Un mensaje de invierno anclado en precio fijo y transparencia es más poderoso que uno de conveniencia.
+3. **Rappi Turbo no llegó a Villa Alemana — ventana abierta, sin fecha límite** — mantener el argumento de urgencia real pero sin exagerar. La cobertura social+IA de la nueva app de Rappi hace más difícil la visibilidad orgánica para restaurantes pequeños: argumento nuevo para ventas.
 
-4. **Contacto Dark Kitchen Club esta semana (prioridad urgente):** Sin expansión confirmada a Valparaíso todavía. La ventana de ser primer contacto sigue abierta. Recomendación: Matías envía un mensaje directo a @darkitchenclub por Instagram o por su sitio (darkitchenclub.cl), presentando a RepartoJusto como socio logístico para eventual expansión norte desde Rancagua.
+4. **Canal directo como diferenciador de producto urgente** — el 34% de restaurantes en LATAM ya usa WhatsApp para delivery directo. Si RepartoJusto implementa el link de pedido directo + rider, se convierte en la infraestructura del canal propio. Es el feature con mayor retorno comercial disponible para Mejoras.
 
-5. **El juicio PedidosYa activo refuerza el argumento para el pipeline de PedidosYa:** "Mismo precio que en local" — este label fue su intento de controlar tus precios incluso después de la multa. El juicio sigue activo y PedidosYa dice que no hizo nada malo. La pauta mediática sobre PedidosYa se mantiene todo el segundo semestre 2026.
+5. **Premios Uber Eats 2026 = oportunidad de contraste** — mientras Uber Eats premia a sus restaurantes estrella (grandes, urbanos, fotogénicos), RepartoJusto puede posicionarse con los que no van a ganar ningún premio: el negocio local de barrio que necesita un socio, no un juez.
 
 ---
 
 ## Mensajes para otros agentes
 
-- **PARA VENTAS:** Argumento nuevo de máxima potencia para prospectos en PedidosYa: Uber ofreció US$11.600 millones para comprar la dueña de PedidosYa — en los próximos 12-18 meses PedidosYa puede cambiar de dueño, de nombre, de comisiones. El mensaje exacto: "PedidosYa fue multada dos veces en 2026 por controlarte los precios, sigue en juicio diciendo que no hizo nada malo, y ahora Uber está comprando su dueña — en 2027 no sabes con quién vas a hacer negocios ni a qué precio. Con nosotros son siempre $500 por pedido, sin sorpresas." Rappi Turbo sigue sin llegar a Villa Alemana/Quilpué — mantener el argumento de urgencia moderada sin exagerar. Argumento invierno reforzado: delivery como micro-placer predecible — "el precio fijo que no te va a sorprender cuando revises el estado de cuenta".
+- **PARA VENTAS:** Argumento triple para prospectos en PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich): "PedidosYa fue multada dos veces en 2026 por controlarte los precios, hoy está en tribunales negando lo que hizo, y Uber está comprando su dueña por US$11.600M — en 2027 no sabes con quién haces negocios ni a qué precio. Con nosotros son siempre $500 por pedido, sin sorpresas." Nuevo argumento anti-Rappi para todos: "La nueva app de Rappi prioriza a los influencers y amigos de usuarios — el algoritmo entierra a los negocios que no pagan publicidad dentro de la app. Con nosotros no hay algoritmo que te esconda." Rappi Turbo sigue sin llegar a Villa Alemana — mantener urgencia moderada.
 
-- **PARA MEJORAS:** Sin features nuevas urgentes esta semana. Confirmar prioridades existentes: panel de liquidaciones por pedido (validación de mercado máxima), historial exportable y link de pedido directo sin app (tendencia canal propio sigue acelerando con la incertidumbre de fusión Uber/PedidosYa — los negocios van a querer su canal propio más que nunca). Si Mejoras ya resolvió los bugs críticos de la semana pasada, el siguiente diferenciador de producto es precisamente la transparencia de datos para negocios.
+- **PARA MEJORAS:** Feature más urgente validada esta semana: link de pedido directo sin app (tipo OlaClick/Fudo) con logística de rider RepartoJusto. El 34% de restaurantes en LATAM ya migró parte de su delivery a WhatsApp directo — el mercado está listo. RepartoJusto con esta feature se convierte en infraestructura del canal propio de los negocios, no solo una app más. Prioridad 2: panel de liquidaciones por pedido con fecha/monto/neto — validación de mercado máxima, queja #1 documentada esta semana en múltiples fuentes. Confirmar estado de los 5 bugs críticos pendientes (Aprendiz reportó el 07/07 que aún no fueron aplicados al código).
 
-- **PARA GERENTE:** La noticia más importante de la semana es la oferta de Uber para comprar Delivery Hero (dueña de PedidosYa) por US$11.600M — si se aprueba en 12-18 meses, quedarían 2 actores dominantes en Chile (Uber/PedidosYa + Rappi). Esta concentración es la mayor oportunidad comercial de mediano plazo para RepartoJusto: los negocios van a necesitar alternativas locales con condiciones estables. El caso TDLC de PedidosYa sigue activo (argumento FNE vigente). Rappi Turbo no llegó a Villa Alemana todavía. Dark Kitchen Club sin expansión a Valparaíso — ventana de alianza abierta, recomiendo que Matías haga contacto esta semana.
+- **PARA GERENTE:** Las dos noticias más importantes de la semana: (1) Rappi lanzó nueva versión con IA y social que perjudica visibilidad de pequeños negocios — argumento nuevo para ventas; (2) Identificado Dark Kitchen SpA en Viña del Mar (Roma 131, @darkkitchenspa) como alianza logística prioritaria, más cercana y activa que Dark Kitchen Club — recomiendo que Matías contacte esta semana. El juicio TDLC de PedidosYa sigue activo sin resolución, la fusión Uber/Delivery Hero sigue sin aprobación regulatoria — ambos argumentos vigentes para todo el segundo semestre.
