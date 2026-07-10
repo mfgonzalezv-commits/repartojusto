@@ -19,9 +19,10 @@
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "nodemailer": "^8.0.6",
+    "nodemailer": "^6.10.1",
     "pg": "^8.11.3",
     "redis": "^4.6.11",
+    "resend": "^6.12.2",
     "socket.io": "^4.7.2",
     "uuid": "^9.0.1",
     "web-push": "^3.6.7"
