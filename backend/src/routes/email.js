@@ -1,10 +1,6 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
-const dns = require('dns');
-const { promisify } = require('util');
 const { auth, solo } = require('../middleware/auth');
 
-const dnsLookup = promisify(dns.lookup);
 const router = express.Router();
 
 // POST /api/email/enviar — solo admin
@@ -13,29 +9,26 @@ router.post('/enviar', auth, solo('admin'), async (req, res) => {
   if (!para || !asunto || !cuerpo) {
     return res.status(400).json({ error: 'Faltan campos: para, asunto, cuerpo' });
   }
-  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-    return res.status(503).json({ error: 'Email no configurado en el servidor' });
+  if (!process.env.RESEND_API_KEY) {
+    return res.status(503).json({ error: 'Email no configurado (falta RESEND_API_KEY)' });
   }
   try {
-    // Forzar IPv4: resolver hostname antes de conectar
-    const { address: smtpIp } = await dnsLookup('smtp.gmail.com', { family: 4 });
-    const transporter = nodemailer.createTransport({
-      host: smtpIp,
-      port: 465,
-      secure: true,
-      tls: { servername: 'smtp.gmail.com' },
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD
-      }
+    const resp = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`
+      },
+      body: JSON.stringify({
+        from: 'RepartoJusto <onboarding@resend.dev>',
+        to: para,
+        subject: asunto,
+        text: cuerpo
+      })
     });
-    await transporter.sendMail({
-      from: `RepartoJusto <${process.env.GMAIL_USER}>`,
-      to: para,
-      subject: asunto,
-      text: cuerpo
-    });
-    res.json({ ok: true, mensaje: `Email enviado a ${para}` });
+    const data = await resp.json();
+    if (!resp.ok) return res.status(500).json({ error: data.message || 'Error al enviar' });
+    res.json({ ok: true, mensaje: `Email enviado a ${para}`, id: data.id });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
