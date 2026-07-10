@@ -1,12 +1,12 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-09
+**Actualizado:** 2026-07-10
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — arg. nuevo Rappi IA/algoritmo |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 — enfoque autonomía sucursal |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
@@ -84,10 +84,44 @@
 | 78 | Terraza Florencia | Restaurante / comida chilena | Av. Valparaíso 180, Villa Alemana | Nuevo | — | Presentación redactada 08/07 — en Rappi + web propia terrazza.cl + Instagram @terrazaflorencia.cl, tel. +56 9 9032 6724 |
 | 79 | Bravatta Italiana | Restaurante italiano | Santiago 550, Villa Alemana | Nuevo | — | Presentación redactada 09/07 — en Rappi, primer italiano del pipeline, pasta/risotto peak confort julio |
 | 80 | Rincón Peruano | Comida peruana | Av. Valparaíso 1415, Villa Alemana | Nuevo | — | Presentación redactada 09/07 — en Rappi, comida peruana caliente peak julio, ahorro ~$380K/mes |
+| 81 | El Rey del Pollo | Pollos asados / comida rápida | Villa Alemana / Quilpué (@elrey.delpollo, Instagram + Facebook) | Nuevo | — | Presentación redactada 10/07 — canal propio, pollos a las brasas fin de semana, tel. +56942575904 |
+| 82 | Pescadería Delivery | Pescados y mariscos | Villa Alemana / Quilpué (pescaderiadelivery.cl) | Nuevo | — | Presentación redactada 10/07 — canal propio, mariscos frescos a domicilio, peak caldillos julio, tel. +56 9 5801 9027 |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-10)
+
+> **NOTA PARA MATÍAS:** Hoy es **jueves 10 de julio** — último día laboral completo antes del primer fin de semana largo de julio. Los jueves de julio son estratégicos: los negocios hacen balance de la semana y preparan el fin de semana; los clientes ya están pensando qué pedir el sábado y domingo. Se redactan **4 mensajes**: (1) **"Jueves de julio"** para **#1 Fuente de Soda El Rápido** (completos y sándwiches, peak invernal sostenido toda la semana) y **#3 Farmacia Cruz Verde** (farmacia — julio = peak de enfermedades de invierno, nadie quiere salir al frío a buscar medicamentos); se incorpora el **argumento nuevo del Investigador (09/07)**: la nueva app de Rappi prioriza influencers y algoritmo social — los negocios que no pagan publicidad extra dentro de la app quedan enterrados en los resultados; (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **El Rey del Pollo (#81)** — pollos asados a las brasas con canal propio (Instagram @elrey.delpollo + Facebook), delivery Quilpué y Villa Alemana los fines de semana, sin grandes plataformas — y **Pescadería Delivery (#82)** — pescados y mariscos frescos a domicilio con canal propio (pescaderiadelivery.cl), zona Villa Alemana/Quilpué, peak de caldillos y pailas marinas en pleno julio. Pipeline total: **82 prospectos**.
+>
+> **RECORDATORIO:** Los borradores más urgentes siguen siendo **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** — llevan **15 días consecutivos con borradores activos sin confirmación de envío**. Enviar esta semana.
+
+---
+
+#### "JUEVES DE JULIO" — Contactados sin mensaje fresco (10/07)
+
+**[1] Fuente de Soda El Rápido — Jueves de julio (10/07):**
+"Hola Fuente de Soda El Rápido! De RepartoJusto — jueves 10 de julio. Mañana arranca el fin de semana, el peak de completos y sándwiches del año: el frío de julio lleva a la gente a pedir desde casa. Un dato nuevo que afecta a los negocios en Rappi: la nueva versión de la app prioriza influencers y algoritmo social — los negocios que no pagan publicidad extra dentro de la app quedan enterrados en los resultados de búsqueda. Con RepartoJusto no hay algoritmo que los esconda: cada pedido es directo, $500 fijos siempre, sin importar el monto de la venta. Para 15 entregas diarias de completos y sándwiches de $5.000, el ahorro vs. Rappi (28%) puede superar los $280.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos este jueves?"
+
+---
+
+**[3] Farmacia Cruz Verde Villa Alemana — Jueves de julio (10/07):**
+"Hola Cruz Verde Villa Alemana! De RepartoJusto, plataforma de delivery local. Julio es el peak de entregas de medicamentos en Chile: el frío y las enfermedades de invierno hacen que los clientes prefieran recibir sus remedios en casa antes que salir con síntomas al frío. Si trabajan con plataformas que cobran porcentaje por el monto del pedido, el costo varía mucho: una receta de $20.000 puede costar hasta $5.600 en comisiones (28%). Con RepartoJusto son $500 fijos por pedido, siempre, sin importar si el pedido vale $3.000 o $40.000. Sabemos que las sucursales tienen distintos grados de autonomía en sus canales digitales — si son libres de explorar opciones de delivery complementarias, RepartoJusto puede sumarse a lo que ya tienen, sin contrato ni exclusividad. Registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos vecinos. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-10)
+
+**[81] El Rey del Pollo — Presentación:**
+"Hola El Rey del Pollo! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos en Instagram (@elrey.delpollo) — pollos asados a las brasas con delivery propio a Quilpué y Villa Alemana los fines de semana. Una propuesta concreta: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pollo asado con acompañamientos de $12.000, una app de porcentaje (28-30%) cobra hasta $3.600 de comisión por pedido. Con RepartoJusto son $500 siempre — el resto se queda en el negocio. Mañana arranca el fin de semana, el peak absoluto de pollos asados en delivery: el frío invernal convierte un pollo caliente a domicilio en el pedido perfecto para el fin de semana en familia. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos? (Tel: +56942575904)"
+
+---
+
+**[82] Pescadería Delivery — Presentación:**
+"Hola Pescadería Delivery! Los contacta RepartoJusto, plataforma de delivery local. Los encontramos en pescaderiadelivery.cl — pescados y mariscos frescos a domicilio en Quilpué, Villa Alemana y la zona, con canal propio bien establecido. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una paila marina o chupe de $18.000, una app de porcentaje (28-30%) cobra hasta $5.400 de comisión. Con RepartoJusto son $500 siempre — el resto se queda en el negocio. Julio y agosto son el peak de mariscos en delivery: el frío invernal convierte un caldillo de mariscos, una paila marina o un chupe caliente a domicilio en el pedido de confort perfecto para una noche en casa. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona — mismos clientes que los suyos. repartojusto-production.up.railway.app ¿Conversamos? (Tel: +56 9 5801 9027)"
 
 ---
 
@@ -1427,3 +1461,7 @@
 **Empanadas Belle (#57, agregado 28/06):** Empanadaría en Londres 930, Villa Alemana. Confirmada en Rappi (rappi.cl/restaurantes/900101197-empanadas-belle). Menú: pino, mechada con queso, pollo con queso. Ticket promedio estimado: $6.000-$10.000 (venta por docena o media docena). Rappi cobra 28% de comisión — con 15 entregas diarias, el ahorro vs. Rappi puede superar $440.000/mes. Julio = peak absoluto de empanadas en Chile (frío + invierno). Primera empanadaría confirmada en Rappi en el pipeline (Casa Festa tiene empanadas pero es negocio mixto). Fuente: rappi.cl/restaurantes/900101197-empanadas-belle + búsqueda Rappi Villa Alemana.
 
 **Mevas Raíces (#58, agregado 28/06):** Empanadaría con especialidades en Villa Alemana. Confirmada en Rappi (rappi.cl/restaurantes/900098793-mevas-raices). Menú: empanadas de espinaca con queso, pino y pollo con queso — propuesta diferenciada (incluye opciones vegetarianas). Ticket promedio estimado: $5.000-$9.000. Rappi cobra 28% de comisión — con 15 entregas diarias, el ahorro vs. Rappi puede superar $430.000/mes. Julio = peak de empanadas en delivery. Segunda empanadaría del pipeline — el rubro tiene volumen alto en julio y agosto (Fiestas Patrias). Fuente: rappi.cl/restaurantes/900098793-mevas-raices + búsqueda Rappi Villa Alemana.
+
+**El Rey del Pollo (#81, agregado 10/07):** Pollos asados a las brasas con delivery propio en Villa Alemana y Quilpué. Instagram: @elrey.delpollo. Facebook: @elreydelpollo19. Teléfono: +56942575904. Horario de delivery: viernes a domingo 12:30-15:30. Canal propio sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Producto: pollo asado a las brasas, papas fritas y empanadas de queso. Ticket promedio estimado: $10.000-$15.000 (pollo + acompañamientos). Argumento principal: canal propio de delivery + logística local RepartoJusto por $500 fijos sin porcentaje. Para un pollo de $12.000, ahorro vs. app de porcentaje (28-30%): $2.860-$3.100 por entrega. Julio = peak absoluto de pollo asado en delivery (frío invernal + fin de semana familiar). Fuente: instagram.com/elrey.delpollo + linktr.ee/Elreydelpollo.
+
+**Pescadería Delivery (#82, agregado 10/07):** Servicio de pescados y mariscos frescos a domicilio con canal propio en Villa Alemana, Quilpué y zonas aledañas (Viña del Mar, Reñaca, Concón, Limache, Quillota, Valparaíso). Sitio web: pescaderiadelivery.cl. Facebook: facebook.com/pescaderiadelivery.cl. Teléfono: +56 9 5801 9027. Canal propio sin grandes plataformas detectadas. Producto: pescados y mariscos frescos, entrega a domicilio. Ticket promedio estimado: $12.000-$25.000 (paila marina, caldillo, mariscos frescos). Argumento principal: canal directo con logística local RepartoJusto por $500 fijos. Para una paila de $18.000, ahorro vs. app de porcentaje (28-30%): hasta $5.400 por entrega. Julio-agosto = peak de mariscos en delivery invernal (caldillos, pailas, chupes). Fuente: pescaderiadelivery.cl + facebook.com/pescaderiadelivery.cl.
