@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-10
+**Actualizado:** 2026-07-11
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -86,10 +86,44 @@
 | 80 | Rincón Peruano | Comida peruana | Av. Valparaíso 1415, Villa Alemana | Nuevo | — | Presentación redactada 09/07 — en Rappi, comida peruana caliente peak julio, ahorro ~$380K/mes |
 | 81 | El Rey del Pollo | Pollos asados / comida rápida | Villa Alemana / Quilpué (@elrey.delpollo, Instagram + Facebook) | Nuevo | — | Presentación redactada 10/07 — canal propio, pollos a las brasas fin de semana, tel. +56942575904 |
 | 82 | Pescadería Delivery | Pescados y mariscos | Villa Alemana / Quilpué (pescaderiadelivery.cl) | Nuevo | — | Presentación redactada 10/07 — canal propio, mariscos frescos a domicilio, peak caldillos julio, tel. +56 9 5801 9027 |
+| 83 | ApartSushi | Sushi | Almirante Latorre 309, Villa Alemana (@apartsushi) | Nuevo | — | Presentación redactada 11/07 — sushi delivery VA/Quilpué, canal Instagram propio, tel. +56 9 4049 8264 |
+| 84 | Donde Danilo | Frutas y verduras | Villa Alemana / Quilpué / Peñablanca (@donde_danilo) | Nuevo | — | Presentación redactada 11/07 — canal propio Instagram, frutas y verduras frescas a domicilio, tel. +56930315272 |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-11)
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 11 de julio** — segundo fin de semana del mes más frío del año. El sábado de invierno es el peak de delivery de la semana: frío máximo + noche de fin de semana + nadie quiere salir ni cocinar. Se redactan **4 mensajes**: (1) **"Sábado 11 de julio"** para las 2 PRIORIDADES del Gerente — **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** — que llevan ya **16 días consecutivos con borradores activos sin confirmación de envío**; el sábado de invierno es el contexto de máxima urgencia del año; (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **ApartSushi (#83)** — sushi delivery en Almirante Latorre 309 VA, canal Instagram @apartsushi, cubre VA y Quilpué, tel. +56 9 4049 8264 — y **Donde Danilo (#84)** — frutas y verduras frescas a domicilio en VA/Quilpué/Peñablanca por canal propio Instagram @donde_danilo, tel. +56930315272. Pipeline total: **84 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA:** #22 Sushi Point Delivery y #15 Melt Pizzas llevan 16 días con borradores activos. Hoy sábado de julio es el mejor argumento temporal del año para cerrar.
+
+---
+
+#### "SÁBADO 11 DE JULIO" — Prioridades del Gerente (11/07)
+
+**[22] Sushi Point Delivery — Sábado 11 de julio (11/07):**
+"Hola Sushi Point Delivery! RepartoJusto — hoy es sábado 11 de julio, segundo fin de semana del mes más frío del año. El escenario de sushi en delivery está en su peak máximo del año: invierno pleno + sábado + noche en casa. El número para este fin de semana: con sushi de $18.000 y 10 pedidos solo el sábado en Rappi (28%), pagan más de $50.000 hoy en comisiones a la app. En el mes completo son más de $680.000. Con RepartoJusto ese costo mensual baja a $225.000 — $455.000 que se quedan en el negocio. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo y probar con sus propios clientes. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. ¿Este fin de semana arrancamos? repartojusto-production.up.railway.app | Tel: (32) 324 0504"
+
+---
+
+**[15] Melt Pizzas — Sábado 11 de julio (11/07):**
+"Hola Melt Pizzas! RepartoJusto — sábado 11 de julio, segundo fin de semana del mes más frío del año. Los sábados de invierno son el peak máximo de pizza en delivery del año: nadie quiere cocinar, nadie quiere salir al frío. El cálculo para Av. Valparaíso 1057: con 12 pizzas de $12.000 este sábado en Rappi (28%), pagan cerca de $40.000 solo hoy en comisiones. En el mes completo son ~$400.000 que se van a la app. Con RepartoJusto ese costo mensual baja a $150.000 — $250.000 que se quedan en el local, desde el primer pedido. Sin contrato, registro completamente gratuito, pueden sumar RepartoJusto como canal local de menor costo sin dejar Rappi. ¿Este fin de semana empezamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-11)
+
+**[83] ApartSushi — Presentación:**
+"Hola ApartSushi! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@apartsushi) — sushi delivery con local en Almirante Latorre 309 y cobertura en Villa Alemana y Quilpué. Una propuesta concreta: si trabajan con Rappi o Uber Eats, hoy pagan entre 28-30% de comisión por cada pedido. Para un combo o roll de $14.000, eso son $3.920 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos por pedido entregado, siempre, sin importar el valor del pedido. Hoy es sábado — segundo fin de semana del mes más frío del año: el escenario ideal de sushi en delivery. Las noches de julio son el peak máximo del año para pedir desde casa. Con 15 entregas diarias, el ahorro vs. una app de porcentaje puede superar los $650.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener sus plataformas actuales y sumar RepartoJusto como logística local de menor costo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos? (Tel: +56 9 4049 8264)"
+
+---
+
+**[84] Donde Danilo — Presentación:**
+"Hola Donde Danilo! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@donde_danilo) — frutas y verduras frescas a domicilio en Quilpué, Villa Alemana y Peñablanca. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30% por cada pedido, con nosotros el costo es siempre $500, sin importar si el pedido vale $3.000 o $12.000. En julio, con el frío del invierno, los clientes prefieren recibir sus frutas y verduras en casa sin salir al frío — el canal de delivery gana relevancia todo el mes. Para una canasta de $8.000, el ahorro vs. una app de porcentaje (28%) son $1.740 por cada entrega que se quedan en el negocio. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona — mismos barrios que sus clientes. repartojusto-production.up.railway.app ¿Hablamos? (Tel: +56930315272)"
 
 ---
 
