@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-11T01:08:13Z
+**Última verificación:** 2026-07-11T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** El agente no pudo alcanzar https://repartojusto-production.up.railway.app/health — proxy del entorno de ejecución respondió 403 Forbidden al intentar establecer el túnel CONNECT. El servidor en Railway puede estar operativo, pero la red del agente bloquea el acceso externo a ese dominio.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del entorno rechazó el túnel CONNECT con HTTP 403 Forbidden. El endpoint no fue alcanzable. Verificar manualmente si Railway está activo.
