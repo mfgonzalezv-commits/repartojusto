@@ -1,18 +1,18 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-11
+**Actualizado:** 2026-07-12
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — arg. nuevo Rappi IA/algoritmo |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Domingo 12 de julio redactado — peak almuerzo familiar invernal |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 21/06 — PRIORIDAD |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Domingo 12 de julio redactado — peak costillar/asado domingo |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
@@ -88,10 +88,44 @@
 | 82 | Pescadería Delivery | Pescados y mariscos | Villa Alemana / Quilpué (pescaderiadelivery.cl) | Nuevo | — | Presentación redactada 10/07 — canal propio, mariscos frescos a domicilio, peak caldillos julio, tel. +56 9 5801 9027 |
 | 83 | ApartSushi | Sushi | Almirante Latorre 309, Villa Alemana (@apartsushi) | Nuevo | — | Presentación redactada 11/07 — sushi delivery VA/Quilpué, canal Instagram propio, tel. +56 9 4049 8264 |
 | 84 | Donde Danilo | Frutas y verduras | Villa Alemana / Quilpué / Peñablanca (@donde_danilo) | Nuevo | — | Presentación redactada 11/07 — canal propio Instagram, frutas y verduras frescas a domicilio, tel. +56930315272 |
+| 85 | Picada de Pauly | Comida chilena / picada | Andrés Bello 385, Villa Alemana | Nuevo | — | Presentación redactada 12/07 — en Rappi, picada clásica chilena peak invernal, cazuela y parrilla |
+| 86 | Pizza Planeta | Pizzería | Peñablanca / Villa Alemana / Quilpué (@pizzaplanetacl) | Nuevo | — | Presentación redactada 12/07 — canal propio Instagram, pizza delivery zona VA/Quilpué/Peñablanca |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-12)
+
+> **NOTA PARA MATÍAS:** Hoy es **domingo 12 de julio** — segundo domingo del mes más frío del año. El domingo de invierno tiene una característica única: es el día del almuerzo familiar, cuando nadie quiere salir al frío y el pollo, el costillar o el asado a domicilio es el pedido de confort máximo de la semana. Se redactan **4 mensajes**: (1) **"Domingo 12 de julio"** para **#2 Pollería Don Pollo** (el pollo al almuerzo dominical es la tradición invernal por excelencia, sin mensaje desde el 01/07 — 11 días) y **#9 Rotisería El Gaucho** (costillar y asado el domingo en casa con el frío máximo, sin mensaje desde el 01/07 — 11 días); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Picada de Pauly (#85)** — picada chilena clásica en Rappi, Andrés Bello 385 Villa Alemana, comida de cazuela y parrilla peak invierno — y **Pizza Planeta (#86)** — pizza delivery con canal propio Instagram @pizzaplanetacl, cobertura Peñablanca/Villa Alemana/Quilpué. Pipeline total: **86 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **17 días consecutivos** con borradores activos sin confirmación de envío. Hoy domingo de julio es el segundo mejor argumento temporal del año para enviarlos.
+
+---
+
+#### "DOMINGO 12 DE JULIO" — Contactados sin mensaje fresco (12/07)
+
+**[2] Pollería Don Pollo — Domingo 12 de julio (12/07):**
+"Hola Pollería Don Pollo! RepartoJusto — hoy es domingo 12 de julio, el día del almuerzo familiar del mes más frío del año. El domingo de invierno en Chile tiene una costumbre que no cambia: el pollo caliente al almuerzo en familia. El frío máximo de julio convierte ese pollo a domicilio en el pedido perfecto para quien prefiere no salir al frío. El cálculo para Freire 678: con 15 entregas este domingo en una plataforma de porcentaje (28%), se van más de $35.000 en comisiones solo hoy. En el mes completo, entre semana y fines de semana, ese costo puede superar los $350.000. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el monto de la venta. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. ¿Hoy domingo empezamos? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Domingo 12 de julio (12/07):**
+"Hola Rotisería El Gaucho! RepartoJusto — domingo 12 de julio, el día de mayor demanda de rotisería en delivery del mes más frío del año. El domingo de invierno es cuando la gente quiere un costillar o un asado caliente en casa sin salir al frío — y Portales 567 tiene exactamente lo que buscan. El número concreto: para una porción de costillar de $10.000, una plataforma de porcentaje (28%) cobra $2.800 de comisión por entrega. Con RepartoJusto son $500 fijos, siempre. Con 15 entregas este domingo, la diferencia ya supera los $34.500 solo hoy — en el mes completo puede pasar los $420.000. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. ¿Este domingo arrancamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-12)
+
+**[85] Picada de Pauly — Presentación:**
+"Hola Picada de Pauly! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Andrés Bello 385 — comida chilena de verdad, la picada que la gente quiere en invierno. Una propuesta concreta: Rappi cobra 28% de comisión por cada pedido. Para una cazuela o costillar de $8.000, eso son $2.240 que se van a la app por cada entrega. Con RepartoJusto pagan $500 fijos, siempre, sin importar el valor del pedido. Hoy es domingo 12 de julio — el día del almuerzo familiar de invierno: el frío hace que los clientes quieran su picada favorita en casa sin salir al frío. Julio es el peak absoluto de comida chilena casera en delivery. Con 15 entregas diarias, el ahorro vs. Rappi puede superar los $420.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[86] Pizza Planeta — Presentación:**
+"Hola Pizza Planeta! Los contacta RepartoJusto, plataforma de delivery local en la zona. Los encontramos en Instagram (@pizzaplanetacl) — pizza delivery con cobertura en Peñablanca, Villa Alemana y Quilpué. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de plataformas que cobran 28-30% por pedido, con nosotros el costo es siempre $500 — sin importar si la pizza vale $9.000 o $18.000. Para una pizza de $13.000, la diferencia vs. Rappi (28%) son $3.140 que se quedan en el negocio por cada entrega. Hoy es domingo 12 de julio — la noche perfecta del año para pizza en delivery: máximo frío invernal + domingo en familia. Con 15 entregas semanales, el ahorro puede superar los $400.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener sus canales actuales y sumar RepartoJusto como logística local de menor costo. Somos 100% locales en la zona — mismos barrios, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
