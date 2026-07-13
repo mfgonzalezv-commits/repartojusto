@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-12
+**Actualizado:** 2026-07-13
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -7,7 +7,7 @@
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — arg. nuevo Rappi IA/algoritmo |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Domingo 12 de julio redactado — peak almuerzo familiar invernal |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — PRIORIDAD, segunda semana julio |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
@@ -16,7 +16,7 @@
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — peak reparaciones invierno, arg. Rappi algoritmo |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Primer sábado de julio" redactado 05/07 — PRIORIDAD GERENTE, en Rappi |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -90,10 +90,44 @@
 | 84 | Donde Danilo | Frutas y verduras | Villa Alemana / Quilpué / Peñablanca (@donde_danilo) | Nuevo | — | Presentación redactada 11/07 — canal propio Instagram, frutas y verduras frescas a domicilio, tel. +56930315272 |
 | 85 | Picada de Pauly | Comida chilena / picada | Andrés Bello 385, Villa Alemana | Nuevo | — | Presentación redactada 12/07 — en Rappi, picada clásica chilena peak invernal, cazuela y parrilla |
 | 86 | Pizza Planeta | Pizzería | Peñablanca / Villa Alemana / Quilpué (@pizzaplanetacl) | Nuevo | — | Presentación redactada 12/07 — canal propio Instagram, pizza delivery zona VA/Quilpué/Peñablanca |
+| 87 | Yuki Sushi Delivery | Sushi | Ramón Reyes Arancibia 2196, Villa Alemana (@deliveryyukisushi) | Nuevo | — | Presentación redactada 13/07 — 10K seguidores Instagram, op. Dom-Sáb hasta 23:45, tel. +56 32 322 5149 |
+| 88 | La Choza | Comida venezolana / peruana / ecuatoriana / colombiana | Villa Alemana | Nuevo | — | Presentación redactada 13/07 — especialidad en cocina latinoamericana, único del rubro en el pipeline |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-13)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 13 de julio** — inicio de la segunda quincena del mes más frío del año. El lunes es el mejor día para contactar negocios: acaban de ver los números del fin de semana y están mentalidad "qué mejoro esta semana". Se redactan **4 mensajes**: (1) **"Lunes 13 de julio"** para **#13 Ferretería Los Maestros** (prometido ayer — lleva 21 días sin mensaje; julio es peak de ferretería por reparaciones de invierno) y **#4 Pizza House** (11 días sin mensaje fresco; segunda semana de julio = frío instalado toda la semana, demanda de pizza sostenida); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Yuki Sushi Delivery (#87)** — sushi delivery establecido con 10K seguidores Instagram, Ramón Reyes Arancibia 2196 VA, tel. +56 32 322 5149 — y **La Choza (#88)** — especialidad en comida venezolana, peruana, ecuatoriana y colombiana, único negocio del rubro en el pipeline. Pipeline total: **88 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **18 días consecutivos** con borradores activos sin confirmación de envío. El lunes de la segunda semana de julio es la ventana ideal: los negocios hacen balance del fin de semana y están abiertos a conversar. Enviar HOY.
+
+---
+
+#### "LUNES 13 DE JULIO" — Contactados sin mensaje fresco (13/07)
+
+**[13] Ferretería Los Maestros — Lunes 13 de julio (13/07):**
+"Hola Ferretería Los Maestros! RepartoJusto — lunes 13 de julio, segunda semana del mes más frío del año. Julio es el peak de ventas de ferretería en Chile: las goteras, la calefacción, los sellos de puertas y ventanas — todo se rompe en invierno y la gente necesita los materiales urgente, sin querer salir al frío. Una propuesta concreta: RepartoJusto puede llevar pedidos de Portales 123 a sus clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para una ferretería esto es especialmente favorable: si una plataforma de porcentaje (28%) recibe un pedido de $30.000 (sellador, silicona, tornillos), se lleva $8.400 de comisión. Con nosotros son $500 siempre. Un dato extra: la nueva versión de Rappi prioriza negocios que pagan publicidad dentro de la app — los locales que no pagan extra quedan enterrados en los resultados. Con RepartoJusto no hay algoritmo que los esconda: son el primer delivery local de ferretería en Villa Alemana. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos este lunes?"
+
+---
+
+**[4] Pizza House — Lunes 13 de julio (13/07):**
+"Hola Pizza House! RepartoJusto — lunes 13 de julio, segunda semana de julio. El frío de julio está instalado para todo el mes: los pedidos de pizza son sólidos toda la semana, no solo los fines de semana. Los lunes son el momento donde los negocios hacen el balance: ¿cuánto pagué en comisiones esta semana? Un número claro para Portales 234: con 10 pizzas de $12.000 al día en Rappi (28%), pagan ~$400.000 al mes solo a la app. Con RepartoJusto ese costo baja a $150.000 — $250.000 mensuales que se quedan en el local, desde el primer pedido. Sin dejar Rappi, sin contrato. ¿Esta semana arrancamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-13)
+
+**[87] Yuki Sushi Delivery — Presentación:**
+"Hola Yuki Sushi Delivery! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@deliveryyukisushi) con 10.000 seguidores y local en Ramón Reyes Arancibia 2196 — sushi delivery con operación extendida Dom-Jue hasta las 22:45 y Vie-Sáb hasta las 23:45. Una propuesta directa: si trabajan con Rappi o Uber Eats, hoy pagan entre 28-30% de comisión por cada pedido. Para un combo sushi de $15.000, eso son entre $4.200 y $4.500 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el valor. Hoy lunes 13 de julio — segunda semana del peak máximo de sushi en delivery del año: el frío de julio garantiza que los clientes prefieren pedir desde casa toda la semana, no solo los fines de semana. Con 15 entregas diarias, el ahorro vs. una app de porcentaje puede superar los $640.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener sus plataformas actuales y sumar RepartoJusto como logística local de menor costo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos? (Tel: +56 32 322 5149)"
+
+---
+
+**[88] La Choza — Presentación:**
+"Hola La Choza! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos como especialistas en comida venezolana, peruana, ecuatoriana y colombiana — una propuesta gastronómica única en la zona que no tiene competencia directa en delivery local. Una propuesta concreta: RepartoJusto puede apoyar sus entregas con riders locales por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o PedidosYa que cobran 28-30% de cada pedido, con nosotros el costo es siempre $500 — sin importar si el pedido vale $7.000 o $20.000. Para un plato de $13.000 (pabellón venezolano, lomo saltado, bandeja paisa), la diferencia vs. Rappi (28%) son $3.140 que se quedan en el negocio por cada entrega. Julio es el peak de comida reconfortante y caliente en delivery: el frío convierte las noches de julio en el momento ideal para pedir tequeños, empanadas venezolanas o ceviche caliente desde casa. Con 12 entregas diarias, el ahorro mensual puede superar los $460.000. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
