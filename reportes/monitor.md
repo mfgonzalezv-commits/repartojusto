@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-13T00:00:00Z
+**Última verificación:** 2026-07-13T19:08:03Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — proxy de red bloqueó el túnel HTTPS (HTTP 407/403). El servidor no responde desde este entorno.
+**Detalle:** curl exit 56 — fallo de conexión de red (HTTP 000). El endpoint https://repartojusto-production.up.railway.app/health no respondió.
