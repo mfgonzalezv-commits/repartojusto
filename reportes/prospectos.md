@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-13
+**Actualizado:** 2026-07-14
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -8,8 +8,8 @@
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Domingo 12 de julio redactado — peak almuerzo familiar invernal |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — PRIORIDAD, segunda semana julio |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | Seguimiento julio redactado 02/07 — PRIORIDAD |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | Arranque julio redactado 22/06 |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — PRIORIDAD, seguimiento tercera semana julio |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — peak botillería invierno, 22 días sin mensaje fresco |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Domingo 12 de julio redactado — peak costillar/asado domingo |
@@ -92,10 +92,44 @@
 | 86 | Pizza Planeta | Pizzería | Peñablanca / Villa Alemana / Quilpué (@pizzaplanetacl) | Nuevo | — | Presentación redactada 12/07 — canal propio Instagram, pizza delivery zona VA/Quilpué/Peñablanca |
 | 87 | Yuki Sushi Delivery | Sushi | Ramón Reyes Arancibia 2196, Villa Alemana (@deliveryyukisushi) | Nuevo | — | Presentación redactada 13/07 — 10K seguidores Instagram, op. Dom-Sáb hasta 23:45, tel. +56 32 322 5149 |
 | 88 | La Choza | Comida venezolana / peruana / ecuatoriana / colombiana | Villa Alemana | Nuevo | — | Presentación redactada 13/07 — especialidad en cocina latinoamericana, único del rubro en el pipeline |
+| 89 | Fajitas Tex Mex Delivery | Comida tex-mex | Villa Alemana (@fajitastexmex_villa_alemana, Facebook) | Nuevo | — | Presentación redactada 14/07 — canal propio Instagram+Facebook, WhatsApp +56 9 57609318, primer tex-mex del pipeline, Ma-Sá 17:30-23:30 |
+| 90 | Buenaventura Pizzería & Sandwiches | Pizzería / sandwichería | Freire 498, Villa Alemana | Nuevo | — | Presentación redactada 14/07 — en Uber Eats + PedidosYa (argumento FNE+TDLC+fusión Uber+doble comisión), pizzas/sándwiches/completos, tel. +56 9 4113 4197 |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-14)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 14 de julio** — inicio de la tercera semana del mes más frío del año. Los lunes son el mejor momento para contactar negocios: acaban de hacer balance del fin de semana y están en modo "¿qué mejoro esta semana?". Se redactan **4 mensajes**: (1) **"Lunes 14 de julio"** para **#5 Sushi Zen** (PRIORIDAD — último draft del 02/07, 12 días sin mensaje fresco; sushi + invierno pleno + lunes = peak perfecto) y **#6 Botillería El Copihue** (22 días sin mensaje fresco, último draft del 22/06; botillería en lunes invernal = planificación de consumo de toda la semana); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Fajitas Tex Mex Delivery (#89)** — primer tex-mex del pipeline, canal propio Instagram @fajitastexmex_villa_alemana, WhatsApp +56 9 57609318 — y **Buenaventura Pizzería & Sandwiches (#90)** — en Uber Eats + PedidosYa simultáneamente, Freire 498, argumento FNE+TDLC+fusión Uber+doble comisión, tel. +56 9 4113 4197. Pipeline total: **90 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **19 días consecutivos** con borradores activos sin confirmación de envío. Lunes de la tercera semana de julio — el frío está instalado para toda la semana y la demanda de delivery es constante. Enviar HOY.
+
+---
+
+#### "LUNES 14 DE JULIO" — Contactados sin mensaje fresco (14/07)
+
+**[5] Sushi Zen — Lunes 14 de julio (14/07):**
+"Hola Sushi Zen! RepartoJusto — lunes 14 de julio, inicio de la tercera semana del mes más frío del año. El peak de sushi en delivery está en su punto máximo: el frío de julio hace que cada noche sea el momento ideal para pedir desde casa, y los lunes son cuando los negocios hacen balance del fin de semana y planifican la semana. Un número concreto para Freire 1100: con sushi de $15.000 y 15 entregas diarias en una plataforma de porcentaje (28-30%), pagan entre $600.000 y $675.000 al mes solo en comisiones a la app. Con RepartoJusto ese costo baja a $225.000 — entre $375.000 y $450.000 mensuales que se quedan en el negocio. Sin contrato, registro completamente gratuito, pueden mantener sus plataformas actuales y sumar RepartoJusto como logística local de menor costo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Esta semana damos el paso?"
+
+---
+
+**[6] Botillería El Copihue — Lunes 14 de julio (14/07):**
+"Hola Botillería El Copihue! RepartoJusto — lunes 14 de julio. Julio es el mes de mayor consumo de botillería en delivery del año: el frío intenso hace que la gente prefiera recibir sus bebidas en casa antes que salir. Y el lunes es cuando se planifica la semana: las reuniones del miércoles, el asado del fin de semana, el vino del jueves. Una propuesta concreta para Av. Álvarez 2310: RepartoJusto lleva pedidos a los clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para una compra de $15.000 (vino + bebidas + snacks), una plataforma de porcentaje (28%) cobra $4.200 en comisiones — ese costo con nosotros son $500 siempre, sin importar el monto. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Esta semana empezamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-14)
+
+**[89] Fajitas Tex Mex Delivery — Presentación:**
+"Hola Fajitas Tex Mex Delivery! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@fajitastexmex_villa_alemana) — fajitas y comida tex-mex con delivery propio en Villa Alemana, horario Martes-Sábado de tarde-noche. Una propuesta concreta: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30% de comisión, con nosotros el costo es siempre $500 — sin importar si el pedido vale $8.000 o $20.000. Para una orden de fajitas de $13.000, la diferencia vs. una app de porcentaje (28%) son $3.140 que se quedan en el negocio por cada entrega. Un dato relevante: son los únicos de comida tex-mex con delivery en Villa Alemana — una propuesta gastronómica diferenciada sin competencia directa en la zona. Julio es el peak de comida caliente y abundante en delivery: las noches frías de invierno son el momento perfecto para unas buenas fajitas en casa. Con 12 entregas nocturnas, el ahorro vs. una plataforma de porcentaje puede superar los $400.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos? (WhatsApp: +56 9 57609318)"
+
+---
+
+**[90] Buenaventura Pizzería & Sandwiches — Presentación:**
+"Hola Buenaventura! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Freire 498 con presencia activa en Uber Eats y PedidosYa — pizzería y sandwichería establecida en Villa Alemana. Una propuesta directa: si están en Uber Eats + PedidosYa, hoy pagan comisión del 28-30% en ambas plataformas por cada pedido. Para una pizza de $12.000, eso son hasta $3.600 que se van a la app por cada entrega — en cada una de las dos plataformas. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el valor. Un dato extra sobre PedidosYa: la FNE los multó $3.400 millones CLP en 2026 por impedirles a los negocios vender más barato en sus propios canales — y Uber está comprando su dueña (Delivery Hero) por US$11.600M. En 2027 no se sabe con quién van a hacer negocios ni a qué precio con PedidosYa. Con RepartoJusto son siempre $500 por pedido, sin sorpresas. Julio es el peak de pizzas y completos en delivery: el frío hace que los clientes prefieran pedir desde casa toda la semana. Con 15 entregas diarias, el ahorro vs. una plataforma de porcentaje puede superar los $310.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos? (Tel: +56 9 4113 4197)"
 
 ---
 
