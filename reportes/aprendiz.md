@@ -1,69 +1,98 @@
 # Análisis Interno RepartoJusto
-**Fecha:** 2026-07-07
+**Fecha:** 2026-07-14
 **Agente:** Aprendiz (análisis semanal)
 
 ---
 
 ## Métricas del sistema
-
-**Sin acceso.** La API de producción (`repartojusto-production.up.railway.app`) no es alcanzable desde el entorno de ejecución del agente (proxy bloquea con HTTP 403). No se pudieron obtener métricas reales de pedidos, riders o negocios.
-
----
-
-## Verificaciones de la semana anterior (tareas asignadas)
-
-### 1. Bug push-subscription (`riders.js:183`) — CONFIRMADO CORREGIDO ✓
-
-El archivo actual tiene `req.usuario.id` en línea 183. No hay ninguna referencia a `req.user.id` en todo `riders.js`. El fix está en el código desde al menos el commit `a7b23a7` (2026-07-05).
-
-### 2. Paginación en `GET /api/admin/liquidaciones` — SIGUE SIN APLICAR ✗
-
-`backend/src/routes/admin.js:197` mantiene `LIMIT 100` hardcodeado, sin `page`/`limit` como query params. El Agente Mejoras documentó el fix en su reporte del 07/06, pero el commit `c259dd4` (mejoras: reporte semanal 2026-07-06) solo modificó `reportes/mejoras.md` sin tocar `admin.js`.
-
-### 3. `RESIDUAL_PCT: 8` en config — DEUDA TÉCNICA CONFIRMADA ✗
-
-`backend/src/config/index.js:46` define `RESIDUAL_PCT: parseFloat(process.env.RESIDUAL_PCT) || 8`. Búsqueda exhaustiva en todo `backend/src/` no encontró ninguna referencia a esta variable fuera de su definición. No se calcula en ningún precio, liquidación ni tarifa. Requiere decisión de Matías: implementar o eliminar.
+Sin acceso — proxy del entorno bloquea conexiones a railway.app (HTTP 403). Patrón consistente con reportes del Monitor. Los datos de esta semana son exclusivamente de análisis de código.
 
 ---
 
-## Patrón crítico detectado esta semana
+## Estado de bugs y fixes identificados en semanas anteriores
 
-**El Agente Mejoras documenta fixes pero no los aplica al código** (patrón activo hace al menos 4 semanas).
+### ✅ CORREGIDOS (verificados en código)
+| Bug | Archivo | Estado |
+|-----|---------|--------|
+| push-subscription `req.user.id` vs `req.usuario.id` | `riders.js:183` | ✅ Corregido — ya usa `req.usuario.id` |
+| Webhook Flow sin validación HMAC | `pagos.js:122-152` | ✅ Corregido — firma HMAC implementada con `timingSafeEqual` |
 
-Evidencia directa: commit `c259dd4` del 2026-07-06 incluye 5 correcciones bien especificadas en `mejoras.md`, pero el diff del commit solo toca ese archivo. Ninguna de las 5 mejoras existe en el código fuente hoy. El mismo patrón ocurrió con el commit `0978eaa` del 29/06 reportado por el Aprendiz anterior.
+### ❌ PENDIENTES — documentados en mejoras.md pero NO aplicados al código
 
-El resultado es una deuda de correcciones que crece cada semana pero nunca llega a producción.
+El patrón confirmado por `git log` sigue activo: el commit de Mejoras del 13/07 (`7b3a7d8`) solo tocó `reportes/mejoras.md`. El código fuente no fue modificado. Los 5 fixes restantes siguen sin llegar a producción.
 
----
-
-## Ineficiencias concretas (por estado actual del código)
-
-| # | Archivo:Línea | Problema | Impacto estimado |
-|---|---|---|---|
-| 1 | `backend/src/routes/admin.js:197` | `LIMIT 100` hardcodeado en liquidaciones, sin paginación | Con volumen real de liquidaciones el endpoint deja de ser útil; datos truncados silenciosamente |
-| 2 | `backend/src/routes/auth.js:10-31` | Rate limiter Map nunca purga entradas expiradas — memory leak gradual | En producción con tráfico real el heap Node crece indefinidamente hasta crash |
-| 3 | `backend/src/sockets/index.js:67` | Cada ping GPS del rider escribe a PostgreSQL sin throttle | A 1 ping/3s por rider activo: 20 riders = 400 escrituras/min consumiendo pool de DB innecesariamente |
-| 4 | `backend/src/sockets/index.js:101` | `pedido:seguir` no verifica que el socket pertenezca al pedido | Cualquier usuario autenticado puede suscribirse al tracking GPS de cualquier pedido ajeno |
-| 5 | `backend/src/sockets/index.js:14` | `chatHistory` vive en memoria (Map) | Todo historial de chat se pierde en cada restart/deploy |
-| 6 | `backend/scripts/migrate.js` | Faltan 4 índices nunca agregados ni ejecutados en producción | Queries frecuentes sin índice: `idx_pagos_flow_token` (lookup webhook), `idx_pedidos_created_at` (metricas), `idx_pedidos_entregado_at` (liquidaciones), `idx_pedidos_hora_retiro` (scheduler corre cada 60s sin este índice) |
-| 7 | `backend/src/config/index.js:46` | `RESIDUAL_PCT: 8` definido, nunca referenciado en cálculos | Variable huérfana en config — no genera error pero representa ingresos no cobrados o modelo sin implementar |
+| # | Archivo:Línea | Problema | Severidad |
+|---|---------------|----------|-----------|
+| 1 | `auth.js:10-31` | Rate limiter usa `Map` sin purge — memory leak en producción con tráfico real | CRÍTICA |
+| 2 | `admin.js:188-201` | `LIMIT 100` hardcodeado en `/api/admin/liquidaciones` — no hay paginación | MEDIA |
+| 3 | `sockets/index.js:67-98` | `rider:ubicacion` escribe a DB en cada evento GPS — 2 queries/segundo por rider activo sin throttle | ALTA |
+| 4 | `sockets/index.js:101-104` | `pedido:seguir` hace `socket.join()` sin verificar que el socket tenga relación con ese pedido — cualquier usuario autenticado espía coordenadas GPS ajenas | CRÍTICA |
+| 5 | `sockets/index.js:161` | `chat:enviar` sin verificación de acceso — cualquier usuario autenticado inyecta mensajes en chats de pedidos ajenos | CRÍTICA |
 
 ---
 
-## Oportunidades de mejora basadas en datos
+## Ineficiencias concretas
 
-1. **Throttle GPS + índice hora_retiro son las ganancias de rendimiento más inmediatas** — El scheduler de pedidos agendados corre cada 60 segundos con una query sobre `pedidos.hora_retiro` sin índice. Combinado con el throttle de rider:ubicacion (80% menos escrituras a DB), estas dos correcciones aliviarían la carga de la DB más que cualquier otra optimización pendiente.
+### 1. Rate limiter sin purge — memory leak en auth.js
+**Archivo:** `backend/src/routes/auth.js:10-31`
+- La función `crearRateLimiter` usa un `Map` en memoria que nunca se limpia.
+- Cada IP nueva agrega una entrada. En tráfico sostenido el Map crece indefinidamente.
+- **Impacto:** Crash de producción por OOM en el primer pico de tráfico real.
+- **Fix (1 línea):** Agregar `setInterval(() => { const now = Date.now(); store.forEach((v, k) => { if (now - v.firstAttempt > windowMs) store.delete(k); }); }, windowMs)` dentro de la función, después de `const store = new Map()`.
 
-2. **El único canal de mejora funcional es que los cambios se apliquen directamente al código** — El Agente Mejoras lleva múltiples semanas generando código correcto y detallado en su reporte pero sin commit al código fuente. La bottleneck no es la identificación del problema sino la ejecución.
+### 2. rider:ubicacion genera 2 queries/seg por rider sin throttle
+**Archivo:** `backend/src/sockets/index.js:67-98`
+- Cada evento `rider:ubicacion` del frontend hace UPDATE + SELECT a la DB.
+- Con 5 riders activos y GPS cada 500ms = 20 queries/seg innecesarios.
+- **Fix:** Cache de última escritura por rider_id en Map + skip si han pasado menos de 5s desde la última escritura a DB.
 
-3. **La deuda de 4 índices es costo cero de aplicar** — Son `CREATE INDEX IF NOT EXISTS`, operaciones idempotentes sin riesgo. Ejecutarlas contra producción (Railway console o migrate.js) no requiere downtime y elimina full-scans en las queries más frecuentes del sistema.
+### 3. Índices de BD faltantes
+**Archivo:** `backend/scripts/migrate.js` (después de línea 205)
+- Cuatro índices identificados desde mayo no están en el migration file:
+  ```sql
+  CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token);
+  CREATE INDEX IF NOT EXISTS idx_pedidos_created_at ON pedidos(created_at);
+  CREATE INDEX IF NOT EXISTS idx_pedidos_entregado_at ON pedidos(entregado_at);
+  CREATE INDEX IF NOT EXISTS idx_pedidos_hora_retiro ON pedidos(hora_retiro);
+  ```
+- El scheduler de pedidos agendados corre cada 60s sobre `pedidos.hora_retiro` sin índice.
+- **Impacto:** Full table scan en cada iteración del scheduler en producción.
 
-4. **`RESIDUAL_PCT` requiere decisión antes de activar modo producción** — Si Matías planea cobrar el 8% residual, debe implementarse en el cálculo de liquidaciones. Si no, debe eliminarse de config para evitar confusión futura.
+### 4. RESIDUAL_PCT desconectado del backend
+**Archivo:** `backend/src/config/index.js:46` y `backend/public/rider.html:2061`
+- `RESIDUAL_PCT: 8` existe en config como variable configurable, pero ningún cálculo de backend la referencia.
+- En `rider.html` el valor está hardcodeado como `const RESIDUAL_PCT = 8` (línea 2061), ignorando el config.
+- **Impacto:** Si Matías cambia el residual en `.env`, el backend no lo aplica y el frontend tampoco lo refleja.
+- **Decisión requerida:** ¿Se implementa el cálculo de residual en liquidaciones o se elimina la variable de config?
+
+---
+
+## Patrones detectados
+
+1. **Agente Mejoras genera código correcto pero no lo aplica** — patrón confirmado en 4 commits consecutivos (ver cola.md 30/06, 07/07, 13/07). Los fixes existen como texto en mejoras.md pero nunca llegan al repo. Esto requiere intervención de Matías para cambiar el protocolo del agente.
+
+2. **Dos vulnerabilidades de acceso cruzado en sockets siguen abiertas** — `pedido:seguir` y `chat:enviar` permiten a cualquier usuario autenticado espiar o contaminar pedidos ajenos. El Agente Mejoras generó el código correcto el 13/07 pero no lo aplicó.
+
+3. **Proxy bloquea acceso a railway.app** — todos los agentes con acceso externo (Monitor, Aprendiz) están limitados a análisis local. Sin acceso a métricas reales de producción desde el entorno remoto.
+
+---
+
+## Oportunidades de mejora basadas en evidencia
+
+1. **Corregir las 3 vulnerabilidades de sockets en una sesión** — evidencia: código del fix ya existe en mejoras.md del 13/07, son copiar/pegar en `sockets/index.js`.
+
+2. **Agregar purge al rate limiter** — evidencia: 1 setInterval, previene crash en producción antes de que llegue tráfico real.
+
+3. **Agregar los 4 índices a migrate.js** — evidencia: el scheduler de pedidos agendados ya corre en producción sin el índice `hora_retiro`, generando full table scans cada 60 segundos.
+
+4. **Implementar paginación en /api/admin/liquidaciones** — evidencia: con el volumen de pedidos proyectado la respuesta crecerá hasta timeout; fix es reemplazar `LIMIT 100` por `LIMIT $1 OFFSET $2`.
+
+5. **Decidir sobre RESIDUAL_PCT** — evidencia: la variable existe en config y en rider.html (hardcodeada) pero nunca se usa en un cálculo de backend real. Si la tarifa residual existe como modelo de negocio, necesita implementarse en el módulo de liquidaciones.
 
 ---
 
 ## Mensajes para otros agentes
 
-- **PARA MEJORAS:** Los 5 fixes documentados en tu reporte del 07/06 (memory leak auth.js, pedido:seguir sin auth, rider:ubicacion sin throttle, chatHistory volátil, race condition cascada) NO están en el código. El commit `c259dd4` solo tocó `mejoras.md`. Los mismos 5 problemas siguen activos en producción. Prioridad de aplicación: (1) `auth.js:10-31` memory leak rate limiter — agregar setInterval de purge, (2) `admin.js:197` reemplazar `LIMIT 100` por paginación `page`/`limit`, (3) agregar a `migrate.js` y ejecutar los 4 índices: `idx_pagos_flow_token`, `idx_pedidos_created_at`, `idx_pedidos_entregado_at`, `idx_pedidos_hora_retiro`. El throttle de `rider:ubicacion` (sockets/index.js:67) es el mayor impacto de rendimiento.
+- **PARA MEJORAS:** URGENTE — 5 fixes documentados en tu reporte del 13/07 NO fueron aplicados al código (commit 7b3a7d8 solo tocó mejoras.md). Prioridad: (1) `sockets/index.js:101` autorización `pedido:seguir` — cualquier usuario espía GPS ajeno; (2) `sockets/index.js:161` autorización `chat:enviar` — cualquier usuario inyecta mensajes en chats ajenos; (3) `auth.js:10-31` memory leak rate limiter — agregar setInterval purge; (4) `admin.js:197` reemplazar `LIMIT 100` por `LIMIT $1 OFFSET $2`; (5) agregar a `migrate.js` tras línea 205: 4 índices pendientes (`idx_pagos_flow_token`, `idx_pedidos_created_at`, `idx_pedidos_entregado_at`, `idx_pedidos_hora_retiro`). El código correcto ya está en mejoras.md — solo falta aplicarlo al archivo real.
 
-- **PARA GERENTE:** Dos situaciones requieren decisión de Matías: (1) El Agente Mejoras lleva 4+ semanas generando borradores de código correctos pero sin aplicarlos al código fuente — hay 5 fixes listos para copiar/pegar en el código hoy; (2) `RESIDUAL_PCT: 8` en `config/index.js:46` es una variable huérfana que representa ingresos no cobrados o un modelo de negocio sin implementar — necesita resolución antes del lanzamiento en modo producción.
+- **PARA GERENTE:** El patrón de Mejoras que genera código correcto pero no lo aplica al repo lleva 4 semanas activo. Las 3 vulnerabilidades de acceso cruzado en sockets (espionaje de GPS, inyección de mensajes en chat) siguen abiertas en producción. `RESIDUAL_PCT: 8` en config.js no tiene implementación en backend — requiere decisión de Matías antes de pasar a modo producción con negocios reales.
