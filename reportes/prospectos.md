@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-14
+**Actualizado:** 2026-07-15
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -11,9 +11,9 @@
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — PRIORIDAD, seguimiento tercera semana julio |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — peak botillería invierno, 22 días sin mensaje fresco |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — Día de la Virgen del Carmen, peak pastelería familiar invernal |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Domingo 12 de julio redactado — peak costillar/asado domingo |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | Domingo julio redactado 06/07 |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — café + postre invernal en feriado familiar |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — peak reparaciones invierno, arg. Rappi algoritmo |
@@ -94,10 +94,44 @@
 | 88 | La Choza | Comida venezolana / peruana / ecuatoriana / colombiana | Villa Alemana | Nuevo | — | Presentación redactada 13/07 — especialidad en cocina latinoamericana, único del rubro en el pipeline |
 | 89 | Fajitas Tex Mex Delivery | Comida tex-mex | Villa Alemana (@fajitastexmex_villa_alemana, Facebook) | Nuevo | — | Presentación redactada 14/07 — canal propio Instagram+Facebook, WhatsApp +56 9 57609318, primer tex-mex del pipeline, Ma-Sá 17:30-23:30 |
 | 90 | Buenaventura Pizzería & Sandwiches | Pizzería / sandwichería | Freire 498, Villa Alemana | Nuevo | — | Presentación redactada 14/07 — en Uber Eats + PedidosYa (argumento FNE+TDLC+fusión Uber+doble comisión), pizzas/sándwiches/completos, tel. +56 9 4113 4197 |
+| 91 | RetroSushi Delivery | Sushi | El Peuco 494, Villa Alemana | Nuevo | — | Presentación redactada 15/07 — 29K seguidores Instagram @retrosushidelivery, delivery todos los días, tel. +56977103910 / +56 32 324 5209 |
+| 92 | Restobar Hay Don Carlos | Comida casera / restobar | Baquedano 784, Villa Alemana | Nuevo | — | Presentación redactada 15/07 — comida casera porciones abundantes, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775 |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-15)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 15 de julio — víspera del Día de la Virgen del Carmen** (feriado nacional 16 de julio). Este es el contexto de mayor urgencia de toda la semana: esta tarde y noche son el peak de delivery del fin de semana largo, cuando las familias se organizan para el feriado, nadie quiere salir al frío y se piden los productos especiales para la reunión familiar. Se redactan **4 mensajes**: (1) **"Víspera del feriado"** para **#8 Pastelería Dulce Hogar** (pastelería — torta/kuchen para el feriado familiar invernal, 9 días sin draft fresco, 06/07 fue el último) y **#10 Café El Árbol** (café — el café + postre en feriado invernal es el combo perfecto, 9 días sin draft fresco); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **RetroSushi Delivery (#91)** — sushi delivery en El Peuco 494 con **29.000 seguidores** en Instagram @retrosushidelivery, operación diaria, tel. +56977103910 — y **Restobar Hay Don Carlos (#92)** — comida casera abundante en Baquedano 784, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775. Pipeline total: **92 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA ACUMULADA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **20 días consecutivos** con borradores activos sin confirmación de envío. La víspera del feriado del Día de la Virgen del Carmen es el argumento estacional más poderoso del año — enviarlos HOY antes de las 19:00.
+
+---
+
+#### "VÍSPERA DEL FERIADO" — Contactados sin mensaje fresco (15/07)
+
+**[8] Pastelería Dulce Hogar — Víspera del feriado (15/07):**
+"Hola Pastelería Dulce Hogar! RepartoJusto — martes 15 de julio, víspera del Día de la Virgen del Carmen. El feriado de mañana convierte esta tarde y noche en el peak perfecto de pastelería a domicilio: las familias se reúnen, nadie quiere salir al frío, y todos quieren celebrar con una buena torta, kuchen o pastel invernal. El cálculo concreto para Av. Álvarez 1890: con una torta o kuchen de $12.000 entregado por una plataforma de porcentaje (28%), se van $3.360 en comisiones por cada pedido. Con RepartoJusto son $500 fijos siempre, sin importar si el pedido vale $6.000 o $22.000. Este fin de semana largo (esta tarde + feriado mañana) es el momento ideal del año para pastelería a domicilio: el frío invernal más la reunión familiar del feriado garantizan una demanda sostenida de tortas, kuchenes y pasteles. Con 12 entregas en el período, el ahorro vs. una plataforma de porcentaje puede superar los $420.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este feriado trabajamos juntos?"
+
+---
+
+**[10] Café El Árbol — Víspera del feriado (15/07):**
+"Hola Café El Árbol! RepartoJusto — martes 15 de julio, víspera del Día de la Virgen del Carmen. El feriado de mañana es el peak de café y colaciones a domicilio de todo el invierno: las familias se quedan en casa, el frío de julio convierte la tarde del feriado en el momento ideal para ese café caliente con una porción de pastel sin tener que salir. Una propuesta concreta para Freire 890: RepartoJusto entrega pedidos de café, pasteles y colaciones a sus clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para un combo café + pastel de $7.000, una plataforma de porcentaje (28%) cobra $1.960 de comisión. Con RepartoJusto son $500 siempre — más del triple de ahorro por pedido. Este período de víspera + feriado es la ventana de mayor consumo de café delivery del mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este feriado arrancamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-15)
+
+**[91] RetroSushi Delivery — Presentación:**
+"Hola RetroSushi Delivery! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@retrosushidelivery) con más de 29.000 seguidores y local en El Peuco 494 — sushi delivery con operación todos los días y una comunidad fiel bien establecida en Villa Alemana. Una propuesta concreta: RepartoJusto puede sumar riders locales a sus pedidos por $500 fijos por entrega, sin porcentaje sobre la venta. Si trabajan con Rappi o Uber Eats, hoy pagan entre 28-30% de comisión por cada pedido. Para un combo sushi de $15.000, eso son hasta $4.500 que se van a la app por cada entrega. Con RepartoJusto son $500 siempre — el resto se queda en el negocio. Hoy es 15 de julio, víspera del Día de la Virgen del Carmen: el feriado de mañana convierte esta noche y el fin de semana largo en el peak máximo de sushi delivery del año. Las familias en casa + frío invernal + feriado = el escenario perfecto para sushi. Con 29K seguidores, su comunidad de clientes ya está lista para el canal de entrega local. Con 15 entregas diarias, el ahorro mensual vs. una app de porcentaje puede superar los $640.000. Sin contrato, registro completamente gratuito, pueden mantener sus plataformas actuales y sumar RepartoJusto. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos? (Tel: +56977103910)"
+
+---
+
+**[92] Restobar Hay Don Carlos — Presentación:**
+"Hola Restobar Hay Don Carlos! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Facebook — restobar con comida casera de porciones abundantes en Baquedano 784, Villa Alemana. Una propuesta directa: RepartoJusto puede llevar sus pedidos a domicilio en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30% de cada pedido, con nosotros el costo es siempre $500, sin importar si el pedido vale $8.000 o $18.000. Hoy es víspera del Día de la Virgen del Carmen: el feriado de mañana es el momento del año en que las familias se reúnen en casa, nadie quiere cocinar ni salir al frío, y la comida casera abundante a domicilio es exactamente lo que buscan. Para una porción de $10.000, el ahorro vs. Rappi (28%) son $2.300 que se quedan en el negocio por cada entrega. Con 15 entregas en el fin de semana largo, el ahorro puede superar los $400.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos? (Tel: +56 9 6878 1775)"
 
 ---
 

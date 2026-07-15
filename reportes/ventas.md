@@ -1,37 +1,41 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-07-14 (lunes — inicio de la tercera semana de julio, peak invernal pleno)
-**Pipeline total:** 90 prospectos
-**Por estado:** Nuevos: 76 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-07-15 (martes — víspera del Día de la Virgen del Carmen, feriado nacional 16/07)
+**Pipeline total:** 92 prospectos
+**Por estado:** Nuevos: 78 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
 - Se redactaron 4 mensajes nuevos (borradores para envío por Matías):
-  - **Seguimiento "Lunes 14 de julio"** para **#5 Sushi Zen** (PRIORIDAD — 12 días sin mensaje fresco, argumento invierno pleno + peak sushi + ahorro $375K-$450K/mes)
-  - **Seguimiento "Lunes 14 de julio"** para **#6 Botillería El Copihue** (22 días sin mensaje fresco — más antiguo sin actualizar; peak botillería en lunes invernal = planificación de consumo semanal)
-  - **Presentación** para **#89 Fajitas Tex Mex Delivery** (canal propio Instagram, primer tex-mex del pipeline, WhatsApp +56 9 57609318, sin grandes plataformas detectadas)
-  - **Presentación** para **#90 Buenaventura Pizzería & Sandwiches** (en Uber Eats + PedidosYa simultáneamente, argumento FNE+TDLC+fusión Uber+doble comisión, Freire 498, tel. +56 9 4113 4197)
+  - **Seguimiento "Víspera del feriado 16/07"** para **#8 Pastelería Dulce Hogar** (9 días sin draft fresco desde 06/07; torta/kuchen para reunión familiar del Día de la Virgen del Carmen — peak invernal de pastelería a domicilio)
+  - **Seguimiento "Víspera del feriado 16/07"** para **#10 Café El Árbol** (9 días sin draft fresco desde 06/07; café + postre en feriado invernal = combo perfecto para la tarde del miércoles)
+  - **Presentación** para **#91 RetroSushi Delivery** (El Peuco 494, Villa Alemana; 29K seguidores Instagram @retrosushidelivery, delivery todos los días, tel. +56977103910)
+  - **Presentación** para **#92 Restobar Hay Don Carlos** (Baquedano 784, Villa Alemana; comida casera porciones abundantes, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775)
 
 - Argumentos del Investigador activos y en uso:
-  - Argumento triple PedidosYa: dos multas 2026 + TDLC + Uber comprando Delivery Hero (US$11.600M) — incorporado en presentación #90
+  - Argumento triple PedidosYa: dos multas 2026 + TDLC + Uber comprando Delivery Hero (US$11.600M) — disponible para prospectos en PedidosYa
   - Argumento anti-Rappi algoritmo social: nueva app prioriza influencers, entierra negocios sin publicidad extra
-  - Julio peak invernal + contraste "trabajamos en tu barrio con tarifa fija" vs. Rappi/FIFA
+  - Argumento estacional: víspera del Día de la Virgen del Carmen + invierno pleno + feriado familiar
+
+- Contactados actualizados con borradores frescos:
+  - #8 Pastelería Dulce Hogar: próxima acción actualizada
+  - #10 Café El Árbol: próxima acción actualizada
 
 ## Borradores listos para Matías
 
 | # | Negocio | Tipo | Contacto | Urgencia |
 |---|---|---|---|---|
-| 5 | Sushi Zen | Seguimiento "Lunes 14/07" | — | PRIORIDAD (12 días sin mensaje) |
-| 6 | Botillería El Copihue | Seguimiento "Lunes 14/07" | — | ALTA (22 días sin mensaje) |
-| 89 | Fajitas Tex Mex Delivery | Presentación | WhatsApp +56 9 57609318 | Nueva |
-| 90 | Buenaventura Pizzería & Sandwiches | Presentación | Tel. +56 9 4113 4197 | Nueva |
+| 8 | Pastelería Dulce Hogar | Seguimiento "Víspera feriado 16/07" | — | ALTA (9 días sin mensaje, feriado mañana) |
+| 10 | Café El Árbol | Seguimiento "Víspera feriado 16/07" | — | ALTA (9 días sin mensaje, feriado mañana) |
+| 91 | RetroSushi Delivery | Presentación | Tel. +56977103910 | Nueva |
+| 92 | Restobar Hay Don Carlos | Presentación | Tel. +56 9 6878 1775 | Nueva |
 
-**⚠ PRIORIDAD CRÍTICA ACUMULADA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **19 días consecutivos** con borradores activos sin confirmación de envío. Lunes de la tercera semana de julio — ventana inmejorable para enviar hoy.
+**⚠ PRIORIDAD CRÍTICA ACUMULADA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **20 días consecutivos** con borradores activos sin confirmación de envío. La víspera del Día de la Virgen del Carmen (feriado 16/07) es el argumento estacional más poderoso del año — enviarlos HOY antes de las 19:00. Los borradores vigentes más frescos están en prospectos.md del 11/07.
 
 ## Nuevos prospectos agregados
 
-- **#89 Fajitas Tex Mex Delivery** — comida tex-mex, canal propio Instagram @fajitastexmex_villa_alemana + Facebook, WhatsApp +56 9 57609318, horario Ma-Sá 17:30-23:30, primer tex-mex del pipeline. Sin grandes plataformas detectadas — argumento canal directo.
-- **#90 Buenaventura Pizzería & Sandwiches** — pizzería/sandwichería/completos, Freire 498 Villa Alemana, en Uber Eats + PedidosYa, tel. +56 9 4113 4197, argumento doble comisión + FNE/TDLC/fusión Uber especialmente poderoso.
+- **#91 RetroSushi Delivery** — sushi, El Peuco 494 Villa Alemana, 29.000 seguidores Instagram @retrosushidelivery, operación todos los días, tel. +56977103910 / +56 32 324 5209. Uno de los prospectos de mayor audiencia propia del pipeline. Argumento: canal directo con 29K seguidores + tarifa fija $500 vs. porcentaje.
+- **#92 Restobar Hay Don Carlos** — comida casera / restobar, Baquedano 784 Villa Alemana, porciones abundantes, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775. Argumento: comida casera peak feriado familiar invernal + tarifa fija.
 
 ## Para el Gerente
 
-Pipeline en 90 prospectos (76 nuevos, 14 contactados, 0 registrados); hito: se supera el umbral de 90 prospectos. 4 borradores redactados hoy — seguimientos "Lunes 14 de julio" para #5 Sushi Zen (PRIORIDAD, 12 días sin mensaje) y #6 Botillería El Copihue (22 días sin mensaje, el más desactualizado de todos los contactados activos), más presentaciones para 2 nuevos de calidad: Fajitas Tex Mex (#89, primer tex-mex del pipeline, canal propio) y Buenaventura Pizzería & Sandwiches (#90, en PedidosYa + Uber Eats, argumento FNE máximo); cuello de botella crítico: 67 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline; acción más urgente: Matías enviar #22 Sushi Point Delivery y #15 Melt Pizzas esta semana.
+Pipeline en 92 prospectos (78 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy aprovechando el ángulo "víspera del Día de la Virgen del Carmen" — seguimientos para #8 Pastelería Dulce Hogar y #10 Café El Árbol (ambos sin draft fresco desde el 06/07, 9 días), más presentaciones para 2 nuevos prospectos: RetroSushi Delivery (#91, 29K seguidores Instagram, sushi todos los días, El Peuco 494) y Restobar Hay Don Carlos (#92, comida casera, Baquedano 784); cuello de botella crítico: 68 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline; acción más urgente: Matías enviar #22 Sushi Point Delivery y #15 Melt Pizzas HOY — víspera del feriado es el mejor argumento estacional del año.
