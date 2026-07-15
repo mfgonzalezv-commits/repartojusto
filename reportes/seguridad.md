@@ -1,97 +1,110 @@
 # Seguridad RepartoJusto
-**Fecha:** 2026-07-08
-**Nivel general:** ALTO
-**Health check:** `GET /health` — sin acceso desde entorno de auditoría (proxy egress bloqueado); confirmar manualmente en Railway.
+**Última auditoría:** 2026-07-15
+**Nivel general:** ALTO → mitigado a MEDIO tras fixes aplicados
+**Health check:** `GET /health` — no accesible desde entorno de revisión (proxy egress bloqueado en Railway); verificar manualmente.
 
 ---
 
-## Vulnerabilidades
+## Resumen ejecutivo
 
-### 1. ALTO — Calificaciones de cliente sin autenticación ni rate limiting
-**Archivo:** `backend/src/routes/calificaciones.js:37`
-
-Cualquier persona que conozca un `pedido_id` (UUID) puede enviar una calificación negativa anónima a un rider con `tipo: 'cliente'`. Sin rate limiting, un script puede intentar calificar continuamente hasta que la unicidad `(pedido_id, tipo)` lo bloquee. Dado que el pedido_id puede filtrarse por múltiples canales (enlace de seguimiento, socket events) esto afecta directamente la remuneración del rider, cuyo score impacta el volumen de pedidos que recibe.
-
-**Impacto:** Un competidor o cliente malicioso puede hundir el score de cualquier rider.
-
-**Fix aplicado:**
-- Rate limiter: 5 intentos por IP cada 15 minutos antes de `POST /api/calificaciones`
-- Ver `califRateLimit` en `calificaciones.js:5-22`
+Segunda auditoría de seguridad. Los cuatro fixes de la auditoría anterior (2026-07-08) están aplicados y verificados en el código. Se encontraron tres nuevas vulnerabilidades — dos ALTO corregidas en esta sesión — y una MEDIO del reporte anterior que ahora también fue corregida.
 
 ---
 
-### 2. ALTO — Score público de riders sin autenticación
-**Archivo:** `backend/src/routes/calificaciones.js:247`
+## Auditoría anterior (2026-07-08) — Fixes confirmados en código
 
-`GET /api/calificaciones/rider/:id/score` no requería autenticación. Cualquier tercero puede ver métricas detalladas de comportamiento de cualquier rider: total de cancelaciones, velocidad de entrega, proporción de entregas en horarios valle, feriados trabajados. Esta información es sensible (identifica comportamiento laboral) y no debe ser pública.
-
-**Impacto:** Exposición de datos operacionales de riders que pueden usarse para discriminación o targeting competitivo.
-
-**Fix aplicado:**
-- Endpoint ahora requiere `auth` + `solo('admin')`
-- Los riders siguen usando `GET /api/calificaciones/mi-score` (ya protegido)
+| Fix | Archivo | Estado |
+|-----|---------|--------|
+| Rate limit en `POST /api/calificaciones` | `calificaciones.js:5-22` | ✅ Aplicado |
+| `GET /rider/:id/score` requiere `auth + solo('admin')` | `calificaciones.js:251` | ✅ Aplicado |
+| Validación HMAC webhook Flow activada con `FLOW_SECRET` | `pagos.js:126-152` | ✅ Aplicado |
+| CORS Express usa `config.CORS_ORIGIN` | `server.js:50` | ✅ Aplicado |
 
 ---
 
-### 3. ALTO — Webhook de pagos sin validación de firma en modo sandbox
-**Archivo:** `backend/src/routes/pagos.js:124`
+## Vulnerabilidades — Auditoría 2026-07-15
 
-El bloque de validación HMAC original solo corría cuando `FLOW_ENVIRONMENT !== 'sandbox'`. En sandbox (modo por defecto), el endpoint `POST /api/pagos/webhook` aceptaba cualquier POST sin verificación. Un negocio podría haber creado un pago (`/api/pagos/crear`) y luego llamado directamente al webhook para marcarlo como 'pagado' sin completar el flujo en Flow.
+### 1. ALTO — `POST /api/soporte` sin rate limiting (costos API ilimitados)
+**Archivo:** `backend/src/routes/soporte.js:65`
 
-**Impacto:** Bypass del cobro en sandbox; riesgo de confusión si `FLOW_ENVIRONMENT` se configura incorrectamente al desplegar en producción.
+El endpoint de soporte llama a la API de Anthropic en cada request. Sin rate limiting, cualquier usuario autenticado (negocio o rider) puede disparar miles de llamadas por hora, generando costos de API sin límite a cargo de la plataforma.
 
-**Fix aplicado:**
-- La validación HMAC ahora aplica siempre que `FLOW_SECRET` esté configurado, sin importar el entorno
-- Si `FLOW_SECRET` no está configurado en producción: webhook bloqueado con 401
-- Si `FLOW_SECRET` no está configurado en sandbox: warning + permite (mantiene compatibilidad de desarrollo)
-- Longitud incorrecta en `Buffer.from` atrapada con try/catch para evitar crash en firmas mal formadas
+**Escenario de explotación:** Un negocio registrado ejecuta un script que envía 1 000 requests por hora → costo estimado ~$15 USD/hora en API fees, acumulable indefinidamente.
 
----
+**Fix aplicado:** Rate limiter de 20 consultas por hora por `usuario_id` (keyed en JWT, no en IP — no eludible con proxies).
 
-### 4. MEDIO — CORS hardcodeado a `*` ignorando la configuración de entorno
-**Archivo:** `backend/server.js:49`
-
-El middleware Express CORS estaba hardcodeado a `origin: '*'` a pesar de que `config.CORS_ORIGIN` existe y Socket.io ya lo usaba correctamente. En producción, aunque `CORS_ORIGIN` esté restringido en el entorno, Express seguía aceptando peticiones de cualquier origen.
-
-**Impacto:** Cualquier sitio web puede disparar peticiones autenticadas si logra obtener el token (XSS en el frontend).
-
-**Fix aplicado:**
-- `server.js` ahora usa `config.CORS_ORIGIN` para Express (igual que Socket.io)
-- Acción requerida en Railway: `CORS_ORIGIN=https://app.repartojusto.cl`
-
----
-
-### 5. MEDIO — Rate limiter de auth en memoria (no persiste entre instancias)
-**Archivo:** `backend/src/routes/auth.js:10-31`
-
-El rate limiter de login/registro usa `new Map()` en memoria del proceso. Con múltiples réplicas o reinicios en Railway, el contador se resetea. Un atacante puede rotar entre instancias o esperar un reinicio para continuar un ataque de fuerza bruta.
-
-**Impacto:** Login de admin o negocio vulnerable a brute force distribuido.
-
-**Fix recomendado (no aplicado — requiere Redis):**
 ```js
-const redis = new Redis(config.REDIS_URL);
-const key = `rl:login:${ip}`;
-const count = await redis.incr(key);
-if (count === 1) await redis.expire(key, windowMs / 1000);
-if (count > max) return res.status(429).json({ error: mensaje });
+// soporte.js — agregado antes del handler
+function soporteRateLimit(req, res, next) {
+  const userId = req.usuario?.id;
+  // ... 20 req / 1h por usuario
+}
+router.post('/', auth, soporteRateLimit, async (req, res, next) => { ... });
 ```
-Redis ya está en el stack (`config.REDIS_URL`). Migrar cuando se escale a múltiples instancias.
 
 ---
 
-## Fixes aplicados
+### 2. ALTO — Rate limiter de login en memoria (bypass garantizado en cada deploy)
+**Archivo:** `backend/src/routes/auth.js:10-45`
 
-| # | Archivo | Cambio |
-|---|---------|--------|
-| 1 | `calificaciones.js` | Rate limit (5/15min/IP) en `POST /api/calificaciones` |
-| 2 | `calificaciones.js` | `GET /rider/:id/score` ahora requiere `auth + solo('admin')` |
-| 3 | `pagos.js` | Validación HMAC del webhook aplica cuando `FLOW_SECRET` está configurado, en cualquier entorno |
-| 4 | `server.js` | CORS Express usa `config.CORS_ORIGIN` en lugar de `'*'` hardcodeado |
+Los rate limiters de login (10 intentos/15min) y registro (5/hora) usaban `new Map()` en memoria del proceso. Cada deploy en Railway reinicia el servidor y resetea los contadores. Un atacante que monitorea los deploys puede ejecutar brute-force inmediatamente después de cada restart.
 
-## Pendiente (sin aplicar)
+**Escenario de explotación:** Se detecta un deploy (app no responde ~2s), se lanza ráfaga de 10 intentos de login sobre cuenta admin, se repite en cada deploy — el bloqueo nunca persiste.
 
-- **Rate limiter Redis** (`auth.js`): migrar cuando se desplieguen múltiples instancias en Railway
-- **Variables de entorno en Railway** a configurar:
-  - `CORS_ORIGIN=https://app.repartojusto.cl`
-  - `FLOW_SECRET=<secreto-flow>` (activa validación webhook en sandbox también)
+**Fix aplicado:** Rate limiter híbrido: usa Redis (`INCR` + `pExpire`) cuando está disponible; fallback a memoria si Redis no está conectado. El contador persiste entre restarts y funciona en multi-instancia.
+
+```js
+// auth.js — ahora usa Redis si REDIS_URL está configurado
+if (redisClient?.isReady) {
+  const count = await redisClient.incr(`rl:login:${ip}`);
+  if (count === 1) await redisClient.pExpire(key, windowMs);
+  if (count > max) return res.status(429)...;
+}
+```
+
+---
+
+### 3. MEDIO — `GET /api/seguimiento/:id` sin rate limiting (scraping de datos)
+**Archivo:** `backend/server.js:93`
+
+El endpoint público de seguimiento no tenía ningún límite de requests. Aunque los IDs son UUIDs (difíciles de enumerar), un atacante con un conjunto de `pedido_id`s válidos puede extraer masivamente direcciones de entrega, nombres de riders y posiciones GPS.
+
+**Escenario de explotación:** Filtra pedido_ids de eventos Socket.io (room `pedido:*`), lanza scraping → obtiene directorio de clientes con direcciones.
+
+**Fix aplicado:** Rate limiter de 60 req/min por IP en el endpoint de seguimiento.
+
+---
+
+### 4. MEDIO — Calificaciones tipo 'cliente' sin verificación de identidad
+**Archivo:** `backend/src/routes/calificaciones.js:41`
+
+Las calificaciones de tipo `'cliente'` no requieren autenticación — solo un rate limit por IP (5/15min, fácil de evadir con proxies/VPN). Cualquiera que conozca un `pedido_id` de estado `'entregado'` puede enviar una calificación de cliente.
+
+**Escenario de explotación:** Competidor obtiene pedido_ids (p.ej. desde enlace de seguimiento compartido) y califica negativamente a todos los riders del competidor con múltiples IPs.
+
+**Fix recomendado (no aplicado — requiere decisión de producto):** Incluir un token firmado (HMAC del `pedido_id` + secret) en el enlace de seguimiento que se valide al calificar. Esto evita calificaciones de quien no recibió el envío sin requerir cuenta.
+
+---
+
+### 5. BAJO — `GET /api/riders/vapid-public-key` expone variable de entorno sin auth
+**Archivo:** `backend/src/routes/riders.js:190`
+
+El endpoint devuelve `process.env.VAPID_PUBLIC_KEY` sin autenticación. La VAPID public key es técnicamente pública (necesaria para suscripciones Web Push), pero exponer variables de entorno directamente es una práctica a evitar.
+
+**Fix recomendado:** Servir la clave desde un archivo estático o desde `src/config/index.js` en lugar de leer `process.env` directamente en el handler.
+
+---
+
+## Fixes aplicados en esta sesión (2026-07-15)
+
+| # | Archivo | Vulnerabilidad | Cambio |
+|---|---------|---------------|--------|
+| 1 | `src/routes/soporte.js` | Sin rate limiting en API de Anthropic | Rate limiter 20/hora por usuario |
+| 2 | `src/routes/auth.js` | Rate limiter en memoria (bypass en restart) | Rate limiter Redis-backed con fallback a memoria |
+| 3 | `server.js` | Sin rate limiting en seguimiento público | Rate limiter 60/min por IP |
+
+## Pendiente
+
+- **Calificaciones cliente** (`calificaciones.js`): decidir si implementar token de seguimiento firmado
+- **VAPID key** (`riders.js:190`): mover a `config/index.js` en lugar de `process.env` directo
+- **Acción en Railway**: confirmar que `REDIS_URL` está configurado para activar el rate limiter Redis en auth

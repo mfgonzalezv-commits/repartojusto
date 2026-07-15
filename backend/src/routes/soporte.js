@@ -2,6 +2,30 @@ const router = require('express').Router();
 const https = require('https');
 const { auth } = require('../middleware/auth');
 
+// Rate limiter: máx 20 consultas/hora por usuario (previene costos excesivos en API)
+const _soporteStore = new Map();
+const SOPORTE_MAX = 20;
+const SOPORTE_WINDOW_MS = 60 * 60 * 1000;
+
+function soporteRateLimit(req, res, next) {
+  const userId = req.usuario?.id;
+  const now = Date.now();
+  const entry = _soporteStore.get(userId);
+  if (entry && now - entry.firstAttempt < SOPORTE_WINDOW_MS) {
+    if (entry.count >= SOPORTE_MAX) {
+      const retryAfter = Math.ceil((SOPORTE_WINDOW_MS - (now - entry.firstAttempt)) / 1000);
+      return res.status(429).json({
+        error: 'Límite de consultas de soporte alcanzado. Intenta en 1 hora.',
+        retryAfter,
+      });
+    }
+    entry.count++;
+  } else {
+    _soporteStore.set(userId, { count: 1, firstAttempt: now });
+  }
+  next();
+}
+
 function llamarClaude(system, messages) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
@@ -62,7 +86,7 @@ Información clave que debes saber:
 
 Responde siempre en español chileno, de forma breve y directa. Si no sabes algo específico, sugiere contactar al administrador en admin@repartojusto.cl.`;
 
-router.post('/', auth, async (req, res, next) => {
+router.post('/', auth, soporteRateLimit, async (req, res, next) => {
   try {
     const { mensaje, historial = [] } = req.body;
     if (!mensaje?.trim()) return res.status(400).json({ error: 'Mensaje requerido' });

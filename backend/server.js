@@ -90,7 +90,25 @@ app.use('/api/email',   emailRoutes);
 
 // ── Endpoint público de seguimiento (sin auth) ────────────────────────────
 const { query: dbQuery } = require('./src/config/database');
-app.get('/api/seguimiento/:id', async (req, res) => {
+
+// Rate limiter anti-scraping para endpoint público (60 req/min por IP)
+const _seguimientoStore = new Map();
+function seguimientoRateLimit(req, res, next) {
+  const ip = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  const windowMs = 60 * 1000;
+  const max = 60;
+  const entry = _seguimientoStore.get(ip);
+  if (entry && now - entry.t < windowMs) {
+    if (entry.n >= max) return res.status(429).json({ error: 'Demasiadas consultas. Intenta en un momento.' });
+    entry.n++;
+  } else {
+    _seguimientoStore.set(ip, { n: 1, t: now });
+  }
+  next();
+}
+
+app.get('/api/seguimiento/:id', seguimientoRateLimit, async (req, res) => {
   try {
     const { rows } = await dbQuery(
       `SELECT p.id, p.estado, p.direccion_entrega, p.lat_entrega, p.lng_entrega,

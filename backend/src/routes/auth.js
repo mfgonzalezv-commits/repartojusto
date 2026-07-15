@@ -2,16 +2,50 @@ const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
+const { createClient } = require('redis');
 const { query: db, transaction } = require('../config/database');
 const config = require('../config');
 const { auth } = require('../middleware/auth');
 
-// Rate limiter genérico en memoria
-function crearRateLimiter({ windowMs, max, mensaje }) {
-  const store = new Map();
-  return (req, res, next) => {
+// Cliente Redis para rate limiting persistente entre restarts/deploys
+let redisClient = null;
+if (config.REDIS_URL) {
+  redisClient = createClient({ url: config.REDIS_URL });
+  redisClient.connect().catch(err =>
+    console.warn('⚠️  Auth rate limit: Redis no disponible, usando memoria.', err.message)
+  );
+  redisClient.on('error', () => {}); // evitar crash en reconexión
+}
+
+// Stores de fallback en memoria (por nombre de limiter)
+const _memStores = {};
+
+// Rate limiter híbrido: Redis (persistente) con fallback a memoria
+function crearRateLimiter({ windowMs, max, mensaje, nombre }) {
+  _memStores[nombre] = new Map();
+  const store = _memStores[nombre];
+
+  return async (req, res, next) => {
     const ip = req.ip || req.connection.remoteAddress;
     const now = Date.now();
+
+    if (redisClient?.isReady) {
+      try {
+        const key = `rl:${nombre}:${ip}`;
+        const count = await redisClient.incr(key);
+        if (count === 1) await redisClient.pExpire(key, windowMs);
+        if (count > max) {
+          const ttl = await redisClient.pTTL(key);
+          const retryAfter = Math.ceil(Math.max(0, ttl) / 1000);
+          return res.status(429).json({ error: mensaje, retryAfter });
+        }
+        return next();
+      } catch {
+        // Redis error: caer a memoria
+      }
+    }
+
+    // Fallback in-memory
     const entry = store.get(ip);
     if (entry) {
       if (now - entry.firstAttempt < windowMs) {
@@ -35,6 +69,7 @@ const loginRateLimit = crearRateLimiter({
   windowMs: 15 * 60 * 1000,
   max: 10,
   mensaje: 'Demasiados intentos. Intenta en unos minutos.',
+  nombre: 'login',
 });
 
 // Max 5 registros por IP por hora (previene creación masiva de cuentas)
@@ -42,6 +77,7 @@ const registroRateLimit = crearRateLimiter({
   windowMs: 60 * 60 * 1000,
   max: 5,
   mensaje: 'Demasiados registros desde esta IP. Intenta más tarde.',
+  nombre: 'registro',
 });
 
 // Helper: lanza error de validación si hay campos inválidos
