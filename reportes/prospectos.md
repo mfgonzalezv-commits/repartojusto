@@ -1,18 +1,18 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-15
+**Actualizado:** 2026-07-16
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — arg. nuevo Rappi IA/algoritmo |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Domingo 12 de julio redactado — peak almuerzo familiar invernal |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Feriado 16 de julio redactado — peak almuerzo familiar invernal, pollo caliente en feriado |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — PRIORIDAD, segunda semana julio |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — PRIORIDAD, seguimiento tercera semana julio |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — peak botillería invierno, 22 días sin mensaje fresco |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — Día de la Virgen del Carmen, peak pastelería familiar invernal |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Domingo 12 de julio redactado — peak costillar/asado domingo |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Feriado 16 de julio redactado — costillar y asado almuerzo familiar del feriado |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — café + postre invernal en feriado familiar |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
@@ -96,10 +96,44 @@
 | 90 | Buenaventura Pizzería & Sandwiches | Pizzería / sandwichería | Freire 498, Villa Alemana | Nuevo | — | Presentación redactada 14/07 — en Uber Eats + PedidosYa (argumento FNE+TDLC+fusión Uber+doble comisión), pizzas/sándwiches/completos, tel. +56 9 4113 4197 |
 | 91 | RetroSushi Delivery | Sushi | El Peuco 494, Villa Alemana | Nuevo | — | Presentación redactada 15/07 — 29K seguidores Instagram @retrosushidelivery, delivery todos los días, tel. +56977103910 / +56 32 324 5209 |
 | 92 | Restobar Hay Don Carlos | Comida casera / restobar | Baquedano 784, Villa Alemana | Nuevo | — | Presentación redactada 15/07 — comida casera porciones abundantes, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775 |
+| 93 | Yo Invito Local | Hamburguesas / comida rápida | Porvenir Sur, Villa Alemana | Nuevo | — | Presentación redactada 16/07 — canal propio WhatsApp +56933462954, @yoinvitolocal, Lun-Dom 12:00-23:45 |
+| 94 | Almuerzos Villa Alemana | Almuerzos caseros / comida chilena | Villa Alemana (canal propio Instagram) | Nuevo | — | Presentación redactada 16/07 — @almuerzosv.a, almuerzos desde $5.000, canal directo propio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-16)
+
+> **NOTA PARA MATÍAS:** Hoy es **jueves 16 de julio — Día de la Virgen del Carmen (feriado nacional)**. Es el feriado de invierno más importante del año para delivery de comida: las familias están en casa todo el día, el frío de julio está en su peak, nadie quiere cocinar ni salir. El almuerzo del feriado es el pedido de confort máximo del año — pollo y costillar son los reyes del día. Se redactan **4 mensajes**: (1) **"Feriado Virgen del Carmen"** para **#2 Pollería Don Pollo** (pollo = tradición del feriado familiar en Chile, 4 días desde el último draft 12/07) y **#9 Rotisería El Gaucho** (costillar y asado = almuerzo del feriado, 4 días desde el último draft 12/07); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Yo Invito Local (#93)** — hamburguesería, Porvenir Sur, @yoinvitolocal, operación Lun-Dom 12:00-23:45, WhatsApp +56933462954 — y **Almuerzos Villa Alemana (#94)** — almuerzos caseros chilenos desde $5.000 con canal propio @almuerzosv.a. Pipeline total: **94 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA ACUMULADA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **21 días consecutivos** con borradores activos sin confirmación de envío. El feriado del Día de la Virgen del Carmen es el pico estacional más alto del año para delivery — la tarde del feriado es irrepetible.
+
+---
+
+#### "FERIADO VIRGEN DEL CARMEN" — Contactados sin mensaje fresco (16/07)
+
+**[2] Pollería Don Pollo — Feriado 16 de julio (16/07):**
+"Hola Pollería Don Pollo! RepartoJusto — hoy es 16 de julio, Día de la Virgen del Carmen. El almuerzo del feriado en Chile tiene una tradición que no cambia: el pollo caliente en casa, en familia, sin salir al frío de julio. Es el pedido más fuerte del año para una pollería con delivery. El cálculo concreto para Freire 678: con 20 entregas de pollo solo hoy en una plataforma de porcentaje (28%), se van más de $50.000 en comisiones solo en este feriado. En el mes completo ese costo puede superar los $350.000. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar si la venta es $6.000 o $18.000. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. ¿Este feriado arrancamos? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Feriado 16 de julio (16/07):**
+"Hola Rotisería El Gaucho! RepartoJusto — hoy 16 de julio, Día de la Virgen del Carmen. El costillar y el asado a domicilio en feriado invernal es el pedido que más pide la gente hoy: familia reunida, frío de julio, nadie quiere cocinar ni salir. Es el pico de demanda de rotisería más alto del año. Para Portales 567: con una porción de costillar de $10.000 y 20 entregas hoy en una plataforma de porcentaje (28%), se van $56.000 en comisiones solo hoy. Con RepartoJusto son $500 fijos siempre — más de 5 veces menos costo por entrega. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. ¿Hoy empezamos? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-16)
+
+**[93] Yo Invito Local — Presentación:**
+"Hola Yo Invito Local! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@yoinvitolocal) — hamburguesería en Porvenir Sur con operación todos los días de 12:00 a 23:45 y canal de pedidos por WhatsApp propio. Una propuesta concreta: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30% de comisión, con nosotros el costo es siempre $500, sin importar si la orden vale $7.000 o $18.000. Hoy es 16 de julio, Día de la Virgen del Carmen: el feriado convierte el almuerzo y la tarde de hoy en el peak máximo de delivery del mes — familias en casa todo el día, frío de julio, nadie quiere salir. Para una hamburguesa de $10.000, el ahorro vs. Rappi (28%) son $2.300 que se quedan en el negocio por cada entrega. Con 12 entregas diarias, el ahorro mensual puede superar los $390.000. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos? (WhatsApp: +56933462954)"
+
+---
+
+**[94] Almuerzos Villa Alemana — Presentación:**
+"Hola Almuerzos Villa Alemana! Los contacta RepartoJusto, plataforma de delivery local. Los encontramos en Instagram (@almuerzosv.a) — almuerzos caseros chilenos a domicilio con canal propio en Villa Alemana, desde $5.000. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un almuerzo de $7.000, una plataforma de porcentaje (28%) cobra $1.960 de comisión — con RepartoJusto son $500 siempre, el resto se queda en el negocio. Hoy 16 de julio, Día de la Virgen del Carmen: el almuerzo familiar a domicilio sin salir al frío de julio es exactamente lo que buscan sus clientes — un feriado de invierno es el peak del año para comida casera a domicilio. Cazuela, pollo asado, arroz con leche — el delivery de almuerzo casero hoy es insuperable. Con 15 entregas en el feriado, el ahorro puede superar los $300.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hoy arrancamos?"
 
 ---
 

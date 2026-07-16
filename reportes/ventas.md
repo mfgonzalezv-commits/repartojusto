@@ -1,41 +1,39 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-07-15 (martes — víspera del Día de la Virgen del Carmen, feriado nacional 16/07)
-**Pipeline total:** 92 prospectos
-**Por estado:** Nuevos: 78 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-07-16 (jueves — Día de la Virgen del Carmen, feriado nacional)
+**Pipeline total:** 94 prospectos
+**Por estado:** Nuevos: 80 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
 - Se redactaron 4 mensajes nuevos (borradores para envío por Matías):
-  - **Seguimiento "Víspera del feriado 16/07"** para **#8 Pastelería Dulce Hogar** (9 días sin draft fresco desde 06/07; torta/kuchen para reunión familiar del Día de la Virgen del Carmen — peak invernal de pastelería a domicilio)
-  - **Seguimiento "Víspera del feriado 16/07"** para **#10 Café El Árbol** (9 días sin draft fresco desde 06/07; café + postre en feriado invernal = combo perfecto para la tarde del miércoles)
-  - **Presentación** para **#91 RetroSushi Delivery** (El Peuco 494, Villa Alemana; 29K seguidores Instagram @retrosushidelivery, delivery todos los días, tel. +56977103910)
-  - **Presentación** para **#92 Restobar Hay Don Carlos** (Baquedano 784, Villa Alemana; comida casera porciones abundantes, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775)
+  - **Seguimiento "Feriado Virgen del Carmen"** para **#2 Pollería Don Pollo** (4 días sin draft fresco desde 12/07; pollo = tradición del almuerzo del feriado en Chile, peak máximo del año para pollería con delivery)
+  - **Seguimiento "Feriado Virgen del Carmen"** para **#9 Rotisería El Gaucho** (4 días sin draft fresco desde 12/07; costillar y asado = almuerzo del feriado, demanda más alta del año)
+  - **Presentación** para **#93 Yo Invito Local** (Porvenir Sur, Villa Alemana; hamburguesería canal propio @yoinvitolocal, Lun-Dom 12:00-23:45, WhatsApp +56933462954)
+  - **Presentación** para **#94 Almuerzos Villa Alemana** (canal propio @almuerzosv.a; almuerzos caseros desde $5.000, delivery propio en Villa Alemana)
+
+- Contexto estacional aprovechado: Día de la Virgen del Carmen (feriado nacional) — el pico de delivery de comida más alto del segundo semestre; familias en casa todo el día, frío de julio, nadie cocina ni sale.
 
 - Argumentos del Investigador activos y en uso:
-  - Argumento triple PedidosYa: dos multas 2026 + TDLC + Uber comprando Delivery Hero (US$11.600M) — disponible para prospectos en PedidosYa
+  - Argumento triple PedidosYa: dos multas 2026 + TDLC + Uber comprando Delivery Hero (US$11.600M)
   - Argumento anti-Rappi algoritmo social: nueva app prioriza influencers, entierra negocios sin publicidad extra
-  - Argumento estacional: víspera del Día de la Virgen del Carmen + invierno pleno + feriado familiar
-
-- Contactados actualizados con borradores frescos:
-  - #8 Pastelería Dulce Hogar: próxima acción actualizada
-  - #10 Café El Árbol: próxima acción actualizada
+  - Argumento estacional: feriado 16 de julio + invierno pleno + almuerzo familiar
 
 ## Borradores listos para Matías
 
 | # | Negocio | Tipo | Contacto | Urgencia |
 |---|---|---|---|---|
-| 8 | Pastelería Dulce Hogar | Seguimiento "Víspera feriado 16/07" | — | ALTA (9 días sin mensaje, feriado mañana) |
-| 10 | Café El Árbol | Seguimiento "Víspera feriado 16/07" | — | ALTA (9 días sin mensaje, feriado mañana) |
-| 91 | RetroSushi Delivery | Presentación | Tel. +56977103910 | Nueva |
-| 92 | Restobar Hay Don Carlos | Presentación | Tel. +56 9 6878 1775 | Nueva |
+| 2 | Pollería Don Pollo | Seguimiento "Feriado Virgen del Carmen" | — | ALTA (feriado hoy, pollo peak del año) |
+| 9 | Rotisería El Gaucho | Seguimiento "Feriado Virgen del Carmen" | — | ALTA (feriado hoy, costillar peak del año) |
+| 93 | Yo Invito Local | Presentación | WhatsApp +56933462954 | Nueva |
+| 94 | Almuerzos Villa Alemana | Presentación | Instagram @almuerzosv.a | Nueva |
 
-**⚠ PRIORIDAD CRÍTICA ACUMULADA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **20 días consecutivos** con borradores activos sin confirmación de envío. La víspera del Día de la Virgen del Carmen (feriado 16/07) es el argumento estacional más poderoso del año — enviarlos HOY antes de las 19:00. Los borradores vigentes más frescos están en prospectos.md del 11/07.
+**PRIORIDAD CRÍTICA ACUMULADA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **21 días consecutivos** con borradores activos sin confirmación de envío. La tarde del feriado del Día de la Virgen del Carmen es el argumento estacional más poderoso del año — enviarlos HOY.
 
 ## Nuevos prospectos agregados
 
-- **#91 RetroSushi Delivery** — sushi, El Peuco 494 Villa Alemana, 29.000 seguidores Instagram @retrosushidelivery, operación todos los días, tel. +56977103910 / +56 32 324 5209. Uno de los prospectos de mayor audiencia propia del pipeline. Argumento: canal directo con 29K seguidores + tarifa fija $500 vs. porcentaje.
-- **#92 Restobar Hay Don Carlos** — comida casera / restobar, Baquedano 784 Villa Alemana, porciones abundantes, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775. Argumento: comida casera peak feriado familiar invernal + tarifa fija.
+- **#93 Yo Invito Local** — hamburguesería / comida rápida, Porvenir Sur Villa Alemana, @yoinvitolocal, operación todos los días 12:00-23:45, WhatsApp +56933462954. Canal propio Instagram. Argumento: tarifa fija $500 vs. 28% Rappi, feriado peak de hamburguesería.
+- **#94 Almuerzos Villa Alemana** — almuerzos caseros chilenos, @almuerzosv.a, canal propio Instagram, almuerzos desde $5.000. Canal directo sin plataformas grandes detectadas. Argumento: comida casera + feriado familiar + $500 fijo sin porcentaje.
 
 ## Para el Gerente
 
-Pipeline en 92 prospectos (78 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy aprovechando el ángulo "víspera del Día de la Virgen del Carmen" — seguimientos para #8 Pastelería Dulce Hogar y #10 Café El Árbol (ambos sin draft fresco desde el 06/07, 9 días), más presentaciones para 2 nuevos prospectos: RetroSushi Delivery (#91, 29K seguidores Instagram, sushi todos los días, El Peuco 494) y Restobar Hay Don Carlos (#92, comida casera, Baquedano 784); cuello de botella crítico: 68 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline; acción más urgente: Matías enviar #22 Sushi Point Delivery y #15 Melt Pizzas HOY — víspera del feriado es el mejor argumento estacional del año.
+Pipeline en 94 prospectos (80 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy aprovechando el feriado del Día de la Virgen del Carmen — el pico estacional más alto del segundo semestre: seguimientos para #2 Pollería Don Pollo y #9 Rotisería El Gaucho (4 días sin draft, pollo y costillar son los pedidos del feriado en Chile), más presentaciones para 2 nuevos con canal propio (#93 Yo Invito Local hamburguesería y #94 Almuerzos Villa Alemana comida casera); cuello de botella crítico: 69 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline; #22 Sushi Point Delivery y #15 Melt Pizzas llevan 21 días consecutivos con borradores activos sin envío confirmado.
