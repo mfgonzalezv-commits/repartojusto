@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-16
+**Actualizado:** 2026-07-17
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -10,11 +10,11 @@
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — PRIORIDAD, segunda semana julio |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — PRIORIDAD, seguimiento tercera semana julio |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — peak botillería invierno, 22 días sin mensaje fresco |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — post Virgen del Carmen + Rappi Turbo Quilpué, semana de reposición fin de semana |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — Día de la Virgen del Carmen, peak pastelería familiar invernal |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Feriado 16 de julio redactado — costillar y asado almuerzo familiar del feriado |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — café + postre invernal en feriado familiar |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | Seguimiento miércoles julio redactado 09/07 |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — peak medicamentos mascotas invierno + Rappi Turbo Quilpué, urgencia posicionamiento local |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — peak reparaciones invierno, arg. Rappi algoritmo |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
@@ -30,13 +30,13 @@
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
-| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Versión Uber/Delivery Hero redactada 03/07 — argumento máxima potencia: Uber compra dueña PedidosYa |
-| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Versión Uber/Delivery Hero redactada 03/07 — argumento incertidumbre PedidosYa 2027 |
+| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07), mensaje "en 18 meses no sabes quién te cobra ni cuánto" — supera versión Uber/DH del 03/07 |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07), usar mensaje exacto del Investigador — supera versión 03/07 |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
-| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Versión Uber/Delivery Hero redactada 03/07 — en Uber Eats+PedidosYa, una de las dos puede quedar en manos de Uber |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07), en Uber Eats + PedidosYa = argumento doble inestabilidad — supera versión 03/07 |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
-| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Versión Uber/Delivery Hero redactada 03/07 — 20 años trayectoria, merecen certeza comercial |
+| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07); 20 años trayectoria merecen certeza — "en 18 meses no sabes quién te cobra ni cuánto" |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
 | 35 | Buena Onda Sushi | Sushi | Huanhuali 997, Villa Alemana | Nuevo | — | Presentación redactada 15/06 — en Uber Eats + Rappi, argumento doble comisión |
 | 36 | Miel Delivery | Repostería / cocktails | Villa Alemana (Peña Blanca, Belloto) | Nuevo | — | Presentación redactada 15/06 — delivery-first por WhatsApp, argumento canal propio sin comisión |
@@ -63,7 +63,7 @@
 | 57 | Empanadas Belle | Empanadas | Londres 930, Villa Alemana | Nuevo | — | Presentación redactada 28/06 — en Rappi, peak julio empanadas, argumento tarifa fija vs. 28% |
 | 58 | Mevas Raíces | Empanadas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 28/06 — en Rappi, empanadas de especialidad, peak invernal julio |
 | 59 | Sandwichería Ñam Fuente de Soda | Sandwichería / fuente de soda | Av. Valparaíso 584, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — local clásico VA, tel. (32) 2470466, peak completos en julio |
-| 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | Versión Uber/Delivery Hero redactada 04/07 — en PedidosYa (confirmado), argumento triple FNE+TDLC+fusión Uber, 72 reseñas, tel. (32) 311 9036 / WhatsApp +56 958528950 |
+| 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07), argumento CUÁDRUPLE FNE+TDLC+fusión+venta NY, 72 reseñas, tel. (32) 311 9036 / WhatsApp +56 958528950 |
 | 61 | Pollo Campo Villa Alemana | Pollos a la parrilla | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, pollos asados peak julio invierno, ahorro ~$460K/mes |
 | 62 | El Señor De Los Completos | Comida chilena / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, completos peak julio, ahorro ~$580K/mes |
 | 63 | R Chengdu | Comida china | Villa Alemana (canal propio Instagram @rchengdu) | Nuevo | — | Presentación redactada 01/07 — sin grandes plataformas detectadas, canal directo propio, argumento logística local sin comisión |
@@ -93,15 +93,49 @@
 | 87 | Yuki Sushi Delivery | Sushi | Ramón Reyes Arancibia 2196, Villa Alemana (@deliveryyukisushi) | Nuevo | — | Presentación redactada 13/07 — 10K seguidores Instagram, op. Dom-Sáb hasta 23:45, tel. +56 32 322 5149 |
 | 88 | La Choza | Comida venezolana / peruana / ecuatoriana / colombiana | Villa Alemana | Nuevo | — | Presentación redactada 13/07 — especialidad en cocina latinoamericana, único del rubro en el pipeline |
 | 89 | Fajitas Tex Mex Delivery | Comida tex-mex | Villa Alemana (@fajitastexmex_villa_alemana, Facebook) | Nuevo | — | Presentación redactada 14/07 — canal propio Instagram+Facebook, WhatsApp +56 9 57609318, primer tex-mex del pipeline, Ma-Sá 17:30-23:30 |
-| 90 | Buenaventura Pizzería & Sandwiches | Pizzería / sandwichería | Freire 498, Villa Alemana | Nuevo | — | Presentación redactada 14/07 — en Uber Eats + PedidosYa (argumento FNE+TDLC+fusión Uber+doble comisión), pizzas/sándwiches/completos, tel. +56 9 4113 4197 |
+| 90 | Buenaventura Pizzería & Sandwiches | Pizzería / sandwichería | Freire 498, Villa Alemana | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07), en Uber Eats + PedidosYa, argumento quíntuple, tel. +56 9 4113 4197 |
 | 91 | RetroSushi Delivery | Sushi | El Peuco 494, Villa Alemana | Nuevo | — | Presentación redactada 15/07 — 29K seguidores Instagram @retrosushidelivery, delivery todos los días, tel. +56977103910 / +56 32 324 5209 |
 | 92 | Restobar Hay Don Carlos | Comida casera / restobar | Baquedano 784, Villa Alemana | Nuevo | — | Presentación redactada 15/07 — comida casera porciones abundantes, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775 |
 | 93 | Yo Invito Local | Hamburguesas / comida rápida | Porvenir Sur, Villa Alemana | Nuevo | — | Presentación redactada 16/07 — canal propio WhatsApp +56933462954, @yoinvitolocal, Lun-Dom 12:00-23:45 |
 | 94 | Almuerzos Villa Alemana | Almuerzos caseros / comida chilena | Villa Alemana (canal propio Instagram) | Nuevo | — | Presentación redactada 16/07 — @almuerzosv.a, almuerzos desde $5.000, canal directo propio |
+| 95 | Sushiweb Delivery Villa Alemana | Sushi | Williamson 16, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 17/07 — 308 reseñas Rappi, 4 estrellas, negocio establecido, ticket sushi alto, peak invernal |
+| 96 | Nikko Seafood & Sushi | Sushi / mariscos | Camino Troncal 1261 Local 4, Villa Alemana | Nuevo | — | Presentación redactada 17/07 — en Rappi + PedidosYa (doble comisión + argumento SSW), tel. (32) 361 0174, mariscos y sushi ticket alto |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-17)
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 17 de julio — primer viernes post-feriado del Día de la Virgen del Carmen**. Dos argumentos de máxima urgencia activos hoy: (1) **PedidosYa fue vendida AYER a SSW Partners**, un fondo de inversión de Nueva York, que ya planea revenderla — es el argumento anti-PedidosYa más potente del año y pierde fuerza con cada día que pasa; (2) **Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana** — la urgencia de posicionamiento local es ALTA. Se redactan **4 mensajes**: (1) **"Viernes post-feriado"** para **#7 Minimercado La Esquina** (8 días sin mensaje) y **#11 Veterinaria Huellitas** (8 días sin mensaje); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Sushiweb Delivery (#95)** — sushi en Rappi con 308 reseñas y 4 estrellas, Williamson 16 — y **Nikko Seafood & Sushi (#96)** — sushi y mariscos en Rappi + PedidosYa, tel. (32) 361 0174, **candidato ideal para el argumento SSW** (en ambas plataformas cuestionadas). Pipeline total: **96 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA — VENTANA QUE CIERRA:** Los 6 prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura) tienen el argumento SSW listo y vigente — la venta a SSW fue ayer y la noticia pierde impacto con los días. Los mensajes SSW para estos 6 deben salir **ESTA SEMANA** (18-20/07 a más tardar). Además: **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **22 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+#### "VIERNES POST-FERIADO" — Contactados sin mensaje fresco (17/07)
+
+**[7] Minimercado La Esquina — Viernes post-feriado (17/07):**
+"Hola Minimercado La Esquina! RepartoJusto — viernes 17 de julio, el día después del Día de la Virgen del Carmen. El feriado de ayer más el fin de semana que empieza hoy crean el período de mayor consumo domiciliario del mes: la gente viene del feriado, quiere reponer lo que se consumió ayer y prepararse para el fin de semana sin salir al frío. Un almacén con delivery en Lynch 445 tiene una ventaja enorme este fin de semana: los básicos, las bebidas, los snacks — todo lo que la gente quiere sin salir al frío de julio. Una propuesta concreta: RepartoJusto lleva pedidos a los clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para una compra de $12.000, Rappi cobra hasta $3.360 de comisión — con nosotros son $500 siempre. Dato extra: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — antes de que lleguen al barrio, posicionarse con una alternativa local de tarifa fija tiene más sentido que nunca. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este fin de semana arrancamos?"
+
+---
+
+**[11] Veterinaria Huellitas — Viernes post-feriado (17/07):**
+"Hola Veterinaria Huellitas! RepartoJusto — viernes 17 de julio, el fin de semana post-feriado más frío del mes. El frío de julio es el peak de consultas y medicamentos urgentes para mascotas: los problemas respiratorios, los antiparasitarios y los medicamentos de urgencia aumentan en invierno. Los dueños de mascotas quieren los productos veterinarios en casa, sin tener que salir al frío con su mascota enferma. Una propuesta concreta para Av. Álvarez 3200: RepartoJusto puede llevar medicamentos y productos veterinarios de urgencia a sus clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para una venta de $18.000 en medicamentos, una plataforma de porcentaje (28%) cobra $5.040 de comisión — con nosotros son $500 siempre, más de 10 veces menos costo por entrega. Dato extra: Rappi Turbo ya llegó a Quilpué, a 8 km de Villa Alemana — antes de que expandan al barrio, asociarse con una plataforma local de tarifa fija es la mejor jugada. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este fin de semana probamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-17)
+
+**[95] Sushiweb Delivery Villa Alemana — Presentación:**
+"Hola Sushiweb! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi con más de 308 reseñas y 4 estrellas — un operador de sushi bien establecido en Williamson 16, Villa Alemana. Una propuesta directa: si están en Rappi, hoy pagan el 28% de comisión por cada pedido. Para un combo sushi de $14.000, eso son $3.920 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el valor. Hoy viernes 17 de julio — el fin de semana post-feriado del Día de la Virgen del Carmen: las familias que pasaron el feriado en casa siguen en modo descanso este fin de semana, el frío de julio está en su peak, y la noche de viernes es uno de los mayores picos de sushi delivery del año. Con 308 reseñas ya tienen una base de clientes fiel en Villa Alemana — el ahorro mensual con 15 entregas diarias vs. Rappi (28%) puede superar los $550.000. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo y probar con sus propios clientes. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[96] Nikko Seafood & Sushi — Presentación + argumento SSW:**
+"Hola Nikko Seafood & Sushi! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos con presencia activa en Rappi y PedidosYa desde Camino Troncal 1261 Local 4 — especialistas en mariscos y sushi en Villa Alemana. Una propuesta directa: si están en Rappi + PedidosYa, hoy pagan entre 28-30% de comisión en ambas plataformas. Para un plato de mariscos o tabla sushi de $18.000, eso son hasta $5.400 que se van a la app por cada entrega — en cada una de las dos plataformas. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el valor. Un dato urgente sobre PedidosYa: ayer, 16 de julio, los dueños de PedidosYa (Delivery Hero) firmaron su venta a SSW Partners, un fondo de inversión de Nueva York que ya planea revenderla. PedidosYa Chile NO quedará bajo Uber. En 18 meses no saben quién les cobra ni a qué precio. Con RepartoJusto son siempre $500 por pedido, sin letra chica, sin cambio de dueños. Hoy viernes post-feriado de julio: el fin de semana largo más el frío máximo hacen de este período el peak del año para mariscos y sushi a domicilio. Con 15 entregas diarias, el ahorro vs. las dos plataformas puede superar los $600.000 al mes. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos? (Tel: (32) 361 0174)"
 
 ---
 
