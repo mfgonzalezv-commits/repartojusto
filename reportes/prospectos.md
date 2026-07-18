@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-17
+**Actualizado:** 2026-07-18
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -100,10 +100,44 @@
 | 94 | Almuerzos Villa Alemana | Almuerzos caseros / comida chilena | Villa Alemana (canal propio Instagram) | Nuevo | — | Presentación redactada 16/07 — @almuerzosv.a, almuerzos desde $5.000, canal directo propio |
 | 95 | Sushiweb Delivery Villa Alemana | Sushi | Williamson 16, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 17/07 — 308 reseñas Rappi, 4 estrellas, negocio establecido, ticket sushi alto, peak invernal |
 | 96 | Nikko Seafood & Sushi | Sushi / mariscos | Camino Troncal 1261 Local 4, Villa Alemana | Nuevo | — | Presentación redactada 17/07 — en Rappi + PedidosYa (doble comisión + argumento SSW), tel. (32) 361 0174, mariscos y sushi ticket alto |
+| 97 | Koala Sushi | Sushi | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 18/07 — en Rappi, sushi ticket alto, sábado post-feriado = peak fin de semana invierno |
+| 98 | Del Nono | Pizzería | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 18/07 — en Rappi, pizza = pedido estrella sábado invernal, ahorro vs. 28% Rappi |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-18)
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 18 de julio — primer fin de semana completo post-feriado del Día de la Virgen del Carmen**. El fin de semana de invierno tras el feriado más largo del mes es uno de los picos de delivery más altos del año: las familias siguen en modo descanso, el frío de julio está en su máximo y nadie quiere salir. Se redactan **4 mensajes**: (1) **"Sábado 18 de julio"** para **#1 Fuente de Soda El Rápido** (8 días sin draft fresco, último 10/07) y **#3 Farmacia Cruz Verde** (8 días sin draft fresco, último 10/07); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy en Rappi: **Koala Sushi (#97)** y **Del Nono (#98)** (pizzería). Pipeline total: **98 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA — VENTANA SSW CERRANDO:** Los 6 prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura) tienen el argumento SSW listo — la venta de PedidosYa Chile a SSW Partners NY fue el 16/07 (hace 2 días) y la noticia pierde impacto con los días. Enviar ESTE FIN DE SEMANA. Además: **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **23 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+#### "SÁBADO 18 DE JULIO" — Contactados sin mensaje fresco (18/07)
+
+**[1] Fuente de Soda El Rápido — Sábado 18 de julio (18/07):**
+"Hola Fuente de Soda El Rápido! RepartoJusto — sábado 18 de julio, el fin de semana que sigue al feriado más largo del mes. El sábado post-feriado de invierno tiene una característica especial: la gente está en modo descanso total, nadie quiere salir al frío, y los completos, sándwiches y sopaipillas a domicilio son exactamente lo que se pide. Una propuesta concreta para Av. Álvarez 1245: RepartoJusto puede llevar pedidos de la fuente de soda a los clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para un completo italiano o un sándwich de $4.500, una plataforma de porcentaje (28%) cobra $1.260 de comisión — casi el triple de lo que cobramos nosotros. Con RepartoJusto son $500 siempre, sin importar si el pedido vale $3.500 o $12.000. Dato extra: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — antes de que lleguen al barrio, posicionarse con una alternativa local de tarifa fija tiene más sentido que nunca. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este sábado arrancamos?"
+
+---
+
+**[3] Farmacia Cruz Verde — Sábado 18 de julio (18/07):**
+"Hola Farmacia Cruz Verde! RepartoJusto — sábado 18 de julio, el segundo sábado del mes más frío del año. Julio y agosto son los meses de mayor demanda de medicamentos y productos de farmacia en Chile: los resfríos, las gripes, los broncodilatadores y los analgésicos se piden con urgencia, y los clientes no quieren salir al frío con fiebre o con un niño enfermo. Una propuesta concreta para Av. Álvarez 890: RepartoJusto puede llevar pedidos de farmacia a sus clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para una venta de $15.000 en medicamentos, una plataforma de porcentaje (28%) cobra $4.200 de comisión — con RepartoJusto son $500 siempre, sin importar el monto. Dato extra: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — antes de que expandan el modelo de farmacia express al barrio, asociarse con una plataforma local de tarifa fija tiene ventaja estratégica. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este sábado empezamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-18)
+
+**[97] Koala Sushi — Presentación:**
+"Hola Koala Sushi! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi con delivery activo en la zona. Una propuesta directa: si trabajan con Rappi, hoy pagan el 28% de comisión por cada pedido. Para un combo sushi de $13.000, eso son $3.640 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el valor. Hoy sábado 18 de julio — primer fin de semana completo post-feriado del Día de la Virgen del Carmen: las familias siguen en modo descanso, el frío de julio está en su peak, y el sushi es el pedido favorito del fin de semana. El sábado por la noche es el mayor pico de sushi delivery de toda la semana. Con 15 entregas en el fin de semana, el ahorro vs. Rappi (28%) puede superar los $470.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo y probar con sus propios clientes. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[98] Del Nono — Presentación:**
+"Hola Del Nono! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi con delivery activo en la zona — pizzería establecida en Villa Alemana. Una propuesta directa: si trabajan con Rappi, hoy pagan el 28% de comisión por cada pedido. Para una pizza de $11.000, eso son $3.080 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el valor. Hoy sábado 18 de julio — la pizza es el pedido de delivery más popular del fin de semana de invierno, sin discusión. El frío de julio, el fin de semana post-feriado, la familia en casa — es el momento de mayor demanda del mes. Con 12 entregas este fin de semana, el ahorro vs. Rappi (28%) puede superar los $380.000 al mes. Sin contrato, registro completamente gratuito, pueden mantener Rappi en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
@@ -1703,3 +1737,7 @@
 **El Rey del Pollo (#81, agregado 10/07):** Pollos asados a las brasas con delivery propio en Villa Alemana y Quilpué. Instagram: @elrey.delpollo. Facebook: @elreydelpollo19. Teléfono: +56942575904. Horario de delivery: viernes a domingo 12:30-15:30. Canal propio sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Producto: pollo asado a las brasas, papas fritas y empanadas de queso. Ticket promedio estimado: $10.000-$15.000 (pollo + acompañamientos). Argumento principal: canal propio de delivery + logística local RepartoJusto por $500 fijos sin porcentaje. Para un pollo de $12.000, ahorro vs. app de porcentaje (28-30%): $2.860-$3.100 por entrega. Julio = peak absoluto de pollo asado en delivery (frío invernal + fin de semana familiar). Fuente: instagram.com/elrey.delpollo + linktr.ee/Elreydelpollo.
 
 **Pescadería Delivery (#82, agregado 10/07):** Servicio de pescados y mariscos frescos a domicilio con canal propio en Villa Alemana, Quilpué y zonas aledañas (Viña del Mar, Reñaca, Concón, Limache, Quillota, Valparaíso). Sitio web: pescaderiadelivery.cl. Facebook: facebook.com/pescaderiadelivery.cl. Teléfono: +56 9 5801 9027. Canal propio sin grandes plataformas detectadas. Producto: pescados y mariscos frescos, entrega a domicilio. Ticket promedio estimado: $12.000-$25.000 (paila marina, caldillo, mariscos frescos). Argumento principal: canal directo con logística local RepartoJusto por $500 fijos. Para una paila de $18.000, ahorro vs. app de porcentaje (28-30%): hasta $5.400 por entrega. Julio-agosto = peak de mariscos en delivery invernal (caldillos, pailas, chupes). Fuente: pescaderiadelivery.cl + facebook.com/pescaderiadelivery.cl.
+
+**Koala Sushi (#97, agregado 18/07):** Restaurante de sushi con delivery activo en Rappi en Villa Alemana. Fuente: rappi.cl/restaurantes/900074123-koala-sushi (con promoción 15 días de delivery gratis). Ticket promedio estimado: $12.000-$16.000 (sushi delivery). Rappi cobra 28% de comisión — con 15 entregas diarias, el ahorro vs. Rappi puede superar $470.000/mes vs. RepartoJusto. Sábado de invierno = peak máximo de sushi delivery semanal. No aparece en el pipeline previo — negocio nuevo o recién detectado.
+
+**Del Nono (#98, agregado 18/07):** Pizzería con delivery activo en Rappi en Villa Alemana. Fuente: rappi.cl/restaurantes/900091876-del-nono (ofrece pizza con pollo, pizza con jamón y combinaciones). Ticket promedio estimado: $9.000-$13.000 (pizza delivery). Rappi cobra 28% de comisión — con 12 entregas diarias, el ahorro vs. Rappi puede superar $380.000/mes vs. RepartoJusto. Fin de semana de invierno = peak de pizza delivery. No aparece en el pipeline previo.
