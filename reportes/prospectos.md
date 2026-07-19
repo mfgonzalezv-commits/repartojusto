@@ -1,18 +1,18 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-18
+**Actualizado:** 2026-07-19
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — arg. nuevo Rappi IA/algoritmo |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | Feriado 16 de julio redactado — peak almuerzo familiar invernal, pollo caliente en feriado |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — almuerzo familiar domingo invernal, pollo clásico del domingo chileno |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — PRIORIDAD, segunda semana julio |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — PRIORIDAD, seguimiento tercera semana julio |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — peak botillería invierno, 22 días sin mensaje fresco |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — post Virgen del Carmen + Rappi Turbo Quilpué, semana de reposición fin de semana |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — Día de la Virgen del Carmen, peak pastelería familiar invernal |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | Feriado 16 de julio redactado — costillar y asado almuerzo familiar del feriado |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — asado y costillar almuerzo del domingo familiar invernal |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — café + postre invernal en feriado familiar |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — peak medicamentos mascotas invierno + Rappi Turbo Quilpué, urgencia posicionamiento local |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
@@ -102,10 +102,44 @@
 | 96 | Nikko Seafood & Sushi | Sushi / mariscos | Camino Troncal 1261 Local 4, Villa Alemana | Nuevo | — | Presentación redactada 17/07 — en Rappi + PedidosYa (doble comisión + argumento SSW), tel. (32) 361 0174, mariscos y sushi ticket alto |
 | 97 | Koala Sushi | Sushi | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 18/07 — en Rappi, sushi ticket alto, sábado post-feriado = peak fin de semana invierno |
 | 98 | Del Nono | Pizzería | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 18/07 — en Rappi, pizza = pedido estrella sábado invernal, ahorro vs. 28% Rappi |
+| 99 | BubbleHouse Villa Alemana | Bebidas / bubble tea / postres | Condell 96, Villa Alemana (@bubblehouseva) | Nuevo | — | Presentación redactada 19/07 — en Uber Eats, primer bubble tea del pipeline, Lu-Sa 10:30-19:00, canal propio Instagram |
+| 100 | Cafetería y Panadería Beik | Panadería / cafetería | Díaz 985, Villa Alemana | Nuevo | — | Presentación redactada 19/07 — en Rappi, primera panadería+cafetería activa en Rappi del pipeline, peak domingo desayuno y once invernal |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-19)
+
+> **NOTA PARA MATÍAS:** Hoy es **domingo 19 de julio — el almuerzo familiar del domingo más frío del año**. El domingo de invierno tiene un rito inamovible en Chile: la familia reunida, el pollo y el asado caliente en casa, nadie quiere salir al frío de julio. El sábado-domingo de julio es el peak de delivery semanal. Se redactan **4 mensajes**: (1) **"Domingo 19 de julio"** para **#2 Pollería Don Pollo** (3 días desde el draft del feriado 16/07 — pollo = almuerzo del domingo familiar chileno) y **#9 Rotisería El Gaucho** (3 días desde el draft del feriado 16/07 — asado y costillar = el plato del domingo invernal); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **BubbleHouse Villa Alemana (#99)** — bubble tea/bebidas especiales en Condell 96 (@bubblehouseva), activo en Uber Eats, primer bubble tea del pipeline — y **Cafetería y Panadería Beik (#100)** — panadería+cafetería en Díaz 985, activa en Rappi, primer establecimiento del rubro en Rappi del pipeline. Pipeline total: **100 prospectos** (HITO — primer umbral de 100).
+>
+> **PRIORIDAD ABSOLUTA — VENTANA SSW ABIERTA (3 días desde la venta):** Los 6 prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura) tienen el argumento SSW listo — la venta de PedidosYa Chile a SSW Partners NY fue el 16/07 (hace 3 días) y la noticia sigue vigente esta semana. Enviar ESTA SEMANA antes del miércoles 22/07. Además: **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **24 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+#### "DOMINGO 19 DE JULIO" — Contactados sin mensaje fresco (19/07)
+
+**[2] Pollería Don Pollo — Domingo 19 de julio (19/07):**
+"Hola Pollería Don Pollo! RepartoJusto — domingo 19 de julio, el almuerzo familiar del domingo de invierno más tradicional en Chile. El pollo caliente en casa el domingo de julio es infaltable: la familia reunida, el frío afuera, nadie quiere salir a buscarlo. Es el momento de mayor pedido de pollo a domicilio de toda la semana. El cálculo concreto para Freire 678: con 15 entregas de pollo en el fin de semana en una plataforma de porcentaje (28%), se van más de $300.000 al mes solo en comisiones a la app. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar si la venta es $6.000 o $18.000. Dato clave: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — antes de que lleguen al barrio, posicionarse con una plataforma local de tarifa fija tiene más sentido que nunca. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este domingo arrancamos?"
+
+---
+
+**[9] Rotisería El Gaucho — Domingo 19 de julio (19/07):**
+"Hola Rotisería El Gaucho! RepartoJusto — domingo 19 de julio. El almuerzo del domingo de invierno en familia tiene un rito que no falla: el asado y el costillar a domicilio. Nadie quiere encender el carbón con el frío de julio, y la rotisería que llega a casa gana el almuerzo del domingo. Para Portales 567: con 15 porciones de costillar de $10.000 entregadas en el fin de semana en una plataforma de porcentaje (28%), se van más de $420.000 al mes en comisiones. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el monto — más de 5 veces menos costo por entrega. Dato clave: Rappi Turbo ya llegó a Quilpué, a 8 km de Villa Alemana. Antes de que expandan al barrio, posicionarse con delivery local de tarifa fija es la mejor jugada. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-19)
+
+**[99] BubbleHouse Villa Alemana — Presentación:**
+"Hola BubbleHouse! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats (@bubblehouseva) con presencia activa en Condell 96, frente a la plaza Belén — bubble tea, smoothies, mochi, milkshakes y más, un menú único en la zona. Una propuesta directa: si trabajan con Uber Eats, hoy pagan entre 28-30% de comisión por cada pedido. Para un combo bubble tea + mochi de $8.000, eso son hasta $2.400 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar si la orden vale $4.000 o $14.000. Son los únicos con este concepto de bubble tea en Villa Alemana — un negocio diferenciado con clientela propia. El domingo de invierno es el momento ideal: los clientes que no quieren salir al frío buscan experiencias especiales a domicilio. Con su canal propio en Instagram (@bubblehouseva) + delivery RepartoJusto a $500 fijo, pueden capturar a su comunidad en Villa Alemana sin ceder porcentaje de venta. Sin contrato, registro completamente gratuito, pueden mantener Uber Eats en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[100] Cafetería y Panadería Beik — Presentación:**
+"Hola Cafetería y Panadería Beik! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi con delivery activo desde Díaz 985, Villa Alemana — panadería y cafetería con presencia bien establecida en la zona. Una propuesta directa: si trabajan con Rappi, hoy pagan el 28% de comisión por cada pedido. Para un pedido de panadería y café de $8.000, eso son $2.240 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos por pedido, siempre, sin importar el valor. Domingo 19 de julio — el domingo de invierno es el peak del pan fresco a domicilio y el café caliente para el desayuno y la once: las familias en casa buscan exactamente lo que ofrecen, sin salir al frío de julio. Con RepartoJusto pueden llevar pan, pasteles y café a sus clientes en Villa Alemana por una fracción del costo de Rappi. Dato extra: la nueva versión de Rappi prioriza negocios que pagan publicidad extra dentro de la app — con RepartoJusto no hay algoritmo que los esconda. Sin contrato, registro completamente gratuito, pueden sumar RepartoJusto a Rappi sin abandonar ninguna plataforma. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
