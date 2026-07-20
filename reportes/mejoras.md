@@ -1,10 +1,41 @@
 # Mejoras RepartoJusto
-**Fecha:** 2026-07-13
-**Estado:** 5 mejoras identificadas — 2 de seguridad crítica, 1 rendimiento, 1 seguridad/confiabilidad, 1 UX
+**Fecha:** 2026-07-20
+**Estado:** 5 mejoras identificadas — 1 bug de crash crítico (nuevo), 2 de seguridad, 1 rendimiento, 1 UX
 
 ---
 
-## 1. [Seguridad] Chat sin control de acceso al pedido
+## 1. [Bug Crítico] Crash en `PUT /pedidos/:id/cancelar` cuando negocio sin registro
+
+**Archivo:** `backend/src/routes/pedidos.js:317`
+
+**Beneficio:** Evita un TypeError no manejado que devuelve 500 con stack trace en lugar de un 404 limpio.
+
+Si el usuario tiene rol `negocio` pero no existe fila en la tabla `negocios` (cuenta corrompida, registro eliminado), `neg` es `undefined` y `neg.id` lanza `TypeError: Cannot read properties of undefined`. La excepción no es capturada dentro del bloque `if` y escapa al error handler.
+
+```js
+// ❌ Antes (línea 314-320) — crash si neg es undefined
+if (req.usuario.rol === 'negocio') {
+  const { rows: [neg] } = await db(
+    'SELECT id FROM negocios WHERE usuario_id = $1', [req.usuario.id]
+  );
+  params.push(neg.id);  // TypeError si neg === undefined
+  filtro += ` AND negocio_id = $${params.length}`;
+}
+
+// ✅ Después — guard clause antes de acceder a neg.id
+if (req.usuario.rol === 'negocio') {
+  const { rows: [neg] } = await db(
+    'SELECT id FROM negocios WHERE usuario_id = $1', [req.usuario.id]
+  );
+  if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });
+  params.push(neg.id);
+  filtro += ` AND negocio_id = $${params.length}`;
+}
+```
+
+---
+
+## 2. [Seguridad] Chat sin control de acceso al pedido  *(pendiente desde 2026-07-13)*
 
 **Archivo:** `backend/src/sockets/index.js:161`
 
@@ -46,7 +77,7 @@ socket.on('chat:enviar', async ({ pedido_id, texto }) => {
 
 ---
 
-## 2. [Seguridad] `pedido:seguir` sin verificación de acceso — espionaje de tracking GPS
+## 3. [Seguridad] `pedido:seguir` sin verificación de acceso — espionaje de tracking GPS  *(pendiente desde 2026-07-13)*
 
 **Archivo:** `backend/src/sockets/index.js:101`
 
@@ -77,7 +108,7 @@ socket.on('pedido:seguir', async ({ pedido_id }) => {
 
 ---
 
-## 3. [Rendimiento] Ubicación del rider genera 2 queries/seg por rider sin throttle
+## 4. [Rendimiento] Ubicación del rider genera 2 queries/seg por rider sin throttle  *(pendiente desde 2026-07-13)*
 
 **Archivo:** `backend/src/sockets/index.js:67`
 
@@ -127,7 +158,7 @@ socket.on('rider:ubicacion', async ({ lat, lng }) => {
 
 ---
 
-## 4. [Seguridad] Rate limiter de login en memoria — eludible al reiniciar el servidor
+## 5. [Seguridad] Rate limiter de login en memoria — memory leak en entradas expiradas  *(pendiente desde 2026-07-13)*
 
 **Archivo:** `backend/src/routes/auth.js:10`
 
@@ -184,63 +215,6 @@ function crearRateLimiter({ windowMs, max, mensaje, prefix }) {
     next();
   };
 }
-```
-
----
-
-## 5. [UX] Doble query para verificar acceso en `GET /pedidos/:id`
-
-**Archivo:** `backend/src/routes/pedidos.js:374`
-
-**Beneficio:** Elimina una query redundante a la DB en cada lectura de pedido, reduciendo latencia y devolviendo un 403 limpio en lugar de un 404 cuando el pedido existe pero no pertenece al usuario.
-
-El endpoint primero trae el pedido completo con JOINs y luego hace un segundo `SELECT` para verificar acceso. Ambas verificaciones pueden unificarse.
-
-```js
-// REEMPLAZAR el GET /:id (líneas 374-408):
-
-router.get('/:id', auth, async (req, res, next) => {
-  try {
-    let accesoFiltro = '';
-    const params = [req.params.id];
-
-    if (req.usuario.rol === 'negocio') {
-      accesoFiltro = `AND EXISTS (
-        SELECT 1 FROM negocios _n WHERE _n.usuario_id = $2 AND _n.id = p.negocio_id
-      )`;
-      params.push(req.usuario.id);
-    } else if (req.usuario.rol === 'rider') {
-      accesoFiltro = `AND EXISTS (
-        SELECT 1 FROM riders _r WHERE _r.usuario_id = $2 AND _r.id = p.rider_id
-      )`;
-      params.push(req.usuario.id);
-    }
-
-    const { rows } = await db(
-      `SELECT p.*,
-              n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
-              n.mostrar_costo_seguimiento,
-              u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
-              ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
-       FROM pedidos p
-       JOIN negocios n ON n.id = p.negocio_id
-       LEFT JOIN riders ri ON ri.id = p.rider_id
-       LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id
-       WHERE p.id = $1 ${accesoFiltro}`,
-      params
-    );
-
-    if (!rows[0]) {
-      // Distinguir 404 real vs 403 para mejorar la depuración en cliente
-      const { rows: existe } = await db('SELECT id FROM pedidos WHERE id = $1', [req.params.id]);
-      return existe[0]
-        ? res.status(403).json({ error: 'Sin acceso a este pedido' })
-        : res.status(404).json({ error: 'Pedido no encontrado' });
-    }
-
-    res.json(rows[0]);
-  } catch (err) { next(err); }
-});
 ```
 
 ---
