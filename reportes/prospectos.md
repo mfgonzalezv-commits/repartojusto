@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-19
+**Actualizado:** 2026-07-20
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -7,7 +7,7 @@
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — arg. nuevo Rappi IA/algoritmo |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — almuerzo familiar domingo invernal, pollo clásico del domingo chileno |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — PRIORIDAD, segunda semana julio |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 20 de julio" redactado 20/07 — PRIORIDAD, cuarta semana julio, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — PRIORIDAD, seguimiento tercera semana julio |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — peak botillería invierno, 22 días sin mensaje fresco |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — post Virgen del Carmen + Rappi Turbo Quilpué, semana de reposición fin de semana |
@@ -16,7 +16,7 @@
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — café + postre invernal en feriado familiar |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — peak medicamentos mascotas invierno + Rappi Turbo Quilpué, urgencia posicionamiento local |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 13 de julio" redactado 13/07 — peak reparaciones invierno, arg. Rappi algoritmo |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 20 de julio" redactado 20/07 — peak reparaciones invierno, arg. Rappi IA algoritmo |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Primer sábado de julio" redactado 05/07 — PRIORIDAD GERENTE, en Rappi |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -104,10 +104,44 @@
 | 98 | Del Nono | Pizzería | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 18/07 — en Rappi, pizza = pedido estrella sábado invernal, ahorro vs. 28% Rappi |
 | 99 | BubbleHouse Villa Alemana | Bebidas / bubble tea / postres | Condell 96, Villa Alemana (@bubblehouseva) | Nuevo | — | Presentación redactada 19/07 — en Uber Eats, primer bubble tea del pipeline, Lu-Sa 10:30-19:00, canal propio Instagram |
 | 100 | Cafetería y Panadería Beik | Panadería / cafetería | Díaz 985, Villa Alemana | Nuevo | — | Presentación redactada 19/07 — en Rappi, primera panadería+cafetería activa en Rappi del pipeline, peak domingo desayuno y once invernal |
+| 101 | Making Sushi Villa Alemana | Sushi | Villa Alemana (@makingsuushi, Instagram) | Nuevo | — | Presentación redactada 20/07 — sushi delivery canal propio Instagram, operación activa, peak sushi lunes invernal |
+| 102 | La Joya Villa Alemana | Sandwichería / completos | Av. Valparaíso 412, Villa Alemana | Nuevo | — | Presentación redactada 20/07 — en PedidosYa, argumento SSW (venta a fondo NY 16/07), completos/churrascos peak lunes julio, tel. +56 9 27179828 / @lajoya.va |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-20)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 20 de julio — inicio de la cuarta semana del mes más frío del año**. El lunes es el mejor día para contactar negocios: acaban de hacer el balance del fin de semana y están en modo "¿qué mejoro esta semana?". Con julio en su cuarta semana, el invierno está completamente instalado y la demanda de delivery sigue en su peak. Se redactan **4 mensajes**: (1) **"Lunes 20 de julio"** para **#4 Pizza House** (7 días sin draft fresco, último 13/07 — PRIORIDAD, pizza + lunes invernal + balance del fin de semana) y **#13 Ferretería Los Maestros** (7 días sin draft fresco, último 13/07 — peak reparaciones + argumento Rappi IA); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Making Sushi Villa Alemana (#101)** — sushi delivery canal propio Instagram @makingsuushi, activo en Villa Alemana — y **La Joya Villa Alemana (#102)** — sandwichería con completos y churrascos en Av. Valparaíso 412, @lajoya.va, activa en PedidosYa → argumento SSW directo. Pipeline total: **102 prospectos**.
+>
+> **PRIORIDAD ABSOLUTA — VENTANA SSW (4 días desde la venta):** Los 6 prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura) tienen el argumento SSW listo — la venta de PedidosYa Chile a SSW Partners NY fue el 16/07 y la noticia todavía está fresca. Enviar ESTA SEMANA. Además: **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **25 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+#### "LUNES 20 DE JULIO" — Contactados sin mensaje fresco (20/07)
+
+**[4] Pizza House — Lunes 20 de julio (20/07):**
+"Hola Pizza House! RepartoJusto — lunes 20 de julio, inicio de la cuarta semana del mes más frío del año. El lunes es cuando los negocios hacen el balance del fin de semana y toman las decisiones de la semana: cuánto vendieron, cuánto quedó, qué mejorar. Para una pizzería en Portales 234, el balance de julio es claro: el invierno mantiene los pedidos altos, pero las comisiones de la plataforma comen una parte creciente de cada venta. Con pizza de $12.000 y 20 entregas semanales en una plataforma de porcentaje (28%), se van hasta $672.000 al mes solo en comisiones a la app. Con RepartoJusto son $500 fijos siempre — el mismo volumen cuesta menos de $40.000 al mes en logística, no más de $670.000. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana. La pizzería que se posicione con logística local de tarifa fija antes de que lleguen al barrio tiene ventaja real. Sin contrato, registro completamente gratuito, pueden sumar RepartoJusto a Rappi sin abandonar ninguna plataforma. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Esta semana damos el paso?"
+
+---
+
+**[13] Ferretería Los Maestros — Lunes 20 de julio (20/07):**
+"Hola Ferretería Los Maestros! RepartoJusto — lunes 20 de julio, inicio de la cuarta semana del mes de mayores reparaciones del año. En julio las cañerías revientan con el frío, las filtraciones aparecen en los techos y la gente necesita materiales urgentes sin querer salir a la lluvia. Una ferretería con delivery en Portales 123 tiene una ventaja real este mes: el cliente que necesita una llave de paso o un sellador de urgencia no quiere ir al local — quiere recibirlo en casa en 30 minutos. Una propuesta concreta: RepartoJusto puede llevar pedidos urgentes de ferretería a sus clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para una compra de $20.000 en materiales, una plataforma de porcentaje (28%) cobra $5.600 de comisión — con RepartoJusto son $500 siempre. Dato extra: la nueva app de Rappi prioriza con IA y algoritmo social los negocios que pagan publicidad dentro de la plataforma — una ferretería que no invierte en publicidad Rappi queda enterrada en el feed. Con RepartoJusto no hay algoritmo que los esconda. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-20)
+
+**[101] Making Sushi Villa Alemana — Presentación:**
+"Hola Making Sushi! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@makingsuushi) — sushi delivery con operación activa en Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales a sus pedidos por $500 fijos por entrega, sin porcentaje sobre la venta. Si trabajan con Rappi o Uber Eats, hoy pagan entre 28-30% de comisión por cada pedido. Para un combo sushi de $13.000, eso son hasta $3.900 que se van a la app por cada entrega. Con RepartoJusto son $500 siempre — el resto se queda en el negocio. Lunes 20 de julio — el sushi delivery está en su peak máximo del año: julio instalado en su cuarta semana, frío garantizado cada noche, y el sushi es el pedido favorito de la noche para muchas familias de Villa Alemana. Con canal propio en Instagram, ya tienen una comunidad de clientes lista para el canal de entrega local. Sin contrato, registro completamente gratuito, pueden sumar RepartoJusto a sus plataformas actuales y probar sin compromiso. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[102] La Joya Villa Alemana — Presentación + argumento SSW (en PedidosYa):**
+"Hola La Joya! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@lajoya.va) y Facebook — sandwichería con completos, churrascos y chacarero en Av. Valparaíso 412, con delivery activo en Villa Alemana. Una propuesta directa: si están en PedidosYa, hoy pagan el 29% + IVA (~34,5% real) de comisión por cada pedido. Para un completo o churrasco de $6.000, eso son más de $2.000 que se van a la app por cada entrega. Con RepartoJusto son $500 fijos siempre, sin importar el valor del pedido. Un dato urgente sobre PedidosYa: el 16 de julio, los dueños de PedidosYa (Delivery Hero) firmaron su venta a SSW Partners, un fondo de inversión privado de Nueva York que ya planea revenderla. PedidosYa Chile no quedará bajo Uber. En 18 meses no saben quién les cobra ni a qué precio. Con RepartoJusto son siempre $500 por pedido, sin letra chica, sin cambio de dueños. Lunes 20 de julio — el completo y el churrasco son los reyes del almuerzo y la once de cualquier lunes de invierno: julio es el peak del año para sandwichería delivery. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos? (Tel: +56 9 27179828)"
 
 ---
 

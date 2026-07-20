@@ -1,35 +1,65 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-07-19
-**Pipeline total:** 100 prospectos (HITO — primer umbral de 100 alcanzado)
-**Por estado:** Nuevos: 86 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-07-20
+**Pipeline total:** 102 prospectos
+**Por estado:** Nuevos: 88 | Contactados: 14 | Interesados: 0 | Registrados: 0
+
+---
 
 ## Acciones del día
 
-- Se leyó cola.md: instrucciones vigentes para Ventas — argumento SSW (PedidosYa vendida a SSW Partners NY el 16/07) para los 6 prospectos PedidosYa; Rappi Turbo ya operativo en Quilpué (urgencia ALTA en todos los mensajes); prioridades del Gerente: #22 Sushi Point Delivery y #15 Melt Pizzas.
-- Se redactaron 4 mensajes: 2 seguimientos "Domingo 19 de julio" para #2 Pollería Don Pollo y #9 Rotisería El Gaucho (3 días sin mensaje fresco desde el feriado del 16/07, ángulo almuerzo familiar domingo invernal), más 2 presentaciones para los 2 nuevos prospectos del día.
-- Se alcanzó el HITO de **100 prospectos** en el pipeline con la incorporación de #99 BubbleHouse Villa Alemana y #100 Cafetería y Panadería Beik.
-- Pipeline actualizado con nuevas "Próxima acción" para #2 y #9.
-- Argumentos SSW cargados y vigentes para los 6 prospectos PedidosYa — ventana óptima esta semana (hasta ~22/07).
+### Argumentos activos incorporados
+- **SSW Partners (16/07):** PedidosYa Chile vendida a fondo NY — argumento más potente del año, vigente para los 6 prospectos PedidosYa del pipeline. Ventana de máximo impacto cierra esta semana.
+- **Rappi Turbo Quilpué:** Ya operativo a 8 km de Villa Alemana — urgencia ALTA en todos los mensajes anti-Rappi.
+- **Rappi IA algoritmo:** Nueva app de Rappi entierra negocios que no pagan publicidad interna — argumento vigente especialmente para ferretería y rubros no premium.
+- **Peak invierno cuarta semana julio:** Argumento estacional en máxima vigencia.
+
+### Mensajes redactados hoy
+1. **#4 Pizza House** — "Lunes 20 de julio" — balance del fin de semana + ahorro ~$672K/mes vs. Rappi + urgencia Rappi Turbo Quilpué (7 días sin draft, PRIORIDAD)
+2. **#13 Ferretería Los Maestros** — "Lunes 20 de julio" — peak reparaciones de urgencia en invierno + argumento Rappi IA algoritmo (7 días sin draft)
+3. **#101 Making Sushi Villa Alemana** — Presentación inicial — canal propio Instagram @makingsuushi, sushi delivery activo en Villa Alemana
+4. **#102 La Joya Villa Alemana** — Presentación + argumento SSW — sandwichería en PedidosYa (Av. Valparaíso 412, @lajoya.va, tel. +56 9 27179828)
+
+---
 
 ## Borradores listos para Matías
 
-**HOY (4 mensajes):**
-1. **[2] Pollería Don Pollo — "Domingo 19 de julio":** seguimiento con ángulo domingo familiar invernal + Rappi Turbo Quilpué. 3 días desde el draft del feriado.
-2. **[9] Rotisería El Gaucho — "Domingo 19 de julio":** seguimiento con ángulo asado del domingo familiar + Rappi Turbo Quilpué. 3 días desde el draft del feriado.
-3. **[99] BubbleHouse Villa Alemana — Presentación:** bubble tea/bebidas especiales, Condell 96, Uber Eats + Instagram @bubblehouseva. Primer bubble tea del pipeline.
-4. **[100] Cafetería y Panadería Beik — Presentación:** panadería+cafetería, Díaz 985, Rappi. Primera panadería+cafetería activa en Rappi del pipeline.
+**Mensajes de hoy (20/07):**
+- [4] Pizza House — "Lunes 20 de julio" → Rappi Turbo urgencia + ahorro concreto ~$672K/mes
+- [13] Ferretería Los Maestros — "Lunes 20 de julio" → peak reparaciones + argumento Rappi IA
+- [101] Making Sushi Villa Alemana — Presentación → canal propio Instagram, $500 fijo vs. 28-30%
+- [102] La Joya Villa Alemana — Presentación + SSW → PedidosYa vendida a fondo NY, tel. +56 9 27179828
 
-**PRIORIDAD ABSOLUTA DE LA SEMANA:**
-- **6 prospectos PedidosYa** (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura) — argumento SSW listo (PedidosYa vendida a SSW Partners NY el 16/07). Ventana óptima cierra ~22/07.
-- **#22 Sushi Point Delivery** (tel. (32) 324 0504) — 24 días consecutivos con borradores activos.
-- **#15 Melt Pizzas** — 24 días consecutivos con borradores activos.
+**Ventana SSW — URGENTE ESTA SEMANA (venta del 16/07, 4 días):**
+- [27] Tribeca Sushi — borrador SSW listo desde 17/07
+- [28] La Esquina Con Sabor — borrador SSW listo desde 17/07
+- [30] Poh Che — borrador SSW listo desde 17/07
+- [33] Casa Festa — borrador SSW listo desde 17/07
+- [60] Master Sándwich — borrador SSW listo desde 17/07 (tel. (32) 311 9036 / WhatsApp +56 958528950)
+- [90] Buenaventura Pizzería — borrador SSW listo desde 17/07 (tel. +56 9 4113 4197)
+
+**Prioridades del Gerente con borradores acumulados:**
+- [22] Sushi Point Delivery — **25 días** con borrador activo — tel. (32) 324 0504
+- [15] Melt Pizzas — **25 días** con borrador activo — en Rappi, Av. Valparaíso 1057
+
+---
 
 ## Nuevos prospectos agregados
 
-1. **#99 BubbleHouse Villa Alemana** — Bebidas / bubble tea / postres. Condell 96, Villa Alemana (@bubblehouseva). Activo en Uber Eats. Lu-Sa 10:30-19:00. Primer bubble tea del pipeline. Argumento: canal propio Instagram + tarifa fija $500 vs. 28-30% Uber Eats.
+### #101 — Making Sushi Villa Alemana
+- **Rubro:** Sushi
+- **Canal:** Instagram @makingsuushi (delivery propio)
+- **Plataforma:** Canal propio (sin grandes plataformas detectadas)
+- **Argumento clave:** $500 fijo vs. 28-30% comisión, peak sushi lunes invernal, integración natural con canal Instagram existente
 
-2. **#100 Cafetería y Panadería Beik** — Panadería / cafetería. Díaz 985, Villa Alemana. Activo en Rappi. Primera panadería+cafetería activa en Rappi del pipeline. Argumento: peak domingo desayuno/once invernal + tarifa fija $500 vs. 28% Rappi + argumento algoritmo Rappi que entierra negocios sin publicidad.
+### #102 — La Joya Villa Alemana
+- **Rubro:** Sandwichería / completos / churrascos
+- **Dirección:** Av. Valparaíso 412, Villa Alemana
+- **Contacto:** Tel. +56 9 27179828 / Instagram @lajoya.va / Facebook
+- **Plataforma:** PedidosYa (comisión ~34,5% real)
+- **Argumento clave:** SSW (PedidosYa vendida a fondo NY el 16/07) + completos/churrascos peak lunes invernal
+
+---
 
 ## Para el Gerente
 
-Pipeline en **100 prospectos** (HITO) — 86 nuevos, 14 contactados, 0 registrados; argumento SSW activo para los 6 prospectos PedidosYa con ventana de máximo impacto hasta el 22/07; #22 Sushi Point Delivery y #15 Melt Pizzas con 24 días de borradores consecutivos sin confirmación de envío; cuello de botella crítico sigue siendo confirmación de Matías sobre mensajes enviados para actualizar estados del pipeline.
+Pipeline en 102 prospectos (88 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy — "Lunes 20 de julio" para #4 Pizza House (~$672K/mes ahorro, 7 días sin mensaje) y #13 Ferretería Los Maestros (peak urgencias invierno + arg. Rappi IA, 7 días sin mensaje), más presentaciones para 2 nuevos: Making Sushi (#101, sushi canal propio @makingsuushi) y La Joya Villa Alemana (#102, sandwichería en PedidosYa, argumento SSW directo, tel. +56 9 27179828); ventana SSW cierra esta semana — acción urgente para los 6 prospectos PedidosYa; #22 Sushi Point y #15 Melt Pizzas llevan 25 días consecutivos con borradores activos.
