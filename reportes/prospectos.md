@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-20
+**Actualizado:** 2026-07-21
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -8,8 +8,8 @@
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — almuerzo familiar domingo invernal, pollo clásico del domingo chileno |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 20 de julio" redactado 20/07 — PRIORIDAD, cuarta semana julio, Rappi Turbo Quilpué urgencia |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — PRIORIDAD, seguimiento tercera semana julio |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de julio" redactado 14/07 — peak botillería invierno, 22 días sin mensaje fresco |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — PRIORIDAD, cuarta semana julio, noche martes = peak sushi delivery |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — peak botillería martes invernal, Rappi Turbo Quilpué urgencia |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — post Virgen del Carmen + Rappi Turbo Quilpué, semana de reposición fin de semana |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — Día de la Virgen del Carmen, peak pastelería familiar invernal |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — asado y costillar almuerzo del domingo familiar invernal |
@@ -106,10 +106,44 @@
 | 100 | Cafetería y Panadería Beik | Panadería / cafetería | Díaz 985, Villa Alemana | Nuevo | — | Presentación redactada 19/07 — en Rappi, primera panadería+cafetería activa en Rappi del pipeline, peak domingo desayuno y once invernal |
 | 101 | Making Sushi Villa Alemana | Sushi | Villa Alemana (@makingsuushi, Instagram) | Nuevo | — | Presentación redactada 20/07 — sushi delivery canal propio Instagram, operación activa, peak sushi lunes invernal |
 | 102 | La Joya Villa Alemana | Sandwichería / completos | Av. Valparaíso 412, Villa Alemana | Nuevo | — | Presentación redactada 20/07 — en PedidosYa, argumento SSW (venta a fondo NY 16/07), completos/churrascos peak lunes julio, tel. +56 9 27179828 / @lajoya.va |
+| 103 | El Chumango | Food truck / desayunos y almuerzos | Villa Alemana (@elchumango, Facebook e Instagram) | Nuevo | — | Presentación redactada 21/07 — primer food truck del pipeline, desayunos y almuerzos delivery, canal propio Facebook e Instagram |
+| 104 | La Cocinería de Illescas | Colaciones / almuerzos | Quilpué / Villa Alemana (@lacocineriadeillescas, Facebook) | Nuevo | — | Presentación redactada 21/07 — colaciones y almuerzos delivery activos en Quilpué/Villa Alemana, canal propio Facebook, peak almuerzos invierno |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-21)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 21 de julio — cuarta semana del mes más frío del año**. El martes de invierno en la cuarta semana de julio tiene una característica clara: los negocios están haciendo balances semanales y los que aún no tienen canal propio empiezan a preguntar si vale la pena. La noche del martes es uno de los picos más constantes de sushi y botillería delivery de la semana. Se redactan **4 mensajes**: (1) seguimientos **"Martes 21 de julio"** para **#5 Sushi Zen** (7 días sin draft fresco, PRIORIDAD, Freire 1100 — sushi = pedido favorito de la noche del martes invernal) y **#6 Botillería El Copihue** (7 días sin draft fresco, Av. Álvarez 2310 — peak botillería martes); (2) presentaciones para 2 nuevos prospectos encontrados hoy: **El Chumango (#103)** — primer food truck del pipeline, desayunos y almuerzos en Villa Alemana, @elchumango — y **La Cocinería de Illescas (#104)** — colaciones y almuerzos delivery Quilpué/Villa Alemana, @lacocineriadeillescas. Pipeline total: **104 prospectos**.
+>
+> **VENTANA SSW (5 días desde la venta 16/07):** Los 6+ prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102 La Joya) tienen el argumento SSW listo — la venta de PedidosYa Chile a SSW Partners NY sigue siendo noticia vigente. Enviar esta semana. Además: **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **26 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+#### "MARTES 21 DE JULIO" — Contactados sin mensaje fresco (21/07)
+
+**[5] Sushi Zen — Martes 21 de julio (21/07):**
+"Hola Sushi Zen! RepartoJusto — martes 21 de julio, cuarta semana del mes más frío del año. El martes de invierno tiene una característica que los negocios de sushi conocen bien: la noche del martes es uno de los picos más constantes de sushi delivery de toda la semana. Las familias en casa, el frío de julio en su peak, y el sushi de Freire 1100 es exactamente lo que se pide esta noche. El cálculo concreto: con 20 entregas semanales de sushi de $13.000 en una plataforma de porcentaje (28%), se van más de $728.000 al mes solo en comisiones a la app. Con RepartoJusto son $500 fijos por pedido — el mismo volumen cuesta menos de $40.000 al mes en logística. Cuatro semanas de julio al nivel de ahorro de RepartoJusto equivalen a más de $680.000 que se quedan en el negocio en vez de irse a Rappi o Uber Eats. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a solo 8 km de Villa Alemana — la sushería que se posicione con logística local de tarifa fija antes de que lleguen al barrio tiene ventaja real. Sin contrato, registro completamente gratuito, pueden sumar RepartoJusto a Rappi o Uber Eats sin abandonar ninguna plataforma. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este martes damos el paso?"
+
+---
+
+**[6] Botillería El Copihue — Martes 21 de julio (21/07):**
+"Hola Botillería El Copihue! RepartoJusto — martes 21 de julio, cuarta semana del mes más frío del año. El martes de invierno es uno de los días más sólidos de botillería a domicilio: la semana ya arrancó, el frío de julio está completamente instalado, y los pedidos de bebidas, vinos, cervezas y lo que acompaña la once o la velada del martes son constantes todo el día. Para Av. Álvarez 2310: RepartoJusto puede llevar pedidos de botillería a los clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para un pedido de $18.000 en bebidas y vinos, una plataforma de porcentaje (28%) cobra $5.040 de comisión — con nosotros son $500 siempre, más de 10 veces menos costo por entrega. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — una botillería posicionada con RepartoJusto antes de que lleguen al barrio tiene ventaja de posicionamiento difícil de recuperar. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Esta semana arrancamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-21)
+
+**[103] El Chumango — Presentación:**
+"Hola El Chumango! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram y Facebook (@elchumango) — food truck de desayunos y almuerzos con presencia activa en Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de Rappi o Uber Eats que cobran 28-30% de comisión por cada entrega, con nosotros el costo es siempre $500, sin importar si el pedido vale $4.000 o $12.000. Hoy martes 21 de julio — el desayuno y el almuerzo a domicilio están en su peak máximo del año: cuarta semana de julio, el frío completamente instalado y los trabajadores que prefieren no salir al frío hacen del delivery de almuerzos una de las mayores oportunidades del mes. Un almuerzo de $8.000 entregado por una app de porcentaje (28%) paga $2.240 de comisión — con RepartoJusto son $500 siempre. Con 15 almuerzos diarios, el ahorro mensual vs. Rappi puede superar los $430.000. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[104] La Cocinería de Illescas — Presentación:**
+"Hola La Cocinería de Illescas! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos en Facebook (@lacocineriadeillescas) — colaciones y almuerzos delivery activos en Quilpué y Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una colación o almuerzo de $7.500, una plataforma de porcentaje (28%) cobra $2.100 de comisión — con nosotros son $500 siempre, el resto se queda en el negocio. Martes 21 de julio — la cuarta semana del mes más frío del año es el peak máximo de almuerzos y colaciones a domicilio: los trabajadores y familias en casa prefieren no salir al frío de julio y buscan almuerzo directo a domicilio. Con 20 colaciones diarias, el ahorro mensual vs. una app de porcentaje puede superar los $500.000. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana y Quilpué — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
