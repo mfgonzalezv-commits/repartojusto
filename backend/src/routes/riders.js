@@ -84,14 +84,16 @@ router.put('/ubicacion',
 // Historial de pedidos del rider
 router.get('/pedidos', auth, solo('rider'), async (req, res, next) => {
   const { estado, page = 1, limit = 20 } = req.query;
-  const offset = (page - 1) * limit;
+  const limitNum = Math.min(parseInt(limit) || 20, 100);
+  const pageNum = Math.max(1, parseInt(page) || 1);
+  const offset = (pageNum - 1) * limitNum;
   try {
     const { rows: [rider] } = await db(
       'SELECT id FROM riders WHERE usuario_id = $1', [req.usuario.id]
     );
     if (!rider) return res.status(404).json({ error: 'Rider no encontrado' });
 
-    const params = [rider.id, limit, offset];
+    const params = [rider.id, limitNum, offset];
     let filtroEstado = '';
     if (estado) {
       params.push(estado);

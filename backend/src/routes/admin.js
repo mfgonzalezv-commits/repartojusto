@@ -52,7 +52,9 @@ router.get('/metricas', async (req, res, next) => {
 // Listado de todos los pedidos con filtros
 router.get('/pedidos', async (req, res, next) => {
   const { estado, negocio_id, rider_id, page = 1, limit = 30 } = req.query;
-  const offset = (page - 1) * limit;
+  const limitNum = Math.min(parseInt(limit) || 30, 200);
+  const pageNum = Math.max(1, parseInt(page) || 1);
+  const offset = (pageNum - 1) * limitNum;
   const params = [];
   const filtros = [];
 
@@ -61,7 +63,7 @@ router.get('/pedidos', async (req, res, next) => {
   if (rider_id)   { params.push(rider_id);   filtros.push(`p.rider_id = $${params.length}`); }
 
   const where = filtros.length ? `WHERE ${filtros.join(' AND ')}` : '';
-  params.push(limit, offset);
+  params.push(limitNum, offset);
 
   try {
     const { rows } = await db(
@@ -84,8 +86,10 @@ router.get('/pedidos', async (req, res, next) => {
 // ── GET /api/admin/usuarios ───────────────────────────────────────────────────
 router.get('/usuarios', async (req, res, next) => {
   const { rol, page = 1, limit = 30 } = req.query;
-  const offset = (page - 1) * limit;
-  const params = [limit, offset];
+  const limitNum = Math.min(parseInt(limit) || 30, 200);
+  const pageNum = Math.max(1, parseInt(page) || 1);
+  const offset = (pageNum - 1) * limitNum;
+  const params = [limitNum, offset];
   let filtroRol = '';
   if (rol) { params.unshift(rol); filtroRol = 'WHERE u.rol = $1'; }
 

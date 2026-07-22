@@ -94,8 +94,11 @@ router.post('/', auth, soporteRateLimit, async (req, res, next) => {
     const rol = req.usuario.rol;
     const sistema = rol === 'rider' ? SISTEMA_RIDER : SISTEMA_NEGOCIO;
 
+    const ROLES_VALIDOS = new Set(['user', 'assistant']);
     const messages = [
-      ...historial.slice(-10).map(h => ({ role: h.rol, content: h.contenido })),
+      ...historial.slice(-10)
+        .filter(h => ROLES_VALIDOS.has(h.rol) && typeof h.contenido === 'string')
+        .map(h => ({ role: h.rol, content: h.contenido.slice(0, 2000) })),
       { role: 'user', content: mensaje }
     ];
 

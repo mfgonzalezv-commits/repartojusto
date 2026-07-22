@@ -108,7 +108,9 @@ router.put('/perfil',
 // Pedidos del negocio (con paginación simple)
 router.get('/pedidos', auth, solo('negocio'), async (req, res, next) => {
   const { estado, page = 1, limit = 20 } = req.query;
-  const offset = (page - 1) * limit;
+  const limitNum = Math.min(parseInt(limit) || 20, 100);
+  const pageNum = Math.max(1, parseInt(page) || 1);
+  const offset = (pageNum - 1) * limitNum;
   try {
     // Obtener negocio_id
     const { rows: [negocio] } = await db(
@@ -116,7 +118,7 @@ router.get('/pedidos', auth, solo('negocio'), async (req, res, next) => {
     );
     if (!negocio) return res.status(404).json({ error: 'Negocio no encontrado' });
 
-    const params = [negocio.id, limit, offset];
+    const params = [negocio.id, limitNum, offset];
     let filtroEstado = '';
     if (estado) {
       params.push(estado);
