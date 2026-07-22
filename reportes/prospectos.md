@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-21
+**Actualizado:** 2026-07-22
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -11,9 +11,9 @@
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — PRIORIDAD, cuarta semana julio, noche martes = peak sushi delivery |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — peak botillería martes invernal, Rappi Turbo Quilpué urgencia |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — post Virgen del Carmen + Rappi Turbo Quilpué, semana de reposición fin de semana |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — Día de la Virgen del Carmen, peak pastelería familiar invernal |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 22 de julio" redactado 22/07 — peak tortas y pasteles mitad de semana, café de tarde invernal |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — asado y costillar almuerzo del domingo familiar invernal |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Víspera del feriado 16/07" redactado 15/07 — café + postre invernal en feriado familiar |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 22 de julio" redactado 22/07 — peak café delivery de media semana, cuarto miércoles del mes más frío del año |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — peak medicamentos mascotas invierno + Rappi Turbo Quilpué, urgencia posicionamiento local |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 20 de julio" redactado 20/07 — peak reparaciones invierno, arg. Rappi IA algoritmo |
@@ -108,10 +108,44 @@
 | 102 | La Joya Villa Alemana | Sandwichería / completos | Av. Valparaíso 412, Villa Alemana | Nuevo | — | Presentación redactada 20/07 — en PedidosYa, argumento SSW (venta a fondo NY 16/07), completos/churrascos peak lunes julio, tel. +56 9 27179828 / @lajoya.va |
 | 103 | El Chumango | Food truck / desayunos y almuerzos | Villa Alemana (@elchumango, Facebook e Instagram) | Nuevo | — | Presentación redactada 21/07 — primer food truck del pipeline, desayunos y almuerzos delivery, canal propio Facebook e Instagram |
 | 104 | La Cocinería de Illescas | Colaciones / almuerzos | Quilpué / Villa Alemana (@lacocineriadeillescas, Facebook) | Nuevo | — | Presentación redactada 21/07 — colaciones y almuerzos delivery activos en Quilpué/Villa Alemana, canal propio Facebook, peak almuerzos invierno |
+| 105 | Carnicería El Ñoño | Carnicería / carnes a domicilio | Villa Alemana, Quilpué, Viña del Mar, Valparaíso (carniceriaelnono.cl) | Nuevo | — | Presentación redactada 22/07 — primer carnicería del pipeline, delivery martes tarde, julio = peak guisos/cazuelas/asado invernal, canal propio web |
+| 106 | Momento Con Amor | Desayunos sorpresa / regalo | Quilpué / Villa Alemana / Peñablanca (@momentoconamor, momentoconamor.cl) | Nuevo | — | Presentación redactada 22/07 — desayunos sorpresa/regalo a domicilio, canal propio web + Instagram, WhatsApp +56 9 87745980, rubro regalo único en el pipeline |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-22)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 22 de julio — cuarto miércoles del mes más frío del año**. El miércoles es el peak de la semana para pastelería y café a domicilio: la mitad de la semana instala el ritual del "gusto de media semana" — torta familiar en la tarde, café caliente para el home office del miércoles invernal. Se redactan **4 mensajes**: (1) seguimientos **"Miércoles 22 de julio"** para **#8 Pastelería Dulce Hogar** (Av. Álvarez 1890, 7 días sin draft, último 15/07 — peak tortas y pasteles del miércoles invernal) y **#10 Café El Árbol** (Freire 890, 7 días sin draft, último 15/07 — peak café delivery de media semana); (2) presentaciones para 2 nuevos prospectos: **Carnicería El Ñoño (#105)** — primer carnicería del pipeline, delivery en Villa Alemana y Quilpué, web propia carniceriaelnono.cl — y **Momento Con Amor (#106)** — desayunos sorpresa/regalo a domicilio, web+Instagram @momentoconamor, WhatsApp +56 9 87745980. Pipeline total: **106 prospectos**.
+>
+> **VENTANA SSW (6 días desde la venta 16/07):** Los 7 prospectos en PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) tienen el argumento SSW listo — enviar ESTA SEMANA. Además: **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **27 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+#### "MIÉRCOLES 22 DE JULIO" — Contactados sin mensaje fresco (22/07)
+
+**[8] Pastelería Dulce Hogar — Miércoles 22 de julio (22/07):**
+"Hola Pastelería Dulce Hogar! RepartoJusto — miércoles 22 de julio, cuarto miércoles del mes más frío del año. El miércoles de invierno tiene un ritual que los negocios de pastelería conocen bien: la torta de cumpleaños de mitad de semana, el pastel para el café de la tarde familiar, el postre que nadie quiere salir a buscar al frío pero que sí se pide a domicilio. Para Av. Álvarez 1890: RepartoJusto puede llevar tortas, pasteles y delicias de Dulce Hogar a los clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para una torta de $15.000, una plataforma de porcentaje (28%) cobra $4.200 de comisión — con nosotros son $500 siempre, más de ocho veces menos costo por entrega. El miércoles es el peak más constante de pastelería a domicilio de la semana: los pedidos de cumpleaños de mitad de semana y las tardes de invierno en familia son exactamente el cliente de Dulce Hogar. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — la pastelería que se posicione con logística local de tarifa fija antes de que lleguen al barrio tiene ventaja real. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este miércoles damos el paso?"
+
+---
+
+**[10] Café El Árbol — Miércoles 22 de julio (22/07):**
+"Hola Café El Árbol! RepartoJusto — miércoles 22 de julio, cuarto miércoles del mes más frío del año. El miércoles de invierno tiene una característica especial para los negocios de café: es el peak del café delivery de media semana. Los trabajadores en home office, las familias en casa, la tarde que pide café caliente sin salir al frío de julio — el miércoles concentra todo ese flujo. Para Freire 890: RepartoJusto puede llevar el café y los acompañamientos de El Árbol a los clientes en Villa Alemana por $500 fijos por entrega, sin porcentaje sobre la venta. Para un pedido de café + postre de $5.000, una plataforma de porcentaje (28%) cobra $1.400 de comisión — con nosotros son $500 siempre. Con 20 entregas semanales, el ahorro mensual vs. una app de porcentaje puede superar los $360.000. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — antes de que lleguen al barrio, posicionarse con logística local de tarifa fija tiene más sentido que nunca. Sin contrato, registro completamente gratuito, pueden mantener cualquier plataforma actual y sumar RepartoJusto en paralelo. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-22)
+
+**[105] Carnicería El Ñoño — Presentación:**
+"Hola Carnicería El Ñoño! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos en carniceriaelnono.cl — carnicería con delivery activo en Villa Alemana, Quilpué, Viña del Mar y Valparaíso. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de delivery en Villa Alemana y Quilpué por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pedido de carnes de $18.000, una plataforma de porcentaje (28%) cobra $5.040 de comisión — con nosotros son $500 siempre, el resto se queda en el negocio. Miércoles 22 de julio — la cuarta semana de julio es el peak máximo del año para carnes a domicilio: las familias en casa necesitan ingredientes para la cazuela del miércoles, el guiso de la tarde, el asado que no quieren preparar con el frío pero que sí piden a domicilio. Carnicería El Ñoño tiene la ventaja de ser un negocio establecido con delivery propio — RepartoJusto potencia esa logística con riders locales conocedores del barrio, a tarifa fija. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[106] Momento Con Amor — Presentación:**
+"Hola Momento Con Amor! Los contacta RepartoJusto, plataforma de delivery local en Quilpué y Villa Alemana. Los encontramos en Instagram (@momentoconamor) y en momentoconamor.cl — desayunos sorpresa y detalles especiales a domicilio en Quilpué, Villa Alemana y Peñablanca. Una propuesta directa: RepartoJusto puede sumar riders locales a sus entregas de desayunos por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un desayuno sorpresa de $12.000, una plataforma de porcentaje (28%) cobra $3.360 de comisión — con nosotros son $500 siempre, el resto se queda en el negocio. El miércoles de invierno tiene uno de los mayores volúmenes de pedidos de regalo a domicilio: los cumpleaños de mitad de semana, los aniversarios, el 'te quiero sorprender' del miércoles invernal son exactamente el cliente de Momento Con Amor. Con canal propio en Instagram y web (momentoconamor.cl), ya tienen una comunidad activa — RepartoJusto suma la logística local sin cobrar porcentaje de lo que venden. Sin contrato, registro completamente gratuito. Somos 100% locales en Quilpué y Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos? (WhatsApp: +56 9 87745980)"
 
 ---
 
@@ -1843,3 +1877,7 @@
 **Koala Sushi (#97, agregado 18/07):** Restaurante de sushi con delivery activo en Rappi en Villa Alemana. Fuente: rappi.cl/restaurantes/900074123-koala-sushi (con promoción 15 días de delivery gratis). Ticket promedio estimado: $12.000-$16.000 (sushi delivery). Rappi cobra 28% de comisión — con 15 entregas diarias, el ahorro vs. Rappi puede superar $470.000/mes vs. RepartoJusto. Sábado de invierno = peak máximo de sushi delivery semanal. No aparece en el pipeline previo — negocio nuevo o recién detectado.
 
 **Del Nono (#98, agregado 18/07):** Pizzería con delivery activo en Rappi en Villa Alemana. Fuente: rappi.cl/restaurantes/900091876-del-nono (ofrece pizza con pollo, pizza con jamón y combinaciones). Ticket promedio estimado: $9.000-$13.000 (pizza delivery). Rappi cobra 28% de comisión — con 12 entregas diarias, el ahorro vs. Rappi puede superar $380.000/mes vs. RepartoJusto. Fin de semana de invierno = peak de pizza delivery. No aparece en el pipeline previo.
+
+**Carnicería El Ñoño (#105, agregado 22/07):** Carnicería con delivery propio en Villa Alemana, Quilpué, Viña del Mar y Valparaíso. Sitio web: carniceriaelnono.cl. Delivery disponible los martes por las tardes. Canal propio sin grandes plataformas detectadas. Primer carnicería pura del pipeline. Ticket promedio estimado: $15.000-$30.000 (carnes al por mayor/menor para casa). Argumento principal: julio = peak máximo de carnes para guisos, cazuelas y fondues en casa — las familias que no quieren salir al frío de julio buscan carnes a domicilio para el plato de la semana. Con canal propio ya activo, RepartoJusto complementa la logística local a tarifa fija sin porcentaje de venta. Para una compra de $20.000 en carnes, ahorro vs. app de porcentaje (28%): $5.100 por entrega. Fuente: carniceriaelnono.cl + búsqueda Instagram Villa Alemana delivery 2026.
+
+**Momento Con Amor (#106, agregado 22/07):** Servicio de desayunos sorpresa y detalles especiales a domicilio en Quilpué, Villa Alemana y Peñablanca. Instagram: @momentoconamor. Sitio web: momentoconamor.cl. WhatsApp: +56 9 87745980. Canal propio con web dedicada + Instagram. Sin grandes plataformas detectadas. Rubro único: desayunos sorpresa/regalo — diferente de #64 Desayuno a domicilio (solo WhatsApp). Ticket promedio estimado: $8.000-$18.000 (desayuno sorpresa completo). Argumento principal: julio = peak de regalos de cumpleaños y aniversarios con invierno instalado — el desayuno sorpresa es el detalle ideal cuando nadie quiere salir al frío. Canal propio ya activo, RepartoJusto puede potenciar la logística local a $500 fijo vs. porcentaje de plataforma. Fuente: momentoconamor.cl + instagram.com/momentoconamor + búsqueda desayunos domicilio Quilpué Villa Alemana.
