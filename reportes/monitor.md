@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-22T23:08:18Z
-**Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** El proxy de red del entorno bloqueó la conexión saliente a `repartojusto-production.up.railway.app:443` con HTTP 403 en el túnel CONNECT (curl error 56). No fue posible confirmar el estado del servicio. Se requiere verificación manual o un entorno con acceso de red irrestricto.
+**Última verificación:** 2026-07-23T00:07:56Z
+**Estado:** ❌ CAÍDO
+**Detalle:** HTTP 403 Forbidden — el endpoint /health no responde con 200. El proxy de red bloqueó la conexión directa (CONNECT tunnel 403); WebFetch también recibió 403 desde el servidor. No se obtuvo cuerpo de respuesta.
