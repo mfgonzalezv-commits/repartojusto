@@ -1,20 +1,20 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-22
+**Actualizado:** 2026-07-23
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — arg. nuevo Rappi IA/algoritmo |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Sábado 18 de julio" redactado 18/07 — peak fin de semana post-feriado + arg. Rappi IA/algoritmo |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — almuerzo familiar domingo invernal, pollo clásico del domingo chileno |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | Jueves de julio redactado 10/07 — peak medicamentos invierno, enfoque autonomía sucursal |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 18 de julio" redactado 18/07 — peak medicamentos invierno, fin de semana post-feriado |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 20 de julio" redactado 20/07 — PRIORIDAD, cuarta semana julio, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — PRIORIDAD, cuarta semana julio, noche martes = peak sushi delivery |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — peak botillería martes invernal, Rappi Turbo Quilpué urgencia |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — post Virgen del Carmen + Rappi Turbo Quilpué, semana de reposición fin de semana |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Jueves 23 de julio" redactado 23/07 — peak reposición previo al fin de semana invernal, Rappi Turbo Quilpué urgencia |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 22 de julio" redactado 22/07 — peak tortas y pasteles mitad de semana, café de tarde invernal |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — asado y costillar almuerzo del domingo familiar invernal |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 22 de julio" redactado 22/07 — peak café delivery de media semana, cuarto miércoles del mes más frío del año |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Viernes post-feriado" redactado 17/07 — peak medicamentos mascotas invierno + Rappi Turbo Quilpué, urgencia posicionamiento local |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Jueves 23 de julio" redactado 23/07 — peak medicamentos mascotas invierno, Rappi Turbo Quilpué urgencia |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 20 de julio" redactado 20/07 — peak reparaciones invierno, arg. Rappi IA algoritmo |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
@@ -110,10 +110,44 @@
 | 104 | La Cocinería de Illescas | Colaciones / almuerzos | Quilpué / Villa Alemana (@lacocineriadeillescas, Facebook) | Nuevo | — | Presentación redactada 21/07 — colaciones y almuerzos delivery activos en Quilpué/Villa Alemana, canal propio Facebook, peak almuerzos invierno |
 | 105 | Carnicería El Ñoño | Carnicería / carnes a domicilio | Villa Alemana, Quilpué, Viña del Mar, Valparaíso (carniceriaelnono.cl) | Nuevo | — | Presentación redactada 22/07 — primer carnicería del pipeline, delivery martes tarde, julio = peak guisos/cazuelas/asado invernal, canal propio web |
 | 106 | Momento Con Amor | Desayunos sorpresa / regalo | Quilpué / Villa Alemana / Peñablanca (@momentoconamor, momentoconamor.cl) | Nuevo | — | Presentación redactada 22/07 — desayunos sorpresa/regalo a domicilio, canal propio web + Instagram, WhatsApp +56 9 87745980, rubro regalo único en el pipeline |
+| 107 | Rincón De Las Masas Villa Alemana | Masas / empanadas | San Enrique 1250 Local 1, Villa Alemana (@rinconvillaalemana) | Nuevo | — | Presentación redactada 23/07 — masas frescas y empanadas, canal propio Instagram, sin grandes plataformas, peak empanadas invierno |
+| 108 | Amasandería PURÉN | Amasandería / panadería artesanal | Villa Alemana (@amasanderiapuren, Facebook) | Nuevo | — | Presentación redactada 23/07 — pan artesanal a domicilio, canal propio Facebook, peak desayunos invierno julio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-23)
+
+> **NOTA PARA MATÍAS:** Hoy es **jueves 23 de julio — el día previo al fin de semana del mes más frío del año**. El jueves de invierno tiene una lógica propia: es el día en que las familias se preparan para quedarse en casa el fin de semana, hacen la reposición del almacén, piden los medicamentos que faltan, y planifican el delivery del viernes y el sábado. Se redactan **4 mensajes**: (1) seguimientos **"Jueves 23 de julio"** para **#7 Minimercado La Esquina** (Lynch 445, 6 días sin draft fresco, último 17/07 — peak reposición jueves previo al fin de semana) y **#11 Veterinaria Huellitas** (Av. Álvarez 3200, 6 días sin draft fresco, último 17/07 — peak medicamentos mascotas invierno); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Rincón De Las Masas Villa Alemana (#107)** — masas y empanadas en San Enrique 1250 Local 1, @rinconvillaalemana, canal propio Instagram — y **Amasandería PURÉN (#108)** — amasandería artesanal en Villa Alemana, @amasanderiapuren Facebook. Pipeline total: **108 prospectos**.
+>
+> **VENTANA SSW (7 días desde la venta 16/07):** Los 7 prospectos en PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) tienen el argumento SSW listo — la venta de PedidosYa Chile a SSW Partners NY es noticia vigente. Enviar esta semana. Además: **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **28 días consecutivos** con borradores activos sin confirmación de envío. **PRÓXIMA VENTANA:** Premios Uber Eats el 29/07 — contraste "RepartoJusto trabaja en tu barrio" disponible a partir del lunes 28/07.
+
+---
+
+#### "JUEVES 23 DE JULIO" — Contactados sin mensaje fresco (23/07)
+
+**[7] Minimercado La Esquina — Jueves 23 de julio (23/07):**
+"Hola Minimercado La Esquina! RepartoJusto — jueves 23 de julio, el día previo al fin de semana más frío del año. El jueves de invierno tiene una lógica propia para un minimarket: es el día de reposición de las familias que se preparan para quedarse en casa el fin de semana. Pan, aceite, bebidas, lo básico que falta — todo eso se puede pedir a domicilio desde Lynch 445 por $500 fijos por entrega, sin porcentaje sobre la venta. Para un pedido de almacén de $8.000, una plataforma de porcentaje (28%) cobra $2.240 de comisión — con RepartoJusto son $500 siempre. El fin de semana es el peak máximo de delivery del mes: viernes-sábado-domingo de julio concentran la mayor demanda de la semana. El minimarket posicionado con logística local antes de ese peak tiene ventaja real. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — el minimarket con delivery local propio antes de que lleguen al barrio tiene posicionamiento difícil de replicar. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Este jueves arrancamos para el fin de semana?"
+
+---
+
+**[11] Veterinaria Huellitas — Jueves 23 de julio (23/07):**
+"Hola Veterinaria Huellitas! RepartoJusto — jueves 23 de julio. El invierno es el peak máximo de consultas veterinarias del año: el frío trae problemas respiratorios en mascotas, articulaciones inflamadas en perros mayores, enfermedades propias de julio que los dueños de mascotas necesitan tratar sin querer salir al frío con sus animales. Una veterinaria que pueda despachar medicamentos, alimentos especiales, antiparasitarios y accesorios en Villa Alemana por $500 fijos por entrega tiene una propuesta de valor concreta para sus clientes. Para un despacho de medicamentos de $15.000, una plataforma de porcentaje (28%) cobra $4.200 de comisión — con RepartoJusto son $500 siempre, el resto queda en el negocio. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana. Una veterinaria con logística local de tarifa fija posicionada ahora tiene ventaja de servicio antes de que llegue la competencia. Sin contrato, registro completamente gratuito, pueden sumar RepartoJusto a cualquier canal actual. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-23)
+
+**[107] Rincón De Las Masas Villa Alemana — Presentación:**
+"Hola Rincón De Las Masas! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@rinconvillaalemana) — masas frescas y empanadas en San Enrique 1250 Local 1, Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales a su canal de despacho por $500 fijos por pedido entregado, sin porcentaje sobre la venta. A diferencia de plataformas como Rappi o Uber Eats que cobran 28-30% de comisión por cada entrega, con nosotros el costo es siempre $500, sin importar el valor del pedido. Jueves 23 de julio — las masas y empanadas están en su peak máximo del año: las familias que se preparan para el fin de semana en casa piden las empanadas del viernes, las sopaipillas del sábado, las masas frescas para el desayuno del domingo invernal. El rubro de masas artesanales en invierno tiene uno de los mayores potenciales de delivery de la temporada. Con canal propio en Instagram, ya tienen clientes que los conocen — RepartoJusto suma la logística local sin cobrarles porcentaje de lo que venden. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[108] Amasandería PURÉN — Presentación:**
+"Hola Amasandería PURÉN! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Facebook (@amasanderiapuren) — amasandería artesanal con presencia activa en Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales a su despacho a domicilio por $500 fijos por pedido entregado, sin porcentaje sobre la venta. El pan fresco a domicilio tiene su peak más claro en invierno: las mañanas de julio cuando nadie quiere salir al frío a buscar el pan, el desayuno del domingo que llega a casa, la marraqueta o el pan hallulla que se pide directo al hogar. Con canal propio en Facebook, ya tienen una comunidad de clientes activa en Villa Alemana. RepartoJusto puede potenciar esos pedidos a domicilio con riders locales — sin contrato, sin porcentaje sobre lo que venden, solo $500 fijo por cada pedido entregado. Registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
@@ -1881,3 +1915,7 @@
 **Carnicería El Ñoño (#105, agregado 22/07):** Carnicería con delivery propio en Villa Alemana, Quilpué, Viña del Mar y Valparaíso. Sitio web: carniceriaelnono.cl. Delivery disponible los martes por las tardes. Canal propio sin grandes plataformas detectadas. Primer carnicería pura del pipeline. Ticket promedio estimado: $15.000-$30.000 (carnes al por mayor/menor para casa). Argumento principal: julio = peak máximo de carnes para guisos, cazuelas y fondues en casa — las familias que no quieren salir al frío de julio buscan carnes a domicilio para el plato de la semana. Con canal propio ya activo, RepartoJusto complementa la logística local a tarifa fija sin porcentaje de venta. Para una compra de $20.000 en carnes, ahorro vs. app de porcentaje (28%): $5.100 por entrega. Fuente: carniceriaelnono.cl + búsqueda Instagram Villa Alemana delivery 2026.
 
 **Momento Con Amor (#106, agregado 22/07):** Servicio de desayunos sorpresa y detalles especiales a domicilio en Quilpué, Villa Alemana y Peñablanca. Instagram: @momentoconamor. Sitio web: momentoconamor.cl. WhatsApp: +56 9 87745980. Canal propio con web dedicada + Instagram. Sin grandes plataformas detectadas. Rubro único: desayunos sorpresa/regalo — diferente de #64 Desayuno a domicilio (solo WhatsApp). Ticket promedio estimado: $8.000-$18.000 (desayuno sorpresa completo). Argumento principal: julio = peak de regalos de cumpleaños y aniversarios con invierno instalado — el desayuno sorpresa es el detalle ideal cuando nadie quiere salir al frío. Canal propio ya activo, RepartoJusto puede potenciar la logística local a $500 fijo vs. porcentaje de plataforma. Fuente: momentoconamor.cl + instagram.com/momentoconamor + búsqueda desayunos domicilio Quilpué Villa Alemana.
+
+**Rincón De Las Masas Villa Alemana (#107, agregado 23/07):** Negocio de masas frescas y empanadas en San Enrique 1250 Local 1, Villa Alemana. Instagram: @rinconvillaalemana. Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Canal propio Instagram con presencia activa. Producto: masas frescas, empanadas artesanales. Ticket promedio estimado: $4.000-$12.000 (venta por unidad o docena de empanadas). Argumento principal: canal directo con logística local RepartoJusto por $500 fijo sin porcentaje. Julio-agosto = peak máximo de empanadas en Chile (invierno + frío + Fiestas Patrias se acercan en septiembre). Primer negocio del pipeline especializado en masas frescas puras. Fuente: instagram.com/rinconvillaalemana + búsqueda Instagram delivery Villa Alemana julio 2026.
+
+**Amasandería PURÉN (#108, agregado 23/07):** Amasandería artesanal con presencia activa en Villa Alemana. Facebook: @amasanderiapuren. Canal propio Facebook. Sin grandes plataformas detectadas. Producto: pan artesanal, productos de amasandería (marraqueta, pan hallulla, pan integral). Ticket promedio estimado: $3.000-$8.000 (pan + repostería artesanal). Argumento principal: julio = peak máximo de pan a domicilio — las mañanas de invierno en que nadie quiere salir al frío para buscar pan son exactamente cuando el delivery de amasandería tiene mayor demanda. Canal propio Facebook ya activo, RepartoJusto suma la logística local a $500 fijo. Referencia adicional: municipalidad de Villa Alemana reconoció a la dueña Marcela Tenorio como "Mujer que Inspira" en marzo 2026 — negocio con arraigo comunitario local. Fuente: facebook.com/amasanderiapuren + munivillalemana.gob.cl/2026/03/municipalidad-villa-alemana-reconocimientos-mujeres-que-inspiran + búsqueda amasandería delivery Villa Alemana.

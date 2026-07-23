@@ -1,47 +1,51 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-07-22
-**Pipeline total:** 106 prospectos
-**Por estado:** Nuevos: 92 | Contactados: 14 | Interesados: 0 | Registrados: 0
-
----
+**Fecha:** 2026-07-23
+**Pipeline total:** 108 prospectos
+**Por estado:** Nuevos: 94 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-- Leído cola.md e investigador.md — argumentos activos incorporados: SSW Partners (PedidosYa vendida a fondo NY el 16/07, ventana 6 días), Rappi Turbo operativo en Quilpué urgencia ALTA, FNE/TDLC vigente todo el semestre, argumento Rappi IA/algoritmo
-- Redactados **4 borradores** para el miércoles 22 de julio:
-  - Seguimiento "Miércoles 22 de julio" para **#8 Pastelería Dulce Hogar** (7 días sin draft, último 15/07, Av. Álvarez 1890): ángulo peak tortas y pasteles día de mitad de semana + café de tarde invernal + Rappi Turbo Quilpué urgencia + cálculo $4.200 comisión por torta $15.000 vs. $500 fijo
-  - Seguimiento "Miércoles 22 de julio" para **#10 Café El Árbol** (7 días sin draft, último 15/07, Freire 890): ángulo peak café delivery media semana + home office miércoles invernal + Rappi Turbo Quilpué + ahorro $360K+/mes con 20 entregas semanales
-  - Presentación para **#105 Carnicería El Ñoño** — primer carnicería del pipeline, delivery propio en VA/Quilpué/Viña/Valparaíso (martes tarde), canal propio carniceriaelnono.cl, argumento julio = peak guisos/cazuelas/asado invernal, ahorro $5.100 por entrega de $20.000 en carnes vs. app 28%
-  - Presentación para **#106 Momento Con Amor** — desayunos sorpresa/regalo a domicilio en Quilpué/VA/Peñablanca, @momentoconamor, momentoconamor.cl, WhatsApp +56 9 87745980, rubro regalo único en el pipeline, argumento julio = peak regalos cumpleaños invierno
-- Buscados 2 negocios nuevos en Villa Alemana/Quilpué no presentes en el pipeline
-- Pipeline actualizado a **106 prospectos**
+### Argumentos incorporados (de cola.md y investigador.md)
+- **Argumento SSW activo (7 días):** PedidosYa Chile fue vendida el 16/07 a SSW Partners (fondo NY) — 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102) tienen el mensaje listo. Ventana de máximo impacto sigue abierta.
+- **Rappi Turbo Quilpué (ALTA urgencia):** Actualizado de urgencia moderada a ALTA — Rappi Turbo ya opera en Quilpué a 8 km de Villa Alemana. Incorporado en ambos mensajes de hoy.
+- **Argumento FNE/TDLC reforzado:** PedidosYa en juicio ante el TDLC negando cargos — argumento vigente todo el semestre para los 7 prospectos PedidosYa.
+- **Premios Uber Eats 29/07:** Ventana de contraste "RepartoJusto trabaja en tu barrio, no premia a los grandes" disponible desde lunes 28/07.
 
----
+### Mensajes redactados hoy
+1. **[#7] Minimercado La Esquina** — "Jueves 23 de julio": ángulo reposición semanal previo al fin de semana + Rappi Turbo Quilpué urgencia. Lynch 445, VA.
+2. **[#11] Veterinaria Huellitas** — "Jueves 23 de julio": peak medicamentos mascotas invierno + despacho a domicilio + Rappi Turbo Quilpué urgencia. Av. Álvarez 3200, VA.
+3. **[#107] Rincón De Las Masas VA** — Presentación: masas y empanadas canal propio Instagram, San Enrique 1250 Local 1, sin grandes plataformas.
+4. **[#108] Amasandería PURÉN** — Presentación: amasandería artesanal canal propio Facebook, pan a domicilio peak invierno.
+
+### Correcciones de pipeline
+- Actualizado "Próxima acción" de #1 y #3 (mostraban 10/07 pero tuvieron drafts el 18/07)
+- Actualizado "Próxima acción" de #7 y #11 con hoy 23/07
 
 ## Borradores listos para Matías
 
-1. **#8 Pastelería Dulce Hogar** — Seguimiento "Miércoles 22 de julio" — WhatsApp/mensaje directo
-2. **#10 Café El Árbol** — Seguimiento "Miércoles 22 de julio" — WhatsApp/mensaje directo
-3. **#105 Carnicería El Ñoño** — Presentación — Web carniceriaelnono.cl / Instagram / contacto directo
-4. **#106 Momento Con Amor** — Presentación — DM Instagram @momentoconamor / WhatsApp +56 9 87745980
+**Mensajes urgentes — SSW PedidosYa (ESTA SEMANA — ventana cierra):**
+- #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa (ya redactados 17/07)
+- #60 Master Sándwich Villa Alemana (ya redactado 17/07, WhatsApp +56 958528950)
+- #90 Buenaventura Pizzería & Sandwiches (ya redactado 17/07, tel. +56 9 4113 4197)
+- #102 La Joya Villa Alemana (ya redactado 20/07, tel. +56 9 27179828)
 
-**URGENTE — VENTANA SSW (6 días desde 16/07, cerrando):**
-Los 7 prospectos en PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) tienen el argumento SSW listo — enviar HOY o mañana antes de que la noticia pierda impacto. Los borradores están en la sección del 17/07 y 20/07 de prospectos.md.
+**Mensajes HOY (23/07):**
+- #7 Minimercado La Esquina — "Jueves 23 de julio" (Lynch 445)
+- #11 Veterinaria Huellitas — "Jueves 23 de julio" (Av. Álvarez 3200)
+- #107 Rincón De Las Masas — Presentación (@rinconvillaalemana)
+- #108 Amasandería PURÉN — Presentación (@amasanderiapuren Facebook)
 
-**PRIORIDAD GERENTE (27 días sin confirmación):**
-- **#22 Sushi Point Delivery** — tel. (32) 324 0504 — borrador en sección 25/06
-- **#15 Melt Pizzas** — Av. Valparaíso 1057, en Rappi — borrador en sección 25/06
-
----
+**Prioridades del Gerente (28 días consecutivos con borradores activos):**
+- #22 Sushi Point Delivery — tel. (32) 324 0504
+- #15 Melt Pizzas — Av. Valparaíso 1057 (en Rappi)
 
 ## Nuevos prospectos agregados
 
-1. **#105 Carnicería El Ñoño** — Carnicería con delivery propio en Villa Alemana, Quilpué, Viña del Mar y Valparaíso. Canal propio web (carniceriaelnono.cl), delivery los martes tarde. **Primer carnicería del pipeline** — rubro único. Argumento: julio = peak guisos/cazuelas en casa, carnes a domicilio sin salir al frío. Ahorro: $5.100 por entrega de $20.000 en carnes vs. app 28%.
-
-2. **#106 Momento Con Amor** — Desayunos sorpresa y detalles especiales a domicilio en Quilpué, Villa Alemana y Peñablanca. Instagram @momentoconamor, web momentoconamor.cl, WhatsApp +56 9 87745980. Canal propio activo, sin grandes plataformas detectadas. **Rubro regalo único en el pipeline** (diferente del #64 solo-WhatsApp). Argumento: julio = peak regalos invierno, $500 fijo vs. porcentaje.
-
----
+| # | Negocio | Rubro | Contacto | Plataforma | Argumento principal |
+|---|---|---|---|---|---|
+| 107 | Rincón De Las Masas VA | Masas / empanadas | @rinconvillaalemana (Instagram) | Canal propio | Peak invierno empanadas, sin porcentaje |
+| 108 | Amasandería PURÉN | Amasandería | @amasanderiapuren (Facebook) | Canal propio | Pan a domicilio, peak desayunos julio |
 
 ## Para el Gerente
 
-Pipeline en 106 prospectos (92 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy — seguimientos "Miércoles 22 de julio" para #8 Pastelería Dulce Hogar (7 días sin draft, peak tortas + café tarde invernal + Rappi Turbo Quilpué) y #10 Café El Árbol (7 días sin draft, peak café delivery media semana), más presentaciones para 2 nuevos de rubros únicos: Carnicería El Ñoño (#105, primer carnicería del pipeline, delivery VA/Quilpué, carniceriaelnono.cl) y Momento Con Amor (#106, desayunos sorpresa/regalo, @momentoconamor, canal propio web+Instagram); ventana SSW (PedidosYa a fondo NY el 16/07) lleva 6 días abierta — los 7 prospectos PedidosYa necesitan envío urgente ESTA SEMANA; cuello de botella crítico: 71 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
+Pipeline en 108 prospectos (94 nuevos, 14 contactados, 0 registrados); 4 borradores redactados hoy — "Jueves 23 de julio" para #7 Minimercado La Esquina y #11 Veterinaria Huellitas + presentaciones para 2 nuevos rubros únicos (masas/empanadas y amasandería artesanal); ventana SSW (PedidosYa vendida a SSW Partners NY el 16/07) lleva 7 días abierta y los 7 borradores para prospectos PedidosYa deben salir esta semana; #22 Sushi Point Delivery y #15 Melt Pizzas llevan 28 días consecutivos con borradores activos sin confirmación de envío.
