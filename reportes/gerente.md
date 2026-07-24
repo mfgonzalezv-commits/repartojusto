@@ -1,24 +1,24 @@
 # Informe Ejecutivo RepartoJusto
-**Semana del:** 11 al 17 de julio de 2026
+**Semana del:** 18 al 24 de julio de 2026
 
 ---
 
 ## Estado General: ⚠️ Atención requerida
-La plataforma recibió mejoras de seguridad importantes y el contexto competitivo entrega el argumento de venta más potente del año, pero el pipeline lleva 70+ días sin confirmar envíos y hay vulnerabilidades técnicas abiertas que requieren acción.
+La plataforma recibió 4 mejoras de seguridad relevantes esta semana, pero persisten dos vulnerabilidades abiertas en producción y el pipeline de ventas lleva 28+ días sin confirmación de mensajes enviados por Matías.
 
 ---
 
 ## Lo que pasó esta semana
 
-- **Se protegió la plataforma contra 3 nuevas vulnerabilidades.** El Agente de Seguridad aplicó: (1) límite al chat de soporte IA — sin él, cualquier negocio registrado podía generar costos ilimitados de API; (2) el rate limiter de login ahora sobrevive reinicios del servidor gracias a Redis — antes se podía saltear el bloqueo forzando un restart; (3) el endpoint de seguimiento público ahora tiene límite de peticiones por IP para evitar scraping masivo de direcciones.
+- **Se protegió la plataforma contra DoS y manipulación del chat de soporte IA.** El Agente de Seguridad aplicó dos fixes críticos: (1) los endpoints de listado ya no aceptan peticiones que pidan traer millones de registros de la base de datos (lo que podía tumbar el servidor); (2) el historial del chat con soporte IA ya no puede ser manipulado para hacer que la IA responda fuera de sus instrucciones ni generar costos de API exagerados.
 
-- **Se corrigió un problema de despliegue en Railway.** Se agregó el archivo `nixpacks.toml` para que Railway apunte correctamente al directorio del servidor. Fix invisible pero crítico: sin él el servidor puede no iniciar tras un deploy.
+- **Se identificó que los bonos a riders no dejan registro.** El Agente Aprendiz descubrió que cada vez que un admin otorga un bono o incentivo a un rider, el sistema intenta guardarlo en la base de datos con columnas que no existen — el error pasa silenciosamente y el registro nunca se graba. El saldo se acredita, pero no queda trazabilidad de quién aprobó qué bono ni por qué.
 
-- **PedidosYa Chile fue vendida a un fondo de inversión de Nueva York (16 de julio — hoy).** Uber compra Delivery Hero por US$14.000 millones; PedidosYa Chile no queda bajo Uber sino bajo SSW Partners, un fondo que ya planea revenderla. En 18 meses los negocios en PedidosYa no sabrán quién les cobra ni con qué condiciones. Es el argumento de venta más potente que RepartoJusto ha tenido. Es noticia fresca hoy.
+- **Se confirmó el patrón crítico del Agente de Mejoras.** El Aprendiz verificó en el historial de cambios que el Agente de Mejoras lleva 8+ semanas generando correcciones con código correcto que **nunca llega al repositorio**. Hay 7 fixes documentados — incluyendo dos vulnerabilidades de seguridad activas — que solo existen en papel.
 
-- **Rappi Turbo confirmado en Quilpué — a 8 km de Villa Alemana.** Ya no es especulación: la dark store de entrega rápida está al lado. La ventana para posicionar riders y negocios locales antes de que Rappi cruce a Villa Alemana se acorta cada semana.
+- **Ventana PedidosYa/SSW Partners: 7 días abierta, urge actuar.** El Investigador confirmó que la venta de PedidosYa Chile a SSW Partners (fondo de NY) es la noticia más poderosa para venderle a negocios en esa plataforma. Hay 7 borradores listos. La ventana de impacto máximo es esta semana.
 
-- **Pipeline de ventas creció a 94 prospectos.** Se agregaron 14 negocios nuevos con contactos de alta calidad (RetroSushi Delivery con 29K seguidores, Buenaventura en PedidosYa+Uber Eats). Los borradores de julio están redactados para todos los contactados activos, pero sigue sin confirmarse si algún mensaje fue enviado.
+- **Pipeline de ventas en 108 prospectos, cero registrados.** El Agente de Ventas agregó 2 nuevos prospectos (amasandería y pastelería artesanal sin plataforma), redactó 4 mensajes nuevos, y tiene borradores urgentes para los 7 prospectos en PedidosYa. El cuello de botella sigue siendo Matías confirmando qué mensajes se enviaron.
 
 ---
 
@@ -27,45 +27,45 @@ La plataforma recibió mejoras de seguridad importantes y el contexto competitiv
 | Problema | Estado |
 |---|---|
 | Service Worker rider PWA cachea agresivamente | ✅ Resuelto — SW v6 excluye rider.html |
-| Notificaciones push en Xiaomi | ⚠️ Pendiente — requiere acción manual del rider en ajustes del teléfono |
-| AudioContext en Chrome móvil | ✅ Resuelto — toggle Online activa audio y push simultáneamente |
-| Rate limiter login expiraba al reiniciar servidor | ✅ Corregido esta semana — ahora usa Redis con fallback a memoria |
-| Espionaje de coordenadas GPS entre usuarios autenticados | 🔴 Abierto — código del fix listo, sin aplicar al repo |
-| Inyección de mensajes en chats de pedidos ajenos | 🔴 Abierto — código del fix listo, sin aplicar al repo |
-| Fuga de memoria en rate limiter de login (Map sin purge) | 🔴 Abierto — puede causar caída del servidor en tráfico real |
-| 4 índices de base de datos faltantes | ⚠️ Pendiente — afecta rendimiento del scheduler de pedidos agendados |
+| Notificaciones push en Xiaomi | ⚠️ Requiere acción manual del rider en ajustes del teléfono |
+| AudioContext en Chrome móvil | ✅ Resuelto — toggle Online activa audio y push |
+| Espionaje GPS entre usuarios autenticados | 🔴 Abierto — código del fix listo desde hace semanas, sin aplicar |
+| Inyección de mensajes en chats ajenos | 🔴 Abierto — mismo problema, mismo estado |
+| Audit trail de bonos riders no grabado | 🔴 Nuevo — INSERT silencioso, no hay registro de incentivos |
+| Agente Mejoras no aplica cambios al código | 🔴 Patrón confirmado — 8+ semanas sin commits de código |
+| Calificaciones clientes sin verificación de identidad | ⚠️ Pendiente decisión de producto |
+| CORS_ORIGIN en Railway sin configurar | ⚠️ Pendiente — actualmente acepta peticiones de cualquier dominio |
 
 ---
 
 ## Alertas
 
-**🔴 Pipeline de ventas paralizado 70+ días — acción urgente de Matías:** El equipo genera borradores cada día desde hace más de dos meses sin confirmación de que alguno fue enviado. Hay 94 prospectos con mensajes listos. Los prioritarios (#22 Sushi Point Delivery, tel. (32) 324 0504, y #15 Melt Pizzas) llevan 21 días consecutivos con borradores distintos. La noticia PedidosYa/SSW Partners de hoy y el peak de julio hacen esta semana la ventana más poderosa del año — en días pierde fuerza como argumento fresco.
+**🔴 Dos vulnerabilidades de seguridad activas en producción:** Cualquier usuario con cuenta puede (1) espiar las coordenadas GPS de pedidos que no le pertenecen y (2) inyectar mensajes en chats de pedidos ajenos. El código de la solución existe desde hace semanas en `reportes/mejoras.md` — solo hay que copiarlo en `sockets/index.js`. Aplica antes de tener negocios reales.
 
-**🔴 Dos vulnerabilidades de acceso cruzado abiertas en producción:** Cualquier usuario autenticado puede (1) unirse a la sala de un pedido ajeno y espiar las coordenadas GPS del rider en tiempo real, y (2) enviar mensajes al chat de pedidos que no le pertenecen. El código del fix está escrito y verificado en `reportes/mejoras.md` — solo falta copiarlo al archivo de código.
+**🔴 El Agente de Mejoras solo escribe documentos, no código:** El Aprendiz verificó git log: los últimos commits del agente solo tocaron el archivo de reporte, nunca los `.js`. El protocolo actual no funciona. Matías debe corregir esto.
 
-**🟡 Patrón crítico — el Agente de Mejoras documenta pero no aplica:** Lleva 4+ semanas generando correcciones con código correcto que no llega al repositorio. El commit del 13/07 solo tocó el reporte, no el código fuente. Requiere que Matías cambie el protocolo del agente o aplique los cambios directamente.
+**🟡 Ventana PedidosYa cierra esta semana:** Los 7 mensajes a prospectos en PedidosYa (negocios en la plataforma vendida a fondo de NY) deben salir antes del viernes 31/07 para aprovechar que la noticia es fresca.
 
-**🟡 Variable `RESIDUAL_PCT: 8%` sin implementar:** Existe en la configuración del sistema pero ningún cálculo de liquidaciones la usa. El frontend tampoco la lee — usa el valor hardcodeado directamente. Requiere decisión antes de activar negocios reales: ¿se cobra o se elimina?
+**🟡 28+ días sin confirmación de mensajes enviados:** Los Agentes de Ventas generan borradores a diario pero Matías no confirma cuáles se enviaron. Sin esa confirmación no se puede avanzar el pipeline ni medir conversión real.
 
 ---
 
 ## Decisiones tomadas esta semana
 
-- 3 vulnerabilidades de seguridad corregidas y desplegadas por el Agente de Seguridad (rate limiting soporte, login Redis-backed, seguimiento público).
-- Archivo `nixpacks.toml` agregado para estabilizar deploys en Railway.
-- Argumentos de venta actualizados: PedidosYa → SSW Partners + Rappi Turbo en Quilpué incorporados por el Investigador.
-- 14 nuevos prospectos agregados al pipeline esta semana (total: 94).
+- 4 fixes de seguridad aplicados y desplegados por el Agente de Seguridad: cap de paginación (100/200 registros máx) en endpoints de admin, negocios y riders; validación de historial de chat con IA.
+- 2 nuevos prospectos agregados al pipeline (#107 Rincón de las Masas, #108 Amasandería PURÉN).
+- Argumentos de venta actualizados con SSW Partners y Rappi Turbo Quilpué (máxima urgencia).
 
 ---
 
 ## Prioridades próxima semana
 
-1. **Matías envía ESTA SEMANA los mensajes a #22 Sushi Point (tel. (32) 324 0504), #15 Melt Pizzas y los 6 prospectos en PedidosYa** — el argumento "SSW Partners" caduca como noticia fresca en pocos días.
-2. **Matías contacta Dark Kitchen SpA esta semana** — DM a @darkkitchenspa en Instagram (Viña del Mar, Roma 131). Una alianza trae múltiples negocios sin prospectar uno a uno.
-3. **Aplicar las 2 vulnerabilidades críticas de sockets** — código listo en `reportes/mejoras.md`. Copiar/pegar en `sockets/index.js`. Prioridad: `pedido:seguir` (espionaje GPS) y `chat:enviar` (inyección de mensajes).
-4. **Confirmar en Railway que `REDIS_URL` está configurado** — activa el rate limiter de login Redis aplicado esta semana. Sin esta variable el fix corre en modo fallback (memoria, no persiste entre deploys).
-5. **Matías decide sobre `RESIDUAL_PCT: 8%`** — definir si se activa en liquidaciones o se elimina de la configuración antes del lanzamiento con negocios reales.
+1. **Matías envía ESTA SEMANA los 7 mensajes a prospectos PedidosYa** — #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya. Borradores listos. Ventana cierra pronto.
+2. **Aplicar los 2 fixes de seguridad en sockets** — código listo en `reportes/mejoras.md`. Copiar en `sockets/index.js`: función `pedido:seguir` (línea ~101) y `chat:enviar` (línea ~161). Tarea para el Agente de Mejoras el lunes, con verificación del Aprendiz el martes.
+3. **Corregir el audit trail de bonos a riders** — `admin.js:290`: cambiar el INSERT por una tabla de logs correcta o eliminar las columnas inexistentes para que el error sea visible.
+4. **Matías configura CORS_ORIGIN en Railway** — evita que cualquier sitio web externo pueda consumir la API. Tomar 5 minutos en el dashboard de Railway.
+5. **Matías decide sobre calificaciones de clientes sin verificación** — ¿se implementa token firmado en el link de seguimiento para evitar calificaciones falsas, o se acepta el riesgo por ahora?
 
 ---
 
-*Informe generado automáticamente — Agente Gerente RepartoJusto — 2026-07-17*
+*Informe generado automáticamente — Agente Gerente RepartoJusto — 2026-07-24*

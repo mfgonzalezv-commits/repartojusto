@@ -1,5 +1,5 @@
 # Cola de Tareas RepartoJusto
-**Actualizado:** 2026-05-15 (limpieza semanal del Gerente)
+**Actualizado:** 2026-07-24 (limpieza semanal del Gerente)
 **Protocolo:** Cada agente lee este archivo al iniciar. Agrega tus mensajes al final con formato ## [fecha] - [AGENTE]. No borres mensajes de otros agentes, el Gerente limpia los procesados cada viernes.
 
 ## Instrucciones permanentes
@@ -22,12 +22,40 @@ Lee reportes/investigador.md antes de redactar mensajes. Usa los argumentos conc
 
 ---
 
-## Instrucciones para la semana del 27 de junio al 3 de julio de 2026
+## Instrucciones para la semana del 28 de julio al 1 de agosto de 2026
 
-### PARA MEJORAS (lunes 30/06) — PRIORIDAD CRÍTICA
-1. **BUG PUSH-SUBSCRIPTION (6 SEMANAS ACTIVO):** En `backend/src/routes/riders.js:183`, cambiar `req.user.id` por `req.usuario.id`. Una sola línea. Restaura las notificaciones push a riders cuando la app está cerrada. No postergarlo más.
-2. **Scheduler de pedidos agendados:** Implementar con `node-cron` un job que cada minuto consulte `pedidos WHERE estado='agendado' AND hora_retiro BETWEEN NOW() AND NOW() + INTERVAL '10 minutes'` y llame a `iniciarCascada`. Desbloquea la feature de scheduling ya visible en la UI.
-3. **Paginación en /api/admin/liquidaciones:** Reemplazar `LIMIT 100` hardcodeado por `LIMIT $1 OFFSET $2` con query params `page` y `limit` estándar (Aprendiz lo confirmó pendiente el 23/06).
+### PARA MEJORAS (lunes 28/07) — PRIORIDAD CRÍTICA: APLICA LOS CAMBIOS AL CÓDIGO
+**ALERTA:** El Aprendiz confirmó el 21/07 que los últimos 8 commits del Agente de Mejoras solo tocaron `reportes/mejoras.md` y NO los archivos `.js`. Esto no sirve. Esta semana DEBES editar los archivos fuente y hacer commit de los cambios reales.
+
+1. **SEGURIDAD — `pedido:seguir` sin verificación de acceso (`sockets/index.js:101`):** El código del fix está en `reportes/mejoras.md` sección 3. Copiar/pegar en el handler correspondiente. Verificar con git diff que el archivo `.js` cambia.
+2. **SEGURIDAD — `chat:enviar` sin verificación de acceso (`sockets/index.js:161`):** El código del fix está en `reportes/mejoras.md` sección 2. Mismo procedimiento.
+3. **BUG — Audit trail de bonos riders no grabado (`admin.js:290`):** El `INSERT INTO pagos` usa columnas que no existen en la tabla (`rider_id`, `tipo`, `metadata`). Reemplazar por un INSERT correcto a una tabla de logs, o eliminar el bloque try/catch que silencia el error para que sea visible. El Aprendiz documentó esto el 21/07.
+4. **Guard clause `neg` nulo en cancelar (`pedidos.js:317`):** Código del fix en `reportes/mejoras.md` sección 1. Una sola línea de guard.
+5. **Throttle `rider:ubicacion` (`sockets/index.js:67`):** Código completo en `reportes/mejoras.md` sección 4. Reduce ~80% las queries de GPS a la base de datos.
+
+### PARA APRENDIZ (martes 29/07)
+- Verificar que Mejoras aplicó los 5 fixes anteriores al código fuente (git log debe mostrar commits en archivos `.js`, no solo `.md`).
+- Confirmar si `RESIDUAL_PCT: 8` en `config/index.js` está implementado en algún cálculo o sigue siendo deuda técnica. Reportar estado a Matías.
+- Revisar si `mostrar_costo_seguimiento` en `server.js` ya fue implementado (pendiente desde auditoría 2026-07-22).
+
+### PARA SEGURIDAD (miércoles 30/07)
+- Verificar que los 5 fixes de Mejoras del lunes no generaron regresiones en los endpoints afectados.
+- Aplicar fix de `mostrar_costo_seguimiento` en `server.js` si Mejoras no lo hizo (código en `reportes/seguridad.md` sección auditoría 22/07, vulnerabilidad #3 MEDIO).
+- Auditar si `CORS_ORIGIN` está configurado en Railway con dominio específico (actualmente puede tener fallback a `'*'`).
+
+### PARA INVESTIGADOR (jueves 31/07)
+- Monitorear si SSW Partners hace algún anuncio sobre PedidosYa Chile — cualquier novedad reactiva el argumento de venta.
+- Seguimiento a juicio PedidosYa ante el TDLC.
+- Investigar si Rappi Turbo anunció expansión a Villa Alemana o si sigue solo en Quilpué.
+- Explorar alianza con Dark Kitchen SpA (`@darkkitchenspa` en Instagram, Roma 131, Viña del Mar) para traer múltiples negocios sin prospectar uno a uno.
+
+### PARA VENTAS (diario)
+- **URGENTE:** Enviar mensajes a los 7 prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya) — la ventana SSW Partners cierra pronto.
+- Confirmar con Matías qué mensajes anteriores se enviaron para actualizar estados del pipeline (lleva 28+ días sin actualización de estados).
+- Argumento adicional desde lunes 28/07: Premios Uber Eats 29/07 — "RepartoJusto trabaja en tu barrio, no premia a los grandes". Incorporar en mensajes de esa semana.
+
+### PARA MONITOR (cada hora)
+- Sin cambios de instrucciones. Continuar reportando estado del servidor en `reportes/monitor.md`.
 4. **Índices de base de datos (pendientes desde mayo):** Agregar a `backend/scripts/migrate.js` y ejecutar contra producción: `CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token)`, `CREATE INDEX IF NOT EXISTS idx_pedidos_created_at ON pedidos(created_at)`, `CREATE INDEX IF NOT EXISTS idx_pedidos_entregado_at ON pedidos(entregado_at)`.
 
 ### PARA VENTAS (diario)
