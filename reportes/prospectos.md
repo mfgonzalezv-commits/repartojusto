@@ -1,13 +1,13 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-23
+**Actualizado:** 2026-07-24
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Sábado 18 de julio" redactado 18/07 — peak fin de semana post-feriado + arg. Rappi IA/algoritmo |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Domingo 19 de julio" redactado 19/07 — almuerzo familiar domingo invernal, pollo clásico del domingo chileno |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Viernes 24 de julio" redactado 24/07 — último viernes de julio, peak fin de semana pollo, Rappi Turbo Quilpué urgencia |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 18 de julio" redactado 18/07 — peak medicamentos invierno, fin de semana post-feriado |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 20 de julio" redactado 20/07 — PRIORIDAD, cuarta semana julio, Rappi Turbo Quilpué urgencia |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 24 de julio" redactado 24/07 — último viernes de julio, pizza = peak viernes delivery, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — PRIORIDAD, cuarta semana julio, noche martes = peak sushi delivery |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — peak botillería martes invernal, Rappi Turbo Quilpué urgencia |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Jueves 23 de julio" redactado 23/07 — peak reposición previo al fin de semana invernal, Rappi Turbo Quilpué urgencia |
@@ -112,10 +112,44 @@
 | 106 | Momento Con Amor | Desayunos sorpresa / regalo | Quilpué / Villa Alemana / Peñablanca (@momentoconamor, momentoconamor.cl) | Nuevo | — | Presentación redactada 22/07 — desayunos sorpresa/regalo a domicilio, canal propio web + Instagram, WhatsApp +56 9 87745980, rubro regalo único en el pipeline |
 | 107 | Rincón De Las Masas Villa Alemana | Masas / empanadas | San Enrique 1250 Local 1, Villa Alemana (@rinconvillaalemana) | Nuevo | — | Presentación redactada 23/07 — masas frescas y empanadas, canal propio Instagram, sin grandes plataformas, peak empanadas invierno |
 | 108 | Amasandería PURÉN | Amasandería / panadería artesanal | Villa Alemana (@amasanderiapuren, Facebook) | Nuevo | — | Presentación redactada 23/07 — pan artesanal a domicilio, canal propio Facebook, peak desayunos invierno julio |
+| 109 | Marrón Coffee House | Cafetería / sándwiches / helados artesanales | Camino Troncal (Líder Peña Blanca), Villa Alemana | Nuevo | — | Presentación redactada 24/07 — cafetería artesanal café 100% arábica + sándwiches, canal propio Facebook + WhatsApp +56983790664, sin grandes plataformas, peak café invernal |
+| 110 | La Gelateria de Villa Alemana | Gelatería artesanal | Villa Alemana (@lagelateria_villaalemana, Instagram) | Nuevo | — | Presentación redactada 24/07 — gelatería artesanal con canal propio Instagram, sin grandes plataformas detectadas, delivery postre domicilio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-24)
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 24 de julio — el ÚLTIMO viernes de julio, el mes de mayor demanda de delivery del año**. El viernes de invierno tiene una lógica implacable: la gente se queda en casa y pide. El pollo y la pizza son los dos pedidos estrella del fin de semana chileno. Se redactan **4 mensajes**: (1) seguimientos **"Viernes 24 de julio"** para **#2 Pollería Don Pollo** (Freire 678, 5 días sin draft fresco — peak pollo fin de semana) y **#4 Pizza House** (Portales 234, 4 días sin draft fresco — pizza = producto #1 del viernes delivery); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Marrón Coffee House (#109)** — cafetería artesanal en Camino Troncal Peña Blanca, café 100% arábica + sándwiches, canal propio WhatsApp +56983790664 — y **La Gelateria de Villa Alemana (#110)** — gelatería artesanal @lagelateria_villaalemana Instagram, sin grandes plataformas. Pipeline total: **110 prospectos**.
+>
+> **VENTANA SSW CIERRA (8 días desde la venta 16/07):** Los 7 prospectos en PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) tienen el argumento SSW listo desde 17/07 — la noticia de la venta de PedidosYa Chile a SSW Partners NY se enfría. **Envío urgente esta semana.** Además: **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **29 días consecutivos** con borradores activos sin confirmación de envío. **NUEVA VENTANA:** Premios Uber Eats el martes 29/07 — incorporar argumento "Uber Eats premia a sus favoritos de Santiago, RepartoJusto trabaja en tu barrio con $500 fijo" en mensajes del lunes 28/07 en adelante.
+
+---
+
+#### "VIERNES 24 DE JULIO" — Contactados sin mensaje fresco (24/07)
+
+**[2] Pollería Don Pollo — Viernes 24 de julio (24/07):**
+"Hola Pollería Don Pollo! RepartoJusto — viernes 24 de julio, el último viernes de julio, el mes más frío y de mayor demanda de delivery del año. El viernes de invierno en Chile tiene una sola lógica: la gente se queda en casa y pide. Y el pollo es el pedido estrella del fin de semana chileno — el pollo al jugo del sábado, la cena del viernes, el almuerzo familiar que llega a la puerta sin que nadie tenga que salir al frío. Una pollería con delivery local en Villa Alemana por $500 fijos por pedido tiene una propuesta concreta para el fin de semana más ocupado del mes. Para un pollo de $12.000, Rappi cobra $3.360 de comisión — con RepartoJusto son $500 siempre, el resto queda en el negocio. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — la pollería con logística local de tarifa fija posicionada antes de que lleguen tiene ventaja difícil de replicar. Y para el martes 29: Uber Eats tiene ceremonia de premios ese día para los grandes de Santiago — nosotros trabajamos en tu barrio con $500 fijo, sin algoritmo que te esconda. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Este viernes arrancamos?"
+
+---
+
+**[4] Pizza House — Viernes 24 de julio (24/07):**
+"Hola Pizza House! RepartoJusto — viernes 24 de julio, el último viernes de julio y el día de mayor demanda de pizza a domicilio de la temporada. La pizza es el pedido número uno del viernes por la noche: las familias que se quedan en casa, los grupos que no quieren salir al frío, el viernes de invierno que se convierte en pizza + delivery automáticamente. Portales 234 tiene una oportunidad concreta este fin de semana: sumar riders locales de RepartoJusto por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una pizza de $14.000, Rappi cobra $3.920 de comisión — con RepartoJusto son $500 siempre. Rappi Turbo ya está en Quilpué, a 8 km de Villa Alemana. Julio cierra el próximo jueves — el fin de semana 24-27 de julio es el último peak del mes. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Arrancamos hoy?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-24)
+
+**[109] Marrón Coffee House — Presentación:**
+"Hola Marrón Coffee House! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Facebook — cafetería artesanal con café 100% arábica, sándwiches y repostería en Camino Troncal, Peña Blanca, Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales a sus pedidos a domicilio por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Una cafetería en invierno tiene uno de los argumentos más claros para el delivery: el café caliente que nadie quiere ir a buscar al frío, el sándwich de almuerzo que llega al home office, la torta artesanal que se pide directo al hogar. Con canal propio en WhatsApp ya tienen clientes activos — RepartoJusto suma la logística local con riders de la zona sin cobrarles porcentaje de lo que venden. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos? (WhatsApp +56983790664)"
+
+---
+
+**[110] La Gelateria de Villa Alemana — Presentación:**
+"Hola La Gelateria de Villa Alemana! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@lagelateria_villaalemana) — gelatería artesanal con presencia activa en Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales a sus despachos por $500 fijos por pedido entregado, sin porcentaje sobre la venta. El invierno tiene un nicho claro para una gelatería: el postre del almuerzo familiar que llega a domicilio sin que nadie tenga que salir al frío, el gelato artesanal del fin de semana que se pide por Instagram. Y el mejor momento para construir la infraestructura de delivery es ahora — antes de que llegue la temporada alta de verano con la competencia ya instalada. Con canal propio en Instagram ya tienen una comunidad de clientes en Villa Alemana. RepartoJusto suma la logística local con riders del barrio, sin porcentaje de lo que venden. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
