@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-27T01:07:58 UTC
+**Última verificación:** 2026-07-27T02:08:35 UTC
 **Estado:** ❌ CAÍDO
-**Detalle:** Sin respuesta del servidor (HTTP 000, curl exit 56 — fallo de red / host no alcanzable). URL: https://repartojusto-production.up.railway.app/health
+**Detalle:** curl exit code 56 (error de red / sin respuesta) — HTTP 000. El servidor no respondió al GET /health.
