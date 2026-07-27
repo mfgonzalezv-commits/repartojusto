@@ -1,7 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-27T21:09:45Z
+**Última verificación:** 2026-07-27T22:10:10Z
 **Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** curl exit 56 — el proxy del entorno bloquea conexiones salientes a `repartojusto-production.up.railway.app:443` (HTTP 403 CONNECT tunnel failed). No es posible confirmar el estado desde este sandbox. Verificar manualmente o desde un entorno con red irrestricta.
-
----
-*Verificación automática — 2026-07-27T21:09:45Z*
+**Detalle:** El entorno de ejecución remoto bloqueó la conexión saliente a `repartojusto-production.up.railway.app` (proxy respondió 403 Forbidden en el tunnel CONNECT). No fue posible determinar si el servidor está operativo o caído. Se requiere verificar desde un entorno sin restricciones de proxy, o agregar el dominio a la lista de allowlist del proxy.
