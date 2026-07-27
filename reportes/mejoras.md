@@ -1,220 +1,208 @@
 # Mejoras RepartoJusto
-**Fecha:** 2026-07-20
-**Estado:** 5 mejoras identificadas — 1 bug de crash crítico (nuevo), 2 de seguridad, 1 rendimiento, 1 UX
+**Fecha:** 2026-07-27
+**Estado:** 5 mejoras identificadas — 3 de seguridad (2 críticas), 1 riesgo financiero, 1 rendimiento, 1 UX/escalabilidad
 
 ---
 
-## 1. [Bug Crítico] Crash en `PUT /pedidos/:id/cancelar` cuando negocio sin registro
+## 1. [Seguridad Crítica] Autenticación faltante en `POST /calificaciones` — puntajes de riders manipulables sin sesión
 
-**Archivo:** `backend/src/routes/pedidos.js:317`
+**Archivo:** `backend/src/routes/calificaciones.js:41`
 
-**Beneficio:** Evita un TypeError no manejado que devuelve 500 con stack trace en lugar de un 404 limpio.
+**Beneficio:** Impide que cualquier tercero anónimo infle o dañe el score de un rider, protegiendo el ranking de asignación y los ingresos.
 
-Si el usuario tiene rol `negocio` pero no existe fila en la tabla `negocios` (cuenta corrompida, registro eliminado), `neg` es `undefined` y `neg.id` lanza `TypeError: Cannot read properties of undefined`. La excepción no es capturada dentro del bloque `if` y escapa al error handler.
+El middleware `auth` está importado pero nunca aplicado al `POST /`. Para `tipo === 'cliente'` no existe ninguna verificación de identidad ni de propiedad del pedido — cualquier cliente HTTP anónimo puede enviar una calificación para cualquier pedido entregado. El bloque JWT manual para `tipo === 'negocio'` (líneas 73–93) es una reimplementación frágil que además se saltea completamente para calificaciones de cliente.
 
 ```js
-// ❌ Antes (línea 314-320) — crash si neg es undefined
-if (req.usuario.rol === 'negocio') {
-  const { rows: [neg] } = await db(
-    'SELECT id FROM negocios WHERE usuario_id = $1', [req.usuario.id]
-  );
-  params.push(neg.id);  // TypeError si neg === undefined
-  filtro += ` AND negocio_id = $${params.length}`;
-}
+// ❌ Antes (línea 41) — auth completamente ausente
+router.post('/',
+  califRateLimit,
+  [
+    body('pedido_id').isUUID(),
+    body('tipo').isIn(['negocio','cliente']),
+    ...
+  ],
 
-// ✅ Después — guard clause antes de acceder a neg.id
-if (req.usuario.rol === 'negocio') {
-  const { rows: [neg] } = await db(
-    'SELECT id FROM negocios WHERE usuario_id = $1', [req.usuario.id]
-  );
-  if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });
-  params.push(neg.id);
-  filtro += ` AND negocio_id = $${params.length}`;
-}
+// ✅ Después — requerir JWT válido para todos los tipos
+router.post('/',
+  califRateLimit,
+  auth,
+  [
+    body('pedido_id').isUUID(),
+    body('tipo').isIn(['negocio','cliente']),
+    ...
+  ],
+  async (req, res, next) => {
+    // Para tipo 'negocio', reemplazar el bloque JWT manual por:
+    if (tipo === 'negocio' && req.usuario.rol !== 'negocio') {
+      return res.status(403).json({ error: 'Solo negocios pueden calificar como negocio' });
+    }
 ```
 
 ---
 
-## 2. [Seguridad] Chat sin control de acceso al pedido  *(pendiente desde 2026-07-13)*
+## 2. [Riesgo Financiero] Cobro ejecutado fuera de la transacción de DB — cargo sin pedido en caso de fallo
 
-**Archivo:** `backend/src/sockets/index.js:161`
+**Archivo:** `backend/src/routes/pedidos.js:59`
 
-**Beneficio:** Impide que cualquier usuario autenticado inyecte mensajes en el chat de pedidos ajenos.
+**Beneficio:** Elimina la ventana donde un negocio queda cobrado por un pedido que nunca aparece en el sistema, evitando disputas financieras y soporte innecesario.
 
-El evento `chat:enviar` no verifica que el socket pertenezca al negocio o rider del pedido antes de publicar el mensaje. Cualquier usuario autenticado puede enviar mensajes a `pedido:{cualquier_id}`.
+`cobros.cobrar()` se confirma antes del `INSERT INTO pedidos`. Si el insert falla (violación de constraint, pérdida de conexión, etc.), el negocio está cobrado pero el pedido no existe — sin ningún rollback ni lógica de reembolso compensatoria.
 
 ```js
-// REEMPLAZAR el handler chat:enviar (línea 161):
+// ❌ Antes — cobro y DB en operaciones separadas
+const cobro = await cobros.cobrar({
+  customerId: negocio.tarjeta_customer_id,
+  monto: config.APP_FEE + tarifa_entrega_pre,
+});
+if (!cobro.ok) {
+  return res.status(402).json({ error: 'Pago rechazado' });
+}
+// ~25 líneas después, DB separada sin rollback:
+const { rows: [pedido] } = await db(`INSERT INTO pedidos ...`, [...]);
 
-socket.on('chat:enviar', async ({ pedido_id, texto }) => {
-  if (!pedido_id || !texto || !String(texto).trim()) return;
+// ✅ Después — atómico dentro de una transacción
+const { pedido, cobro } = await transaction(async (client) => {
+  const tarifa_entrega = calcularTarifa(distancia_km);
 
-  try {
-    const { rows } = await db(
-      `SELECT p.id FROM pedidos p
-       WHERE p.id = $1
-         AND (
-           (p.negocio_id = $2 AND $3 = 'negocio')
-           OR (p.rider_id = $4 AND $3 = 'rider')
-           OR $3 = 'admin'
-         )`,
-      [pedido_id, socket.negocio_id || null, rol, socket.rider_id || null]
-    );
-    if (!rows[0]) return; // sin acceso: ignorar silenciosamente
-  } catch { return; }
+  // Primero persistir en estado temporal
+  const { rows: [pedido] } = await client.query(
+    `INSERT INTO pedidos (..., estado) VALUES (..., 'pago_pendiente') RETURNING *`, [...]
+  );
 
-  const desde = rol === 'rider' ? 'rider' : 'negocio';
-  const msg = { desde, nombre, texto: String(texto).trim().slice(0, 500), hora: new Date().toISOString() };
+  // Cobrar solo tras el insert; si falla, la transacción hace rollback automático
+  const cobro = await cobros.cobrar({ customerId: negocio.tarjeta_customer_id, monto: ... });
+  if (!cobro.ok) throw Object.assign(new Error('Pago rechazado'), { status: 402 });
 
-  if (!chatHistory.has(pedido_id)) chatHistory.set(pedido_id, []);
-  const hist = chatHistory.get(pedido_id);
-  hist.push(msg);
-  if (hist.length > MAX_CHAT_MSG) hist.shift();
-
-  io.to(`pedido:${pedido_id}`).emit('chat:mensaje', msg);
+  await client.query(
+    `UPDATE pedidos SET estado = 'pendiente' WHERE id = $1`, [pedido.id]
+  );
+  return { pedido, cobro };
 });
 ```
 
 ---
 
-## 3. [Seguridad] `pedido:seguir` sin verificación de acceso — espionaje de tracking GPS  *(pendiente desde 2026-07-13)*
+## 3. [Seguridad] WebSocket sin verificación de propiedad — cualquier usuario puede espiar tracking y chat de pedidos ajenos
 
-**Archivo:** `backend/src/sockets/index.js:101`
+**Archivo:** `backend/src/sockets/index.js:101` y `153`
 
-**Beneficio:** Evita que cualquier usuario autenticado espíe coordenadas GPS y datos de pedidos ajenos en tiempo real.
+**Beneficio:** Evita que cualquier usuario autenticado espíe coordenadas GPS y mensajes privados de entregas que no le pertenecen.
 
-El evento `pedido:seguir` hace `socket.join()` sin comprobar que el socket tenga relación con ese pedido específico.
+Los eventos `pedido:seguir` y `chat:unirse` aceptan un `pedido_id` del cliente y hacen `socket.join()` sin ninguna verificación de propiedad. Cualquier rider o negocio autenticado puede unirse al stream de ubicación en tiempo real y al chat de pedidos completamente ajenos.
 
 ```js
-// REEMPLAZAR el handler pedido:seguir (líneas 101-104):
+// ❌ Antes — join sin verificación
+socket.on('pedido:seguir', ({ pedido_id }) => {
+  if (!pedido_id) return;
+  socket.join(`pedido:${pedido_id}`);  // sin verificación de acceso
+});
 
+socket.on('chat:unirse', ({ pedido_id }) => {
+  if (!pedido_id) return;
+  socket.join(`pedido:${pedido_id}`);  // sin verificación de acceso
+  const hist = chatHistory.get(pedido_id) || [];
+  socket.emit('chat:historial', hist);
+});
+
+// ✅ Después — verificar propiedad antes del join
 socket.on('pedido:seguir', async ({ pedido_id }) => {
   if (!pedido_id) return;
-  if (rol === 'admin') { socket.join(`pedido:${pedido_id}`); return; }
-  try {
-    const { rows: [pedido] } = await db(
-      `SELECT negocio_id, rider_id FROM pedidos WHERE id = $1`, [pedido_id]
-    );
-    if (!pedido) return;
-    const autorizado =
-      (rol === 'negocio' && socket.negocio_id === pedido.negocio_id) ||
-      (rol === 'rider'   && socket.rider_id   === pedido.rider_id);
-    if (autorizado) socket.join(`pedido:${pedido_id}`);
-  } catch (err) {
-    console.error('❌ Error al verificar acceso pedido:seguir:', err.message);
-  }
+  const { rows: [pedido] } = await db(
+    `SELECT negocio_id, rider_id FROM pedidos WHERE id = $1`, [pedido_id]
+  );
+  if (!pedido) return;
+  const autorizado =
+    rol === 'admin' ||
+    (rol === 'negocio' && pedido.negocio_id === socket.negocio_id) ||
+    (rol === 'rider'   && pedido.rider_id   === socket.rider_id);
+  if (!autorizado) return socket.emit('error', { message: 'Sin acceso a este pedido' });
+  socket.join(`pedido:${pedido_id}`);
 });
+// Aplicar la misma verificación a 'chat:unirse'
 ```
 
 ---
 
-## 4. [Rendimiento] Ubicación del rider genera 2 queries/seg por rider sin throttle  *(pendiente desde 2026-07-13)*
+## 4. [Rendimiento] Cuatro queries secuenciales en `calcularScore` — paralelizar reduce latencia ~3x
 
-**Archivo:** `backend/src/sockets/index.js:67`
+**Archivo:** `backend/src/routes/calificaciones.js:120`
 
-**Beneficio:** Reduce hasta un 80% las escrituras a PostgreSQL sin degradar la experiencia de tracking visual en el mapa.
+**Beneficio:** Reduce la latencia del cálculo de score en ~3x (de 4 round-trips secuenciales a 1 batch paralelo), mejorando el tiempo de carga del dashboard del rider.
 
-Con riders enviando GPS cada 1-2 segundos, el handler actual ejecuta un `UPDATE riders` + un `SELECT pedidos` en cada evento. Con 20 riders activos esto supone ~40 queries/seg solo para ubicaciones.
+La función `calcularScore` ejecuta 4 queries independientes con `await` secuencial. Las últimas tres (info del rider, pedidos 90 días, pedidos liberados) no tienen dependencia de datos entre sí y esperan innecesariamente el round-trip completo de cada query anterior. Se invoca en cada `GET /mi-score` y `GET /rider/:id/score`.
 
 ```js
-// Declarar fuera del bloque io.on('connection') — una sola vez:
-const _lastUbicacionWrite = new Map();
+// ❌ Antes — 4 round-trips secuenciales
+const { rows: califs }       = await db(`SELECT ... FROM calificaciones WHERE rider_id = $1`, [riderId]);
+const { rows: [rider] }      = await db(`SELECT ... FROM riders WHERE id = $1`, [riderId]);
+const { rows: pedidosRider } = await db(`SELECT ... FROM pedidos WHERE rider_id = $1 ...`, [riderId]);
+const { rows: liberados }    = await db(`SELECT COUNT(*) ... FROM pedidos WHERE rider_id = $1 ...`, [riderId]);
 
-// REEMPLAZAR el handler rider:ubicacion (líneas 67-98):
-socket.on('rider:ubicacion', async ({ lat, lng }) => {
-  if (rol !== 'rider' || !socket.rider_id) return;
-  if (typeof lat !== 'number' || typeof lng !== 'number') return;
-
-  try {
-    const now = Date.now();
-    // Throttle: escribir coordenadas a DB máximo cada 5 segundos
-    if (now - (_lastUbicacionWrite.get(socket.rider_id) || 0) >= 5000) {
-      _lastUbicacionWrite.set(socket.rider_id, now);
-      await db(
-        'UPDATE riders SET lat = $1, lng = $2 WHERE id = $3',
-        [lat, lng, socket.rider_id]
-      );
-    }
-
-    // Notificar siempre en tiempo real (independiente del throttle de DB)
-    const { rows } = await db(
-      `SELECT id, negocio_id FROM pedidos
-       WHERE rider_id = $1 AND estado IN ('asignado','retiro','en_camino')`,
-      [socket.rider_id]
-    );
-    rows.forEach((pedido) => {
-      io.to(`negocio:${pedido.negocio_id}`)
-        .to(`pedido:${pedido.id}`)
-        .emit('rider:ubicacion', {
-          rider_id: socket.rider_id, pedido_id: pedido.id,
-          lat, lng, timestamp: now
-        });
-    });
-  } catch (err) {
-    console.error('❌ Error al actualizar ubicación:', err.message);
-  }
-});
+// ✅ Después — 1 batch paralelo
+const [califsResult, riderResult, pedidosResult, liberadosResult] = await Promise.all([
+  db(`SELECT tipo, llego_tiempo, fue_amable, bien_presentado, verifico_pedido,
+             pedido_buen_estado, lo_recomendaria
+      FROM calificaciones WHERE rider_id = $1`, [riderId]),
+  db(`SELECT total_entregas, saldo_pendiente FROM riders WHERE id = $1`, [riderId]),
+  db(`SELECT estado, asignado_at, entregado_at, created_at
+      FROM pedidos WHERE rider_id = $1 AND created_at > NOW() - INTERVAL '90 days'`, [riderId]),
+  db(`SELECT COUNT(*) AS total FROM pedidos
+      WHERE rider_id = $1 AND estado IN ('cancelado','pendiente') AND asignado_at IS NOT NULL`,
+     [riderId]),
+]);
+const califs       = califsResult.rows;
+const rider        = riderResult.rows[0];
+const pedidosRider = pedidosResult.rows;
+const liberados    = liberadosResult.rows;
 ```
 
 ---
 
-## 5. [Seguridad] Rate limiter de login en memoria — memory leak en entradas expiradas  *(pendiente desde 2026-07-13)*
+## 5. [UX / Escalabilidad] Endpoints sin paginación devuelven datasets ilimitados — timeout garantizado en producción
 
-**Archivo:** `backend/src/routes/auth.js:10`
+**Archivos:** `backend/src/routes/negocios.js:236` y `backend/src/routes/admin.js:222`
 
-**Beneficio:** El límite de intentos de login sobrevive reinicios y funciona correctamente en despliegues multi-proceso (cluster/PM2).
+**Beneficio:** Limita el tamaño de respuesta y el costo de query independientemente del crecimiento de datos, y entrega al frontend el `total` necesario para controles de paginación.
 
-El `Map` en memoria se vacía en cada reinicio del servidor, permitiendo evadir el bloqueo con un simple restart. Además el mapa nunca purga entradas expiradas (memory leak a largo plazo).
+`GET /api/negocios/clientes` y `GET /api/admin/negocios` ejecutan queries `GROUP BY` sin cláusula `LIMIT`, devolviendo todas las filas históricas en una sola respuesta. Con volumen de producción real, ambos causarán queries progresivamente más lentos y eventualmente timeouts.
 
 ```js
-// REEMPLAZAR la función crearRateLimiter (líneas 10-31):
-// Requiere el cliente Redis ya disponible en el proyecto (config/redis.js o similar)
+// ❌ Antes (negocios.js) — sin límite ni paginación
+const { rows } = await db(
+  `SELECT c.*, COUNT(p.id) AS pedidos_count, MAX(p.created_at) AS ultimo_pedido
+   FROM clientes c
+   LEFT JOIN pedidos p ON p.cliente_id = c.id
+   WHERE c.negocio_id = $1
+   GROUP BY c.id
+   ORDER BY MAX(p.created_at) DESC NULLS LAST`,
+  [neg.id]
+);
+res.json(rows);  // sin LIMIT, sin total, sin cursor
 
-function crearRateLimiter({ windowMs, max, mensaje, prefix }) {
-  // Fallback en memoria si Redis no está disponible
-  const store = new Map();
-  let redisClient = null;
-  try { redisClient = require('../config/redis'); } catch { /* usar Map */ }
-
-  // Purga periódica del fallback en memoria
-  setInterval(() => {
-    const now = Date.now();
-    for (const [ip, e] of store.entries()) {
-      if (now - e.firstAttempt >= windowMs) store.delete(ip);
-    }
-  }, 5 * 60 * 1000).unref();
-
-  return async (req, res, next) => {
-    const ip = req.ip || req.connection.remoteAddress;
-    const key = `rl:${prefix}:${ip}`;
-
-    if (redisClient) {
-      try {
-        const count = await redisClient.incr(key);
-        if (count === 1) await redisClient.pexpire(key, windowMs);
-        if (count > max) {
-          const ttl = await redisClient.pttl(key);
-          return res.status(429).json({ error: mensaje, retryAfter: Math.ceil(ttl / 1000) });
-        }
-        return next();
-      } catch { /* Redis falló: caer al Map en memoria */ }
-    }
-
-    // Fallback Map
-    const now = Date.now();
-    const entry = store.get(ip);
-    if (entry && now - entry.firstAttempt < windowMs) {
-      if (entry.count >= max) {
-        const retryAfter = Math.ceil((windowMs - (now - entry.firstAttempt)) / 1000);
-        return res.status(429).json({ error: mensaje, retryAfter });
-      }
-      entry.count++;
-    } else {
-      store.set(ip, { count: 1, firstAttempt: now });
-    }
-    next();
-  };
-}
+// ✅ Después — paginación con LIMIT/OFFSET y total count
+router.get('/clientes', auth, solo('negocio'), async (req, res, next) => {
+  const { page = 1, limit = 50 } = req.query;
+  const limitNum = Math.min(parseInt(limit) || 50, 200);
+  const offset   = (Math.max(1, parseInt(page) || 1) - 1) * limitNum;
+  try {
+    const neg = ...; // búsqueda existente del negocio
+    const [{ rows }, { rows: [{ total }] }] = await Promise.all([
+      db(
+        `SELECT c.*, COUNT(p.id) AS pedidos_count, MAX(p.created_at) AS ultimo_pedido
+         FROM clientes c
+         LEFT JOIN pedidos p ON p.cliente_id = c.id
+         WHERE c.negocio_id = $1
+         GROUP BY c.id
+         ORDER BY MAX(p.created_at) DESC NULLS LAST
+         LIMIT $2 OFFSET $3`,
+        [neg.id, limitNum, offset]
+      ),
+      db(`SELECT COUNT(*) AS total FROM clientes WHERE negocio_id = $1`, [neg.id]),
+    ]);
+    res.json({ data: rows, total: parseInt(total), page: parseInt(page), limit: limitNum });
+  } catch (err) { next(err); }
+});
+// Aplicar el mismo patrón LIMIT/OFFSET a GET /api/admin/negocios
 ```
 
 ---
