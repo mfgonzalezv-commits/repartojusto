@@ -1,0 +1,21 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+  <rect width='512' height='512' rx='96' fill='#0F172A'/>
+  <!-- rueda trasera -->
+  <circle cx='148' cy='340' r='52' fill='none' stroke='#FFCC00' stroke-width='22'/>
+  <!-- rueda delantera -->
+  <circle cx='364' cy='340' r='52' fill='none' stroke='#FFCC00' stroke-width='22'/>
+  <!-- cuerpo moto -->
+  <path d='M148 340 L200 240 L290 240 L364 340' fill='none' stroke='#FFCC00' stroke-width='22' stroke-linejoin='round' stroke-linecap='round'/>
+  <!-- asiento/carrocería -->
+  <path d='M200 240 L240 190 L310 190 L340 240 Z' fill='#FFCC00'/>
+  <!-- manubrio -->
+  <path d='M330 195 L370 170 L380 195' fill='none' stroke='#FFCC00' stroke-width='16' stroke-linecap='round'/>
+  <!-- motor -->
+  <rect x='210' y='248' width='80' height='48' rx='10' fill='#FFCC00'/>
+  <!-- casco rider -->
+  <ellipse cx='260' cy='168' rx='36' ry='32' fill='#FFCC00'/>
+  <ellipse cx='272' cy='176' rx='16' ry='10' fill='#0F172A'/>
+  <!-- texto RJ -->
+  <text x='256' y='430' font-family='Arial Black, sans-serif' font-weight='900' font-size='58' fill='#FFCC00' text-anchor='middle' letter-spacing='-1'>REPARTO</text>
+  <text x='256' y='488' font-family='Arial Black, sans-serif' font-weight='900' font-size='58' fill='white' text-anchor='middle' letter-spacing='-1'>JUSTO</text>
+</svg>

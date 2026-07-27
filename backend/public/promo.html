@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RepartoJusto — Animación</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --amarillo: #FFCC00;
+    --negro: #1C1C1C;
+    --navy: #0F172A;
+    --blanco: #FFFFFF;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--navy);
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    color: var(--blanco);
+  }
+
+  /* ── ESCENAS ── */
+  .scene {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity .6s ease;
+  }
+  .scene.active { opacity: 1; pointer-events: auto; }
+
+  /* ── PARTÍCULAS DE FONDO ── */
+  #particles {
+    position: fixed; inset: 0; z-index: 0;
+    overflow: hidden;
+  }
+  .dot {
+    position: absolute; border-radius: 50%;
+    background: var(--amarillo); opacity: .07;
+    animation: flotar linear infinite;
+  }
+  @keyframes flotar {
+    0%   { transform: translateY(110vh) scale(0); opacity: 0; }
+    10%  { opacity: .07; }
+    90%  { opacity: .07; }
+    100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+  }
+
+  /* ══════════════════════════════════════
+     ESCENA 1 — INTRO / LOGO
+  ══════════════════════════════════════ */
+  #s1 { flex-direction: column; gap: 0; z-index: 10; }
+
+  .logo-wrap {
+    position: relative;
+    display: flex; flex-direction: column; align-items: center;
+  }
+
+  .logo-icon {
+    width: 110px; height: 110px;
+    background: var(--amarillo);
+    border-radius: 28px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 54px;
+    box-shadow: 0 0 0 0 rgba(255,204,0,.5);
+    animation: pulso 2s ease-in-out infinite;
+    transform: scale(0);
+    opacity: 0;
+  }
+  .logo-icon.show {
+    animation: logoEntrada .7s cubic-bezier(.34,1.56,.64,1) forwards, pulso 2s ease-in-out 1s infinite;
+  }
+  @keyframes logoEntrada {
+    from { transform: scale(0) rotate(-15deg); opacity: 0; }
+    to   { transform: scale(1) rotate(0deg);  opacity: 1; }
+  }
+  @keyframes pulso {
+    0%,100% { box-shadow: 0 0 0 0 rgba(255,204,0,.4); }
+    50%      { box-shadow: 0 0 0 24px rgba(255,204,0,0); }
+  }
+
+  .logo-nombre {
+    margin-top: 24px;
+    font-size: clamp(36px, 8vw, 72px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    overflow: hidden;
+    height: 1.2em;
+  }
+  .logo-nombre span {
+    display: inline-block;
+    transform: translateY(110%);
+    transition: transform .6s cubic-bezier(.34,1.3,.64,1);
+  }
+  .logo-nombre.show span { transform: translateY(0); }
+
+  .logo-tagline {
+    margin-top: 10px;
+    font-size: clamp(13px, 3vw, 18px);
+    font-weight: 600;
+    color: var(--amarillo);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .6s ease .5s;
+  }
+  .logo-tagline.show { opacity: 1; transform: translateY(0); }
+
+  /* linea decorativa */
+  .deco-line {
+    margin-top: 32px;
+    width: 0; height: 3px;
+    background: var(--amarillo);
+    border-radius: 2px;
+    transition: width 1s ease .8s;
+  }
+  .deco-line.show { width: min(300px, 60vw); }
+
+  /* ══════════════════════════════════════
+     ESCENA 2 — PROBLEMA
+  ══════════════════════════════════════ */
+  #s2 { z-index: 10; flex-direction: column; text-align: center; padding: 40px; gap: 24px; }
+
+  .s2-titulo {
+    font-size: clamp(22px, 5vw, 48px);
+    font-weight: 900;
+    line-height: 1.15;
+    max-width: 700px;
+    opacity: 0; transform: translateY(30px);
+  }
+  .s2-titulo.show { animation: subir .6s ease forwards; }
+
+  .highlight { color: var(--amarillo); }
+
+  .s2-cards {
+    display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;
+    max-width: 800px;
+  }
+  .s2-card {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    padding: 20px 24px;
+    min-width: 200px; max-width: 240px;
+    text-align: center;
+    opacity: 0; transform: translateY(40px);
+  }
+  .s2-card.show { animation: subir .5s ease forwards; }
+  .s2-card:nth-child(2).show { animation-delay: .12s; }
+  .s2-card:nth-child(3).show { animation-delay: .24s; }
+
+  .s2-card .emoji { font-size: 36px; margin-bottom: 10px; }
+  .s2-card .pct { font-size: 36px; font-weight: 900; color: #ff4d4d; }
+  .s2-card p { font-size: 13px; color: rgba(255,255,255,.6); margin-top: 6px; line-height: 1.4; }
+
+  /* ══════════════════════════════════════
+     ESCENA 3 — SOLUCIÓN
+  ══════════════════════════════════════ */
+  #s3 { z-index: 10; flex-direction: column; text-align: center; padding: 40px; gap: 32px; }
+
+  .s3-titulo {
+    font-size: clamp(24px, 5.5vw, 52px);
+    font-weight: 900; line-height: 1.1;
+    opacity: 0; transform: translateY(30px);
+  }
+  .s3-titulo.show { animation: subir .6s ease forwards; }
+
+  .pill-grid {
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    max-width: 780px;
+  }
+  .pill {
+    background: var(--amarillo);
+    color: var(--negro);
+    border-radius: 100px;
+    padding: 12px 24px;
+    font-size: clamp(13px, 2.5vw, 16px);
+    font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+    opacity: 0; transform: scale(.7);
+    white-space: nowrap;
+  }
+  .pill.show { animation: popIn .4s cubic-bezier(.34,1.56,.64,1) forwards; }
+  .pill:nth-child(2).show { animation-delay: .1s; }
+  .pill:nth-child(3).show { animation-delay: .2s; }
+  .pill:nth-child(4).show { animation-delay: .3s; }
+  .pill:nth-child(5).show { animation-delay: .4s; }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(.7); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* ══════════════════════════════════════
+     ESCENA 4 — FLUJO / PANTALLAS MOCK
+  ══════════════════════════════════════ */
+  #s4 { z-index: 10; flex-direction: column; gap: 28px; padding: 30px; }
+
+  .s4-titulo {
+    font-size: clamp(18px, 4vw, 36px);
+    font-weight: 800; text-align: center;
+    opacity: 0; transform: translateY(20px);
+  }
+  .s4-titulo.show { animation: subir .5s ease forwards; }
+
+  .phones-row {
+    display: flex; gap: 20px; align-items: flex-end; justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .phone {
+    width: clamp(140px, 22vw, 190px);
+    background: var(--negro);
+    border-radius: 28px;
+    border: 2px solid rgba(255,255,255,.1);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    opacity: 0; transform: translateY(60px);
+    flex-shrink: 0;
+  }
+  .phone.show { animation: subirTelefono .6s cubic-bezier(.34,1.2,.64,1) forwards; }
+  .phone:nth-child(2).show { animation-delay: .15s; }
+  .phone:nth-child(3).show { animation-delay: .3s; }
+  @keyframes subirTelefono {
+    from { opacity: 0; transform: translateY(60px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .phone-notch {
+    background: #000;
+    height: 22px; border-radius: 0 0 12px 12px;
+    width: 60%; margin: 0 auto;
+  }
+
+  .phone-topbar {
+    background: var(--negro);
+    padding: 10px 14px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .phone-brand {
+    font-size: 11px; font-weight: 900; color: var(--amarillo);
+    letter-spacing: .5px;
+  }
+  .phone-role {
+    font-size: 9px; background: rgba(255,204,0,.15); color: var(--amarillo);
+    padding: 2px 8px; border-radius: 20px; font-weight: 700;
+  }
+
+  .phone-body { padding: 12px; min-height: 260px; }
+
+  /* Phone negocio */
+  .form-row {
+    background: rgba(255,255,255,.05); border-radius: 8px;
+    padding: 8px 10px; margin-bottom: 8px;
+  }
+  .form-label { font-size: 8px; color: rgba(255,255,255,.4); margin-bottom: 3px; }
+  .form-val { font-size: 11px; font-weight: 600; }
+  .btn-amarillo {
+    background: var(--amarillo); color: var(--negro);
+    border-radius: 10px; padding: 10px;
+    text-align: center; font-size: 11px; font-weight: 800;
+    margin-top: 12px; cursor: pointer;
+  }
+
+  /* Phone rider */
+  .pedido-card {
+    background: rgba(255,204,0,.08); border: 1px solid rgba(255,204,0,.2);
+    border-radius: 12px; padding: 10px; margin-bottom: 8px;
+  }
+  .pedido-dir { font-size: 10px; color: rgba(255,255,255,.7); margin: 4px 0; }
+  .pedido-tarifa { font-size: 18px; font-weight: 900; color: var(--amarillo); }
+  .btn-aceptar {
+    background: var(--amarillo); color: var(--negro);
+    border-radius: 8px; padding: 8px;
+    text-align: center; font-size: 10px; font-weight: 800; margin-top: 4px;
+  }
+  .badge-estado {
+    display: inline-block; font-size: 8px; font-weight: 700; padding: 2px 7px;
+    border-radius: 20px; margin-bottom: 6px;
+    background: rgba(255,204,0,.2); color: var(--amarillo);
+  }
+
+  /* Phone seguimiento */
+  .track-header {
+    text-align: center; padding: 8px 0 4px;
+  }
+  .track-title { font-size: 10px; font-weight: 800; }
+  .track-id { font-size: 8px; color: rgba(255,255,255,.4); }
+
+  .mapa-mock {
+    background: linear-gradient(135deg, #1a2744 0%, #0d1f3c 100%);
+    border-radius: 10px; height: 90px;
+    margin: 8px 0;
+    position: relative; overflow: hidden;
+  }
+  .mapa-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .mapa-ruta {
+    position: absolute; top: 30%; left: 15%;
+    width: 70%; height: 3px; background: var(--amarillo);
+    border-radius: 2px;
+    animation: rutaAnim 2s ease-in-out infinite;
+  }
+  @keyframes rutaAnim {
+    0%,100% { transform: scaleX(1); opacity: 1; }
+    50%      { transform: scaleX(.85); opacity: .7; }
+  }
+  .moto-icon {
+    position: absolute; top: calc(30% - 9px); right: 12%;
+    font-size: 18px;
+    animation: motoMov 2s ease-in-out infinite;
+  }
+  @keyframes motoMov {
+    0%,100% { transform: translateX(0); }
+    50%      { transform: translateX(-6px); }
+  }
+
+  .timeline-mini { margin-top: 6px; }
+  .tl-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 9px; padding: 3px 0;
+    color: rgba(255,255,255,.4);
+  }
+  .tl-item.done { color: rgba(255,255,255,.9); }
+  .tl-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: rgba(255,255,255,.1); flex-shrink: 0;
+  }
+  .tl-item.done .tl-dot { background: var(--amarillo); }
+  .tl-item.active .tl-dot { background: var(--amarillo); box-shadow: 0 0 6px var(--amarillo); }
+  .tl-item.active { color: var(--amarillo); font-weight: 700; }
+
+  /* ══════════════════════════════════════
+     ESCENA 5 — NÚMEROS
+  ══════════════════════════════════════ */
+  #s5 { z-index: 10; flex-direction: column; text-align: center; gap: 40px; padding: 40px; }
+
+  .s5-titulo {
+    font-size: clamp(20px, 4.5vw, 42px);
+    font-weight: 900;
+    opacity: 0; transform: translateY(20px);
+  }
+  .s5-titulo.show { animation: subir .5s ease forwards; }
+
+  .nums-row {
+    display: flex; gap: 32px; flex-wrap: wrap; justify-content: center;
+  }
+  .num-card {
+    display: flex; flex-direction: column; align-items: center;
+    opacity: 0; transform: translateY(40px);
+  }
+  .num-card.show { animation: subir .5s ease forwards; }
+  .num-card:nth-child(2).show { animation-delay: .15s; }
+  .num-card:nth-child(3).show { animation-delay: .30s; }
+
+  .num-val {
+    font-size: clamp(48px, 10vw, 80px);
+    font-weight: 900; color: var(--amarillo);
+    line-height: 1;
+  }
+  .num-label {
+    font-size: clamp(11px, 2vw, 15px);
+    color: rgba(255,255,255,.6);
+    margin-top: 6px; max-width: 160px; line-height: 1.4;
+  }
+
+  /* ══════════════════════════════════════
+     ESCENA 6 — CTA FINAL
+  ══════════════════════════════════════ */
+  #s6 { z-index: 10; flex-direction: column; text-align: center; gap: 28px; padding: 40px; }
+
+  .cta-logo {
+    font-size: clamp(40px, 9vw, 80px);
+    font-weight: 900;
+    color: var(--amarillo);
+    opacity: 0; transform: scale(.5);
+    animation: none;
+  }
+  .cta-logo.show { animation: popIn .7s cubic-bezier(.34,1.56,.64,1) forwards; }
+
+  .cta-sub {
+    font-size: clamp(14px, 3vw, 22px);
+    color: rgba(255,255,255,.7);
+    font-weight: 600;
+    opacity: 0; transform: translateY(20px);
+  }
+  .cta-sub.show { animation: subir .6s ease .3s forwards; }
+
+  .cta-roles {
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    opacity: 0;
+  }
+  .cta-roles.show { animation: subir .5s ease .6s forwards; }
+
+  .cta-btn {
+    padding: 16px 32px;
+    border-radius: 14px;
+    font-size: clamp(13px, 2.5vw, 18px);
+    font-weight: 800; cursor: pointer;
+    border: none; font-family: 'Montserrat', sans-serif;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(255,204,0,.3); }
+  .cta-btn.primary { background: var(--amarillo); color: var(--negro); }
+  .cta-btn.secondary {
+    background: transparent; color: var(--amarillo);
+    border: 2px solid var(--amarillo);
+  }
+
+  .cta-tagline {
+    font-size: clamp(11px, 2vw, 14px);
+    color: rgba(255,255,255,.35);
+    opacity: 0;
+  }
+  .cta-tagline.show { animation: subir .5s ease .9s forwards; }
+
+  /* ══════════════════════════════════════
+     BARRA DE PROGRESO
+  ══════════════════════════════════════ */
+  #progress-bar {
+    position: fixed; bottom: 0; left: 0;
+    height: 3px; background: var(--amarillo);
+    width: 0%; transition: width .4s ease;
+    z-index: 100;
+  }
+
+  /* dots de navegación */
+  #nav-dots {
+    position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px; z-index: 100;
+  }
+  .nav-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,.2); cursor: pointer;
+    transition: all .3s ease;
+  }
+  .nav-dot.active { background: var(--amarillo); transform: scale(1.4); }
+
+  /* flechas */
+  #btn-prev, #btn-next {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+    color: white; width: 44px; height: 44px;
+    border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; z-index: 100;
+    transition: background .2s, transform .2s;
+    backdrop-filter: blur(8px);
+  }
+  #btn-prev { left: 16px; }
+  #btn-next { right: 16px; }
+  #btn-prev:hover, #btn-next:hover { background: rgba(255,204,0,.2); transform: translateY(-50%) scale(1.1); }
+
+  /* skip */
+  #skip {
+    position: fixed; top: 16px; right: 16px;
+    font-size: 12px; color: rgba(255,255,255,.35); cursor: pointer;
+    z-index: 100; font-weight: 600;
+    transition: color .2s;
+  }
+  #skip:hover { color: var(--amarillo); }
+
+  /* helpers */
+  @keyframes subir {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- partículas -->
+<div id="particles"></div>
+
+<!-- controles -->
+<div id="skip" onclick="goTo(5)">Saltar →</div>
+<button id="btn-prev" onclick="prev()">‹</button>
+<button id="btn-next" onclick="next()">›</button>
+<div id="nav-dots"></div>
+<div id="progress-bar"></div>
+
+<!-- ══════════ ESCENA 1 — LOGO ══════════ -->
+<div class="scene" id="s1">
+  <div class="logo-wrap">
+    <div class="logo-icon" id="logo-icon">🛵</div>
+    <div class="logo-nombre" id="logo-nombre"><span>RepartoJusto</span></div>
+    <div class="logo-tagline" id="logo-tagline">Delivery sin comisiones</div>
+    <div class="deco-line" id="deco-line"></div>
+  </div>
+</div>
+
+<!-- ══════════ ESCENA 2 — PROBLEMA ══════════ -->
+<div class="scene" id="s2">
+  <div class="s2-titulo" id="s2-titulo">
+    ¿Sabías que los negocios pagan hasta un<br>
+    <span class="highlight">30% de comisión</span> por cada pedido?
+  </div>
+  <div class="s2-cards">
+    <div class="s2-card" id="c1">
+      <div class="emoji">😤</div>
+      <div class="pct">30%</div>
+      <p>Comisión que se llevan Rappi y Uber Eats por pedido</p>
+    </div>
+    <div class="s2-card" id="c2">
+      <div class="emoji">📉</div>
+      <div class="pct">-40%</div>
+      <p>Margen real que le queda al local después de la comisión</p>
+    </div>
+    <div class="s2-card" id="c3">
+      <div class="emoji">🏍️</div>
+      <div class="pct">?%</div>
+      <p>De ese cobro que casi nada le llega al rider</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ESCENA 3 — SOLUCIÓN ══════════ -->
+<div class="scene" id="s3">
+  <div class="s3-titulo" id="s3-titulo">
+    Presentamos la alternativa <span class="highlight">justa</span>
+  </div>
+  <div class="pill-grid">
+    <div class="pill" id="p1">✅ Sin comisión por venta</div>
+    <div class="pill" id="p2">🛵 Riders reciben el 100%</div>
+    <div class="pill" id="p3">📍 Tracking en tiempo real</div>
+    <div class="pill" id="p4">⚡ Asignación instantánea</div>
+    <div class="pill" id="p5">💰 Solo pagas la entrega</div>
+  </div>
+</div>
+
+<!-- ══════════ ESCENA 4 — FLUJO ══════════ -->
+<div class="scene" id="s4">
+  <div class="s4-titulo" id="s4-titulo">Así de simple funciona</div>
+  <div class="phones-row">
+
+    <!-- NEGOCIO -->
+    <div class="phone" id="ph1">
+      <div class="phone-notch"></div>
+      <div class="phone-topbar">
+        <div class="phone-brand">RepartoJusto</div>
+        <div class="phone-role">Negocio</div>
+      </div>
+      <div class="phone-body">
+        <div style="font-size:10px;font-weight:700;margin-bottom:10px;color:rgba(255,255,255,.5)">NUEVO PEDIDO</div>
+        <div class="form-row">
+          <div class="form-label">CLIENTE</div>
+          <div class="form-val">María González</div>
+        </div>
+        <div class="form-row">
+          <div class="form-label">DIRECCIÓN</div>
+          <div class="form-val" style="font-size:10px">Av. Providencia 1234</div>
+        </div>
+        <div class="form-row">
+          <div class="form-label">DISTANCIA</div>
+          <div class="form-val">3.2 km</div>
+        </div>
+        <div class="form-row">
+          <div class="form-label">TARIFA ENTREGA</div>
+          <div class="form-val" style="color:var(--amarillo)">$3.080</div>
+        </div>
+        <div class="btn-amarillo">🛵 Publicar pedido</div>
+      </div>
+    </div>
+
+    <!-- RIDER -->
+    <div class="phone" id="ph2">
+      <div class="phone-notch"></div>
+      <div class="phone-topbar">
+        <div class="phone-brand">RepartoJusto</div>
+        <div class="phone-role">Rider</div>
+      </div>
+      <div class="phone-body">
+        <div style="font-size:10px;font-weight:700;margin-bottom:8px;color:rgba(255,255,255,.5)">PEDIDO DISPONIBLE</div>
+        <div class="pedido-card">
+          <div class="badge-estado">● PENDIENTE</div>
+          <div class="pedido-dir">📍 Retiro: Burger Place</div>
+          <div class="pedido-dir">🏠 Entrega: Av. Providencia</div>
+          <div class="pedido-tarifa">$3.080</div>
+          <div style="font-size:9px;color:rgba(255,255,255,.4)">3.2 km · ~12 min</div>
+          <div class="btn-aceptar">✓ Aceptar pedido</div>
+        </div>
+        <div style="font-size:9px;color:rgba(255,255,255,.3);text-align:center">
+          Gané hoy: <strong style="color:var(--amarillo)">$18.500</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEGUIMIENTO -->
+    <div class="phone" id="ph3">
+      <div class="phone-notch"></div>
+      <div class="phone-topbar">
+        <div class="phone-brand">RepartoJusto</div>
+        <div class="phone-role">Cliente</div>
+      </div>
+      <div class="phone-body">
+        <div class="track-header">
+          <div class="track-title">Tu pedido en camino</div>
+          <div class="track-id">#RJ-1042</div>
+        </div>
+        <div class="mapa-mock">
+          <div class="mapa-grid"></div>
+          <div class="mapa-ruta"></div>
+          <div class="moto-icon">🛵</div>
+        </div>
+        <div class="timeline-mini">
+          <div class="tl-item done"><div class="tl-dot"></div>Pedido recibido</div>
+          <div class="tl-item done"><div class="tl-dot"></div>Rider asignado</div>
+          <div class="tl-item active"><div class="tl-dot"></div>En camino</div>
+          <div class="tl-item"><div class="tl-dot"></div>Entregado</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════ ESCENA 5 — NÚMEROS ══════════ -->
+<div class="scene" id="s5">
+  <div class="s5-titulo" id="s5-titulo">Números que importan</div>
+  <div class="nums-row">
+    <div class="num-card" id="n1">
+      <div class="num-val" id="cnt-0">$0</div>
+      <div class="num-label">Comisión por venta</div>
+    </div>
+    <div class="num-card" id="n2">
+      <div class="num-val" id="cnt-1">100%</div>
+      <div class="num-label">De la tarifa va al rider</div>
+    </div>
+    <div class="num-card" id="n3">
+      <div class="num-val" id="cnt-2">&#60;30s</div>
+      <div class="num-label">Para asignar un rider</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ESCENA 6 — CTA ══════════ -->
+<div class="scene" id="s6">
+  <div class="cta-logo" id="cta-logo">RepartoJusto</div>
+  <div class="cta-sub" id="cta-sub">El delivery que le conviene a todos</div>
+  <div class="cta-roles" id="cta-roles">
+    <button class="cta-btn primary" onclick="window.open((location.protocol==='file:'?'http://localhost:3000':'')+'/negocio.html','_blank')">Soy un negocio →</button>
+    <button class="cta-btn secondary" onclick="window.open((location.protocol==='file:'?'http://localhost:3000':'')+'/rider.html','_blank')">Soy rider →</button>
+  </div>
+  <div class="cta-tagline" id="cta-tagline">Sin comisiones. Sin trampa. Solo reparto justo.</div>
+</div>
+
+<script>
+/* ── Partículas ── */
+(function() {
+  const cont = document.getElementById('particles');
+  for (let i = 0; i < 22; i++) {
+    const d = document.createElement('div');
+    d.className = 'dot';
+    const s = Math.random() * 18 + 6;
+    d.style.cssText = `
+      width:${s}px; height:${s}px;
+      left:${Math.random()*100}%;
+      animation-duration:${Math.random()*12+8}s;
+      animation-delay:${Math.random()*-15}s;
+    `;
+    cont.appendChild(d);
+  }
+})();
+
+/* ── Escenas ── */
+const TOTAL = 6;
+let cur = 0;
+let autoTimer = null;
+
+const scenes = Array.from({length: TOTAL}, (_, i) => document.getElementById('s' + (i+1)));
+
+/* dots */
+const dotsEl = document.getElementById('nav-dots');
+const dots = [];
+for (let i = 0; i < TOTAL; i++) {
+  const d = document.createElement('div');
+  d.className = 'nav-dot';
+  d.onclick = () => goTo(i);
+  dotsEl.appendChild(d);
+  dots.push(d);
+}
+
+function goTo(idx) {
+  clearTimeout(autoTimer);
+  scenes[cur].classList.remove('active');
+  cur = Math.max(0, Math.min(TOTAL - 1, idx));
+  scenes[cur].classList.add('active');
+  updateUI();
+  triggerScene(cur);
+  // auto-avance (excepto última)
+  if (cur < TOTAL - 1) autoTimer = setTimeout(() => goTo(cur + 1), 5500);
+}
+
+function next() { goTo(cur + 1); }
+function prev() { goTo(cur - 1); }
+
+function updateUI() {
+  dots.forEach((d,i) => d.classList.toggle('active', i === cur));
+  const pct = ((cur + 1) / TOTAL) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('btn-prev').style.opacity = cur === 0 ? '.3' : '1';
+  document.getElementById('btn-next').style.opacity = cur === TOTAL-1 ? '.3' : '1';
+}
+
+/* ── Animaciones por escena ── */
+function triggerScene(idx) {
+  if (idx === 0) triggerS1();
+  if (idx === 1) triggerS2();
+  if (idx === 2) triggerS3();
+  if (idx === 3) triggerS4();
+  if (idx === 4) triggerS5();
+  if (idx === 5) triggerS6();
+}
+
+function addClass(id, cls, delay) {
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add(cls);
+  }, delay || 0);
+}
+
+function triggerS1() {
+  addClass('logo-icon', 'show', 100);
+  addClass('logo-nombre', 'show', 400);
+  addClass('logo-tagline', 'show', 600);
+  addClass('deco-line', 'show', 700);
+}
+
+function triggerS2() {
+  addClass('s2-titulo', 'show', 100);
+  addClass('c1', 'show', 400);
+  addClass('c2', 'show', 500);
+  addClass('c3', 'show', 600);
+}
+
+function triggerS3() {
+  addClass('s3-titulo', 'show', 100);
+  addClass('p1', 'show', 350);
+  addClass('p2', 'show', 450);
+  addClass('p3', 'show', 550);
+  addClass('p4', 'show', 650);
+  addClass('p5', 'show', 750);
+}
+
+function triggerS4() {
+  addClass('s4-titulo', 'show', 100);
+  addClass('ph1', 'show', 300);
+  addClass('ph2', 'show', 500);
+  addClass('ph3', 'show', 700);
+}
+
+function triggerS5() {
+  addClass('s5-titulo', 'show', 100);
+  addClass('n1', 'show', 350);
+  addClass('n2', 'show', 500);
+  addClass('n3', 'show', 650);
+}
+
+function triggerS6() {
+  addClass('cta-logo', 'show', 100);
+  addClass('cta-sub', 'show', 400);
+  addClass('cta-roles', 'show', 600);
+  addClass('cta-tagline', 'show', 900);
+}
+
+/* ── Teclado ── */
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+});
+
+/* ── Touch swipe ── */
+let tx = 0;
+document.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive:true});
+document.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - tx;
+  if (Math.abs(dx) > 50) dx < 0 ? next() : prev();
+}, {passive:true});
+
+/* ── Start ── */
+goTo(0);
+</script>
+</body>
+</html>

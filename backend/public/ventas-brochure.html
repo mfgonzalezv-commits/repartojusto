@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reparto Justo — Brochure 1/4 carta</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #CBD5E1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 40px 20px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #64748B;
+    margin-bottom: 8px;
+  }
+
+  /* ── CARA ── */
+  .cara {
+    width: 108mm;
+    height: 140mm;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 40px rgba(0,0,0,.25);
+  }
+
+  /* ══ CARA 1 — FRENTE ══ */
+  .cara-1 {
+    background: linear-gradient(155deg, #0F172A 0%, #1B3A5C 55%, #0F172A 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 7mm 7mm 6mm;
+  }
+
+  /* acento decorativo */
+  .cara-1::before {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(255,204,0,.08);
+    pointer-events: none;
+  }
+  .cara-1::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: -30px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: rgba(255,204,0,.05);
+    pointer-events: none;
+  }
+
+  .c1-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6mm;
+  }
+  .brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    color: #FFCC00;
+    letter-spacing: -.01em;
+  }
+  .brand span { color: white; }
+  .badge-sin {
+    background: rgba(255,204,0,.15);
+    border: 1px solid rgba(255,204,0,.35);
+    border-radius: 20px;
+    font-size: 8px;
+    font-weight: 700;
+    color: #FFCC00;
+    padding: 3px 8px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .c1-hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .c1-eyebrow {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(255,204,0,.65);
+    margin-bottom: 5px;
+  }
+  .c1-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 8px;
+  }
+  .c1-title em {
+    font-style: normal;
+    color: #FFCC00;
+  }
+  .c1-sub {
+    font-size: 9px;
+    color: rgba(255,255,255,.55);
+    line-height: 1.6;
+    margin-bottom: 6mm;
+  }
+
+  /* comparación mini */
+  .comp-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 5mm;
+  }
+  .comp-box {
+    flex: 1;
+    border-radius: 8px;
+    padding: 8px 9px;
+  }
+  .comp-box.ellos {
+    background: rgba(220,38,38,.12);
+    border: 1px solid rgba(220,38,38,.3);
+  }
+  .comp-box.nosotros {
+    background: rgba(255,204,0,.1);
+    border: 1px solid rgba(255,204,0,.35);
+  }
+  .comp-who {
+    font-size: 7.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 3px;
+  }
+  .comp-box.ellos .comp-who { color: #F87171; }
+  .comp-box.nosotros .comp-who { color: #FFCC00; }
+  .comp-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .comp-box.ellos .comp-price { color: #F87171; }
+  .comp-box.nosotros .comp-price { color: #FFCC00; }
+  .comp-detail {
+    font-size: 7.5px;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+  .comp-box.ellos .comp-detail { color: rgba(248,113,113,.7); }
+  .comp-box.nosotros .comp-detail { color: rgba(255,204,0,.6); }
+
+  /* ahorro pill */
+  .ahorro-pill {
+    background: #FFCC00;
+    border-radius: 6px;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ahorro-pill .num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: #0F172A;
+    line-height: 1;
+  }
+  .ahorro-pill .txt {
+    font-size: 8px;
+    color: rgba(15,23,42,.65);
+    line-height: 1.4;
+    text-align: right;
+    max-width: 55mm;
+  }
+
+  /* ══ CARA 2 — DORSO ══ */
+  .cara-2 {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 7mm 7mm 6mm;
+    border: 2px solid #0F172A;
+  }
+
+  .c2-header {
+    background: #0F172A;
+    margin: -7mm -7mm 6mm;
+    padding: 5mm 7mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .c2-header .brand { font-size: 13px; }
+  .c2-tag {
+    font-size: 7.5px;
+    color: rgba(255,255,255,.5);
+    text-align: right;
+    line-height: 1.5;
+  }
+  .c2-tag strong { color: #FFCC00; display: block; }
+
+  .c2-sec {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #0F172A;
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #FFCC00;
+  }
+
+  /* pasos */
+  .pasos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 5mm;
+  }
+  .paso {
+    background: #F8FAFC;
+    border-radius: 7px;
+    padding: 7px 8px;
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .paso-n {
+    width: 18px; height: 18px;
+    background: #0F172A;
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 9px;
+    color: #FFCC00;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .paso-txt h4 {
+    font-size: 8.5px;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 2px;
+  }
+  .paso-txt p { font-size: 7.5px; color: #64748B; line-height: 1.45; }
+
+  /* precio box */
+  .precio-box {
+    background: #0F172A;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4mm;
+  }
+  .precio-num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: #FFCC00;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .precio-info { flex: 1; }
+  .precio-info p {
+    font-size: 8px;
+    color: rgba(255,255,255,.55);
+    line-height: 1.5;
+  }
+  .precio-checks {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 4px;
+  }
+  .precio-checks span {
+    font-size: 7.5px;
+    color: #4ade80;
+    font-weight: 600;
+  }
+
+  /* CTA */
+  .cta-box {
+    background: #FFCC00;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .cta-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    color: #0F172A;
+    line-height: 1.2;
+  }
+  .cta-box p { font-size: 7.5px; color: rgba(15,23,42,.6); margin-top: 2px; }
+  .cta-qr {
+    background: #0F172A;
+    border-radius: 6px;
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; padding: 0; gap: 0; }
+    .label { display: none; }
+    .cara { box-shadow: none; border-radius: 0; page-break-after: always; width: 108mm; height: 140mm; }
+    .cara:last-of-type { page-break-after: auto; }
+  }
+
+  @page {
+    size: 108mm 140mm;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="label">Cara delantera — imprimir</div>
+
+<!-- ══ CARA 1: FRENTE ══ -->
+<div class="cara cara-1">
+
+  <div class="c1-top">
+    <div class="brand">Reparto<span>Justo</span></div>
+    <div class="badge-sin">Sin comisiones</div>
+  </div>
+
+  <div class="c1-hero">
+    <div class="c1-eyebrow">Para restaurantes · farmacias · minimarkets</div>
+    <div class="c1-title">Tu ganancia<br>es <em>tuya.</em><br>No de ellos.</div>
+    <div class="c1-sub">Las grandes apps se llevan hasta el 30% de tu venta. Con Reparto Justo pagas una tarifa fija y punto.</div>
+
+    <div class="comp-row">
+      <div class="comp-box ellos">
+        <div class="comp-who">Grandes apps</div>
+        <div class="comp-price">30%</div>
+        <div class="comp-detail">de tu venta por pedido</div>
+      </div>
+      <div class="comp-box nosotros">
+        <div class="comp-who">Reparto Justo</div>
+        <div class="comp-price">$500</div>
+        <div class="comp-detail">fijo por pedido, nada más</div>
+      </div>
+    </div>
+
+    <div class="ahorro-pill">
+      <div class="num">$250.000</div>
+      <div class="txt">de ahorro mensual<br>con 100 pedidos/mes de $10.000</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="label">Cara trasera — imprimir al dorso</div>
+
+<!-- ══ CARA 2: DORSO ══ -->
+<div class="cara cara-2">
+
+  <div class="c2-header">
+    <div class="brand">Reparto<span>Justo</span></div>
+    <div class="c2-tag"><strong>Delivery sin comisiones</strong>Villa Alemana · Quilpué · Limache</div>
+  </div>
+
+  <div class="c2-sec">Cómo funciona</div>
+
+  <div class="pasos">
+    <div class="paso">
+      <div class="paso-n">1</div>
+      <div class="paso-txt">
+        <h4>Te registras</h4>
+        <p>Sin contrato. En menos de 5 minutos.</p>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">2</div>
+      <div class="paso-txt">
+        <h4>Publicas el pedido</h4>
+        <p>Ingresas la dirección. Rider asignado al instante.</p>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">3</div>
+      <div class="paso-txt">
+        <h4>El rider entrega</h4>
+        <p>Seguimiento en tiempo real para ti y tu cliente.</p>
+      </div>
+    </div>
+    <div class="paso">
+      <div class="paso-n">4</div>
+      <div class="paso-txt">
+        <h4>Te quedas con todo</h4>
+        <p>Sin % sobre tu venta. Solo $500 de plataforma.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="precio-box">
+    <div class="precio-num">$500</div>
+    <div class="precio-info">
+      <p>por pedido publicado · sin mensualidad</p>
+      <div class="precio-checks">
+        <span>✓ Sin comisión sobre tus ventas</span>
+        <span>✓ Riders calificados con score</span>
+        <span>✓ Seguimiento en tiempo real</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <div>
+      <h3>Empieza hoy<br>sin costo</h3>
+      <p>repartojusto-production.up.railway.app</p>
+    </div>
+    <div class="cta-qr">🛵</div>
+  </div>
+
+</div>
+
+</body>
+</html>

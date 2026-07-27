@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguimiento de tu pedido — Reparto Justo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    :root {
+      --teal: #FFCC00; --teal-mid: #FFD740; --teal-bg: #FFFBEA; --teal-dark: #0F172A;
+      --amber: #854F0B; --amber-bg: #FAEEDA;
+      --red: #DC2626; --red-bg: #FEE2E2;
+      --blue: #0F172A; --blue-bg: #E8EAF0;
+      --text: #1C1C1C; --text2: #6b6b66; --text3: #9a9a94;
+      --bg: #F9F9F9; --border: rgba(0,0,0,0.10); --r: 14px; --r-sm: 10px;
+      --negro: #1C1C1C; --navy: #0F172A; --amarillo: #FFCC00;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    .topbar {
+      background: var(--negro); padding: 0 20px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .topbar-logo { display: flex; align-items: center; gap: 10px; }
+    .topbar-logo img { height: 32px; width: auto; display: block; }
+    .topbar-logo-fallback { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 900; color: var(--amarillo); letter-spacing: -.5px; }
+    .topbar-logo-fallback span { color: #fff; }
+    .topbar-tagline { font-size: 10px; color: rgba(255,255,255,.5); font-weight: 500; margin-top: 1px; }
+    .live-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(255,255,255,.8); }
+    .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    /* Banner marketing */
+    .marketing-banner {
+      background: linear-gradient(135deg, var(--negro) 0%, #1e3a5f 100%);
+      padding: 18px 20px; text-align: center; margin-bottom: 16px;
+      border-radius: var(--r);
+    }
+    .mb-title { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 800; color: #fff; margin-bottom: 3px; }
+    .mb-title span { color: var(--amarillo); }
+    .mb-sub { font-size: 12px; color: rgba(255,255,255,.65); margin-bottom: 10px; }
+    .mb-badges { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+    .mb-badge { background: rgba(255,255,255,.1); color: rgba(255,255,255,.85); font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 99px; }
+
+    /* Footer CTA */
+    .footer-cta { background: var(--amarillo); border-radius: var(--r); padding: 18px 20px; text-align: center; margin-bottom: 16px; }
+    .fc-title { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 900; color: var(--negro); margin-bottom: 4px; }
+    .fc-sub { font-size: 12px; color: rgba(0,0,0,.6); margin-bottom: 10px; }
+    .fc-btn { display: inline-block; background: var(--negro); color: var(--amarillo); font-size: 12px; font-weight: 700; padding: 8px 20px; border-radius: 99px; text-decoration: none; }
+
+    #mapa { height: 280px; }
+
+    .content { padding: 20px; max-width: 520px; margin: 0 auto; }
+
+    /* Estado principal */
+    .estado-hero {
+      background: white; border-radius: var(--r); padding: 24px; margin-bottom: 16px;
+      border: 1px solid var(--border); text-align: center;
+    }
+    .estado-icon { font-size: 48px; margin-bottom: 12px; }
+    .estado-titulo { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+    .estado-sub { font-size: 14px; color: var(--text2); }
+    .eta-badge {
+      display: inline-block; background: var(--teal-bg); color: var(--teal);
+      font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; margin-top: 12px;
+    }
+
+    /* Timeline */
+    .timeline-card { background: white; border-radius: var(--r); border: 1px solid var(--border); padding: 20px; margin-bottom: 16px; }
+    .timeline-title { font-size: 13px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 16px; }
+    .tl { list-style: none; }
+    .tl li { display: flex; gap: 14px; padding-bottom: 18px; position: relative; }
+    .tl li:not(:last-child)::before { content: ''; position: absolute; left: 13px; top: 28px; bottom: 0; width: 2px; background: var(--border); }
+    .tl-dot { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; border: 2px solid transparent; }
+    .tl-dot.done { background: var(--negro); color: var(--amarillo); border-color: var(--negro); }
+    .tl-dot.active { background: var(--amarillo); color: var(--negro); border-color: var(--amarillo); animation: ring 1.5s infinite; }
+    .tl-dot.pending { background: #f1f1ef; color: var(--text3); border-color: var(--border); }
+    @keyframes ring { 0%,100% { box-shadow: 0 0 0 0 rgba(29,158,117,.4); } 50% { box-shadow: 0 0 0 6px rgba(29,158,117,0); } }
+    .tl-info { padding-top: 3px; flex: 1; }
+    .tl-label { font-size: 14px; font-weight: 600; }
+    .tl-time { font-size: 12px; color: var(--text3); margin-top: 2px; }
+    .tl-dur { font-size: 11px; color: var(--teal); font-weight: 600; margin-top: 2px; }
+
+    /* Rider card */
+    .rider-card {
+      background: white; border-radius: var(--r); border: 1px solid var(--border);
+      padding: 16px 20px; margin-bottom: 16px; display: flex; align-items: center; gap: 14px;
+    }
+    .rider-av { width: 48px; height: 48px; border-radius: 50%; background: var(--amarillo); color: var(--negro); font-size: 20px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .rider-info { flex: 1; }
+    .rider-name { font-weight: 700; font-size: 15px; }
+    .rider-veh { font-size: 13px; color: var(--text2); margin-top: 2px; }
+    .rider-rating { font-size: 12px; color: var(--amber); font-weight: 600; margin-top: 2px; }
+
+    /* Info entrega */
+    .info-card { background: white; border-radius: var(--r); border: 1px solid var(--border); padding: 16px 20px; margin-bottom: 16px; }
+    .info-row { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .info-label { font-size: 11px; color: var(--text3); font-weight: 500; text-transform: uppercase; letter-spacing: .04em; }
+    .info-val { font-size: 14px; font-weight: 500; margin-top: 2px; }
+
+    .branding { text-align: center; padding: 20px; font-size: 12px; color: var(--text3); }
+    .branding strong { color: var(--teal); }
+
+    /* Error / loading */
+    .state-screen { min-height: 60vh; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; text-align: center; padding: 40px; }
+    .state-icon { font-size: 48px; }
+    .state-title { font-size: 18px; font-weight: 700; }
+    .state-sub { font-size: 14px; color: var(--text2); }
+
+    .badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .badge-pendiente { background: var(--amber-bg); color: var(--amber); }
+    .badge-asignado  { background: var(--blue-bg); color: var(--blue); }
+    .badge-retiro    { background: #EDE9FE; color: #5B21B6; }
+    .badge-en_camino { background: var(--teal-bg); color: var(--teal); }
+    .badge-entregado { background: #D1FAE5; color: #065F46; }
+    .badge-cancelado { background: var(--red-bg); color: var(--red); }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-logo">
+    <!-- Cuando tengas el logo: reemplaza el div de abajo por <img src="/logo.png" alt="Reparto Justo"> -->
+    <div>
+      <div class="topbar-logo-fallback">Reparto<span>Justo</span></div>
+      <div class="topbar-tagline">Delivery sin comisiones</div>
+    </div>
+  </div>
+  <div class="live-badge"><div class="live-dot"></div>En vivo</div>
+</div>
+
+<div id="mapa"></div>
+
+<div id="main-content">
+  <div class="state-screen">
+    <div class="state-icon">⏳</div>
+    <div class="state-title">Cargando tu pedido...</div>
+  </div>
+</div>
+
+<script>
+const IS_LOCAL = location.hostname === 'localhost' || /^192\.168\./.test(location.hostname) || /^10\./.test(location.hostname);
+const BASE_URL = IS_LOCAL ? location.protocol + '//' + location.hostname + ':3000' : location.protocol + '//' + location.hostname;
+const API = BASE_URL + '/api';
+const params = new URLSearchParams(location.search);
+const pedidoId = params.get('id');
+
+const ESTADO_ICON = {
+  pendiente: '⏳', asignado: '🏍️', retiro: '🏪', en_camino: '🚀', entregado: '✅', cancelado: '❌'
+};
+const ESTADO_LABEL = {
+  pendiente: 'Buscando repartidor', asignado: 'Repartidor en camino al negocio',
+  retiro: 'Retirando tu pedido', en_camino: '¡Tu pedido viene en camino!',
+  entregado: '¡Pedido entregado!', cancelado: 'Pedido cancelado'
+};
+const ESTADO_SUB = {
+  pendiente: 'Estamos asignando un repartidor para tu pedido',
+  asignado: 'El repartidor se dirige al negocio a buscar tu pedido',
+  retiro: 'El repartidor está retirando tu pedido del local',
+  en_camino: 'Tu pedido está en camino, pronto llegará',
+  entregado: 'Tu pedido fue entregado exitosamente. ¡Buen provecho!',
+  cancelado: 'Lo sentimos, este pedido fue cancelado'
+};
+
+const PASOS = [
+  { estado: 'pendiente', label: 'Pedido recibido',     icon: '📦' },
+  { estado: 'asignado',  label: 'Repartidor asignado', icon: '🏍️' },
+  { estado: 'retiro',    label: 'Retirando pedido',    icon: '🏪' },
+  { estado: 'en_camino', label: 'En camino',           icon: '🚀' },
+  { estado: 'entregado', label: 'Entregado',           icon: '✅' },
+];
+
+let mapa = null;
+let markerRider = null;
+let socket = null;
+let pedidoData = null;
+
+function fmtTime(d) {
+  if (!d) return null;
+  return new Date(d).toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
+}
+function diffMin(a, b) {
+  if (!a || !b) return null;
+  return Math.round((new Date(b) - new Date(a)) / 60000);
+}
+
+async function cargarPedido() {
+  if (!pedidoId) {
+    mostrarError('Link inválido', 'No se encontró el ID del pedido en el link.');
+    return;
+  }
+  try {
+    const res = await fetch(`${API}/seguimiento/${pedidoId}`);
+    if (!res.ok) throw new Error('Pedido no encontrado');
+    const p = await res.json();
+    pedidoData = p;
+    renderPedido(p);
+    conectarSocket(p);
+    // Cargar badge de score del rider si está asignado
+    if (p.rider_id) cargarBadgeRider(p.rider_id);
+  } catch (e) {
+    mostrarError('Pedido no encontrado', 'Este link de seguimiento no es válido o el pedido ya no existe.');
+  }
+}
+
+function renderPedido(p) {
+  const idxActual = PASOS.findIndex(paso => paso.estado === p.estado);
+  const esCancelado = p.estado === 'cancelado';
+
+  // Inicializar mapa
+  if (!mapa) {
+    const centro = p.lat_entrega && p.lng_entrega
+      ? [p.lat_entrega, p.lng_entrega] : [-33.45, -70.65];
+    mapa = L.map('mapa').setView(centro, 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' }).addTo(mapa);
+
+    // Marker destino
+    if (p.lat_entrega && p.lng_entrega) {
+      const iconDest = L.divIcon({ html: '<div style="background:#DC2626;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>', iconSize:[20,20], iconAnchor:[10,10] });
+      L.marker([p.lat_entrega, p.lng_entrega], { icon: iconDest }).addTo(mapa).bindPopup('📍 Tu dirección');
+    }
+  }
+
+  // Marker rider
+  if (p.rider_lat && p.rider_lng) {
+    const iconRider = L.divIcon({ html: '<div style="background:#0F6E56;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 10px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:12px">🏍</div>', iconSize:[24,24], iconAnchor:[12,12] });
+    if (markerRider) {
+      markerRider.setLatLng([p.rider_lat, p.rider_lng]);
+    } else {
+      markerRider = L.marker([p.rider_lat, p.rider_lng], { icon: iconRider }).addTo(mapa).bindPopup('🏍️ Tu repartidor');
+      if (p.lat_entrega && p.lng_entrega) {
+        mapa.fitBounds([[p.lat_entrega, p.lng_entrega],[p.rider_lat, p.rider_lng]], { padding: [30,30] });
+      }
+    }
+  }
+
+  // Calcular tiempos
+  const tiempoRetiro = diffMin(p.asignado_at, p.retiro_at);
+  const tiempoEntrega = diffMin(p.retiro_at, p.entregado_at);
+
+  document.getElementById('main-content').innerHTML = `
+    <div class="content">
+
+      <!-- Hero estado -->
+      <div class="estado-hero">
+        <div class="estado-icon">${ESTADO_ICON[p.estado]}</div>
+        <div class="estado-titulo">${ESTADO_LABEL[p.estado]}</div>
+        <div class="estado-sub">${ESTADO_SUB[p.estado]}</div>
+        ${p.estado === 'en_camino' ? '<div class="eta-badge">🕐 Llegando pronto</div>' : ''}
+        ${p.estado === 'entregado' ? '<div class="eta-badge" style="background:#D1FAE5;color:#065F46">✅ Entregado</div>' : ''}
+      </div>
+
+      <!-- Rider -->
+      ${p.rider_nombre ? `
+        <div class="rider-card" id="rider-card">
+          <div class="rider-av">${p.rider_nombre[0]}</div>
+          <div class="rider-info">
+            <div class="rider-name">${p.rider_nombre}</div>
+            <div class="rider-veh">🏍️ ${p.vehiculo_tipo || 'Vehículo'}</div>
+            <div id="rider-badge-score"></div>
+          </div>
+          <span class="badge badge-${p.estado}">${p.estado === 'en_camino' ? 'En camino' : p.estado === 'retiro' ? 'En retiro' : 'Asignado'}</span>
+        </div>
+      ` : ''}
+
+      <!-- Timeline -->
+      <div class="timeline-card">
+        <div class="timeline-title">Progreso del pedido</div>
+        <ul class="tl">
+          ${PASOS.map((paso, i) => {
+            const done   = i < idxActual;
+            const active = i === idxActual && !esCancelado;
+            const pend   = i > idxActual || esCancelado;
+            let timeStr = '';
+            let durStr  = '';
+            if (paso.estado === 'pendiente') timeStr = fmtTime(p.created_at);
+            if (paso.estado === 'asignado')  timeStr = fmtTime(p.asignado_at);
+            if (paso.estado === 'retiro')    { timeStr = fmtTime(p.retiro_at); if (tiempoRetiro) durStr = `${tiempoRetiro} min desde asignación`; }
+            if (paso.estado === 'entregado') { timeStr = fmtTime(p.entregado_at); if (tiempoEntrega) durStr = `${tiempoEntrega} min de entrega`; }
+            return `
+              <li>
+                <div class="tl-dot ${done ? 'done' : active ? 'active' : 'pending'}">${done ? '✓' : paso.icon}</div>
+                <div class="tl-info">
+                  <div class="tl-label">${paso.label}</div>
+                  ${timeStr ? `<div class="tl-time">${timeStr}</div>` : ''}
+                  ${durStr  ? `<div class="tl-dur">⏱ ${durStr}</div>` : ''}
+                </div>
+              </li>`;
+          }).join('')}
+        </ul>
+      </div>
+
+      <!-- Info entrega -->
+      <div class="info-card">
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Dirección de entrega</div>
+            <div class="info-val">${p.direccion_entrega}</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏪</div>
+          <div>
+            <div class="info-label">Negocio</div>
+            <div class="info-val">${p.nombre_comercial}</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📏</div>
+          <div>
+            <div class="info-label">Distancia</div>
+            <div class="info-val">${p.distancia_km} km</div>
+          </div>
+        </div>
+        ${p.mostrar_costo_seguimiento && p.cargo_cliente > 0 ? `
+        <div class="info-row">
+          <div class="info-icon">🚚</div>
+          <div>
+            <div class="info-label">Costo de envío</div>
+            <div class="info-val"><strong style="color:var(--teal)">$${parseInt(p.cargo_cliente).toLocaleString('es-CL')}</strong></div>
+          </div>
+        </div>` : ''}
+        ${p.notas ? `
+        <div class="info-row">
+          <div class="info-icon">📝</div>
+          <div>
+            <div class="info-label">Notas</div>
+            <div class="info-val">${p.notas}</div>
+          </div>
+        </div>` : ''}
+      </div>
+
+      <!-- Calificación del cliente (solo si fue entregado y tiene rider) -->
+      ${p.estado === 'entregado' && p.rider_nombre ? `
+      <div style="background:white;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.07);text-align:center" id="calif-cli-cta">
+        <div style="font-size:32px;margin-bottom:8px">⭐</div>
+        <div style="font-size:15px;font-weight:700;color:#0F172A;margin-bottom:4px">¿Cómo fue tu entrega?</div>
+        <div style="font-size:13px;color:#64748B;margin-bottom:14px">Tómate 30 segundos para calificar a ${p.rider_nombre}</div>
+        <button onclick="abrirModalCalifCli('${p.id}','${p.rider_nombre}')"
+          style="width:100%;padding:13px;background:#FFCC00;color:#1C1C1C;border:none;border-radius:12px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit">
+          Calificar repartidor
+        </button>
+        <div id="calif-cli-ok" style="display:none;margin-top:12px;color:#0F766E;font-weight:600;font-size:14px">
+          ✅ ¡Gracias por calificar!
+        </div>
+      </div>` : ''}
+
+      <!-- Banner marketing -->
+      <div class="marketing-banner">
+        <div class="mb-title">Tu pedido es gestionado por <span>Reparto Justo</span></div>
+        <div class="mb-sub">La plataforma de delivery que trabaja para los negocios y sus clientes</div>
+        <div class="mb-badges">
+          <span class="mb-badge">🏍️ Riders verificados</span>
+          <span class="mb-badge">📍 Seguimiento en vivo</span>
+          <span class="mb-badge">✅ Sin comisiones</span>
+        </div>
+      </div>
+
+      <!-- Footer CTA para negocios -->
+      <div class="footer-cta">
+        <div class="fc-title">¿Tienes un negocio?</div>
+        <div class="fc-sub">Únete a Reparto Justo y ofrece delivery a tus clientes sin pagar comisiones por venta.</div>
+        <a href="/ventas.html" class="fc-btn">Conoce cómo funciona →</a>
+      </div>
+
+    </div>
+  `;
+}
+
+function conectarSocket(p) {
+  if (typeof io === 'undefined') return;
+  socket = io(BASE_URL);
+  socket.on('connect', () => {
+    socket.emit('pedido:seguir', { pedido_id: p.id });
+  });
+  socket.on('pedido:actualizado', (data) => {
+    if (data.id === pedidoId) cargarPedido();
+  });
+  socket.on('rider:ubicacion', (data) => {
+    if (data.pedido_id === pedidoId && mapa) {
+      const pos = [data.lat, data.lng];
+      if (markerRider) {
+        markerRider.setLatLng(pos);
+      }
+    }
+  });
+}
+
+function mostrarError(titulo, sub) {
+  document.getElementById('main-content').innerHTML = `
+    <div class="state-screen">
+      <div class="state-icon">😕</div>
+      <div class="state-title">${titulo}</div>
+      <div class="state-sub">${sub}</div>
+    </div>
+  `;
+}
+
+async function cargarBadgeRider(riderId) {
+  const el = document.getElementById('rider-badge-score');
+  if (!el) return;
+  try {
+    const res = await fetch(`${API}/calificaciones/rider/${riderId}/score`);
+    if (!res.ok) return;
+    const s = await res.json();
+    if (s.score_final === null) {
+      el.innerHTML = '<span style="font-size:11px;color:#94A3B8">Sin calificaciones aún</span>';
+    } else if (s.score_final >= 90) {
+      el.innerHTML = '<span style="display:inline-flex;align-items:center;gap:4px;background:#FEF3C7;color:#92400E;border-radius:12px;padding:3px 10px;font-size:11px;font-weight:700">🏆 Rider Destacado</span>';
+    } else if (s.score_final >= 75) {
+      el.innerHTML = `<span style="font-size:11px;color:#0F766E;font-weight:600">⭐ Score ${s.score_final}/100</span>`;
+    } else {
+      el.innerHTML = `<span style="font-size:11px;color:#64748B">Score ${s.score_final}/100</span>`;
+    }
+  } catch {}
+}
+
+cargarPedido();
+// Refrescar cada 30s
+setInterval(cargarPedido, 30000);
+
+// ── Calificación del cliente (modal) ─────────────────────────────────────
+const _califCli = {};
+let _califCliPedidoId = null;
+let _modalCalifCliAbierto = false;
+
+const PREGUNTAS_CLI = [
+  ['llego_tiempo',       '¿Llegó a tiempo?'],
+  ['fue_amable',         '¿Fue amable y respetuoso?'],
+  ['pedido_buen_estado', '¿El pedido llegó en buen estado?'],
+  ['lo_recomendaria',    '¿Lo recomendarías?'],
+];
+
+function abrirModalCalifCli(pedidoId, riderNombre) {
+  if (_modalCalifCliAbierto) return;
+  _califCliPedidoId = pedidoId;
+  Object.keys(_califCli).forEach(k => delete _califCli[k]);
+  document.getElementById('calif-modal-cli-titulo').textContent = `Califica a ${riderNombre}`;
+  document.getElementById('calif-modal-cli-form').style.display = 'block';
+  document.getElementById('calif-modal-cli-ok').style.display = 'none';
+  document.getElementById('calif-comentario-cli').value = '';
+
+  document.getElementById('calif-preguntas-cli').innerHTML = PREGUNTAS_CLI.map(([key, label]) => `
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06)">
+      <span style="font-size:13px;color:#1E293B;flex:1;padding-right:12px">${label}</span>
+      <div style="display:flex;gap:8px;flex-shrink:0">
+        <button onclick="setCalifCli('${key}',true,this)" style="padding:7px 18px;border-radius:20px;border:1.5px solid #E2E8F0;background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Sí</button>
+        <button onclick="setCalifCli('${key}',false,this)" style="padding:7px 18px;border-radius:20px;border:1.5px solid #E2E8F0;background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">No</button>
+      </div>
+    </div>`).join('');
+
+  // Pre-seleccionar "Sí" en todas las preguntas
+  PREGUNTAS_CLI.forEach(([key]) => {
+    _califCli[key] = true;
+    const btns = document.getElementById('calif-preguntas-cli').querySelectorAll(`button[onclick*="'${key}'"]`);
+    if (btns[0]) {
+      btns[0].style.background = '#0F766E';
+      btns[0].style.color = 'white';
+      btns[0].style.borderColor = '#0F766E';
+    }
+  });
+
+  document.getElementById('modal-calif-cli').style.display = 'flex';
+  _modalCalifCliAbierto = true;
+}
+
+function cerrarModalCalifCli() {
+  document.getElementById('modal-calif-cli').style.display = 'none';
+}
+
+function setCalifCli(key, val, btn) {
+  _califCli[key] = val;
+  const par = btn.parentElement;
+  par.querySelectorAll('button').forEach(b => {
+    b.style.background = 'white';
+    b.style.color = '#1E293B';
+    b.style.borderColor = '#E2E8F0';
+  });
+  btn.style.background = val ? '#0F766E' : '#DC2626';
+  btn.style.color = 'white';
+  btn.style.borderColor = val ? '#0F766E' : '#DC2626';
+}
+
+async function enviarCalifCliente() {
+  const campos = ['llego_tiempo','fue_amable','pedido_buen_estado','lo_recomendaria'];
+  if (!campos.every(c => c in _califCli)) {
+    alert('Por favor responde todas las preguntas antes de enviar.');
+    return;
+  }
+  try {
+    const res = await fetch('/api/calificaciones', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        pedido_id: _califCliPedidoId,
+        tipo: 'cliente',
+        ..._califCli,
+        comentario: document.getElementById('calif-comentario-cli')?.value || ''
+      })
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      alert(err.error || 'Error al enviar calificación');
+      return;
+    }
+    document.getElementById('calif-modal-cli-form').style.display = 'none';
+    document.getElementById('calif-modal-cli-ok').style.display = 'block';
+    // Ocultar también el CTA en la página
+    const cta = document.getElementById('calif-cli-cta');
+    if (cta) {
+      cta.querySelector('button')?.remove();
+      const ok = document.getElementById('calif-cli-ok');
+      if (ok) ok.style.display = 'block';
+    }
+  } catch {
+    alert('Error de conexión. Intenta de nuevo.');
+  }
+}
+</script>
+<!-- ── MODAL CALIFICACIÓN CLIENTE ────────────────────────────────────── -->
+<div id="modal-calif-cli" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:3000;align-items:center;justify-content:center;padding:20px">
+  <div style="background:white;border-radius:20px;width:100%;max-width:440px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3)">
+    <div style="background:#FFCC00;padding:20px 24px 16px">
+      <div style="font-size:28px;text-align:center;margin-bottom:6px">⭐</div>
+      <div style="font-size:17px;font-weight:800;color:#1C1C1C;text-align:center" id="calif-modal-cli-titulo">Califica al repartidor</div>
+      <div style="font-size:13px;color:#4B4B00;text-align:center;margin-top:4px">Solo 4 preguntas rápidas · 30 segundos</div>
+    </div>
+    <div style="padding:20px 24px">
+      <div id="calif-modal-cli-form">
+        <div id="calif-preguntas-cli"></div>
+        <textarea id="calif-comentario-cli" placeholder="Comentario opcional..." rows="2" maxlength="300"
+          style="width:100%;margin-top:14px;padding:10px 12px;border:1.5px solid #E2E8F0;border-radius:10px;font-size:13px;font-family:inherit;resize:none;box-sizing:border-box"></textarea>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <button onclick="cerrarModalCalifCli()"
+            style="flex:1;padding:12px;border:1.5px solid #E2E8F0;border-radius:10px;background:white;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;color:#64748B">
+            Ahora no
+          </button>
+          <button onclick="enviarCalifCliente()"
+            style="flex:2;padding:12px;background:#0F766E;color:white;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">
+            Enviar calificación
+          </button>
+        </div>
+      </div>
+      <div id="calif-modal-cli-ok" style="display:none;text-align:center;padding:20px 0">
+        <div style="font-size:40px;margin-bottom:10px">✅</div>
+        <div style="font-size:16px;font-weight:700;color:#065F46">¡Gracias por calificar!</div>
+        <div style="font-size:13px;color:#64748B;margin-top:6px">Tu opinión ayuda a mejorar el servicio</div>
+        <button onclick="cerrarModalCalifCli()" style="margin-top:16px;padding:10px 24px;background:#FFCC00;color:#1C1C1C;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

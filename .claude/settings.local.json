@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/migrate.js)",
+      "Bash(gh auth:*)",
+      "WebFetch(domain:railway.com)",
+      "Bash(node -e ':*)",
+      "WebFetch(domain:repartojusto-production.up.railway.app)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(git commit -m 'Debug: panel visible en pantalla para diagnosticar mapa y OSRM:*)",
+      "Bash(git commit -m 'Fix OSRM: timeout 8s + servidor alternativo OSM si falla el primero:*)"
+    ]
+  }
+}

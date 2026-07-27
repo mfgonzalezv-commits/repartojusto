@@ -1,0 +1,9 @@
+backend/node_modules/
+backend/.env
+backend/vgsefsfsfesvtarfrgfr
+*.jpeg
+*.jpg
+*.png
+# Excepciones: íconos PWA
+!backend/public/icon-192.png
+!backend/public/icon-512.png

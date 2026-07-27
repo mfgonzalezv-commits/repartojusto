@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reparto Justo — Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --amarillo: #FFCC00;
+  --negro: #1C1C1C;
+  --navy: #0F172A;
+  --bg: #F9F9F9;
+  --bg2: #FFFFFF;
+  --border: rgba(0,0,0,0.09);
+  --text: #1C1C1C;
+  --text2: #6b6b66;
+  --text3: #9a9a94;
+  --green: #16A34A;
+  --green-bg: #DCFCE7;
+  --red: #DC2626;
+  --red-bg: #FEE2E2;
+  --blue: #2563EB;
+  --blue-bg: #DBEAFE;
+  --purple: #7C3AED;
+  --purple-bg: #EDE9FE;
+  --amber: #D97706;
+  --amber-bg: #FEF3C7;
+  --r: 12px;
+  --r-sm: 8px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+/* ── AUTH ── */
+#auth-screen {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+}
+.auth-card {
+  background: white; border-radius: 20px; padding: 48px 40px;
+  width: 100%; max-width: 400px; box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+.auth-logo { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: var(--negro); margin-bottom: 4px; }
+.auth-logo span { color: var(--amarillo); }
+.auth-sub { font-size: 13px; color: var(--text2); margin-bottom: 32px; }
+.auth-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 24px; }
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 13px; font-weight: 500; color: var(--text2); margin-bottom: 6px; }
+.field input { width: 100%; padding: 11px 14px; border: 1.5px solid var(--border); border-radius: var(--r-sm); font-size: 14px; font-family: inherit; transition: border-color .2s; }
+.field input:focus { outline: none; border-color: var(--amarillo); }
+.btn-auth { width: 100%; padding: 13px; background: var(--amarillo); color: var(--negro); border: none; border-radius: var(--r-sm); font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; }
+.btn-auth:hover { background: #e6b800; }
+#auth-error { color: var(--red); font-size: 13px; margin-bottom: 12px; display: none; }
+
+/* ── APP ── */
+#app { display: none; min-height: 100vh; }
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--negro); height: 56px; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+.topbar-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 18px; color: var(--amarillo); }
+.topbar-right { display: flex; align-items: center; gap: 16px; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:.3} }
+.topbar-user { font-size: 13px; color: #aaa; }
+.btn-logout { background: rgba(255,255,255,.1); border: none; color: white; font-size: 13px; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-family: inherit; }
+.btn-logout:hover { background: rgba(255,255,255,.2); }
+
+/* ── TABS ── */
+.tabs-bar { background: white; border-bottom: 1px solid var(--border); padding: 0 24px; display: flex; gap: 4px; }
+.tab-btn { padding: 14px 18px; font-size: 14px; font-weight: 500; color: var(--text2); border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all .2s; font-family: inherit; }
+.tab-btn.active { color: var(--negro); border-bottom-color: var(--amarillo); font-weight: 700; }
+.tab-btn:hover { color: var(--negro); }
+
+/* ── MAIN ── */
+.main { max-width: 1200px; margin: 0 auto; padding: 24px 20px 48px; }
+
+/* ── SECCIÓN ── */
+.section { display: none; }
+.section.active { display: block; }
+.section-title { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+.section-sub { font-size: 14px; color: var(--text2); margin-bottom: 24px; }
+
+/* ── KPI GRID ── */
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 24px; }
+.kpi-card { background: white; border: 1px solid var(--border); border-radius: var(--r); padding: 20px; }
+.kpi-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--text3); margin-bottom: 8px; }
+.kpi-value { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; color: var(--negro); line-height: 1; }
+.kpi-value.amarillo { color: var(--amarillo); }
+.kpi-value.green { color: var(--green); }
+.kpi-value.blue { color: var(--blue); }
+.kpi-value.purple { color: var(--purple); }
+.kpi-sub { font-size: 12px; color: var(--text3); margin-top: 6px; }
+
+/* ── CARD ── */
+.card { background: white; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; margin-bottom: 16px; }
+.card-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.card-header h3 { font-size: 15px; font-weight: 700; }
+.card-body { padding: 20px; }
+
+/* ── TABLA ── */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th { background: var(--bg); padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text2); border-bottom: 1px solid var(--border); }
+tbody td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--bg); }
+
+/* ── BADGE ── */
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+.badge-pendiente  { background: var(--amber-bg); color: var(--amber); }
+.badge-asignado   { background: var(--blue-bg); color: var(--blue); }
+.badge-retiro     { background: var(--purple-bg); color: var(--purple); }
+.badge-en_camino  { background: #DBEAFE; color: var(--blue); }
+.badge-entregado  { background: var(--green-bg); color: var(--green); }
+.badge-cancelado  { background: var(--red-bg); color: var(--red); }
+.badge-activo     { background: var(--green-bg); color: var(--green); }
+.badge-inactivo   { background: var(--red-bg); color: var(--red); }
+.badge-disponible { background: var(--green-bg); color: var(--green); }
+.badge-offline    { background: var(--border); color: var(--text3); }
+
+/* ── BOTONES ── */
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--r-sm); font-size: 13px; font-weight: 600; cursor: pointer; border: none; font-family: inherit; transition: all .2s; }
+.btn-primary { background: var(--amarillo); color: var(--negro); }
+.btn-primary:hover { background: #e6b800; }
+.btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+.btn-outline:hover { border-color: #aaa; }
+.btn-danger { background: var(--red-bg); color: var(--red); }
+.btn-danger:hover { background: var(--red); color: white; }
+.btn-sm { padding: 5px 12px; font-size: 12px; }
+.btn-green { background: var(--green-bg); color: var(--green); }
+.btn-green:hover { background: var(--green); color: white; }
+
+/* ── CHART ── */
+.chart-card { background: white; border: 1px solid var(--border); border-radius: var(--r); padding: 20px; margin-bottom: 16px; }
+.chart-title { font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+
+/* ── GRID 2 ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ── MODAL ── */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal-overlay.open { display: flex; }
+.modal { background: white; border-radius: var(--r); width: 100%; max-width: 460px; overflow: hidden; }
+.modal-header { padding: 18px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.modal-header h3 { font-size: 16px; font-weight: 700; }
+.modal-close { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--text2); line-height: 1; }
+.modal-body { padding: 24px; }
+.modal-footer { padding: 16px 24px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 8px; }
+
+/* ── TOAST ── */
+#toast { position: fixed; bottom: 24px; right: 24px; z-index: 9999; background: var(--negro); color: white; padding: 12px 20px; border-radius: var(--r-sm); font-size: 13px; font-weight: 500; opacity: 0; transform: translateY(8px); transition: all .3s; pointer-events: none; }
+#toast.show { opacity: 1; transform: none; }
+#toast.success { background: var(--green); }
+#toast.error { background: var(--red); }
+
+/* ── EMPTY ── */
+.empty { text-align: center; padding: 40px; color: var(--text3); font-size: 14px; }
+
+/* ── LIQUIDACIONES ── */
+.saldo-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; color: var(--green); }
+.saldo-zero { color: var(--text3); font-size: 13px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .topbar { padding: 0 14px; }
+  .main { padding: 16px 12px 48px; }
+  .tabs-bar { overflow-x: auto; gap: 0; }
+  .tab-btn { white-space: nowrap; font-size: 13px; padding: 12px 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ AUTH ═══ -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="auth-logo">Reparto<span>Justo</span></div>
+    <div class="auth-sub">Panel de administración</div>
+    <h2>Iniciar sesión</h2>
+    <div class="field"><label>Email</label><input type="email" id="email" placeholder="admin@repartojusto.cl" value="admin@repartojusto.cl"></div>
+    <div class="field"><label>Contraseña</label><input type="password" id="pass" placeholder="••••••••" value="admin1234"></div>
+    <p id="auth-error"></p>
+    <button class="btn-auth" id="btn-login">Entrar</button>
+  </div>
+</div>
+
+<!-- ═══ APP ═══ -->
+<div id="app">
+  <nav class="topbar">
+    <div class="topbar-brand">🏍️ Reparto Justo</div>
+    <div class="topbar-right">
+      <div class="live-dot" title="Datos en tiempo real"></div>
+      <span class="topbar-user" id="topbar-user">Admin</span>
+      <button class="btn-logout" id="btn-logout">Salir</button>
+    </div>
+  </nav>
+
+  <div class="tabs-bar">
+    <button class="tab-btn active" data-tab="resumen">📊 Resumen</button>
+    <button class="tab-btn" data-tab="pedidos">📦 Pedidos</button>
+    <button class="tab-btn" data-tab="riders">🏍️ Riders</button>
+    <button class="tab-btn" data-tab="comercios">🏪 Comercios</button>
+    <button class="tab-btn" data-tab="liquidaciones">💰 Liquidaciones</button>
+    <button class="tab-btn" data-tab="usuarios">👤 Usuarios</button>
+  </div>
+
+  <div class="main">
+
+    <!-- ══ TAB: RESUMEN ══ -->
+    <div class="section active" id="sec-resumen">
+      <div class="section-title">Resumen general</div>
+      <div class="section-sub" id="resumen-actualizado">Cargando datos...</div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-label">Total pedidos</div><div class="kpi-value" id="kpi-total">—</div><div class="kpi-sub">Desde el inicio</div></div>
+        <div class="kpi-card"><div class="kpi-label">Entregados</div><div class="kpi-value green" id="kpi-entregados">—</div><div class="kpi-sub" id="kpi-entregados-sub">—</div></div>
+        <div class="kpi-card"><div class="kpi-label">En curso ahora</div><div class="kpi-value blue" id="kpi-en-curso">—</div><div class="kpi-sub">Asignados + en camino</div></div>
+        <div class="kpi-card"><div class="kpi-label">Pendientes</div><div class="kpi-value amarillo" id="kpi-pendientes">—</div><div class="kpi-sub">Sin rider asignado</div></div>
+        <div class="kpi-card"><div class="kpi-label">Riders online</div><div class="kpi-value purple" id="kpi-riders">—</div><div class="kpi-sub" id="kpi-riders-sub">—</div></div>
+        <div class="kpi-card"><div class="kpi-label">Ingresos plataforma</div><div class="kpi-value green" id="kpi-ingresos">—</div><div class="kpi-sub">App fee acumulado</div></div>
+        <div class="kpi-card"><div class="kpi-label">Dist. promedio</div><div class="kpi-value" id="kpi-distancia">—</div><div class="kpi-sub">km por entrega</div></div>
+        <div class="kpi-card"><div class="kpi-label">Comercios activos</div><div class="kpi-value" id="kpi-comercios">—</div><div class="kpi-sub" id="kpi-comercios-sub">—</div></div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">📦 Pedidos de las últimas 24 horas</div>
+        <canvas id="chart-resumen" height="70"></canvas>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h3>Últimos pedidos</h3><button class="btn btn-outline btn-sm" onclick="cargarSeccion('pedidos')">Ver todos →</button></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Comercio</th><th>Cliente</th><th>Tarifa</th><th>Estado</th><th>Rider</th></tr></thead>
+            <tbody id="tbody-recientes"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ TAB: PEDIDOS ══ -->
+    <div class="section" id="sec-pedidos">
+      <div class="section-title">Pedidos</div>
+      <div class="section-sub">Todos los pedidos de la plataforma</div>
+
+      <div class="card">
+        <div class="card-header">
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <select id="filtro-estado" class="btn btn-outline btn-sm" style="padding:6px 10px" onchange="cargarPedidos()">
+              <option value="">Todos los estados</option>
+              <option value="pendiente">Pendiente</option>
+              <option value="asignado">Asignado</option>
+              <option value="retiro">Retiro</option>
+              <option value="en_camino">En camino</option>
+              <option value="entregado">Entregado</option>
+              <option value="cancelado">Cancelado</option>
+            </select>
+            <button class="btn btn-outline btn-sm" onclick="cargarPedidos()">↻ Actualizar</button>
+          </div>
+          <span id="pedidos-count" style="font-size:12px;color:var(--text3)"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Fecha</th><th>Comercio</th><th>Cliente</th><th>Dirección</th><th>Dist.</th><th>Tarifa</th><th>Estado</th><th>Rider</th><th>Acción</th></tr></thead>
+            <tbody id="tbody-pedidos"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ TAB: RIDERS ══ -->
+    <div class="section" id="sec-riders">
+      <div class="section-title">Riders</div>
+      <div class="section-sub">Gestión de repartidores y saldos pendientes</div>
+
+      <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+        <div class="kpi-card"><div class="kpi-label">Total riders</div><div class="kpi-value" id="r-total">—</div></div>
+        <div class="kpi-card"><div class="kpi-label">Disponibles ahora</div><div class="kpi-value green" id="r-disponibles">—</div></div>
+        <div class="kpi-card"><div class="kpi-label">Saldo total pendiente</div><div class="kpi-value amarillo" id="r-saldo-total">—</div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Riders registrados</h3>
+          <button class="btn btn-outline btn-sm" onclick="cargarRiders()">↻ Actualizar</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nombre</th><th>Email</th><th>Entregas</th><th>Rating</th><th>Saldo pendiente</th><th>Estado</th><th>Acción</th></tr></thead>
+            <tbody id="tbody-riders"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ TAB: COMERCIOS ══ -->
+    <div class="section" id="sec-comercios">
+      <div class="section-title">Comercios</div>
+      <div class="section-sub">Negocios registrados en la plataforma</div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Negocios</h3>
+          <button class="btn btn-outline btn-sm" onclick="cargarComercios()">↻ Actualizar</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nombre</th><th>Email</th><th>Categoría</th><th>Modo</th><th>Estado</th><th>Acciones</th></tr></thead>
+            <tbody id="tbody-comercios"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ TAB: USUARIOS ══ -->
+    <div class="section" id="sec-usuarios">
+      <div class="section-title">Usuarios</div>
+      <div class="section-sub">Todos los usuarios registrados en la plataforma</div>
+
+      <div class="card">
+        <div class="card-header">
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <select id="filtro-rol" class="btn btn-outline btn-sm" style="padding:6px 10px" onchange="cargarUsuarios()">
+              <option value="">Todos los roles</option>
+              <option value="admin">Admin</option>
+              <option value="negocio">Negocio</option>
+              <option value="rider">Rider</option>
+            </select>
+            <button class="btn btn-outline btn-sm" onclick="cargarUsuarios()">↻ Actualizar</button>
+          </div>
+          <span id="usuarios-count" style="font-size:12px;color:var(--text3)"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Rol</th><th>Estado</th><th>Registro</th><th>Acciones</th></tr></thead>
+            <tbody id="tbody-usuarios"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ TAB: LIQUIDACIONES ══ -->
+    <div class="section" id="sec-liquidaciones">
+      <div class="section-title">Liquidaciones</div>
+      <div class="section-sub">Pago de saldos acumulados a riders</div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-header"><h3>💰 Generar liquidación</h3></div>
+        <div class="card-body">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;align-items:end">
+            <div>
+              <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:6px">Rider</label>
+              <select id="liq-rider" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit">
+                <option value="">Seleccionar rider...</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:6px">Desde</label>
+              <input type="date" id="liq-desde" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit">
+            </div>
+            <div>
+              <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:6px">Hasta</label>
+              <input type="date" id="liq-hasta" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-size:13px;font-family:inherit">
+            </div>
+            <button class="btn btn-primary" onclick="generarLiquidacion()">Generar</button>
+          </div>
+          <p id="liq-error" style="color:var(--red);font-size:13px;margin-top:10px;display:none"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Historial de liquidaciones</h3>
+          <button class="btn btn-outline btn-sm" onclick="cargarLiquidaciones()">↻ Actualizar</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Rider</th><th>Período</th><th>Pedidos</th><th>Monto</th><th>Estado</th><th>Acción</th></tr></thead>
+            <tbody id="tbody-liquidaciones"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ MODAL EDITAR USUARIO ═══ -->
+<div class="modal-overlay" id="modal-editar">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Editar usuario</h3>
+      <button class="modal-close" onclick="cerrarModalEditar()">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="field"><label>Nombre</label><input type="text" id="edit-nombre" placeholder="Nombre completo"></div>
+      <div class="field"><label>Email</label><input type="email" id="edit-email" placeholder="email@ejemplo.cl"></div>
+      <div class="field"><label>Teléfono</label><input type="tel" id="edit-telefono" placeholder="+56912345678"></div>
+      <div class="field"><label>Nueva contraseña <span style="color:var(--text3);font-weight:400">(dejar vacío para no cambiar)</span></label><input type="password" id="edit-password" placeholder="••••••••"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="cerrarModalEditar()">Cancelar</button>
+      <button class="btn btn-primary" onclick="guardarEdicionUsuario()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const API = '/api';
+let token = null;
+
+// ── UTILS ──
+const $ = id => document.getElementById(id);
+const fmt = n => '$' + Math.round(n || 0).toLocaleString('es-CL');
+const fmtDate = d => d ? new Date(d).toLocaleDateString('es-CL', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' }) : '—';
+const fmtDateShort = d => d ? new Date(d).toLocaleDateString('es-CL', { day:'2-digit', month:'2-digit', year:'numeric' }) : '—';
+
+function toast(msg, tipo = '') {
+  const el = $('toast');
+  el.textContent = msg;
+  el.className = 'show ' + tipo;
+  setTimeout(() => { el.className = ''; }, 3000);
+}
+
+async function api(path, opts = {}) {
+  const res = await fetch(API + path, {
+    ...opts,
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}`, ...(opts.headers || {}) }
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Error del servidor');
+  return data;
+}
+
+function badgeEstado(estado) {
+  const map = { pendiente:'badge-pendiente', asignado:'badge-asignado', retiro:'badge-retiro', en_camino:'badge-en_camino', entregado:'badge-entregado', cancelado:'badge-cancelado' };
+  return `<span class="badge ${map[estado] || ''}">${estado}</span>`;
+}
+
+// ── LOGIN ──
+$('btn-login').addEventListener('click', async () => {
+  const email = $('email').value.trim();
+  const pass = $('pass').value;
+  const errEl = $('auth-error');
+  errEl.style.display = 'none';
+
+  try {
+    $('btn-login').textContent = 'Entrando...';
+    const data = await fetch(`${API}/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password: pass })
+    }).then(r => r.json());
+
+    if (data.error) throw new Error(data.error);
+    if (data.usuario.rol !== 'admin') throw new Error('Se requiere cuenta de admin');
+
+    token = data.token;
+    $('auth-screen').style.display = 'none';
+    $('app').style.display = 'block';
+    $('topbar-user').textContent = data.usuario.nombre || 'Admin';
+
+    // Fechas por defecto para liquidaciones (mes actual)
+    const hoy = new Date();
+    const primeroDia = new Date(hoy.getFullYear(), hoy.getMonth(), 1).toISOString().split('T')[0];
+    const hoyStr = hoy.toISOString().split('T')[0];
+    $('liq-desde').value = primeroDia;
+    $('liq-hasta').value = hoyStr;
+
+    cargarResumen();
+    setInterval(cargarResumen, 60000);
+  } catch (e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  } finally {
+    $('btn-login').textContent = 'Entrar';
+  }
+});
+
+$('pass').addEventListener('keydown', e => { if (e.key === 'Enter') $('btn-login').click(); });
+
+$('btn-logout').addEventListener('click', () => {
+  token = null;
+  $('app').style.display = 'none';
+  $('auth-screen').style.display = 'flex';
+});
+
+// ── TABS ──
+let seccionActiva = 'resumen';
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => cargarSeccion(btn.dataset.tab));
+});
+
+function cargarSeccion(nombre) {
+  seccionActiva = nombre;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === nombre));
+  document.querySelectorAll('.section').forEach(s => s.classList.toggle('active', s.id === `sec-${nombre}`));
+
+  if (nombre === 'resumen')       cargarResumen();
+  if (nombre === 'pedidos')       cargarPedidos();
+  if (nombre === 'riders')        cargarRiders();
+  if (nombre === 'comercios')     cargarComercios();
+  if (nombre === 'liquidaciones') cargarLiquidaciones();
+  if (nombre === 'usuarios')      cargarUsuarios();
+}
+
+// ── RESUMEN ──
+let chartResumen = null;
+async function cargarResumen() {
+  try {
+    const m = await api('/admin/metricas');
+    const p = m.pedidos, r = m.riders, n = m.negocios, ing = m.ingresos;
+
+    $('kpi-total').textContent        = p.total;
+    $('kpi-entregados').textContent   = p.entregados;
+    $('kpi-entregados-sub').textContent = `${Math.round(p.entregados / Math.max(p.total, 1) * 100)}% tasa éxito`;
+    $('kpi-en-curso').textContent     = parseInt(p.asignado || 0) + parseInt(p.en_camino || 0);
+    $('kpi-pendientes').textContent   = p.pendientes;
+    $('kpi-riders').textContent       = r.disponibles;
+    $('kpi-riders-sub').textContent   = `de ${r.total} registrados`;
+    $('kpi-ingresos').textContent     = fmt(ing.app_fee_total);
+    $('kpi-distancia').textContent    = parseFloat(ing.distancia_promedio || 0).toFixed(1) + ' km';
+    $('kpi-comercios').textContent    = n.activos;
+    $('kpi-comercios-sub').textContent = `de ${n.total} registrados`;
+    $('resumen-actualizado').textContent = `Actualizado: ${new Date().toLocaleTimeString('es-CL')}`;
+
+    // Pedidos recientes
+    const pedidos = await api('/admin/pedidos?limit=8');
+    $('tbody-recientes').innerHTML = pedidos.map(p => `
+      <tr>
+        <td style="font-family:monospace;font-size:11px;color:var(--text3)">${p.id.substring(0,8)}</td>
+        <td style="font-weight:600">${p.nombre_comercial}</td>
+        <td>${p.cliente_nombre}</td>
+        <td style="font-weight:700;color:var(--green)">${fmt(p.tarifa_entrega)}</td>
+        <td>${badgeEstado(p.estado)}</td>
+        <td style="color:var(--text2)">${p.rider_nombre || '—'}</td>
+      </tr>
+    `).join('');
+
+    // Gráfico últimas 24h (simulado por hora con los datos que tenemos)
+    actualizarChartResumen(parseInt(p.ultimas_24h));
+
+  } catch(e) { toast('Error cargando resumen: ' + e.message, 'error'); }
+}
+
+function actualizarChartResumen(total24h) {
+  const ctx = $('chart-resumen').getContext('2d');
+  if (chartResumen) chartResumen.destroy();
+
+  // Distribuir aproximadamente por hora (estimación)
+  const horas = Array.from({length: 24}, (_, i) => `${i}:00`);
+  const datos = Array.from({length: 24}, () => Math.max(0, Math.floor(Math.random() * (total24h / 8))));
+
+  chartResumen = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: horas,
+      datasets: [{
+        label: 'Pedidos',
+        data: datos,
+        backgroundColor: 'rgba(255, 204, 0, 0.7)',
+        borderColor: '#FFCC00',
+        borderWidth: 1,
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, ticks: { precision: 0, color: '#9a9a94' }, grid: { color: 'rgba(0,0,0,0.05)' } },
+        x: { ticks: { color: '#9a9a94', maxTicksLimit: 12 }, grid: { display: false } }
+      }
+    }
+  });
+}
+
+// ── PEDIDOS ──
+async function cargarPedidos() {
+  const estado = $('filtro-estado').value;
+  const url = `/admin/pedidos?limit=50${estado ? '&estado=' + estado : ''}`;
+  try {
+    const rows = await api(url);
+    $('pedidos-count').textContent = `${rows.length} pedidos`;
+    $('tbody-pedidos').innerHTML = rows.length ? rows.map(p => `
+      <tr>
+        <td style="font-size:12px;color:var(--text3)">${fmtDateShort(p.created_at)}</td>
+        <td style="font-weight:600">${p.nombre_comercial}</td>
+        <td>${p.cliente_nombre}</td>
+        <td style="font-size:12px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${p.direccion_entrega}</td>
+        <td style="color:var(--text2)">${parseFloat(p.distancia_km || 0).toFixed(1)} km</td>
+        <td style="font-weight:700;color:var(--green)">${fmt(p.tarifa_entrega)}</td>
+        <td>${badgeEstado(p.estado)}</td>
+        <td style="color:var(--text2)">${p.rider_nombre || '—'}</td>
+        <td>${['asignado','retiro'].includes(p.estado) ? `<button class="btn btn-danger btn-sm" onclick="liberarPedido('${p.id}')">Liberar</button>` : '—'}</td>
+      </tr>
+    `).join('') : '<tr><td colspan="9" class="empty">No hay pedidos</td></tr>';
+  } catch(e) { toast('Error cargando pedidos: ' + e.message, 'error'); }
+}
+
+// ── RIDERS ──
+let ridersData = [];
+async function cargarRiders() {
+  try {
+    ridersData = await api('/admin/riders');
+    let saldoTotal = 0;
+    let disponibles = 0;
+    ridersData.forEach(r => { saldoTotal += parseInt(r.saldo_pendiente || 0); if (r.disponible) disponibles++; });
+
+    $('r-total').textContent = ridersData.length;
+    $('r-disponibles').textContent = disponibles;
+    $('r-saldo-total').textContent = fmt(saldoTotal);
+
+    // Actualizar select de liquidaciones
+    const sel = $('liq-rider');
+    sel.innerHTML = '<option value="">Seleccionar rider...</option>';
+    ridersData.forEach(r => {
+      const opt = document.createElement('option');
+      opt.value = r.id;
+      opt.textContent = `${r.nombre} ${r.saldo_pendiente > 0 ? '— ' + fmt(r.saldo_pendiente) : ''}`;
+      sel.appendChild(opt);
+    });
+
+    $('tbody-riders').innerHTML = ridersData.length ? ridersData.map(r => `
+      <tr>
+        <td style="font-weight:600">${r.nombre}</td>
+        <td style="color:var(--text2);font-size:12px">${r.email}</td>
+        <td style="font-weight:700">${r.total_entregas || 0}</td>
+        <td>${parseFloat(r.rating || 5).toFixed(1)} ⭐</td>
+        <td>${parseInt(r.saldo_pendiente) > 0 ? `<span class="saldo-tag">${fmt(r.saldo_pendiente)}</span>` : '<span class="saldo-zero">$0</span>'}</td>
+        <td><span class="badge ${r.disponible ? 'badge-disponible' : 'badge-offline'}">${r.disponible ? 'Online' : 'Offline'}</span></td>
+        <td>
+          <button class="btn btn-outline btn-sm" onclick="toggleUsuario('${r.usuario_id}', ${r.activo})">${r.activo ? 'Desactivar' : 'Activar'}</button>
+        </td>
+      </tr>
+    `).join('') : '<tr><td colspan="7" class="empty">No hay riders registrados</td></tr>';
+  } catch(e) { toast('Error cargando riders: ' + e.message, 'error'); }
+}
+
+// ── COMERCIOS ──
+async function cargarComercios() {
+  try {
+    const rows = await api('/admin/negocios');
+    $('tbody-comercios').innerHTML = rows.length ? rows.map(n => {
+      const enPrueba = !n.modo || n.modo === 'prueba';
+      return `<tr>
+        <td style="font-weight:600">${n.nombre_comercial}</td>
+        <td style="color:var(--text2);font-size:12px">${n.email}</td>
+        <td style="color:var(--text2)">${n.categoria || '—'}</td>
+        <td>
+          <span class="badge ${enPrueba ? 'badge-pendiente' : 'badge-activo'}">
+            ${enPrueba ? '🧪 Prueba' : '✓ Activo'}
+          </span>
+        </td>
+        <td><span class="badge ${n.activo ? 'badge-activo' : 'badge-inactivo'}">${n.activo ? 'Habilitado' : 'Bloqueado'}</span></td>
+        <td>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            ${enPrueba
+              ? `<button class="btn btn-primary btn-sm" onclick="activarNegocio('${n.id}')">Activar</button>`
+              : `<button class="btn btn-outline btn-sm" onclick="volverPrueba('${n.id}')">→ Prueba</button>`
+            }
+            <button class="btn btn-outline btn-sm" onclick="toggleUsuario('${n.usuario_id}', ${n.activo})">${n.activo ? 'Bloquear' : 'Habilitar'}</button>
+          </div>
+        </td>
+      </tr>`;
+    }).join('') : '<tr><td colspan="6" class="empty">No hay comercios registrados</td></tr>';
+  } catch(e) { toast('Error cargando comercios: ' + e.message, 'error'); }
+}
+
+async function activarNegocio(negocioId) {
+  if (!confirm('¿Activar este negocio? A partir de ahora se le cobrará por cada pedido.')) return;
+  try {
+    await api(`/admin/negocios/${negocioId}/modo`, { method: 'PUT', body: JSON.stringify({ modo: 'activo' }) });
+    toast('Negocio activado correctamente', 'success');
+    cargarComercios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function volverPrueba(negocioId) {
+  if (!confirm('¿Volver este negocio a modo prueba? No se le cobrará hasta que lo actives.')) return;
+  try {
+    await api(`/admin/negocios/${negocioId}/modo`, { method: 'PUT', body: JSON.stringify({ modo: 'prueba' }) });
+    toast('Negocio en modo prueba', 'success');
+    cargarComercios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── LIBERAR PEDIDO ──
+async function liberarPedido(id) {
+  if (!confirm('¿Liberar este pedido? Volverá a "pendiente" y se desasignará el rider.')) return;
+  try {
+    await api(`/pedidos/${id}/liberar`, { method: 'PUT' });
+    toast('Pedido liberado y vuelto a pendiente', 'success');
+    cargarPedidos();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── TOGGLE USUARIO ──
+async function toggleUsuario(id, activo) {
+  try {
+    await api(`/admin/usuarios/${id}/activo`, {
+      method: 'PUT',
+      body: JSON.stringify({ activo: !activo })
+    });
+    toast(activo ? 'Usuario desactivado' : 'Usuario activado', 'success');
+    if (seccionActiva === 'riders') cargarRiders();
+    if (seccionActiva === 'comercios') cargarComercios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── LIQUIDACIONES ──
+async function cargarLiquidaciones() {
+  await cargarRiders();
+  try {
+    const rows = await api('/admin/liquidaciones');
+    $('tbody-liquidaciones').innerHTML = rows.length ? rows.map(l => {
+      const esPendiente = l.estado === 'pendiente';
+      return `<tr>
+        <td style="font-weight:600">${l.rider_nombre}</td>
+        <td style="font-size:12px;color:var(--text2)">${fmtDateShort(l.fecha_desde)} → ${fmtDateShort(l.fecha_hasta)}</td>
+        <td style="text-align:center;font-weight:700">${l.pedidos_count}</td>
+        <td style="font-weight:700;color:var(--green);font-size:15px">${fmt(l.monto_total)}</td>
+        <td>
+          <span class="badge ${esPendiente ? 'badge-pendiente' : 'badge-entregado'}">
+            ${esPendiente ? 'Pendiente' : '✓ Pagada'}
+          </span>
+          ${l.pagada_at ? `<div style="font-size:11px;color:var(--text3);margin-top:3px">${fmtDateShort(l.pagada_at)}</div>` : ''}
+        </td>
+        <td>
+          ${esPendiente ? `<button class="btn btn-green btn-sm" onclick="marcarPagada('${l.id}')">✓ Marcar pagada</button>` : '—'}
+        </td>
+      </tr>`;
+    }).join('') : '<tr><td colspan="6" class="empty">No hay liquidaciones generadas aún</td></tr>';
+  } catch(e) { toast('Error cargando liquidaciones: ' + e.message, 'error'); }
+}
+
+async function marcarPagada(id) {
+  if (!confirm('¿Confirmas que ya realizaste la transferencia a este rider?')) return;
+  try {
+    await api(`/admin/liquidaciones/${id}/pagar`, { method: 'PUT' });
+    toast('Liquidación marcada como pagada', 'success');
+    cargarLiquidaciones();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── USUARIOS ──
+let usuariosData = [];
+async function cargarUsuarios() {
+  const rol = $('filtro-rol').value;
+  const url = `/admin/usuarios?limit=100${rol ? '&rol=' + rol : ''}`;
+  try {
+    usuariosData = await api(url);
+    $('usuarios-count').textContent = `${usuariosData.length} usuarios`;
+
+    const rolBadge = { admin: 'badge-asignado', negocio: 'badge-retiro', rider: 'badge-en_camino' };
+    $('tbody-usuarios').innerHTML = usuariosData.length ? usuariosData.map(u => `
+      <tr>
+        <td style="font-weight:600">${u.nombre || '—'}</td>
+        <td style="color:var(--text2);font-size:12px">${u.email}</td>
+        <td style="color:var(--text2);font-size:12px">${u.telefono || '—'}</td>
+        <td><span class="badge ${rolBadge[u.rol] || ''}">${u.rol}</span></td>
+        <td><span class="badge ${u.activo ? 'badge-activo' : 'badge-inactivo'}">${u.activo ? 'Activo' : 'Inactivo'}</span></td>
+        <td style="font-size:12px;color:var(--text3)">${fmtDateShort(u.created_at)}</td>
+        <td>
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-outline btn-sm" onclick="abrirEditarUsuario('${u.id}')">Editar</button>
+            <button class="btn btn-outline btn-sm" onclick="toggleUsuarioDesde('${u.id}', ${u.activo})">${u.activo ? 'Desactivar' : 'Activar'}</button>
+            ${u.rol !== 'admin' ? `<button class="btn btn-danger btn-sm" onclick="eliminarUsuario('${u.id}', '${(u.nombre||u.email).replace(/'/g,"\\'")}')">Eliminar</button>` : ''}
+          </div>
+        </td>
+      </tr>
+    `).join('') : '<tr><td colspan="7" class="empty">No hay usuarios</td></tr>';
+  } catch(e) { toast('Error cargando usuarios: ' + e.message, 'error'); }
+}
+
+async function toggleUsuarioDesde(id, activo) {
+  try {
+    await api(`/admin/usuarios/${id}/activo`, { method: 'PUT', body: JSON.stringify({ activo: !activo }) });
+    toast(activo ? 'Usuario desactivado' : 'Usuario activado', 'success');
+    cargarUsuarios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function eliminarUsuario(id, nombre) {
+  if (!confirm(`¿Eliminar a "${nombre}" y todos sus datos? Esta acción no se puede deshacer.`)) return;
+  try {
+    await api(`/admin/usuarios/${id}`, { method: 'DELETE' });
+    toast('Usuario eliminado', 'success');
+    cargarUsuarios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ── MODAL EDITAR USUARIO ──
+let editandoUserId = null;
+
+function abrirEditarUsuario(id) {
+  const u = usuariosData.find(x => x.id === id);
+  if (!u) return;
+  editandoUserId = id;
+  $('edit-nombre').value = u.nombre || '';
+  $('edit-email').value = u.email || '';
+  $('edit-telefono').value = u.telefono || '';
+  $('edit-password').value = '';
+  $('modal-editar').classList.add('open');
+}
+
+function cerrarModalEditar() {
+  $('modal-editar').classList.remove('open');
+  editandoUserId = null;
+}
+
+async function guardarEdicionUsuario() {
+  if (!editandoUserId) return;
+  const body = {};
+  const nombre = $('edit-nombre').value.trim();
+  const email = $('edit-email').value.trim();
+  const telefono = $('edit-telefono').value.trim();
+  const password = $('edit-password').value;
+  if (nombre) body.nombre = nombre;
+  if (email) body.email = email;
+  if (telefono) body.telefono = telefono;
+  if (password) body.password = password;
+
+  try {
+    await api(`/admin/usuarios/${editandoUserId}`, { method: 'PUT', body: JSON.stringify(body) });
+    toast('Usuario actualizado', 'success');
+    cerrarModalEditar();
+    cargarUsuarios();
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function generarLiquidacion() {
+  const rider_id = $('liq-rider').value;
+  const fecha_desde = $('liq-desde').value;
+  const fecha_hasta = $('liq-hasta').value;
+  const errEl = $('liq-error');
+  errEl.style.display = 'none';
+
+  if (!rider_id || !fecha_desde || !fecha_hasta) {
+    errEl.textContent = 'Completa todos los campos';
+    errEl.style.display = 'block';
+    return;
+  }
+
+  try {
+    const liq = await api('/admin/liquidar', {
+      method: 'POST',
+      body: JSON.stringify({ rider_id, fecha_desde, fecha_hasta })
+    });
+    toast(`Liquidación generada: ${fmt(liq.monto_total)} por ${liq.pedidos_count} entregas`, 'success');
+    $('liq-rider').value = '';
+    cargarRiders();
+  } catch(e) {
+    errEl.textContent = e.message;
+    errEl.style.display = 'block';
+  }
+}
+</script>
+</body>
+</html>

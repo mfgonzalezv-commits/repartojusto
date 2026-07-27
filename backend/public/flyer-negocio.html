@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flyer RepartoJusto — Negocios</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .flyer {
+    width: 10.8cm;
+    height: 14cm;
+    background: #111d3c;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  /* Franja superior amarilla */
+  .top-stripe {
+    background: #f5c518;
+    padding: 10px 14px 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo-text {
+    font-size: 15px;
+    font-weight: 900;
+    color: #111d3c;
+    letter-spacing: -0.3px;
+  }
+  .logo-icon { font-size: 16px; }
+
+  /* Cuerpo principal */
+  .body {
+    flex: 1;
+    padding: 14px 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .headline {
+    font-size: 22px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+  .headline span {
+    color: #f5c518;
+  }
+
+  .sub {
+    font-size: 11px;
+    color: #b0bcd4;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  /* Pill grande de precio */
+  .precio-pill {
+    background: #f5c518;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .precio-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: #111d3c;
+    line-height: 1;
+  }
+  .precio-desc {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #111d3c;
+    line-height: 1.4;
+  }
+
+  /* Beneficios */
+  .beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ben {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ben-icon {
+    font-size: 13px;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .ben-text {
+    font-size: 10.5px;
+    color: #d4dff0;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  /* Divisor */
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* CTA inferior */
+  .cta {
+    background: #f5c518;
+    padding: 11px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .cta-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .cta-label {
+    font-size: 8.5px;
+    color: #5a4400;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .cta-url {
+    font-size: 16px;
+    font-weight: 900;
+    color: #111d3c;
+    letter-spacing: -0.5px;
+  }
+  .qr-placeholder {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* Print styles */
+  @media print {
+    body {
+      background: white;
+      padding: 0;
+      margin: 0;
+    }
+    .flyer {
+      box-shadow: none;
+      border-radius: 0;
+      width: 10.8cm;
+      height: 14cm;
+    }
+    @page {
+      size: 10.8cm 14cm;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="flyer">
+
+  <!-- Top stripe -->
+  <div class="top-stripe">
+    <span class="logo-icon">🛵</span>
+    <span class="logo-text">Reparto Justo</span>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <div class="headline">
+      Delivery para<br>tu negocio<br><span>sin comisiones.</span>
+    </div>
+
+    <div class="sub">
+      Uber Eats y Rappi te cobran hasta un 30% por cada venta.<br>
+      Nosotros cobramos solo por el despacho.
+    </div>
+
+    <!-- Precio destacado -->
+    <div class="precio-pill">
+      <div class="precio-num">$500</div>
+      <div class="precio-desc">tarifa fija<br>por pedido<br><span style="font-weight:400;font-size:9px">sin importar el monto de la venta</span></div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Beneficios -->
+    <div class="beneficios">
+      <div class="ben">
+        <span class="ben-icon">📍</span>
+        <span class="ben-text">Seguimiento en tiempo real para ti y tu cliente</span>
+      </div>
+      <div class="ben">
+        <span class="ben-icon">💳</span>
+        <span class="ben-text">Sin mensualidad — pagas solo cuando despachas</span>
+      </div>
+      <div class="ben">
+        <span class="ben-icon">📊</span>
+        <span class="ben-text">Panel con historial de pedidos y clientes</span>
+      </div>
+      <div class="ben">
+        <span class="ben-icon">✅</span>
+        <span class="ben-text">Registro gratis en menos de 2 minutos</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-left">
+      <span class="cta-label">Regístrate gratis en</span>
+      <span class="cta-url">repartojusto.cl</span>
+    </div>
+    <div class="qr-placeholder">QR<br>aquí</div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "Reparto Justo — Rider",
+  "short_name": "RJ Rider",
+  "description": "App de entregas para riders de Reparto Justo",
+  "start_url": "/rider.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1C1C1C",
+  "theme_color": "#FFCC00",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "es-CL",
+  "dir": "ltr",
+  "prefer_related_applications": false
+}

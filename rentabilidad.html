@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reparto Justo — Análisis de Rentabilidad</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --amarillo: #FFCC00;
+    --negro: #1C1C1C;
+    --navy: #0F172A;
+    --bg: #F9F9F9;
+    --bg2: #FFFFFF;
+    --border: rgba(0,0,0,0.09);
+    --text: #1C1C1C;
+    --text2: #6b6b66;
+    --text3: #9a9a94;
+    --green: #16A34A;
+    --green-bg: #DCFCE7;
+    --red: #DC2626;
+    --red-bg: #FEE2E2;
+    --blue: #2563EB;
+    --blue-bg: #DBEAFE;
+    --purple: #7C3AED;
+    --purple-bg: #EDE9FE;
+    --amber: #D97706;
+    --amber-bg: #FEF3C7;
+    --r: 12px; --r-sm: 8px;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
+  .container { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  /* HEADER */
+  .page-header { background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%); border-radius: var(--r); padding: 32px 28px; margin-bottom: 24px; }
+  .ph-brand { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 6px; }
+  .ph-title { font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+  .ph-title span { color: var(--amarillo); }
+  .ph-sub { font-size: 13px; color: rgba(255,255,255,.7); }
+  .ph-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .ph-badge { display: inline-block; background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 99px; }
+  .ph-badge.yellow { background: var(--amarillo); color: var(--negro); }
+
+  /* CARDS */
+  .card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: 22px; margin-bottom: 16px; }
+  .card-title { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--text3); margin-bottom: 16px; }
+
+  /* SUPUESTOS */
+  .supuesto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+  .sup { background: var(--bg); border-radius: var(--r-sm); padding: 14px; }
+  .sup-label { font-size: 11px; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .sup-val { font-size: 20px; font-weight: 800; color: var(--negro); }
+  .sup-sub { font-size: 11px; color: var(--text2); margin-top: 3px; }
+  .sup.highlight { background: var(--amber-bg); }
+  .sup.highlight .sup-val { color: var(--amber); }
+
+  /* ALERTA */
+  .alerta { background: var(--amber-bg); border: 1px solid rgba(217,119,6,.2); border-radius: var(--r-sm); padding: 14px 16px; margin-bottom: 16px; font-size: 13px; color: var(--amber); display: flex; gap: 10px; align-items: flex-start; }
+  .alerta-icon { font-size: 18px; flex-shrink: 0; }
+  .alerta strong { color: #92400E; }
+
+  /* ESCENARIOS */
+  .esc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
+  .esc-card { border-radius: var(--r); overflow: hidden; border: 1.5px solid var(--border); }
+  .esc-header { padding: 16px; text-align: center; }
+  .esc-card.bajo .esc-header { background: var(--bg); }
+  .esc-card.medio .esc-header { background: var(--blue-bg); }
+  .esc-card.alto .esc-header { background: var(--purple-bg); }
+  .esc-nombre { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+  .esc-card.bajo .esc-nombre { color: var(--text3); }
+  .esc-card.medio .esc-nombre { color: var(--blue); }
+  .esc-card.alto .esc-nombre { color: var(--purple); }
+  .esc-negocios { font-size: 28px; font-weight: 900; line-height: 1; }
+  .esc-card.bajo .esc-negocios { color: var(--text); }
+  .esc-card.medio .esc-negocios { color: var(--blue); }
+  .esc-card.alto .esc-negocios { color: var(--purple); }
+  .esc-nsub { font-size: 11px; margin-top: 2px; }
+  .esc-card.bajo .esc-nsub { color: var(--text3); }
+  .esc-card.medio .esc-nsub { color: var(--blue); }
+  .esc-card.alto .esc-nsub { color: var(--purple); }
+
+  .esc-body { padding: 14px 16px; background: var(--bg2); }
+  .esc-row { display: flex; justify-content: space-between; font-size: 12px; padding: 5px 0; border-bottom: 1px solid var(--border); color: var(--text2); }
+  .esc-row:last-child { border-bottom: none; }
+  .esc-row .v { font-weight: 700; color: var(--text); }
+  .esc-row.costo .v { color: var(--red); }
+  .esc-row.total { font-size: 13px; }
+  .esc-row.total .v { font-size: 15px; }
+  .esc-card.bajo .esc-row.total .v { color: var(--text); }
+  .esc-card.medio .esc-row.total .v { color: var(--blue); }
+  .esc-card.alto .esc-row.total .v { color: var(--purple); }
+
+  .esc-margen { padding: 12px 16px; text-align: center; border-top: 1px solid var(--border); }
+  .esc-card.bajo .esc-margen { background: var(--bg); }
+  .esc-card.medio .esc-margen { background: var(--blue-bg); }
+  .esc-card.alto .esc-margen { background: var(--purple-bg); }
+  .esc-margen-pct { font-size: 22px; font-weight: 900; }
+  .esc-card.bajo .esc-margen-pct { color: var(--text); }
+  .esc-card.medio .esc-margen-pct { color: var(--blue); }
+  .esc-card.alto .esc-margen-pct { color: var(--purple); }
+  .esc-margen-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+  .esc-card.bajo .esc-margen-label { color: var(--text3); }
+  .esc-card.medio .esc-margen-label { color: var(--blue); }
+  .esc-card.alto .esc-margen-label { color: var(--purple); }
+
+  .esc-recupero { margin-top: 10px; font-size: 11px; padding: 7px 10px; border-radius: var(--r-sm); font-weight: 600; text-align: center; }
+  .esc-card.bajo .esc-recupero { background: var(--amber-bg); color: var(--amber); }
+  .esc-card.medio .esc-recupero { background: var(--green-bg); color: var(--green); }
+  .esc-card.alto .esc-recupero { background: var(--green-bg); color: var(--green); }
+
+  /* EQUILIBRIO */
+  .eq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .eq-card { background: var(--bg); border-radius: var(--r-sm); padding: 16px; text-align: center; }
+  .eq-val { font-size: 26px; font-weight: 900; color: var(--negro); }
+  .eq-val.green { color: var(--green); }
+  .eq-val.blue { color: var(--blue); }
+  .eq-label { font-size: 11px; color: var(--text2); margin-top: 4px; }
+
+  /* TABLA DETALLE */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th { background: var(--bg); padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text2); border-bottom: 1px solid var(--border); }
+  thead th:not(:first-child) { text-align: right; }
+  tbody td { padding: 11px 14px; border-bottom: 1px solid var(--border); }
+  tbody td:not(:first-child) { text-align: right; font-weight: 600; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--bg); }
+  .td-label { color: var(--text2); font-weight: 400; }
+  .td-green { color: var(--green); }
+  .td-red { color: var(--red); }
+  .td-blue { color: var(--blue); }
+  .td-purple { color: var(--purple); }
+  .tr-total td { background: var(--negro) !important; color: #fff; font-weight: 700; }
+  .tr-total td:not(:first-child) { color: var(--amarillo); font-size: 15px; }
+
+  /* CONCLUSIONES */
+  .conclusion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .conc { border-radius: var(--r-sm); padding: 16px; }
+  .conc.positive { background: var(--green-bg); }
+  .conc.warning { background: var(--amber-bg); }
+  .conc-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .conc.positive .conc-title { color: var(--green); }
+  .conc.warning .conc-title { color: var(--amber); }
+  .conc-text { font-size: 12px; line-height: 1.6; }
+  .conc.positive .conc-text { color: #166534; }
+  .conc.warning .conc-text { color: #92400E; }
+
+  /* FLUJO DE DINERO */
+  .flujo { display: flex; gap: 0; align-items: stretch; margin-bottom: 16px; overflow-x: auto; }
+  .flujo-item { flex: 1; min-width: 130px; background: var(--bg); border: 1px solid var(--border); padding: 14px 12px; text-align: center; position: relative; }
+  .flujo-item:not(:last-child)::after { content: '→'; position: absolute; right: -12px; top: 50%; transform: translateY(-50%); font-size: 16px; color: var(--text3); z-index: 1; }
+  .flujo-item:first-child { border-radius: var(--r-sm) 0 0 var(--r-sm); }
+  .flujo-item:last-child { border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+  .flujo-actor { font-size: 20px; margin-bottom: 4px; }
+  .flujo-nombre { font-size: 11px; font-weight: 700; color: var(--text); }
+  .flujo-monto { font-size: 13px; font-weight: 700; margin-top: 6px; }
+  .flujo-sub { font-size: 10px; color: var(--text3); margin-top: 2px; }
+  .flujo-item.rj { background: var(--negro); }
+  .flujo-item.rj .flujo-nombre { color: var(--amarillo); }
+  .flujo-item.rj .flujo-monto { color: #fff; }
+  .flujo-item.rj .flujo-sub { color: rgba(255,255,255,.5); }
+
+  @media (max-width: 640px) {
+    .esc-grid { grid-template-columns: 1fr; }
+    .conclusion-grid { grid-template-columns: 1fr; }
+    .eq-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <div class="ph-brand">Reparto Justo — Análisis interno</div>
+    <div class="ph-title">Análisis de <span>Rentabilidad</span></div>
+    <div class="ph-sub">¿Cuándo y cuánto gana la plataforma? Tres escenarios con inversión inicial de $600.000.</div>
+    <div class="ph-badges">
+      <span class="ph-badge yellow">Inversión inicial: $600.000</span>
+      <span class="ph-badge">APP FEE: $500/pedido</span>
+      <span class="ph-badge">22 días hábiles/mes</span>
+    </div>
+  </div>
+
+  <!-- ALERTA MODO PRUEBA -->
+  <div class="alerta">
+    <div class="alerta-icon">⚠️</div>
+    <div><strong>Importante — Marcha blanca:</strong> Durante el período de prueba los negocios no pagan. El ingreso comienza cuando el admin activa cada negocio desde el dashboard. Este análisis asume negocios en modo activo.</div>
+  </div>
+
+  <!-- FLUJO DE DINERO -->
+  <div class="card">
+    <div class="card-title">¿Cómo fluye el dinero en cada pedido?</div>
+    <div class="flujo">
+      <div class="flujo-item">
+        <div class="flujo-actor">🏪</div>
+        <div class="flujo-nombre">Negocio</div>
+        <div class="flujo-monto" style="color:var(--red)">Paga $500 + tarifa</div>
+        <div class="flujo-sub">APP FEE + km al rider</div>
+      </div>
+      <div class="flujo-item rj">
+        <div class="flujo-actor">⚡</div>
+        <div class="flujo-nombre">Reparto Justo</div>
+        <div class="flujo-monto">Retiene $500</div>
+        <div class="flujo-sub">APP FEE íntegro</div>
+      </div>
+      <div class="flujo-item">
+        <div class="flujo-actor">🏍️</div>
+        <div class="flujo-nombre">Rider entrega</div>
+        <div class="flujo-monto" style="color:var(--green)">Recibe tarifa/km</div>
+        <div class="flujo-sub">100% va al rider</div>
+      </div>
+      <div class="flujo-item">
+        <div class="flujo-actor">👤</div>
+        <div class="flujo-nombre">Rider referidor</div>
+        <div class="flujo-monto" style="color:var(--amber)">Recibe $40</div>
+        <div class="flujo-sub">8% del APP FEE</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--text3)">* El $40 residual solo aplica si el negocio fue incorporado por un rider. RJ neto: $500 (sin referido) o $460 (con referido).</p>
+  </div>
+
+  <!-- SUPUESTOS -->
+  <div class="card">
+    <div class="card-title">Supuestos del modelo</div>
+    <div class="supuesto-grid">
+      <div class="sup highlight">
+        <div class="sup-label">Inversión inicial</div>
+        <div class="sup-val">$600.000</div>
+        <div class="sup-sub">Costo a recuperar</div>
+      </div>
+      <div class="sup">
+        <div class="sup-label">APP FEE por pedido</div>
+        <div class="sup-val">$500</div>
+        <div class="sup-sub">Ingreso bruto RJ</div>
+      </div>
+      <div class="sup">
+        <div class="sup-label">Residual rider referidor</div>
+        <div class="sup-val">$40</div>
+        <div class="sup-sub">8% del APP FEE</div>
+      </div>
+      <div class="sup">
+        <div class="sup-label">Hosting mensual</div>
+        <div class="sup-val">$30.000</div>
+        <div class="sup-sub">Railway ~$30 USD</div>
+      </div>
+      <div class="sup">
+        <div class="sup-label">Bono rider referido</div>
+        <div class="sup-val">$2.500</div>
+        <div class="sup-sub">Pago único, c/15 entregas</div>
+      </div>
+      <div class="sup">
+        <div class="sup-label">Días hábiles</div>
+        <div class="sup-val">22</div>
+        <div class="sup-sub">Por mes</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESCENARIOS -->
+  <div class="card">
+    <div class="card-title">Los 3 escenarios</div>
+    <div class="esc-grid">
+
+      <!-- ARRANQUE -->
+      <div class="esc-card bajo">
+        <div class="esc-header">
+          <div class="esc-nombre">Arranque</div>
+          <div class="esc-negocios">5</div>
+          <div class="esc-nsub">negocios activos</div>
+          <div class="esc-nsub">8 pedidos/día c/u</div>
+        </div>
+        <div class="esc-body">
+          <div class="esc-row"><span>Pedidos al mes</span><span class="v">880</span></div>
+          <div class="esc-row"><span>Ingreso bruto</span><span class="v">$440.000</span></div>
+          <div class="esc-row costo"><span>Residuales riders</span><span class="v">-$17.600</span></div>
+          <div class="esc-row costo"><span>Hosting</span><span class="v">-$30.000</span></div>
+          <div class="esc-row costo"><span>Bonos riders</span><span class="v">-$5.000</span></div>
+          <div class="esc-row total"><span>Margen neto/mes</span><span class="v">$387.400</span></div>
+        </div>
+        <div class="esc-margen">
+          <div class="esc-margen-pct">88%</div>
+          <div class="esc-margen-label">Margen operacional</div>
+          <div class="esc-recupero">Recupera $600K en ~1,5 meses</div>
+        </div>
+      </div>
+
+      <!-- CRECIMIENTO -->
+      <div class="esc-card medio">
+        <div class="esc-header">
+          <div class="esc-nombre">Crecimiento</div>
+          <div class="esc-negocios">20</div>
+          <div class="esc-nsub">negocios activos</div>
+          <div class="esc-nsub">10 pedidos/día c/u</div>
+        </div>
+        <div class="esc-body">
+          <div class="esc-row"><span>Pedidos al mes</span><span class="v">4.400</span></div>
+          <div class="esc-row"><span>Ingreso bruto</span><span class="v">$2.200.000</span></div>
+          <div class="esc-row costo"><span>Residuales riders</span><span class="v">-$105.600</span></div>
+          <div class="esc-row costo"><span>Hosting</span><span class="v">-$30.000</span></div>
+          <div class="esc-row costo"><span>Bonos riders</span><span class="v">-$20.000</span></div>
+          <div class="esc-row total"><span>Margen neto/mes</span><span class="v">$2.044.400</span></div>
+        </div>
+        <div class="esc-margen">
+          <div class="esc-margen-pct">93%</div>
+          <div class="esc-margen-label">Margen operacional</div>
+          <div class="esc-recupero">✓ Inversión recuperada desde el inicio</div>
+        </div>
+      </div>
+
+      <!-- ESCALA -->
+      <div class="esc-card alto">
+        <div class="esc-header">
+          <div class="esc-nombre">Escala</div>
+          <div class="esc-negocios">50</div>
+          <div class="esc-nsub">negocios activos</div>
+          <div class="esc-nsub">15 pedidos/día c/u</div>
+        </div>
+        <div class="esc-body">
+          <div class="esc-row"><span>Pedidos al mes</span><span class="v">16.500</span></div>
+          <div class="esc-row"><span>Ingreso bruto</span><span class="v">$8.250.000</span></div>
+          <div class="esc-row costo"><span>Residuales riders</span><span class="v">-$462.000</span></div>
+          <div class="esc-row costo"><span>Hosting</span><span class="v">-$50.000</span></div>
+          <div class="esc-row costo"><span>Bonos riders</span><span class="v">-$50.000</span></div>
+          <div class="esc-row total"><span>Margen neto/mes</span><span class="v">$7.688.000</span></div>
+        </div>
+        <div class="esc-margen">
+          <div class="esc-margen-pct">93%</div>
+          <div class="esc-margen-label">Margen operacional</div>
+          <div class="esc-recupero">✓ Inversión recuperada desde el inicio</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PUNTO DE EQUILIBRIO OPERACIONAL -->
+  <div class="card">
+    <div class="card-title">Punto de equilibrio operacional — ¿cuánto necesito para no perder?</div>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">Ignorando la inversión inicial. Solo para cubrir los costos fijos mensuales de operación.</p>
+    <div class="eq-grid">
+      <div class="eq-card">
+        <div class="eq-val green">63</div>
+        <div class="eq-label">Pedidos/mes mínimos</div>
+      </div>
+      <div class="eq-card">
+        <div class="eq-val blue">3</div>
+        <div class="eq-label">Pedidos/día necesarios</div>
+      </div>
+      <div class="eq-card">
+        <div class="eq-val" style="color:var(--purple)">1</div>
+        <div class="eq-label">Negocio pequeño alcanza</div>
+      </div>
+      <div class="eq-card">
+        <div class="eq-val" style="color:var(--amber)">$480</div>
+        <div class="eq-label">Ingreso neto promedio/pedido</div>
+      </div>
+    </div>
+    <div style="background:var(--green-bg);border-radius:var(--r-sm);padding:14px;margin-top:14px">
+      <p style="font-size:13px;color:#166534"><strong>Conclusión:</strong> El costo operativo es tan bajo que con un solo negocio pequeño activo ya se cubren los gastos del mes. La inversión inicial de $600.000 se recupera en menos de 2 meses con solo 5 negocios activos.</p>
+    </div>
+  </div>
+
+  <!-- TABLA RESUMEN COMPARATIVA -->
+  <div class="card">
+    <div class="card-title">Tabla comparativa — resumen ejecutivo</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Métrica</th>
+            <th>Arranque</th>
+            <th>Crecimiento</th>
+            <th>Escala</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-label">Negocios activos</td>
+            <td>5</td>
+            <td>20</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td class="td-label">Pedidos/día</td>
+            <td>40</td>
+            <td>200</td>
+            <td>750</td>
+          </tr>
+          <tr>
+            <td class="td-label">Pedidos al mes</td>
+            <td>880</td>
+            <td>4.400</td>
+            <td>16.500</td>
+          </tr>
+          <tr>
+            <td class="td-label">Ingreso bruto</td>
+            <td>$440.000</td>
+            <td>$2.200.000</td>
+            <td>$8.250.000</td>
+          </tr>
+          <tr>
+            <td class="td-label">Total costos</td>
+            <td class="td-red">$52.600</td>
+            <td class="td-red">$155.600</td>
+            <td class="td-red">$562.000</td>
+          </tr>
+          <tr class="tr-total">
+            <td>Margen neto/mes</td>
+            <td>$387.400</td>
+            <td>$2.044.400</td>
+            <td>$7.688.000</td>
+          </tr>
+          <tr>
+            <td class="td-label">Margen %</td>
+            <td class="td-green">88%</td>
+            <td class="td-green">93%</td>
+            <td class="td-green">93%</td>
+          </tr>
+          <tr>
+            <td class="td-label">Recupera $600K</td>
+            <td class="td-blue">~1,5 meses</td>
+            <td class="td-green">Inmediato</td>
+            <td class="td-green">Inmediato</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CONCLUSIONES -->
+  <div class="card">
+    <div class="card-title">Conclusiones</div>
+    <div class="conclusion-grid">
+      <div class="conc positive">
+        <div class="conc-title">✓ Modelo muy eficiente</div>
+        <div class="conc-text">RJ no absorbe el costo de las entregas — ese dinero lo pone el negocio y va directo al rider. El 93% del ingreso es margen neto, lo que es excepcionalmente alto para una plataforma de delivery.</div>
+      </div>
+      <div class="conc positive">
+        <div class="conc-title">✓ Break-even rápido</div>
+        <div class="conc-text">Con solo 5 negocios activos haciendo 8 pedidos diarios, la inversión inicial de $600.000 se recupera en menos de 2 meses. La barrera de entrada es muy baja.</div>
+      </div>
+      <div class="conc positive">
+        <div class="conc-title">✓ Escala sin costos proporcionales</div>
+        <div class="conc-text">Pasar de 5 a 50 negocios multiplica el ingreso por 19x, pero los costos solo crecen 10x. El modelo escala bien porque la infraestructura tecnológica no cambia con el volumen.</div>
+      </div>
+      <div class="conc warning">
+        <div class="conc-title">⚠️ Riesgo: volumen en marcha blanca</div>
+        <div class="conc-text">Durante el período de prueba los negocios no pagan. El negocio se activa cuando los negocios pasan a modo activo. La prioridad es activar negocios rápido, no solo captarlos.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
