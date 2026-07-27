@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-07-27T00:00:00Z
+**Última verificación:** 2026-07-27T04:07:38 UTC
 **Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** El entorno de ejecución bloquea conexiones salientes a `repartojusto-production.up.railway.app` — proxy devuelve `403 Forbidden` en el túnel CONNECT (curl exit 56, HTTP 000). No es posible determinar si el servidor está operativo o caído desde este ambiente. Verificar manualmente: https://repartojusto-production.up.railway.app/health
+**Detalle:** curl exit 56 — el proxy del entorno bloquea conexiones salientes a `repartojusto-production.up.railway.app:443` (HTTP 000). No es posible confirmar el estado desde este entorno. Verificar manualmente: https://repartojusto-production.up.railway.app/health
