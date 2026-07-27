@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-26
+**Actualizado:** 2026-07-27
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -8,8 +8,8 @@
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Viernes 24 de julio" redactado 24/07 — último viernes de julio, peak fin de semana pollo, Rappi Turbo Quilpué urgencia |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 26 de julio" redactado 26/07 — medicamentos a domicilio domingo invernal, fiebre del fin de semana, no salir al frío + Rappi Turbo urgencia |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 24 de julio" redactado 24/07 — último viernes de julio, pizza = peak viernes delivery, Rappi Turbo Quilpué urgencia |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — PRIORIDAD, cuarta semana julio, noche martes = peak sushi delivery |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 21 de julio" redactado 21/07 — peak botillería martes invernal, Rappi Turbo Quilpué urgencia |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — PRIORIDAD, ÚLTIMO domingo de julio, noche domingo = peak sushi familiar + arg. Premios Uber Eats 29/07 |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — ÚLTIMO domingo de julio, peak botillería tarde dominical invernal, arg. Premios Uber Eats 29/07 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Jueves 23 de julio" redactado 23/07 — peak reposición previo al fin de semana invernal, Rappi Turbo Quilpué urgencia |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 22 de julio" redactado 22/07 — peak tortas y pasteles mitad de semana, café de tarde invernal |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Sábado 25 de julio" redactado 25/07 — ÚLTIMO sábado de julio, peak almuerzo familiar asado/costillar invernal + Rappi Turbo Quilpué urgencia |
@@ -118,10 +118,44 @@
 | 112 | Restaurante Vincenzo | Restaurante italiano / pastas artesanales | Porvenir 849, Villa Alemana (@VincezoVillaAlemana, Facebook) | Nuevo | — | Presentación redactada 25/07 — pastas artesanales + platos tradicionales + carta de vinos y cervezas, tel. +56 32 318 1242, email contactovincenzo@gmail.com |
 | 113 | Fuster Pizza | Pizzería | Francisco Coloane 1840, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 26/07 — pizzería en Rappi, argumento $500 vs $3.360 comisión Rappi por pizza $12.000 + sin algoritmo + Rappi Turbo Quilpué urgencia |
 | 114 | Buscando Sushi Peñablanca | Sushi | Peñablanca / Villa Alemana (@buscandosushi_penablanca, Instagram) | Nuevo | — | Presentación redactada 26/07 — canal propio Instagram, delivery Ma-Ju 17:00-23:30 y Vi-Do 16:00-23:30 zona Peñablanca/Villa Alemana, sushi ticket alto ~$15.000+ |
+| 115 | Cafetería Latorre | Cafetería / heladería | Paseo Latorre, Centro de Villa Alemana | Nuevo | — | Presentación redactada 27/07 — en Rappi + Uber Eats (doble comisión), cafetería y heladería en pleno centro VA, ahorro ~$400K/mes vs. comisiones actuales |
+| 116 | Fusión Peruana Villa Alemana | Comida peruana | Villa Alemana (@fusionperuana_villaalemana, Instagram) | Nuevo | — | Presentación redactada 27/07 — canal propio Instagram, comida peruana delivery sin grandes plataformas, ticket alto lomo saltado/ceviche, argumento potenciar logística local sin comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-27)
+
+> **NOTA PARA MATÍAS:** Hoy es **domingo 27 de julio — el ÚLTIMO domingo de julio, el mes más frío del año y el de mayor demanda de delivery en Chile**. El domingo de invierno tiene una lógica clara: la familia que se queda en casa, el sushi del domingo por la noche, la botillería de la tarde. Se redactan **4 mensajes**: (1) seguimientos **"Domingo 27 de julio"** para **#5 Sushi Zen** (Freire 1100, PRIORIDAD — 6 días sin draft fresco, domingo noche = peak sushi familiar invernal) y **#6 Botillería El Copihue** (Av. Álvarez 2310, 6 días sin draft — tarde dominical de invierno = peak bebidas); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Cafetería Latorre (#115)** — cafetería y heladería en el Paseo Latorre, centro de Villa Alemana, en Rappi + Uber Eats (doble comisión) — y **Fusión Peruana Villa Alemana (#116)** — comida peruana delivery con canal propio Instagram @fusionperuana_villaalemana, sin grandes plataformas. Pipeline total: **116 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) Los 7 borradores SSW para prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) llevan **11 días sin salir** desde la venta de PedidosYa a SSW Partners NY (16/07) — **ventana de impacto cerrando, lunes 28/07 es la última oportunidad**. (2) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **32 días consecutivos** con borradores activos sin confirmación de envío. (3) **VENTANA PREMIOS UBER EATS se activa MAÑANA lunes 28/07** — ceremonia el martes 29/07 en Santiago. Usar el contraste "Uber Eats premia a los grandes de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo" en TODOS los mensajes de esta semana. **Actualizado:** 2026-07-27.
+
+---
+
+#### "DOMINGO 27 DE JULIO" — Contactados sin mensaje fresco (27/07)
+
+**[5] Sushi Zen — Domingo 27 de julio (27/07):**
+"Hola Sushi Zen! RepartoJusto — domingo 27 de julio, el ÚLTIMO domingo de julio, el mes más frío del año y el de mayor demanda de delivery en Chile. El domingo de invierno tiene una lógica particular para el sushi: es el día en que la familia se queda en casa y quiere algo especial para la cena, sin tener que salir al frío de la noche. El sushi es el pedido estrella del domingo por la noche en Chile — el que llega caliente a domicilio mientras afuera bajan los 6°C del último domingo de julio. Para un set de rolls de $18.000, Rappi cobra $5.040 de comisión — con RepartoJusto son $500 siempre, el resto queda en Sushi Zen. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — un sushi delivery con logística local de tarifa fija posicionado en el ÚLTIMO domingo de julio tiene ventaja difícil de replicar cuando lleguen al barrio. Y el martes 29, Uber Eats tiene su ceremonia de premios en Santiago para los grandes del delivery — nosotros trabajamos en Freire 1100 con $500 fijo, sin algoritmo que esconda a Sushi Zen. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Este domingo cerramos?"
+
+---
+
+**[6] Botillería El Copihue — Domingo 27 de julio (27/07):**
+"Hola Botillería El Copihue! RepartoJusto — domingo 27 de julio, el ÚLTIMO domingo de julio, el mes más frío del año. El domingo de invierno en Chile tiene una lógica que Av. Álvarez 2310 conoce perfectamente: el asado familiar del almuerzo que necesita su vino, la once de domingo con las bebidas que se acabaron, la tarde de partido que pide su cerveza sin salir al frío. La botillería que hace delivery a domicilio el domingo invernal en Villa Alemana está capturando uno de los momentos de mayor demanda de la semana. RepartoJusto cobra $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pedido de $15.000 en bebidas y vinos, una plataforma de porcentaje cobra hasta $4.200 de comisión — con nosotros son $500 siempre, el resto queda en el negocio. Dato urgente: Rappi Turbo ya está en Quilpué a 8 km — una botillería con delivery local de tarifa fija posicionada antes de que lleguen al barrio tiene ventaja real. Y el martes 29, Uber Eats premia a sus favoritos de Santiago — nosotros trabajamos en tu barrio con $500 fijo. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-27)
+
+**[115] Cafetería Latorre — Presentación:**
+"Hola Cafetería Latorre! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi y Uber Eats — cafetería y heladería en el Paseo Latorre, corazón del centro de Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales a sus pedidos a domicilio por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Están en dos plataformas simultáneamente — lo que significa que por cada café o helado que llega por Rappi o Uber Eats, pagan hasta un 30% de comisión por pedido. Para un pedido de $8.000 en café y pasteles, una plataforma de porcentaje cobra hasta $2.400 de comisión — con nosotros son $500 siempre. Con RepartoJusto suman una logística propia de tarifa fija sin depender de los algoritmos de Rappi y Uber Eats para su visibilidad en la zona. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km — una cafetería del centro de Villa Alemana con delivery local propio está mejor posicionada cuando la competencia llegue al barrio. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana — mismo barrio, mismos clientes. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[116] Fusión Peruana Villa Alemana — Presentación:**
+"Hola Fusión Peruana Villa Alemana! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram (@fusionperuana_villaalemana) — comida peruana con delivery en Villa Alemana. Ya tienen su canal de delivery activo — lo que suma RepartoJusto es la logística local con riders de la zona por $500 fijos por pedido entregado, sin porcentaje sobre la venta. La comida peruana tiene uno de los tickets promedio más altos del delivery: un lomo saltado, un ceviche caliente o un ají de gallina sobre $12.000 paga $3.360 de comisión en plataformas de porcentaje — con nosotros son $500 siempre, el resto queda en el negocio. El domingo de invierno en Villa Alemana es el día del almuerzo familiar de confort: el lomo saltado que llega a domicilio mientras afuera están los 7°C del último domingo de julio. Con canal propio en Instagram ya tienen su comunidad activa en Villa Alemana. RepartoJusto suma la logística local con riders del barrio, sin que un algoritmo les baje la visibilidad y sin necesidad de ceder un porcentaje por cada pedido. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
