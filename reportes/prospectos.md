@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-27
+**Actualizado:** 2026-07-28
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -11,9 +11,9 @@
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — PRIORIDAD, ÚLTIMO domingo de julio, noche domingo = peak sushi familiar + arg. Premios Uber Eats 29/07 |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — ÚLTIMO domingo de julio, peak botillería tarde dominical invernal, arg. Premios Uber Eats 29/07 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Jueves 23 de julio" redactado 23/07 — peak reposición previo al fin de semana invernal, Rappi Turbo Quilpué urgencia |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 22 de julio" redactado 22/07 — peak tortas y pasteles mitad de semana, café de tarde invernal |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — primer lunes última semana de julio, planificación semanal + arg. Premios Uber Eats 29/07 (negocios de barrio no aparecen en lista UE) |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Sábado 25 de julio" redactado 25/07 — ÚLTIMO sábado de julio, peak almuerzo familiar asado/costillar invernal + Rappi Turbo Quilpué urgencia |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 22 de julio" redactado 22/07 — peak café delivery de media semana, cuarto miércoles del mes más frío del año |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — lunes home office invernal = peak café a domicilio mañana + arg. Premios Uber Eats 29/07 contraste local |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Jueves 23 de julio" redactado 23/07 — peak medicamentos mascotas invierno, Rappi Turbo Quilpué urgencia |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Sábado 25 de julio" redactado 25/07 — peak reparaciones fin de semana, sábado = día de obras invierno, arg. Rappi IA algoritmo |
@@ -120,10 +120,44 @@
 | 114 | Buscando Sushi Peñablanca | Sushi | Peñablanca / Villa Alemana (@buscandosushi_penablanca, Instagram) | Nuevo | — | Presentación redactada 26/07 — canal propio Instagram, delivery Ma-Ju 17:00-23:30 y Vi-Do 16:00-23:30 zona Peñablanca/Villa Alemana, sushi ticket alto ~$15.000+ |
 | 115 | Cafetería Latorre | Cafetería / heladería | Paseo Latorre, Centro de Villa Alemana | Nuevo | — | Presentación redactada 27/07 — en Rappi + Uber Eats (doble comisión), cafetería y heladería en pleno centro VA, ahorro ~$400K/mes vs. comisiones actuales |
 | 116 | Fusión Peruana Villa Alemana | Comida peruana | Villa Alemana (@fusionperuana_villaalemana, Instagram) | Nuevo | — | Presentación redactada 27/07 — canal propio Instagram, comida peruana delivery sin grandes plataformas, ticket alto lomo saltado/ceviche, argumento potenciar logística local sin comisión |
+| 117 | Sushipizza Belloto | Sushi / pizzería (combo) | Las Loicas 562, Belloto, sector Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 28/07 — PRIMER combo sushi+pizza del pipeline, en Rappi pagando comisión doble (sushi $5.040 + pizza $3.360 por pedido típico), argumento ahorro inmediato + Premios Uber Eats 29/07 + Rappi Turbo urgencia |
+| 118 | Ledemi Sushi Villa Alemana | Sushi / noodles / gyozas | Villa Alemana (ledemisushi.ueniweb.com) | Nuevo | — | Presentación redactada 28/07 — PRIMER noodles+gyozas del pipeline, canal propio web activo sin grandes plataformas detectadas, argumento logística local $500 fijo + Premios Uber Eats 29/07 contraste negocios de barrio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-28)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 28 de julio — primer día de la ÚLTIMA semana de julio, el mes más frío del año**. El lunes de invierno tiene una doble lógica: el home office que arranca con el café a domicilio y la planificación semanal de antojos. **VENTANA PREMIOS UBER EATS ACTIVA**: la ceremonia de Uber Eats es MAÑANA martes 29/07 en Santiago — hoy y mañana son los mejores días para usar el contraste "Uber Eats premia a los grandes de Santiago; nosotros trabajamos en tu barrio con $500 fijo". Se redactan **4 mensajes**: (1) seguimientos **"Lunes 28 de julio"** para **#8 Pastelería Dulce Hogar** (Av. Álvarez 1890, 6 días sin draft fresco — lunes = planificación de tortas de la semana, café de tarde, antojo dulce para volver al ritmo laboral) y **#10 Café El Árbol** (Freire 890, 6 días sin draft — lunes frío de invierno = peak café delivery a domicilio para el home office); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Sushipizza Belloto (#117)** — primer combo sushi+pizza del pipeline, en Rappi en Las Loicas 562, Belloto — y **Ledemi Sushi Villa Alemana (#118)** — sushi, noodles y gyozas con canal propio web (ledemisushi.ueniweb.com), primer noodles/gyozas del pipeline. Pipeline total: **118 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW EN HORA FINAL (12 días desde la venta 16/07)** — Los 7 borradores SSW para prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) deben salir HOY o mañana — la noticia se enfría esta semana. (2) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **33 días consecutivos** con borradores activos sin confirmación de envío. (3) **VENTANA PREMIOS UBER EATS (28-31/07)** — ceremonia mañana 29/07: usar en TODOS los mensajes de esta semana "Uber Eats premia a los grandes de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo". **Actualizado:** 2026-07-28.
+
+---
+
+#### "LUNES 28 DE JULIO" — Contactados sin mensaje fresco (28/07)
+
+**[8] Pastelería Dulce Hogar — Lunes 28 de julio (28/07):**
+"Hola Pastelería Dulce Hogar! RepartoJusto — lunes 28 de julio, primer día de la última semana de julio. El lunes de invierno tiene una lógica clara para una pastelería: es el día en que se planifican los antojos y encargos de la semana. La torta del cumpleaños de este viernes, el café dulce del home office del martes, la merienda del miércoles que llega a la puerta sin que nadie salga al frío de Av. Álvarez 1890. Mañana martes 29 de julio Uber Eats celebra su ceremonia de premios en Santiago — los grandes del delivery se premian entre ellos. Los negocios de barrio como la Pastelería Dulce Hogar no aparecen en esas listas porque el algoritmo de Uber Eats no los favorece. Con RepartoJusto no hay algoritmo: los pedidos llegan directamente a la pastelería por $500 fijos por entrega, sin porcentaje sobre la venta. Para una torta de $20.000, Rappi cobra $5.600 de comisión — con nosotros son $500 siempre, el resto queda en el negocio. Rappi Turbo ya está en Quilpué, a 8 km de Villa Alemana — la pastelería posicionada con logística local de tarifa fija antes de que lleguen al barrio tiene ventaja real. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Esta semana arrancamos?"
+
+---
+
+**[10] Café El Árbol — Lunes 28 de julio (28/07):**
+"Hola Café El Árbol! RepartoJusto — lunes 28 de julio, primer lunes de la última semana de julio. El lunes de invierno tiene su lógica propia para el café: es el día en que el home office arranca en serio, el frío de la mañana hace que nadie quiera salir, y el pedido de café a domicilio se convierte en el primer gesto de la semana laboral. Un café delivery desde Freire 890 para el lunes invernal tiene un timing perfecto. Mañana martes 29 Uber Eats premia a sus favoritos de Santiago en su ceremonia anual — nosotros trabajamos en tu barrio con $500 fijo por pedido, sin porcentaje sobre lo que vendes y sin algoritmo que esconda a Café El Árbol detrás de los que pagan más publicidad. Para un pedido de café y pasteles de $7.000, Rappi cobra $1.960 de comisión — con nosotros son $500 siempre. Rappi Turbo ya está en Quilpué, a 8 km — un café de barrio con logística local de tarifa fija posicionado antes de que lleguen tiene ventaja de servicio real. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Esta semana arrancamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-28)
+
+**[117] Sushipizza Belloto — Presentación:**
+"Hola Sushipizza Belloto! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y el sector de Belloto. Los encontramos en Rappi — propuesta única de combo sushi y pizza en Las Loicas 562, Belloto. Una propuesta directa: RepartoJusto puede sumar riders locales a sus pedidos a domicilio por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Un combo sushi+pizza en Rappi tiene un argumento de ahorro muy concreto: por una pizza de $12.000, Rappi cobra $3.360; por una tabla de sushi de $18.000, cobra $5.040 — con RepartoJusto son siempre $500, independientemente del valor del pedido. Esta semana cierra julio, el mes de mayor demanda de delivery de Chile, y mañana martes 29 Uber Eats premia a los grandes del delivery de Santiago en su ceremonia anual — nosotros trabajamos en el barrio de Belloto y Villa Alemana con $500 fijo, sin algoritmo que entierre su visibilidad. Dato urgente: Rappi Turbo ya opera en Quilpué a 8 km — un negocio con logística local propia de tarifa fija está mejor posicionado cuando la competencia llegue al sector. Sin contrato, registro completamente gratuito. Somos 100% locales. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[118] Ledemi Sushi Villa Alemana — Presentación:**
+"Hola Ledemi Sushi! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos a través de su web (ledemisushi.ueniweb.com) — sushi, noodles y gyozas artesanales con delivery en Villa Alemana. Ya tienen su canal propio activo — lo que suma RepartoJusto es la logística local con riders de la zona por $500 fijos por pedido entregado, sin porcentaje sobre la venta. El sushi, los noodles y las gyozas son pedidos de ticket alto en invierno: una tabla de rolls de $15.000+ paga entre $4.200 y $5.040 de comisión en Rappi — con nosotros son $500 siempre, el resto queda en el negocio. Mañana martes 29 de julio Uber Eats tiene su ceremonia de premios en Santiago para los grandes del delivery — los negocios de barrio que trabajan con canal propio son exactamente para quienes existe RepartoJusto: entrega local con rider, tarifa fija, sin algoritmo que los esconda y sin ceder porcentaje de cada pedido. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
