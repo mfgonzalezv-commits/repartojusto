@@ -112,11 +112,12 @@ app.get('/api/seguimiento/:id', seguimientoRateLimit, async (req, res) => {
   try {
     const { rows } = await dbQuery(
       `SELECT p.id, p.estado, p.direccion_entrega, p.lat_entrega, p.lng_entrega,
-              p.distancia_km, p.tarifa_entrega, p.notas,
+              p.distancia_km, p.tarifa_entrega,
               p.created_at, p.asignado_at, p.retiro_at, p.entregado_at,
               n.nombre_comercial, n.direccion AS direccion_retiro,
+              n.mostrar_costo_seguimiento,
               u_r.nombre AS rider_nombre,
-              ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng, ri.rating AS rider_rating
+              ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
        FROM pedidos p
        JOIN negocios n ON n.id = p.negocio_id
        LEFT JOIN riders ri ON ri.id = p.rider_id
@@ -125,7 +126,11 @@ app.get('/api/seguimiento/:id', seguimientoRateLimit, async (req, res) => {
       [req.params.id]
     );
     if (!rows[0]) return res.status(404).json({ error: 'Pedido no encontrado' });
-    res.json(rows[0]);
+    const data = { ...rows[0] };
+    // Respetar configuración del negocio: ocultar tarifa si no autorizó mostrarla
+    if (!data.mostrar_costo_seguimiento) delete data.tarifa_entrega;
+    delete data.mostrar_costo_seguimiento; // campo interno, no exponerlo
+    res.json(data);
   } catch (err) {
     res.status(500).json({ error: 'Error del servidor' });
   }

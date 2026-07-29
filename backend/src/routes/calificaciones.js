@@ -145,7 +145,7 @@ async function calcularScore(riderId) {
     const { rows: [rider] } = await db(
       'SELECT total_entregas, saldo_pendiente FROM riders WHERE id = $1', [riderId]
     );
-    if (!rider) return res.status(404).json({ error: 'Rider no encontrado' });
+    if (!rider) return null; // El caller de calcularScore maneja el 404
 
     const { rows: pedidosRider } = await db(
       `SELECT estado, asignado_at, entregado_at, created_at

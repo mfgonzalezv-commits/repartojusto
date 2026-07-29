@@ -1,8 +1,11 @@
 const jwt = require('jsonwebtoken');
 const config = require('../config');
+const { query: db } = require('../config/database');
 
-// Verifica JWT y adjunta usuario al request
-const auth = (req, res, next) => {
+// Verifica JWT, adjunta usuario al request y confirma que la cuenta sigue activa en DB.
+// Esto previene que usuarios desactivados (baneados) sigan operando durante los 7 días
+// de vida del token sin necesidad de un sistema de revocación.
+const auth = async (req, res, next) => {
   const header = req.headers.authorization;
   if (!header || !header.startsWith('Bearer ')) {
     return res.status(401).json({ error: 'Token requerido' });
@@ -10,7 +13,14 @@ const auth = (req, res, next) => {
 
   try {
     const token = header.split(' ')[1];
-    req.usuario = jwt.verify(token, config.JWT_SECRET);
+    const decoded = jwt.verify(token, config.JWT_SECRET);
+
+    const { rows } = await db('SELECT activo FROM usuarios WHERE id = $1', [decoded.id]);
+    if (!rows[0] || !rows[0].activo) {
+      return res.status(401).json({ error: 'Cuenta desactivada o no encontrada' });
+    }
+
+    req.usuario = decoded;
     next();
   } catch (err) {
     next(err);

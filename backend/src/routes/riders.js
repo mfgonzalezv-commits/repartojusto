@@ -59,10 +59,26 @@ router.put('/disponibilidad',
   }
 );
 
+// Rate limiter para ubicación: max 60 actualizaciones/min por rider
+const _ubicacionStore = new Map();
+function ubicacionRateLimit(req, res, next) {
+  const userId = req.usuario?.id;
+  const now = Date.now();
+  const entry = _ubicacionStore.get(userId);
+  if (entry && now - entry.first < 60000) {
+    if (entry.count >= 60) return res.status(429).json({ error: 'Demasiadas actualizaciones de ubicación.' });
+    entry.count++;
+  } else {
+    _ubicacionStore.set(userId, { count: 1, first: now });
+  }
+  next();
+}
+
 // ── PUT /api/riders/ubicacion ─────────────────────────────────────────────
 // Actualización de ubicación en tiempo real (llamado frecuente)
 router.put('/ubicacion',
   auth, solo('rider'),
+  ubicacionRateLimit,
   [
     body('lat').optional({ nullable: true }).isFloat({ min: -90, max: 90 }),
     body('lng').optional({ nullable: true }).isFloat({ min: -180, max: 180 }),
