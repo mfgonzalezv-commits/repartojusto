@@ -1,54 +1,54 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-07-28 (lunes)
-**Pipeline total:** 118 prospectos
-**Por estado:** Nuevos: 104 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-07-29 (martes)
+**Pipeline total:** 120 prospectos
+**Por estado:** Nuevos: 106 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
 ## Acciones del día
 
-1. **Leída cola.md y reportes/investigador.md**: incorporados argumentos de la semana — ventana Premios Uber Eats activada hoy (ceremonia mañana 29/07), ventana SSW en hora final (12 días desde venta PedidosYa a fondo NY, hoy es última oportunidad de alto impacto), Rappi Turbo operativo en Quilpué (8 km de VA).
+1. **Leída cola.md**: incorporados argumentos de la semana — HOY son los Premios Uber Eats (argumento contraste de máximo impacto activado), ventana SSW en hora final (13 días desde venta PedidosYa a fondo NY el 16/07), Rappi Turbo operativo en Quilpué (8 km de VA), prioridades del Gerente #22 y #15 con 34 días de borradores activos.
 
-2. **Seguimientos redactados (2)** — Todos con argumento Premios Uber Eats 29/07:
-   - **#8 Pastelería Dulce Hogar** (Av. Álvarez 1890, 6 días sin draft fresco): mensaje "Lunes 28 de julio" con ángulo planificación semanal (tortas, café de tarde del lunes invernal) + contraste Premios Uber Eats ("los negocios de barrio no aparecen en esas listas") + Rappi Turbo urgencia. Ahorro estimado: $500 vs. $5.600 comisión Rappi por torta $20.000.
-   - **#10 Café El Árbol** (Freire 890, 6 días sin draft fresco): mensaje "Lunes 28 de julio" con ángulo home office lunes invernal (café a domicilio primer gesto laboral) + contraste Premios Uber Eats mañana + Rappi Turbo urgencia. Ahorro estimado: $500 vs. $1.960 comisión Rappi por pedido $7.000.
+2. **Argumento central del día activado: PREMIOS UBER EATS (29/07)** — La ceremonia anual de Uber Eats se realiza HOY en Santiago. Argumento usado en todos los mensajes del día: "Uber Eats premia a sus favoritos de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo, sin algoritmo que te esconda."
 
-3. **Nuevos prospectos encontrados (2)**:
-   - **#117 Sushipizza Belloto** — PRIMER combo sushi+pizza del pipeline. En Rappi, Las Loicas 562, Belloto (sector VA). Argumento doble: pagan comisión en sushi ($5.040 por tabla $18K) Y en pizza ($3.360 por pizza $12K). Con RepartoJusto: $500 fijo siempre.
-   - **#118 Ledemi Sushi Villa Alemana** — PRIMER noodles+gyozas del pipeline. Canal propio web activo (ledemisushi.ueniweb.com), sushi + noodles + gyozas artesanales, sin grandes plataformas detectadas. Argumento: logística local sin comisión para canal ya activo.
+3. **Seguimientos a Contactados más desactualizados (6 días sin draft):**
+   - **#7 Minimercado La Esquina** (Lynch 445, VA): mensaje "Martes 29 de julio" redactado. Ángulo: el minimercado de barrio es lo opuesto a lo que premia Uber Eats hoy + Rappi Turbo urgencia.
+   - **#11 Veterinaria Huellitas** (Av. Álvarez 3200, VA): mensaje "Martes 29 de julio" redactado. Ángulo: julio = peak medicamentos mascotas, delivery esencial para no sacar al animal al frío + Premios UE contraste + Rappi Turbo urgencia.
 
-4. **Pipeline actualizado**: #8 y #10 con próximas acciones actualizadas, #117 y #118 agregados al final de la tabla.
+4. **Búsqueda de 2 nuevos prospectos en Villa Alemana (WebSearch):**
+   - **#119 Bien Taypa Restaurant** — Restaurante peruano en Av. Valparaíso 924 (frente a Unimarc), ya en Uber Eats pagando comisión, 4.3/5 con 55+ reseñas, ticket alto (ceviche, lomo saltado, ají de gallina, tiraditos), Facebook @bientayparestaurant. Presentación redactada con argumento Premios UE directo.
+   - **#120 Buen Gusto** — Restaurante gastronomía chilena clásica (pescados, mariscos, carnes, pastas), Av. Valparaíso 426, tel. (32) 286 4696, 359+ reseñas 4.1/5, sin grandes plataformas detectadas — oportunidad de sumar delivery local. Presentación redactada.
+
+5. **4 borradores nuevos** guardados en prospectos.md sección "MENSAJES DEL DÍA (2026-07-29)".
 
 ---
 
 ## Borradores listos para Matías
 
-| # | Negocio | Tipo | Canal sugerido |
-|---|---|---|---|
-| 8 | Pastelería Dulce Hogar | Seguimiento "Lunes 28 de julio" | WhatsApp / directo |
-| 10 | Café El Árbol | Seguimiento "Lunes 28 de julio" | WhatsApp / directo |
-| 117 | Sushipizza Belloto | Presentación inicial | Rappi / WhatsApp |
-| 118 | Ledemi Sushi Villa Alemana | Presentación inicial | Web ledemisushi.ueniweb.com / WhatsApp |
+**URGENTE HOY — PREMIOS UBER EATS (ventana de máximo impacto: 29-31/07):**
+1. **[7] Minimercado La Esquina** — Seguimiento "Martes 29 de julio" (6 días sin contacto, arg. Premios UE + Rappi Turbo)
+2. **[11] Veterinaria Huellitas** — Seguimiento "Martes 29 de julio" (6 días sin contacto, peak medicamentos mascotas + Premios UE)
+3. **[119] Bien Taypa Restaurant** — Presentación nueva (en Uber Eats, arg. Premios UE directo, ticket alto peruano)
+4. **[120] Buen Gusto** — Presentación nueva (tel. (32) 286 4696, gastronomía chilena clásica)
 
-**ACCIONES URGENTES DE LA SEMANA (28-31/07):**
+**PENDIENTE URGENTE — VENTANA SSW CIERRA ESTA SEMANA (13 días desde 16/07):**
+5-11. Mensajes SSW ya redactados (desde 17/07) para: #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya.
 
-1. **VENTANA PREMIOS UBER EATS (HOY-31/07)**: Ceremonia mañana 29/07 en Santiago. Usar el contraste "Uber Eats premia a los grandes de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo" en TODOS los mensajes de la semana. Ventana de máximo impacto hoy lunes y mañana martes.
-
-2. **VENTANA SSW EN HORA FINAL**: PedidosYa vendida a SSW Partners NY hace 12 días. Los 7 borradores SSW (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya) deben salir HOY o mañana — la noticia pierde fuerza con los días.
-
-3. **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas**: llevan **33 días consecutivos** con borradores activos sin confirmación de envío. Son la prioridad #1 del Gerente.
+**PRIORIDADES GERENTE — 34 DÍAS CONSECUTIVOS SIN ENVÍO:**
+12. **[22] Sushi Point Delivery** — tel. (32) 324 0504 (múltiples borradores activos desde 25/06)
+13. **[15] Melt Pizzas** — Av. Valparaíso 1057, en Rappi (borradores activos desde 25/06)
 
 ---
 
 ## Nuevos prospectos agregados
 
-| # | Negocio | Rubro | Canal | Argumento clave |
+| # | Negocio | Rubro | Fuente | Argumento clave |
 |---|---|---|---|---|
-| 117 | Sushipizza Belloto | Sushi / pizzería combo | Rappi (Las Loicas 562, Belloto) | Primer combo del pipeline — pagan comisión doble en dos productos de ticket alto |
-| 118 | Ledemi Sushi Villa Alemana | Sushi / noodles / gyozas | Canal propio web | Primer noodles+gyozas del pipeline — canal propio sin plataformas grandes, logística local |
+| 119 | Bien Taypa Restaurant | Comida peruana | Uber Eats + TripAdvisor | Ya pagan comisión en UE (4.3/5), ticket alto peruano ~$15K+, Premios UE = contraste directo hoy |
+| 120 | Buen Gusto | Comida chilena clásica | chilopina.com / restaurantess.cl | 359 reseñas 4.1/5, tel. (32) 286 4696, sin grandes plataformas — oportunidad delivery local puro |
 
 ---
 
 ## Para el Gerente
 
-Pipeline en 118 prospectos (104 nuevos, 14 contactados, 0 registrados). VENTANA PREMIOS UBER EATS activa hoy-31/07 (ceremonia mañana 29/07): usar contraste local vs. Santiago en todos los mensajes. VENTANA SSW EN HORA FINAL: los 7 borradores PedidosYa deben salir hoy o mañana. Los borradores de #22 Sushi Point Delivery y #15 Melt Pizzas llevan 33 días consecutivos activos — son la acción más urgente para Matías esta semana.
+Pipeline en 120 prospectos (106 nuevos, 14 contactados, 0 registrados); HOY son los Premios Uber Eats en Santiago — argumento contraste de máximo impacto activado en todos los mensajes del día; 4 borradores redactados (#7 y #11 seguimientos, #119 y #120 presentaciones); ventana SSW (PedidosYa a fondo NY el 16/07) en hora final — 7 borradores listos deben salir esta semana antes que la noticia se enfríe; #22 Sushi Point y #15 Melt Pizzas llevan 34 días como prioridades absolutas sin confirmación de envío por Matías.

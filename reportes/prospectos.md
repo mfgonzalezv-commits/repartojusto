@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-28
+**Actualizado:** 2026-07-29
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -10,11 +10,11 @@
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 24 de julio" redactado 24/07 — último viernes de julio, pizza = peak viernes delivery, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — PRIORIDAD, ÚLTIMO domingo de julio, noche domingo = peak sushi familiar + arg. Premios Uber Eats 29/07 |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — ÚLTIMO domingo de julio, peak botillería tarde dominical invernal, arg. Premios Uber Eats 29/07 |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Jueves 23 de julio" redactado 23/07 — peak reposición previo al fin de semana invernal, Rappi Turbo Quilpué urgencia |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats en Santiago, contraste negocios de barrio vs. grandes + Rappi Turbo Quilpué urgencia |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — primer lunes última semana de julio, planificación semanal + arg. Premios Uber Eats 29/07 (negocios de barrio no aparecen en lista UE) |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Sábado 25 de julio" redactado 25/07 — ÚLTIMO sábado de julio, peak almuerzo familiar asado/costillar invernal + Rappi Turbo Quilpué urgencia |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — lunes home office invernal = peak café a domicilio mañana + arg. Premios Uber Eats 29/07 contraste local |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Jueves 23 de julio" redactado 23/07 — peak medicamentos mascotas invierno, Rappi Turbo Quilpué urgencia |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats, medicamentos mascotas invierno = esencial no salir al frío + Rappi Turbo Quilpué urgencia |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Sábado 25 de julio" redactado 25/07 — peak reparaciones fin de semana, sábado = día de obras invierno, arg. Rappi IA algoritmo |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
@@ -122,10 +122,44 @@
 | 116 | Fusión Peruana Villa Alemana | Comida peruana | Villa Alemana (@fusionperuana_villaalemana, Instagram) | Nuevo | — | Presentación redactada 27/07 — canal propio Instagram, comida peruana delivery sin grandes plataformas, ticket alto lomo saltado/ceviche, argumento potenciar logística local sin comisión |
 | 117 | Sushipizza Belloto | Sushi / pizzería (combo) | Las Loicas 562, Belloto, sector Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 28/07 — PRIMER combo sushi+pizza del pipeline, en Rappi pagando comisión doble (sushi $5.040 + pizza $3.360 por pedido típico), argumento ahorro inmediato + Premios Uber Eats 29/07 + Rappi Turbo urgencia |
 | 118 | Ledemi Sushi Villa Alemana | Sushi / noodles / gyozas | Villa Alemana (ledemisushi.ueniweb.com) | Nuevo | — | Presentación redactada 28/07 — PRIMER noodles+gyozas del pipeline, canal propio web activo sin grandes plataformas detectadas, argumento logística local $500 fijo + Premios Uber Eats 29/07 contraste negocios de barrio |
+| 119 | Bien Taypa Restaurant | Comida peruana | Av. Valparaíso 924, Villa Alemana (en Uber Eats, @bientayparestaurant) | Nuevo | — | Presentación redactada 29/07 — restaurante peruano 4.3/5, ya en Uber Eats (pagando comisión), ticket alto ceviche/lomo saltado/ají de gallina, HOY Premios Uber Eats = argumento contraste directo |
+| 120 | Buen Gusto | Comida chilena / pescados / carnes | Av. Valparaíso 426, Villa Alemana | Nuevo | — | Presentación redactada 29/07 — restaurante clásico 359+ reseñas 4.1/5, tel. (32) 286 4696, sin grandes plataformas detectadas, oportunidad de sumar delivery local, peak cazuela y mariscos julio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-29)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 29 de julio — DÍA DE LOS PREMIOS UBER EATS 2026**. La ceremonia de premios de Uber Eats se realiza HOY en Santiago, donde premian a los grandes del delivery de la capital. Este es el momento exacto para el argumento contraste: "Uber Eats premia a sus favoritos de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo, sin algoritmo que te esconda." Usar en TODOS los mensajes de hoy. Se redactan **4 mensajes**: (1) seguimientos **"Martes 29 de julio"** para **#7 Minimercado La Esquina** (Lynch 445, 6 días sin draft fresco — el minimercado de barrio es exactamente lo opuesto a lo que premia Uber Eats) y **#11 Veterinaria Huellitas** (Av. Álvarez 3200, 6 días sin draft — peak medicamentos mascotas invierno, Rappi Turbo Quilpué urgencia); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Bien Taypa Restaurant (#119)** — restaurante peruano 4.3/5 en Uber Eats, Av. Valparaíso 924 (frente a Unimarc), ticket alto ceviche/lomo saltado/ají de gallina — y **Buen Gusto (#120)** — restaurante chileno clásico 359 reseñas 4.1/5, Av. Valparaíso 426, tel. (32) 286 4696, sin grandes plataformas detectadas. Pipeline total: **120 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW CIERRA HOY-MAÑANA** (13 días desde venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores SSW (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) deben salir ESTA SEMANA, la noticia se enfría. (2) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **34 días consecutivos** con borradores activos sin confirmación de envío — Gerente los señaló como prioridades absolutas. (3) **HOY SON LOS PREMIOS UBER EATS** — mejor día del año para usar el argumento contraste en cualquier mensaje. **Actualizado:** 2026-07-29.
+
+---
+
+#### "MARTES 29 DE JULIO" — Contactados sin mensaje fresco (29/07)
+
+**[7] Minimercado La Esquina — Martes 29 de julio (29/07):**
+"Hola Minimercado La Esquina! RepartoJusto — martes 29 de julio. Hoy Uber Eats tiene su ceremonia de premios anuales en Santiago — premia a los grandes del delivery de la capital. Los minimercados de barrio como el de Lynch 445 no aparecen en esas listas porque los algoritmos de las grandes plataformas favorecen a las cadenas. Con RepartoJusto no hay algoritmo: los pedidos del minimercado llegan directamente al cliente por $500 fijos por entrega, sin porcentaje sobre la venta. Para un pedido de $12.000 en abarrotes y bebidas, una plataforma de porcentaje cobra hasta $3.360 de comisión — con nosotros son $500 siempre, el resto queda en el negocio. El minimercado de barrio tiene algo que las cadenas nunca tienen: el conocimiento del cliente local, el stock de lo que realmente se consume en Lynch 445, la entrega rápida porque el rider está en la misma cuadra. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — un minimercado con logística local de tarifa fija posicionado antes de que lleguen tiene ventaja real de servicio. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[11] Veterinaria Huellitas — Martes 29 de julio (29/07):**
+"Hola Veterinaria Huellitas! RepartoJusto — martes 29 de julio. El invierno de julio es el mes con más consultas veterinarias y compras de medicamentos para mascotas del año: el frío afecta especialmente a perros mayores, gatos de interior y animales con condiciones crónicas — exactamente el tipo de cliente que necesita que el medicamento llegue a domicilio sin sacar a la mascota al frío de Av. Álvarez 3200. Una veterinaria que hace delivery de medicamentos y accesorios a domicilio en julio invernal en Villa Alemana tiene un diferenciador real. RepartoJusto suma riders locales para esa logística por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una compra de $15.000 en medicamentos, una plataforma de porcentaje cobra hasta $4.200 de comisión — con nosotros son $500 siempre. Hoy Uber Eats tiene su ceremonia de premios en Santiago — premia a los grandes de la capital; RepartoJusto trabaja en tu barrio de Av. Álvarez 3200 con tarifa fija. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km — una veterinaria con delivery local posicionada antes de que lleguen tiene ventaja de servicio. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-29)
+
+**[119] Bien Taypa Restaurant — Presentación:**
+"Hola Bien Taypa Restaurant! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Uber Eats — restaurante peruano en Av. Valparaíso 924 (frente a Unimarc), uno de los mejor calificados de Villa Alemana con 4.3 estrellas. Ya tienen su delivery activo en Uber Eats — lo que suma RepartoJusto es la logística local con riders de la zona por $500 fijos por pedido entregado, sin porcentaje sobre la venta. El menú peruano tiene el ticket promedio más alto del delivery en Chile: un ceviche fresco o un lomo saltado sobre $15.000 paga entre $4.200 y $5.040 de comisión en una plataforma de porcentaje — con nosotros son $500 siempre, el resto queda en el restaurante. Hoy martes 29 de julio Uber Eats tiene su ceremonia de premios en Santiago para los grandes del delivery — una propuesta gastronómica de la calidad de Bien Taypa (tiraditos, causa, ají de gallina, ceviches) merece logística local sin ceder el porcentaje a una plataforma que premia a los grandes del norte. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[120] Buen Gusto — Presentación:**
+"Hola Buen Gusto! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en chilopina.com con más de 359 reseñas y 4.1 de rating — gastronomía chilena clásica en Av. Valparaíso 426, uno de los locales más valorados de Villa Alemana. Una propuesta directa: RepartoJusto puede sumar riders locales al delivery de Buen Gusto por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Un almuerzo de pescado, mariscos o carnes sobre $10.000 pagaría entre $2.800 y $3.000 de comisión en plataformas de porcentaje — con nosotros son $500 siempre, el resto queda en el negocio. El julio invernal es el peak de la cazuela chilena, los guisos de mariscos y las carnes al jugo — exactamente el menú de confort que se pide a domicilio cuando nadie quiere salir al frío. Hoy Uber Eats tiene su ceremonia de premios anuales en Santiago — RepartoJusto trabaja en tu barrio de Villa Alemana con $500 fijo sin algoritmo que baje la visibilidad de los negocios locales. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos? (Tel. (32) 286 4696)"
 
 ---
 
