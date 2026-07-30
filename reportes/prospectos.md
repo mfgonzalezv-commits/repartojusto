@@ -1,13 +1,13 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-29
+**Actualizado:** 2026-07-30
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Domingo 26 de julio" redactado 26/07 — último domingo de julio, almuerzo familiar invernal + Rappi Turbo Quilpué + preview Premios Uber Eats 29/07 |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Viernes 24 de julio" redactado 24/07 — último viernes de julio, peak fin de semana pollo, Rappi Turbo Quilpué urgencia |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — último miércoles de julio, pollo almuerzo familiar post-Premios UE, Rappi Turbo Quilpué urgencia |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 26 de julio" redactado 26/07 — medicamentos a domicilio domingo invernal, fiebre del fin de semana, no salir al frío + Rappi Turbo urgencia |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 24 de julio" redactado 24/07 — último viernes de julio, pizza = peak viernes delivery, Rappi Turbo Quilpué urgencia |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — cierre de julio, pizza post-Premios UE, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — PRIORIDAD, ÚLTIMO domingo de julio, noche domingo = peak sushi familiar + arg. Premios Uber Eats 29/07 |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — ÚLTIMO domingo de julio, peak botillería tarde dominical invernal, arg. Premios Uber Eats 29/07 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats en Santiago, contraste negocios de barrio vs. grandes + Rappi Turbo Quilpué urgencia |
@@ -124,10 +124,44 @@
 | 118 | Ledemi Sushi Villa Alemana | Sushi / noodles / gyozas | Villa Alemana (ledemisushi.ueniweb.com) | Nuevo | — | Presentación redactada 28/07 — PRIMER noodles+gyozas del pipeline, canal propio web activo sin grandes plataformas detectadas, argumento logística local $500 fijo + Premios Uber Eats 29/07 contraste negocios de barrio |
 | 119 | Bien Taypa Restaurant | Comida peruana | Av. Valparaíso 924, Villa Alemana (en Uber Eats, @bientayparestaurant) | Nuevo | — | Presentación redactada 29/07 — restaurante peruano 4.3/5, ya en Uber Eats (pagando comisión), ticket alto ceviche/lomo saltado/ají de gallina, HOY Premios Uber Eats = argumento contraste directo |
 | 120 | Buen Gusto | Comida chilena / pescados / carnes | Av. Valparaíso 426, Villa Alemana | Nuevo | — | Presentación redactada 29/07 — restaurante clásico 359+ reseñas 4.1/5, tel. (32) 286 4696, sin grandes plataformas detectadas, oportunidad de sumar delivery local, peak cazuela y mariscos julio |
+| 121 | Don Wuaton | Sandwichería / completos | Av. Valparaíso 2550, Villa Alemana | Nuevo | — | Presentación redactada 30/07 — en Rappi, completos y sándwiches de pan de mesa / vienesas, ahorro $1.260+/pedido vs. Rappi 28%, Rappi Turbo Quilpué urgencia |
+| 122 | C Gourmet | Sandwichería gourmet / completos | Pje. Solano 434, Villa Alemana | Nuevo | — | Presentación redactada 30/07 — en Rappi, completos y sándwiches de salchicha alemana gourmet, ahorro $1.680+/pedido vs. Rappi 28%, primer gourmet alemán del pipeline |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-30)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 30 de julio — último miércoles de julio, el mes más frío del año**. AYER martes 29/07 fue la ceremonia de Premios Uber Eats en Santiago — el contexto "post-premios" sigue activo: Uber Eats premió a los grandes de la capital, los negocios de barrio de Villa Alemana no aparecen en esas listas. Usar contraste "Ayer Uber Eats premió a los grandes de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo" en todos los mensajes de hoy. Se redactan **4 mensajes**: (1) seguimientos **"Miércoles 30 de julio"** para **#2 Pollería Don Pollo** (Freire 678, 6 días sin draft fresco — pollo asado = almuerzo familiar del miércoles invernal, post-ceremonias UE) y **#4 Pizza House** (Portales 234, 6 días sin draft — pizza post-premios UE, cierre del mes de mayor delivery del año); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Don Wuaton (#121)** — sandwichería completos en Av. Valparaíso 2550, en Rappi — y **C Gourmet (#122)** — sandwichería gourmet salchicha alemana en Pje. Solano 434, en Rappi. Pipeline total: **122 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW SE ENFRÍA** (14 días desde venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores SSW (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) aún pendientes — esta semana es la última oportunidad de alto impacto. (2) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **35 días consecutivos** con borradores activos sin confirmación de envío — prioridad absoluta del Gerente. (3) **Premios Uber Eats fueron AYER** — el argumento "post-premios" sigue siendo potente los próximos 2-3 días. **Actualizado:** 2026-07-30.
+
+---
+
+#### "MIÉRCOLES 30 DE JULIO" — Contactados sin mensaje fresco (30/07)
+
+**[2] Pollería Don Pollo — Miércoles 30 de julio (30/07):**
+"Hola Pollería Don Pollo! RepartoJusto — miércoles 30 de julio, el último miércoles del mes más frío del año. Ayer martes, Uber Eats tuvo su ceremonia de premios anuales en Santiago — donde premiaron a los grandes del delivery de la capital. Las pollerías de Freire 678 no aparecen en esas listas. El pollo asado del mediodía, el cuarto trasero con papas fritas del almuerzo familiar de miércoles invernal — eso lo conocen ustedes mejor que cualquier algoritmo. Con RepartoJusto no hay algoritmo: los pedidos llegan directamente al Don Pollo por $500 fijos por entrega, sin porcentaje sobre la venta. Para un pollo asado de $9.000, Rappi cobra $2.520 de comisión — con nosotros son $500 siempre, el resto queda en el negocio. Dato urgente: Rappi Turbo ya opera en Quilpué a 8 km de Villa Alemana — una pollería local de Freire 678 con logística de tarifa fija posicionada antes de que lleguen tiene ventaja real sobre los que reparten desde más lejos. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[4] Pizza House — Miércoles 30 de julio (30/07):**
+"Hola Pizza House! RepartoJusto — miércoles 30 de julio, cierre del mes más frío del año. Ayer martes, Uber Eats organizó su ceremonia de premios anuales en Santiago — donde premiaron a las grandes cadenas de pizza del delivery nacional. Las pizzerías de Portales 234 pagan las comisiones más altas del año, pero rara vez aparecen en los rankings que las plataformas promocionan. Pizza House tiene algo que las cadenas premiadas no tienen: la pizza del barrio, el cliente que pide el mismo combo todos los miércoles, el local que conoce el estándar del vecino. Con RepartoJusto no hay algoritmo: los pedidos llegan directamente al local por $500 fijos por entrega, sin porcentaje sobre la venta. Para una pizza de $12.000, Rappi cobra $3.360 de comisión — con nosotros son $500 siempre. El miércoles de julio tiene su peak propio: el que no cocinó en semana y ya no quiere esperar al fin de semana. Rappi Turbo ya está en Quilpué, a 8 km — la pizzería local de tarifa fija antes de que lleguen tiene ventaja de posicionamiento. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-30)
+
+**[121] Don Wuaton — Presentación:**
+"Hola Don Wuaton! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi — sandwichería en Av. Valparaíso 2550 con completos y sándwiches de pan de mesa. Una propuesta directa: RepartoJusto puede sumar riders locales a sus pedidos a domicilio por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Un completo o sándwich de $4.500 paga $1.260 de comisión en Rappi (28%) — con nosotros son $500 siempre, el mismo monto sin importar si el pedido es de $4.000 o de $15.000. El miércoles de julio tiene su lógica propia para los completos y sándwiches: el almuerzo rápido de la semana, el antojo de media tarde del home office, y el que ya va cerrando el mes de mayor demanda de delivery del año. Ayer Uber Eats premió a los grandes del delivery de Santiago — nosotros trabajamos en el barrio de Av. Valparaíso 2550 con $500 fijo, sin algoritmo que esconda a Don Wuaton. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km — un negocio con logística local de tarifa fija antes de que lleguen tiene ventaja real de servicio. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[122] C Gourmet — Presentación:**
+"Hola C Gourmet! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi — sandwichería gourmet en Pje. Solano 434 con completos y sándwiches de salchicha alemana artesanal. Una propuesta directa: RepartoJusto puede sumar riders locales a sus pedidos a domicilio por $500 fijos por pedido entregado, sin porcentaje sobre la venta. Un completo o sándwich gourmet de $6.000+ paga $1.680 de comisión en Rappi (28%) — con nosotros son $500 siempre, el resto queda en el negocio. La sandwichería de especialidad como C Gourmet tiene un diferenciador que las cadenas no tienen: el producto artesanal, la receta propia, la salchicha alemana auténtica. Con RepartoJusto ese diferenciador llega con logística local sin ceder el margen a la plataforma. Ayer Uber Eats premió a los grandes del delivery de Santiago — nosotros trabajamos en el barrio de Pje. Solano 434 con $500 fijo, sin algoritmo que entierre la visibilidad del gourmet local. Rappi Turbo ya opera en Quilpué, a 8 km — un negocio posicionado con tarifa fija antes de que lleguen tiene ventaja de servicio real. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
