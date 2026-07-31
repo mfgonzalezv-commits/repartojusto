@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-30
+**Actualizado:** 2026-07-31
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -12,20 +12,20 @@
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — ÚLTIMO domingo de julio, peak botillería tarde dominical invernal, arg. Premios Uber Eats 29/07 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats en Santiago, contraste negocios de barrio vs. grandes + Rappi Turbo Quilpué urgencia |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — primer lunes última semana de julio, planificación semanal + arg. Premios Uber Eats 29/07 (negocios de barrio no aparecen en lista UE) |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Sábado 25 de julio" redactado 25/07 — ÚLTIMO sábado de julio, peak almuerzo familiar asado/costillar invernal + Rappi Turbo Quilpué urgencia |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — ÚLTIMO día de julio, cierre del mes más frío del año, asado/costillar familiar + post-Premios Uber Eats contraste |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — lunes home office invernal = peak café a domicilio mañana + arg. Premios Uber Eats 29/07 contraste local |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats, medicamentos mascotas invierno = esencial no salir al frío + Rappi Turbo Quilpué urgencia |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Sábado 25 de julio" redactado 25/07 — peak reparaciones fin de semana, sábado = día de obras invierno, arg. Rappi IA algoritmo |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — cierre de julio, peak reparaciones invierno/calefacción, post-Premios Uber Eats contraste negocios de barrio |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
-| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Primer sábado de julio" redactado 05/07 — PRIORIDAD GERENTE, en Rappi |
+| 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
 | 18 | La Casita Del Sabor | Comida casera | Villa Alemana (en Rappi) | Nuevo | — | Arranque julio redactado 23/06 — ALTA PRIORIDAD |
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
-| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | "Primer sábado de julio" redactado 05/07 — PRIORIDAD GERENTE, tel. (32) 324 0504 |
+| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), tel. (32) 324 0504, post-Premios Uber Eats contraste, último día del mes más frío |
 | 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — en Rappi+PedidosYa+Uber Eats, WhatsApp: +56 986749142 |
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
@@ -126,10 +126,56 @@
 | 120 | Buen Gusto | Comida chilena / pescados / carnes | Av. Valparaíso 426, Villa Alemana | Nuevo | — | Presentación redactada 29/07 — restaurante clásico 359+ reseñas 4.1/5, tel. (32) 286 4696, sin grandes plataformas detectadas, oportunidad de sumar delivery local, peak cazuela y mariscos julio |
 | 121 | Don Wuaton | Sandwichería / completos | Av. Valparaíso 2550, Villa Alemana | Nuevo | — | Presentación redactada 30/07 — en Rappi, completos y sándwiches de pan de mesa / vienesas, ahorro $1.260+/pedido vs. Rappi 28%, Rappi Turbo Quilpué urgencia |
 | 122 | C Gourmet | Sandwichería gourmet / completos | Pje. Solano 434, Villa Alemana | Nuevo | — | Presentación redactada 30/07 — en Rappi, completos y sándwiches de salchicha alemana gourmet, ahorro $1.680+/pedido vs. Rappi 28%, primer gourmet alemán del pipeline |
+| 123 | Vila Sushi Delivery | Sushi | Villa Alemana (@vilasushidelivery, Instagram) | Nuevo | — | Presentación redactada 31/07 — canal propio Instagram, sushi delivery Villa Alemana, sin grandes plataformas detectadas, ticket alto sushi + último día de julio peak delivery |
+| 124 | Carnicería Austral | Carnicería / carnes a domicilio | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 31/07 — en PedidosYa (argumento SSW: venta a fondo NY el 16/07, incertidumbre máxima de comisiones), carnicería con delivery activo, cazuelas/costillares = peak julio |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-07-31)
+
+> **NOTA PARA MATÍAS:** Hoy es **jueves 31 de julio — el ÚLTIMO DÍA del mes más frío del año**. El argumento "post-Premios Uber Eats" sigue activo (ceremonia fue el 29/07): Uber Eats premió a los grandes del delivery de Santiago, los negocios de barrio de Villa Alemana no aparecen en esas listas. Se redactan **6 mensajes**: (1) seguimientos **"Último día de julio"** para los 2 Contactados con drafts más antiguos (**#9 Rotisería El Gaucho** y **#13 Ferretería Los Maestros**, ambos 6 días sin draft fresco); (2) seguimientos de prioridad máxima del Gerente para **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** (ambos con 36 días consecutivos de borradores activos sin confirmación de envío); (3) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Vila Sushi Delivery (#123)** — canal propio Instagram @vilasushidelivery — y **Carnicería Austral (#124)** — en PedidosYa, argumento SSW ideal. Pipeline total: **124 prospectos**.
+>
+> **ALERTAS URGENTES (Investigador 31/07):** (1) **VENTANA POST-PREMIOS UBER EATS activa hoy** (30/07-01/08) — usar contraste "Ayer Uber Eats premió a los grandes de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo" en todos los mensajes; (2) **VENTANA SSW EN HORA FINAL** (15 días desde venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27, #28, #30, #33, #60, #90, #102) son la prioridad urgente de envío esta semana — la noticia se enfría; (3) **Rappi Turbo en Quilpué, a 8 km** — sin Villa Alemana confirmada al 31/07, ventana activa; (4) **Juicio TDLC PedidosYa sin resolución** — FNE mantiene multa US$3,8M, argumento activo todo el segundo semestre. **Actualizado:** 2026-07-31.
+
+---
+
+#### "ÚLTIMO DÍA DE JULIO" — Contactados sin draft fresco (31/07)
+
+**[9] Rotisería El Gaucho — Jueves 31 de julio (31/07):**
+"Hola Rotisería El Gaucho! RepartoJusto — jueves 31 de julio, el último día del mes más frío del año. Ayer pasaron los Premios Uber Eats en Santiago, donde premiaron a los grandes del delivery de la capital. Las rotiserías de Portales 567 no aparecen en esas listas — aparecen en la mesa familiar del jueves a mediodía, con el costillar y el asado que saben hacer, sin algoritmo que los esconda. Con RepartoJusto no hay comisión porcentual: $500 fijos por pedido entregado, independiente de si el cliente pidió medio pollo a $6.000 o un costillar completo a $15.000. Para un asado de $12.000, Rappi cobra $3.360 de comisión — con nosotros son $500 siempre. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km — una rotisería local de Portales 567 con logística de tarifa fija posicionada antes de que lleguen a Villa Alemana tiene ventaja real sobre los que vienen desde más lejos. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Le damos hoy, último día de julio?"
+
+---
+
+**[13] Ferretería Los Maestros — Jueves 31 de julio (31/07):**
+"Hola Ferretería Los Maestros! RepartoJusto — jueves 31 de julio, cierre del mes más frío del año. Julio fue el mes de más reparaciones de emergencia: calefactores, cañerías, aislación. El maestro que trabaja en casa necesita el material ahora, no en media hora después de ir a comprar. Un servicio de delivery local de ferretería puede capturar exactamente ese cliente — el que paga lo que sea por no parar el trabajo. Costo: $500 fijos por pedido entregado, sin porcentaje sobre el valor de venta. Para un pedido de materiales de $25.000, la diferencia vs. una app de porcentaje es enorme ($6.500 de comisión en Rappi vs. $500 con nosotros). Dato relevante: ayer Uber Eats premió a los grandes del delivery de Santiago — los negocios de barrio de Portales 123 que resuelven las urgencias del vecino no aparecen en esas listas, pero son los que realmente mueven el sector. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Cerramos julio activando delivery?"
+
+---
+
+#### PRIORIDADES DEL GERENTE — Nuevos con 36 días de borradores activos (31/07)
+
+**[22] Sushi Point Delivery — Último día de julio (31/07):**
+"Hola Sushi Point Delivery! RepartoJusto — último contacto de julio, y lo hacemos con el mejor argumento del mes: ayer martes 29 de julio, Uber Eats organizó su ceremonia de Premios anuales en Santiago, donde premiaron a los grandes del delivery de la capital. Los sushi delivery de Santiago 906, Villa Alemana no aparecen en esas listas — pero conocen mejor que nadie el sushi que piden sus clientes de barrio un jueves de invierno. Con RepartoJusto no hay algoritmo: los pedidos llegan directamente al local por $500 fijos por entrega. Para un combo de sushi de $18.000, Rappi cobra $5.040 de comisión — con nosotros son $500 siempre. El último día de julio es el mejor para cerrar con el mejor mes de delivery del año. Datos de urgencia: (1) Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un sushi delivery de tarifa fija local posicionado antes de que lleguen tiene ventaja real; (2) PedidosYa fue vendida el 16/07 a un fondo de inversión de Nueva York — comisiones en incertidumbre para los afiliados. Con nosotros son siempre $500, sin cambio de dueños ni sorpresas. Tel. disponible: (32) 324 0504. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Agosto es el mes en que activamos?"
+
+---
+
+**[15] Melt Pizzas — Último día de julio (31/07):**
+"Hola Melt Pizzas! RepartoJusto cerrando julio con el argumento del mes: ayer martes 29 de julio, Uber Eats tuvo su ceremonia de Premios en Santiago — donde premiaron a las grandes cadenas de pizza del delivery nacional. Las pizzerías de Av. Valparaíso 1057 pagan las comisiones más altas del año en julio, pero rara vez aparecen en los rankings que las plataformas premian. Melt Pizzas tiene algo que las cadenas premiadas no tienen: la pizza del barrio que el vecino pide todos los jueves. Con RepartoJusto no hay porcentaje: $500 fijos por pedido entregado, independiente del valor. Para una pizza de $12.000, Rappi cobra $3.360 de comisión — con nosotros son $500 siempre. Dato urgente: Rappi Turbo ya está en Quilpué a 8 km — una pizzería local de tarifa fija posicionada antes de que lleguen tiene ventaja de posicionamiento en el barrio. Último día del mes más frío del año: el que no cerraste en julio, lo cierras en agosto. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Le damos en agosto?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-07-31)
+
+**[123] Vila Sushi Delivery — Presentación:**
+"Hola Vila Sushi Delivery! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Instagram como sushi delivery activo en la zona — muy bien. Si hoy operan por canal propio o están en Rappi/Uber Eats, tienen una propuesta directa de nuestra parte: RepartoJusto suma riders locales en Villa Alemana a $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un combo de sushi de $16.000–$20.000, la diferencia vs. Rappi (28% = $4.480–$5.600 de comisión) es significativa — con nosotros son $500 siempre. Dato de esta semana: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un sushi delivery local con logística de tarifa fija posicionado antes de que lleguen tiene ventaja real frente al que entrega desde más lejos. Dato adicional: ayer Uber Eats premió a los grandes del delivery de Santiago — los sushi delivery de barrio de Villa Alemana no aparecen en esas listas, pero son los que hacen el delivery real de la zona. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[124] Carnicería Austral — Presentación:**
+"Hola Carnicería Austral! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en PedidosYa — carnicería con delivery, perfecto para el cliente que quiere su asado o cazuela sin salir de casa en invierno. Hay una información importante que deben saber: el 16 de julio pasado, PedidosYa fue vendida a SSW Partners, un fondo de inversión privado de Nueva York. SSW compró para revender — en 12 a 18 meses no se sabe quién los va a operar, bajo qué nombre, ni con qué comisiones. Con RepartoJusto son siempre $500 fijos por pedido entregado, sin letra chica y sin cambio de dueños. Para un pedido de carne de $15.000, la diferencia vs. PedidosYa (29% = $4.350 de comisión) es de $3.850 por pedido que se queda en el negocio. Sin contrato, registro completamente gratuito. Pueden mantener PedidosYa y sumar RepartoJusto como canal paralelo. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
