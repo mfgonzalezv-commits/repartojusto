@@ -1,57 +1,55 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-07-31
-**Pipeline total:** 124 prospectos
-**Por estado:** Nuevos: 110 | Contactados: 14 | Interesados: 0 | Registrados: 0
-
----
+**Fecha:** 2026-08-01 (viernes — primer día del segundo semestre)
+**Pipeline total:** 126 prospectos
+**Por estado:** Nuevos: 112 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-### Argumentos incorporados desde el Investigador (31/07)
-- **Post-Premios Uber Eats (ventana 30/07–01/08):** "Ayer Uber Eats premió a los grandes de Santiago — nosotros trabajamos en tu barrio con $500 fijo sin algoritmo que te esconda." Incorporado en todos los mensajes del día.
-- **Ventana SSW en hora final (15 días desde 16/07):** PedidosYa vendida a SSW Partners NY; incertidumbre máxima de comisiones para negocios afiliados. Incorporado en presentación de Carnicería Austral (#124) y reforzado en mensajes de Contactados.
-- **Rappi Turbo en Quilpué, urgencia alta:** Sin Villa Alemana confirmada, pero a 8 km. Incorporado en todos los mensajes.
-- **Juicio TDLC PedidosYa activo:** FNE mantiene multa US$3,8M, sin resolución — argumento vigente todo el segundo semestre.
+**Argumentos activos hoy:**
+- Post-Premios Uber Eats (CIERRA HOY — ceremonia fue 29/07): "Ayer Uber Eats premió a los grandes de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo"
+- Ventana SSW en hora final (16 días desde venta PedidosYa a SSW Partners NY el 16/07)
+- Rappi Turbo en Quilpué (8 km de Villa Alemana) — urgencia ALTA
+- Inicio de agosto = back-to-school + cambio de clima = resfríos tardíos
 
-### Seguimientos para Contactados
-- **#9 Rotisería El Gaucho** — "Jueves 31 de julio / cierre del mes más frío / post-Premios Uber Eats": asado y costillar familiar invernal, contraste negocios de barrio vs. premiados Uber Eats, urgencia Rappi Turbo Quilpué.
-- **#13 Ferretería Los Maestros** — "Jueves 31 de julio / cierre de julio / post-Premios Uber Eats": peak reparaciones calefacción/aislación invierno, material urgente sin salir a comprar, argumento $500 vs. $6.500 comisión Rappi por pedido $25.000.
+**Seguimientos a Contactados (sin draft fresco desde 26/07 — 6 días):**
+- #1 Fuente de Soda El Rápido — "Viernes 1 de agosto / ÚLTIMO día ventana Post-Premios UE + inicio agosto"
+- #3 Farmacia Cruz Verde — "Viernes 1 de agosto / inicio agosto / mes de resfríos tardíos + Rappi Turbo"
 
-### Seguimientos prioritarios — Nuevos (Prioridad Gerente)
-- **#22 Sushi Point Delivery** (tel. (32) 324 0504) — "Último día de julio / post-Premios Uber Eats / SSW PedidosYa": 36 días consecutivos con borradores activos. Argumento triple: $500 fijo, Rappi Turbo a 8 km, PedidosYa en manos de fondo NY sin plan.
-- **#15 Melt Pizzas** — "Último día de julio / post-Premios Uber Eats / Rappi Turbo": 36 días consecutivos con borradores activos. Mensaje cierra julio y abre agosto como canal de activación.
+**ACTIVACIÓN AGOSTO:**
+- #12 Librería El Saber — activada HOY después de diferirse hasta agosto. Primer mensaje de la temporada con argumento back-to-school / inicio de clases. Peak de ventana corta antes del primer día de colegio.
 
-### Nuevos prospectos incorporados
-- **#123 Vila Sushi Delivery** (@vilasushidelivery, Instagram) — sushi delivery canal propio Villa Alemana; ticket alto, sin grandes plataformas detectadas; peak invernal.
-- **#124 Carnicería Austral** (en PedidosYa, Villa Alemana) — carnicería con delivery activo; argumento SSW ideal (en PedidosYa vendida a fondo NY); cazuelas/costillares = peak julio; ahorro $3.850/pedido de $15.000 vs. PedidosYa.
+**Prioridad Gerente (37 días consecutivos sin confirmación de envío):**
+- #22 Sushi Point Delivery (tel. (32) 324 0504) — "Viernes 1 de agosto / primer viernes del 2do semestre" con cálculo concreto: ahorro de $363.200/mes vs. Rappi para 80 pedidos a $18.000.
+- #15 Melt Pizzas — draft fresco del 31/07 activo. Se mantiene como prioridad crítica del Gerente.
 
----
+**Nuevos prospectos encontrados hoy (WebSearch):**
+- #125 Tu Delivery Villa Alemana y Quilpué (@tudelivery.cl) — comida rápida / pitas / shawarma, canal propio Instagram + web, sin grandes plataformas, VA/Quilpué, tel. 9 3374 2679
+- #126 Delivery Mascotas Villa Alemana (@alimentoparaperrosdeliveri) — delivery alimentos para mascotas, canal propio Facebook, sin grandes plataformas
 
 ## Borradores listos para Matías
 
-6 mensajes listos en `reportes/prospectos.md` sección "MENSAJES DEL DÍA (2026-07-31)":
+Total: 6 mensajes listos en prospectos.md, sección "MENSAJES DEL DÍA (2026-08-01)"
 
-1. **[9] Rotisería El Gaucho** — seguimiento "Jueves 31 de julio"
-2. **[13] Ferretería Los Maestros** — seguimiento "Jueves 31 de julio"
-3. **[22] Sushi Point Delivery** — "Último día de julio" (PRIORIDAD GERENTE, 36 días, tel. (32) 324 0504)
-4. **[15] Melt Pizzas** — "Último día de julio" (PRIORIDAD GERENTE, 36 días)
-5. **[123] Vila Sushi Delivery** — presentación (nuevo hoy)
-6. **[124] Carnicería Austral** — presentación SSW (nuevo hoy)
+1. [1] Fuente de Soda El Rápido — Seguimiento "Viernes 1 de agosto" (6 días sin draft)
+2. [3] Farmacia Cruz Verde — Seguimiento "Viernes 1 de agosto / inicio agosto" (6 días sin draft)
+3. [12] Librería El Saber — ACTIVACIÓN AGOSTO / inicio de clases (primer mensaje de la temporada)
+4. [22] Sushi Point Delivery — Prioridad Gerente 37 días (tel. (32) 324 0504)
+5. [125] Tu Delivery VA — Presentación / canal propio pitas/shawarma
+6. [126] Delivery Mascotas VA — Presentación / alimentos mascotas canal propio Facebook
 
-### Prioridad de envío esta semana (ventana SSW en hora final):
-Los 7 borradores PedidosYa siguen pendientes de envío urgente: **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — 15 días desde la venta a SSW NY, la noticia se enfría esta semana.
+CRITICO — VENTANA SSW SE ENFRIA HOY (16 dias desde venta 16/07):
+Los 7 borradores PedidosYa deben salir ESTA SEMANA como prioridad absoluta:
+#27 Tribeca Sushi | #28 La Esquina Con Sabor | #30 Poh Che | #33 Casa Festa | #60 Master Sandwich | #90 Buenaventura Pizzeria | #102 La Joya
+Todos tienen su draft SSW listo en prospectos.md desde 17/07.
 
----
+#15 Melt Pizzas y #22 Sushi Point Delivery — 37 dias de borradores activos sin confirmacion:
+Son las prioridades maximas del Gerente. Drafts listos para envio esta semana.
 
-## Nuevos prospectos agregados hoy
+## Nuevos prospectos agregados
 
-| # | Negocio | Rubro | Canal | Argumento principal |
-|---|---|---|---|---|
-| 123 | Vila Sushi Delivery | Sushi | Canal propio Instagram (@vilasushidelivery) | $500 fijo vs. comisión Rappi, Rappi Turbo urgencia, post-Premios Uber Eats contraste |
-| 124 | Carnicería Austral | Carnicería / delivery | PedidosYa Villa Alemana | SSW Partners (incertidumbre comisiones), $3.850 ahorro por pedido $15.000, peak cazuelas julio |
-
----
+- #125 Tu Delivery Villa Alemana y Quilpue — comida rapida, canal propio @tudelivery.cl, VA/Quilpue, tel. 9 3374 2679. Primer pitas/shawarma con canal propio sin plataformas grandes.
+- #126 Delivery Mascotas Villa Alemana — alimentos para mascotas canal propio Facebook @alimentoparaperrosdeliveri. Cliente fiel y recurrente. Agosto = peak invierno accesorios mascotas.
 
 ## Para el Gerente
 
-Pipeline en 124 prospectos (110 Nuevos, 14 Contactados, 0 Registrados); 6 borradores redactados hoy con argumento post-Premios Uber Eats + cierre de julio + Rappi Turbo Quilpué; cuello de botella crítico se mantiene: 84 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de estados — acción más urgente es que Matías envíe esta semana los 7 borradores SSW PedidosYa y confirme el estado de los borradores de #22 Sushi Point y #15 Melt Pizzas (36 días consecutivos activos).
+Pipeline en 126 prospectos (112 Nuevos, 14 Contactados, 0 Registrados); ventana SSW lleva 16 dias (venta PedidosYa a SSW Partners NY el 16/07) en hora final de alto impacto — 7 borradores PedidosYa pendientes de envio; #12 Libreria El Saber activada para temporada agosto back-to-school; 6 borradores nuevos redactados hoy; cuello de botella critico: 87 dias sin confirmacion de Matias sobre mensajes enviados bloquea actualizacion de todos los estados del pipeline.

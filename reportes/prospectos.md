@@ -1,12 +1,12 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-07-31
+**Actualizado:** 2026-08-01
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Domingo 26 de julio" redactado 26/07 — último domingo de julio, almuerzo familiar invernal + Rappi Turbo Quilpué + preview Premios Uber Eats 29/07 |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — ÚLTIMO día ventana Post-Premios Uber Eats + inicio de agosto + Rappi Turbo Quilpué |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — último miércoles de julio, pollo almuerzo familiar post-Premios UE, Rappi Turbo Quilpué urgencia |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 26 de julio" redactado 26/07 — medicamentos a domicilio domingo invernal, fiebre del fin de semana, no salir al frío + Rappi Turbo urgencia |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — inicio agosto / mes resfríos tardíos y cambio de clima + Rappi Turbo Quilpué urgencia |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — cierre de julio, pizza post-Premios UE, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — PRIORIDAD, ÚLTIMO domingo de julio, noche domingo = peak sushi familiar + arg. Premios Uber Eats 29/07 |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — ÚLTIMO domingo de julio, peak botillería tarde dominical invernal, arg. Premios Uber Eats 29/07 |
@@ -15,7 +15,7 @@
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — ÚLTIMO día de julio, cierre del mes más frío del año, asado/costillar familiar + post-Premios Uber Eats contraste |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — lunes home office invernal = peak café a domicilio mañana + arg. Premios Uber Eats 29/07 contraste local |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats, medicamentos mascotas invierno = esencial no salir al frío + Rappi Turbo Quilpué urgencia |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — peak inicio de clases 2026 |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto / ACTIVACIÓN" redactado 01/08 — primer mensaje de la temporada, peak inicio de clases agosto 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — cierre de julio, peak reparaciones invierno/calefacción, post-Premios Uber Eats contraste negocios de barrio |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
@@ -25,7 +25,7 @@
 | 19 | Just Burger | Comida rápida | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 20 | El Mercadito Móvil | Frutas y verduras | Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 21 | Maju Sushi & Burger | Sushi y hamburguesas | Villa Alemana | Nuevo | — | Presentación redactada 14/05, pendiente confirmación Matías |
-| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), tel. (32) 324 0504, post-Premios Uber Eats contraste, último día del mes más frío |
+| 22 | Sushi Point Delivery | Sushi / japonesa | Santiago 906, Villa Alemana | Nuevo | — | "Viernes 1 de agosto" redactado 01/08 — PRIORIDAD GERENTE (37 días borradores activos), tel. (32) 324 0504, primer viernes agosto + cálculo ahorro mensual + Rappi Turbo Quilpué |
 | 23 | Pizzas Ropzila | Pizzería | Ojos de Agua c/Freire, Villa Alemana | Nuevo | — | Arranque julio redactado 24/06 — en Rappi+PedidosYa+Uber Eats, WhatsApp: +56 986749142 |
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
@@ -128,10 +128,58 @@
 | 122 | C Gourmet | Sandwichería gourmet / completos | Pje. Solano 434, Villa Alemana | Nuevo | — | Presentación redactada 30/07 — en Rappi, completos y sándwiches de salchicha alemana gourmet, ahorro $1.680+/pedido vs. Rappi 28%, primer gourmet alemán del pipeline |
 | 123 | Vila Sushi Delivery | Sushi | Villa Alemana (@vilasushidelivery, Instagram) | Nuevo | — | Presentación redactada 31/07 — canal propio Instagram, sushi delivery Villa Alemana, sin grandes plataformas detectadas, ticket alto sushi + último día de julio peak delivery |
 | 124 | Carnicería Austral | Carnicería / carnes a domicilio | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 31/07 — en PedidosYa (argumento SSW: venta a fondo NY el 16/07, incertidumbre máxima de comisiones), carnicería con delivery activo, cazuelas/costillares = peak julio |
+| 125 | Tu Delivery Villa Alemana y Quilpué | Comida rápida / pitas / shawarma | Villa Alemana y Quilpué (@tudelivery.cl, Instagram + web) | Nuevo | — | Presentación redactada 01/08 — canal propio Instagram y web (tu-delivery-villa-alemana-y-quilpue.negocio.site), sin grandes plataformas detectadas, argumento logística local $500 fijo + ampliar cobertura VA/Quilpué, tel. 9 3374 2679 |
+| 126 | Delivery Mascotas Villa Alemana | Delivery alimentos para mascotas | Villa Alemana (@alimentoparaperrosdeliveri, Facebook) | Nuevo | — | Presentación redactada 01/08 — canal propio Facebook, sin grandes plataformas detectadas, cliente fiel y compra recurrente (alimento mascotas), peak invierno accesorios mascotas, argumento $500 fijo vs. porcentaje comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-01)
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 1 de agosto — primer día del segundo semestre y ÚLTIMO día de la ventana Post-Premios Uber Eats** (ceremonia fue el 29/07). Se redactan **6 mensajes**: (1) seguimientos **"Viernes 1 de agosto"** para **#1 Fuente de Soda El Rápido** y **#3 Farmacia Cruz Verde** (ambos 6 días sin draft fresco desde 26/07); (2) **ACTIVACIÓN AGOSTO** para **#12 Librería El Saber** — diferida hasta agosto, HOY ARRANCA el peak de inicio de clases; (3) seguimiento PRIORIDAD GERENTE para **#22 Sushi Point Delivery** (tel. (32) 324 0504, **37 días consecutivos** con borradores activos sin confirmación de envío); (4) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Tu Delivery (#125)** — comida rápida pitas/shawarma canal propio @tudelivery.cl VA/Quilpué, tel. 9 3374 2679 — y **Delivery Mascotas (#126)** — alimentos mascotas canal propio Facebook @alimentoparaperrosdeliveri. Pipeline total: **126 prospectos**.
+>
+> **ALERTAS URGENTES (Investigador 31/07):** (1) **VENTANA POST-PREMIOS UBER EATS CIERRA HOY** (30/07-01/08, ceremonia fue 29/07) — usar contraste "Ayer Uber Eats premió a los grandes de Santiago; RepartoJusto trabaja en tu barrio con $500 fijo" en todos los mensajes de hoy; (2) **VENTANA SSW EN HORA FINAL** (16 días desde venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) deben salir ESTA SEMANA — la noticia se enfría pronto; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA en todos los mensajes; (4) **#15 Melt Pizzas** lleva 37 días consecutivos con borradores activos — el último draft fresco es del 31/07 y sigue como prioridad máxima del Gerente junto con #22; (5) **Inicio de agosto = back-to-school** — #12 Librería El Saber se activa HOY. **Actualizado:** 2026-08-01.
+
+---
+
+#### "VIERNES 1 DE AGOSTO" — Contactados sin draft fresco (01/08)
+
+**[1] Fuente de Soda El Rápido — Viernes 1 de agosto (01/08):**
+"Hola Fuente de Soda El Rápido! RepartoJusto acá — viernes 1 de agosto, primer día del mes. El jueves pasado Uber Eats celebró su ceremonia de premios anuales en Santiago, donde premiaron a los grandes del delivery de la capital. Las fuentes de soda de Av. Álvarez 1245 no aparecen en esas listas — pero saben mejor que nadie qué completo, hamburguesa o churrasco pide el vecino de Villa Alemana un viernes a mediodía. Con RepartoJusto no hay algoritmo que los esconda: los pedidos llegan directamente al negocio por $500 fijos por entrega, sin porcentaje sobre la venta. Para un completo de $4.500, Rappi cobra $1.260 de comisión — con nosotros son $500 siempre, el resto queda en el negocio. Dato de urgencia: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — una fuente de soda local con logística de tarifa fija posicionada antes de que lleguen tiene ventaja real de servicio sobre los que reparten desde más lejos. Arrancamos agosto con esto: sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos hoy?"
+
+---
+
+**[3] Farmacia Cruz Verde — Viernes 1 de agosto (01/08):**
+"Hola Farmacia Cruz Verde! RepartoJusto — viernes 1 de agosto, inicio del nuevo mes. Agosto en Chile es el mes del cambio de clima: los resfríos tardíos, la gripe de fin de invierno, el antibiótico que el médico recetó esta tarde y el cliente necesita esta noche. El paciente que está enfermo no quiere salir al frío — necesita que el medicamento llegue a la puerta. Una farmacia que hace delivery local con tarifa fija ($500 por pedido entregado, sin porcentaje sobre el ticket) tiene un diferenciador real frente a las plataformas que cobran 28-30% de comisión sobre la venta. Para una compra de medicamentos de $15.000, Rappi cobra $4.200 de comisión — con nosotros son $500 siempre. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km — cuando llegue a Villa Alemana, las farmacias afiliadas a su plataforma pagarán porcentaje sobre cada caja de paracetamol. Con RepartoJusto la tarifa es siempre $500, sin importar si el pedido es de $3.000 o de $30.000. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Activamos el delivery de agosto?"
+
+---
+
+#### ACTIVACIÓN AGOSTO — Librería (01/08)
+
+**[12] Librería El Saber — ACTIVACIÓN AGOSTO: Inicio de Clases (01/08):**
+"Hola Librería El Saber! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los contactamos hoy porque es el momento exacto: agosto en Chile es el mes del inicio o retorno a clases — carpetas, cuadernos, lápices, calculadoras, libros de texto. El cliente de librería en agosto no quiere dar dos vueltas por Villa Alemana buscando lo que necesita: quiere hacer el pedido y que llegue a la casa. RepartoJusto suma riders locales a ese pedido por $500 fijos por entrega, sin porcentaje sobre la venta. Para una compra escolar de $20.000, una plataforma de porcentaje cobra hasta $5.600 de comisión — con nosotros son $500 siempre, el resto queda en la librería. El peak de inicio de clases tiene ventana corta — quien activa el delivery antes del primer día de colegio llega primero al cliente. Sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+#### PRIORIDAD GERENTE — Nuevo con 37 días de borradores activos (01/08)
+
+**[22] Sushi Point Delivery — Viernes 1 de agosto / PRIORIDAD GERENTE (01/08):**
+"Hola Sushi Point Delivery! RepartoJusto — viernes 1 de agosto, primer viernes del segundo semestre del año. Llevan operando en Villa Alemana con la calidad que confirman sus 4.6 estrellas en TripAdvisor. Una pregunta directa: ¿cuánto pagan en comisión mensual a las plataformas? Para un sushi delivery con ticket de $18.000 y 80 pedidos mensuales, la comisión a Rappi (28%) son $403.200 por mes. Con RepartoJusto: $40.000 (80 pedidos × $500 fijo). Diferencia: $363.200 que se quedan en el negocio cada mes. El jueves pasado Uber Eats celebró sus Premios en Santiago — los sushi delivery de barrio de Santiago 906, Villa Alemana no aparecen en esas listas. Con RepartoJusto no hay algoritmo: la plataforma trabaja para el negocio, no para el ranking. Dato urgente: Rappi Turbo ya está en Quilpué, a 8 km — el negocio posicionado con logística local de tarifa fija antes de que lleguen tiene ventaja competitiva real. Tel. (32) 324 0504. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Agosto es el mes que arrancamos?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-01)
+
+**[125] Tu Delivery Villa Alemana y Quilpué — Presentación:**
+"Hola Tu Delivery! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos ofreciendo comida a domicilio en Villa Alemana y Quilpué por canal propio Instagram (@tudelivery.cl) y web — exactamente lo que más valoramos: negocios que ya manejan su propio delivery sin depender de Rappi o Uber Eats. Con RepartoJusto la logística de riders locales tiene un costo fijo de $500 por pedido entregado — sin porcentaje sobre las ventas. Para una pita de $6.000, Rappi cobra $1.680 de comisión en su plataforma; con nosotros son $500 siempre, el resto queda en el negocio. Si hoy operan por canal propio y quieren ampliar cobertura con riders de la zona para llegar más rápido y más lejos en Villa Alemana y Quilpué, es el modelo directo para escalar sin perder margen. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona. repartojusto-production.up.railway.app ¿Conversamos? Tel. 9 3374 2679"
+
+---
+
+**[126] Delivery Mascotas Villa Alemana — Presentación:**
+"Hola! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos activos en Facebook (@alimentoparaperrosdeliveri) ofreciendo delivery de alimentos para mascotas en Villa Alemana — un rubro con cliente muy fiel y compra recurrente: el alimento del perro o el gato no se improvisa, se compra el mismo mes, a veces la misma semana. Una logística local de riders por $500 fijos por pedido entregado (sin porcentaje sobre el ticket) puede ampliar la cobertura de reparto sin perder margen. Para un pedido de alimento de $20.000, una plataforma de porcentaje cobra hasta $5.600 de comisión — con nosotros son $500 siempre. Agosto en Villa Alemana es un mes de alta demanda de accesorios y alimentos de invierno para mascotas. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona. repartojusto-production.up.railway.app ¿Le interesa ampliar la cobertura de delivery?"
 
 ---
 
