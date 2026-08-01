@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-01T13:09:26Z
+**Última verificación:** 2026-08-01T14:08:44Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del entorno bloqueó la conexión con HTTP 403 Forbidden (CONNECT tunnel failed). No se obtuvo respuesta del servidor de producción.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy del entorno de ejecución retornó 403 Forbidden al intentar establecer el túnel HTTPS (curl error 56: CONNECT tunnel failed). No es posible confirmar si el servidor está operativo desde este entorno.
