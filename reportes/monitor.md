@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-01T22:08:14 UTC
+**Última verificación:** 2026-08-01T23:08:22Z
 **Estado:** ❌ CAÍDO
-**Detalle:** curl exit 56 (fallo de red) — HTTP 000 (sin respuesta). El endpoint https://repartojusto-production.up.railway.app/health no respondió. El entorno de ejecución remoto bloqueó o no pudo establecer la conexión saliente.
+**Detalle:** curl exit 56 — HTTP 000 (sin respuesta). El proxy del entorno bloqueó la conexión saliente con HTTP 403 Forbidden al intentar el túnel CONNECT hacia repartojusto-production.up.railway.app:443. No se pudo verificar el estado del servidor.
