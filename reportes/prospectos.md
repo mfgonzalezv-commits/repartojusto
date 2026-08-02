@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-01
+**Actualizado:** 2026-08-02
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -8,8 +8,8 @@
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — último miércoles de julio, pollo almuerzo familiar post-Premios UE, Rappi Turbo Quilpué urgencia |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — inicio agosto / mes resfríos tardíos y cambio de clima + Rappi Turbo Quilpué urgencia |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — cierre de julio, pizza post-Premios UE, Rappi Turbo Quilpué urgencia |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — PRIORIDAD, ÚLTIMO domingo de julio, noche domingo = peak sushi familiar + arg. Premios Uber Eats 29/07 |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 27 de julio" redactado 27/07 — ÚLTIMO domingo de julio, peak botillería tarde dominical invernal, arg. Premios Uber Eats 29/07 |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — PRIORIDAD, primer sábado agosto, noche sábado = peak sushi familiar, post-Premios UE + Rappi Turbo Quilpué urgencia |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — primer sábado agosto, noche sábado = peak botillería fin de semana, post-Premios UE + Rappi Turbo Quilpué urgencia |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats en Santiago, contraste negocios de barrio vs. grandes + Rappi Turbo Quilpué urgencia |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — primer lunes última semana de julio, planificación semanal + arg. Premios Uber Eats 29/07 (negocios de barrio no aparecen en lista UE) |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — ÚLTIMO día de julio, cierre del mes más frío del año, asado/costillar familiar + post-Premios Uber Eats contraste |
@@ -130,10 +130,44 @@
 | 124 | Carnicería Austral | Carnicería / carnes a domicilio | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 31/07 — en PedidosYa (argumento SSW: venta a fondo NY el 16/07, incertidumbre máxima de comisiones), carnicería con delivery activo, cazuelas/costillares = peak julio |
 | 125 | Tu Delivery Villa Alemana y Quilpué | Comida rápida / pitas / shawarma | Villa Alemana y Quilpué (@tudelivery.cl, Instagram + web) | Nuevo | — | Presentación redactada 01/08 — canal propio Instagram y web (tu-delivery-villa-alemana-y-quilpue.negocio.site), sin grandes plataformas detectadas, argumento logística local $500 fijo + ampliar cobertura VA/Quilpué, tel. 9 3374 2679 |
 | 126 | Delivery Mascotas Villa Alemana | Delivery alimentos para mascotas | Villa Alemana (@alimentoparaperrosdeliveri, Facebook) | Nuevo | — | Presentación redactada 01/08 — canal propio Facebook, sin grandes plataformas detectadas, cliente fiel y compra recurrente (alimento mascotas), peak invierno accesorios mascotas, argumento $500 fijo vs. porcentaje comisión |
+| 127 | La Sopaipillera | Sopaipillas / comida chilena | Quilpué (en Rappi, zona VA/Quilpué) | Nuevo | — | Presentación redactada 02/08 — PRIMERA sopaipillera del pipeline, en Rappi Quilpué, producto 100% chileno peak fin de invierno agosto, argumento $500 vs. Rappi 28%, Rappi Turbo ya en Quilpué |
+| 128 | La Pappa Delivery | Comida a domicilio | Quilpué (en Rappi, zona VA/Quilpué) | Nuevo | — | Presentación redactada 02/08 — delivery activo en Rappi Quilpué, argumento tarifa fija $500 vs. comisión porcentual Rappi, Rappi Turbo urgencia, puede ampliar cobertura VA |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-02)
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 2 de agosto — primer sábado del mes y del segundo semestre**. El sábado por la noche es el mayor peak de delivery de la semana. Se redactan **4 mensajes**: (1) seguimientos **"Sábado 2 de agosto"** para los 2 Contactados más desactualizados: **#5 Sushi Zen** (Freire 1100, PRIORIDAD, 6 días sin draft desde 27/07, noche sábado = peak sushi familiar) y **#6 Botillería El Copihue** (Av. Álvarez 2310, 6 días sin draft desde 27/07, noche sábado = peak botillería); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy en Rappi Quilpué: **La Sopaipillera (#127)** — PRIMERA sopaipillera del pipeline, sopaipillas peak fin de invierno — y **La Pappa Delivery (#128)** — delivery activo en Rappi Quilpué. Pipeline total: **128 prospectos**.
+>
+> **ALERTAS URGENTES (Investigador 31/07):** (1) **VENTANA POST-PREMIOS UBER EATS se enfría** (ceremonia 29/07, ya 4 días — último fin de semana de uso) — incorporar argumento "Uber Eats premió a los grandes de Santiago, nosotros trabajamos en tu barrio" en seguimientos; (2) **VENTANA SSW EN HORA FINAL** (17 días desde venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD URGENTE esta semana** — la noticia se enfría y pierde potencia de venta; (3) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA en todos los mensajes; (4) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **38 días consecutivos** con borradores activos sin confirmación de envío. **Actualizado:** 2026-08-02.
+
+---
+
+#### "SÁBADO 2 DE AGOSTO" — Contactados sin draft fresco (02/08)
+
+**[5] Sushi Zen — Sábado 2 de agosto (02/08):**
+"Hola Sushi Zen! RepartoJusto — sábado 2 de agosto, primer sábado del mes. La noche del sábado es el peak de sushi en toda la región — tablas, rolls, nigiris, el pedido familiar del fin de semana. Para esa noche, un sushi delivery de Freire 1100 con logística de tarifa fija es lo que no tienen Rappi ni Uber Eats: $500 por pedido entregado, sin porcentaje sobre la venta. Para un combo de sushi de $18.000, Rappi cobra $5.040 de comisión — con nosotros son $500 siempre, $4.540 que se quedan en el negocio por cada pedido. El 29 de julio Uber Eats premió a los grandes del delivery de Santiago en su ceremonia anual — los sushi delivery de barrio de Villa Alemana no aparecen en esas listas, pero son los que hacen el delivery real de los vecinos un sábado de invierno. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un sushi delivery local con tarifa fija posicionado antes de que lleguen tiene ventaja competitiva real en la zona. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Arrancamos agosto juntos?"
+
+---
+
+**[6] Botillería El Copihue — Sábado 2 de agosto (02/08):**
+"Hola Botillería El Copihue! RepartoJusto — sábado 2 de agosto, el primer sábado del mes. El sábado a la noche es el momento donde una botillería con delivery puede capturar el mayor volumen del fin de semana: la cerveza que faltó, el vino para la reunión familiar, el pisco del asado. Con RepartoJusto la logística cuesta $500 fijos por pedido entregado, sin porcentaje sobre el ticket. Para un pedido de botillería de $10.000, Rappi cobra $2.800 de comisión — con nosotros son $500 siempre, $2.300 que se quedan en el negocio por cada entrega. El 29 de julio pasado Uber Eats tuvo su ceremonia de Premios anuales en Santiago — las botillerías de barrio de Av. Álvarez 2310 no aparecen en esas listas, pero son las que resuelven el pedido del vecino un sábado a las 10 de la noche. Dato urgente: Rappi Turbo ya está en Quilpué, a 8 km — cuando llegue a Villa Alemana, los afiliados pagarán porcentaje sobre cada pedido. Con nosotros son siempre $500, sin importar el valor del pedido. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Le damos este sábado?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-02)
+
+**[127] La Sopaipillera (Quilpué, Rappi) — Presentación:**
+"Hola La Sopaipillera! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos en Rappi en Quilpué — sopaipillas, el producto más chileno del invierno, con peak natural en agosto cuando la gente quiere una última sopaipilla con mostaza y pebre antes de que cambie el clima. Con RepartoJusto la logística de riders locales tiene un costo fijo de $500 por pedido entregado, sin porcentaje sobre las ventas. Para una orden de sopaipillas de $5.000, Rappi cobra $1.400 de comisión — con nosotros son $500 siempre, $900 que se quedan en el negocio por cada pedido. Dato relevante: Rappi Turbo ya opera en Quilpué — mientras la plataforma grande cobra porcentaje, nosotros cobramos tarifa fija. Pueden mantener Rappi y sumar RepartoJusto como canal paralelo para ampliar cobertura en Villa Alemana sin perder margen. Sin contrato, registro completamente gratuito. Somos 100% locales en la zona. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[128] La Pappa Delivery (Quilpué, Rappi) — Presentación:**
+"Hola La Pappa Delivery! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos activos en Rappi Quilpué con entrega a domicilio en la zona. Tienen una propuesta directa de nuestra parte: RepartoJusto suma riders locales en Villa Alemana y Quilpué a $500 fijos por pedido entregado, sin porcentaje sobre la venta. La diferencia con Rappi es concreta — si su pedido promedio es de $8.000, Rappi cobra $2.240 de comisión por ese pedido; con nosotros son $500 siempre, $1.740 que se quedan en el negocio por cada entrega. Dato urgente: Rappi Turbo ya opera en Quilpué, lo que significa que la competencia de delivery en la zona se acelera — un negocio con logística de tarifa fija tiene certeza de margen cuando las plataformas grandes aumenten su presión comercial. Pueden mantener Rappi y sumar RepartoJusto como canal de ampliación hacia Villa Alemana y sectores aledaños. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
