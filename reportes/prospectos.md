@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-02
+**Actualizado:** 2026-08-03
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -11,9 +11,9 @@
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — PRIORIDAD, primer sábado agosto, noche sábado = peak sushi familiar, post-Premios UE + Rappi Turbo Quilpué urgencia |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — primer sábado agosto, noche sábado = peak botillería fin de semana, post-Premios UE + Rappi Turbo Quilpué urgencia |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats en Santiago, contraste negocios de barrio vs. grandes + Rappi Turbo Quilpué urgencia |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — primer lunes última semana de julio, planificación semanal + arg. Premios Uber Eats 29/07 (negocios de barrio no aparecen en lista UE) |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — primer domingo del mes, peak postre almuerzo/onces familiar invernal, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — ÚLTIMO día de julio, cierre del mes más frío del año, asado/costillar familiar + post-Premios Uber Eats contraste |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 28 de julio" redactado 28/07 — lunes home office invernal = peak café a domicilio mañana + arg. Premios Uber Eats 29/07 contraste local |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — domingo invernal, peak café delivery desayuno/once familiar, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats, medicamentos mascotas invierno = esencial no salir al frío + Rappi Turbo Quilpué urgencia |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto / ACTIVACIÓN" redactado 01/08 — primer mensaje de la temporada, peak inicio de clases agosto 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — cierre de julio, peak reparaciones invierno/calefacción, post-Premios Uber Eats contraste negocios de barrio |
@@ -132,10 +132,44 @@
 | 126 | Delivery Mascotas Villa Alemana | Delivery alimentos para mascotas | Villa Alemana (@alimentoparaperrosdeliveri, Facebook) | Nuevo | — | Presentación redactada 01/08 — canal propio Facebook, sin grandes plataformas detectadas, cliente fiel y compra recurrente (alimento mascotas), peak invierno accesorios mascotas, argumento $500 fijo vs. porcentaje comisión |
 | 127 | La Sopaipillera | Sopaipillas / comida chilena | Quilpué (en Rappi, zona VA/Quilpué) | Nuevo | — | Presentación redactada 02/08 — PRIMERA sopaipillera del pipeline, en Rappi Quilpué, producto 100% chileno peak fin de invierno agosto, argumento $500 vs. Rappi 28%, Rappi Turbo ya en Quilpué |
 | 128 | La Pappa Delivery | Comida a domicilio | Quilpué (en Rappi, zona VA/Quilpué) | Nuevo | — | Presentación redactada 02/08 — delivery activo en Rappi Quilpué, argumento tarifa fija $500 vs. comisión porcentual Rappi, Rappi Turbo urgencia, puede ampliar cobertura VA |
+| 129 | Patio Carreño | Pizzas / hamburguesas americanas | Almirante Gómez Carreño 183, Quilpué (patiocarreño.cl) | Nuevo | — | Presentación redactada 03/08 — canal web propio activo, sin grandes plataformas detectadas, pizzas+hamburguesas = peak delivery fin de semana, Rappi Turbo ya en Quilpué = urgencia directa |
+| 130 | Empanadas Tita | Empanaderías | Quilpué (en PedidosYa) | Nuevo | — | Presentación redactada 03/08 — en PedidosYa Quilpué, argumento SSW (venta a fondo NY 16/07) + FNE doble multa, peak agosto empanadas invierno |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-03)
+
+> **NOTA PARA MATÍAS:** Hoy es **domingo 3 de agosto — primer domingo del mes y del segundo semestre**. El domingo es el mayor peak de almuerzo familiar y delivery nocturno de la semana. Se redactan **4 mensajes**: (1) seguimientos **"Domingo 3 de agosto"** para los 2 Contactados más desactualizados: **#8 Pastelería Dulce Hogar** (Av. Álvarez 1890, 6 días sin draft desde 28/07, postre almuerzo familiar dominical + onces invierno) y **#10 Café El Árbol** (Freire 890, 6 días sin draft desde 28/07, peak café delivery domingo invernal); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Patio Carreño (#129)** — pizzas y hamburguesas americanas, canal web propio patiocarreño.cl, Almirante Gómez Carreño 183 Quilpué — y **Empanadas Tita (#130)** — empanaderías en PedidosYa Quilpué, argumento SSW/FNE directo. Pipeline total: **130 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW SE ENFRÍA** (18 días desde venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA esta semana** — último período de alto impacto del argumento; (2) **Argumento post-Premios Uber Eats** (ceremonia 29/07) sigue siendo válido esta semana — usar "Uber Eats premió a los grandes de Santiago, nosotros trabajamos en tu barrio con $500 fijo"; (3) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA en todos los mensajes; (4) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **39 días consecutivos** con borradores activos sin confirmación de envío. **Actualizado:** 2026-08-03.
+
+---
+
+#### "DOMINGO 3 DE AGOSTO" — Contactados sin draft fresco (03/08)
+
+**[8] Pastelería Dulce Hogar — Domingo 3 de agosto (03/08):**
+"Hola Pastelería Dulce Hogar! RepartoJusto — domingo 3 de agosto, el primer domingo del mes. El domingo por la tarde es el momento donde una pastelería en Villa Alemana puede capturar el postre del almuerzo familiar: la torta de cumpleaños encargada, la selva negra para el almuerzo de la familia, el brazo de reina de las onces de invierno. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado — sin porcentaje sobre el valor de la torta. Para una torta de $15.000, Rappi cobra hasta $4.200 de comisión por ese pedido; con nosotros son $500 siempre, $3.700 que se quedan en la pastelería. Esta semana Uber Eats celebró su ceremonia de Premios anuales en Santiago — las pastelerías de barrio de Av. Álvarez 1890, Villa Alemana no aparecen en esas listas, pero son las que saben qué torta necesita el vecino un domingo a la tarde. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — una pastelería local con logística de tarifa fija posicionada antes de que lleguen tiene ventaja real en la zona. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Activamos las entregas del domingo?"
+
+---
+
+**[10] Café El Árbol — Domingo 3 de agosto (03/08):**
+"Hola Café El Árbol! RepartoJusto — domingo 3 de agosto. El domingo de invierno es el día del café delivery: el desayuno que se pide sin salir al frío, el café del mediodía después del almuerzo familiar, la once de la tarde con bizcochito y café. Para un café especial de $4.500, Rappi cobra $1.260 de comisión por ese pedido; con RepartoJusto son $500 siempre, $760 que se quedan en el negocio. Esta semana Uber Eats premió a los grandes del delivery de Santiago en su ceremonia anual — los cafés de barrio de Freire 890, Villa Alemana son los que entregan el café real a los vecinos un domingo con 5 grados afuera. Con nosotros no hay algoritmo que esconda al negocio: los pedidos llegan directamente al café sin intermediario. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un café de barrio con logística local de tarifa fija posicionado antes de que lleguen tiene ventaja competitiva real. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Arrancamos agosto con esto?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-03)
+
+**[129] Patio Carreño (Quilpué, canal web propio) — Presentación:**
+"Hola Patio Carreño! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos con su web propia (patiocarreño.cl) ofreciendo pizzas americanas y hamburguesas con delivery en Quilpué desde Almirante Gómez Carreño 183. Tienen exactamente lo que podemos potenciar: un negocio local con canal de delivery propio y producto estrella (pizza + hamburguesa = los dos mayores pedidos de delivery del fin de semana). Con RepartoJusto suman riders locales de la zona a $500 fijos por pedido entregado, sin porcentaje sobre el ticket. Para una pizza de $12.000, Rappi cobra $3.360 de comisión — con nosotros son $500 siempre, el resto queda en el negocio. Pueden mantener su canal web propio y sumar RepartoJusto para ampliar cobertura hacia Villa Alemana sin perder margen. Dato urgente: Rappi Turbo ya opera en Quilpué — un negocio local con logística de tarifa fija tiene ventaja competitiva antes de que Rappi aumente la presión en la zona. Sin contrato, registro completamente gratuito. Somos 100% locales. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[130] Empanadas Tita (Quilpué, PedidosYa) — Presentación:**
+"Hola Empanadas Tita! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos en PedidosYa en Quilpué — empanadas delivery, el producto más chileno con mayor demanda en agosto cuando termina el invierno. Una propuesta directa: RepartoJusto suma riders locales a $500 fijos por pedido entregado, sin porcentaje sobre las ventas. La diferencia con PedidosYa tiene contexto importante: la FNE multó a PedidosYa dos veces en 2026 por controlar los precios de los negocios afiliados ($3.400 millones CLP en total), y el 16 de julio sus dueños firmaron la venta de la empresa a SSW Partners, fondo de inversión de Nueva York que ya planea revenderla — en 12-18 meses no saben quién les va a cobrar ni cuánto. Con RepartoJusto son siempre $500 por pedido, sin letra chica, sin cambio de dueños. Para una empanada de $4.500, PedidosYa cobra alrededor de $1.350 de comisión — con nosotros son $500 siempre. Agosto es peak de empanadas: el cliente quiere la empanada en casa sin salir al frío. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
