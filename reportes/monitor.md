@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-03T00:00:00Z
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** El proxy de red del entorno bloqueó la conexión a `repartojusto-production.up.railway.app:443` con HTTP 403 Forbidden (CONNECT tunnel failed, curl error 56). El host no está en la allowlist de egreso de este entorno. No es posible confirmar si el servidor está operativo desde aquí.
+**Última verificación:** 2026-08-03T04:09:36Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo alcanzar https://repartojusto-production.up.railway.app/health — el proxy del entorno bloqueó la conexión saliente con HTTP 403 (CONNECT tunnel failed). El servidor puede estar operativo pero es inaccesible desde este entorno de ejecución remota.
