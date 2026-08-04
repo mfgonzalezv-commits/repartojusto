@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-04T20:10:24Z
+**Última verificación:** 2026-08-04T21:09:00Z
 **Estado:** ⚠️ VERIFICACIÓN BLOQUEADA
 **Detalle:** GET https://repartojusto-production.up.railway.app/health — proxy del entorno devolvió 403 Forbidden al túnel HTTPS (curl exit 56, HTTP 000). La restricción es del sandbox de red, no implica que el servidor esté caído. Verificar manualmente desde un entorno sin proxy.
