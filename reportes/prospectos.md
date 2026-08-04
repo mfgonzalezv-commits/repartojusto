@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-03
+**Actualizado:** 2026-08-04
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -10,11 +10,11 @@
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — cierre de julio, pizza post-Premios UE, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — PRIORIDAD, primer sábado agosto, noche sábado = peak sushi familiar, post-Premios UE + Rappi Turbo Quilpué urgencia |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — primer sábado agosto, noche sábado = peak botillería fin de semana, post-Premios UE + Rappi Turbo Quilpué urgencia |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats en Santiago, contraste negocios de barrio vs. grandes + Rappi Turbo Quilpué urgencia |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio de semana agosto, lunes = reposición de despensa, Rappi Turbo Quilpué urgencia alta |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — primer domingo del mes, peak postre almuerzo/onces familiar invernal, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — ÚLTIMO día de julio, cierre del mes más frío del año, asado/costillar familiar + post-Premios Uber Eats contraste |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — domingo invernal, peak café delivery desayuno/once familiar, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 29 de julio" redactado 29/07 — HOY Premios Uber Eats, medicamentos mascotas invierno = esencial no salir al frío + Rappi Turbo Quilpué urgencia |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio agosto cambio de clima, medicamentos mascotas esenciales, Rappi Turbo Quilpué urgencia alta |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto / ACTIVACIÓN" redactado 01/08 — primer mensaje de la temporada, peak inicio de clases agosto 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — cierre de julio, peak reparaciones invierno/calefacción, post-Premios Uber Eats contraste negocios de barrio |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
@@ -134,10 +134,44 @@
 | 128 | La Pappa Delivery | Comida a domicilio | Quilpué (en Rappi, zona VA/Quilpué) | Nuevo | — | Presentación redactada 02/08 — delivery activo en Rappi Quilpué, argumento tarifa fija $500 vs. comisión porcentual Rappi, Rappi Turbo urgencia, puede ampliar cobertura VA |
 | 129 | Patio Carreño | Pizzas / hamburguesas americanas | Almirante Gómez Carreño 183, Quilpué (patiocarreño.cl) | Nuevo | — | Presentación redactada 03/08 — canal web propio activo, sin grandes plataformas detectadas, pizzas+hamburguesas = peak delivery fin de semana, Rappi Turbo ya en Quilpué = urgencia directa |
 | 130 | Empanadas Tita | Empanaderías | Quilpué (en PedidosYa) | Nuevo | — | Presentación redactada 03/08 — en PedidosYa Quilpué, argumento SSW (venta a fondo NY 16/07) + FNE doble multa, peak agosto empanadas invierno |
+| 131 | El Pollón Quilpué | Pollería / pollos a domicilio | Av. Valparaíso 1982, Villa Alemana / Quilpué (en Rappi) | Nuevo | — | Presentación redactada 04/08 — pollería en Rappi activa en VA y Quilpué, tel. +56985510338, pollo = peak almuerzo lunes + Rappi Turbo Quilpué urgencia directa |
+| 132 | Happy Days Waffles | Wafflería / desayunos artesanales | Quilpué / Villa Alemana (happydayswaffles.cl, en Uber Eats) | Nuevo | — | Presentación redactada 04/08 — PRIMERA wafflería del pipeline, en Uber Eats VA y Quilpué + canal web propio, waffles = pedido especial de fin de semana/desayuno familiar |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-04)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 4 de agosto — inicio de la primera semana del mes y del segundo semestre**. El lunes es el día de planificación semanal y reposición de despensa. Se redactan **4 mensajes**: (1) seguimientos **"Lunes 4 de agosto"** para los 2 Contactados más desactualizados: **#7 Minimercado La Esquina** (Lynch 445, 6 días sin draft desde 29/07, lunes = reposición de despensa) y **#11 Veterinaria Huellitas** (Av. Álvarez 3200, 6 días sin draft desde 29/07, inicio agosto = cambio de clima y peak medicamentos mascotas); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **El Pollón Quilpué (#131)** — pollería activa en Rappi VA y Quilpué, Av. Valparaíso 1982, tel. +56985510338 — y **Happy Days Waffles (#132)** — PRIMERA wafflería del pipeline, en Uber Eats VA y Quilpué + web propia happydayswaffles.cl. Pipeline total: **132 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW EN HORA FINAL** (19 días desde venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA esta semana** — la noticia pierde impacto; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA en todos los mensajes; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **40 días consecutivos** con borradores activos sin confirmación de envío. **Actualizado:** 2026-08-04.
+
+---
+
+#### "LUNES 4 DE AGOSTO" — Contactados sin draft fresco (04/08)
+
+**[7] Minimercado La Esquina — Lunes 4 de agosto (04/08):**
+"Hola Minimercado La Esquina! RepartoJusto — lunes 4 de agosto, inicio de la primera semana del mes. El lunes por la mañana es el momento donde un minimercado de barrio tiene su oportunidad más clara: las familias que no compraron el fin de semana reabastecen la despensa — los fideos que faltan, el aceite, el jabón, la leche. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor del carrito. Para un pedido de almacén de $8.000, Rappi cobra $2.240 de comisión — con nosotros son $500 siempre, $1.740 que se quedan en el negocio por cada entrega. El 29 de julio Uber Eats premió a los grandes del delivery de Santiago en su ceremonia anual — los minimercados de barrio de Lynch 445, Villa Alemana no aparecen en esas listas, pero son los que saben qué le falta al vecino un lunes en la mañana. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un almacén local con logística de tarifa fija posicionado antes de que lleguen tiene ventaja real de servicio sobre los supermercados que reparten desde más lejos. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Activamos el delivery del lunes?"
+
+---
+
+**[11] Veterinaria Huellitas — Lunes 4 de agosto (04/08):**
+"Hola Veterinaria Huellitas! RepartoJusto — lunes 4 de agosto, inicio de la primera semana del mes. Agosto en Chile es el mes del cambio de clima: los resfríos de mascotas tardíos, la consulta del lunes porque la mascota estuvo mal el fin de semana, el antiparasitario que el veterinario recetó y el dueño no puede ir a retirar al mediodía porque está trabajando. Una veterinaria que hace delivery local de medicamentos, alimentos y accesorios con tarifa fija tiene un diferenciador real frente a las plataformas que cobran 28-30% de comisión. Con RepartoJusto la logística cuesta $500 fijos por pedido entregado. Para un pedido de medicamentos de $12.000, Rappi cobra hasta $3.360 de comisión — con nosotros son $500 siempre, $2.860 que se quedan en la veterinaria. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — una veterinaria local con logística de tarifa fija posicionada antes de que lleguen tiene ventaja competitiva real en Av. Álvarez 3200. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Le damos este lunes?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-04)
+
+**[131] El Pollón Quilpué/Villa Alemana (Rappi) — Presentación:**
+"Hola El Pollón! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos activos en Rappi en Villa Alemana (Av. Valparaíso 1982) y Quilpué con delivery de pollo. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pollo entero de $10.000, Rappi cobra $2.800 de comisión — con nosotros son $500 siempre, $2.300 que se quedan en el negocio por cada entrega. Pueden mantener Rappi y sumar RepartoJusto como canal paralelo para ampliar cobertura sin perder margen. Dato urgente: Rappi Turbo ya opera en Quilpué — la presión de la plataforma en la zona va a aumentar. Con RepartoJusto la tarifa es fija sin importar cómo crezca Rappi Turbo. Sin contrato, registro completamente gratuito. Somos 100% locales. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[132] Happy Days Waffles (Quilpué / Villa Alemana, Uber Eats) — Presentación:**
+"Hola Happy Days Waffles! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Los encontramos en Uber Eats cubriendo Villa Alemana y Quilpué con waffles artesanales — primer y único negocio de waffles en la zona con delivery activo. Un waffle es un pedido de ocasión especial: el desayuno familiar del domingo, la merienda del sábado, el postre que alguien encarga para una reunión. Exactamente el momento donde la logística local de tarifa fija hace la diferencia. Con RepartoJusto la logística cuesta $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pedido de waffles de $8.000, Uber Eats cobra $2.400 de comisión — con nosotros son $500 siempre, $1.900 que se quedan en el negocio por cada entrega. Pueden mantener Uber Eats y sumar RepartoJusto como canal local para Villa Alemana y Quilpué. Sin contrato, registro completamente gratuito. Somos 100% locales. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 

@@ -1,27 +1,47 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-08-03 (domingo)
-**Pipeline total:** 130 prospectos
-**Por estado:** Nuevos: 116 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-08-04
+**Pipeline total:** 132 prospectos
+**Por estado:** Nuevos: 118 | Contactados: 14 | Interesados: 0 | Registrados: 0
+
+---
 
 ## Acciones del día
-- Redactados 4 mensajes para domingo 3 de agosto
-- Seguimientos "Domingo 3 de agosto" para los 2 Contactados más desactualizados: #8 Pastelería Dulce Hogar y #10 Café El Árbol (ambos 6 días sin draft fresco desde 28/07)
-- Argumentos utilizados: peak café/pastelería dominical invernal, contraste post-Premios Uber Eats (ceremonia 29/07, negocios de barrio vs. grandes de Santiago), Rappi Turbo en Quilpué urgencia ALTA
-- 2 nuevos prospectos incorporados: Patio Carreño (#129, pizzas y hamburguesas canal web propio patiocarreño.cl, Quilpué) y Empanadas Tita (#130, empanaderías PedidosYa Quilpué, argumento SSW+FNE)
-- Ventana SSW (PedidosYa vendida a SSW Partners NY el 16/07) lleva 18 días — 7 borradores PedidosYa pendientes son prioridad de esta semana
-- #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan 39 días consecutivos con borradores activos sin confirmación de envío
+
+- **Revisión de cola.md:** Se incorporaron argumentos del Investigador (31/07): ventana post-Premios Uber Eats, ventana SSW Partners (PedidosYa vendida a fondo NY el 16/07, ahora en día 19), Rappi Turbo en Quilpué urgencia ALTA.
+- **Mensajes de seguimiento redactados** para los 2 Contactados más desactualizados (6 días sin draft):
+  - #7 Minimercado La Esquina (Lynch 445, VA): ángulo lunes = reposición de despensa, Rappi Turbo urgencia, contraste post-Premios Uber Eats.
+  - #11 Veterinaria Huellitas (Av. Álvarez 3200, VA): ángulo inicio agosto = cambio de clima, medicamentos mascotas esenciales, Rappi Turbo urgencia.
+- **Búsqueda y agregación de 2 nuevos prospectos:**
+  - #131 El Pollón Quilpué: pollería activa en Rappi VA y Quilpué, Av. Valparaíso 1982, tel. +56985510338.
+  - #132 Happy Days Waffles: PRIMERA wafflería del pipeline, en Uber Eats VA + canal web propio happydayswaffles.cl.
+- **Estados actualizados** en prospectos.md: #7 y #11 con "Próxima acción" al 04/08.
+
+---
 
 ## Borradores listos para Matías
-1. **#8 Pastelería Dulce Hogar** — seguimiento "Domingo 3 de agosto": tortas/onces familiares invierno, contraste Premios UE negocios de barrio, Rappi Turbo urgencia
-2. **#10 Café El Árbol** — seguimiento "Domingo 3 de agosto": café delivery desayuno/once domingo invernal, contraste Premios UE, Rappi Turbo urgencia
-3. **#129 Patio Carreño** (Quilpué, canal web propio) — presentación: pizzas y hamburguesas americanas, argumento canal directo $500 vs. porcentaje + Rappi Turbo Quilpué
-4. **#130 Empanadas Tita** (Quilpué, PedidosYa) — presentación: argumento SSW+FNE cuádruple, peak agosto empanadas
 
-**URGENTE para Matías esta semana:** 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) — ventana SSW en su período final de alto impacto (18 días desde venta a SSW Partners NY el 16/07).
+Todos los borradores del día están en `reportes/prospectos.md`, sección **MENSAJES DEL DÍA (2026-08-04)**:
 
-## Nuevos prospectos agregados
-- **#129 Patio Carreño** — Pizzas & Hamburguesas Americanas | Almirante Gómez Carreño 183, Quilpué | Canal web propio (patiocarreño.cl), delivery activo | Rappi Turbo ya en Quilpué = urgencia real
-- **#130 Empanadas Tita** — Empanaderías | Quilpué (en PedidosYa) | Argumento SSW (venta a fondo NY 16/07) + FNE doble multa + peak agosto empanadas = prospecto PedidosYa de alta calidad
+1. **[7] Minimercado La Esquina — Lunes 4 de agosto:** seguimiento con ángulo reposición de despensa lunes + Rappi Turbo urgencia.
+2. **[11] Veterinaria Huellitas — Lunes 4 de agosto:** seguimiento con ángulo agosto cambio de clima + medicamentos mascotas.
+3. **[131] El Pollón Quilpué — Presentación:** pollería en Rappi VA/Quilpué, tel. +56985510338, ahorro $2.300 por pedido vs. comisión Rappi.
+4. **[132] Happy Days Waffles — Presentación:** wafflería Uber Eats VA/Quilpué, ahorro $1.900 por pedido vs. comisión Uber Eats.
+
+**ALERTAS URGENTES PARA MATÍAS:**
+- **VENTANA SSW (19 días):** 7 borradores PedidosYa (#27, #28, #30, #33, #60, #90, #102) necesitan salir esta semana — la noticia de la venta a SSW Partners NY pierde impacto pronto.
+- **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas**: llevan **40 días consecutivos** con borradores activos sin confirmación de envío. Prioridad máxima.
+
+---
+
+## Nuevos prospectos agregados hoy
+
+| # | Negocio | Rubro | Contacto |
+|---|---|---|---|
+| 131 | El Pollón Quilpué | Pollería / Rappi VA+Quilpué | tel. +56985510338 |
+| 132 | Happy Days Waffles | Wafflería / Uber Eats VA+Quilpué | happydayswaffles.cl |
+
+---
 
 ## Para el Gerente
-Pipeline en 130 prospectos (116 Nuevos, 14 Contactados, 0 Registrados) — 4 borradores redactados hoy domingo 03/08; ventana SSW/PedidosYa activa con 18 días, 7 borradores urgentes para esta semana; cuello de botella crítico: 88 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados.
+
+Pipeline en 132 prospectos (118 Nuevos, 14 Contactados, 0 Registrados); 4 borradores redactados hoy lunes 04/08 — seguimientos para #7 Minimercado La Esquina y #11 Veterinaria Huellitas (ambos 6 días sin draft) + presentaciones para 2 nuevos: El Pollón Quilpué (#131, pollería en Rappi VA/Quilpué) y Happy Days Waffles (#132, primera wafflería del pipeline, Uber Eats VA/Quilpué); VENTANA SSW en día 19 (venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa urgentes esta semana; cuello de botella crítico: 90 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
