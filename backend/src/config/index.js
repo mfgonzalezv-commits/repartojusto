@@ -4,7 +4,13 @@ module.exports = {
   NODE_ENV: process.env.NODE_ENV || 'development',
 
   // CORS
-  CORS_ORIGIN: process.env.CORS_ORIGIN || '*',
+  CORS_ORIGIN: process.env.CORS_ORIGIN ||
+    (() => {
+      if ((process.env.NODE_ENV || 'development') === 'production') {
+        throw new Error('FATAL: CORS_ORIGIN no definido. El servidor no puede iniciar en producción sin esta variable.');
+      }
+      return '*'; // solo en desarrollo local
+    })(),
 
   // Database
   DATABASE_URL: process.env.DATABASE_URL,

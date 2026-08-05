@@ -85,9 +85,24 @@ router.post('/crear', auth, solo('negocio'), async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+// Rate limiter para confirmar: máx 20 req/min por IP (endpoint público)
+const _confirmarStore = new Map();
+function confirmarRateLimit(req, res, next) {
+  const ip = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  const entry = _confirmarStore.get(ip);
+  if (entry && now - entry.t < 60000) {
+    if (entry.n >= 20) return res.status(429).json({ error: 'Demasiadas solicitudes. Intenta en un momento.' });
+    entry.n++;
+  } else {
+    _confirmarStore.set(ip, { n: 1, t: now });
+  }
+  next();
+}
+
 // ── GET /api/pagos/confirmar ──────────────────────────────────────────────────
 // Flow llama a este endpoint cuando el pago se completa (return URL)
-router.get('/confirmar', async (req, res, next) => {
+router.get('/confirmar', confirmarRateLimit, async (req, res, next) => {
   const { token } = req.query;
   if (!token) return res.status(400).json({ error: 'Token requerido' });
 

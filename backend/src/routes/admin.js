@@ -10,8 +10,23 @@ const validar = (req, res, next) => {
   next();
 };
 
-// Todos los endpoints de admin requieren auth + rol admin
-router.use(auth, solo('admin'));
+// Rate limiter admin: máx 60 req/min por IP (protege queries pesadas de DoS)
+const _adminRlStore = new Map();
+function adminRateLimit(req, res, next) {
+  const ip = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  const entry = _adminRlStore.get(ip);
+  if (entry && now - entry.t < 60000) {
+    if (entry.n >= 60) return res.status(429).json({ error: 'Demasiadas solicitudes al panel admin. Intenta en un momento.' });
+    entry.n++;
+  } else {
+    _adminRlStore.set(ip, { n: 1, t: now });
+  }
+  next();
+}
+
+// Todos los endpoints de admin requieren auth + rol admin + rate limit
+router.use(auth, solo('admin'), adminRateLimit);
 
 // ── GET /api/admin/metricas ───────────────────────────────────────────────────
 // Dashboard: KPIs generales
@@ -323,7 +338,16 @@ router.get('/metricas/ingresos', async (req, res, next) => {
 });
 
 // ── PUT /api/admin/usuarios/:id — editar nombre, email, teléfono, password ──
-router.put('/usuarios/:id', auth, solo('admin'), async (req, res, next) => {
+router.put('/usuarios/:id',
+  auth, solo('admin'),
+  [
+    body('nombre').optional().trim().notEmpty().withMessage('Nombre no puede estar vacío'),
+    body('email').optional().isEmail().normalizeEmail().withMessage('Email inválido'),
+    body('telefono').optional().isMobilePhone().withMessage('Teléfono inválido'),
+    body('password').optional().isLength({ min: 6 }).withMessage('Password debe tener al menos 6 caracteres'),
+  ],
+  validar,
+  async (req, res, next) => {
   const { nombre, email, telefono, password } = req.body;
   try {
     let passwordHash = null;

@@ -62,12 +62,22 @@ router.post('/',
     try {
       // Verificar que el pedido existe y está entregado
       const { rows: [pedido] } = await db(
-        'SELECT id, rider_id, negocio_id, estado FROM pedidos WHERE id = $1',
+        'SELECT id, rider_id, negocio_id, estado, entregado_at FROM pedidos WHERE id = $1',
         [pedido_id]
       );
       if (!pedido) return res.status(404).json({ error: 'Pedido no encontrado' });
       if (pedido.estado !== 'entregado') return res.status(400).json({ error: 'Solo se puede calificar pedidos entregados' });
       if (!pedido.rider_id) return res.status(400).json({ error: 'Este pedido no tiene rider asignado' });
+
+      // Calificaciones de cliente solo válidas dentro de los 7 días post-entrega
+      if (tipo === 'cliente') {
+        const diasDesdeEntrega = pedido.entregado_at
+          ? (Date.now() - new Date(pedido.entregado_at).getTime()) / (1000 * 60 * 60 * 24)
+          : Infinity;
+        if (diasDesdeEntrega > 7) {
+          return res.status(400).json({ error: 'El plazo para calificar este pedido venció (7 días desde la entrega)' });
+        }
+      }
 
       // Calificaciones tipo 'negocio' requieren autenticación y ownership
       if (tipo === 'negocio') {
