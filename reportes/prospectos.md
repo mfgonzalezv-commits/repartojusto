@@ -1,11 +1,11 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-04
+**Actualizado:** 2026-08-05
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — ÚLTIMO día ventana Post-Premios Uber Eats + inicio de agosto + Rappi Turbo Quilpué |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — último miércoles de julio, pollo almuerzo familiar post-Premios UE, Rappi Turbo Quilpué urgencia |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Martes 5 de agosto" redactado 05/08 — martes almuerzo familiar invierno, pollo peak lunes-martes, post-Premios UE contraste (Uber Eats premiando grandes vs. negocios de barrio con $500 fijo) + Rappi Turbo Quilpué urgencia ALTA |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — inicio agosto / mes resfríos tardíos y cambio de clima + Rappi Turbo Quilpué urgencia |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — cierre de julio, pizza post-Premios UE, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — PRIORIDAD, primer sábado agosto, noche sábado = peak sushi familiar, post-Premios UE + Rappi Turbo Quilpué urgencia |
@@ -17,7 +17,7 @@
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio agosto cambio de clima, medicamentos mascotas esenciales, Rappi Turbo Quilpué urgencia alta |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto / ACTIVACIÓN" redactado 01/08 — primer mensaje de la temporada, peak inicio de clases agosto 2026 |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — cierre de julio, peak reparaciones invierno/calefacción, post-Premios Uber Eats contraste negocios de barrio |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | Diferir hasta agosto — preparar temporada verano 2026/27 |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Agosto / ACTIVACIÓN" redactado 05/08 — primer mensaje del mes, agosto = inicio preparación temporada verano 2026/27, faltan 3 meses para el peak de calor, momento ideal para configurar delivery antes del rush de diciembre |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -136,10 +136,44 @@
 | 130 | Empanadas Tita | Empanaderías | Quilpué (en PedidosYa) | Nuevo | — | Presentación redactada 03/08 — en PedidosYa Quilpué, argumento SSW (venta a fondo NY 16/07) + FNE doble multa, peak agosto empanadas invierno |
 | 131 | El Pollón Quilpué | Pollería / pollos a domicilio | Av. Valparaíso 1982, Villa Alemana / Quilpué (en Rappi) | Nuevo | — | Presentación redactada 04/08 — pollería en Rappi activa en VA y Quilpué, tel. +56985510338, pollo = peak almuerzo lunes + Rappi Turbo Quilpué urgencia directa |
 | 132 | Happy Days Waffles | Wafflería / desayunos artesanales | Quilpué / Villa Alemana (happydayswaffles.cl, en Uber Eats) | Nuevo | — | Presentación redactada 04/08 — PRIMERA wafflería del pipeline, en Uber Eats VA y Quilpué + canal web propio, waffles = pedido especial de fin de semana/desayuno familiar |
+| 133 | Donde Papi Pig | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 05/08 — en PedidosYa Villa Alemana, argumento SSW (venta a SSW Partners NY el 16/07, día 20 de incertidumbre) + FNE doble multa 2026, primer contacto |
+| 134 | Chengdu Villa Alemana | Comida china / asiática | Carlos Ibáñez del Campo 2551 Local 4, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 05/08 — en Rappi Villa Alemana, ahorro $2.240-$3.360 por pedido vs. Rappi 28%, Rappi Turbo Quilpué urgencia directa, segundo local de comida china del pipeline en Rappi |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-05)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 5 de agosto — segundo día de la semana de agosto**. El martes es día de recuperación del almuerzo familiar del lunes y el negocios hacen balance del inicio de semana. Se redactan **4 mensajes**: (1) seguimiento **"Martes 5 de agosto"** para **#2 Pollería Don Pollo** (Freire 678, 6 días sin draft desde 30/07, pollo = peak almuerzo martes invierno + post-Premios UE + Rappi Turbo); (2) **ACTIVACIÓN AGOSTO** para **#14 Heladería Glacial** (Freire 1340, diferida hasta agosto — HOY se activa: agosto = inicio preparación temporada verano 2026/27, momento ideal antes del rush de diciembre); (3) **presentaciones** para 2 nuevos prospectos: **Donde Papi Pig (#133)** — en PedidosYa Villa Alemana, argumento SSW (día 20 desde venta 16/07) + FNE — y **Chengdu Villa Alemana (#134)** — en Rappi VA, Carlos Ibáñez del Campo 2551 L4, segundo local chino en Rappi del pipeline. Pipeline total: **134 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 20** (venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA** — la noticia pierde impacto rápidamente; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA en todos los mensajes; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **41 días consecutivos** con borradores activos sin confirmación de envío; (4) **Argumento post-Premios Uber Eats** (ceremonia 29/07, ya 7 días) — sigue siendo válido. **Actualizado:** 2026-08-05.
+
+---
+
+#### "MARTES 5 DE AGOSTO" — Contactados sin draft fresco (05/08)
+
+**[2] Pollería Don Pollo — Martes 5 de agosto (05/08):**
+"Hola Don Pollo! Buenos días, les escribe RepartoJusto — plataforma de delivery local en Villa Alemana. Martes 5 de agosto: los almuerzos familiares de invierno están en su peak máximo, y una pollería de barrio como la de Freire 678 sabe que el martes es el día donde las familias que no salieron el lunes buscan el pollo entero que les solucionó la semana. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pollo de $12.000 en Rappi, la comisión (28%) son $3.360 que se van a la plataforma — con nosotros son $500 siempre, $2.860 que se quedan en el negocio por cada entrega. La semana pasada Uber Eats hizo su ceremonia de Premios anuales premiando a los grandes restaurantes de Santiago — los pollos de barrio de Freire 678, Villa Alemana no aparecen en esas listas, pero son los que saben qué pide la familia un martes de agosto. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un local de pollo de barrio con logística de tarifa fija posicionado antes de que lleguen tiene ventaja real. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[14] Heladería Glacial — ACTIVACIÓN AGOSTO (05/08):**
+"Hola Heladería Glacial! Les escribe RepartoJusto, plataforma de delivery local en Villa Alemana. Sabemos que el invierno no es la temporada fuerte de una heladería — pero agosto es exactamente el momento ideal para preparar la temporada antes de que llegue el calor. Faltan menos de 3 meses para que la primavera y el calor lleguen a Villa Alemana, y las heladerías que tienen su canal de delivery funcionando desde agosto llegan a diciembre con clientes formados y logística probada, no armando todo con el rush de la temporada. Con RepartoJusto el delivery cuesta $500 fijos por pedido entregado, sin porcentaje sobre la venta. Una heladería con ticket de $5.000 paga hasta $1.500 de comisión por pedido en Rappi (28%) — con nosotros son $500 siempre. Registro completamente gratuito, sin contrato, pueden comenzar cuando quieran. ¿Le damos hoy? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-05)
+
+**[133] Donde Papi Pig (PedidosYa Villa Alemana) — Presentación:**
+"Hola Donde Papi Pig! Les escribe RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en PedidosYa y queríamos contarles algo importante: el 16 de julio, los dueños de PedidosYa firmaron la venta de la empresa a SSW Partners, un fondo de inversión de Nueva York que ya planea revenderla. Ya van 20 días desde la venta y los negocios que están en PedidosYa no saben quién les va a cobrar en 18 meses ni a qué precio. Además, la FNE multó a PedidosYa dos veces en 2026 — $3.400 millones de CLP en total — por impedirles a negocios como el suyo vender más barato en sus propios canales. Con RepartoJusto, en cambio, son siempre $500 fijos por pedido entregado, sin porcentaje, sin cambio de dueños, sin letra chica. Pueden mantener PedidosYa y sumar nuestra plataforma como canal paralelo sin costo de registro. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[134] Chengdu Villa Alemana (Rappi, Carlos Ibáñez del Campo 2551 L4) — Presentación:**
+"Hola Chengdu! Les escribe RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi activos en Villa Alemana — ¿saben exactamente cuánto les cobra Rappi por cada pedido entregado? Con platos de comida china de $8.000-$12.000 de ticket promedio, el 28% de comisión son $2.240 a $3.360 que se van a Rappi por cada pedido, todos los días. Con RepartoJusto son $500 fijos, siempre, sin importar el monto de la venta. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — cuando llegue a la zona, las comisiones y la competencia en la plataforma se intensifican. Un canal local de tarifa fija como RepartoJusto les da estabilidad de costos sin depender del algoritmo de Rappi. Pueden tener ambas plataformas activas sin costo de registro ni contrato. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
@@ -2353,3 +2387,7 @@
 **Rincón De Las Masas Villa Alemana (#107, agregado 23/07):** Negocio de masas frescas y empanadas en San Enrique 1250 Local 1, Villa Alemana. Instagram: @rinconvillaalemana. Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Canal propio Instagram con presencia activa. Producto: masas frescas, empanadas artesanales. Ticket promedio estimado: $4.000-$12.000 (venta por unidad o docena de empanadas). Argumento principal: canal directo con logística local RepartoJusto por $500 fijo sin porcentaje. Julio-agosto = peak máximo de empanadas en Chile (invierno + frío + Fiestas Patrias se acercan en septiembre). Primer negocio del pipeline especializado en masas frescas puras. Fuente: instagram.com/rinconvillaalemana + búsqueda Instagram delivery Villa Alemana julio 2026.
 
 **Amasandería PURÉN (#108, agregado 23/07):** Amasandería artesanal con presencia activa en Villa Alemana. Facebook: @amasanderiapuren. Canal propio Facebook. Sin grandes plataformas detectadas. Producto: pan artesanal, productos de amasandería (marraqueta, pan hallulla, pan integral). Ticket promedio estimado: $3.000-$8.000 (pan + repostería artesanal). Argumento principal: julio = peak máximo de pan a domicilio — las mañanas de invierno en que nadie quiere salir al frío para buscar pan son exactamente cuando el delivery de amasandería tiene mayor demanda. Canal propio Facebook ya activo, RepartoJusto suma la logística local a $500 fijo. Referencia adicional: municipalidad de Villa Alemana reconoció a la dueña Marcela Tenorio como "Mujer que Inspira" en marzo 2026 — negocio con arraigo comunitario local. Fuente: facebook.com/amasanderiapuren + munivillalemana.gob.cl/2026/03/municipalidad-villa-alemana-reconocimientos-mujeres-que-inspiran + búsqueda amasandería delivery Villa Alemana.
+
+**Donde Papi Pig (#133, agregado 05/08):** Negocio de comida rápida activo en PedidosYa en Villa Alemana. Confirmado en directorios locales de delivery (mundochileno.com/villa-alemana) junto a otros restaurantes de la zona. Rubro: comida rápida / completos. Plataforma confirmada: PedidosYa — argumento SSW (venta a SSW Partners NY el 16/07) y FNE (doble multa 2026, $3.400M CLP) son especialmente poderosos. Ticket promedio estimado: $4.000-$7.000 (comida rápida / completos). Con 15 entregas diarias, el ahorro vs. PedidosYa (28%) puede superar $370.000/mes vs. RepartoJusto. Dirección exacta por confirmar al contactar. Fuente: mundochileno.com/villa-alemana/comida+a+domicilio + PedidosYa Villa Alemana.
+
+**Chengdu Villa Alemana (#134, agregado 05/08):** Restaurante de comida china / asiática activo en Rappi en Villa Alemana. Ubicado en Carlos Ibáñez del Campo 2551 Local 4, Villa Alemana. Fuente: rappi.cl/restaurantes/900098066-chengdu (distinto de #63 R Chengdu que opera con canal propio Instagram sin grandes plataformas). Segundo local de comida china detectado en Rappi para Villa Alemana. Ticket promedio estimado: $8.000-$12.000 (platos chinos de fondo). Con 12 entregas diarias, el ahorro vs. Rappi (28%) puede superar $470.000/mes vs. RepartoJusto. Dato urgente: Rappi Turbo ya opera en Quilpué — cuando llegue a Villa Alemana, las comisiones y competencia en la plataforma se intensifican. Canal local con tarifa fija $500 es la alternativa de estabilidad de costos. Fuente: rappi.cl/restaurantes/900098066-chengdu + búsqueda Rappi Villa Alemana comida china agosto 2026.
