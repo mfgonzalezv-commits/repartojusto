@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-05
+**Actualizado:** 2026-08-06
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -7,12 +7,12 @@
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — ÚLTIMO día ventana Post-Premios Uber Eats + inicio de agosto + Rappi Turbo Quilpué |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Martes 5 de agosto" redactado 05/08 — martes almuerzo familiar invierno, pollo peak lunes-martes, post-Premios UE contraste (Uber Eats premiando grandes vs. negocios de barrio con $500 fijo) + Rappi Turbo Quilpué urgencia ALTA |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — inicio agosto / mes resfríos tardíos y cambio de clima + Rappi Turbo Quilpué urgencia |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 30 de julio" redactado 30/07 — cierre de julio, pizza post-Premios UE, Rappi Turbo Quilpué urgencia |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — balance midweek comisiones pizza, algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — PRIORIDAD, primer sábado agosto, noche sábado = peak sushi familiar, post-Premios UE + Rappi Turbo Quilpué urgencia |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — primer sábado agosto, noche sábado = peak botillería fin de semana, post-Premios UE + Rappi Turbo Quilpué urgencia |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio de semana agosto, lunes = reposición de despensa, Rappi Turbo Quilpué urgencia alta |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — primer domingo del mes, peak postre almuerzo/onces familiar invernal, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — ÚLTIMO día de julio, cierre del mes más frío del año, asado/costillar familiar + post-Premios Uber Eats contraste |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — preparación fin de semana asado/costillar, post-Premios UE contraste, Rappi Turbo Quilpué urgencia |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — domingo invernal, peak café delivery desayuno/once familiar, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio agosto cambio de clima, medicamentos mascotas esenciales, Rappi Turbo Quilpué urgencia alta |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto / ACTIVACIÓN" redactado 01/08 — primer mensaje de la temporada, peak inicio de clases agosto 2026 |
@@ -138,10 +138,44 @@
 | 132 | Happy Days Waffles | Wafflería / desayunos artesanales | Quilpué / Villa Alemana (happydayswaffles.cl, en Uber Eats) | Nuevo | — | Presentación redactada 04/08 — PRIMERA wafflería del pipeline, en Uber Eats VA y Quilpué + canal web propio, waffles = pedido especial de fin de semana/desayuno familiar |
 | 133 | Donde Papi Pig | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 05/08 — en PedidosYa Villa Alemana, argumento SSW (venta a SSW Partners NY el 16/07, día 20 de incertidumbre) + FNE doble multa 2026, primer contacto |
 | 134 | Chengdu Villa Alemana | Comida china / asiática | Carlos Ibáñez del Campo 2551 Local 4, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 05/08 — en Rappi Villa Alemana, ahorro $2.240-$3.360 por pedido vs. Rappi 28%, Rappi Turbo Quilpué urgencia directa, segundo local de comida china del pipeline en Rappi |
+| 135 | Troncal Urbano Restaurant | Restaurante / comida urbana | Av. Valparaíso 2650, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 06/08 — en Rappi Av. Valparaíso 2650 (corredor principal VA), ahorro $2.020+/pedido vs. Rappi 28%, argumento algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia |
+| 136 | El Bajón de Porvenir | Comida chilena / fondita | Porvenir, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 06/08 — en Rappi sector Porvenir VA, comida de barrio porciones generosas, ahorro $1.600+/pedido vs. Rappi 28%, Rappi Turbo Quilpué urgencia directa |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-06)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 6 de agosto — mitad de la primera semana del mes**. El miércoles es el día de balance midweek: negocios cuentan lo que ingresó en la semana y planifican el fin de semana. Se redactan **4 mensajes**: (1) seguimientos **"Miércoles 6 de agosto"** para los 2 Contactados más desactualizados: **#4 Pizza House** (Portales 234, 7 días sin draft desde 30/07, miércoles = balance de comisiones pizza + algoritmo Rappi entierra sin pauta) y **#9 Rotisería El Gaucho** (Portales 567, 6 días sin draft desde 31/07, miércoles = preparación fin de semana asado/costillar); (2) **presentaciones** para 2 nuevos prospectos encontrados en Rappi: **Troncal Urbano Restaurant (#135)** — Av. Valparaíso 2650, corredor principal VA — y **El Bajón de Porvenir (#136)** — sector Porvenir VA, comida de barrio. Pipeline total: **136 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 21** (venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA** — la noticia pierde impacto esta semana; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA en todos los mensajes; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **42 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi nueva app: entierra visibilidad de negocios que no pagan publicidad interna. **Actualizado:** 2026-08-06.
+
+---
+
+#### "MIÉRCOLES 6 DE AGOSTO" — Contactados sin draft fresco (06/08)
+
+**[4] Pizza House — Miércoles 6 de agosto (06/08):**
+"Hola Pizza House! RepartoJusto — miércoles 6 de agosto. El miércoles es cuando las pizzerías hacen el balance: ¿cuánto quedó después de las comisiones del fin de semana anterior? Para una pizza de $12.000 en Rappi, el 28% de comisión son $3.360 que se van a la plataforma por cada entrega — con RepartoJusto son $500 siempre, $2.860 que se quedan en la pizzería. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados bajo los que sí pagan. Con nosotros no hay algoritmo que esconda al negocio: los pedidos llegan directo sin intermediario. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — cuando llegue a la zona la presión de comisiones y la competencia en la plataforma se intensifican. Con RepartoJusto la tarifa es siempre $500 fija, sin importar cómo crezca Rappi Turbo. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hacemos los números juntos?"
+
+---
+
+**[9] Rotisería El Gaucho — Miércoles 6 de agosto (06/08):**
+"Hola Rotisería El Gaucho! RepartoJusto — miércoles 6 de agosto. El miércoles en una rotisería es el momento de preparar el fin de semana: ¿cuántos asados y costillares se van a entregar el sábado y domingo? Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor del asado. Para un costillar de $15.000 en Rappi, el 28% de comisión son $4.200 por cada entrega — con nosotros son $500 siempre, $3.700 que se quedan en el negocio. La semana pasada Uber Eats premió a los grandes restaurantes de Santiago en su ceremonia anual — una rotisería de barrio de Portales 567, Villa Alemana no necesita ganar premios de una plataforma: necesita que cada entrega le deje margen real. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — una rotisería local con logística de tarifa fija posicionada antes de que lleguen tiene ventaja real en el fin de semana. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo planificamos para este fin de semana?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-06)
+
+**[135] Troncal Urbano Restaurant (Av. Valparaíso 2650, Villa Alemana, Rappi) — Presentación:**
+"Hola Troncal Urbano! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi en Av. Valparaíso 2650 — activos en el corredor principal de Villa Alemana con delivery. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un plato de $9.000, Rappi cobra $2.520 de comisión — con nosotros son $500 siempre, $2.020 que se quedan en el negocio por cada entrega. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados bajo los que sí pagan. Con RepartoJusto no hay algoritmo que esconda al negocio: los pedidos llegan directo. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — cuando llegue a la zona la presión en la plataforma se intensifica. Con nosotros la tarifa es fija sin importar cómo crezca Rappi Turbo. Pueden tener ambas plataformas activas sin costo de registro ni contrato. Somos 100% locales. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[136] El Bajón de Porvenir (Porvenir, Villa Alemana, Rappi) — Presentación:**
+"Hola El Bajón de Porvenir! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi activos en el sector Porvenir de Villa Alemana — con ese nombre tienen exactamente lo que buscamos: comida de barrio, porciones generosas, y clientes del sector que ya saben dónde encontrarlos. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un plato de $7.500, Rappi cobra hasta $2.100 de comisión — con nosotros son $500 siempre, $1.600 que se quedan en el negocio por cada entrega. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un negocio de barrio con logística de tarifa fija posicionado antes de que lleguen tiene ventaja competitiva real en Porvenir. Pueden mantener Rappi y sumar RepartoJusto como canal paralelo sin costo de registro ni contrato. Somos 100% locales. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
