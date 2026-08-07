@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-06
+**Actualizado:** 2026-08-07
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -15,8 +15,8 @@
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — preparación fin de semana asado/costillar, post-Premios UE contraste, Rappi Turbo Quilpué urgencia |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — domingo invernal, peak café delivery desayuno/once familiar, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio agosto cambio de clima, medicamentos mascotas esenciales, Rappi Turbo Quilpué urgencia alta |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto / ACTIVACIÓN" redactado 01/08 — primer mensaje de la temporada, peak inicio de clases agosto 2026 |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 31 de julio" redactado 31/07 — cierre de julio, peak reparaciones invierno/calefacción, post-Premios Uber Eats contraste negocios de barrio |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — ACTIVACIÓN agosto, primera semana de clases del semestre, útiles y cuadernos a domicilio = diferenciador único, delivery sin comisión para la temporada escolar |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — último mes invernal, peak urgencias reparación/calefacción agosto, "sin algoritmo que te esconda" + Rappi Turbo urgencia |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Agosto / ACTIVACIÓN" redactado 05/08 — primer mensaje del mes, agosto = inicio preparación temporada verano 2026/27, faltan 3 meses para el peak de calor, momento ideal para configurar delivery antes del rush de diciembre |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -140,10 +140,44 @@
 | 134 | Chengdu Villa Alemana | Comida china / asiática | Carlos Ibáñez del Campo 2551 Local 4, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 05/08 — en Rappi Villa Alemana, ahorro $2.240-$3.360 por pedido vs. Rappi 28%, Rappi Turbo Quilpué urgencia directa, segundo local de comida china del pipeline en Rappi |
 | 135 | Troncal Urbano Restaurant | Restaurante / comida urbana | Av. Valparaíso 2650, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 06/08 — en Rappi Av. Valparaíso 2650 (corredor principal VA), ahorro $2.020+/pedido vs. Rappi 28%, argumento algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia |
 | 136 | El Bajón de Porvenir | Comida chilena / fondita | Porvenir, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 06/08 — en Rappi sector Porvenir VA, comida de barrio porciones generosas, ahorro $1.600+/pedido vs. Rappi 28%, Rappi Turbo Quilpué urgencia directa |
+| 137 | Street Burger | Hamburguesería | Palmira 21, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 07/08 — hamburguesería en Rappi VA, ahorro $3.080+/pedido vs. Rappi 28% en hamburgesa $11.000, argumento algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia |
+| 138 | Bronx Burger | Hamburguesería | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 07/08 — hamburguesería en Rappi VA, nombre y estilo americano, argumento tarifa fija $500 vs. comisión porcentual Rappi 28%, Rappi Turbo Quilpué urgencia |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-07)
+
+> **NOTA PARA MATÍAS:** Hoy es **jueves 7 de agosto — cuarto día de la primera semana del mes**. El jueves es el día de planificación final antes del fin de semana: negocios hacen el último pedido de insumos, revisan el stock y deciden qué activar para el sábado y domingo. Se redactan **4 mensajes**: (1) seguimientos **"Jueves 7 de agosto"** para los 2 Contactados más desactualizados: **#13 Ferretería Los Maestros** (Portales 123, 7 días sin draft desde 31/07 — más desactualizado del pipeline, jueves = urgencias invierno/calefacción, último mes frío antes de la primavera) y **#12 Librería El Saber** (Lynch 234, 6 días sin draft desde 01/08 — ACTIVACIÓN AGOSTO temporada escolar, primera semana de clases); (2) **presentaciones** para 2 nuevos prospectos encontrados en Rappi VA: **Street Burger (#137)** — Palmira 21, Villa Alemana — y **Bronx Burger (#138)** — Villa Alemana. Pipeline total: **138 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 22** (venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA** — argumento: "SSW lleva 3 semanas en silencio total"; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **43 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed. **Actualizado:** 2026-08-07.
+
+---
+
+#### "JUEVES 7 DE AGOSTO" — Contactados sin draft fresco (07/08)
+
+**[13] Ferretería Los Maestros — Jueves 7 de agosto (07/08):**
+"Hola Ferretería Los Maestros! RepartoJusto — jueves 7 de agosto. El jueves en una ferretería es el día de planificación final: el vecino que llama para saber si tienen la manguera de calefacción que se rompió, el cliente que encarga los materiales para reparar la gotera antes del próximo aguacero. Agosto es el último mes del invierno — y la mayoría de las urgencias de calefacción y reparación del hogar llegan exactamente ahora. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado — sin porcentaje sobre el valor de la venta. Para un pedido de ferretería de $8.000, Rappi cobra hasta $2.240 de comisión por esa entrega; con nosotros son $500 siempre, $1.740 que se quedan en la ferretería. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados bajo los que sí pagan. Una ferretería de barrio no necesita algoritmos: necesita que el vecino del sector sepa que el repuesto llega a $500 fijo, sin comisión. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — cuando llegue a la zona, los negocios con logística de tarifa fija ya establecida tienen ventaja competitiva real. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[12] Librería El Saber — Jueves 7 de agosto / ACTIVACIÓN AGOSTO (07/08):**
+"Hola Librería El Saber! RepartoJusto — jueves 7 de agosto. Esta semana empezó el segundo semestre en Chile: cuadernos, lápices, carpetas, calculadoras — los útiles que el apoderado olvidó comprar el fin de semana y necesita hoy porque el profesor los pidió para mañana. Una librería que hace delivery local de útiles escolares a domicilio tiene un diferenciador que ninguna librería de la zona ofrece todavía: el apoderado que no puede salir a las 12 del mediodía puede pedir desde el trabajo y recibir en la casa. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de la venta. Una librería con pedido promedio de $5.000 en Rappi pagaría $1.400 de comisión — con nosotros son $500 siempre. Agosto es el mes donde esta propuesta tiene sentido máximo: la temporada escolar arrancó y los útiles son urgencia semanal. Sin contrato, registro completamente gratuito, comenzamos cuando quieran. repartojusto-production.up.railway.app ¿Lo activamos esta semana?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-07)
+
+**[137] Street Burger (Palmira 21, Villa Alemana, Rappi) — Presentación:**
+"Hola Street Burger! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi activos en Palmira 21, Villa Alemana — delivery de hamburguesas. Una propuesta directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de la hamburguesa. Para una hamburgesa de $11.000 en Rappi, el 28% de comisión son $3.080 que se van a la plataforma por cada entrega — con nosotros son $500 siempre, $2.580 que se quedan en el negocio. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — si no compran visibilidad extra dentro de la app, quedan enterrados bajo los que sí pagan. Con RepartoJusto no hay algoritmo que esconda al negocio: los pedidos llegan directo. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — cuando llegue a la zona, la presión de comisiones en la plataforma se intensifica. Con nosotros la tarifa es siempre $500, sin importar cómo crezca Rappi Turbo. Pueden tener ambas plataformas activas sin costo de registro ni contrato. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[138] Bronx Burger (Villa Alemana, Rappi) — Presentación:**
+"Hola Bronx Burger! Los contacta RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontramos en Rappi activos en Villa Alemana — delivery de hamburguesas. Con ese nombre ya tienen el estilo: americano, directo, sin vueltas. Exactamente así funciona nuestra propuesta: $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una hamburgesa de $10.000 en Rappi, el 28% de comisión son $2.800 que se van a la plataforma — con RepartoJusto son $500 siempre, $2.300 que se quedan en el negocio por cada entrega. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — cuando llegue a la zona, la presión de comisiones y la competencia en la plataforma van a aumentar. Con RepartoJusto la tarifa es fija sin importar cómo crezca Rappi Turbo en la zona. Pueden mantener Rappi y sumar RepartoJusto como canal paralelo sin costo de registro ni contrato. Somos 100% locales. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
