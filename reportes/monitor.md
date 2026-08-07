@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-07T20:00:00Z
-**Estado:** ⚠️ SIN VERIFICAR
-**Detalle:** Error de red — el proxy del entorno de ejecución bloqueó la conexión saliente a repartojusto-production.up.railway.app:443 (HTTP 403 Forbidden en túnel CONNECT). No fue posible determinar el estado real del servidor. Verificar manualmente o desde un entorno con acceso irrestricto a railway.app.
+**Última verificación:** 2026-08-07T00:00:00Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El agente monitor no pudo alcanzar `repartojusto-production.up.railway.app` — el proxy de red del entorno de ejecución retornó `403 Forbidden` al intentar conectar al host externo. El servidor puede estar operativo; el bloqueo es de red del lado del agente, no del servidor destino.
