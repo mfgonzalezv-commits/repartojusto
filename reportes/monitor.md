@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-08T17:08:33Z
-**Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** curl error 56 — el proxy del entorno de ejecución retornó 403 Forbidden al intentar el túnel CONNECT hacia `repartojusto-production.up.railway.app`. No se pudo verificar el endpoint `/health`. El servidor puede estar operativo; la restricción es de red del agente (HTTPS_PROXY bloquea el dominio Railway). Verificar manualmente o ajustar la política de red del entorno.
+**Última verificación:** 2026-08-08T18:08:11Z
+**Estado:** ⚠️ NO VERIFICADO
+**Detalle:** El agente no pudo alcanzar el endpoint https://repartojusto-production.up.railway.app/health — la política de red del entorno de ejecución bloqueó la conexión saliente (proxy devolvió 403 Forbidden). No es posible determinar el estado del servidor desde este entorno. Verificar manualmente o configurar un entorno con acceso de red irrestricto.
