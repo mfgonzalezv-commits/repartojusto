@@ -1,46 +1,40 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-08-07 (Jueves)
-**Pipeline total:** 138 prospectos
-**Por estado:** Nuevos: 124 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-08-08 (Viernes)
+**Pipeline total:** 140 prospectos
+**Por estado:** Nuevos: 126 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-### Argumentos activos incorporados (Investigador 06/08)
-- **SSW silencio 3 semanas:** "SSW Partners lleva 3 semanas sin decirte qué va a pasar con tu contrato de PedidosYa — la transacción cierra en 2027 como mínimo. Con nosotros son siempre $500, sin cambio de dueños." → Aplicado en alertas y mensajes del día.
-- **Rappi algoritmo social:** "Si no pagás publicidad dentro de Rappi, te esconden en el feed — con RepartoJusto no hay algoritmo que te esconda." → Incorporado en mensajes #13 Ferretería y presentaciones burgers.
-- **Post-Premios Uber Eats (29/07):** Sigue activo — ningún negocio de Villa Alemana nominado. Mencionado como contexto.
-- **Rappi Turbo Quilpué:** urgencia ALTA en todos los mensajes.
+Argumentos del Investigador (06/08) incorporados hoy: SSW actualizado ("SSW Partners lleva 23 días en silencio operativo — la transacción cierra en 2027 como mínimo"), algoritmo social Rappi entierra negocios sin publicidad interna, post-Premios Uber Eats (ceremonia 29/07) aún vigente para contraste.
 
-### Mensajes redactados hoy
+Se redactaron **4 mensajes** para viernes 8 de agosto:
 
-**Seguimientos "Jueves 7 de agosto" — 2 Contactados más desactualizados:**
-- **#13 Ferretería Los Maestros** (Portales 123) — 7 días sin draft (más desactualizado del pipeline). Ángulo: jueves = planificación final antes del fin de semana, agosto = último mes invernal + peak urgencias calefacción/reparaciones + algoritmo Rappi entierra sin publicidad.
-- **#12 Librería El Saber** (Lynch 234) — 6 días sin draft. ACTIVACIÓN AGOSTO: primera semana del segundo semestre escolar, útiles a domicilio como diferenciador único en la zona, peak urgencias escolares jueves-viernes.
+1. **Seguimiento #1 Fuente de Soda El Rápido** (7 días sin draft desde 01/08) — argumento viernes = peak completos/sándwiches de cierre de semana laboral + tarifa fija $500 vs. $1.260 comisión Rappi en completo $4.500 + algoritmo social Rappi + Rappi Turbo Quilpué urgencia.
 
-**Presentaciones — 2 nuevos prospectos (Rappi Villa Alemana):**
-- **#137 Street Burger** (Palmira 21, Villa Alemana, Rappi) — hamburguesería local en Rappi VA, ahorro $2.580/pedido vs. comisión 28% + algoritmo social Rappi + Rappi Turbo urgencia.
-- **#138 Bronx Burger** (Villa Alemana, Rappi) — hamburguesería estilo americano en Rappi VA, argumento tarifa fija $500 vs. 28% porcentual + Rappi Turbo urgencia.
+2. **Seguimiento #3 Farmacia Cruz Verde** (7 días sin draft desde 01/08) — argumento viernes = día de abastecimiento medicamentos para el fin de semana + agosto fin del invierno (resfríos tardíos) + tarifa fija $500 vs. $4.500 comisión plataformas en pedido $15.000 + Rappi Turbo urgencia.
 
-### Alertas prioritarias para Matías
-1. **VENTANA SSW DÍA 22** — Los 7 borradores PedidosYa (#27, #28, #30, #33, #60, #90, #102) necesitan envío urgente. SSW lleva 3 semanas en silencio operativo — la incertidumbre para los negocios es máxima. El impacto disminuye semana a semana.
-2. **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **43 días consecutivos** con borradores activos sin confirmación de envío — prioridad máxima del Gerente.
-3. **Cuello de botella crítico:** 93+ días sin confirmación de Matías sobre mensajes enviados bloquea actualización de estados del pipeline.
+3. **Presentación #139 Sushi Gold Restobar Delivery** (Quilpué, PedidosYa) — argumento SSW: venta a fondo NY el 16/07, 23 días sin anunciar condiciones, transacción cierra en 2027 + FNE doble multa $3.400M CLP. Sushi ticket alto ~$15K+. Tel. +56 32 291 7928.
+
+4. **Presentación #140 Sushitsu Delivery** (Quilpué, Rappi + Uber Eats) — argumento doble comisión (Rappi 28% + Uber Eats 30% vs. RepartoJusto $500) + algoritmo social Rappi entierra sin publicidad + Rappi Turbo en Quilpué urgencia directa. 121 reseñas 4.2/5. Tel. +56 9 3432 7497.
 
 ## Borradores listos para Matías
 
-| Prospecto | Tipo | Ángulo principal |
-|---|---|---|
-| #13 Ferretería Los Maestros | Seguimiento "Jueves 7/08" | Peak invierno + algoritmo Rappi + Rappi Turbo |
-| #12 Librería El Saber | ACTIVACIÓN AGOSTO | Primera semana escolar + útiles delivery |
-| #137 Street Burger | Presentación | $500 fijo vs. $3.080 Rappi + algoritmo + Turbo |
-| #138 Bronx Burger | Presentación | $500 fijo vs. $2.800 Rappi + Rappi Turbo |
+| # | Negocio | Tipo | Argumento principal | Contacto |
+|---|---|---|---|---|
+| 1 | Fuente de Soda El Rápido | Seguimiento (7 días) | Viernes peak completos + tarifa fija $500 + algoritmo Rappi | — |
+| 3 | Farmacia Cruz Verde | Seguimiento (7 días) | Viernes abastecimiento fin de semana + agosto resfríos tardíos | — |
+| 139 | Sushi Gold Restobar Delivery | Presentación | SSW día 23: PedidosYa vendida a fondo NY + FNE | Tel. +56 32 291 7928 |
+| 140 | Sushitsu Delivery | Presentación | Doble comisión Rappi+UberEats + algoritmo Rappi + Rappi Turbo | Tel. +56 9 3432 7497 |
 
-Ver mensajes completos en `reportes/prospectos.md` sección "MENSAJES DEL DÍA (2026-08-07)".
+**PRIORIDADES CRÍTICAS PENDIENTES (para que Matías envíe):**
+- 7 borradores SSW/PedidosYa sin envío confirmado: #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya — VENTANA SSW DÍA 23, pierde impacto cada semana de silencio de SSW.
+- #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan 44 días consecutivos con borradores activos sin confirmación de envío.
 
-## Nuevos prospectos agregados hoy
+## Nuevos prospectos agregados
 
-1. **Street Burger (#137)** — Hamburguesería en Rappi, Palmira 21, Villa Alemana. Primera vez en el pipeline.
-2. **Bronx Burger (#138)** — Hamburguesería estilo americano en Rappi, Villa Alemana. Primera vez en el pipeline.
+- **#139 Sushi Gold Restobar Delivery** — Caupolicán 894, Quilpué. En PedidosYa. Restobar sushi con delivery activo. Tel. +56 32 291 7928. sushigold.cl. Argumento SSW máximo potencia (en PedidosYa = afectado directamente por venta a SSW Partners NY).
+- **#140 Sushitsu Delivery** — Los Carrera 01655 L11 (Paradero 32), Quilpué. En Rappi + Uber Eats simultáneamente. 121 reseñas 4.2/5. Tel. +56 9 3432 7497. sushitsu.cl. @sushitsudelivery. Argumento doble comisión + Rappi Turbo urgencia directa (ya en Quilpué).
 
 ## Para el Gerente
-Pipeline en 138 prospectos (124 Nuevos, 14 Contactados, 0 Registrados); 4 borradores redactados hoy — "Jueves 7 de agosto" para #13 Ferretería Los Maestros (7 días sin draft, más desactualizado del pipeline) y #12 Librería El Saber (ACTIVACIÓN AGOSTO primera semana de clases), más presentaciones para 2 nuevas hamburguerías en Rappi VA: Street Burger (#137, Palmira 21) y Bronx Burger (#138); VENTANA SSW DÍA 22 — los 7 borradores PedidosYa son prioridad crítica, SSW lleva 3 semanas en silencio; #22 Sushi Point Delivery y #15 Melt Pizzas llevan 43 días consecutivos con borradores activos sin confirmación de envío.
+
+Pipeline en 140 prospectos (126 Nuevos, 14 Contactados, 0 Registrados); 4 borradores redactados hoy viernes 08/08 — seguimientos para #1 Fuente de Soda El Rápido y #3 Farmacia Cruz Verde (ambos 7 días sin draft) + presentaciones para 2 nuevos en Quilpué (#139 Sushi Gold en PedidosYa argumento SSW día 23, y #140 Sushitsu en Rappi+UberEats doble comisión); VENTANA SSW DÍA 23 — los 7 borradores PedidosYa siguen siendo prioridad crítica, el silencio de SSW profundiza el argumento de inestabilidad; cuello de botella crítico: 94 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.

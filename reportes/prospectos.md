@@ -1,12 +1,12 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-07
+**Actualizado:** 2026-08-08
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — ÚLTIMO día ventana Post-Premios Uber Eats + inicio de agosto + Rappi Turbo Quilpué |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Viernes 8 de agosto" redactado 08/08 — viernes fin de semana = peak completos y sándwiches tarde-noche, cierre de semana laboral + Rappi Turbo Quilpué urgencia |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Martes 5 de agosto" redactado 05/08 — martes almuerzo familiar invierno, pollo peak lunes-martes, post-Premios UE contraste (Uber Eats premiando grandes vs. negocios de barrio con $500 fijo) + Rappi Turbo Quilpué urgencia ALTA |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 1 de agosto" redactado 01/08 — inicio agosto / mes resfríos tardíos y cambio de clima + Rappi Turbo Quilpué urgencia |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 8 de agosto" redactado 08/08 — viernes = día de abastecimiento medicamentos para el fin de semana, agosto fin del invierno, resfríos tardíos + Rappi Turbo Quilpué urgencia |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — balance midweek comisiones pizza, algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — PRIORIDAD, primer sábado agosto, noche sábado = peak sushi familiar, post-Premios UE + Rappi Turbo Quilpué urgencia |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — primer sábado agosto, noche sábado = peak botillería fin de semana, post-Premios UE + Rappi Turbo Quilpué urgencia |
@@ -142,10 +142,44 @@
 | 136 | El Bajón de Porvenir | Comida chilena / fondita | Porvenir, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 06/08 — en Rappi sector Porvenir VA, comida de barrio porciones generosas, ahorro $1.600+/pedido vs. Rappi 28%, Rappi Turbo Quilpué urgencia directa |
 | 137 | Street Burger | Hamburguesería | Palmira 21, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 07/08 — hamburguesería en Rappi VA, ahorro $3.080+/pedido vs. Rappi 28% en hamburgesa $11.000, argumento algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia |
 | 138 | Bronx Burger | Hamburguesería | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 07/08 — hamburguesería en Rappi VA, nombre y estilo americano, argumento tarifa fija $500 vs. comisión porcentual Rappi 28%, Rappi Turbo Quilpué urgencia |
+| 139 | Sushi Gold Restobar Delivery | Sushi / restobar | Caupolicán 894, Quilpué | Nuevo | — | Presentación redactada 08/08 — en PedidosYa Quilpué, argumento SSW (venta a SSW Partners NY el 16/07, día 23 de incertidumbre) + FNE doble multa 2026, sushi restobar ticket alto ~$15K+, tel. +56 32 291 7928, sushigold.cl |
+| 140 | Sushitsu Delivery | Sushi / japonesa | Los Carrera 01655 L11, Quilpué | Nuevo | — | Presentación redactada 08/08 — en Rappi + Uber Eats simultáneamente (doble comisión), 121 reseñas 4.2/5, sushi ticket alto ~$15K, tel. +56 9 3432 7497, sushitsu.cl, @sushitsudelivery, Rappi Turbo ya en Quilpué urgencia directa |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-08)
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 8 de agosto — quinto y último día laboral de la primera semana del mes**. El viernes es el día de mayor planificación para los negocios: se revisan los números de la semana, se planifica el fin de semana (el mayor peak de delivery), y se abastece para el sábado y domingo. Se redactan **4 mensajes**: (1) seguimientos **"Viernes 8 de agosto"** para los 2 Contactados más desactualizados: **#1 Fuente de Soda El Rápido** (Av. Álvarez 1245, 7 días sin draft desde 01/08 — viernes = peak completos/sándwiches de cierre de semana + preparación fin de semana) y **#3 Farmacia Cruz Verde** (Av. Álvarez 890, 7 días sin draft desde 01/08 — viernes = día de abastecimiento medicamentos para el fin de semana, agosto fin del invierno, resfríos tardíos); (2) **presentaciones** para 2 nuevos prospectos: **Sushi Gold Restobar Delivery (#139)** — en PedidosYa Quilpué, argumento SSW directo (venta a fondo NY, 23 días en silencio operativo), Caupolicán 894, tel. +56 32 291 7928, sushigold.cl — y **Sushitsu Delivery (#140)** — en Rappi + Uber Eats simultáneamente (doble comisión), 121 reseñas 4.2/5, Los Carrera 01655 L11 Quilpué, tel. +56 9 3432 7497, @sushitsudelivery. Pipeline total: **140 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 23** (venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) + nuevo #139 Sushi Gold son **PRIORIDAD CRÍTICA** — SSW lleva 23 días en silencio total sin anunciar condiciones para los negocios afiliados; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA, Rappi ya agrupa negocios de VA bajo "Quilpué" en su app; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **44 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed. **Actualizado:** 2026-08-08.
+
+---
+
+#### "VIERNES 8 DE AGOSTO" — Contactados sin draft fresco (08/08)
+
+**[1] Fuente de Soda El Rápido — Viernes 8 de agosto (08/08):**
+"Hola Fuente de Soda El Rápido! RepartoJusto — viernes 8 de agosto. El viernes en una fuente de soda en Villa Alemana es el día donde se juntan dos picos de delivery: el almuerzo de cierre de semana laboral y la once familiar antes del fin de semana. Un completo con papas fritas de $4.500 en Rappi genera $1.260 de comisión para la plataforma — con RepartoJusto son $500 siempre, independiente del valor del pedido. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados en el feed. Una fuente de soda de barrio en Av. Álvarez 1245 no necesita algoritmos: necesita que el cliente del sector sepa que su completo favorito llega a $500 fijo. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un negocio local de comida rápida con logística de tarifa fija posicionado antes de que lleguen tiene ventaja competitiva real. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos este viernes?"
+
+---
+
+**[3] Farmacia Cruz Verde Villa Alemana — Viernes 8 de agosto (08/08):**
+"Hola Farmacia Cruz Verde! RepartoJusto — viernes 8 de agosto. El viernes es el día donde las familias abastecen el botiquín para el fin de semana: el antifebril que puede faltar el sábado a las 11 de la noche, el antiinflamatorio para el dolor que lleva 3 días, el aerosol nasal para el resfrío tardío de agosto que no termina de irse. El cliente que no puede ir hoy al mediodía agradece la farmacia que llega a domicilio a tarifa fija. Con RepartoJusto la logística cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de la boleta. Para un pedido de medicamentos de $15.000, las plataformas grandes cobran hasta $4.500 de comisión — con nosotros son $500 siempre. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — una farmacia local con logística de tarifa fija ya establecida tiene ventaja real en la zona cuando la competencia de delivery se intensifique. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo coordinamos hoy?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-08)
+
+**[139] Sushi Gold Restobar Delivery (Caupolicán 894, Quilpué, PedidosYa) — Presentación:**
+"Hola Sushi Gold! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Quilpué y Villa Alemana. Los encontramos activos en PedidosYa en Quilpué — un restobar con delivery de sushi tiene exactamente el perfil donde la tarifa fija hace la mayor diferencia. Propuesta directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un pedido de sushi de $15.000, PedidosYa cobra alrededor de $5.175 de comisión (29% + IVA real) — con nosotros son $500 siempre, $4.675 que se quedan en el negocio por cada entrega. Además, hay algo importante sobre PedidosYa: el 16 de julio sus dueños firmaron la venta de la empresa a SSW Partners, un fondo de inversión de Nueva York, y ya llevan 23 días sin anunciar qué va a pasar con los contratos de los negocios afiliados. La transacción cierra en 2027 como mínimo — en 12-18 meses no saben quién les va a cobrar ni cuánto. Antes de eso, la FNE los multó dos veces en 2026 ($3.400 millones CLP en total) por impedirles a sus afiliados cobrar sus propios precios en otros canales. Con RepartoJusto son siempre $500 por pedido, sin cambio de dueños, sin letra chica. Pueden mantener PedidosYa y sumar nuestra plataforma como canal paralelo sin costo de registro ni contrato. Somos 100% locales en la zona. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[140] Sushitsu Delivery (Los Carrera 01655 L11, Quilpué, Rappi + Uber Eats) — Presentación:**
+"Hola Sushitsu Delivery! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Quilpué y Villa Alemana. Los encontramos activos simultáneamente en Rappi y Uber Eats — tienen el perfil donde la tarifa fija hace la mayor diferencia: dos plataformas pagando doble comisión sobre cada pedido de sushi de ticket alto. Propuesta directa: con RepartoJusto la logística cuesta $500 fijos por pedido entregado, sin porcentaje. Para un pedido de sushi de $15.000, Rappi cobra $4.200 (28%) y Uber Eats cobra $4.500 (30%) — con nosotros son $500 siempre, el resto queda en el negocio. La nueva app de Rappi con algoritmo social prioriza negocios que pagan publicidad interna: si no compran visibilidad extra dentro de la app, quedan enterrados en el feed bajo los que sí pagan. Con RepartoJusto no hay algoritmo que esconda al negocio. Dato urgente: Rappi Turbo ya opera en Quilpué — cuando la plataforma intensifique la presión en la zona, un canal de tarifa fija da certeza de margen. Sus 121 reseñas en Rappi confirman que la calidad ya está validada — el siguiente paso es que esa calidad no subsidie a la plataforma. Pueden mantener Rappi y Uber Eats y sumar RepartoJusto como tercer canal local, sin costo de registro ni contrato. Somos 100% locales. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
