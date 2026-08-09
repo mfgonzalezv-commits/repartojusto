@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-08
+**Actualizado:** 2026-08-09
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -8,8 +8,8 @@
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Martes 5 de agosto" redactado 05/08 — martes almuerzo familiar invierno, pollo peak lunes-martes, post-Premios UE contraste (Uber Eats premiando grandes vs. negocios de barrio con $500 fijo) + Rappi Turbo Quilpué urgencia ALTA |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 8 de agosto" redactado 08/08 — viernes = día de abastecimiento medicamentos para el fin de semana, agosto fin del invierno, resfríos tardíos + Rappi Turbo Quilpué urgencia |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — balance midweek comisiones pizza, algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — PRIORIDAD, primer sábado agosto, noche sábado = peak sushi familiar, post-Premios UE + Rappi Turbo Quilpué urgencia |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Sábado 2 de agosto" redactado 02/08 — primer sábado agosto, noche sábado = peak botillería fin de semana, post-Premios UE + Rappi Turbo Quilpué urgencia |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — PRIORIDAD, domingo noche = peak sushi familiar invernal, algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia ALTA |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — domingo tarde-noche = peak máximo botillería invernal (asado, onces familiares, reunión de amigos), Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio de semana agosto, lunes = reposición de despensa, Rappi Turbo Quilpué urgencia alta |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — primer domingo del mes, peak postre almuerzo/onces familiar invernal, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — preparación fin de semana asado/costillar, post-Premios UE contraste, Rappi Turbo Quilpué urgencia |
@@ -144,10 +144,44 @@
 | 138 | Bronx Burger | Hamburguesería | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 07/08 — hamburguesería en Rappi VA, nombre y estilo americano, argumento tarifa fija $500 vs. comisión porcentual Rappi 28%, Rappi Turbo Quilpué urgencia |
 | 139 | Sushi Gold Restobar Delivery | Sushi / restobar | Caupolicán 894, Quilpué | Nuevo | — | Presentación redactada 08/08 — en PedidosYa Quilpué, argumento SSW (venta a SSW Partners NY el 16/07, día 23 de incertidumbre) + FNE doble multa 2026, sushi restobar ticket alto ~$15K+, tel. +56 32 291 7928, sushigold.cl |
 | 140 | Sushitsu Delivery | Sushi / japonesa | Los Carrera 01655 L11, Quilpué | Nuevo | — | Presentación redactada 08/08 — en Rappi + Uber Eats simultáneamente (doble comisión), 121 reseñas 4.2/5, sushi ticket alto ~$15K, tel. +56 9 3432 7497, sushitsu.cl, @sushitsudelivery, Rappi Turbo ya en Quilpué urgencia directa |
+| 141 | Gurume | Ramen / comida japonesa / sushi | Madrid 949, Villa Alemana | Nuevo | — | Presentación redactada 09/08 — PRIMER RAMEN del pipeline, en Rappi + Uber Eats simultáneamente (doble comisión), menú ramen+sushi+woks+ceviche, Instagram @gurume.ramen, Facebook /gurumevillalemana, tel. +56 56 932644617, Lun-Dom 13:00-15:00 y 17:00-23:00 |
+| 142 | Roof Burger | Hamburguesería | Av. Valparaíso 1015, Villa Alemana | Nuevo | — | Presentación redactada 09/08 — en Rappi + Uber Eats simultáneamente (doble comisión), hamburguesería en corredor principal VA, Rappi Turbo Quilpué urgencia directa |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-09)
+
+> **NOTA PARA MATÍAS:** Hoy es **domingo 9 de agosto — último domingo de la temporada invernal**. El domingo es el día de mayor peak de delivery familiar: almuerzo de domingo, onces de tarde, cena dominical antes del lunes. Se redactan **4 mensajes**: (1) seguimientos **"Domingo 9 de agosto"** para los 2 Contactados más desactualizados: **#5 Sushi Zen** (Freire 1100, 7 días sin draft desde 02/08 — PRIORIDAD, domingo noche = peak sushi familiar invernal) y **#6 Botillería El Copihue** (Av. Álvarez 2310, 7 días sin draft desde 02/08 — domingo tarde = peak máximo botillería: vino para el asado, cerveza para la tarde, botella para quien no quiere salir con el frío de agosto); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Gurume (#141)** — PRIMER RAMEN del pipeline, Madrid 949, en Rappi + Uber Eats simultáneamente, Instagram @gurume.ramen — y **Roof Burger (#142)** — hamburguesería Av. Valparaíso 1015, en Rappi + Uber Eats. Pipeline total: **142 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 24** (venta PedidosYa a SSW Partners NY el 16/07) — 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) + #139 Sushi Gold son **PRIORIDAD CRÍTICA** — SSW lleva 24 días en silencio total sin anunciar condiciones para los negocios afiliados; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **45 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed. **Actualizado:** 2026-08-09.
+
+---
+
+#### "DOMINGO 9 DE AGOSTO" — Contactados sin draft fresco (09/08)
+
+**[5] Sushi Zen — Domingo 9 de agosto (09/08):**
+"Hola Sushi Zen! RepartoJusto — domingo 9 de agosto. El domingo en la noche es el momento del sushi familiar en Villa Alemana: la mesa que quiere algo especial antes del lunes, la familia que lleva el sushi a las onces o la cena dominical. Para un sushi de $15.000, Rappi cobra $4.200 de comisión (28%); con RepartoJusto son $500 siempre, $3.700 que se quedan en el negocio por cada pedido. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados bajo los que sí pagan. Con RepartoJusto no hay algoritmo que esconda al negocio: cada cliente busca activamente su sushi favorito. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un sushi delivery local con logística de tarifa fija ya establecida tiene ventaja competitiva real antes de que lleguen a la zona. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
+
+---
+
+**[6] Botillería El Copihue — Domingo 9 de agosto (09/08):**
+"Hola Botillería El Copihue! RepartoJusto — domingo 9 de agosto. El domingo en agosto es el peak máximo de la semana en una botillería: el asado familiar que necesita el vino para el almuerzo, las onces de las 6 de la tarde, la reunión de amigos que no quiere salir con el frío. El delivery de botillería en domingo invernal es el pedido que el cliente más valora, porque la alternativa es salir al frío. Con RepartoJusto la logística cuesta $500 fijos por pedido entregado — sin porcentaje sobre el valor de la venta. Una botella de vino de $8.000 pedida por delivery significa hasta $2.240 de comisión (Rappi 28%); con nosotros son $500 siempre, $1.740 que se quedan en la botillería por cada entrega. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — una botillería de Av. Álvarez con logística de tarifa fija ya establecida tiene ventaja competitiva real cuando intensifiquen la cobertura en el corredor. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos hoy?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-09)
+
+**[141] Gurume (Madrid 949, Villa Alemana, Rappi + Uber Eats) — Presentación:**
+"Hola Gurume! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana y Quilpué. Los encontramos activos simultáneamente en Rappi y Uber Eats — tienen el perfil donde la tarifa fija hace la mayor diferencia: dos plataformas pagando doble comisión sobre cada pedido de ramen y sushi de ticket medio-alto. Propuesta directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje. Para un pedido de ramen de $10.000, Rappi cobra $2.800 (28%) y Uber Eats cobra $3.000 (30%) — con nosotros son $500 siempre, el resto queda en el negocio. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — si no compran visibilidad extra, quedan enterrados en el feed bajo los que sí pagan. Con RepartoJusto no hay algoritmo que esconda al negocio. Son los primeros con ramen en el ecosistema de RepartoJusto — un rubro con alta fidelidad de cliente (quien encuentra su ramen favorito vuelve). Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de su local en Madrid 949 — un canal de tarifa fija establecido antes de que intensifiquen la cobertura en Villa Alemana da certeza de margen. Pueden mantener Rappi y Uber Eats y sumar RepartoJusto como tercer canal local, sin costo de registro ni contrato. Somos 100% locales. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[142] Roof Burger (Av. Valparaíso 1015, Villa Alemana, Rappi + Uber Eats) — Presentación:**
+"Hola Roof Burger! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana y Quilpué. Los encontramos activos simultáneamente en Rappi y Uber Eats — una hamburguesería pagando doble comisión sobre cada pedido. Propuesta directa: con RepartoJusto la logística cuesta $500 fijos por pedido entregado, sin porcentaje. Para una hamburguesa de $10.000, Rappi cobra $2.800 (28%) y Uber Eats cobra $3.000 (30%) — con nosotros son $500 siempre, el resto queda en el negocio. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados en el feed bajo los que sí pagan. Con RepartoJusto no hay algoritmo que esconda al negocio. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de su local en Av. Valparaíso 1015 — cuando intensifiquen la cobertura en el corredor VA/Quilpué, los negocios con logística de tarifa fija ya establecida tienen ventaja competitiva real. Pueden mantener Rappi y Uber Eats y sumar RepartoJusto como tercer canal local, sin costo de registro ni contrato. Somos 100% locales. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
