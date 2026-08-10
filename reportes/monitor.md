@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-10T02:10:12Z
-**Estado:** ⚠️ SIN VERIFICAR
-**Detalle:** Error de red — el proxy del entorno bloqueó la conexión a repartojusto-production.up.railway.app (HTTP 403 Forbidden desde proxy). No fue posible determinar si el servidor está operativo. Se requiere verificación desde un entorno con acceso a railway.app.
+**Última verificación:** 2026-08-10T00:00:00Z
+**Estado:** ❌ NO VERIFICABLE
+**Detalle:** El proxy de red del entorno de ejecución bloqueó la solicitud a `https://repartojusto-production.up.railway.app/health` con HTTP 403 Forbidden. No es posible determinar el estado del servidor desde este entorno. Se recomienda verificar manualmente o configurar una excepción de proxy para `*.railway.app`.
