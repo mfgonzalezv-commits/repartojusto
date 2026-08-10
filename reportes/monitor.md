@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-10T12:00:00Z
-**Estado:** ⚠️ NO VERIFICADO
-**Detalle:** Error de red — el proxy del entorno de ejecución bloqueó la solicitud saliente a repartojusto-production.up.railway.app (HTTP 403 Forbidden en el túnel CONNECT). No fue posible determinar el estado real del servidor.
+**Última verificación:** 2026-08-10T13:15:35Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy del entorno de ejecución devolvió 403 Forbidden (CONNECT tunnel blocked). El host de producción no es accesible desde este entorno de ejecución remoto.
