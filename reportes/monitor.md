@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-10T07:11:30Z
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** El proxy de red del entorno de ejecución bloqueó la solicitud a `https://repartojusto-production.up.railway.app/health` con HTTP 403 (policy denial). No es posible determinar el estado del servidor desde este entorno. Se recomienda verificar manualmente o configurar una excepción de proxy para `*.railway.app`.
+**Última verificación:** 2026-08-10T08:14:34Z
+**Estado:** ⚠️ NO VERIFICADO
+**Detalle:** Error de red — el proxy del entorno de ejecución bloqueó la solicitud saliente a repartojusto-production.up.railway.app (HTTP 403 Forbidden en el túnel CONNECT). No fue posible determinar el estado real del servidor.
