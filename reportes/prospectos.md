@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-09
+**Actualizado:** 2026-08-10
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -11,9 +11,9 @@
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — PRIORIDAD, domingo noche = peak sushi familiar invernal, algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia ALTA |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — domingo tarde-noche = peak máximo botillería invernal (asado, onces familiares, reunión de amigos), Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio de semana agosto, lunes = reposición de despensa, Rappi Turbo Quilpué urgencia alta |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — primer domingo del mes, peak postre almuerzo/onces familiar invernal, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 10 de agosto" redactado 10/08 — lunes = peak encargos tortas/celebraciones semana, agosto último mes frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — preparación fin de semana asado/costillar, post-Premios UE contraste, Rappi Turbo Quilpué urgencia |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 3 de agosto" redactado 03/08 — domingo invernal, peak café delivery desayuno/once familiar, post-Premios UE (negocios de barrio vs. grandes) + Rappi Turbo Quilpué urgencia |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 10 de agosto" redactado 10/08 — lunes home office = peak café delivery inicio de semana, agosto último mes frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio agosto cambio de clima, medicamentos mascotas esenciales, Rappi Turbo Quilpué urgencia alta |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — ACTIVACIÓN agosto, primera semana de clases del semestre, útiles y cuadernos a domicilio = diferenciador único, delivery sin comisión para la temporada escolar |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — último mes invernal, peak urgencias reparación/calefacción agosto, "sin algoritmo que te esconda" + Rappi Turbo urgencia |
@@ -146,10 +146,44 @@
 | 140 | Sushitsu Delivery | Sushi / japonesa | Los Carrera 01655 L11, Quilpué | Nuevo | — | Presentación redactada 08/08 — en Rappi + Uber Eats simultáneamente (doble comisión), 121 reseñas 4.2/5, sushi ticket alto ~$15K, tel. +56 9 3432 7497, sushitsu.cl, @sushitsudelivery, Rappi Turbo ya en Quilpué urgencia directa |
 | 141 | Gurume | Ramen / comida japonesa / sushi | Madrid 949, Villa Alemana | Nuevo | — | Presentación redactada 09/08 — PRIMER RAMEN del pipeline, en Rappi + Uber Eats simultáneamente (doble comisión), menú ramen+sushi+woks+ceviche, Instagram @gurume.ramen, Facebook /gurumevillalemana, tel. +56 56 932644617, Lun-Dom 13:00-15:00 y 17:00-23:00 |
 | 142 | Roof Burger | Hamburguesería | Av. Valparaíso 1015, Villa Alemana | Nuevo | — | Presentación redactada 09/08 — en Rappi + Uber Eats simultáneamente (doble comisión), hamburguesería en corredor principal VA, Rappi Turbo Quilpué urgencia directa |
+| 143 | WebBurguer | Hamburguesería | Lautaro 535, Quilpué | Nuevo | — | Presentación redactada 10/08 — hamburguesería delivery activa en Quilpué, Rappi Turbo ya en la zona = urgencia directa para establecer canal $500 fijo antes del avance de Turbo |
+| 144 | Gorilas Sanguchería | Sanguchería / sándwiches artesanales | El Retiro Sur 139, Quilpué | Nuevo | — | Presentación redactada 10/08 — en Uber Eats + PedidosYa (doble comisión + argumento SSW día 25 silencio), tel. +56936525189, cadena artesanal activa en Quilpué, argumento FNE/SSW + doble comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-10)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 10 de agosto — inicio de la segunda semana del mes, último mes del invierno**. El lunes es el día de planificación semanal para los negocios: se revisan los márgenes del fin de semana, se hacen los pedidos de insumos, y se activan los canales de delivery para la semana. Para pastelerías y cafeterías, el lunes es el día clave de encargos y pedidos de la semana (tortas de cumpleaños del miércoles, café del teletrabajador). Se redactan **4 mensajes**: (1) seguimientos **"Lunes 10 de agosto"** para los 2 Contactados más desactualizados: **#8 Pastelería Dulce Hogar** (Av. Álvarez 1890, 7 días sin draft desde 03/08 — lunes = peak encargos tortas/celebraciones semana, agosto último frío) y **#10 Café El Árbol** (Freire 890, 7 días sin draft desde 03/08 — lunes home office = el cliente que quiere su café sin salir al frío de agosto); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **WebBurguer (#143)** — hamburguesería delivery activa en Lautaro 535, Quilpué — y **Gorilas Sanguchería (#144)** — sanguchería artesanal en Uber Eats + PedidosYa, El Retiro Sur 139, Quilpué, argumento SSW día 25 directo. Pipeline total: **144 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 25** (venta PedidosYa a SSW Partners NY el 16/07) — SSW lleva 25 días en silencio operativo total sin anunciar condiciones para los negocios afiliados; 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA**; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **46 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed. **Actualizado:** 2026-08-10.
+
+---
+
+#### "LUNES 10 DE AGOSTO" — Contactados sin draft fresco (10/08)
+
+**[8] Pastelería Dulce Hogar — Lunes 10 de agosto (10/08):**
+"Hola Pastelería Dulce Hogar! RepartoJusto — lunes 10 de agosto. El lunes en una pastelería tiene una dinámica especial: es el día donde llegan los encargos de la semana — la torta que piden el lunes para el miércoles, el surtido de pasteles para la reunión de trabajo del jueves, la torta de cumpleaños del fin de semana que ya están reservando hoy. El cliente que cumple años el miércoles y quiere la torta entregada en su casa sin salir al frío de agosto es exactamente el pedido que RepartoJusto hace posible. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el precio de la torta. Para una torta de $18.000 en Rappi, el 28% de comisión son $5.040 que se van a la plataforma — con nosotros son $500 siempre, $4.540 que se quedan en la pastelería. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados bajo los que sí pagan. Una pastelería de Av. Álvarez 1890 no necesita algoritmos: la clienta que encarga su torta favorita ya sabe a dónde llamar; solo necesita que esa entrega no le cueste el margen del pastel. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — una pastelería local con logística de tarifa fija posicionada antes de que intensifiquen la cobertura tiene ventaja real. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo conversamos este lunes?"
+
+---
+
+**[10] Café El Árbol — Lunes 10 de agosto (10/08):**
+"Hola Café El Árbol! RepartoJusto — lunes 10 de agosto. El lunes es el día de más pedidos de café delivery en la semana: el que teletrabaja el primer día y quiere arrancar bien sin salir al frío, el equipo que se reúne en casa y pide el café del lunes, el que lleva semanas con el mismo resfrío de agosto y no quiere salir pero sí quiere su café con leche de la mañana con el sándwich. Un café con leche con sándwich de $7.000 en Rappi genera $1.960 de comisión para la plataforma por esa entrega — con RepartoJusto son $500 siempre, independiente del valor del pedido. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados en el feed bajo los que sí pagan. Un café de barrio en Freire 890 no necesita ese algoritmo: el cliente del sector ya conoce el sabor de su café favorito, solo necesita que el canal de delivery no se lleve la mitad del margen. Agosto es el último mes del invierno — la gente todavía pide el café caliente a domicilio antes de que llegue el calor de la primavera. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un café local con logística de tarifa fija ya establecida tiene ventaja real cuando intensifiquen la cobertura en el corredor. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos hoy?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-10)
+
+**[143] WebBurguer (Lautaro 535, Quilpué) — Presentación:**
+"Hola WebBurguer! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Quilpué y Villa Alemana. Los encontramos activos con delivery en Lautaro 535, Quilpué — hamburguesería delivery en la zona. Propuesta directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de la hamburguesa. Para una hamburgesa de $10.000, una plataforma que cobra 28% de comisión se lleva $2.800 por cada entrega — con nosotros son $500 siempre, $2.300 que se quedan en el negocio. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra dentro de la app quedan enterrados bajo los que sí pagan. Con RepartoJusto no hay algoritmo que esconda al negocio: los pedidos llegan directo. Dato de urgencia directa: Rappi Turbo ya opera en Quilpué — cuando la plataforma intensifique su presencia en la zona, los negocios con logística de tarifa fija ya establecida tienen márgenes protegidos y ventaja competitiva real. Pueden sumar RepartoJusto como canal local paralelo sin costo de registro ni contrato. Somos 100% locales en Quilpué y Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[144] Gorilas Sanguchería (El Retiro Sur 139, Quilpué) — Presentación:**
+"Hola Gorilas! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Quilpué y Villa Alemana. Los encontramos activos simultáneamente en Uber Eats y PedidosYa en Quilpué — una sanguchería artesanal pagando doble comisión sobre cada mechada y burger de ticket alto. Propuesta directa: con RepartoJusto la logística cuesta $500 fijos por pedido entregado, sin porcentaje. Para un churrasco de $9.000, Uber Eats cobra $2.700 (30%) y PedidosYa cobra alrededor de $2.600 (29%) — con nosotros son $500 siempre, el resto queda en el negocio. Hay algo importante sobre PedidosYa: el 16 de julio sus dueños firmaron la venta de la empresa a SSW Partners, un fondo de inversión de Nueva York, y ya llevan 25 días sin anunciar qué va a pasar con los contratos de los negocios afiliados. La transacción cierra en 2027 como mínimo — en 12-18 meses no saben quién les va a cobrar ni cuánto. Antes de eso, la FNE los multó dos veces en 2026 ($3.400 millones CLP en total) por impedirle a los negocios afiliados cobrar sus propios precios en otros canales. Con RepartoJusto son siempre $500 por pedido, sin cambio de dueños, sin letra chica. Pueden mantener Uber Eats y PedidosYa y sumar RepartoJusto como tercer canal local sin costo de registro ni contrato. Somos 100% locales. repartojusto-production.up.railway.app ¿Conversamos?"
 
 ---
 
