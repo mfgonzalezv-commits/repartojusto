@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-11T09:10:53Z
-**Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — proxy de red bloqueó la conexión (403 policy denial). curl exit code 56: CONNECT tunnel failed.
+**Última verificación:** 2026-08-11T10:12:42Z
+**Estado:** ⚠️ INDETERMINADO
+**Detalle:** curl error 56 — el proxy del entorno de ejecución retornó 403 Forbidden al intentar el túnel CONNECT hacia `repartojusto-production.up.railway.app`. No se pudo verificar el endpoint `/health`. El servidor puede estar operativo; la restricción es de red del agente (HTTPS_PROXY bloquea el dominio Railway). Verificar manualmente o ajustar la política de red del entorno.
