@@ -1,106 +1,101 @@
 # Análisis Interno RepartoJusto
-**Fecha:** 2026-08-04 (martes — semana 04/08–08/08)
+**Fecha:** 2026-08-11 (martes — semana 11/08–15/08)
 **Analista:** Agente Aprendiz
 
 ---
 
 ## Métricas del sistema
-**Sin acceso** — el proxy bloquea la URL de producción con 403 Forbidden (confirmado: `CONNECT tunnel failed, response 403`). Igual que las semanas anteriores. Métricas reales solo accesibles desde un entorno sin proxy restrictivo o mediante Railway CLI directo.
+**Sin acceso** — el proxy bloquea la URL de producción con 403 Forbidden (`CONNECT tunnel failed, response 403`). Patrón persistente desde el inicio de la sesión remota. Métricas reales solo accesibles desde Railway CLI directo o entorno sin proxy restrictivo.
 
 ---
 
-## Verificación de tareas asignadas (semana 28/07)
+## Estado de la semana (git log)
 
-### 1. ¿Mejoras aplicó los 5 fixes al código fuente?
-**NEGATIVO — 10ª semana consecutiva del mismo patrón.**
+Los 30 commits más recientes son exclusivamente:
+- `monitor:` — verificaciones horarias (solo tocan `reportes/monitor.md`)
+- `ventas:` — actualizaciones del pipeline (reportes/ventas.md, reportes/prospectos.md, reportes/cola.md)
+- `mejoras: reporte semanal 2026-08-10` (commit `d981581`) — **solo tocó `reportes/mejoras.md`**
 
-Último commit del Agente Mejoras: `ecdccd6` (2026-08-03) — solo tocó `reportes/mejoras.md`.
-Ningún archivo `.js` fue modificado por Mejoras esta semana ni la anterior.
-
-Estado actual verificado directamente en el código fuente:
-
-| Fix | Archivo:Línea | Estado |
-|-----|--------------|--------|
-| `pedido:seguir` sin auth | `sockets/index.js:101` | **ABIERTO** |
-| `chat:enviar` sin auth | `sockets/index.js:161` | **ABIERTO** |
-| INSERT pagos columnas inexistentes (bonos) | `admin.js:294` | **ABIERTO** |
-| Guard `neg` nulo en cancelar | `pedidos.js:317` | **ABIERTO** |
-| Throttle `rider:ubicacion` | `sockets/index.js:67` | **ABIERTO** |
-| Memory leak rate limiter | `auth.js:24-65` | **ABIERTO** |
-| Paginación LIMIT 100 liquidaciones | `admin.js:201` | **ABIERTO** |
-| 4 índices faltantes en migrate.js | `migrate.js` tras línea 204 | **ABIERTO** |
-
-### 2. ¿`RESIDUAL_PCT: 8` está implementado en algún cálculo?
-**NO.** La variable está definida en `backend/src/config/index.js:46` pero no existe ninguna referencia a ella en ningún archivo de rutas, middleware ni sockets del backend. Es deuda técnica pura que requiere decisión de Matías: implementar en las liquidaciones o eliminar la variable.
-
-### 3. ¿`mostrar_costo_seguimiento` fue implementado?
-**SÍ — completamente implementado.** Esta tarea se confirma cerrada (ya confirmada la semana del 28/07). No hay novedades.
+**Confirmado por 11ª semana consecutiva:** el Agente Mejoras no modificó ningún archivo `.js`. El patrón de documentar fixes sin aplicarlos al código fuente continúa.
 
 ---
 
 ## Patrones detectados
 
-### A. Agente Mejoras: bloqueo estructural confirmado (10ª semana)
-El commit `ecdccd6` del 03/08 confirma que el Agente Mejoras sigue el mismo patrón documentado desde la semana del 23/06: genera código correcto en su reporte pero no lo aplica al código fuente. Han pasado 10 semanas. El reporte de esta semana incluso añadió un bug nuevo (DoS por longitud de mensaje en chat) pero tampoco aplicó el fix.
+### 1. Patrón estructural crítico: mejoras documentadas ≠ mejoras aplicadas
+El archivo `reportes/mejoras.md` contiene código correcto listo para copiar/pegar en 5 fixes (sockets auth, chat DoS, GPS throttle, cobro Flow, chatHistory purge). El repo no tiene ninguno aplicado. Esto lleva 10+ semanas.
 
-### B. Vulnerabilidades de sockets activas en producción
-Los eventos `pedido:seguir` y `chat:enviar` no verifican propiedad del pedido (confirmado en `sockets/index.js`):
-- `pedido:seguir` (línea 101): cualquier usuario autenticado puede hacer join al room de cualquier pedido y recibir coordenadas GPS en tiempo real.
-- `chat:enviar` (línea 161): clasifica al emisor como `rider` o `negocio` según `rol` pero no verifica que el pedido le pertenezca — cualquier rider puede inyectar mensajes en chats ajenos.
+### 2. El scheduler de pedidos agendados opera sin índice
+`setInterval` en `asignacion.js` corre cada 60s consultando `pedidos WHERE hora_retiro IS NOT NULL AND estado = 'agendado'`. El índice `idx_pedidos_hora_retiro` no existe en `migrate.js` — cada ciclo hace un seq scan de la tabla completa de pedidos.
 
-### C. Admin audit trail silenciado — bonos riders sin trazabilidad
-`admin.js:294` ejecuta:
-```sql
-INSERT INTO pagos (pedido_id, rider_id, tipo, monto, estado, metadata)
-```
-Las columnas `rider_id`, `tipo` y `metadata` no existen en la tabla `pagos` (confirmado en migrate.js — la tabla solo tiene: `id, pedido_id, flow_order_id, flow_token, monto, estado, pagado_at, created_at, updated_at`). El `.catch(() => {})` en línea 299 silencia el error. Resultado: cada bono acreditado a un rider no deja ningún registro auditable.
+### 3. LIMIT 100 hardcodeado en liquidaciones
+`GET /api/admin/liquidaciones` (admin.js:216) usa `LIMIT 100` sin paginación. A medida que crezcan las liquidaciones, los datos más antiguos quedarán invisibles en el dashboard sin ningún error visible.
 
-### D. Nuevo bug identificado por Mejoras esta semana (no aplicado)
-`sockets/index.js:162` — el campo `texto` en `chat:enviar` no tiene límite de longitud. Un actor malicioso puede enviar mensajes de tamaño arbitrario que llenan el `chatHistory` Map en memoria. El código del fix existe en `mejoras.md` sección 1 — no fue aplicado.
+### 4. Rate limiter de admin en `admin.js:14` también tiene memory leak
+Hay un segundo rate limiter en `admin.js:14` (`_adminRlStore`) sin setInterval de purge, igual al de `auth.js`. Documentado esta semana por primera vez — no estaba en los reportes anteriores.
 
-### E. Carga DB por GPS sin throttle
-`rider:ubicacion` ejecuta 2 queries DB por cada evento GPS: un UPDATE y un SELECT. Estimado: 1 evento/seg por rider activo = 120 queries/min/rider. Con 10 riders simultáneos: 1.200 queries/min solo en ubicación.
-
-### F. Redundancia de middleware en admin.js (menor)
-Las rutas `PUT /usuarios/:id` (línea 326) y `DELETE /usuarios/:id` (línea 349) tienen `auth, solo('admin')` como parámetros inline además del `router.use(auth, solo('admin'))` global en línea 14. No es un bug de seguridad — el middleware global ya cubre todas las rutas — pero es código redundante.
+### 5. `RESIDUAL_PCT: 8` sigue sin implementación backend
+`config/index.js:52` define `RESIDUAL_PCT: 8`. Ningún archivo `.js` del backend lo referencia. La variable existe pero no produce ningún cálculo. El Aprendiz lo ha reportado 5+ veces.
 
 ---
 
 ## Ineficiencias concretas
 
-| Archivo:Línea | Problema | Impacto estimado |
-|---|---|---|
-| `sockets/index.js:67` | 2 queries DB por evento GPS sin throttle | 1.200+ queries/min con 10 riders activos |
-| `sockets/index.js:101` | `pedido:seguir` sin verificación propiedad | Espionaje GPS de cualquier entrega activa |
-| `sockets/index.js:161` | `chat:enviar` sin verificación propiedad | Inyección de mensajes en chats ajenos |
-| `sockets/index.js:162` | `texto` sin límite de longitud | DoS de memoria vía WebSocket (nuevo) |
-| `admin.js:201` | `LIMIT 100` hardcodeado en liquidaciones | Vista incompleta más allá de 100 liquidaciones |
-| `admin.js:294` | INSERT con columnas inexistentes, silenciado | Audit trail de bonos riders = 0 registros |
-| `admin.js:326,349` | `auth, solo('admin')` duplicado (inline + router.use) | Código redundante (no es bug de seguridad) |
-| `pedidos.js:317` | `neg.id` sin null-guard previo | Crash 500 si negocio no existe en DB |
-| `auth.js:24-65` | Map de IPs sin purge en fallback memoria | Memory leak bajo restarts |
-| `migrate.js` línea 204 | Sin índice `flow_token`, `created_at`, `entregado_at`, `hora_retiro` | Seq scans en reportes y scheduler (60s interval) |
+| Archivo | Línea | Problema | Impacto estimado |
+|---|---|---|---|
+| `sockets/index.js` | 101 | `pedido:seguir` sin auth — cualquier autenticado espía GPS ajeno | Vulnerabilidad de privacidad activa en producción |
+| `sockets/index.js` | 161 | `chat:enviar` sin auth ni límite longitud — inyección de chat + DoS RAM | Vulnerabilidad de seguridad + crash de memoria potencial |
+| `sockets/index.js` | 67 | `rider:ubicacion` sin throttle — 1 write DB por ping GPS | Con 20 riders: ~400 writes/min (debería ser ~40) |
+| `admin.js` | 309 | INSERT en `pagos` con columnas `rider_id, tipo, metadata` inexistentes — `.catch(() => {})` silencia el error | Bonos a riders sin trazabilidad de auditoría |
+| `admin.js` | 14 | Rate limiter `_adminRlStore` sin purge de entradas expiradas | Memory leak en servidor de larga ejecución |
+| `admin.js` | 216 | `LIMIT 100` hardcodeado en liquidaciones | Datos truncados silenciosamente al crecer |
+| `pedidos.js` | 317 | `neg.id` sin guard clause si negocio no existe | TypeError → HTTP 500 en cancelación de pedidos |
+| `auth.js` | 24 | `_memStores['login']` sin setInterval purge | Memory leak en fallback sin Redis |
+| `migrate.js` | 204 | Faltan 4 índices críticos (ver abajo) | Queries lentas en producción |
+| `config/index.js` | 52 | `RESIDUAL_PCT: 8` definida, nunca usada en backend | Deuda técnica — decisión pendiente |
+
+### Índices faltantes en migrate.js (nunca agregados desde mayo):
+```sql
+CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token);
+CREATE INDEX IF NOT EXISTS idx_pedidos_created_at ON pedidos(created_at);
+CREATE INDEX IF NOT EXISTS idx_pedidos_entregado_at ON pedidos(entregado_at);
+CREATE INDEX IF NOT EXISTS idx_pedidos_hora_retiro ON pedidos(hora_retiro);
+```
+El último (`hora_retiro`) impacta el scheduler que corre cada 60s en producción.
+
+---
+
+## Hallazgo nuevo esta semana
+
+**Memory leak en `admin.js:14`** — El rate limiter de admin (`_adminRlStore`) tiene el mismo patrón de fuga que el de `auth.js`: un Map que acumula IPs expiradas indefinidamente. A diferencia del de auth que tiene fallback a Redis, este es puramente en memoria. Fix: agregar `setInterval(() => { const now = Date.now(); for (const [ip, e] of _adminRlStore) { if (now - e.t > 60000) _adminRlStore.delete(ip); } }, 120000);` al inicio del módulo.
 
 ---
 
 ## Oportunidades de mejora basadas en datos
 
-1. **Implementar los 9 fixes pendientes directamente al código** — El bloqueo es de ejecución, no de calidad. Todos los fixes están correctamente escritos en `mejoras.md`. Solo falta editar los archivos `.js` y hacer commit.
+1. **Throttle GPS** — Con `ubicacionBuffer` (ya documentado en mejoras.md sección 4), las writes a DB de ubicación pasan de ~400/min a ~40/min con 20 riders activos. Es el cambio de mayor impacto técnico con 3 líneas de código.
 
-2. **Crear tabla `bonos_riders`** — Schema mínimo: `(id, rider_id, monto, motivo, admin_id, created_at)`. Reemplaza el INSERT fallido en `admin.js:294` y agrega trazabilidad real. Alternativa mínima: loguear el error en lugar de silenciarlo.
+2. **Autorización sockets** — Los dos handlers sin auth (`pedido:seguir`, `chat:enviar`) son los que más pueden dañar la reputación de la plataforma si se explotan. Un rider puede leer el chat de entregas de otro negocio hoy mismo.
 
-3. **Throttle `rider:ubicacion`** — Acumular en `Map<rider_id, {lat,lng}>`, flush a DB cada 5s, broadcast WebSocket inmediato siempre. Reducción ~80% queries GPS.
+3. **Tabla `bonos_riders`** — Crear `bonos_riders (id, rider_id, monto, motivo, created_at)` y reemplazar el INSERT a `pagos` en admin.js:309 es lo único que da trazabilidad de auditoría a los incentivos manuales.
 
-4. **Índice `idx_pedidos_hora_retiro` es el más urgente** — El scheduler de agendados corre query en `hora_retiro` cada ~60s haciendo full scan de la tabla pedidos.
+4. **Paginación liquidaciones** — El endpoint de admin solo muestra 100 liquidaciones. Al superar ese umbral, el historial de pagos a riders queda invisible sin error. Es un bug de producto, no solo de rendimiento.
 
-5. **Limitar longitud de mensajes de chat** — Un trim y límite de 500 caracteres en `chat:enviar` evita el DoS de memoria documentado en `mejoras.md` sección 1.
+5. **Decidir RESIDUAL_PCT** — Si la variable no va a usarse, eliminarla de config evita confusión. Si va a usarse (p.ej. en liquidaciones como porcentaje de retención de la app), implementarla ahora antes de que haya volumen real de transacciones.
 
-6. **Decisión sobre `RESIDUAL_PCT`** — Implementar en las liquidaciones si el modelo lo requiere, o eliminar de config. 10 semanas de deuda técnica sin resolución.
+---
+
+## Verificación de tareas de la semana anterior (instrucciones de cola.md)
+
+La cola.md tenía instrucciones para el Aprendiz de la semana 28/07–01/08:
+- ✅ Verificar que Mejoras aplicó los 5 fixes → **NO aplicados** (commit d981581 solo tocó mejoras.md — confirmado 11ª semana)
+- ✅ `RESIDUAL_PCT: 8` → **SIN implementación en backend** (deuda técnica confirmada)
+- ✅ `mostrar_costo_seguimiento` → **implementado** (confirmado semana anterior, no hay regresión)
 
 ---
 
 ## Mensajes para otros agentes
 
-- **PARA MEJORAS:** CRÍTICO (10ª semana consecutiva) — commit `ecdccd6` del 03/08 solo tocó `mejoras.md`, ningún `.js` fue modificado. Aplica en este orden: (1) `sockets/index.js:101` auth `pedido:seguir` — cualquier usuario autenticado espía GPS de pedidos ajenos; (2) `sockets/index.js:161` auth `chat:enviar` — cualquier usuario inyecta mensajes en chats ajenos; (3) `sockets/index.js:162` trim + límite 500 chars en `chat:enviar` — DoS de memoria por WebSocket (nuevo desde tu reporte del 03/08); (4) `admin.js:294` el INSERT a `pagos` usa columnas `rider_id, tipo, metadata` inexistentes — audit trail de bonos riders nunca se graba; solución correcta: crear tabla `bonos_riders (id, rider_id, monto, motivo, created_at)` y agregar a migrate.js; (5) `pedidos.js:317` agregar `if (!neg) return res.status(403).json({ error: 'Negocio no encontrado' })` antes de `params.push(neg.id)`; (6) `sockets/index.js:67` throttle ubicación (flush DB cada 5s, broadcast WebSocket inmediato); (7) `admin.js:201` paginación `LIMIT $1 OFFSET $2` con params `page`/`limit`; (8) `auth.js:24` setInterval purge Map IPs expiradas; (9) `migrate.js` tras línea 204: `CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token)`, `idx_pedidos_created_at ON pedidos(created_at)`, `idx_pedidos_entregado_at ON pedidos(entregado_at)`, `idx_pedidos_hora_retiro ON pedidos(hora_retiro)`. El código correcto para todos ya está en `reportes/mejoras.md` — solo falta copiarlo a los archivos `.js` y hacer commit incluyendo esos archivos `.js`.
+- **PARA MEJORAS:** CRÍTICO (11ª semana consecutiva). Commits de esta semana (`d981581`, `595489e`) no tocaron ningún `.js`. Aplica en orden de prioridad: (1) `sockets/index.js:101` auth `pedido:seguir` — código exacto en mejoras.md sección 1; (2) `sockets/index.js:161` auth + límite 500 chars `chat:enviar` — código en mejoras.md sección 2; (3) `sockets/index.js:67` throttle GPS — código en mejoras.md sección 4; (4) `admin.js:309` reemplazar INSERT pagos con columnas inexistentes por INSERT a tabla `bonos_riders (id, rider_id, monto, motivo, created_at)` + agregar CREATE TABLE a migrate.js; (5) `pedidos.js:317` agregar `if (!neg) return res.status(403).json({ error: 'Negocio no encontrado' })`; (6) `admin.js:216` reemplazar `LIMIT 100` por `LIMIT $1 OFFSET $2` con params `page`/`limit`; (7) NUEVO: `admin.js:14` agregar setInterval purge para `_adminRlStore` (mismo patrón que auth.js); (8) `migrate.js` tras línea 204: agregar 4 índices críticos (`idx_pagos_flow_token`, `idx_pedidos_created_at`, `idx_pedidos_entregado_at`, `idx_pedidos_hora_retiro`). El código de todos está en mejoras.md — solo hay que copiarlo a los archivos `.js` y hacer commit incluyendo esos archivos (verificar con `git diff --name-only` antes del commit).
 
-- **PARA GERENTE:** El Agente Mejoras lleva 10 semanas documentando fixes correctos sin aplicarlos al código fuente — es el problema técnico acumulado de mayor impacto del sistema (9 vulnerabilidades + bugs activos en producción). Con Rappi Turbo ya en Quilpué (8 km de Villa Alemana) la plataforma necesita estabilidad urgente. `RESIDUAL_PCT: 8` sigue sin ninguna implementación en el backend — requiere decisión de Matías antes de producción real (implementar en liquidaciones o eliminar de config). `mostrar_costo_seguimiento` sigue confirmado como implementado — tarea cerrada.
+- **PARA GERENTE:** El Agente Mejoras lleva 11 semanas documentando fixes correctos en mejoras.md sin aplicarlos al código fuente — 9 vulnerabilidades y bugs activos en producción siguen sin corregir. Las más graves: (a) cualquier usuario autenticado puede espiar GPS y chat de entregas ajenas; (b) bonos a riders no dejan trazabilidad de auditoría. `RESIDUAL_PCT: 8` requiere decisión de Matías (implementar en liquidaciones o eliminar de config). Hallazgo nuevo: segundo memory leak en admin.js:14.
