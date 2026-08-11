@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-10
+**Actualizado:** 2026-08-11
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -10,11 +10,11 @@
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — balance midweek comisiones pizza, algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — PRIORIDAD, domingo noche = peak sushi familiar invernal, algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia ALTA |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — domingo tarde-noche = peak máximo botillería invernal (asado, onces familiares, reunión de amigos), Rappi Turbo Quilpué urgencia ALTA |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio de semana agosto, lunes = reposición de despensa, Rappi Turbo Quilpué urgencia alta |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 11 de agosto" redactado 11/08 — reposición midweek, clientes sin básicos del hogar, agosto último frío, Rappi Turbo Quilpué urgencia ALTA |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 10 de agosto" redactado 10/08 — lunes = peak encargos tortas/celebraciones semana, agosto último mes frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — preparación fin de semana asado/costillar, post-Premios UE contraste, Rappi Turbo Quilpué urgencia |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 10 de agosto" redactado 10/08 — lunes home office = peak café delivery inicio de semana, agosto último mes frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Lunes 4 de agosto" redactado 04/08 — inicio agosto cambio de clima, medicamentos mascotas esenciales, Rappi Turbo Quilpué urgencia alta |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 11 de agosto" redactado 11/08 — consultas post-fin de semana, peak medicamentos mascotas agosto, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — ACTIVACIÓN agosto, primera semana de clases del semestre, útiles y cuadernos a domicilio = diferenciador único, delivery sin comisión para la temporada escolar |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — último mes invernal, peak urgencias reparación/calefacción agosto, "sin algoritmo que te esconda" + Rappi Turbo urgencia |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Agosto / ACTIVACIÓN" redactado 05/08 — primer mensaje del mes, agosto = inicio preparación temporada verano 2026/27, faltan 3 meses para el peak de calor, momento ideal para configurar delivery antes del rush de diciembre |
@@ -148,10 +148,44 @@
 | 142 | Roof Burger | Hamburguesería | Av. Valparaíso 1015, Villa Alemana | Nuevo | — | Presentación redactada 09/08 — en Rappi + Uber Eats simultáneamente (doble comisión), hamburguesería en corredor principal VA, Rappi Turbo Quilpué urgencia directa |
 | 143 | WebBurguer | Hamburguesería | Lautaro 535, Quilpué | Nuevo | — | Presentación redactada 10/08 — hamburguesería delivery activa en Quilpué, Rappi Turbo ya en la zona = urgencia directa para establecer canal $500 fijo antes del avance de Turbo |
 | 144 | Gorilas Sanguchería | Sanguchería / sándwiches artesanales | El Retiro Sur 139, Quilpué | Nuevo | — | Presentación redactada 10/08 — en Uber Eats + PedidosYa (doble comisión + argumento SSW día 25 silencio), tel. +56936525189, cadena artesanal activa en Quilpué, argumento FNE/SSW + doble comisión |
+| 145 | Pan y Pan | Panadería / fiambrería | Av. Valparaíso 829, Villa Alemana (también Andrés Bello 643, Quilpué) | Nuevo | — | Presentación redactada 11/08 — 2 locales VA+Quilpué, web propia panypan.cl con pedidos online (pickup), sin grandes plataformas de delivery detectadas, tortas+empanadas+pan = ticket medio-alto, agosto fin inverno + back-to-school argumento |
+| 146 | El Señor del Pan | Panadería artesanal | Colo Colo 587, Villa Alemana | Nuevo | — | Presentación redactada 11/08 — local propio + web elseñordelpan.cl, sin grandes plataformas detectadas, pan artesanal delivery diferenciador, agosto último mes frío + back-to-school + tortas primavera |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-11)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 11 de agosto — plena segunda semana de agosto, último mes frío del año**. El martes es el día de gestión midweek para los negocios: se procesan las consultas y pedidos que quedaron pendientes del fin de semana, se revisan los márgenes de los primeros días, y se activan las acciones de delivery de la semana. Para minimercados y veterinarias, el martes es especialmente activo: es el día en que el cliente finalmente resuelve lo que aplazó el lunes (reposición de despensa, medicamentos para la mascota). Se redactan **4 mensajes**: (1) seguimientos **"Martes 11 de agosto"** para los 2 Contactados más desactualizados: **#7 Minimercado La Esquina** (Lynch 445, 7 días sin draft desde 04/08 — martes = reposición midweek, clientes sin básicos del hogar, agosto último frío) y **#11 Veterinaria Huellitas** (Av. Álvarez 3200, 7 días sin draft desde 04/08 — martes = consultas post-fin de semana, peak medicamentos mascotas agosto); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Pan y Pan (#145)** — panadería/fiambrería con 2 locales (Av. Valparaíso 829 VA y Andrés Bello 643 Quilpué) y web propia panypan.cl — y **El Señor del Pan (#146)** — panadería artesanal Colo Colo 587 VA con web elseñordelpan.cl. Pipeline total: **146 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 26** (venta PedidosYa a SSW Partners NY el 16/07) — SSW lleva 26 días en silencio operativo total sin anunciar condiciones para los negocios afiliados; 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA**; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **47 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed. **Actualizado:** 2026-08-11.
+
+---
+
+#### "MARTES 11 DE AGOSTO" — Contactados sin draft fresco (11/08)
+
+**[7] Minimercado La Esquina — Martes 11 de agosto (11/08):**
+"Hola Minimercado La Esquina! RepartoJusto — martes 11 de agosto. El martes en un minimercado tiene una dinámica específica: es el día de reposición midweek, cuando el cliente que se quedó sin arroz el lunes ya no puede esperar al fin de semana, cuando la señora que trabaja de lunes a viernes necesita los básicos de la despensa sin tiempo para ir al local, y cuando las familias de barrio en Lynch 445 prefieren que el aceite y el azúcar lleguen a la puerta antes que salir al frío de agosto. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor del carrito. Para un pedido básico de $8.000 en un almacén, una plataforma que cobra 28-30% de comisión se lleva hasta $2.400 por esa entrega — con nosotros son $500 siempre, el resto queda en el minimercado. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados bajo los que sí pagan. Un minimercado de barrio en Lynch 445 no necesita ese algoritmo: la clienta del sector ya sabe a dónde va cuando se le acaban los básicos; solo necesita que ese pedido llegue sin salir al frío. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un minimercado local con logística de tarifa fija establecida antes de que intensifiquen la cobertura tiene ventaja real. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo conversamos este martes?"
+
+---
+
+**[11] Veterinaria Huellitas — Martes 11 de agosto (11/08):**
+"Hola Veterinaria Huellitas! RepartoJusto — martes 11 de agosto. El martes en una veterinaria es el día de consultas y pedidos post-fin de semana: el perro que el sábado empezó con tos, el gato que el domingo dejó de comer, el medicamento que se agotó el lunes y el dueño recién puede encargarlo hoy. El cliente que trabaja todo el día y tiene al animal enfermo necesita que el medicamento o el alimento especial llegue sin que tenga que cruzar Villa Alemana en el frío de agosto. Con RepartoJusto la logística de riders locales cuesta $500 fijos por entrega, sin porcentaje sobre el valor del pedido. Para un medicamento de $12.000, una plataforma que cobra 28-30% de comisión se lleva hasta $3.600 — con nosotros son $500 siempre, $3.100 que se quedan en la veterinaria. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — una veterinaria de barrio en Av. Álvarez 3200 no necesita ese algoritmo: el cliente cuya mascota necesita atención ya sabe a dónde llamar; solo necesita el canal de entrega local más conveniente. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — una veterinaria con logística de tarifa fija ya establecida tiene ventaja real cuando intensifiquen la cobertura. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos hoy?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-11)
+
+**[145] Pan y Pan (Av. Valparaíso 829, Villa Alemana) — Presentación:**
+"Hola Pan y Pan! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana y Quilpué. Los encontramos con dos locales activos en la zona — Av. Valparaíso 829 en Villa Alemana y Andrés Bello 643 en Quilpué — y con su sitio web panypan.cl para pedidos online, lo que confirma que ya tienen una clientela que quiere comprar a distancia. El paso natural es que esos pedidos también lleguen a domicilio: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor del pan, la torta o las empanadas. Para una torta de $15.000, una plataforma que cobra 30% de comisión se lleva $4.500 por esa entrega — con nosotros son $500 siempre, $4.000 que se quedan en la panadería. Agosto es el último mes del invierno y el primero de preparación de tortas de cumpleaños de fin de año — la temporada ideal para establecer un canal de delivery local antes de la temporada escolar de primavera. Pueden mantener el sistema de retiro en local y sumar RepartoJusto para los pedidos a domicilio sin costo de registro ni contrato. Somos 100% locales en Villa Alemana y Quilpué — panypan.cl ya tiene la audiencia; RepartoJusto pone el rider. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[146] El Señor del Pan (Colo Colo 587, Villa Alemana) — Presentación:**
+"Hola El Señor del Pan! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana. Los encontramos con local propio en Colo Colo 587 y su sitio web elseñordelpan.cl — una panadería artesanal con presencia digital que puede activar la logística de delivery a domicilio sin depender de plataformas que cobran el 28-30% de cada pedido. Propuesta directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor del pan o la torta. Una panadería artesanal con delivery activo llega a un cliente diferente: el que teletrabaja en agosto y quiere el pan de la mañana sin salir al frío, la familia que encarga el surtido del fin de semana, el que descubre El Señor del Pan por recomendación pero vive a 10 cuadras y nunca ha ido al local. Agosto es el último mes frío del año — el momento ideal para establecer el canal de delivery antes de la temporada de primavera y de las tortas de cumpleaños de fin de año. Sin grandes plataformas que se lleven el margen, sin contrato, registro completamente gratuito. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Lo conversamos?"
 
 ---
 
