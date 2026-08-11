@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-11T00:00:00Z
-**Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** curl exit 56 — proxy del entorno de ejecución retornó 403 Forbidden al intentar CONNECT a repartojusto-production.up.railway.app:443. El endpoint no pudo alcanzarse desde este entorno (política de red del sandbox). No se puede confirmar si el servidor está OPERATIVO o CAÍDO.
+**Última verificación:** 2026-08-11T17:11:03Z
+**Estado:** ❌ CAÍDO / NO ALCANZABLE
+**Detalle:** curl exit 56 — el proxy del entorno bloqueó el túnel CONNECT hacia repartojusto-production.up.railway.app:443 (HTTP 403 Forbidden desde el proxy). No se pudo verificar el endpoint /health. El servidor puede estar operativo pero no es accesible desde este entorno de ejecución.
