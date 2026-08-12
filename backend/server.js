@@ -130,6 +130,11 @@ app.get('/api/seguimiento/:id', seguimientoRateLimit, async (req, res) => {
     // Respetar configuración del negocio: ocultar tarifa si no autorizó mostrarla
     if (!data.mostrar_costo_seguimiento) delete data.tarifa_entrega;
     delete data.mostrar_costo_seguimiento; // campo interno, no exponerlo
+    // No exponer ubicación GPS del rider en pedidos terminales; evita tracking post-entrega
+    if (['entregado', 'cancelado'].includes(data.estado)) {
+      delete data.rider_lat;
+      delete data.rider_lng;
+    }
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: 'Error del servidor' });

@@ -92,6 +92,13 @@ router.post('/',
           if (decoded.rol !== 'negocio') {
             return res.status(403).json({ error: 'Solo negocios pueden calificar como negocio' });
           }
+          // Verificar que la cuenta sigue activa (igual que el middleware auth principal)
+          const { rows: [usuActivo] } = await db(
+            'SELECT activo FROM usuarios WHERE id = $1', [decoded.id]
+          );
+          if (!usuActivo || !usuActivo.activo) {
+            return res.status(401).json({ error: 'Cuenta desactivada' });
+          }
           const { rows: [neg] } = await db(
             'SELECT id FROM negocios WHERE usuario_id = $1', [decoded.id]
           );

@@ -169,22 +169,29 @@ router.post('/liquidar',
   async (req, res, next) => {
     const { rider_id, fecha_desde, fecha_hasta } = req.body;
     try {
-      // Calcular monto: suma de tarifas de entregas en el período
-      const { rows: [resumen] } = await db(
-        `SELECT COUNT(*) AS pedidos_count,
-                COALESCE(SUM(tarifa_entrega), 0) AS monto_total
-         FROM pedidos
-         WHERE rider_id = $1
-           AND estado = 'entregado'
-           AND entregado_at BETWEEN $2 AND $3`,
-        [rider_id, fecha_desde, fecha_hasta]
-      );
-
-      if (parseInt(resumen.pedidos_count) === 0) {
-        return res.status(400).json({ error: 'Sin pedidos entregados en el período' });
-      }
-
+      // Todo dentro de la transacción: evita race condition de doble liquidación
       const liquidacion = await transaction(async (client) => {
+        // Prevenir liquidación duplicada para el mismo período
+        const { rows: [existente] } = await client.query(
+          `SELECT id FROM liquidaciones WHERE rider_id = $1 AND fecha_desde = $2 AND fecha_hasta = $3`,
+          [rider_id, fecha_desde, fecha_hasta]
+        );
+        if (existente) throw Object.assign(new Error('Ya existe una liquidación para este período'), { status: 409 });
+
+        // Calcular monto dentro de la transacción (datos consistentes, sin race condition)
+        const { rows: [resumen] } = await client.query(
+          `SELECT COUNT(*) AS pedidos_count,
+                  COALESCE(SUM(tarifa_entrega), 0) AS monto_total
+           FROM pedidos
+           WHERE rider_id = $1
+             AND estado = 'entregado'
+             AND entregado_at BETWEEN $2 AND $3`,
+          [rider_id, fecha_desde, fecha_hasta]
+        );
+        if (parseInt(resumen.pedidos_count) === 0) {
+          throw Object.assign(new Error('Sin pedidos entregados en el período'), { status: 400 });
+        }
+
         const { rows: [liq] } = await client.query(
           `INSERT INTO liquidaciones
              (rider_id, monto_total, pedidos_count, fecha_desde, fecha_hasta, estado)
@@ -200,7 +207,11 @@ router.post('/liquidar',
       });
 
       res.status(201).json(liquidacion);
-    } catch (err) { next(err); }
+    } catch (err) {
+      if (err.status === 409) return res.status(409).json({ error: err.message });
+      if (err.status === 400) return res.status(400).json({ error: err.message });
+      next(err);
+    }
   }
 );
 

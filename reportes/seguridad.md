@@ -1,75 +1,78 @@
 # Seguridad RepartoJusto
-**Última auditoría:** 2026-08-05
+**Última auditoría:** 2026-08-12
 **Nivel general:** ALTO → MEDIO tras fixes aplicados
-**Health check:** `GET https://repartojusto-production.up.railway.app/health` — ❌ Sin respuesta (connection timeout). Verificar en Railway dashboard.
+**Health check:** `GET https://repartojusto-production.up.railway.app/health` — ❌ Bloqueado por proxy de egreso del entorno de CI (mismo resultado que auditorías previas). Verificar directamente en Railway dashboard.
 
 ---
 
-## Auditoría 2026-08-05
+## Auditoría 2026-08-12
 
-### 1. ALTO — CORS configurado con wildcard `*` por defecto
-**Archivo:** `backend/src/config/index.js:7`
+### 1. ALTO — Ubicación GPS del rider expuesta indefinidamente en seguimiento público
+**Archivo:** `backend/server.js:129`
 
-Si `CORS_ORIGIN` no está definido en producción, el servidor acepta peticiones cross-origin desde cualquier dominio. Cualquier sitio web puede leer respuestas de endpoints públicos (como `/api/seguimiento/:id`) desde el navegador de un usuario, y facilita ataques mixtos junto a otras vulnerabilidades.
+El endpoint público `/api/seguimiento/:id` incluye `rider_lat` y `rider_lng` en la respuesta. Esas coordenadas provienen del perfil del rider (se actualizan en tiempo real), no del momento de la entrega. Cualquier persona con el UUID de un pedido ya entregado puede seguir rastreando la posición del rider indefinidamente — incluso días o semanas después de la entrega.
 
-**Fix aplicado:** Se lanza un error fatal al iniciar en producción sin `CORS_ORIGIN` (igual que `JWT_SECRET`). En desarrollo local se mantiene `*`.
-
----
-
-### 2. ALTO — Calificaciones de clientes sin restricción temporal
-**Archivo:** `backend/src/routes/calificaciones.js:41`
-
-El endpoint `POST /api/calificaciones` acepta calificaciones tipo `cliente` sin autenticación. El `pedido_id` está expuesto en los links de seguimiento que los negocios envían a clientes. Cualquier persona con ese link podía enviar una calificación falsa al rider en cualquier momento posterior a la entrega — sin límite de tiempo.
-
-**Fix aplicado:** Se verifica que la calificación de tipo `cliente` solo sea válida dentro de los **7 días** posteriores a la entrega. También se agrega `entregado_at` al SELECT de verificación.
+**Fix aplicado:** Se eliminan `rider_lat` y `rider_lng` de la respuesta cuando el pedido está en estado `entregado` o `cancelado`.
 
 ---
 
-### 3. ALTO — Sin rate limiting en endpoints de admin
-**Archivo:** `backend/src/routes/admin.js:14`
+### 2. ALTO — Verificación manual de JWT en calificaciones no valida cuenta activa
+**Archivo:** `backend/src/routes/calificaciones.js:84`
 
-Los endpoints de `/api/admin/*` aplican auth y verificación de rol, pero sin throttling. Varios ejecutan queries costosas con múltiples JOINs y GROUP BY (p.ej. `GET /admin/negocios`, `GET /admin/metricas`). Con un token de admin comprometido, un atacante podía degradar el sistema con llamadas repetidas.
+El endpoint `POST /api/calificaciones` para tipo `negocio` verifica el JWT manualmente en lugar de usar el middleware `auth`. Esa verificación manual omitía el chequeo de la flag `activo` en la tabla `usuarios`. Un negocio baneado (con `activo = false`) podía seguir calificando riders mientras su token de 7 días estuviera vigente.
 
-**Fix aplicado:** Rate limiter de **60 req/min por IP** aplicado a todo el router de admin.
-
----
-
-### 4. MEDIO — Sin validación de entrada en `PUT /api/admin/usuarios/:id`
-**Archivo:** `backend/src/routes/admin.js:326`
-
-El endpoint de edición de usuarios no tenía validación con `express-validator`. Un admin podía establecer un email con formato inválido (rompiendo el login) o una contraseña de 1 carácter.
-
-**Fix aplicado:** Validación con express-validator: email válido, password mínimo 6 caracteres, teléfono válido, nombre no vacío.
+**Fix aplicado:** Se añade una consulta a `usuarios WHERE id = $1` para verificar `activo` antes de permitir la calificación.
 
 ---
 
-### 5. MEDIO — `GET /api/pagos/confirmar` sin rate limiting
-**Archivo:** `backend/src/routes/pagos.js:90`
+### 3. ALTO — Race condition en liquidaciones permite doble pago al mismo rider
+**Archivo:** `backend/src/routes/admin.js:162`
 
-Endpoint público que modifica estado de pagos en la BD, sin ningún throttling. Permitía intentar tokens mediante fuerza bruta (revelan si existen) y forzar re-verificaciones contra Flow API en loop.
+La consulta `resumen` (suma de tarifas del período) se ejecutaba fuera de la transacción que crea la liquidación. Con dos requests concurrentes al mismo endpoint (dos admins o doble clic), ambas verían `pedidos_count > 0`, pasarían la validación y crearían dos liquidaciones separadas, pagando al rider dos veces y reseteando `saldo_pendiente` dos veces.
 
-**Fix aplicado:** Rate limiter de **20 req/min por IP** en el endpoint `/confirmar`.
+**Fix aplicado:** La consulta `resumen` se movió dentro de la transacción. Se agrega una verificación de liquidación duplicada al inicio de la transacción (`SELECT id FROM liquidaciones WHERE rider_id AND fecha_desde AND fecha_hasta`), que lanza un 409 si ya existe.
 
 ---
 
-## Fixes aplicados en esta sesión (2026-08-05)
+### 4. MEDIO — Rate limiters en memoria sin cleanup crecen indefinidamente
+**Archivos:** `backend/src/routes/admin.js:14`, `backend/src/routes/pagos.js:89`, `backend/src/routes/riders.js:63`, `backend/server.js:95`
+
+Todos los rate limiters (excepto el de auth, que usa Redis) almacenan entradas en `Map` sin mecanismo de limpieza. Con muchas IPs únicas, los mapas crecen sin límite hasta consumir memoria del proceso. Un restart del servidor resetea los contadores, anulando la protección.
+
+**Fix pendiente:** Agregar limpieza periódica (`setInterval`) o migrar todos los limiters a Redis como ya hace `auth.js`.
+
+---
+
+### 5. MEDIO — Parámetros `:id` sin validación de formato UUID
+**Archivos:** `backend/src/routes/pedidos.js:374`, `backend/src/routes/admin.js:130`, múltiples
+
+Las rutas que usan `:id` como UUID en queries PostgreSQL (`WHERE id = $1`) no validan el formato antes de ejecutar la query. Un request como `GET /api/pedidos/not-a-uuid` genera un error PostgreSQL (`invalid input syntax for type uuid`) que en entorno de desarrollo se expone en la respuesta. En producción el mensaje es genérico, pero la query falla con una excepción innecesaria.
+
+**Fix pendiente:** Agregar middleware de validación UUID en las rutas afectadas:
+```javascript
+const { param } = require('express-validator');
+param('id').isUUID()
+```
+
+---
+
+## Fixes aplicados en esta sesión (2026-08-12)
 
 | # | Archivo | Vulnerabilidad | Cambio |
 |---|---------|---------------|--------|
-| 1 | `src/config/index.js` | CORS wildcard en producción | Error fatal si `CORS_ORIGIN` no definido en producción |
-| 2 | `src/routes/calificaciones.js` | Sin ventana temporal en ratings cliente | Bloquear calificaciones > 7 días post-entrega |
-| 3 | `src/routes/admin.js` | Sin rate limiting en admin | Rate limiter 60 req/min en todo el router admin |
-| 4 | `src/routes/admin.js` | Sin validación en PUT /usuarios/:id | express-validator en campos de edición de usuario |
-| 5 | `src/routes/pagos.js` | Sin rate limiting en GET /confirmar | Rate limiter 20 req/min en endpoint de confirmación |
+| 1 | `backend/server.js` | GPS rider expuesto post-entrega | Eliminar `rider_lat`/`rider_lng` en estados terminales |
+| 2 | `backend/src/routes/calificaciones.js` | JWT manual sin chequeo `activo` | Verificar `activo` en DB para calificaciones tipo `negocio` |
+| 3 | `backend/src/routes/admin.js` | Race condition en liquidaciones | Mover `resumen` dentro de la transacción + guard duplicado |
 
 ---
 
-## Pendiente (al 2026-08-05)
+## Pendiente (al 2026-08-12)
 
+- **Rate limiters en memoria** (admin.js, pagos.js, riders.js, server.js): migrar a Redis o agregar cleanup periódico
+- **Validación UUID en params** (pedidos.js, admin.js, etc.): añadir `param('id').isUUID()` middleware
 - **Calificaciones cliente**: la ventana de 7 días mitiga el problema; la solución completa requiere un token HMAC firmado en el link de seguimiento para verificar identidad real del cliente
 - **VAPID key** (`riders.js`): mover `process.env.VAPID_PUBLIC_KEY` a `src/config/index.js`
-- **`notas` en seguimiento público** (`server.js`): evaluar excluir notas internas del response
-- **Production health check**: servidor en Railway sin respuesta — verificar deployment
+- **Production health check**: servidor en Railway sin respuesta — verificar deployment en Railway dashboard
 
 ---
 
@@ -82,3 +85,4 @@ Endpoint público que modifica estado de pagos en la BD, sin ningún throttling.
 | 2026-07-22 | ALTO → MEDIO | Cap limit paginación, inyección rol historial Claude |
 | 2026-07-29 | ALTO → MEDIO | Auth verifica activo DB, rate limit ubicacion rider, mostrar_costo_seguimiento, bug calcularScore |
 | 2026-08-05 | ALTO → MEDIO | CORS fatal en prod, ventana 7d calificaciones, rate limit admin, validación admin PUT, rate limit pagos/confirmar |
+| 2026-08-12 | ALTO → MEDIO | GPS rider post-entrega, JWT activo en calificaciones, race condition liquidaciones |
