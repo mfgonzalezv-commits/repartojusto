@@ -1,13 +1,13 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-11
+**Actualizado:** 2026-08-12
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Viernes 8 de agosto" redactado 08/08 — viernes fin de semana = peak completos y sándwiches tarde-noche, cierre de semana laboral + Rappi Turbo Quilpué urgencia |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Martes 5 de agosto" redactado 05/08 — martes almuerzo familiar invierno, pollo peak lunes-martes, post-Premios UE contraste (Uber Eats premiando grandes vs. negocios de barrio con $500 fijo) + Rappi Turbo Quilpué urgencia ALTA |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 12 de agosto" redactado 12/08 — miércoles quiebre mitad de semana, familias prefieren encargar pollo tras 2 días cocinando, ahorro ~$600K/mes vs. Rappi, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 8 de agosto" redactado 08/08 — viernes = día de abastecimiento medicamentos para el fin de semana, agosto fin del invierno, resfríos tardíos + Rappi Turbo Quilpué urgencia |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — balance midweek comisiones pizza, algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 12 de agosto" redactado 12/08 — miércoles peak pizza midweek, ahorro ~$990K/mes vs. Rappi ($2.860/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — PRIORIDAD, domingo noche = peak sushi familiar invernal, algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia ALTA |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — domingo tarde-noche = peak máximo botillería invernal (asado, onces familiares, reunión de amigos), Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 11 de agosto" redactado 11/08 — reposición midweek, clientes sin básicos del hogar, agosto último frío, Rappi Turbo Quilpué urgencia ALTA |
@@ -150,10 +150,44 @@
 | 144 | Gorilas Sanguchería | Sanguchería / sándwiches artesanales | El Retiro Sur 139, Quilpué | Nuevo | — | Presentación redactada 10/08 — en Uber Eats + PedidosYa (doble comisión + argumento SSW día 25 silencio), tel. +56936525189, cadena artesanal activa en Quilpué, argumento FNE/SSW + doble comisión |
 | 145 | Pan y Pan | Panadería / fiambrería | Av. Valparaíso 829, Villa Alemana (también Andrés Bello 643, Quilpué) | Nuevo | — | Presentación redactada 11/08 — 2 locales VA+Quilpué, web propia panypan.cl con pedidos online (pickup), sin grandes plataformas de delivery detectadas, tortas+empanadas+pan = ticket medio-alto, agosto fin inverno + back-to-school argumento |
 | 146 | El Señor del Pan | Panadería artesanal | Colo Colo 587, Villa Alemana | Nuevo | — | Presentación redactada 11/08 — local propio + web elseñordelpan.cl, sin grandes plataformas detectadas, pan artesanal delivery diferenciador, agosto último mes frío + back-to-school + tortas primavera |
+| 147 | Quechua Restaurante | Comida peruana | Av. Valparaíso 186, Villa Alemana | Nuevo | — | Presentación redactada 12/08 — #1 restaurante TripAdvisor Villa Alemana (4,6/5), 6.200 seguidores Instagram @quechuarestaurante, tel. +56 9 8275 0029 / (32) 322 7693, cocina peruana establecida, ticket alto ceviche/lomo saltado, ahorro ~$3.100/pedido vs. plataformas con 30% comisión |
+| 148 | Bar Blinders | Bar / coctelería a domicilio | Villa Alemana (@elbaratucasa_, Instagram) | Nuevo | — | Presentación redactada 12/08 — PRIMER bar/coctelería del pipeline, concepto "el bar a tu casa", canal propio Instagram, sin grandes plataformas detectadas, cócteles y bebidas premium delivery, ahorro ~$4.500/pedido de $15.000 vs. 30% comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-12)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 12 de agosto — segunda semana del mes, último mes frío del año**. El miércoles marca el punto de quiebre de la semana: las familias que cocinaron lunes y martes prefieren encargar comida a mitad de semana, y los negocios hacen balance de los primeros días para ajustar la operación. Es el peak para pollerías (almuerzo familiar) y pizzerías (cena midweek). Se redactan **4 mensajes**: (1) seguimientos **"Miércoles 12 de agosto"** para los 2 Contactados más desactualizados: **#2 Pollería Don Pollo** (Freire 678, 7 días sin draft desde 05/08 — pollo peak miércoles almuerzo familiar, ahorro ~$600K/mes vs. Rappi) y **#4 Pizza House** (Portales 234, 6 días sin draft desde 06/08 — pizza peak miércoles cena familiar, ahorro ~$990K/mes vs. Rappi, casi un millón mensual); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Quechua Restaurante (#147)** — el restaurante **#1 de Villa Alemana en TripAdvisor** (4,6/5, 6.200 seguidores Instagram, Av. Valparaíso 186, tel. +56 9 8275 0029) — y **Bar Blinders (#148)** — primer bar/coctelería a domicilio del pipeline (@elbaratucasa_), sin grandes plataformas detectadas. Pipeline total: **148 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 27** (venta PedidosYa a SSW Partners NY el 16/07) — SSW lleva 27 días en silencio operativo total sin anunciar condiciones para los negocios afiliados; 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA** — el silencio ES el argumento; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **48 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed. **Actualizado:** 2026-08-12.
+
+---
+
+#### "MIÉRCOLES 12 DE AGOSTO" — Contactados sin draft fresco (12/08)
+
+**[2] Pollería Don Pollo — Miércoles 12 de agosto (12/08):**
+"Hola Pollería Don Pollo! RepartoJusto — miércoles 12 de agosto. El miércoles en una pollería marca el punto de quiebre de la semana: las familias que cocinaron lunes y martes se inclinan por encargar un pollo asado para el almuerzo antes que volver a la cocina, y el cliente que teletrabaja desde Freire 678 quiere que el pedido llegue sin salir al frío de agosto. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor del pollo. Para un pedido de $8.000, Rappi se lleva $2.240 de comisión — con nosotros son $500 siempre, $1.740 que se quedan en la pollería. Con 20 pedidos semanales de delivery, eso es un ahorro de más de $600.000 al mes. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra quedan enterrados en el feed bajo los que sí pagan. Una pollería de barrio no necesita ese algoritmo para que su clientela vuelva; solo necesita que el pedido llegue a tiempo sin cobrar el 28% de comisión. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — establecer el canal de tarifa fija ahora tiene ventaja real antes de que intensifiquen la cobertura en todo el corredor VA. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Les interesa conversar?"
+
+---
+
+**[4] Pizza House — Miércoles 12 de agosto (12/08):**
+"Hola Pizza House! RepartoJusto — miércoles 12 de agosto. El miércoles es el día del quiebre para la pizza: las familias de Portales 234 que cocinaron lunes y martes se inclinan por encargar pizza a mitad de semana, y los grupos que trabajan juntos la eligen para el almuerzo de oficina. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una pizza de $12.000, Rappi se lleva $3.360 de comisión — con nosotros son $500 siempre, $2.860 que se quedan en Pizza House. Con 20 pedidos semanales de delivery, eso es un ahorro de más de $990.000 al mes — prácticamente un millón mensual que hoy se va a la plataforma. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad dentro de la app — los que no compran visibilidad interna quedan enterrados bajo los que sí pagan. Una pizzería local en Portales 234 con clientela fija de barrio no necesita ese algoritmo; necesita que cada pizza llegue a tiempo y que el margen quede en la pizzería. Dato urgente: Rappi Turbo ya está operativo en Quilpué, a 8 km de Villa Alemana — posicionarse con canal de tarifa fija ahora tiene ventaja antes de que intensifiquen la cobertura en VA. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo conversamos este miércoles?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-12)
+
+**[147] Quechua Restaurante (Av. Valparaíso 186, Villa Alemana) — Presentación:**
+"Hola Quechua Restaurante! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana. Los encontramos como el restaurante #1 en TripAdvisor en Villa Alemana con 4,6 de 5 estrellas y más de 6.200 seguidores en Instagram @quechuarestaurante — una reputación construida en Av. Valparaíso 186 que muchos clientes de otros sectores de la ciudad todavía no conocen. La propuesta es directa: con RepartoJusto, esa clientela que vive a 15 cuadras y nunca ha ido al local puede pedir el ceviche o el lomo saltado sin salir de casa, con logística de riders locales a $500 fijos por pedido entregado, sin porcentaje sobre el precio del plato. Para un plato de $12.000, una plataforma que cobra 30% de comisión se lleva $3.600 por esa entrega — con nosotros son $500 siempre, $3.100 que quedan en el restaurante. El #1 de Villa Alemana en TripAdvisor merece tener el canal de delivery más justo de la zona. Registro completamente gratuito, sin contrato. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[148] Bar Blinders / El Bar a Tu Casa (@elbaratucasa_, Villa Alemana) — Presentación:**
+"Hola Bar Blinders! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana. Los encontramos con su concepto 'el bar a tu casa' en Instagram (@elbaratucasa_) — un servicio que tiene una lógica perfecta para agosto: el cliente que quiere disfrutar un cóctel o bebida de calidad en casa sin salir al frío ya está buscando exactamente lo que ofrecen. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de lo que venden. Para un pedido de $15.000 en cócteles o pisco premium, una plataforma que cobra 28-30% se lleva hasta $4.500 — con nosotros son $500 siempre, el margen queda en el bar. Son el primer servicio de bar y coctelería a domicilio del pipeline de RepartoJusto en Villa Alemana — una categoría sin competidor en la plataforma hoy. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
