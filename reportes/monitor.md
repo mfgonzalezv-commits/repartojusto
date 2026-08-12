@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-12T00:12:42Z UTC
-**Estado:** ❌ CAÍDO
-**Detalle:** El health check no pudo completarse. El proxy de red del entorno bloqueó la conexión a `repartojusto-production.up.railway.app:443` con HTTP 403 (policy denial). No fue posible verificar si el servidor responde `{ status: 'ok' }`. Verificar conectividad de red o el estado del servicio en Railway directamente.
+**Última verificación:** 2026-08-12T00:00:00Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El entorno de ejecución remota bloquea conexiones salientes a Railway (proxy devolvió 403 Forbidden al intentar CONNECT a repartojusto-production.up.railway.app:443). No es posible determinar el estado del servidor desde este entorno. Se requiere verificación manual o cambio de política de red del sandbox.
