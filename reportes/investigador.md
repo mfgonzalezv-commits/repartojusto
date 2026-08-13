@@ -1,105 +1,85 @@
 # Investigación de Mercado RepartoJusto
-**Fecha:** 2026-08-06
-**Zona de referencia:** Villa Alemana, Valparaíso, Chile
+**Fecha:** 2026-08-13
 
 ---
 
 ## Estado de la competencia
 
-### PedidosYa — SSW Partners en silencio operativo; incertidumbre máxima para restaurantes
+### PedidosYa — Incertidumbre máxima, día 28
+- **SSW Partners lleva 28 días en silencio operativo.** Desde la venta del 16/07, el fondo de Nueva York no ha hecho ningún anuncio operativo para Chile. Los restaurantes afiliados no saben qué pasará con sus contratos, comisiones ni soporte. La transacción Uber/Delivery Hero cierra estimadamente en H2 2027; hasta entonces PedidosYa Chile está en un limbo operativo bajo SSW.
+- **TDLC — juicio "Mismo precio que en local" vigente:** FNE mantiene pedido de multa de US$3,8M contra PedidosYa por impedir a restaurantes cobrar menos en su propio canal entre junio 2024 y febrero 2026. PedidosYa sigue negando los cargos. Sin resolución prevista para el corto plazo — el argumento FNE seguirá siendo válido todo el H2 2026.
+- **Multas acumuladas 2026:** US$31,5M (febrero, colusión con Glovo/reparto de mercados) + US$3,8M solicitados (marzo, restricción de precios). Total expuesto: ~$3.400M CLP.
+- **Post-FNE, restaurantes ya pueden:** cobrar diferente en app vs. canal propio. Muchos aún no lo aplican por desconocimiento — oportunidad de educar durante la venta.
 
-- **SSW Partners: sin anuncios operativos al 06/08/2026.** La venta de PedidosYa Chile a SSW Partners (fondo privado de NY) fue anunciada el 16/07. A tres semanas del anuncio, SSW no ha comunicado cambios en comisiones, marca, condiciones contractuales, ni equipo. La comunicación oficial es que "los negocios continuarán usando la misma plataforma tecnológica y operativa desarrollada por Delivery Hero, buscando preservar la continuidad del servicio." Esta frase es un indicador clave: SSW no tiene tecnología propia ni experiencia en delivery — dependerá de la infraestructura de DH, que a su vez está siendo absorbida por Uber. **La transacción no cerrará hasta el segundo semestre de 2027.** Eso significa 12–18 meses de incertidumbre contractual para todos los negocios afiliados a PedidosYa Chile. El silencio de SSW es el argumento de ventas más poderoso disponible hoy.
+### Rappi — Turbo se acerca, algoritmo encarece la visibilidad
+- **Rappi Turbo confirmado en Quilpué (8 km de Villa Alemana):** Sin expansión confirmada a Villa Alemana al 13/08. La expansión al corredor VA parece inminente dado el patrón de crecimiento. **Argumento de urgencia: ALTA.**
+- **Rappi clasifica negocios de Villa Alemana bajo "Quilpué"** en su app — los negocios locales quedan invisibles para búsquedas "Villa Alemana". Argumento directo para prospectos: RepartoJusto los posiciona como negocio local de verdad.
+- **Nueva app Rappi con algoritmo social:** Prioriza influencers y tendencias. Los negocios que no pagan publicidad dentro de la app quedan enterrados en el feed. Comisiones: 29-30% + IVA sobre la venta total.
+- **Expansión Turbo global:** Rappi planea expandir Turbo a 16+ ciudades en LATAM con IA para pedidos por voz/chat. Inversión anunciada: US$15M en nuevas tiendas Turbo.
 
-- **Juicio TDLC "Mismo precio que en local": sin sentencia al 06/08/2026.** PedidosYa sigue en defensa ante el TDLC argumentando que la cláusula era "voluntaria". La FNE mantiene su pedido de multa de US$3,8M (~$3.400M CLP). Sin fecha de fallo anunciada. El argumento FNE está vivo y fresco durante todo el segundo semestre.
-
-- **Multa firme: US$31,5M por colusión con Glovo (febrero 2026).** Antecedente de comportamiento anticompetitivo consolidado por el TDLC.
-
-- **Comisión actual: 29% + IVA (~34,5% real).** Sin cambios bajo SSW Partners. El precio para los negocios afiliados sube si SSW busca rentabilidad rápida antes de revender.
-
-- **Nuevo ángulo de inestabilidad de plataforma:** SSW depende de la infraestructura tecnológica de Delivery Hero. A medida que DH se integra con Uber, el soporte técnico a SSW se degradará. Los restaurantes chilenos en PedidosYa arriesgan problemas técnicos sostenidos entre 2026 y 2027 mientras la venta cierra y la plataforma cambia de manos.
-
----
-
-### Rappi Chile — Turbo confirma Quilpué; Villa Alemana sin tienda Turbo propia pero en lista Quilpué
-
-- **Rappi Turbo en Villa Alemana: sin tienda propia confirmada al 06/08/2026.** Rappi Turbo opera en Viña del Mar, Reñaca, Concón y Quilpué. No hay una tienda Turbo específicamente en Villa Alemana. **Sin embargo, varios negocios DE Villa Alemana ya aparecen clasificados bajo "Quilpué" en la app de Rappi** (Buena Onda Sandwich Villa Alemana, Barrio Chino Villa Alemana, Jona Sandwich Villa Alemana — todos listados como restaurantes en Quilpué). Esto confirma que para Rappi la distinción geográfica entre Quilpué y Villa Alemana es porosa. Una tienda Turbo en Quilpué ya atiende pedidos del corredor VA/Quilpué. **El argumento de urgencia alta se mantiene y se refuerza.** La diferencia entre "Rappi Turbo en Quilpué" y "Rappi Turbo en Villa Alemana" es cada vez menor en términos de cobertura real.
-
-- **Rappi planea expansión Turbo a más de 16 ciudades en Chile durante 2026.** Con nueva app con IA y algoritmo social, e inversión en dark stores para Chile, Ecuador y Perú, la expansión de Turbo no es un rumor sino una ejecución activa. Quilpué ya confirmada — el corredor natural hacia Villa Alemana está abierto.
-
-- **Comisión Rappi: 29–30% + IVA.** Rappi Ads puede bajar la comisión efectiva de 32% a 26% solo si el ROAS supera 3,5x — una opción que no existe para la mayoría de los negocios de barrio.
-
-- **Nueva app Rappi con IA + algoritmo social:** La app prioriza influencers y reseñas sociales. Los negocios de barrio sin presupuesto de marketing interno de Rappi quedan enterrados en el feed. Con RepartoJusto no hay algoritmo que esconda al negocio.
-
----
-
-### Uber Eats Chile — Post-Premios; sin innovación para negocios pequeños
-
-- **Premios Uber Eats 2026 realizados el 29/07 en Santiago.** La ventana post-premios sigue activa durante los primeros días de agosto: ningún negocio de Villa Alemana fue nominado en ninguna de las 33 categorías. Los ganadores son los "favoritos de Santiago". El contraste con RepartoJusto ("mientras Uber Eats premia a los grandes de Santiago, nosotros trabajamos en tu barrio con $500 fijo") sigue siendo argumento fresco para esta semana.
-
-- **Comisión: 30% + IVA.** Sin cambios. Uber Eats lanzó programa "Socios Plus" en Colombia y México (comisiones 22–24% para +400 órdenes/mes) pero no hay anuncio de este programa en Chile.
-
-- **SERNAC 2024: 12.689 reclamos totales contra plataformas de delivery en Chile.** Los motivos son reembolsos demorados, fallas técnicas, atención al cliente ausente, cargos no autorizados y demoras. Cada reclamo genera una reseña negativa que el cliente asocia al restaurante aunque la falla sea de la app — daño reputacional cruzado como argumento de canal directo.
+### Uber Eats — Premios, expansión B2B, sin presencia local VA
+- **Premios Uber Eats 2026 (ceremonia 29/07):** 290+ nominados, 33 categorías. **Ningún negocio de Villa Alemana fue nominado.** Contraste potente: Uber Eats premia a los grandes de Santiago, RepartoJusto trabaja en tu barrio.
+- **Argumento post-premios vigente hasta ~20/08:** "Ayer Uber Eats dio sus premios en Santiago — ningún negocio de tu barrio aparece porque el algoritmo no los ve."
+- **Uber Meals (B2B):** Uber Eats lanzó producto para pedidos corporativos en empresas — valida que el modelo de 30% de comisión tiene techo y el mercado busca alternativas con tarifa fija.
 
 ---
 
 ## Lo que piden los negocios que no tienen hoy
 
-1. **Estabilidad contractual a largo plazo.** Con PedidosYa bajo un fondo de NY que planea revenderla y sin anunciar condiciones hasta 2027, los negocios afiliados no saben con quién harán negocios ni a qué precio el próximo año. El argumento de RepartoJusto es literal: "$500 fijo, sin letra chica, sin cambio de dueños, sin sorpresas."
-
-2. **Canal directo con logística incluida.** El movimiento "canal directo WhatsApp + rider" está en su punto de madurez en LATAM. Casos documentados en Chile muestran restaurantes que dejaron las apps y construyeron su canal WhatsApp propio — el único componente que les falta es quien entregue a tarifa fija sin exigir exclusividad. Conversión en WhatsApp: 18–25%. Tasa de recurrencia: 4–6 pedidos/mes por cliente fiel. Ahorro: $2,9M CLP/mes para un restaurante con ventas de $10M.
-
-3. **Liquidaciones transparentes por pedido.** Queja documentada con 12.689 reclamos SERNAC 2024. Los negocios quieren saber exactamente cuánto pagaron por cada pedido, con fecha y desglose. Las plataformas no lo dan.
-
-4. **Libertad de precios en todos los canales.** El juicio TDLC confirma que PedidosYa intentó controlar precios hasta hace pocos meses. Los negocios quieren cobrar lo que quieran en su WhatsApp sin represalias. RepartoJusto nunca les pide paridad de precios.
-
-5. **Visibilidad sin algoritmo de pago.** Con la nueva app social de Rappi, los negocios de barrio sin presupuesto publicitario quedan invisibles. RepartoJusto no tiene feed, no tiene algoritmo — cada cliente elige activamente al negocio.
+1. **Comisiones sostenibles:** El modelo 27-32% + IVA deja a restaurantes con márgenes de 3-5% por pedido. Muchos suben 15-20% los precios en la app para compensar, reduciendo volumen. Necesitan un costo fijo predecible.
+2. **Transparencia en liquidaciones:** Queja #1 documentada en múltiples fuentes. Los negocios no saben cuánto recibirán hasta que llega la transferencia; sin panel por pedido con fecha/monto/neto.
+3. **Sus propios datos:** Las plataformas grandes no exportan el historial de pedidos. Los negocios no pueden hacer campañas de retención, calcular ticket promedio ni planificar temporadas.
+4. **Canal directo sin algoritmo:** Post-FNE, los negocios pueden cobrar menos fuera de la app, pero no tienen infraestructura de logística propia. El 34% de restaurantes LATAM ya migró parte del delivery a WhatsApp directo — necesitan rider + canal propio sin comisión sobre la venta.
+5. **Visibilidad local real:** Rappi agrupa a VA bajo Quilpué; PedidosYa en incertidumbre; Uber Eats no los nomina. Los negocios quieren ser visibles en su propia ciudad.
+6. **Certeza contractual:** Con SSW Partners como nuevo dueño de PedidosYa Chile sin comunicación alguna, muchos negocios afiliados están operando sin saber quién los respaldará el próximo año.
 
 ---
 
 ## Tendencias relevantes
 
-1. **Canal directo WhatsApp + rider = el modelo ganador en 2026.** El 34% de restaurantes en LATAM ya migró parte de su delivery a canal directo. Conversión WhatsApp: 18–25%. SimpleQR documenta el caso de un restaurante chileno que dejó completamente las apps y construyó su operación sobre WhatsApp + rider propio. RepartoJusto puede ser el rider para toda Villa Alemana que opera así. La infraestructura logística es el eslabón que falta.
+### 1. Canal directo WhatsApp + rider: el mayor movimiento del sector
+- **34% de restaurantes LATAM** ya migró parte del delivery a canal propio (WhatsApp, web, Instagram).
+- **Conversión WhatsApp:** 18-25% (vs. ~5-10% en apps). Tasa de recurrencia 4-6 veces/mes en clientes fidelizados.
+- **Comisión 0 sobre la venta** → restaurantes ahorran $8-15K BRL/mes promedio (equivalente a $400K-$800K CLP en Chile).
+- **IA en gestión de pedidos WhatsApp:** Fudo (activo en Chile), OlaClick y similares ya ofrecen bot de pedidos con IA. RepartoJusto puede ofrecer el rider + link de menú, sin necesidad de desarrollar IA.
+- **72% del comercio conversacional LATAM** pasa por WhatsApp.
 
-2. **Consolidación global = inestabilidad permanente para negocios locales.** Uber + Rappi son actores de comisión alta. PedidosYa está bajo un fondo financiero que busca revenderla. Ninguno de los tres grandes puede ofrecer estabilidad contractual a 2 años. El espacio para un operador local con tarifa fija y sin cambios de dueños es el más grande desde el inicio del delivery en Chile.
+### 2. Delivery en ciudades intermedias de Chile: subexplotado
+- Valparaíso entre las regiones con mayor crecimiento en locales afiliados a delivery (junto con Antofagasta, Coquimbo, Los Lagos).
+- Las plataformas grandes concentran su inversión en Santiago — ciudades intermedias tienen cobertura deficiente de riders y soporte.
+- **Oportunidad:** Un operador local con riders propios y tarifa plana puede dominar una ciudad intermedia antes de que llegue Turbo.
 
-3. **Rappi Turbo avanza en ciudades intermedias.** El patrón es claro: Viña → Quilpué → Villa Alemana. La integración Quilpué/VA en la app de Rappi ya es una realidad operativa. Cada semana que pasa sin que RepartoJusto fidelice a sus primeros negocios es una semana ganada por Rappi.
+### 3. Consolidación del mercado = inseguridad contractual
+- Con Uber absorbiendo Delivery Hero y SSW como "dueño puente" en Chile, el panorama 2027 puede ser: Uber Eats + Rappi como duopolio, con PedidosYa cambiando de dueño de nuevo.
+- Los negocios están evaluando diversificar canales ahora, mientras tienen poder de negociación.
 
-4. **Dark kitchens como canal de captación masiva.** Los operadores de dark kitchens en Chile (Dark Kitchen SpA en Viña, Dark Kitchen Factory, Kitchen Hub) concentran múltiples marcas delivery-first. Una alianza con uno solo da acceso a 5–15 negocios sin prospectar uno a uno.
-
-5. **Algoritmo social vs. confianza local.** Rappi está apostando por el modelo de plataforma social con influencers. Esto favorece a los grandes y penaliza a los pequeños. El movimiento contrario — local, sin algoritmo, tarifa fija — es exactamente el nicho de RepartoJusto.
-
----
-
-## Investigación especial: Dark Kitchen SpA (Viña del Mar) — Estado al 06/08/2026
-
-**@darkkitchenspa | Roma 131, Viña del Mar | darkkitchenspa.cl**
-
-- Dark Kitchen SpA sigue operativa en Viña del Mar con arriendo de cocinas industriales certificadas (resolución sanitaria).
-- La empresa está explorando opciones de expansión: publicaciones recientes en Yapo y Facebook Marketplace muestran que ofrecen tanto arriendo como traspaso de derechos de operación y venta del negocio completo con propiedad.
-- **Esto puede ser una ventana de adquisición/alianza:** si Dark Kitchen SpA busca inversionistas o socios, RepartoJusto puede entrar no solo como proveedor logístico sino como socio estratégico para todos los negocios que operan desde esa cocina.
-- **Sin acuerdo logístico confirmado con ningún operador de delivery al 06/08/2026.** La ventana de alianza exclusiva sigue abierta.
-- Acción recomendada: DM a @darkkitchenspa en Instagram esta semana. Propuesta: "RepartoJusto hace las entregas de todos tus cocineros a $500 fijo por pedido. Sin exclusividad. Sin app que te cobre comisión. Solo logística de confianza."
+### 4. Dark Kitchen SpA (Viña del Mar): oportunidad de alianza logística
+- **Dark Kitchen SpA, Roma 131, Viña del Mar (@darkkitchenspa):** Cocinas con permisos sanitarios y municipales al día, diseñadas para delivery en UberEats/PedidosYa/Rappi. Cobertura VA+Viña del Mar.
+- Aparecen en Yapo/Marketplace ofreciendo espacios en arriendo — señal de que buscan ocupación o socios.
+- **Propuesta de alianza:** RepartoJusto ofrece logística de riders para marcas que operen desde Dark Kitchen SpA, sin necesidad de que el negocio tenga local visible. Abriría el pipeline a marcas 100% delivery sin prospectar puerta a puerta.
 
 ---
 
 ## Oportunidades concretas para RepartoJusto
 
-1. **Ventana SSW Partners (semana crítica: aún activa)** — 21 días desde la venta del 16/07 sin anuncios operativos de SSW. La noticia no se ha enfriado porque SSW sigue en silencio — la incertidumbre crece semana a semana. Los 7 borradores PedidosYa (#27, #28, #30, #33, #60, #90, #102) + nueva carnicería Austral (#124 en PedidosYa) siguen siendo urgentes. Argumento actualizado: "SSW Partners lleva 3 semanas sin decirte qué va a pasar con tu negocio — nosotros siempre son $500 fijos."
+1. **Negocios PedidosYa en shock SSW (URGENTE esta semana)** — 28 días de silencio operativo de SSW Partners = máxima apertura a alternativas. Los 7 prospectos PedidosYa del pipeline (#27, #28, #30, #33, #60, #90, #102) + #124 Carnicería Austral + #130 Empanadas Tita + #139 Sushi Gold + #144 Gorilas Sanguchería son los candidatos más calientes. Argumento exacto: "SSW Partners lleva 28 días sin decirte qué va a pasar con tu contrato, tus comisiones y tu soporte — con nosotros son siempre $500 por pedido, sin cambio de dueños ni letra chica."
 
-2. **Rappi en Villa Alemana sin Turbo propio = ventana decreciente** — Rappi ya agrupa a restaurantes VA bajo "Quilpué" en su app. La expansión de Turbo es cuestión de semanas o meses, no de años. Cada nuevo negocio fidelizado con RepartoJusto antes de esa expansión es un cliente resistente al ingreso de Rappi.
+2. **Captación pre-Turbo en Villa Alemana (URGENTE)** — Rappi Turbo está en Quilpué. Cuando llegue a VA, los riders migrarán a Turbo y los negocios ya estarán captados por Rappi. La ventana para posicionarse como el operador local es esta semana, no el próximo mes.
 
-3. **Feature canal directo + rider = diferenciador definitivo** — RepartoJusto puede ofrecer lo que ninguna plataforma da: "tú manejas tu WhatsApp, nosotros ponemos el rider a $500 fijo sin capturar tu base de clientes." El mercado está listo (34% LATAM ya en canal directo). Este feature convierte a todos los prospectos que ya operan por WhatsApp (Ramé Sushi, Hanasaki Sushi, Pizza Planeta, SushiSun, etc.) en candidatos naturales.
+3. **Link de pedido directo + rider (feature diferenciadora de mediano plazo)** — RepartoJusto puede ofrecer un link de menú propio + logística de rider sin cobrar comisión sobre la venta. Es el único servicio del mercado que combina canal directo (0% comisión sobre venta) + logística local ($500 fijo + km). Targeting prioritario: los 30+ prospectos del pipeline que operan por canal propio (Instagram, WhatsApp, web) y ya tienen demanda pero no tienen riders confiables.
 
-4. **Dark Kitchen SpA — alianza multi-negocio con posible componente de inversión** — Más allá del acuerdo logístico, Dark Kitchen SpA puede estar buscando socios estratégicos. RepartoJusto puede entrar como partner logístico oficial con condiciones preferenciales y acceso prioritario a todos los operadores presentes y futuros de esa cocina.
+4. **Alianza Dark Kitchen SpA** — Roma 131, Viña del Mar. Contactar por DM @darkkitchenspa esta semana. Propuesta: RepartoJusto es el rider oficial de todas las marcas que operan desde la cocina. Un solo acuerdo trae múltiples negocios sin prospectar uno a uno.
 
-5. **Municipio de Villa Alemana — canal institucional sin costo** — Programa de emprendedores municipales con 60+ participantes activos en julio 2026. Una presentación grupal da acceso directo a decenas de negocios sin prospectar uno a uno.
+5. **Municipio de Villa Alemana — programa emprendedores** — 60+ emprendedores activos en programa municipal julio 2026. Acercamiento institucional puede abrir acceso masivo a negocios pequeños en etapa temprana (que no están en Rappi aún) antes de que las plataformas grandes los encuentren.
+
+6. **Post-FNE: canal educativo para negocios** — Muchos restaurantes aún no saben que pueden cobrar menos en WhatsApp que en la app. RepartoJusto puede educar en el momento de venta: "Cobra $9.000 en Rappi y $7.500 en nuestro canal — la FNE te lo permite y nosotros te ponemos el rider."
 
 ---
 
 ## Mensajes para otros agentes
 
-- **PARA VENTAS:** (1) **Argumento SSW actualizado:** "SSW Partners lleva 3 semanas sin decirte qué va a pasar con tu contrato de PedidosYa — la transacción cierra en 2027 como mínimo, y mientras tanto no sabes ni con quién vas a hacer negocios. Con nosotros son siempre $500 por pedido, sin letra chica ni cambio de dueños." Usar para los 7 prospectos PedidosYa más #124 Carnicería Austral (nuevo PedidosYa del pipeline). (2) **Argumento post-Premios UE (vigente 06/08):** "Uber Eats premió a los grandes de Santiago el 29 de julio — ningún negocio de Villa Alemana en las 33 categorías. Con nosotros eres el único que importa en tu barrio." (3) **Argumento Rappi nueva app:** "La nueva app de Rappi prioriza influencers y algoritmo social — si no pagás publicidad dentro de la app, te entierran en el feed. Con RepartoJusto no hay algoritmo que te esconda." Reactivar especialmente #22 Sushi Point Delivery (42 días sin envío confirmado) y #15 Melt Pizzas.
+- **PARA VENTAS:** Argumentos de esta semana por orden de impacto: (1) **SSW DÍA 28** — "SSW Partners lleva 28 días sin decirte qué pasa con tu contrato PedidosYa — con nosotros $500 fijo, sin cambio de dueños"; prioridad los 9 prospectos PedidosYa activos. (2) **Rappi te esconde** — "Si no pagás publicidad en Rappi, el algoritmo social te entierra en el feed; con RepartoJusto no hay algoritmo." (3) **Post-Premios Uber Eats** — argumento vigente hasta ~20/08: "Uber Eats premió a los grandes de Santiago, ningún negocio de tu barrio; nosotros trabajamos acá con $500 fijo." Desbloquear urgente: Matías debe confirmar qué mensajes anteriores se enviaron — el pipeline lleva 99 días sin actualización de estados.
 
-- **PARA MEJORAS:** Prioridades de producto sin cambios: (1) Link de pedido directo WhatsApp + rider logística — mercado maduro, conversión 18–25%, 34% de LATAM ya en canal directo, es el diferenciador clave ante Rappi Turbo; (2) Panel de liquidaciones por pedido con fecha/monto/neto (queja #1 documentada, 12.689 reclamos SERNAC 2024); (3) Historial exportable. Nuevo argumento de urgencia: con Rappi Turbo ya en Quilpué/VA, la plataforma necesita estar técnicamente estable antes de que llegue la competencia directa. Los bugs críticos en sockets (auth `pedido:seguir`, auth `chat:enviar`, throttle ubicación, límite chars chat), rate limiter, paginación admin e índices DB deben aplicarse al código real esta semana.
+- **PARA MEJORAS:** Prioridades de producto sin cambio: (1) Link de pedido directo WhatsApp + rider — mercado maduro LATAM, diferenciador vs. Rappi Turbo; (2) Panel de liquidaciones por pedido (queja #1 de negocios); (3) Historial exportable. Además, los bugs críticos de sockets (auth pedido:seguir, auth chat:enviar, throttle GPS) deben aplicarse al código .js antes de que Rappi Turbo llegue a Villa Alemana — la plataforma necesita estabilidad para ese momento.
 
-- **PARA GERENTE:** Cinco puntos clave esta semana: (1) SSW Partners lleva 21 días en silencio operativo — la incertidumbre para restaurantes PedidosYa crece semana a semana, el argumento SSW no se enfría sino que se profundiza (el silencio ES la noticia); (2) Rappi clasifica negocios de Villa Alemana bajo "Quilpué" en su app — la expansión de Turbo ya es funcional en el corredor VA/Quilpué, la urgencia es alta; (3) Dark Kitchen SpA parece estar en modo de expansión/búsqueda de socios — DM a @darkkitchenspa esta semana puede abrirse a algo más que un acuerdo logístico; (4) Feature canal directo WhatsApp + rider tiene validación máxima de mercado LATAM — prioridad de desarrollo; (5) Programa emprendedores Municipio Villa Alemana sigue activo — acercamiento institucional puede multiplicar captación.
+- **PARA GERENTE:** Tres acciones críticas esta semana: (1) Enviar los 9 borradores SSW PedidosYa — día 28, hora final de la ventana de impacto máximo; (2) DM a @darkkitchenspa (Roma 131, Viña del Mar) — aparecen buscando socios/arrendatarios, alianza logística potencial de alto valor; (3) Evaluar acercamiento al programa de emprendedores del Municipio de Villa Alemana (60+ participantes julio 2026) — acceso masivo sin prospectar uno a uno. Rappi Turbo en Quilpué (8 km): ventana de captación en VA es esta semana. Juicio TDLC PedidosYa sin resolución — argumento FNE vigente todo H2 2026.
