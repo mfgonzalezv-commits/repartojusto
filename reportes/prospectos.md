@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-12
+**Actualizado:** 2026-08-13
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -12,12 +12,12 @@
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 9 de agosto" redactado 09/08 — domingo tarde-noche = peak máximo botillería invernal (asado, onces familiares, reunión de amigos), Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 11 de agosto" redactado 11/08 — reposición midweek, clientes sin básicos del hogar, agosto último frío, Rappi Turbo Quilpué urgencia ALTA |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 10 de agosto" redactado 10/08 — lunes = peak encargos tortas/celebraciones semana, agosto último mes frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 6 de agosto" redactado 06/08 — preparación fin de semana asado/costillar, post-Premios UE contraste, Rappi Turbo Quilpué urgencia |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — el jueves inicia el peak del fin de semana: primeros encargos de asado/costillar para el sábado, agosto último mes frío, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 10 de agosto" redactado 10/08 — lunes home office = peak café delivery inicio de semana, agosto último mes frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 11 de agosto" redactado 11/08 — consultas post-fin de semana, peak medicamentos mascotas agosto, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — ACTIVACIÓN agosto, primera semana de clases del semestre, útiles y cuadernos a domicilio = diferenciador único, delivery sin comisión para la temporada escolar |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — último mes invernal, peak urgencias reparación/calefacción agosto, "sin algoritmo que te esconda" + Rappi Turbo urgencia |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Agosto / ACTIVACIÓN" redactado 05/08 — primer mensaje del mes, agosto = inicio preparación temporada verano 2026/27, faltan 3 meses para el peak de calor, momento ideal para configurar delivery antes del rush de diciembre |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — preparación temporada verano: agosto es el momento ideal para dejar el canal delivery activo antes del rush octubre-diciembre, sin comisión que devore el margen en el peak de calor |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -152,10 +152,44 @@
 | 146 | El Señor del Pan | Panadería artesanal | Colo Colo 587, Villa Alemana | Nuevo | — | Presentación redactada 11/08 — local propio + web elseñordelpan.cl, sin grandes plataformas detectadas, pan artesanal delivery diferenciador, agosto último mes frío + back-to-school + tortas primavera |
 | 147 | Quechua Restaurante | Comida peruana | Av. Valparaíso 186, Villa Alemana | Nuevo | — | Presentación redactada 12/08 — #1 restaurante TripAdvisor Villa Alemana (4,6/5), 6.200 seguidores Instagram @quechuarestaurante, tel. +56 9 8275 0029 / (32) 322 7693, cocina peruana establecida, ticket alto ceviche/lomo saltado, ahorro ~$3.100/pedido vs. plataformas con 30% comisión |
 | 148 | Bar Blinders | Bar / coctelería a domicilio | Villa Alemana (@elbaratucasa_, Instagram) | Nuevo | — | Presentación redactada 12/08 — PRIMER bar/coctelería del pipeline, concepto "el bar a tu casa", canal propio Instagram, sin grandes plataformas detectadas, cócteles y bebidas premium delivery, ahorro ~$4.500/pedido de $15.000 vs. 30% comisión |
+| 149 | Ama Cafetería | Cafetería / café | Pje. El Ciruelillo 1373, Villa Alemana | Nuevo | — | Presentación redactada 13/08 — cafetería activa en Rappi VA, café y sándwiches delivery, argumento $500 fijo vs. $1.400 comisión Rappi por pedido $5K, Rappi Turbo Quilpué urgencia + back-to-school agosto |
+| 150 | Cafetería La Tribu | Cafetería familiar / sándwiches | Díaz 647, Villa Alemana | Nuevo | — | Presentación redactada 13/08 — en Rappi + canal propio Instagram @latribu.villalemana, tel. 9 7655 8746, cafetería familiar espacio acogedor, argumento $500 fijo vs. $1.680 comisión Rappi por pedido $6K + back-to-school agosto |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-13)
+
+> **NOTA PARA MATÍAS:** Hoy es **jueves 13 de agosto — el jueves es el día de preparación del peak de fin de semana**: los clientes planifican el asado del sábado, los encargos del domingo y las onces del viernes, y muchos negocios de comida reciben sus primeras órdenes de fin de semana al mediodía. Para heladerías, es el momento de configurar la ruta antes del rush de verano. Se redactan **4 mensajes**: (1) seguimientos **"Jueves 13 de agosto"** para los 2 Contactados más desactualizados: **#9 Rotisería El Gaucho** (Portales 567, 7 días sin draft desde 06/08 — jueves = primeros encargos de asado/costillar del fin de semana, agosto último mes frío) y **#14 Heladería Glacial** (Freire 1340, 8 días sin draft desde 05/08 — agosto = preparar canal delivery antes del rush de calor octubre-diciembre); (2) **presentaciones** para 2 nuevas cafeterías encontradas en Rappi VA: **Ama Cafetería (#149)** (Pje. El Ciruelillo 1373, en Rappi) y **Cafetería La Tribu (#150)** (Díaz 647, en Rappi + Instagram @latribu.villalemana, tel. 9 7655 8746). Pipeline total: **150 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 28** (venta PedidosYa a SSW Partners NY el 16/07) — SSW lleva 28 días en silencio operativo total sin anunciar condiciones para los negocios afiliados; 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA** — el silencio sigue siendo el argumento; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **49 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed. **Actualizado:** 2026-08-13.
+
+---
+
+#### "JUEVES 13 DE AGOSTO" — Contactados sin draft fresco (13/08)
+
+**[9] Rotisería El Gaucho — Jueves 13 de agosto (13/08):**
+"Hola Rotisería El Gaucho! RepartoJusto — jueves 13 de agosto. El jueves en una rotisería marca el inicio real del fin de semana: las familias de Portales 567 ya empiezan a planear el costillar del sábado y el asado del domingo, y los primeros encargos llegan el jueves tarde. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de lo que venden. Para un pedido de $9.000, Rappi se lleva $2.520 de comisión — con nosotros son $500 siempre, $2.020 que se quedan en la rotisería. Con 20 pedidos semanales de delivery, eso es un ahorro de más de $580.000 al mes. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad dentro de la app — los que no compran visibilidad interna quedan enterrados en el feed bajo los que sí pagan. Una rotisería de barrio no necesita ese algoritmo para que su clientela vuelva; necesita que el costillar llegue caliente y que el margen quede en la rotisería. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — establecer el canal de tarifa fija ahora tiene ventaja antes de que intensifiquen la cobertura en VA. Agosto es el último mes frío del año: cada pedido de cazuela o asado de este mes construye la base de clientes delivery para todo el año. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Coordinamos esta semana?"
+
+---
+
+**[14] Heladería Glacial — Jueves 13 de agosto (13/08):**
+"Hola Heladería Glacial! RepartoJusto — jueves 13 de agosto. Agosto es el mes estratégico para las heladerías: el rush de calor arranca en octubre y el peak de diciembre llega sin avisar. Los negocios que tienen el canal de delivery activo y probado antes del calor llegan con una base de clientes ya fidelizada — los que lo configuran en octubre compiten con todo el mundo al mismo tiempo. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el precio del helado o la paleta. Para un pedido de $5.000 en helados, una plataforma que cobra 28-30% se lleva $1.400-$1.500 — con nosotros son $500 siempre, el margen queda en la heladería para cada cono y copa que vendan en el peak de verano. Configurar el canal ahora en agosto significa que cuando llegue el calor en octubre, las rutas ya están probadas, los riders conocen la zona y los clientes saben cómo pedir. Sin contrato, sin cuota mensual, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos este jueves?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-13)
+
+**[149] Ama Cafetería (Pje. El Ciruelillo 1373, Villa Alemana, en Rappi) — Presentación:**
+"Hola Ama Cafetería! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana. Los encontramos activos en Rappi (Pje. El Ciruelillo 1373) ofreciendo café y comida a domicilio. La propuesta es directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el precio del café o el sándwich. Para un pedido de $5.000 en café y sándwich, Rappi se lleva hasta $1.400 de comisión — con nosotros son $500 siempre, $900 que se quedan en la cafetería. Con Rappi Turbo ya operativo en Quilpué (8 km de Villa Alemana), la presión sobre márgenes de negocios pequeños solo va a subir. Agosto es el último mes frío y el inicio del back-to-school: ambos picos benefician a cafeterías con delivery eficiente. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Les interesa conversar?"
+
+---
+
+**[150] Cafetería La Tribu (Díaz 647, Villa Alemana, @latribu.villalemana) — Presentación:**
+"Hola Cafetería La Tribu! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana. Los encontramos en Rappi y en Instagram @latribu.villalemana en Díaz 647 — una cafetería familiar con entrega a domicilio activa. La propuesta es directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de lo que venden. Para un pedido de $6.000 en café, tostadas y sándwiches, Rappi se lleva $1.680 de comisión — con nosotros son $500 siempre, $1.180 que quedan en La Tribu. Rappi Turbo ya opera en Quilpué (8 km de Villa Alemana): las plataformas que priorizan sus propios servicios van a seguir aumentando la presión sobre los márgenes de negocios de barrio. Con RepartoJusto tienen logística local a tarifa fija, sin algoritmo que los esconda por no pagar publicidad interna. Agosto + back-to-school = peak cafetería de la primera semana de clases. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
