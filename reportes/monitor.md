@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-13T00:00:00Z
-**Estado:** ❌ CAÍDO
-**Detalle:** curl error 56 — el proxy del entorno retornó 403 Forbidden al intentar el túnel CONNECT hacia repartojusto-production.up.railway.app. El endpoint /health no fue alcanzable. Estado real del servidor desconocido — restricción de red del sandbox. Verificar manualmente.
+**Última verificación:** 2026-08-13T05:32:10Z
+**Estado:** ❌ NO VERIFICADO
+**Detalle:** El chequeo no pudo completarse — el proxy de red del entorno de ejecución bloqueó la conexión a `repartojusto-production.up.railway.app` con 403 (policy denial). Esto no confirma que el servicio esté caído; indica que el agente monitor no tiene acceso de red al dominio de Railway desde este entorno. Se requiere configuración de allowlist en el proxy o ejecutar el monitor desde un entorno sin restricciones de red.
