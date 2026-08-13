@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-13T13:33:59Z
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** El proxy del entorno de ejecución retornó 403 Forbidden al intentar el túnel CONNECT hacia `repartojusto-production.up.railway.app`. No se pudo verificar el endpoint `/health`. Restricción de red del sandbox — el servidor puede estar operativo. Verificar manualmente.
+**Última verificación:** 2026-08-13T14:33:45Z
+**Estado:** ⚠️ INACCESIBLE DESDE ENTORNO DE MONITOREO
+**Detalle:** La política de red del entorno de ejecución bloqueó la conexión a repartojusto-production.up.railway.app (proxy respondió 403 a CONNECT). No fue posible verificar el estado del servidor. Revisar política de red o ejecutar el monitor desde un entorno con acceso a railway.app.
