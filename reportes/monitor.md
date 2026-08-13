@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-12T23:31:34Z
-**Estado:** ⚠️ NO VERIFICADO
-**Detalle:** El entorno de ejecución automática bloqueó la conexión saliente hacia repartojusto-production.up.railway.app (proxy devolvió HTTP 403 al establecer el túnel CONNECT). No es posible confirmar si el servicio está operativo o caído desde este entorno. Verificar manualmente o desde un entorno sin restricciones de proxy.
+**Última verificación:** 2026-08-13T00:43:00Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El proxy de egreso bloqueó la conexión a `repartojusto-production.up.railway.app:443` con 403 (policy denial). No se pudo completar el health check — el bloqueo es de red del sandbox, no indica caída del servidor.
