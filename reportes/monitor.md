@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-13T05:32:10Z
-**Estado:** ❌ NO VERIFICADO
-**Detalle:** El chequeo no pudo completarse — el proxy de red del entorno de ejecución bloqueó la conexión a `repartojusto-production.up.railway.app` con 403 (policy denial). Esto no confirma que el servicio esté caído; indica que el agente monitor no tiene acceso de red al dominio de Railway desde este entorno. Se requiere configuración de allowlist en el proxy o ejecutar el monitor desde un entorno sin restricciones de red.
+**Última verificación:** 2026-08-13T06:33:19Z
+**Estado:** ⚠️ INDETERMINADO
+**Detalle:** No se pudo verificar el endpoint `/health`. El proxy de red del entorno de ejecución devolvió HTTP 403 Forbidden al intentar conectar con `repartojusto-production.up.railway.app:443`. El servidor puede estar operativo pero la política de red del entorno impide el acceso externo a este dominio. Se requiere verificación manual o ajuste de la política de red.
