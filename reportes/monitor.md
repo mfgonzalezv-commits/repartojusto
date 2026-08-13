@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-13T17:37:00Z
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** La conexión a `repartojusto-production.up.railway.app` fue bloqueada por la política de red del entorno de ejecución (proxy 403 — connect_rejected). No se pudo determinar si el servidor está operativo. Acción requerida: verificar manualmente o ajustar la política de red para permitir acceso a railway.app.
+**Última verificación:** 2026-08-13T18:33:23Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy del entorno bloqueó la conexión (HTTP 403 CONNECT tunnel). No es posible determinar el estado real del servidor desde este entorno.
