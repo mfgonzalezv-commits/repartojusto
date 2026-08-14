@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-13
+**Actualizado:** 2026-08-14
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -15,8 +15,8 @@
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — el jueves inicia el peak del fin de semana: primeros encargos de asado/costillar para el sábado, agosto último mes frío, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 10 de agosto" redactado 10/08 — lunes home office = peak café delivery inicio de semana, agosto último mes frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 11 de agosto" redactado 11/08 — consultas post-fin de semana, peak medicamentos mascotas agosto, Rappi Turbo Quilpué urgencia ALTA |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — ACTIVACIÓN agosto, primera semana de clases del semestre, útiles y cuadernos a domicilio = diferenciador único, delivery sin comisión para la temporada escolar |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 7 de agosto" redactado 07/08 — último mes invernal, peak urgencias reparación/calefacción agosto, "sin algoritmo que te esconda" + Rappi Turbo urgencia |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 14 de agosto" redactado 14/08 — 2da semana de clases del semestre, viernes = urgencias escolares del fin de semana (cuadernos, estuches, calculadoras para el lunes), diferenciador único en VA, back-to-school agosto |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 14 de agosto" redactado 14/08 — viernes = materiales para proyectos de fin de semana (reparar gotera el sábado, calefacción el domingo), agosto último mes invierno = peak urgencias, Rappi Turbo Quilpué urgencia |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — preparación temporada verano: agosto es el momento ideal para dejar el canal delivery activo antes del rush octubre-diciembre, sin comisión que devore el margen en el peak de calor |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -154,10 +154,44 @@
 | 148 | Bar Blinders | Bar / coctelería a domicilio | Villa Alemana (@elbaratucasa_, Instagram) | Nuevo | — | Presentación redactada 12/08 — PRIMER bar/coctelería del pipeline, concepto "el bar a tu casa", canal propio Instagram, sin grandes plataformas detectadas, cócteles y bebidas premium delivery, ahorro ~$4.500/pedido de $15.000 vs. 30% comisión |
 | 149 | Ama Cafetería | Cafetería / café | Pje. El Ciruelillo 1373, Villa Alemana | Nuevo | — | Presentación redactada 13/08 — cafetería activa en Rappi VA, café y sándwiches delivery, argumento $500 fijo vs. $1.400 comisión Rappi por pedido $5K, Rappi Turbo Quilpué urgencia + back-to-school agosto |
 | 150 | Cafetería La Tribu | Cafetería familiar / sándwiches | Díaz 647, Villa Alemana | Nuevo | — | Presentación redactada 13/08 — en Rappi + canal propio Instagram @latribu.villalemana, tel. 9 7655 8746, cafetería familiar espacio acogedor, argumento $500 fijo vs. $1.680 comisión Rappi por pedido $6K + back-to-school agosto |
+| 151 | Cevasco Quilpué | Fuente de soda / comida chilena | Quilpué (en Uber Eats, menu.cevasco.cl) | Nuevo | — | Presentación redactada 14/08 — fuente de soda con tradición desde 1956 (completos/sándwiches/churrascos), en Uber Eats Quilpué, argumento $500 vs. $1.350 comisión Uber Eats (30%) por pedido $4.500 + Rappi Turbo Quilpué urgencia directa |
+| 152 | Que Mejor | Restaurant / comida | Calle Octava 160, Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 14/08 — restaurant en Rappi Villa Alemana, argumento $500 fijo vs. $2.240 comisión Rappi (28%) por pedido $8.000 + algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-14)
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 14 de agosto — inicio del fin de semana de la segunda semana de agosto, último mes frío del año**. El viernes concentra dos tipos de demanda: el cierre laboral de la semana (pedidos de tarde-noche) y la planificación para el fin de semana (materiales para proyectos del sábado, encargos del domingo). Para librerías, el viernes es la última oportunidad de la semana para resolver urgencias escolares antes del lunes — segunda semana del semestre. Para ferreterías, el viernes es el día de compra de materiales para los proyectos del fin de semana. Se redactan **4 mensajes**: (1) seguimientos **"Viernes 14 de agosto"** para los 2 Contactados más desactualizados: **#12 Librería El Saber** (Lynch 234, 7 días sin draft desde 07/08 — 2da semana de clases, viernes = urgencias escolares del fin de semana, diferenciador único en VA) y **#13 Ferretería Los Maestros** (Portales 123, 7 días sin draft desde 07/08 — viernes = materiales para proyectos de fin de semana, agosto último mes invierno peak urgencias); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Cevasco Quilpué (#151)** — fuente de soda tradicional desde 1956, en Uber Eats Quilpué, completos/sándwiches/churrascos, menu.cevasco.cl — y **Que Mejor (#152)** — restaurant en Rappi, Calle Octava 160, Villa Alemana. Pipeline total: **152 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW DÍA 29** (venta PedidosYa a SSW Partners NY el 16/07) — SSW lleva 29 días en silencio operativo total sin anunciar condiciones para los negocios afiliados; el silencio sigue siendo el argumento; 7 borradores PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son **PRIORIDAD CRÍTICA**; (2) **Rappi Turbo en Quilpué** (8 km de Villa Alemana) — urgencia ALTA; (3) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **50 días consecutivos** con borradores activos sin confirmación de envío; (4) Argumento algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed. **Actualizado:** 2026-08-14.
+
+---
+
+#### "VIERNES 14 DE AGOSTO" — Contactados sin draft fresco (14/08)
+
+**[12] Librería El Saber — Viernes 14 de agosto (14/08):**
+"Hola Librería El Saber! RepartoJusto — viernes 14 de agosto. El viernes es el último día de la semana para resolver urgencias escolares antes del lunes: el cuaderno que el profesor pidió el miércoles, el estuche que se rompió esta semana, la calculadora para el ramo de matemáticas del próximo lunes. Un apoderado que no puede salir en la tarde quiere que ese pedido llegue a la casa antes del fin de semana — y una librería que entrega a domicilio los viernes convierte esa urgencia en un pedido real. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de la venta. Para un pedido de $6.000 en útiles, las plataformas grandes cobran hasta $1.800 de comisión — con nosotros son $500 siempre, el margen queda en la librería. Estamos en la segunda semana del semestre: los encargos de útiles llegan cada semana porque los profes siguen pidiendo cosas nuevas. Una librería con delivery local en Lynch 234 tiene un diferenciador único que ningún competidor de Villa Alemana ofrece todavía. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo activamos este viernes?"
+
+---
+
+**[13] Ferretería Los Maestros — Viernes 14 de agosto (14/08):**
+"Hola Ferretería Los Maestros! RepartoJusto — viernes 14 de agosto. El viernes en una ferretería es el día de los proyectos de fin de semana: el vecino que va a arreglar la gotera el sábado necesita los materiales hoy, el que quiere reparar la calefacción antes del frío del domingo pide el kit el viernes tarde. Agosto es el último mes del invierno — las urgencias de reparación del hogar que se postergaron en junio y julio llegan exactamente ahora, antes de que llegue la primavera y el cliente ya no tenga la misma urgencia. Con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de la venta. Para un pedido de materiales de $10.000, las plataformas grandes cobran hasta $2.800 de comisión por esa entrega — con nosotros son $500 siempre, $2.300 que se quedan en la ferretería. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — una ferretería de barrio en Portales 123 no necesita ese algoritmo: el vecino que necesita el cañón de PVC para la gotera ya sabe a dónde llamar; solo necesita que el material llegue sin tener que ir a buscarlo al frío del viernes. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — un negocio local con logística de tarifa fija ya establecida tiene ventaja competitiva real cuando intensifiquen la cobertura en el corredor VA. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo coordinamos este viernes?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (2026-08-14)
+
+**[151] Cevasco Quilpué (en Uber Eats Quilpué, menu.cevasco.cl) — Presentación:**
+"Hola Cevasco! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Quilpué y Villa Alemana. Los encontramos activos en Uber Eats en Quilpué — una fuente de soda con tradición desde 1956 ofreciendo completos, sándwiches y churrascos a domicilio. La propuesta es directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el precio de lo que venden. Para un pedido de completos de $4.500, Uber Eats cobra $1.350 de comisión (30%) — con nosotros son $500 siempre, $850 que se quedan en Cevasco por cada entrega. Con 20 pedidos diarios de delivery, eso son más de $600.000 al mes en ahorro de comisión. Una fuente de soda con 70 años de tradición y clientela fija no necesita algoritmos de plataforma — necesita que el margen quede en el negocio. Dato urgente: Rappi Turbo ya opera en Quilpué — cuando la plataforma intensifique la presión en la zona, los negocios con logística de tarifa fija ya establecida tienen ventaja competitiva real. Pueden mantener Uber Eats y sumar RepartoJusto como canal local paralelo, sin costo de registro ni contrato. Somos 100% locales en Quilpué y Villa Alemana. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[152] Que Mejor (Calle Octava 160, Villa Alemana, en Rappi) — Presentación:**
+"Hola Que Mejor! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana y Quilpué. Los encontramos activos en Rappi en Calle Octava 160, Villa Alemana. La propuesta es directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el valor de la venta. Para un pedido de $8.000, Rappi se lleva $2.240 de comisión (28%) — con nosotros son $500 siempre, $1.740 que se quedan en el negocio. La nueva app de Rappi usa un algoritmo social que prioriza negocios que pagan publicidad interna — los que no compran visibilidad extra dentro de la app quedan enterrados en el feed bajo los que sí pagan. Con RepartoJusto no hay algoritmo que esconda al negocio: el cliente hace el pedido directamente. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — cuando la plataforma intensifique la presión en el corredor VA, los negocios con logística de tarifa fija ya establecida tendrán ventaja competitiva real. Pueden mantener Rappi y sumar RepartoJusto como canal local sin costo de registro ni contrato. Somos 100% locales en Villa Alemana. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
