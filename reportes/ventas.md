@@ -1,36 +1,44 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-08-14
-**Pipeline total:** 152 prospectos
-**Por estado:** Nuevos: 138 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-08-15 (sábado)
+**Pipeline total:** 154 prospectos
+**Por estado:** Nuevos: 140 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
-- Lectura de cola.md: incorporados argumentos del Investigador del 13/08 (SSW Partners DÍA 29 sin anuncios operativos para afiliados PedidosYa, Rappi Turbo confirmado en Quilpué, post-Premios Uber Eats vigente hasta ~20/08, Rappi ya agrupa negocios VA bajo "Quilpué" en su app).
-- Revisión del pipeline: 14 Contactados (#1-#14), todos con drafts recientes. Los más desactualizados con 7 días sin draft: #12 Librería El Saber (último 07/08) y #13 Ferretería Los Maestros (último 07/08).
-- Redactados 4 mensajes hoy: seguimientos "Viernes 14 de agosto" para #12 Librería El Saber y #13 Ferretería Los Maestros + presentaciones para 2 nuevos prospectos encontrados hoy.
-- Búsqueda de nuevos negocios: encontrados Cevasco Quilpué (fuente de soda 1956, Uber Eats Quilpué) y Que Mejor (restaurant Rappi Calle Octava 160 VA).
-- ALERTA activa: 7 borradores SSW PedidosYa (#27, #28, #30, #33, #60, #90, #102) pendientes de envío — SSW lleva 29 días en silencio operativo desde venta el 16/07. Ventana de máximo impacto en hora final esta semana.
-- ALERTA activa: #22 Sushi Point Delivery y #15 Melt Pizzas llevan 50 días consecutivos con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA DEL GERENTE.
+
+**Argumentos activos incorporados (de Investigador y cola.md):**
+- **SSW DÍA 30 (aniversario de un mes):** PedidosYa vendida a SSW Partners NY el 16/07 — 30 días de silencio operativo total. Es el momento de mayor impacto narrativo para los 7 prospectos PedidosYa. Argumento exacto: "SSW Partners lleva 30 días sin decirte qué pasa con tu contrato — con nosotros $500 fijo, sin cambio de dueños."
+- **Post-Premios Uber Eats** vigente hasta ~20/08: ningún negocio de Villa Alemana fue nominado en 33 categorías.
+- **Rappi entierra negocios sin publicidad interna** — algoritmo social nuevo penaliza visibilidad.
+- **Rappi Turbo Quilpué** (8 km de Villa Alemana) — urgencia ALTA en todos los mensajes.
+
+**Seguimientos a Contactados (los 2 más desactualizados, 7 días sin draft):**
+- **#1 Fuente de Soda El Rápido** — seguimiento "Sábado 15 de agosto": ángulo sábado = triple demanda (almuerzo familiar + grupo de amigos + pedido para el partido), último mes frío, Rappi Turbo urgencia, algoritmo social Rappi.
+- **#3 Farmacia Cruz Verde** — seguimiento "Sábado 15 de agosto": ángulo sábado urgencias medicamentos (adulto mayor, antibiótico terminado, resfrío tardío agosto), $500 fijo vs. $2.400 comisión en pedido $8K.
+
+**Nuevos prospectos agregados (2):**
+- **#153 Puerkos Sushi** (Quilpué, Uber Eats, @puerkos_delivery) — sushi/gyozas/hand rolls ticket alto ~$15K, ahorro $4.000/pedido vs. Uber Eats 30%, Rappi Turbo urgencia directa en Quilpué.
+- **#154 Seikō Sushi Quilpué** (Freire 1257, seikosushi.com, @seikosushi.oficial, tel. 56 9 6444 32 53) — delivery propio Lu-Do 11:30-23:00, operación de alto volumen, Rappi Turbo urgencia directa.
 
 ## Borradores listos para Matías
-4 mensajes redactados hoy, listos para copiar y enviar por WhatsApp:
 
-1. **#12 Librería El Saber** — Seguimiento "Viernes 14 de agosto": viernes = urgencias escolares del fin de semana (cuadernos, estuches, calculadoras para el lunes), 2da semana del semestre, diferenciador único en Villa Alemana. Mensaje en prospectos.md sección 14/08.
+4 borradores nuevos listos en prospectos.md — sección "MENSAJES DEL DÍA (2026-08-15)":
+1. **[1] Fuente de Soda El Rápido — Sábado 15 de agosto** (seguimiento, contactado 7 días sin draft)
+2. **[3] Farmacia Cruz Verde — Sábado 15 de agosto** (seguimiento, contactado 7 días sin draft)
+3. **[153] Puerkos Sushi — Presentación** (nuevo prospecto, Uber Eats Quilpué)
+4. **[154] Seikō Sushi Quilpué — Presentación** (nuevo prospecto, delivery propio)
 
-2. **#13 Ferretería Los Maestros** — Seguimiento "Viernes 14 de agosto": viernes = materiales para proyectos de fin de semana (gotera el sábado, calefacción el domingo), agosto último mes invierno = peak urgencias reparación. Mensaje en prospectos.md sección 14/08.
-
-3. **#151 Cevasco Quilpué** — Presentación: fuente de soda tradicional desde 1956, activa en Uber Eats Quilpué (completos/sándwiches/churrascos), argumento $500 vs. $1.350 comisión Uber Eats (30%) + Rappi Turbo en Quilpué urgencia directa. Mensaje en prospectos.md sección 14/08.
-
-4. **#152 Que Mejor** — Presentación: restaurant en Rappi Calle Octava 160, Villa Alemana, argumento $500 vs. $2.240 comisión Rappi (28%) + algoritmo social Rappi entierra sin publicidad paga + Rappi Turbo Quilpué urgencia. Mensaje en prospectos.md sección 14/08.
-
-**PRIORIDADES URGENTES PREVIAS (borradores acumulados sin confirmación de envío):**
-- 7 borradores SSW PedidosYa: #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya — SSW DÍA 29, silencio total. Esta semana es la última de máximo impacto.
-- #22 Sushi Point Delivery (tel. (32) 324 0504) — 50 días consecutivos con borrador activo
-- #15 Melt Pizzas — 50 días consecutivos con borrador activo
+**ALERTAS URGENTES PARA MATÍAS:**
+- **SSW DÍA 30 — HORA FINAL:** los 7 borradores para prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son prioridad crítica esta semana — a partir del día 35+ el argumento SSW pierde impacto. Hoy es el momento de mayor resonancia (un mes exacto).
+- **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas**: 51 días consecutivos con borradores activos sin confirmación de envío — prioridades absolutas del Gerente.
+- Cuello de botella crítico: 101 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
 
 ## Nuevos prospectos agregados
-1. **Cevasco Quilpué** (#151) — Fuente de soda / comida chilena | Quilpué (en Uber Eats, menu.cevasco.cl). Tradición desde 1956, completos/sándwiches/churrascos. Argumento principal: $500 fijo vs. $1.350 comisión Uber Eats por pedido de $4.500 + Rappi Turbo ya en Quilpué (urgencia directa).
 
-2. **Que Mejor** (#152) — Restaurant / comida | Calle Octava 160, Villa Alemana (en Rappi). Argumento principal: $500 fijo vs. $2.240 comisión Rappi (28%) + algoritmo social Rappi entierra negocios sin publicidad paga + Rappi Turbo Quilpué urgencia.
+| # | Negocio | Rubro | Dónde | Argumento clave |
+|---|---|---|---|---|
+| 153 | Puerkos Sushi | Sushi / japonesa | Quilpué (Uber Eats, @puerkos_delivery) | Ahorro $4.000/pedido vs. 30% UE, Rappi Turbo directo |
+| 154 | Seikō Sushi Quilpué | Sushi / japonesa | Freire 1257 Quilpué (propio + plataformas) | Delivery propio maduro, Rappi Turbo directo, $3.700+/pedido ahorro |
 
 ## Para el Gerente
-Pipeline en 152 prospectos (138 Nuevos, 14 Contactados, 0 Registrados); SSW Partners lleva 29 días en silencio operativo total desde venta de PedidosYa el 16/07 — ventana de captación de prospectos PedidosYa en hora final esta semana; 7 borradores SSW urgentes (#27, #28, #30, #33, #60, #90, #102) más #22 Sushi Point y #15 Melt Pizzas (50 días consecutivos como prioridades absolutas) requieren acción urgente de Matías esta semana.
+
+Pipeline estable en 154 prospectos (140 Nuevos, 14 Contactados, 0 Registrados); HOY es el DÍA 30 exacto de la venta de PedidosYa a SSW Partners NY — ventana de máximo impacto SSW para los 7 borradores PedidosYa; cuello de botella crítico continúa siendo la confirmación de Matías sobre mensajes enviados (101 días sin actualización de estados).
