@@ -1,44 +1,50 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-08-15 (sábado)
-**Pipeline total:** 154 prospectos
-**Por estado:** Nuevos: 140 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-08-16 (domingo)
+**Pipeline total:** 156 prospectos
+**Por estado:** Nuevos: 142 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-**Argumentos activos incorporados (de Investigador y cola.md):**
-- **SSW DÍA 30 (aniversario de un mes):** PedidosYa vendida a SSW Partners NY el 16/07 — 30 días de silencio operativo total. Es el momento de mayor impacto narrativo para los 7 prospectos PedidosYa. Argumento exacto: "SSW Partners lleva 30 días sin decirte qué pasa con tu contrato — con nosotros $500 fijo, sin cambio de dueños."
-- **Post-Premios Uber Eats** vigente hasta ~20/08: ningún negocio de Villa Alemana fue nominado en 33 categorías.
-- **Rappi entierra negocios sin publicidad interna** — algoritmo social nuevo penaliza visibilidad.
-- **Rappi Turbo Quilpué** (8 km de Villa Alemana) — urgencia ALTA en todos los mensajes.
+**Argumentos activos incorporados:**
+- SSW Day 31: PedidosYa vendida a SSW Partners NY el 16/07 — un mes + 1 día de silencio operativo total. Investigador confirmó el 13/08 que es "la última semana de impacto real" para el argumento. Se usa en todos los borradores PedidosYa.
+- Post-Premios Uber Eats (vigente hasta ~20/08): "Uber Eats premió a los grandes de Santiago — ningún negocio de Villa Alemana fue nominado en 33 categorías. RepartoJusto trabaja en tu barrio con $500 fijo."
+- Rappi Turbo en Quilpué (8 km de VA): urgencia ALTA en todos los mensajes.
+- Algoritmo social Rappi: negocios sin publicidad interna quedan enterrados en el feed.
 
-**Seguimientos a Contactados (los 2 más desactualizados, 7 días sin draft):**
-- **#1 Fuente de Soda El Rápido** — seguimiento "Sábado 15 de agosto": ángulo sábado = triple demanda (almuerzo familiar + grupo de amigos + pedido para el partido), último mes frío, Rappi Turbo urgencia, algoritmo social Rappi.
-- **#3 Farmacia Cruz Verde** — seguimiento "Sábado 15 de agosto": ángulo sábado urgencias medicamentos (adulto mayor, antibiótico terminado, resfrío tardío agosto), $500 fijo vs. $2.400 comisión en pedido $8K.
+**Borradores redactados:**
+1. **[5] Sushi Zen** — seguimiento "Domingo 16 de agosto" — peak sushi familiar noche, domingo último mes invierno, algoritmo Rappi + Rappi Turbo urgencia, ahorro ~$3.000/pedido vs. Rappi.
+2. **[6] Botillería El Copihue** — seguimiento "Domingo 16 de agosto" — peak botillería invernal tarde, argumento post-Premios Uber Eats contraste, Rappi Turbo urgencia ALTA.
+3. **[155] La Tetera de Greda** — presentación nuevo prospecto — restobar almuerzos caseros chilenos VA (@lateteradegreda), canal propio Instagram+Facebook, horario Lu-Do 12:30-17:00, ahorro ~$1.600/pedido vs. plataformas 30%.
+4. **[156] Pastelería Techo Verde** — presentación nuevo prospecto — en Uber Eats VA 4.6/5 estrellas, desayunos/brunch/postres/cupcakes/empanadas, ahorro ~$1.600/pedido vs. Uber Eats 30%.
 
-**Nuevos prospectos agregados (2):**
-- **#153 Puerkos Sushi** (Quilpué, Uber Eats, @puerkos_delivery) — sushi/gyozas/hand rolls ticket alto ~$15K, ahorro $4.000/pedido vs. Uber Eats 30%, Rappi Turbo urgencia directa en Quilpué.
-- **#154 Seikō Sushi Quilpué** (Freire 1257, seikosushi.com, @seikosushi.oficial, tel. 56 9 6444 32 53) — delivery propio Lu-Do 11:30-23:00, operación de alto volumen, Rappi Turbo urgencia directa.
+**Nuevos prospectos agregados:**
+- **#155 La Tetera de Greda** (Restobar / comida chilena, Villa Alemana, @lateteradegreda / Facebook /RestobarLateteradegreda) — almuerzos caseros delivery, canal propio, sin grandes plataformas.
+- **#156 Pastelería Techo Verde** (Pastelería / desayunos / brunch, Villa Alemana, en Uber Eats, 4.6 estrellas) — desayunos+brunch+postres+cupcakes+empanadas, ticket recurrente.
 
 ## Borradores listos para Matías
 
-4 borradores nuevos listos en prospectos.md — sección "MENSAJES DEL DÍA (2026-08-15)":
-1. **[1] Fuente de Soda El Rápido — Sábado 15 de agosto** (seguimiento, contactado 7 días sin draft)
-2. **[3] Farmacia Cruz Verde — Sábado 15 de agosto** (seguimiento, contactado 7 días sin draft)
-3. **[153] Puerkos Sushi — Presentación** (nuevo prospecto, Uber Eats Quilpué)
-4. **[154] Seikō Sushi Quilpué — Presentación** (nuevo prospecto, delivery propio)
+| Prioridad | Negocio | Tipo | Observación |
+|---|---|---|---|
+| 🔴 URGENTE | #27 Tribeca Sushi | SSW PedidosYa | Ventana SSW última semana — enviar esta semana |
+| 🔴 URGENTE | #28 La Esquina Con Sabor | SSW PedidosYa | Ventana SSW última semana |
+| 🔴 URGENTE | #30 Poh Che | SSW PedidosYa | Ventana SSW última semana |
+| 🔴 URGENTE | #33 Casa Festa | SSW PedidosYa | Ventana SSW última semana |
+| 🔴 URGENTE | #60 Master Sándwich | SSW PedidosYa | Ventana SSW última semana, WhatsApp +56 958528950 |
+| 🔴 URGENTE | #90 Buenaventura Pizzería | SSW PedidosYa | Ventana SSW última semana, tel. +56 9 4113 4197 |
+| 🔴 URGENTE | #102 La Joya | SSW PedidosYa | Ventana SSW última semana, tel. +56 9 27179828 |
+| 🔴 ALTA | #22 Sushi Point Delivery | Presentación | 52 días consecutivos activo, tel. (32) 324 0504 |
+| 🔴 ALTA | #15 Melt Pizzas | Seguimiento | 52 días consecutivos activo, en Rappi |
+| 🟡 Normal | #5 Sushi Zen | Seguimiento domingo | Hoy 16/08 |
+| 🟡 Normal | #6 Botillería El Copihue | Seguimiento domingo | Hoy 16/08 |
+| 🟢 Nuevo | #155 La Tetera de Greda | Presentación | Restobar almuerzos VA |
+| 🟢 Nuevo | #156 Pastelería Techo Verde | Presentación | Uber Eats 4.6★ VA |
 
-**ALERTAS URGENTES PARA MATÍAS:**
-- **SSW DÍA 30 — HORA FINAL:** los 7 borradores para prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya) son prioridad crítica esta semana — a partir del día 35+ el argumento SSW pierde impacto. Hoy es el momento de mayor resonancia (un mes exacto).
-- **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas**: 51 días consecutivos con borradores activos sin confirmación de envío — prioridades absolutas del Gerente.
-- Cuello de botella crítico: 101 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
+## Nuevos prospectos agregados hoy
 
-## Nuevos prospectos agregados
+1. **#155 La Tetera de Greda** — Restobar / comida chilena / almuerzos caseros, Villa Alemana. Canal propio (@lateteradegreda Instagram, Facebook /RestobarLateteradegreda). Lu-Do 12:30-17:00. Sin grandes plataformas detectadas. Encontrado via búsqueda Instagram de delivery VA.
 
-| # | Negocio | Rubro | Dónde | Argumento clave |
-|---|---|---|---|---|
-| 153 | Puerkos Sushi | Sushi / japonesa | Quilpué (Uber Eats, @puerkos_delivery) | Ahorro $4.000/pedido vs. 30% UE, Rappi Turbo directo |
-| 154 | Seikō Sushi Quilpué | Sushi / japonesa | Freire 1257 Quilpué (propio + plataformas) | Delivery propio maduro, Rappi Turbo directo, $3.700+/pedido ahorro |
+2. **#156 Pastelería Techo Verde** — Pastelería / desayunos / brunch / postres, Villa Alemana. Activo en Uber Eats con 4.6/5 estrellas. Desayunos, brunch, postres, cupcakes, empanadas, bebidas. Ticket recurrente (cumpleaños, celebraciones, brunch semanal). Encontrado en categoría pasteles/repostería Uber Eats Villa Alemana.
 
 ## Para el Gerente
 
-Pipeline estable en 154 prospectos (140 Nuevos, 14 Contactados, 0 Registrados); HOY es el DÍA 30 exacto de la venta de PedidosYa a SSW Partners NY — ventana de máximo impacto SSW para los 7 borradores PedidosYa; cuello de botella crítico continúa siendo la confirmación de Matías sobre mensajes enviados (101 días sin actualización de estados).
+Pipeline en 156 prospectos (142 Nuevos, 14 Contactados, 0 Registrados); ventana SSW en HORA FINAL (Día 31, Investigador confirmó última semana de impacto el 13/08) — 7 borradores PedidosYa deben salir esta semana; #22 Sushi Point y #15 Melt Pizzas llevan 52 días consecutivos con borradores activos sin confirmación de envío; cuello de botella crítico: 102 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
