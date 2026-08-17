@@ -1,153 +1,152 @@
 # Mejoras RepartoJusto
-**Fecha:** 2026-08-10
-**Estado:** 5 mejoras identificadas — 3 de seguridad (2 pendientes de semana anterior), 1 de rendimiento, 1 de memoria
+**Fecha:** 2026-08-17
+**Estado:** 5 mejoras identificadas — 3 de seguridad, 1 de rendimiento, 1 de memoria
 
 ---
 
-## 1. `pedido:seguir` sin verificación de pertenencia — fuga de tracking a terceros
-
-**Archivo:** `backend/src/sockets/index.js:101`
-**Beneficio:** Evita que cualquier usuario autenticado (rider o negocio ajeno) espíe coordenadas GPS en tiempo real y el chat de entregas que no le corresponden.
-
-```js
-// Antes:
-socket.on('pedido:seguir', ({ pedido_id }) => {
-  if (!pedido_id) return;
-  socket.join(`pedido:${pedido_id}`);
-});
-
-// Después:
-socket.on('pedido:seguir', async ({ pedido_id }) => {
-  if (!pedido_id) return;
-  try {
-    const { rows: [pedido] } = await db(
-      `SELECT negocio_id, rider_id FROM pedidos WHERE id = $1`, [pedido_id]
-    );
-    if (!pedido) return socket.emit('error', { error: 'Pedido no encontrado' });
-    const autorizado =
-      rol === 'admin' ||
-      (rol === 'negocio' && pedido.negocio_id === socket.negocio_id) ||
-      (rol === 'rider'   && pedido.rider_id   === socket.rider_id);
-    if (!autorizado) return socket.emit('error', { error: 'Sin acceso a este pedido' });
-    socket.join(`pedido:${pedido_id}`);
-  } catch (err) {
-    console.error('❌ Error pedido:seguir:', err.message);
-  }
-});
-```
-
----
-
-## 2. Chat sin límite de longitud — DoS de memoria por WebSocket
+## 1. `chat:enviar` sin verificar pertenencia al pedido — inyección de mensajes cruzados
 
 **Archivo:** `backend/src/sockets/index.js:161`
-**Beneficio:** Impide que un actor malicioso agote la RAM del servidor enviando payloads de texto de tamaño arbitrario; el Map de historial en memoria puede crecer sin control.
+**Beneficio:** Evita que cualquier usuario autenticado (rider o negocio ajeno) inyecte mensajes en el chat de un pedido que no le corresponde con solo conocer el `pedido_id`.
 
 ```js
-// Antes:
+// Antes (línea 161):
 socket.on('chat:enviar', ({ pedido_id, texto }) => {
   if (!pedido_id || !texto || !String(texto).trim()) return;
   const desde = rol === 'rider' ? 'rider' : 'negocio';
-  const msg = { desde, nombre, texto: String(texto).trim(), hora: new Date().toISOString() };
 
 // Después:
-socket.on('chat:enviar', ({ pedido_id, texto }) => {
+socket.on('chat:enviar', async ({ pedido_id, texto }) => {
   if (!pedido_id || !texto || !String(texto).trim()) return;
-  if (String(texto).length > 500) {
-    return socket.emit('chat:error', { error: 'Mensaje demasiado largo (máx 500 caracteres)' });
-  }
+
+  const { rows: [ped] } = await db(
+    `SELECT negocio_id, rider_id FROM pedidos WHERE id = $1`, [pedido_id]
+  ).catch(() => ({ rows: [] }));
+  if (!ped) return;
+
+  const autorizado =
+    rol === 'admin' ||
+    (rol === 'negocio' && ped.negocio_id === socket.negocio_id) ||
+    (rol === 'rider'   && ped.rider_id   === socket.rider_id);
+  if (!autorizado) return socket.emit('chat:error', { error: 'Sin acceso a este pedido' });
+
   const desde = rol === 'rider' ? 'rider' : 'negocio';
-  const msg = { desde, nombre, texto: String(texto).trim().slice(0, 500), hora: new Date().toISOString() };
 ```
 
 ---
 
-## 3. Memory leak en chatHistory — entradas de pedidos terminados nunca se purgan
+## 2. `io.emit('rider:fuera_linea')` broadcast global — fuga de estado interno
 
-**Archivo:** `backend/src/sockets/index.js:14`
-**Beneficio:** Sin limpieza, el Map acumula historiales de pedidos entregados/cancelados indefinidamente; en producción con decenas de pedidos diarios, la presión de memoria crece sin techo.
+**Archivo:** `backend/src/sockets/index.js:187`
+**Beneficio:** Evita que clientes finales (clientes rastreando una entrega) reciban eventos internos del sistema de riders, reduciendo la superficie de información expuesta por WebSocket.
 
 ```js
-// Agregar un listener dentro de io.on('connection', ...) cerca del bloque de chat:
-socket.on('pedido:actualizado', ({ id, estado }) => {
-  if (['entregado', 'cancelado'].includes(estado)) {
-    chatHistory.delete(id);
+// Antes (línea 187):
+io.emit('rider:fuera_linea', { rider_id: socket.rider_id });
+
+// Después:
+io.to('admin').emit('rider:fuera_linea', { rider_id: socket.rider_id });
+```
+
+---
+
+## 3. Memory leak en `_ubicacionStore` — Map sin evicción de entradas expiradas
+
+**Archivo:** `backend/src/routes/riders.js:63`
+**Beneficio:** Elimina el crecimiento indefinido de memoria del rate limiter de ubicación, que acumula una entrada por cada rider que alguna vez envió coordenadas y nunca las libera.
+
+```js
+// Añadir DESPUÉS de la función ubicacionRateLimit (línea 75):
+setInterval(() => {
+  const expiry = Date.now() - 60000;
+  for (const [key, val] of _ubicacionStore) {
+    if (val.first < expiry) _ubicacionStore.delete(key);
   }
-});
-
-// Alternativa más robusta: limpiar desde el servidor al emitir pedido:actualizado
-// en routes/pedidos.js cuando el estado final se confirma (líneas ~247, ~293, ~353).
-// Para ello exportar chatHistory desde sockets/index.js y referenciarla allí:
-//   const { chatHistory } = require('../sockets');
-//   if (['entregado','cancelado'].includes(nuevoEstado)) chatHistory.delete(pedido.id);
+}, 5 * 60 * 1000);
 ```
 
 ---
 
-## 4. Escritura en DB en cada ping GPS — carga innecesaria con flota activa
+## 4. `push-subscription` almacenada sin validar estructura — inyección de datos arbitrarios
 
-**Archivo:** `backend/src/sockets/index.js:72`
-**Beneficio:** Con 20 riders enviando GPS cada 3 s se generan ~400 writes/min a PostgreSQL; bufferear en memoria con flush cada 5 s reduce la carga en ~95% sin impacto perceptible en el tracking.
-
-```js
-// Añadir ANTES de io.on('connection', ...) — buffer global de última ubicación:
-const ubicacionBuffer = new Map(); // rider_id → { lat, lng }
-setInterval(async () => {
-  if (ubicacionBuffer.size === 0) return;
-  const snapshot = [...ubicacionBuffer.entries()];
-  ubicacionBuffer.clear();
-  for (const [rider_id, { lat, lng }] of snapshot) {
-    db('UPDATE riders SET lat = $1, lng = $2 WHERE id = $3', [lat, lng, rider_id])
-      .catch(() => {});
-  }
-}, 5000);
-
-// Dentro del handler rider:ubicacion (línea 72),
-// reemplazar el await db('UPDATE riders ...') por:
-ubicacionBuffer.set(socket.rider_id, { lat, lng });
-// El broadcast a negocio y pedido permanece igual — sigue siendo inmediato.
-```
-
----
-
-## 5. Cobro Flow antes del INSERT del pedido — riesgo de cargo sin orden creada
-
-**Archivo:** `backend/src/routes/pedidos.js:59`
-**Beneficio:** Si el INSERT falla por cualquier error de BD después de que Flow ya cobró, el negocio queda debitado sin ningún pedido registrado; invertir el orden evita cobros huérfanos.
+**Archivo:** `backend/src/routes/riders.js:195`
+**Beneficio:** Previene que un actor malicioso almacene objetos arbitrarios de gran tamaño o con campos extraños en la columna `push_subscription`, lo que podría corromper el motor de notificaciones push.
 
 ```js
-// Estrategia: crear el pedido en BD primero, cobrar después.
-// Si el cobro falla, cancelar el pedido recién insertado antes de responder.
-
-// 1. Eliminar el bloque de cobro previo (líneas 52-67).
-// 2. Calcular tarifa y crear el pedido normalmente (INSERT, líneas 96-107).
-// 3. Añadir el cobro DESPUÉS del INSERT exitoso:
-
-const { rows: [pedido] } = await db(
-  `INSERT INTO pedidos (...) VALUES (...) RETURNING *`,
-  [...]
+// Antes (línea 198):
+const { subscription } = req.body;
+if (!subscription) return res.status(400).json({ error: 'Suscripción requerida' });
+await db(
+  `UPDATE riders SET push_subscription = $1 WHERE usuario_id = $2`,
+  [JSON.stringify(subscription), req.usuario.id]
 );
 
-if (!enPrueba) {
-  const cobro = await cobros.cobrar({
-    customerId: negocio.tarjeta_customer_id,
-    monto: config.APP_FEE + tarifa_entrega,
-  });
-  if (!cobro.ok) {
-    await db(
-      `UPDATE pedidos SET estado = 'cancelado', cancelado_motivo = 'pago_rechazado' WHERE id = $1`,
-      [pedido.id]
-    );
-    return res.status(402).json({
-      error: 'Pago rechazado',
-      detalle: 'No se pudo cobrar el servicio. Verifica tu tarjeta.'
-    });
-  }
+// Después:
+const { subscription } = req.body;
+if (!subscription || typeof subscription !== 'object') {
+  return res.status(400).json({ error: 'Suscripción requerida' });
 }
-
-// Si el cobro es exitoso, continuar con la cascada normalmente.
+if (typeof subscription.endpoint !== 'string' || !subscription.endpoint.startsWith('https://')) {
+  return res.status(400).json({ error: 'Suscripción inválida: endpoint requerido' });
+}
+if (!subscription.keys ||
+    typeof subscription.keys.p256dh !== 'string' ||
+    typeof subscription.keys.auth !== 'string') {
+  return res.status(400).json({ error: 'Suscripción inválida: keys requeridas' });
+}
+const cleanSub = {
+  endpoint: subscription.endpoint,
+  expirationTime: subscription.expirationTime || null,
+  keys: { p256dh: subscription.keys.p256dh, auth: subscription.keys.auth },
+};
+await db(
+  `UPDATE riders SET push_subscription = $1 WHERE usuario_id = $2`,
+  [JSON.stringify(cleanSub), req.usuario.id]
+);
 ```
 
 ---
 
-*Generado automáticamente por el Agente de Mejoras de RepartoJusto — 2026-08-10.*
+## 5. Doble query de autorización en `GET /pedidos/:id` — round-trips innecesarios a BD
+
+**Archivo:** `backend/src/routes/pedidos.js:374`
+**Beneficio:** Elimina 2 queries extra por cada llamada a `GET /api/pedidos/:id` (una para negocio, otra para rider) añadiendo `usuario_id` a la query principal que ya hace el JOIN con esas tablas.
+
+```js
+// Antes — query en línea 377, sin usuario_id de negocio ni de rider:
+SELECT p.*,
+       n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
+       n.mostrar_costo_seguimiento,
+       u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
+       ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
+FROM pedidos p
+JOIN negocios n ON n.id = p.negocio_id
+LEFT JOIN riders ri ON ri.id = p.rider_id
+LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id
+WHERE p.id = $1
+
+// Después — añadir n.usuario_id y ri.usuario_id a la misma query:
+SELECT p.*,
+       n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
+       n.mostrar_costo_seguimiento, n.usuario_id AS negocio_usuario_id,
+       u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
+       ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng,
+       ri.usuario_id AS rider_usuario_id
+FROM pedidos p
+JOIN negocios n ON n.id = p.negocio_id
+LEFT JOIN riders ri ON ri.id = p.rider_id
+LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id
+WHERE p.id = $1
+
+// Y reemplazar el bloque de autorización (líneas 394-403) por:
+if (rol === 'negocio' && pedido.negocio_usuario_id !== req.usuario.id) {
+  return res.status(403).json({ error: 'Sin acceso a este pedido' });
+}
+if (rol === 'rider' && pedido.rider_usuario_id !== req.usuario.id) {
+  return res.status(403).json({ error: 'Sin acceso a este pedido' });
+}
+```
+
+---
+
+*Generado automáticamente por el Agente de Mejoras de RepartoJusto — 2026-08-17.*
