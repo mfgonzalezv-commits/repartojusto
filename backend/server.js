@@ -21,6 +21,7 @@ const adminRoutes = require('./src/routes/admin');
 const clienteRoutes  = require('./src/routes/clientes');
 const califRoutes    = require('./src/routes/calificaciones');
 const soporteRoutes  = require('./src/routes/soporte');
+const rutaRoutes     = require('./src/routes/rutas');
 const emailRoutes    = require('./src/routes/email');
 
 // Middleware
@@ -87,6 +88,7 @@ app.use('/api/clientes', clienteRoutes);
 app.use('/api/calificaciones', califRoutes);
 app.use('/api/soporte', soporteRoutes);
 app.use('/api/email',   emailRoutes);
+app.use('/api/rutas',   rutaRoutes);
 
 // ── Endpoint público de seguimiento (sin auth) ────────────────────────────
 const { query: dbQuery } = require('./src/config/database');

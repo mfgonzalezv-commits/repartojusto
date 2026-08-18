@@ -1466,13 +1466,22 @@ function detenerGPS() {
   if (gpsInterval !== null) { clearInterval(gpsInterval); gpsInterval = null; }
 }
 
-// ══════════ RUTA OSRM ══════════
+// ══════════ RUTA (Google Directions, vía backend) ══════════
 let navPolyline = null;
+let rutaPasos = [];       // pasos de la ruta principal activa (turn-by-turn)
+let rutaPasoActual = 0;
 
-// ── OpenRouteService (motor de rutas) ────────────────────────────────────────
-const ORS_KEY = 'eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjZmZWE5MWE2OWQ1MTRmZWE5NjllYmI1ZTMyNmYxZjI5IiwiaCI6Im11cm11cjY0In0=';
-const ORS_URL = 'https://api.openrouteservice.org/v2/directions/driving-car';
-
+// Ícono de flecha según el tipo de maniobra que devuelve Google
+const ICONO_MANIOBRA = {
+  'turn-left': '⬅️', 'turn-right': '➡️',
+  'turn-slight-left': '↖️', 'turn-slight-right': '↗️',
+  'turn-sharp-left': '⬅️', 'turn-sharp-right': '➡️',
+  'uturn-left': '↩️', 'uturn-right': '↪️',
+  'roundabout-left': '🔄', 'roundabout-right': '🔄',
+  'merge': '🔀', 'fork-left': '↖️', 'fork-right': '↗️',
+  'ramp-left': '↖️', 'ramp-right': '↗️',
+  'straight': '⬆️'
+};
 
 async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash, esRutaPrincipal) {
   color  = color  || '#FFCC00';
@@ -1480,47 +1489,53 @@ async function dibujarRutaOSRM(mapa, lat1, lng1, lat2, lng2, color, weight, dash
   if ([lat1,lng1,lat2,lng2].some(v => isNaN(parseFloat(v)))) return null;
   lat1=parseFloat(lat1); lng1=parseFloat(lng1); lat2=parseFloat(lat2); lng2=parseFloat(lng2);
 
-
   try {
-    const url = `${ORS_URL}?api_key=${ORS_KEY}&start=${lng1},${lat1}&end=${lng2},${lat2}&language=es`;
-    const r = await fetch(url);
-    if (!r.ok) {
-      const err = await r.json().catch(() => ({}));
-      throw new Error(`HTTP ${r.status}: ${err.error?.message || r.statusText}`);
-    }
-    const d = await r.json();
-
-    const feature = d.features && d.features[0];
-    if (!feature) throw new Error('Sin ruta en respuesta');
+    const d = await apiFetch(`/rutas/directions?origen_lat=${lat1}&origen_lng=${lng1}&destino_lat=${lat2}&destino_lng=${lng2}`);
+    if (!d || !d.polyline?.length) throw new Error('Sin ruta en respuesta');
 
     // Dibujar polilínea
-    const coords = feature.geometry.coordinates.map(([ln, lt]) => [lt, ln]);
+    const coords = d.polyline.map(pt => [pt.lat, pt.lng]);
     const opts = { color, weight, opacity: esRutaPrincipal ? 0.55 : 0.3 };
     if (dash) opts.dashArray = dash;
     const poly = L.polyline(coords, opts).addTo(mapa);
     if (esRutaPrincipal) navPolyline = poly;
 
-    const summary  = feature.properties.summary;
-    const distKm   = (summary.distance / 1000).toFixed(1);
-    const durMin   = Math.round(summary.duration / 60);
-
     if (esRutaPrincipal) {
       // Info bar
-      const eta    = new Date(Date.now() + summary.duration * 1000);
+      const eta    = new Date(Date.now() + d.duracion_min * 60000);
       const etaStr = eta.toLocaleTimeString('es-CL', { hour: '2-digit', minute: '2-digit' });
       const el = id => document.getElementById(id);
       if (el('nav-eta'))        el('nav-eta').textContent        = etaStr;
-      if (el('nav-dist-total')) el('nav-dist-total').textContent = `${distKm} km`;
-      if (el('nav-tiempo'))     el('nav-tiempo').textContent     = durMin < 60 ? `${durMin} min` : `${Math.floor(durMin/60)}h ${durMin%60}m`;
+      if (el('nav-dist-total')) el('nav-dist-total').textContent = `${d.distancia_km} km`;
+      if (el('nav-tiempo'))     el('nav-tiempo').textContent     = d.duracion_min < 60 ? `${d.duracion_min} min` : `${Math.floor(d.duracion_min/60)}h ${d.duracion_min%60}m`;
 
+      // Turn-by-turn: guardamos los pasos y mostramos el primero
+      rutaPasos = d.pasos || [];
+      rutaPasoActual = 0;
+      mostrarPasoActual();
     }
 
-    return { distKm, durMin };
+    return { distKm: d.distancia_km, durMin: d.duracion_min };
 
   } catch(e) {
+    if (esRutaPrincipal) { rutaPasos = []; rutaPasoActual = 0; }
     // Fallback: línea recta
     L.polyline([[lat1,lng1],[lat2,lng2]], { color, weight: weight-1||4, opacity:0.5, dashArray:'12,8' }).addTo(mapa);
     return null;
+  }
+}
+
+// Actualiza el banner de instrucción con el paso de ruta actual
+function mostrarPasoActual() {
+  const paso = rutaPasos[rutaPasoActual];
+  if (!paso) return;
+  const el = id => document.getElementById(id);
+  if (el('nav-flecha')) el('nav-flecha').textContent = ICONO_MANIOBRA[paso.maniobra] || '⬆️';
+  if (el('nav-accion')) el('nav-accion').textContent = paso.instruccion;
+  if (el('nav-dist-paso')) {
+    el('nav-dist-paso').textContent = paso.distancia_m >= 1000
+      ? `${(paso.distancia_m / 1000).toFixed(1)} km`
+      : `${Math.round(paso.distancia_m)} m`;
   }
 }
 
@@ -1538,6 +1553,13 @@ let avanzandoAutoNegocio = false; // evitar doble disparo
 function actualizarPasoNavegacion(lat, lng) {
   if (!mapaNav) return;
   mapaNav.setView([lat, lng], mapaNav.getZoom(), { animate: true, duration: 0.5 });
+
+  // Avanzar al siguiente paso de la ruta cuando el rider pasa el punto de giro
+  const paso = rutaPasos[rutaPasoActual];
+  if (paso && distMetros(lat, lng, paso.lat, paso.lng) <= 20 && rutaPasoActual < rutaPasos.length - 1) {
+    rutaPasoActual++;
+    mostrarPasoActual();
+  }
 
   // Auto-avanzar a "retiro" cuando rider llega al negocio
   if (!pedidoActivo || pedidoActivo.estado !== 'asignado' || avanzandoAutoNegocio) return;
