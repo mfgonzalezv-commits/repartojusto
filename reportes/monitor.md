@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-18T00:00:00Z
-**Estado:** ⚠️ VERIFICACIÓN NO DISPONIBLE
-**Detalle:** El entorno de ejecución remota bloquea conexiones salientes a hosts externos (proxy respondió 403 Forbidden al tunelizar hacia repartojusto-production.up.railway.app:443). No es posible determinar el estado real del servidor desde este contexto.
+**Última verificación:** 2026-08-18T18:31:50Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** La red del entorno de ejecución remoto bloqueó la conexión saliente (proxy 403 Forbidden al intentar CONNECT a repartojusto-production.up.railway.app:443). No se pudo confirmar si el servicio está operativo o caído. Revisar manualmente o configurar permisos de red outbound en el entorno.
