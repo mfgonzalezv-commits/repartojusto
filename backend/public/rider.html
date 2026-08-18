@@ -1531,7 +1531,8 @@ function mostrarPasoActual() {
   if (!paso) return;
   const el = id => document.getElementById(id);
   if (el('nav-flecha')) el('nav-flecha').textContent = ICONO_MANIOBRA[paso.maniobra] || '⬆️';
-  if (el('nav-accion')) el('nav-accion').textContent = paso.instruccion;
+  if (el('nav-accion')) el('nav-accion').textContent = rutaPasoActual < rutaPasos.length - 1 ? 'Siguiente giro' : 'Último tramo';
+  if (el('nav-calle')) el('nav-calle').textContent = paso.instruccion;
   if (el('nav-dist-paso')) {
     el('nav-dist-paso').textContent = paso.distancia_m >= 1000
       ? `${(paso.distancia_m / 1000).toFixed(1)} km`
