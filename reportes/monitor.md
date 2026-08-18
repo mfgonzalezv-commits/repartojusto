@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-18T01:31:49Z
-**Estado:** ⚠️ NO VERIFICABLE
-**Detalle:** El entorno de ejecución remota bloqueó la conexión saliente a repartojusto-production.up.railway.app (proxy devolvió HTTP 403 Forbidden). No fue posible obtener respuesta del endpoint /health. El servidor puede estar operativo pero la política de red del sandbox impide la verificación desde este entorno.
+**Última verificación:** 2026-08-18T02:31:57 UTC
+**Estado:** ❌ CAÍDO
+**Detalle:** curl exit 56 — sin respuesta del servidor (HTTP 000). El endpoint https://repartojusto-production.up.railway.app/health no respondió.
