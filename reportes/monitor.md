@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-18T00:00:00Z
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** El entorno de ejecución remoto bloqueó la conexión saliente a `repartojusto-production.up.railway.app` (proxy devolvió HTTP 403 Forbidden al establecer el túnel CONNECT). No fue posible determinar si el servidor está operativo. Se requiere ejecutar esta verificación desde un entorno con acceso de red irrestricto o configurar el proxy para permitir ese dominio.
+**Última verificación:** 2026-08-18T06:31:32Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El proxy del entorno de ejecución bloqueó la conexión saliente a repartojusto-production.up.railway.app:443 con HTTP 403 Forbidden. No es posible determinar el estado real del servidor desde este entorno. Se requiere política de red que permita acceso externo, o ejecutar el monitor desde otro entorno.
