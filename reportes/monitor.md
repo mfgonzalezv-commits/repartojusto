@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-18T12:32:18 UTC
+**Última verificación:** 2026-08-18T13:31:36Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del entorno bloqueó la conexión saliente (HTTP 403 Forbidden en el túnel CONNECT). No se obtuvo respuesta del servidor.
+**Detalle:** No se pudo conectar al servidor. El proxy de red del entorno de ejecución devolvió HTTP 403 al intentar hacer CONNECT a repartojusto-production.up.railway.app:443. No es posible determinar desde este entorno si el servidor está operativo — el dominio no está en la lista de destinos permitidos por la política de red.
