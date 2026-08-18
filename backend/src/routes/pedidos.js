@@ -228,9 +228,25 @@ router.put('/:id/estado', auth, solo('rider', 'admin'), async (req, res, next) =
     if (nuevoEstado === 'en_camino') extras = ', en_camino_at = NOW()';
     if (nuevoEstado === 'entregado') extras = ', entregado_at = NOW()';
 
-    const { rows: [actualizado] } = await db(
-      `UPDATE pedidos SET estado = $1 ${extras} WHERE id = $2 RETURNING *`,
+    await db(
+      `UPDATE pedidos SET estado = $1 ${extras} WHERE id = $2`,
       [nuevoEstado, pedido.id]
+    );
+
+    // Volvemos a leer con los joins (nombre del negocio, ubicaciones, etc.)
+    // para que el rider siga viendo esos datos tras avanzar de etapa.
+    const { rows: [actualizado] } = await db(
+      `SELECT p.*,
+              n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
+              n.mostrar_costo_seguimiento,
+              u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
+              ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
+       FROM pedidos p
+       JOIN negocios n ON n.id = p.negocio_id
+       LEFT JOIN riders ri ON ri.id = p.rider_id
+       LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id
+       WHERE p.id = $1`,
+      [pedido.id]
     );
 
     // Acreditar saldo al rider cuando entrega

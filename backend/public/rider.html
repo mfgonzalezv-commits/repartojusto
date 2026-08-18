@@ -244,6 +244,14 @@
     .nav-info-val  { font-size: 16px; font-weight: 800; color: var(--teal); }
     .nav-info-lbl  { font-size: 10px; color: #8fa8c8; font-weight: 500; text-transform: uppercase; margin-top: 2px; }
 
+    /* ── BOTÓN NAVEGAR CON WAZE ── */
+    .btn-waze {
+      width: 100%; margin-bottom: 12px; padding: 13px; border: none; border-radius: var(--r-sm);
+      background: #33CCFF; color: #05233A; font-size: 14px; font-weight: 800;
+      font-family: inherit; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-waze:active { opacity: .85; }
+
 
     /* ── GANANCIAS ── */
     .ganancia-card { background: white; border-radius: var(--r-sm); padding: 16px; border: 1px solid var(--border); margin-bottom: 12px; }
@@ -1704,6 +1712,8 @@ function renderPedidoActivo(p) {
           <div class="nav-info-item"><div class="nav-info-val" id="nav-tiempo">~${Math.round(p.distancia_km / 0.5)} min</div><div class="nav-info-lbl">Tiempo</div></div>
         </div>
 
+        <button id="btn-navegar-waze" class="btn-waze">🧭 Navegar con Waze</button>
+
         <!-- Tarjeta negocio (siempre) -->
         ${cardNegocio}
 
@@ -1817,6 +1827,21 @@ function renderPedidoActivo(p) {
 
   // Resetear flag auto-llegada al cargar nuevo pedido
   avanzandoAutoNegocio = false;
+
+  // Botón "Navegar con Waze" — abre navegación con voz hacia el destino de la etapa actual
+  const btnWaze = $('btn-navegar-waze');
+  if (btnWaze) {
+    const destLat = enCamino ? p.lat_entrega : p.neg_lat;
+    const destLng = enCamino ? p.lng_entrega : p.neg_lng;
+    if (destLat && destLng) {
+      btnWaze.addEventListener('click', () => {
+        window.open(`https://waze.com/ul?ll=${destLat},${destLng}&navigate=yes`, '_blank');
+      });
+    } else {
+      btnWaze.disabled = true;
+      btnWaze.style.opacity = '.5';
+    }
+  }
 
   // Iniciar chat para este pedido
   chatPedidoId = p.id;
