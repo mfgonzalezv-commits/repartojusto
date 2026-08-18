@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-18T03:31:50Z
+**Última verificación:** 2026-08-18T04:32:14Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — la política de red del entorno de ejecución bloqueó la conexión (gateway 403 / policy denial hacia railway.app:443). No fue posible determinar el estado real del servidor.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — proxy de red bloqueó la conexión saliente (HTTP 403 en túnel CONNECT). El servidor puede estar operativo pero el entorno de ejecución no tiene acceso de red a Railway.
