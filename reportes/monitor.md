@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-19T00:00:00Z
+**Última verificación:** 2026-08-19T05:31:53Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy del entorno de ejecución remoto bloqueó el túnel CONNECT con HTTP 403 Forbidden. No es posible verificar el estado real del servidor desde este entorno. Se requiere configuración de red que permita acceso a railway.app.
+**Detalle:** curl exit code 56 (connection reset by peer), HTTP 000 — el servidor no respondió
