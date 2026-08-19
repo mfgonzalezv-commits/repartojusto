@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
 **Última verificación:** 2026-08-19T00:00:00Z
-**Estado:** ❌ CAÍDO
-**Detalle:** curl exit code 56 — conexión rechazada o no se pudo establecer. HTTP status: 000. Sin respuesta del servidor en https://repartojusto-production.up.railway.app/health
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El proxy del entorno de ejecución remoto bloqueó la conexión saliente a repartojusto-production.up.railway.app con HTTP 403. La política de red del sandbox no permite acceso a este host externo. El estado real del servicio es desconocido — verificar manualmente o desde un entorno con acceso irrestricto a internet.
