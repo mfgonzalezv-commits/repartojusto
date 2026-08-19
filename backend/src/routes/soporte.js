@@ -90,16 +90,18 @@ router.post('/', auth, soporteRateLimit, async (req, res, next) => {
   try {
     const { mensaje, historial = [] } = req.body;
     if (!mensaje?.trim()) return res.status(400).json({ error: 'Mensaje requerido' });
+    if (mensaje.length > 1000) return res.status(400).json({ error: 'Mensaje demasiado largo (máx 1000 caracteres)' });
 
     const rol = req.usuario.rol;
     const sistema = rol === 'rider' ? SISTEMA_RIDER : SISTEMA_NEGOCIO;
 
-    const ROLES_VALIDOS = new Set(['user', 'assistant']);
+    // Solo aceptar mensajes 'user' del historial enviado por el cliente para evitar
+    // inyección de mensajes falsos de 'assistant' que manipulen el contexto del LLM.
     const messages = [
       ...historial.slice(-10)
-        .filter(h => ROLES_VALIDOS.has(h.rol) && typeof h.contenido === 'string')
-        .map(h => ({ role: h.rol, content: h.contenido.slice(0, 2000) })),
-      { role: 'user', content: mensaje }
+        .filter(h => h.rol === 'user' && typeof h.contenido === 'string')
+        .map(h => ({ role: 'user', content: h.contenido.slice(0, 1000) })),
+      { role: 'user', content: mensaje.slice(0, 1000) }
     ];
 
     const response = await llamarClaude(sistema, messages);

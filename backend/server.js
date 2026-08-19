@@ -45,7 +45,18 @@ const io = new Server(server, {
 // Middleware
 app.use(helmet({
   crossOriginResourcePolicy: false,
-  contentSecurityPolicy: false   // los frontends usan scripts inline
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'"],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+      imgSrc: ["'self'", 'data:', 'https:'],
+      connectSrc: ["'self'", 'wss:', 'ws:'],
+      objectSrc: ["'none'"],
+      frameAncestors: ["'none'"],
+    }
+  }
 }));
 // Usar CORS_ORIGIN del entorno; en producción debe estar configurado explícitamente
 app.use(cors({ origin: config.CORS_ORIGIN, credentials: false }));
