@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-20T22:31:24Z
+**Última verificación:** 2026-08-20T23:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** curl exit 56 (connection reset/refused) — HTTP 000. El servidor no respondió en https://repartojusto-production.up.railway.app/health
+**Detalle:** El proxy del entorno de ejecución bloqueó la solicitud HTTPS con error 403 Forbidden al intentar CONNECT tunnel a repartojusto-production.up.railway.app:443. No fue posible verificar el estado real del servicio.
