@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-20T19:31:36Z
-**Estado:** ❌ CAÍDO
-**Detalle:** No se pudo verificar el endpoint https://repartojusto-production.up.railway.app/health — el proxy de egress del entorno de ejecución bloqueó la conexión (HTTP 403 CONNECT tunnel, EGRESS_BLOCKED). Esto NO confirma que el servicio de producción esté caído; indica que este monitor no tiene permiso de red para alcanzar el dominio `repartojusto-production.up.railway.app`. Acción sugerida: permitir el dominio en la política de red del entorno o ejecutar el monitor desde una red autorizada.
+**Última verificación:** 2026-08-20T00:00:00Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El agente de monitoreo no pudo alcanzar https://repartojusto-production.up.railway.app/health — el proxy del entorno de ejecución bloqueó la conexión saliente con HTTP 403 (CONNECT tunnel failed). No es posible determinar si el servidor está operativo o caído desde este entorno. Se recomienda verificar manualmente o configurar el monitoreo desde un entorno con acceso externo irrestricto.
