@@ -1,42 +1,34 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-08-20 (jueves)
-**Pipeline total:** 164 prospectos
-**Por estado:** Nuevos: 150 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-08-21 (viernes)
+**Pipeline total:** 166 prospectos
+**Por estado:** Nuevos: 152 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-**Revisión de argumentos del Investigador:**
-- Ventana SSW (PedidosYa vendida a SSW Partners NY el 16/07): HOY ES EL DÍA 35 — el Investigador marcó el 13/08 "no más de 7 días de impacto real", por lo que hoy 20/08 es el CIERRE DEFINITIVO de la ventana SSW. Los borradores para los 7 prospectos PedidosYa deben haber salido esta semana.
-- Post-Premios Uber Eats (ceremonia 29/07): argumento vigente hasta ~20/08 — HOY ES EL ÚLTIMO DÍA de ese argumento. Se incorporó en los mensajes de hoy.
-- Rappi Turbo en Quilpué (urgencia ALTA): incorporado en todos los mensajes.
-- Algoritmo social Rappi entierra negocios sin publicidad paga: incorporado.
-
-**Seguimientos para Contactados más desactualizados (7 días sin draft):**
-- #9 Rotisería El Gaucho (Portales 567, VA): "Jueves 20 de agosto" — primeros encargos del fin de semana, asado/costillar peak agosto, último mes frío, post-Premios UE contraste, Rappi Turbo urgencia.
-- #14 Heladería Glacial (Freire 1340, VA): "Jueves 20 de agosto" — agosto = momento ideal para configurar canal delivery antes del rush de calor octubre-diciembre, sin comisión porcentual en el peak.
-
-**Nuevos prospectos agregados:**
-- #163 El 26 Quilpué (@el26_quilpue, Los Carrera 435 Quilpué, tel. +56 9 7846 0369): bar y comida desde 2002, pizza/hamburguesas/pollo, delivery activo. Rappi Turbo urgencia directa en su zona.
-- #164 Para Ellos Villa Alemana (@paraellos.tienda): tienda regalos/accesorios con delivery propio por Instagram, rubro único en el pipeline.
+- Leída cola.md: se incorporaron argumentos del Investigador (FNE/TDLC vigente todo H2 2026, Rappi Turbo Quilpué urgencia ALTA, algoritmo social Rappi entierra sin publicidad pagada)
+- **Ventana SSW cerrada:** ayer 20/08 fue el último día de alto impacto de la venta PedidosYa a SSW Partners NY (16/07). A partir de hoy el argumento FNE/TDLC estable reemplaza al SSW para los 7 prospectos PedidosYa.
+- Seguimientos "Viernes 21 de agosto" redactados para los 2 Contactados más desactualizados (7 días sin draft): **#12 Librería El Saber** (back-to-school, urgencias escolares viernes, primavera se viene) y **#13 Ferretería Los Maestros** (materiales fin de semana, último viernes de invierno, preparación primavera).
+- 2 nuevos prospectos identificados en Villa Alemana (búsqueda web): **Da Vittorio (#165)** — restaurante italiano consolidado en Paseo Latorre, 136+ reseñas, 4.3/5, tel. (32) 328 6257, sin grandes plataformas detectadas — y **Ristorante Stadio Italiano (#166)** — primer restaurante con espacio para banquetes/eventos en el pipeline.
+- Presentaciones redactadas para los 2 nuevos prospectos con ángulo "primavera en 10 días / septiembre = eventos y celebraciones".
+- Pipeline actualizado: 166 prospectos (añadidos #165 y #166).
+- Próxima acción actualizada para #12 y #13 en la tabla del pipeline.
 
 ## Borradores listos para Matías
 
-Cuatro mensajes nuevos listos en prospectos.md (sección "MENSAJES DEL DÍA 2026-08-20"):
-1. **[9] Rotisería El Gaucho — Jueves 20 de agosto**: seguimiento 7 días, encargos fin de semana, ahorro ~$2.000/pedido, post-Premios UE, Rappi Turbo.
-2. **[14] Heladería Glacial — Jueves 20 de agosto**: ACTIVACIÓN TEMPORADA, agosto = configurar delivery antes del rush calor, ahorro ~$1.300/pedido.
-3. **[163] El 26 Quilpué — Presentación**: bar/comida 20+ años, delivery activo Quilpué, Rappi Turbo urgencia directa zona.
-4. **[164] Para Ellos Villa Alemana — Presentación**: tienda regalos delivery propio Instagram, rubro único, complemento logístico $500 fijo.
+4 mensajes redactados hoy (viernes 21/08):
 
-**PRIORIDADES ABSOLUTAS PENDIENTES (para Matías):**
-- 7 borradores SSW PedidosYa (CIERRE DEFINITIVO HOY 20/08): #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich (+56 958528950), #90 Buenaventura Pizzería (+56 9 4113 4197), #102 La Joya (+56 9 27179828)
-- #22 Sushi Point Delivery (tel. (32) 324 0504): 56 días consecutivos con borradores activos
-- #15 Melt Pizzas: 56 días consecutivos con borradores activos
+1. **[12] Librería El Saber** — seguimiento "Viernes 21 de agosto": back-to-school urgente, útiles escolares del fin de semana, primavera se acerca, Rappi Turbo Quilpué urgencia.
+2. **[13] Ferretería Los Maestros** — seguimiento "Viernes 21 de agosto": materiales de reparación del fin de semana, último viernes de invierno, proyectos de primavera a 10 días, Rappi Turbo Quilpué urgencia.
+3. **[165] Da Vittorio** — presentación: restaurante italiano consolidado Paseo Latorre, 136+ reseñas, sin plataformas grandes, ángulo primavera/celebraciones.
+4. **[166] Ristorante Stadio Italiano** — presentación: primero del rubro banquetes en el pipeline, ángulo primavera/eventos septiembre.
+
+**Cuello de botella crítico (107 días):** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan 57 días consecutivos con borradores activos sin confirmación de envío de Matías — sin feedback de mensajes enviados no se pueden actualizar los 14 estados "Contactado".
 
 ## Nuevos prospectos agregados
 
-1. **El 26 Quilpué** (#163) — bar/comida, Los Carrera 435 Quilpué, desde 2002, @el26_quilpue, tel. +56 9 7846 0369, delivery activo, Rappi Turbo urgencia directa
-2. **Para Ellos Villa Alemana** (#164) — tienda regalos/accesorios delivery, @paraellos.tienda, canal Instagram propio, rubro único en el pipeline
+- **#165 Da Vittorio** — Restaurante italiano, Paseo Latorre, Villa Alemana. 136+ reseñas, 4.3/5 valoración, tel. (32) 328 6257. Sin grandes plataformas detectadas. Prospecto de canal directo con ticket medio-alto (pasta/pizza/risotto).
+- **#166 Ristorante Stadio Italiano** — Restaurante italiano tradicional con espacio para banquetes, Villa Alemana. Sin grandes plataformas detectadas. Primero del rubro eventos/banquetes en el pipeline.
 
 ## Para el Gerente
 
-Pipeline en 164 prospectos (150 Nuevos, 14 Contactados, 0 Registrados); HOY CIERRA la ventana SSW (día 35 venta PedidosYa a SSW Partners NY) y el argumento post-Premios Uber Eats — los 7 borradores PedidosYa (#27, #28, #30, #33, #60, #90, #102) debieron salir esta semana; cuello de botella crítico: 106 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
+Pipeline en 166 prospectos (152 Nuevos, 14 Contactados, 0 Registrados); ventana SSW cerrada definitivamente el 20/08 — 7 borradores PedidosYa requieren confirmación de envío urgente para actualizar estados; 4 borradores redactados hoy con ángulo "último viernes de invierno / primavera en 10 días"; cuello de botella crítico en día 107 sin confirmación de Matías sobre mensajes enviados.

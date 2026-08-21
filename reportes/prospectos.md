@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-20
+**Actualizado:** 2026-08-21
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -15,8 +15,8 @@
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — el jueves inicia el peak del fin de semana: primeros encargos de asado/costillar para el sábado, agosto último mes frío, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 17 de agosto" redactado 17/08 — lunes home office = peak café delivery inicio de semana, último mes invierno, post-Premios Uber Eats contraste, Rappi Turbo Quilpué urgencia |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 18 de agosto" redactado 18/08 — martes = peak consultas y medicamentos veterinarios post-fin de semana, resfrío invernal mascotas peak agosto, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 14 de agosto" redactado 14/08 — 2da semana de clases del semestre, viernes = urgencias escolares del fin de semana (cuadernos, estuches, calculadoras para el lunes), diferenciador único en VA, back-to-school agosto |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 14 de agosto" redactado 14/08 — viernes = materiales para proyectos de fin de semana (reparar gotera el sábado, calefacción el domingo), agosto último mes invierno = peak urgencias, Rappi Turbo Quilpué urgencia |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — tercer viernes de back-to-school, viernes = compras escolares urgentes del fin de semana (cuadernos, calculadoras para el lunes), agosto cierra antes de la primavera, diferenciador único en VA |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — último viernes de agosto = materiales para reparaciones del fin de semana + preparación proyectos primavera (septiembre en 10 días), Rappi Turbo Quilpué urgencia |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — preparación temporada verano: agosto es el momento ideal para dejar el canal delivery activo antes del rush octubre-diciembre, sin comisión que devore el margen en el peak de calor |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -168,10 +168,44 @@
 | 162 | Toros Food-Sandwichería | Sandwichería / comida rápida | Quilpué (en Rappi) | Nuevo | — | Presentación redactada 19/08 — sandwichería activa en Rappi Quilpué, zona con Rappi Turbo ya activo (urgencia directa — la competencia entre plataformas EN SU ZONA ya es real), ahorro ~$1.680/pedido vs. Rappi 28% en pedido $6.000, establecer canal tarifa fija ahora es ventaja competitiva real |
 | 163 | El 26 Quilpué | Bar / comida chilena (pizza, hamburguesas, pollo) | Los Carrera 435, Quilpué | Nuevo | — | Presentación redactada 20/08 — establecimiento desde 2002, canal propio Instagram @el26_quilpue, delivery activo tel. +56 9 7846 0369, Rappi Turbo ya en Quilpué (urgencia directa), primer bar consolidado con tradición en el pipeline, ahorro $500 fijo vs. comisión porcentual |
 | 164 | Para Ellos Villa Alemana | Tienda / regalos / delivery | Villa Alemana (canal propio Instagram @paraellos.tienda) | Nuevo | — | Presentación redactada 20/08 — tienda con delivery propio en Villa Alemana, canal Instagram activo, rubro único (regalos/accesorios a domicilio), sin grandes plataformas detectadas, argumento logística local $500 fijo + ampliar cobertura |
+| 165 | Da Vittorio | Restaurante italiano | Paseo Latorre, Villa Alemana | Nuevo | — | Presentación redactada 21/08 — restaurante italiano consolidado en centro VA, 136+ reseñas (Sluurpy 73/100) y 4.3/5 valoración, tel. (32) 328 6257, sin grandes plataformas de delivery detectadas, pasta/pizza ticket medio-alto, último viernes de agosto antes de la primavera |
+| 166 | Ristorante Stadio Italiano | Restaurante italiano / banquetes | Villa Alemana | Nuevo | — | Presentación redactada 21/08 — restaurante tradicional italiano con espacio para banquetes y eventos en Villa Alemana, sin grandes plataformas detectadas, PRIMERO del rubro banquetes/eventos en el pipeline, septiembre = temporada de celebraciones de primavera |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-21)
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 21 de agosto — el último viernes del invierno**. Septiembre comienza en 10 días: primer mes de primavera, reparaciones postergadas, proyectos de casa, renovación escolar. El viernes es el día de planificación del fin de semana. **IMPORTANTE: La ventana SSW se cerró ayer (20/08)** — a partir de hoy el argumento FNE/TDLC estable reemplaza al SSW para los prospectos PedidosYa. Se redactan **4 mensajes**: (1) seguimientos **"Viernes 21 de agosto"** para los 2 Contactados más desactualizados: **#12 Librería El Saber** (Lynch 234, 7 días sin draft desde 14/08 — back-to-school, compras escolares urgentes del viernes) y **#13 Ferretería Los Maestros** (Portales 123, 7 días sin draft desde 14/08 — materiales del fin de semana + preparación primavera); (2) **presentaciones** para 2 nuevos prospectos italianos encontrados hoy: **Da Vittorio (#165)** — restaurante consolidado en Paseo Latorre con 136+ reseñas — y **Ristorante Stadio Italiano (#166)** — primero del rubro banquetes en el pipeline. Pipeline total: **166 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW CERRADA** (ayer 20/08 fue el último día) — si los 7 borradores PedidosYa (#27, #28, #30, #33, #60, #90, #102) no se enviaron esta semana, usar argumento FNE/TDLC estable de ahora en adelante; (2) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **57 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD CRÍTICA; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (4) **A partir del lunes 24/08 incorporar ángulo "primavera" en todos los mensajes** (septiembre arranca en 10 días). **Actualizado:** 2026-08-21.
+
+---
+
+#### "VIERNES 21 DE AGOSTO" — Contactados sin draft fresco (21/08)
+
+**[12] Librería El Saber — Viernes 21 de agosto (21/08):**
+"Hola Librería El Saber! RepartoJusto — viernes 21 de agosto. El viernes en una librería tiene una dinámica clara en agosto: el estudiante que llega al fin de semana y recién se da cuenta de que le falta el cuaderno de matemáticas, el estuche o la calculadora para el lunes. El papá o la mamá que trabaja en semana y revisa la lista del colegio el viernes en la tarde. Lynch 234 tiene esos materiales — con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el precio de los útiles. Para un pedido de $8.000 en artículos escolares, las plataformas que cobran 28-30% se llevan hasta $2.400 de comisión — con nosotros son $500 siempre, $1.900 que se quedan en la librería. Agosto es el tercer mes de clases y el cierre del invierno: septiembre trae la renovación de materiales para el segundo semestre y las actividades de primavera. Una librería con delivery local en Lynch 234 puede acompañar a los apoderados del barrio con cada encargo urgente sin que salgan al frío. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — establecer el canal de tarifa fija ahora tiene ventaja real antes de que intensifiquen la cobertura en el corredor VA. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo coordinamos antes del fin de semana?"
+
+---
+
+**[13] Ferretería Los Maestros — Viernes 21 de agosto (21/08):**
+"Hola Ferretería Los Maestros! RepartoJusto — viernes 21 de agosto, el último viernes del invierno. El viernes de agosto tiene una dinámica precisa para una ferretería: el cliente que planifica reparar la gotera o pintar el living este fin de semana necesita los materiales hoy — la lija, el silicato, los tornillos, el rodillo. El cliente que trabaja de lunes a viernes no puede esperar al sábado. Además, septiembre arranca en 10 días: primer mes de primavera, reparaciones postergadas del invierno y proyectos de mejora del hogar. En Portales 123 tienen ese inventario — con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el precio del material. Para un pedido de $12.000 en materiales de ferretería, las plataformas que cobran 28-30% se llevan hasta $3.600 de comisión — con nosotros son $500 siempre, $3.100 que se quedan en la ferretería. Una ferretería de barrio con clientela consolidada en Portales 123 no necesita algoritmos ni plataformas de restaurantes: necesita que el tornillo llegue a tiempo para el proyecto del fin de semana. Dato urgente: Rappi Turbo ya opera en Quilpué, a 8 km de Villa Alemana — establecer el canal de tarifa fija ahora tiene ventaja real antes de que intensifiquen la cobertura en el corredor VA. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Lo coordinamos hoy antes del fin de semana?"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (21/08)
+
+**[165] Da Vittorio (Paseo Latorre, Villa Alemana, tel. (32) 328 6257) — Presentación:**
+"Hola Da Vittorio! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana y Quilpué. Los encontramos como uno de los restaurantes mejor evaluados del sector: 136+ reseñas y 4.3/5 en TripAdvisor, ubicados en el Paseo Latorre. La propuesta es directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el precio del plato. Para una pasta o risotto de $9.000, las plataformas que cobran 28-30% se llevan hasta $2.700 de comisión — con nosotros son $500 siempre, más de $2.200 que se quedan en el restaurante. Un establecimiento con la trayectoria y las reseñas de Da Vittorio ya tiene el cliente ganado; lo que RepartoJusto agrega es un canal de logística local a tarifa fija para entregas a domicilio sin pagar porcentaje. Septiembre arranca en 10 días — primavera, eventos, celebraciones: el momento ideal para dejar el canal delivery local configurado antes del peak de temporada. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Conversamos?"
+
+---
+
+**[166] Ristorante Stadio Italiano (Villa Alemana) — Presentación:**
+"Hola Ristorante Stadio Italiano! Los contacta RepartoJusto, plataforma de delivery local con cobertura en Villa Alemana y Quilpué. Los encontramos como un restaurante tradicional italiano con espacio para eventos y banquetes en Villa Alemana. La propuesta es directa: con RepartoJusto la logística de riders locales cuesta $500 fijos por pedido entregado, sin porcentaje sobre el precio del plato. Para un delivery de comida italiana de $10.000, las plataformas que cobran 28-30% se llevan hasta $3.000 de comisión — con nosotros son $500 siempre. Septiembre arranca en 10 días y con él la temporada de celebraciones de primavera: aniversarios, eventos corporativos, cumpleaños. Un restaurante con capacidad para banquetes que también ofrece delivery local tiene un diferenciador claro — el cliente que no puede asistir puede recibir el mismo plato en casa con logística a tarifa fija. Sin contrato, registro completamente gratuito. repartojusto-production.up.railway.app ¿Hablamos?"
 
 ---
 
