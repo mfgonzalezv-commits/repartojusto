@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-21T00:00:00Z
+**Última verificación:** 2026-08-21T01:31:50Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Sin respuesta del servidor (HTTP 000, curl error 56 — falla de red / host inaccesible). URL: https://repartojusto-production.up.railway.app/health
+**Detalle:** No se pudo conectar al servidor. El proxy de red bloqueó la conexión con HTTP 403 Forbidden (repartojusto-production.up.railway.app:443). El servidor puede estar caído o inaccesible desde este entorno.
