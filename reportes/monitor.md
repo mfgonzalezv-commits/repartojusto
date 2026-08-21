@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-21T13:32:00Z
-**Estado:** ⚠️ INDETERMINADO
-**Detalle:** No se pudo alcanzar el endpoint. El proxy de red del entorno de ejecución bloqueó la conexión a repartojusto-production.up.railway.app con HTTP 403 Forbidden (el dominio railway.app no está en la lista de dominios permitidos). No es posible determinar el estado real del servidor desde este entorno.
+**Última verificación:** 2026-08-21T14:32:00Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — la política de red del entorno de ejecución remoto bloquea la solicitud (proxy devolvió 403 Forbidden al intentar el túnel HTTPS). No es posible verificar el estado real del servidor desde este entorno.
