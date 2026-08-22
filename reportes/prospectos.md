@@ -1,12 +1,12 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-21
+**Actualizado:** 2026-08-22
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Sábado 15 de agosto" redactado 15/08 — sábado = peak almuerzo familiar + completos grupo de amigos + partido tarde, último mes frío, Rappi Turbo Quilpué urgencia |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Sábado 22 de agosto" redactado 22/08 — ÚLTIMO sábado del invierno 2026, completos/sándwiches peak familiar, primavera en 10 días = configurar canal antes del rush, Rappi Turbo Quilpué urgencia ALTA |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 19 de agosto" redactado 19/08 — miércoles quiebre de semana, familias prefieren encargar pollo tras 2 días cocinando, ahorro ~$600K/mes vs. Rappi, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA, post-Premios UE contraste |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 15 de agosto" redactado 15/08 — sábado = urgencias medicamentos que no dan espera (adulto mayor, antibiótico terminado, resfrío tardío agosto), Rappi Turbo Quilpué urgencia |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 22 de agosto" redactado 22/08 — ÚLTIMO sábado del invierno: antibióticos/jarabes/medicamentos urgentes sin salir al frío, delivery local $500 fijo, argumento autonomía sucursal + Rappi Turbo Quilpué urgencia ALTA |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 19 de agosto" redactado 19/08 — miércoles peak pizza cena familiar mitad de semana, ahorro ~$990K/mes vs. Rappi (~$2.860/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA, post-Premios UE contraste |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 16 de agosto" redactado 16/08 — PRIORIDAD, domingo noche = peak sushi familiar (último domingo de agosto, fin del invierno), SSW Day 31 silencio, algoritmo social Rappi entierra sin publicidad + Rappi Turbo Quilpué urgencia ALTA |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 16 de agosto" redactado 16/08 — domingo tarde-noche = peak máximo botillería (asado, onces familiares, reunión de amigos), argumento post-Premios Uber Eats + Rappi Turbo Quilpué urgencia ALTA |
@@ -170,10 +170,44 @@
 | 164 | Para Ellos Villa Alemana | Tienda / regalos / delivery | Villa Alemana (canal propio Instagram @paraellos.tienda) | Nuevo | — | Presentación redactada 20/08 — tienda con delivery propio en Villa Alemana, canal Instagram activo, rubro único (regalos/accesorios a domicilio), sin grandes plataformas detectadas, argumento logística local $500 fijo + ampliar cobertura |
 | 165 | Da Vittorio | Restaurante italiano | Paseo Latorre, Villa Alemana | Nuevo | — | Presentación redactada 21/08 — restaurante italiano consolidado en centro VA, 136+ reseñas (Sluurpy 73/100) y 4.3/5 valoración, tel. (32) 328 6257, sin grandes plataformas de delivery detectadas, pasta/pizza ticket medio-alto, último viernes de agosto antes de la primavera |
 | 166 | Ristorante Stadio Italiano | Restaurante italiano / banquetes | Villa Alemana | Nuevo | — | Presentación redactada 21/08 — restaurante tradicional italiano con espacio para banquetes y eventos en Villa Alemana, sin grandes plataformas detectadas, PRIMERO del rubro banquetes/eventos en el pipeline, septiembre = temporada de celebraciones de primavera |
+| 167 | Burgermania Valparaíso | Hamburguesería | Valparaíso (en Uber Eats, entrega a Villa Alemana) | Nuevo | — | Presentación redactada 22/08 — hamburguesería en Uber Eats con cobertura Villa Alemana (~14 min), ahorro ~$2.500/pedido vs. Uber Eats 30% en pedido $9.000, primavera en 10 días + Rappi Turbo urgencia |
+| 168 | Ñamburger | Hamburguesería | Valparaíso (en Uber Eats) | Nuevo | — | Presentación redactada 22/08 — hamburguesería en Uber Eats Valparaíso con delivery a zona, ahorro ~$2.700/pedido vs. Uber Eats 30% en pedido $9.000, primavera en 10 días + canal tarifa fija antes del peak de temporada |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-22)
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 22 de agosto — el ÚLTIMO sábado del invierno 2026**. Septiembre arranca en 10 días: primavera, proyectos de casa, renovación, el peak de temporada caliente. El sábado es el día de mayor demanda de completos, sándwiches y comida de barrio para el almuerzo familiar. **IMPORTANTE: La ventana SSW está cerrada** (20/08 fue el límite definitivo) — a partir de hoy el argumento FNE/TDLC estable es el que opera para los prospectos PedidosYa. Se redactan **4 mensajes**: (1) seguimientos **"Sábado 22 de agosto"** para los 2 Contactados más desactualizados: **#1 Fuente de Soda El Rápido** (Av. Álvarez 1245, 7 días sin draft desde 15/08 — sábado = peak completos/sándwiches familiares, primavera en 10 días) y **#3 Farmacia Cruz Verde** (Av. Álvarez 890, 7 días sin draft desde 15/08 — sábado = urgencias medicamentos sin poder salir al frío); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy en Uber Eats: **Burgermania Valparaíso (#167)** — hamburguesería con cobertura Villa Alemana — y **Ñamburger (#168)** — hamburguesería en Valparaíso, nueva en el pipeline. Pipeline total: **168 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **VENTANA SSW CERRADA** (20/08 fue el límite definitivo) — usar argumento FNE/TDLC estable para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102); (2) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **58 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD CRÍTICA; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (4) **A partir del lunes 24/08 incorporar ángulo "primavera"** en todos los mensajes (septiembre arranca en 10 días). **Actualizado:** 2026-08-22.
+
+---
+
+#### "SÁBADO 22 DE AGOSTO" — Contactados sin draft fresco (22/08)
+
+**[1] Fuente de Soda El Rápido — Sábado 22 de agosto / Último sábado del invierno (22/08):**
+"Hola! De RepartoJusto. Hoy es el último sábado del invierno 2026 — el sábado de completos, sándwiches y bebidas calientes en familia. Desde la próxima semana arrancan los proyectos de primavera y los negocios de barrio que ya tienen delivery activo llegan con ventaja. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para una fuente de soda con pedidos de $5.000 promedio, eso es hasta $1.000 de ahorro por pedido respecto a plataformas que cobran porcentaje. Rappi Turbo ya está operando en Quilpué a 8 km — el canal propio con tarifa fija es la forma de estabilizarse antes de que llegue. Sin contrato, registro gratuito. ¿Empezamos antes de septiembre? repartojusto-production.up.railway.app"
+
+---
+
+**[3] Farmacia Cruz Verde — Sábado 22 de agosto / Último sábado del invierno (22/08):**
+"Hola, buenos días! De RepartoJusto. Hoy sábado las urgencias de salud no esperan: el antibiótico que se terminó, el jarabe para la tos del niño, la presión del adulto mayor que no puede salir al frío. En el último sábado del invierno, el delivery de farmacia a $500 fijos por entrega es exactamente el servicio que las familias de Villa Alemana más necesitan. Con RepartoJusto no hay porcentaje sobre el valor del pedido, ni contrato, y el registro es gratuito. ¿Tiene autonomía esta sucursal para explorar opciones de delivery local? Con gusto coordinamos esta semana antes de que arranque septiembre. repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (22/08)
+
+**[167] Burgermania Valparaíso — Presentación (22/08):**
+"Hola! Somos RepartoJusto, plataforma de delivery local en Villa Alemana y Valparaíso sin comisiones por venta. Detectamos que Burgermania entrega en Villa Alemana vía Uber Eats. Uber Eats cobra un 30% de comisión por cada pedido — para una hamburguesa de $9.000 eso son $2.700 que no son suyos. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre la venta, sin contrato. Septiembre arranca en 10 días y Rappi Turbo ya opera en Quilpué (8 km) — el momento ideal para consolidar un canal con tarifa fija antes del peak de primavera. Registro gratuito. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[168] Ñamburger — Presentación (22/08):**
+"Hola! De RepartoJusto. Vimos a Ñamburger en Uber Eats entregando en Valparaíso y zona. Uber Eats cobra un 30% de comisión — lo que significa que de cada hamburguesa de $9.000, $2.700 van a la plataforma. Con RepartoJusto son $500 fijos por pedido, sin porcentaje. Con septiembre a 10 días y la primavera llegando, es el mejor momento para explorar un canal local con tarifa fija antes del peak de temporada. Sin contrato, registro gratuito. ¿Les interesa conversar? repartojusto-production.up.railway.app"
 
 ---
 
@@ -2939,3 +2973,7 @@
 **El 26 Quilpué (#163, agregado 20/08):** Bar y comida chilena (pizza, hamburguesas, pollo) en Los Carrera 435, Quilpué. Instagram: @el26_quilpue. Delivery activo, tel. +56 9 7846 0369. Establecimiento desde 2002, más de 20 años de trayectoria en Quilpué. Horario estimado: Domingo a jueves 12:30-23:00 hrs, Viernes a sábado 12:30-00:00 hrs. Delivery a Villa Alemana, El Belloto y Quilpué. Ticket promedio estimado: $8.000-$12.000 (pizza/hamburguesa/pollo). Argumento principal: Rappi Turbo ya opera en Quilpué — la competencia de plataformas en su zona es real y directa, establecer canal tarifa fija ahora es ventaja competitiva antes de que se intensifique. Ahorro vs. Rappi 28%: $2.240-$3.360/pedido. Con 15 entregas diarias, ahorro mensual estimado $450.000+. Primer bar/comida de tradición 20+ años en el pipeline. Fuente: @el26_quilpue Instagram + búsqueda delivery Quilpué agosto 2026.
 
 **Para Ellos Villa Alemana (#164, agregado 20/08):** Tienda con delivery propio en Villa Alemana. Instagram: @paraellos.tienda. Canal propio Instagram activo. Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Rubro: tienda de regalos/accesorios/artículos a domicilio — rubro único en el pipeline. Ticket promedio estimado: $8.000-$20.000 (regalos, accesorios). Argumento principal: canal propio ya activo por Instagram DM — RepartoJusto complementa la logística del último kilómetro a $500 fijo sin porcentaje de venta; escala sin que la comisión escale con el ticket. Fuente: @paraellos.tienda Instagram + búsqueda delivery tiendas Villa Alemana agosto 2026.
+
+**Burgermania Valparaíso (#167, agregado 22/08):** Hamburguesería en Valparaíso activa en Uber Eats con cobertura y entrega a Villa Alemana (tiempo estimado ~14 min). Fuente: ubereats.com/cl/store/burgermania-valparaiso (aparece con promoción 2x1 y listada en Uber Eats Villa Alemana). Ticket promedio estimado: $8.000-$12.000 (hamburguesas). Uber Eats cobra 30% de comisión — con 10 entregas diarias a Villa Alemana, el ahorro vs. Uber Eats puede superar $600.000/mes vs. RepartoJusto ($500 fijos). Argumento adicional: Rappi Turbo ya opera en Quilpué (8 km de VA) — la competencia de plataformas en el corredor VA/Quilpué se intensifica; establecer canal propio con tarifa fija es ventaja competitiva antes de que llegue. Primavera en 10 días = momento ideal para configurar antes del peak de temporada. Fuente: ubereats.com/cl/store/burgermania-valparaiso + búsqueda Uber Eats Villa Alemana hamburguesas agosto 2026.
+
+**Ñamburger (#168, agregado 22/08):** Hamburguesería en Valparaíso activa en Uber Eats con entrega en zona Valparaíso. Fuente: ubereats.com/cl-en/store/namburger (aparece en búsqueda Uber Eats Valparaíso hamburguesas). Ticket promedio estimado: $8.000-$11.000 (hamburguesas). Uber Eats cobra 30% de comisión — con 10 entregas diarias, el ahorro vs. Uber Eats supera $540.000/mes vs. RepartoJusto ($500 fijos). Argumento principal: septiembre en 10 días = primavera, prime time para configurar canal de tarifa fija antes del peak de temporada caliente. Dirección exacta y teléfono por confirmar al contactar. Fuente: ubereats.com/cl-en/store/namburger + búsqueda Uber Eats hamburguesas Valparaíso agosto 2026.

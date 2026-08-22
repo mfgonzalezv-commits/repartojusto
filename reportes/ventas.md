@@ -1,34 +1,50 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-08-21 (viernes)
-**Pipeline total:** 166 prospectos
-**Por estado:** Nuevos: 152 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-08-22 (sábado)
+**Pipeline total:** 168 prospectos
+**Por estado:** Nuevos: 154 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-- Leída cola.md: se incorporaron argumentos del Investigador (FNE/TDLC vigente todo H2 2026, Rappi Turbo Quilpué urgencia ALTA, algoritmo social Rappi entierra sin publicidad pagada)
-- **Ventana SSW cerrada:** ayer 20/08 fue el último día de alto impacto de la venta PedidosYa a SSW Partners NY (16/07). A partir de hoy el argumento FNE/TDLC estable reemplaza al SSW para los 7 prospectos PedidosYa.
-- Seguimientos "Viernes 21 de agosto" redactados para los 2 Contactados más desactualizados (7 días sin draft): **#12 Librería El Saber** (back-to-school, urgencias escolares viernes, primavera se viene) y **#13 Ferretería Los Maestros** (materiales fin de semana, último viernes de invierno, preparación primavera).
-- 2 nuevos prospectos identificados en Villa Alemana (búsqueda web): **Da Vittorio (#165)** — restaurante italiano consolidado en Paseo Latorre, 136+ reseñas, 4.3/5, tel. (32) 328 6257, sin grandes plataformas detectadas — y **Ristorante Stadio Italiano (#166)** — primer restaurante con espacio para banquetes/eventos en el pipeline.
-- Presentaciones redactadas para los 2 nuevos prospectos con ángulo "primavera en 10 días / septiembre = eventos y celebraciones".
-- Pipeline actualizado: 166 prospectos (añadidos #165 y #166).
-- Próxima acción actualizada para #12 y #13 en la tabla del pipeline.
+**Argumentos activos hoy (sábado 22/08):**
+- ÚLTIMO sábado del invierno 2026 — primavera en 10 días (septiembre)
+- Rappi Turbo Quilpué (8 km de Villa Alemana) — urgencia ALTA
+- Algoritmo social Rappi entierra negocios sin publicidad paga
+- FNE/TDLC estable para prospectos PedidosYa (ventana SSW cerrada el 20/08)
+- Peak sábado: completos, sándwiches, medicamentos urgentes, delivery familiar
+
+**Seguimientos redactados:**
+- #1 Fuente de Soda El Rápido — "Sábado 22 / Último sábado del invierno" (7 días sin draft desde 15/08)
+- #3 Farmacia Cruz Verde — "Sábado 22 / Medicamentos urgentes de sábado invernal" (7 días sin draft desde 15/08)
+
+**Presentaciones redactadas:**
+- #167 Burgermania Valparaíso — hamburguesería nueva en Uber Eats con cobertura Villa Alemana (~14 min), ahorro ~$2.500/pedido vs. Uber Eats 30%
+- #168 Ñamburger — hamburguesería Valparaíso en Uber Eats, primer contacto
+
+**Novedades del Investigador incorporadas:**
+- Argumento SSW cerrado (20/08) → reemplazado por FNE/TDLC estable para los 7 prospectos PedidosYa
+- Rappi Turbo Quilpué urgencia actualizada a ALTA
+- Argumento primavera "septiembre en 10 días" se activa el lunes 24/08
 
 ## Borradores listos para Matías
 
-4 mensajes redactados hoy (viernes 21/08):
+**PRIORIDAD CRÍTICA (58 días consecutivos con borradores sin confirmar):**
+- #22 Sushi Point Delivery (tel. (32) 324 0504) — múltiples borradores activos
+- #15 Melt Pizzas — múltiples borradores activos
 
-1. **[12] Librería El Saber** — seguimiento "Viernes 21 de agosto": back-to-school urgente, útiles escolares del fin de semana, primavera se acerca, Rappi Turbo Quilpué urgencia.
-2. **[13] Ferretería Los Maestros** — seguimiento "Viernes 21 de agosto": materiales de reparación del fin de semana, último viernes de invierno, proyectos de primavera a 10 días, Rappi Turbo Quilpué urgencia.
-3. **[165] Da Vittorio** — presentación: restaurante italiano consolidado Paseo Latorre, 136+ reseñas, sin plataformas grandes, ángulo primavera/celebraciones.
-4. **[166] Ristorante Stadio Italiano** — presentación: primero del rubro banquetes en el pipeline, ángulo primavera/eventos septiembre.
+**Borradores de HOY (22/08):**
+1. #1 Fuente de Soda El Rápido — seguimiento "Último sábado del invierno" (en borradores de prospectos.md)
+2. #3 Farmacia Cruz Verde — seguimiento "Sábado 22, urgencias medicamentos" (en borradores de prospectos.md)
+3. #167 Burgermania Valparaíso — presentación inicial
+4. #168 Ñamburger — presentación inicial
 
-**Cuello de botella crítico (107 días):** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan 57 días consecutivos con borradores activos sin confirmación de envío de Matías — sin feedback de mensajes enviados no se pueden actualizar los 14 estados "Contactado".
+**Borradores urgentes pendientes de semanas anteriores:**
+- 7 prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya) — la ventana SSW cerró el 20/08; usar ahora argumento FNE/TDLC estable
 
-## Nuevos prospectos agregados
+## Nuevos prospectos agregados hoy
 
-- **#165 Da Vittorio** — Restaurante italiano, Paseo Latorre, Villa Alemana. 136+ reseñas, 4.3/5 valoración, tel. (32) 328 6257. Sin grandes plataformas detectadas. Prospecto de canal directo con ticket medio-alto (pasta/pizza/risotto).
-- **#166 Ristorante Stadio Italiano** — Restaurante italiano tradicional con espacio para banquetes, Villa Alemana. Sin grandes plataformas detectadas. Primero del rubro eventos/banquetes en el pipeline.
+1. **Burgermania Valparaíso (#167)** — Hamburguesería en Uber Eats con cobertura Villa Alemana. Ahorro ~$2.500/pedido vs. Uber Eats 30%. Fuente: ubereats.com/cl/store/burgermania-valparaiso
+2. **Ñamburger (#168)** — Hamburguesería en Uber Eats Valparaíso. Primer contacto, datos a confirmar. Fuente: ubereats.com/cl-en/store/namburger
 
 ## Para el Gerente
 
-Pipeline en 166 prospectos (152 Nuevos, 14 Contactados, 0 Registrados); ventana SSW cerrada definitivamente el 20/08 — 7 borradores PedidosYa requieren confirmación de envío urgente para actualizar estados; 4 borradores redactados hoy con ángulo "último viernes de invierno / primavera en 10 días"; cuello de botella crítico en día 107 sin confirmación de Matías sobre mensajes enviados.
+Pipeline en 168 prospectos (154 Nuevos, 14 Contactados, 0 Registrados). Argumentos redirigidos post-cierre ventana SSW: FNE/TDLC estable para prospectos PedidosYa. #22 Sushi Point Delivery y #15 Melt Pizzas llevan 58 días con borradores activos — cuello de botella crítico sigue siendo confirmación de Matías sobre envíos.
