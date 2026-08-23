@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-22
+**Actualizado:** 2026-08-23
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -8,8 +8,8 @@
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 19 de agosto" redactado 19/08 — miércoles quiebre de semana, familias prefieren encargar pollo tras 2 días cocinando, ahorro ~$600K/mes vs. Rappi, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA, post-Premios UE contraste |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 22 de agosto" redactado 22/08 — ÚLTIMO sábado del invierno: antibióticos/jarabes/medicamentos urgentes sin salir al frío, delivery local $500 fijo, argumento autonomía sucursal + Rappi Turbo Quilpué urgencia ALTA |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 19 de agosto" redactado 19/08 — miércoles peak pizza cena familiar mitad de semana, ahorro ~$990K/mes vs. Rappi (~$2.860/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA, post-Premios UE contraste |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 16 de agosto" redactado 16/08 — PRIORIDAD, domingo noche = peak sushi familiar (último domingo de agosto, fin del invierno), SSW Day 31 silencio, algoritmo social Rappi entierra sin publicidad + Rappi Turbo Quilpué urgencia ALTA |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 16 de agosto" redactado 16/08 — domingo tarde-noche = peak máximo botillería (asado, onces familiares, reunión de amigos), argumento post-Premios Uber Eats + Rappi Turbo Quilpué urgencia ALTA |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, peak sushi familiar noche dominical, algoritmo social Rappi entierra sin publicidad, primavera en 9 días = configurar canal antes del rush de temporada, Rappi Turbo Quilpué urgencia ALTA |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, domingo tarde-noche = peak máximo botillería (asados, onces familiares, reuniones), primavera en 9 días = peak cerveza/vino en jardín se acerca, Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 18 de agosto" redactado 18/08 — martes = reposición midweek teletrabajadores agotan básicos mitad de semana, agosto último frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 17 de agosto" redactado 17/08 — lunes = peak encargos tortas/celebraciones semana, último mes invierno, post-Premios Uber Eats contraste, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — el jueves inicia el peak del fin de semana: primeros encargos de asado/costillar para el sábado, agosto último mes frío, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
@@ -172,10 +172,44 @@
 | 166 | Ristorante Stadio Italiano | Restaurante italiano / banquetes | Villa Alemana | Nuevo | — | Presentación redactada 21/08 — restaurante tradicional italiano con espacio para banquetes y eventos en Villa Alemana, sin grandes plataformas detectadas, PRIMERO del rubro banquetes/eventos en el pipeline, septiembre = temporada de celebraciones de primavera |
 | 167 | Burgermania Valparaíso | Hamburguesería | Valparaíso (en Uber Eats, entrega a Villa Alemana) | Nuevo | — | Presentación redactada 22/08 — hamburguesería en Uber Eats con cobertura Villa Alemana (~14 min), ahorro ~$2.500/pedido vs. Uber Eats 30% en pedido $9.000, primavera en 10 días + Rappi Turbo urgencia |
 | 168 | Ñamburger | Hamburguesería | Valparaíso (en Uber Eats) | Nuevo | — | Presentación redactada 22/08 — hamburguesería en Uber Eats Valparaíso con delivery a zona, ahorro ~$2.700/pedido vs. Uber Eats 30% en pedido $9.000, primavera en 10 días + canal tarifa fija antes del peak de temporada |
+| 169 | Bonsai Sushi & Sandwich | Sushi / sándwiches | Araya 1505, Villa Alemana | Nuevo | — | Presentación redactada 23/08 — activo en Rappi Y Uber Eats simultáneamente (doble comisión), ahorro ~$2.240/pedido vs. Rappi 28% + ~$2.400/pedido vs. Uber Eats 30% en rollo $8.000, argumento doble comisión máximo poder, primavera en 9 días, Rappi Turbo urgencia |
+| 170 | Fast & Good | Comida rápida / sándwiches | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 23/08 — sandwichería/comida rápida en Rappi Villa Alemana, ahorro ~$1.680/pedido vs. Rappi 28% en pedido $6.000, argumento Rappi Turbo urgencia ALTA (ya en Quilpué), primavera en 9 días = momento ideal para canal local tarifa fija |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-23)
+
+> **NOTA PARA MATÍAS:** Hoy es **domingo 23 de agosto — el ÚLTIMO DOMINGO DEL INVIERNO 2026**. La primavera arranca en 9 días. El domingo es el peak máximo de sushi familiar nocturno y de botillería (asados, onces, reuniones). **Argumento del día:** primavera en 9 días + Rappi Turbo ya en Quilpué + algoritmo social Rappi entierra sin publicidad + FNE/TDLC estable para PedidosYa. Se redactan **4 mensajes**: (1) seguimientos **"Domingo 23 de agosto"** para los 2 Contactados con 7 días sin draft: **#5 Sushi Zen** (Freire 1100, último domingo del invierno = peak sushi familiar noche dominical) y **#6 Botillería El Copihue** (Av. Álvarez 2310, domingo tarde-noche = peak máximo botillería); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Bonsai Sushi & Sandwich (#169)** — activo en Rappi Y Uber Eats (doble comisión) — y **Fast & Good (#170)** — sandwichería en Rappi VA. Pipeline total: **170 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **59 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (3) **Argumento "primavera en 9 días" activo desde hoy** — incorporar en todos los mensajes de esta semana. **Actualizado:** 2026-08-23.
+
+---
+
+#### "DOMINGO 23 DE AGOSTO" — Contactados sin draft fresco (23/08)
+
+**[5] Sushi Zen — Domingo 23 de agosto / Último domingo del invierno (23/08):**
+"Hola! De RepartoJusto 🍣 Hoy domingo — el ÚLTIMO domingo del invierno 2026 — el sushi en familia está en su peak máximo. Pero ojo: Rappi tiene un nuevo algoritmo social que entierra a los negocios que no pagan publicidad dentro de la app. Con RepartoJusto no hay algoritmo que te esconda: $500 fijos por pedido entregado, sin porcentaje sobre la venta, sin letra chica. En 9 días arranca la primavera — el mejor momento para configurar un canal de delivery propio antes del rush de temporada. Rappi Turbo ya opera en Quilpué a 8 km. Sin contrato, registro gratuito. ¿Empezamos esta semana? repartojusto-production.up.railway.app"
+
+---
+
+**[6] Botillería El Copihue — Domingo 23 de agosto / Último domingo del invierno (23/08):**
+"Hola! De RepartoJusto 🍺 Hoy domingo — el ÚLTIMO domingo del invierno — los asados, las onces familiares y las reuniones están en su punto más alto. La botillería a domicilio es el servicio más pedido. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre el precio de la botella. En 9 días arranca la primavera — el peak de cerveza y vino en el jardín llega pronto. Rappi Turbo ya está en Quilpué (8 km) con entregas en 15 minutos. Sin contrato, registro gratuito. ¿Los conectamos esta semana? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (23/08)
+
+**[169] Bonsai Sushi & Sandwich — Presentación (23/08):**
+"Hola! Somos RepartoJusto, plataforma de delivery en Villa Alemana sin comisiones por venta. Vemos a Bonsai Sushi & Sandwich activos en Rappi Y Uber Eats simultáneamente — pagando doble comisión en cada pedido (Rappi 28% + Uber Eats 30%). Para un rollo de $8.000, eso son hasta $2.400 que van a la plataforma en vez de a tu caja. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje. En 9 días arranca la primavera — momento ideal para consolidar un canal local con tarifa fija antes del peak de temporada. Sin contrato, registro gratuito. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[170] Fast & Good — Presentación (23/08):**
+"Hola! Somos RepartoJusto, plataforma de delivery local en Villa Alemana sin comisiones por venta. Vimos a Fast & Good en Rappi — lo que significa pagar un 28% de comisión por cada pedido. Con RepartoJusto son $500 fijos, sin porcentaje sobre la venta. Rappi Turbo ya está en Quilpué (8 km) y en 9 días arranca la primavera: el momento ideal para estabilizarse con canal propio de tarifa fija antes del peak de temporada. Sin contrato, registro gratuito. ¿Les interesa conocer cómo funciona? repartojusto-production.up.railway.app"
 
 ---
 
