@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
 **Última verificación:** 2026-08-23T00:00:00Z
-**Estado:** ❌ CAÍDO
-**Detalle:** curl exit 56 (fallo de red) — HTTP 000, sin respuesta del servidor en https://repartojusto-production.up.railway.app/health
+**Estado:** ⚠️ SIN VERIFICAR
+**Detalle:** El entorno de ejecución remota (Claude Code cloud) bloquea conexiones salientes a Railway mediante el proxy configurado (CONNECT tunnel 403 Forbidden). No fue posible alcanzar https://repartojusto-production.up.railway.app/health. El estado real del servidor no puede determinarse desde este entorno; verificar manualmente o desde un entorno con acceso de red irrestricto.
