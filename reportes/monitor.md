@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-24T20:31:45Z
+**Última verificación:** 2026-08-24T21:31:43Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — curl terminó con código 56 (fallo de red), HTTP 000 (sin respuesta). La política de red del entorno bloquea las conexiones salientes a Railway. No es posible determinar el estado real del servidor desde este entorno.
+**Detalle:** HTTP 000 — conexión fallida (curl exit 56: recv failure / no se pudo alcanzar https://repartojusto-production.up.railway.app/health)
