@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-23
+**Actualizado:** 2026-08-24
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -11,9 +11,9 @@
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, peak sushi familiar noche dominical, algoritmo social Rappi entierra sin publicidad, primavera en 9 días = configurar canal antes del rush de temporada, Rappi Turbo Quilpué urgencia ALTA |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, domingo tarde-noche = peak máximo botillería (asados, onces familiares, reuniones), primavera en 9 días = peak cerveza/vino en jardín se acerca, Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 18 de agosto" redactado 18/08 — martes = reposición midweek teletrabajadores agotan básicos mitad de semana, agosto último frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 17 de agosto" redactado 17/08 — lunes = peak encargos tortas/celebraciones semana, último mes invierno, post-Premios Uber Eats contraste, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — primer lunes de la última semana del invierno, peak encargos tortas para celebraciones semana, primavera en 8 días = bodas/quinceañeros/fiestas de primavera = configurar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — el jueves inicia el peak del fin de semana: primeros encargos de asado/costillar para el sábado, agosto último mes frío, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 17 de agosto" redactado 17/08 — lunes home office = peak café delivery inicio de semana, último mes invierno, post-Premios Uber Eats contraste, Rappi Turbo Quilpué urgencia |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — lunes home office = peak café delivery inicio de semana, primavera en 8 días = terrazas al aire libre / café primaveral = planificar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 18 de agosto" redactado 18/08 — martes = peak consultas y medicamentos veterinarios post-fin de semana, resfrío invernal mascotas peak agosto, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — tercer viernes de back-to-school, viernes = compras escolares urgentes del fin de semana (cuadernos, calculadoras para el lunes), agosto cierra antes de la primavera, diferenciador único en VA |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — último viernes de agosto = materiales para reparaciones del fin de semana + preparación proyectos primavera (septiembre en 10 días), Rappi Turbo Quilpué urgencia |
@@ -174,10 +174,44 @@
 | 168 | Ñamburger | Hamburguesería | Valparaíso (en Uber Eats) | Nuevo | — | Presentación redactada 22/08 — hamburguesería en Uber Eats Valparaíso con delivery a zona, ahorro ~$2.700/pedido vs. Uber Eats 30% en pedido $9.000, primavera en 10 días + canal tarifa fija antes del peak de temporada |
 | 169 | Bonsai Sushi & Sandwich | Sushi / sándwiches | Araya 1505, Villa Alemana | Nuevo | — | Presentación redactada 23/08 — activo en Rappi Y Uber Eats simultáneamente (doble comisión), ahorro ~$2.240/pedido vs. Rappi 28% + ~$2.400/pedido vs. Uber Eats 30% en rollo $8.000, argumento doble comisión máximo poder, primavera en 9 días, Rappi Turbo urgencia |
 | 170 | Fast & Good | Comida rápida / sándwiches | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 23/08 — sandwichería/comida rápida en Rappi Villa Alemana, ahorro ~$1.680/pedido vs. Rappi 28% en pedido $6.000, argumento Rappi Turbo urgencia ALTA (ya en Quilpué), primavera en 9 días = momento ideal para canal local tarifa fija |
+| 171 | Puerto Rolls Valparaíso | Sushi delivery / opciones veganas | Victoria 2778 (Plaza O'Higgins) y Cochrane 558 (Plaza Sotomayor), Valparaíso (@puertorollsvalpo) | Nuevo | — | Presentación redactada 24/08 — sushi delivery con 18K seguidores Instagram, dos locales activos en Valparaíso, opciones 100% veganas, canal propio web (puertorolls.cl) + Instagram + Facebook, tel. +56 32 259 1509, primavera en 8 días = peak de pedidos de celebración |
+| 172 | Sushired | Sushi delivery | Huito 580 Local 20, Valparaíso (@sushired.valpo) | Nuevo | — | Presentación redactada 24/08 — sushi delivery a todo Valparaíso, 13K seguidores Instagram, Lun-Sáb 9:00-24:00 Dom 12:00-23:00, canal propio Instagram+Facebook (/sushired), tel. +56982638261, tabla 30 pzs $8.490 vía WhatsApp, primavera en 8 días = momento ideal para canal $500 fijo |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-24)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 24 de agosto — primer lunes de la última semana del invierno 2026**. Septiembre = primavera en 8 días. El lunes es el peak de encargos de tortas para celebraciones de la semana y del café delivery para el home office. **ARGUMENTO NUEVO ACTIVO:** "septiembre = primavera en 8 días — el mejor momento para configurar el canal delivery antes del peak de temporada (bodas, quinceañeros, fiestas de primavera)." Se redactan **4 mensajes**: (1) seguimientos **"Lunes 24 de agosto"** para los 2 Contactados con 7 días sin draft: **#8 Pastelería Dulce Hogar** (Av. Álvarez 1890, lunes = peak encargos tortas, primavera en 8 días = bodas/quinceañeros) y **#10 Café El Árbol** (Freire 890, lunes home office = peak café delivery, primavera = terrazas al aire libre); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy en Valparaíso: **Puerto Rolls Valparaíso (#171)** — 18K seguidores Instagram, 2 locales, sushi delivery — y **Sushired (#172)** — 13K seguidores, delivery todo Valparaíso. Pipeline total: **172 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **60 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (3) **Ventana SSW cerrada** desde el 20/08 — argumento FNE/TDLC estable para los 7 prospectos PedidosYa. **Actualizado:** 2026-08-24.
+
+---
+
+#### "LUNES 24 DE AGOSTO" — Contactados sin draft fresco (24/08)
+
+**[8] Pastelería Dulce Hogar — Lunes 24 de agosto / Primavera en 8 días (24/08):**
+"Hola! De RepartoJusto 🍰 Este lunes arranca la última semana del invierno — el peak de encargos de tortas para cumpleaños, aniversarios y celebraciones de la semana. Pero ojo: Rappi tiene un nuevo algoritmo social que entierra a los negocios que no pagan publicidad dentro de la app — sin pauta, el feed los esconde. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre el precio de la torta, sin algoritmo que los esconda. Septiembre = primavera en 8 días = bodas, quinceañeros, fiestas de primavera — el peak de pastelería se viene. El momento ideal para configurar el canal delivery propio es ahora. Rappi Turbo ya opera en Quilpué a 8 km. Sin contrato, registro gratuito. ¿Nos conectamos antes del peak? repartojusto-production.up.railway.app"
+
+---
+
+**[10] Café El Árbol — Lunes 24 de agosto / Primavera en 8 días (24/08):**
+"Hola! De RepartoJusto ☕ Lunes — el día con más pedidos de café a domicilio para el home office. Esta semana llega septiembre y la primavera en 8 días: café en terraza al aire libre, reuniones afuera, el cambio de temporada que trae más demanda. Rappi tiene un algoritmo social nuevo que entierra a los negocios que no pagan publicidad dentro de la app. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre la venta, sin algoritmo que los esconda. Rappi Turbo ya está en Quilpué a 8 km. Sin contrato, registro gratuito. ¿Los conectamos esta semana, antes del peak de primavera? repartojusto-production.up.railway.app"
+
+---
+
+#### NUEVOS PROSPECTOS DEL DÍA — Presentaciones (24/08)
+
+**[171] Puerto Rolls Valparaíso — Presentación (24/08):**
+"Hola! Somos RepartoJusto, plataforma de delivery en Villa Alemana y zona Valparaíso sin comisiones por venta. Vemos a Puerto Rolls como uno de los referentes del sushi delivery en Valparaíso — 18K seguidores en Instagram, dos locales activos y una propuesta vegana diferenciada. En 8 días arranca la primavera: el mejor momento para sumar un canal con tarifa fija antes del peak de temporada. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre la venta. Sin contrato, registro gratuito. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[172] Sushired — Presentación (24/08):**
+"Hola! Somos RepartoJusto, plataforma de delivery en Valparaíso y zona sin comisiones por venta. Vemos que Sushired tiene delivery activo a todo Valparaíso con 13K seguidores en Instagram — un canal propio sólido. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre la venta, sin algoritmo que los esconda. En 8 días arranca la primavera — el mejor momento para consolidar la logística de delivery con tarifa fija antes del rush de temporada. Sin contrato, registro gratuito. ¿Les interesa sumar RepartoJusto a su zona de cobertura? repartojusto-production.up.railway.app"
 
 ---
 
