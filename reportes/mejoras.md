@@ -1,152 +1,155 @@
 # Mejoras RepartoJusto
-**Fecha:** 2026-08-17
-**Estado:** 5 mejoras identificadas — 3 de seguridad, 1 de rendimiento, 1 de memoria
+**Fecha:** 2026-08-24
+**Estado:** 5 mejoras identificadas — 3 de seguridad, 1 de rendimiento, 1 de UX/negocio
 
 ---
 
-## 1. `chat:enviar` sin verificar pertenencia al pedido — inyección de mensajes cruzados
+## 1. `pedido:seguir` sin verificar propiedad — cualquier usuario puede espiar tracking ajeno
 
-**Archivo:** `backend/src/sockets/index.js:161`
-**Beneficio:** Evita que cualquier usuario autenticado (rider o negocio ajeno) inyecte mensajes en el chat de un pedido que no le corresponde con solo conocer el `pedido_id`.
+**Archivo:** `backend/src/sockets/index.js:101`
+**Beneficio:** Impide que un usuario autenticado (negocio o rider ajeno) se suscriba al tracking en tiempo real de cualquier pedido solo conociendo su ID.
 
 ```js
-// Antes (línea 161):
-socket.on('chat:enviar', ({ pedido_id, texto }) => {
-  if (!pedido_id || !texto || !String(texto).trim()) return;
-  const desde = rol === 'rider' ? 'rider' : 'negocio';
+// Antes (línea 101-104):
+socket.on('pedido:seguir', ({ pedido_id }) => {
+  if (!pedido_id) return;
+  socket.join(`pedido:${pedido_id}`);
+});
 
 // Después:
-socket.on('chat:enviar', async ({ pedido_id, texto }) => {
-  if (!pedido_id || !texto || !String(texto).trim()) return;
-
+socket.on('pedido:seguir', async ({ pedido_id }) => {
+  if (!pedido_id) return;
   const { rows: [ped] } = await db(
     `SELECT negocio_id, rider_id FROM pedidos WHERE id = $1`, [pedido_id]
   ).catch(() => ({ rows: [] }));
   if (!ped) return;
-
   const autorizado =
     rol === 'admin' ||
     (rol === 'negocio' && ped.negocio_id === socket.negocio_id) ||
     (rol === 'rider'   && ped.rider_id   === socket.rider_id);
-  if (!autorizado) return socket.emit('chat:error', { error: 'Sin acceso a este pedido' });
-
-  const desde = rol === 'rider' ? 'rider' : 'negocio';
+  if (!autorizado) return;
+  socket.join(`pedido:${pedido_id}`);
+});
 ```
 
 ---
 
-## 2. `io.emit('rider:fuera_linea')` broadcast global — fuga de estado interno
+## 2. `rider:ubicacion` escribe en PostgreSQL en cada evento — saturación de BD bajo carga
 
-**Archivo:** `backend/src/sockets/index.js:187`
-**Beneficio:** Evita que clientes finales (clientes rastreando una entrega) reciban eventos internos del sistema de riders, reduciendo la superficie de información expuesta por WebSocket.
+**Archivo:** `backend/src/sockets/index.js:67`
+**Beneficio:** Evita que actualizaciones de GPS a 1–2 Hz generen decenas de `UPDATE` por segundo en PostgreSQL; un throttle por rider reduce las escrituras ~90 % manteniendo el tracking preciso.
 
 ```js
-// Antes (línea 187):
-io.emit('rider:fuera_linea', { rider_id: socket.rider_id });
+// Añadir al inicio del módulo (justo antes de module.exports):
+const _ubicThrottle = new Map(); // rider_id → ultimo timestamp escritura
 
-// Después:
-io.to('admin').emit('rider:fuera_linea', { rider_id: socket.rider_id });
+// Reemplazar el UPDATE dentro de 'rider:ubicacion' (línea 72-75):
+// Antes:
+await db('UPDATE riders SET lat = $1, lng = $2 WHERE id = $3', [lat, lng, socket.rider_id]);
+
+// Después (throttle de 5 segundos por rider):
+const ahora = Date.now();
+const ultimo = _ubicThrottle.get(socket.rider_id) || 0;
+if (ahora - ultimo >= 5000) {
+  _ubicThrottle.set(socket.rider_id, ahora);
+  await db('UPDATE riders SET lat = $1, lng = $2 WHERE id = $3', [lat, lng, socket.rider_id]);
+}
+// El broadcast a negocios y sala del pedido ocurre igual, sin throttle.
 ```
 
 ---
 
-## 3. Memory leak en `_ubicacionStore` — Map sin evicción de entradas expiradas
+## 3. Webhook de Flow acepta requests sin firma en modo sandbox — pagos falsos confirmables
 
-**Archivo:** `backend/src/routes/riders.js:63`
-**Beneficio:** Elimina el crecimiento indefinido de memoria del rate limiter de ubicación, que acumula una entrada por cada rider que alguna vez envió coordenadas y nunca las libera.
+**Archivo:** `backend/src/routes/pagos.js:143`
+**Beneficio:** Bloquea la confirmación de pagos fraudulentos en entornos sandbox compartidos o cuando `FLOW_SECRET` está configurado pero el entorno no está en producción.
 
 ```js
-// Añadir DESPUÉS de la función ubicacionRateLimit (línea 75):
-setInterval(() => {
-  const expiry = Date.now() - 60000;
-  for (const [key, val] of _ubicacionStore) {
-    if (val.first < expiry) _ubicacionStore.delete(key);
+// Antes (línea 143-148): sandbox sin secreto → solo advertencia, sigue procesando
+if (!flowSecret) {
+  if (config.FLOW_ENVIRONMENT !== 'sandbox') {
+    console.error('❌ FLOW_SECRET no configurado en producción — webhook rechazado');
+    return res.status(401).end();
   }
-}, 5 * 60 * 1000);
+  console.warn('⚠️  FLOW_SECRET no configurado: webhook sin validación (solo sandbox)');
+}
+
+// Después: si hay secreto, siempre validar firma sin importar el entorno
+if (!flowSecret) {
+  if (config.FLOW_ENVIRONMENT !== 'sandbox') {
+    console.error('❌ FLOW_SECRET no configurado en producción — webhook rechazado');
+    return res.status(401).end();
+  }
+  // Sandbox sin secreto: se permite solo para desarrollo local sin secreto configurado
+  console.warn('⚠️  Webhook sin validación: configura FLOW_SECRET para mayor seguridad');
+} else {
+  // Con secreto configurado: validar firma SIEMPRE, independiente del entorno
+  const receivedSig = req.headers['x-flow-signature'];
+  if (!receivedSig) {
+    console.warn('⚠️  Webhook rechazado: falta x-flow-signature');
+    return res.status(401).end();
+  }
+  const params = Object.keys(req.body).sort().reduce((acc, k) => acc + k + req.body[k], '');
+  const expected = crypto.createHmac('sha256', flowSecret).update(params).digest('hex');
+  let sigValid = false;
+  try {
+    sigValid = crypto.timingSafeEqual(Buffer.from(receivedSig, 'hex'), Buffer.from(expected, 'hex'));
+  } catch { sigValid = false; }
+  if (!sigValid) {
+    console.warn('⚠️  Webhook rechazado: firma inválida');
+    return res.status(401).end();
+  }
+}
 ```
 
 ---
 
-## 4. `push-subscription` almacenada sin validar estructura — inyección de datos arbitrarios
+## 4. Cancelación sin reembolso del cobro previo en modo activo — pérdida de confianza del negocio
 
-**Archivo:** `backend/src/routes/riders.js:195`
-**Beneficio:** Previene que un actor malicioso almacene objetos arbitrarios de gran tamaño o con campos extraños en la columna `push_subscription`, lo que podría corromper el motor de notificaciones push.
+**Archivo:** `backend/src/routes/pedidos.js:318`
+**Beneficio:** Cuando un negocio cancela un pedido ya cobrado (modo activo), actualmente no se intenta ningún reembolso; agregar la llamada de reembolso y registrar el intento mejora la transparencia y reduce disputas.
 
 ```js
-// Antes (línea 198):
-const { subscription } = req.body;
-if (!subscription) return res.status(400).json({ error: 'Suscripción requerida' });
-await db(
-  `UPDATE riders SET push_subscription = $1 WHERE usuario_id = $2`,
-  [JSON.stringify(subscription), req.usuario.id]
-);
+// Añadir después de la actualización del pedido en PUT /:id/cancelar (línea 355-367):
+// Si el pedido tenía pago registrado y estaba en modo activo, intentar reembolso
+if (!enPrueba) {
+  const { rows: [pago] } = await db(
+    `SELECT * FROM pagos WHERE pedido_id = $1 AND estado = 'pagado'`,
+    [rows[0].id]
+  );
+  if (pago) {
+    // TODO: llamar a flow.reembolsar({ flow_order_id: pago.flow_order_id, monto: pago.monto })
+    // Por ahora: registrar intento para revisión manual
+    await db(
+      `UPDATE pagos SET estado = 'reembolso_pendiente', metadata = metadata || '{"cancelacion": true}'
+       WHERE id = $1`,
+      [pago.id]
+    ).catch(err => console.error('❌ Error marcando reembolso:', err.message));
+    console.warn(`⚠️  Pedido ${rows[0].id} cancelado con pago cobrado — reembolso pendiente manual`);
+  }
+}
+```
+
+---
+
+## 5. `io.emit('pedido:nuevo')` hace broadcast global — negocios y admin reciben eventos de riders
+
+**Archivo:** `backend/src/sockets/asignacion.js:80`
+**Beneficio:** Restringe el broadcast de pedidos disponibles solo a sockets del room `riders_disponibles`, evitando que negocios o clientes reciban datos internos del motor de asignación.
+
+```js
+// En iniciarScheduler o al conectar un rider, unirlo a un room dedicado:
+// En sockets/index.js, dentro del bloque if (rol === 'rider') (línea 48-56), añadir:
+socket.join('riders_disponibles');
+
+// En sockets/asignacion.js línea 80 — cambiar broadcast global por room específico:
+// Antes:
+io.emit('pedido:nuevo', _payload(pedido));
 
 // Después:
-const { subscription } = req.body;
-if (!subscription || typeof subscription !== 'object') {
-  return res.status(400).json({ error: 'Suscripción requerida' });
-}
-if (typeof subscription.endpoint !== 'string' || !subscription.endpoint.startsWith('https://')) {
-  return res.status(400).json({ error: 'Suscripción inválida: endpoint requerido' });
-}
-if (!subscription.keys ||
-    typeof subscription.keys.p256dh !== 'string' ||
-    typeof subscription.keys.auth !== 'string') {
-  return res.status(400).json({ error: 'Suscripción inválida: keys requeridas' });
-}
-const cleanSub = {
-  endpoint: subscription.endpoint,
-  expirationTime: subscription.expirationTime || null,
-  keys: { p256dh: subscription.keys.p256dh, auth: subscription.keys.auth },
-};
-await db(
-  `UPDATE riders SET push_subscription = $1 WHERE usuario_id = $2`,
-  [JSON.stringify(cleanSub), req.usuario.id]
-);
+io.to('riders_disponibles').emit('pedido:nuevo', _payload(pedido));
 ```
 
 ---
 
-## 5. Doble query de autorización en `GET /pedidos/:id` — round-trips innecesarios a BD
-
-**Archivo:** `backend/src/routes/pedidos.js:374`
-**Beneficio:** Elimina 2 queries extra por cada llamada a `GET /api/pedidos/:id` (una para negocio, otra para rider) añadiendo `usuario_id` a la query principal que ya hace el JOIN con esas tablas.
-
-```js
-// Antes — query en línea 377, sin usuario_id de negocio ni de rider:
-SELECT p.*,
-       n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
-       n.mostrar_costo_seguimiento,
-       u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
-       ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
-FROM pedidos p
-JOIN negocios n ON n.id = p.negocio_id
-LEFT JOIN riders ri ON ri.id = p.rider_id
-LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id
-WHERE p.id = $1
-
-// Después — añadir n.usuario_id y ri.usuario_id a la misma query:
-SELECT p.*,
-       n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
-       n.mostrar_costo_seguimiento, n.usuario_id AS negocio_usuario_id,
-       u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
-       ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng,
-       ri.usuario_id AS rider_usuario_id
-FROM pedidos p
-JOIN negocios n ON n.id = p.negocio_id
-LEFT JOIN riders ri ON ri.id = p.rider_id
-LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id
-WHERE p.id = $1
-
-// Y reemplazar el bloque de autorización (líneas 394-403) por:
-if (rol === 'negocio' && pedido.negocio_usuario_id !== req.usuario.id) {
-  return res.status(403).json({ error: 'Sin acceso a este pedido' });
-}
-if (rol === 'rider' && pedido.rider_usuario_id !== req.usuario.id) {
-  return res.status(403).json({ error: 'Sin acceso a este pedido' });
-}
-```
-
----
-
-*Generado automáticamente por el Agente de Mejoras de RepartoJusto — 2026-08-17.*
+*Generado automáticamente por el Agente de Mejoras de RepartoJusto — 2026-08-24.*
