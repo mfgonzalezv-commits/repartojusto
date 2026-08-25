@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-24
+**Actualizado:** 2026-08-25
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -10,11 +10,11 @@
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 19 de agosto" redactado 19/08 — miércoles peak pizza cena familiar mitad de semana, ahorro ~$990K/mes vs. Rappi (~$2.860/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA, post-Premios UE contraste |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, peak sushi familiar noche dominical, algoritmo social Rappi entierra sin publicidad, primavera en 9 días = configurar canal antes del rush de temporada, Rappi Turbo Quilpué urgencia ALTA |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, domingo tarde-noche = peak máximo botillería (asados, onces familiares, reuniones), primavera en 9 días = peak cerveza/vino en jardín se acerca, Rappi Turbo Quilpué urgencia ALTA |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 18 de agosto" redactado 18/08 — martes = reposición midweek teletrabajadores agotan básicos mitad de semana, agosto último frío, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = reposición midweek + cambio de stock de temporada (primavera en 7 días), algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — primer lunes de la última semana del invierno, peak encargos tortas para celebraciones semana, primavera en 8 días = bodas/quinceañeros/fiestas de primavera = configurar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — el jueves inicia el peak del fin de semana: primeros encargos de asado/costillar para el sábado, agosto último mes frío, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — lunes home office = peak café delivery inicio de semana, primavera en 8 días = terrazas al aire libre / café primaveral = planificar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 18 de agosto" redactado 18/08 — martes = peak consultas y medicamentos veterinarios post-fin de semana, resfrío invernal mascotas peak agosto, algoritmo Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = peak consultas mascotas post-fin de semana + primavera en 7 días = temporada antipulgas/desparasitación/vacunas preventivas, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — tercer viernes de back-to-school, viernes = compras escolares urgentes del fin de semana (cuadernos, calculadoras para el lunes), agosto cierra antes de la primavera, diferenciador único en VA |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — último viernes de agosto = materiales para reparaciones del fin de semana + preparación proyectos primavera (septiembre en 10 días), Rappi Turbo Quilpué urgencia |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — preparación temporada verano: agosto es el momento ideal para dejar el canal delivery activo antes del rush octubre-diciembre, sin comisión que devore el margen en el peak de calor |
@@ -176,10 +176,60 @@
 | 170 | Fast & Good | Comida rápida / sándwiches | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 23/08 — sandwichería/comida rápida en Rappi Villa Alemana, ahorro ~$1.680/pedido vs. Rappi 28% en pedido $6.000, argumento Rappi Turbo urgencia ALTA (ya en Quilpué), primavera en 9 días = momento ideal para canal local tarifa fija |
 | 171 | Puerto Rolls Valparaíso | Sushi delivery / opciones veganas | Victoria 2778 (Plaza O'Higgins) y Cochrane 558 (Plaza Sotomayor), Valparaíso (@puertorollsvalpo) | Nuevo | — | Presentación redactada 24/08 — sushi delivery con 18K seguidores Instagram, dos locales activos en Valparaíso, opciones 100% veganas, canal propio web (puertorolls.cl) + Instagram + Facebook, tel. +56 32 259 1509, primavera en 8 días = peak de pedidos de celebración |
 | 172 | Sushired | Sushi delivery | Huito 580 Local 20, Valparaíso (@sushired.valpo) | Nuevo | — | Presentación redactada 24/08 — sushi delivery a todo Valparaíso, 13K seguidores Instagram, Lun-Sáb 9:00-24:00 Dom 12:00-23:00, canal propio Instagram+Facebook (/sushired), tel. +56982638261, tabla 30 pzs $8.490 vía WhatsApp, primavera en 8 días = momento ideal para canal $500 fijo |
+| 173 | Destiladero Botillería & Delivery | Botillería / delivery | Villa Alemana (@destiladero Instagram + Facebook) | Nuevo | — | Presentación redactada 25/08 — botillería con canal delivery propio activo en Instagram y Facebook, sin grandes plataformas detectadas, primavera en 7 días = temporada aperitivos/reuniones al aire libre, argumento canal directo tarifa fija $500 sin porcentaje sobre la venta |
+| 174 | Club del Gohan - Quilpué | Comida japonesa | Quilpué (en Uber Eats) | Nuevo | — | Presentación redactada 25/08 — comida japonesa en Uber Eats Quilpué, ticket promedio alto ~$12.000, ahorro ~$3.100/pedido vs. Uber Eats 30%, Rappi Turbo urgencia DIRECTA (ya operativo en Quilpué), primavera en 7 días = peak pedidos de temporada próximo |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-25)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 25 de agosto — penúltimo martes del invierno 2026**. Primavera en **7 días** (septiembre 1). El martes es el peak de reposición midweek para minimarkets y de consultas post-fin de semana en veterinarias. **ARGUMENTO ACTIVO:** "septiembre = primavera en 7 días — el mejor momento para configurar el canal delivery antes del peak de temporada." Se redactan **4 mensajes**: (1) seguimientos **"Martes 25 de agosto"** para los 2 Contactados con 7 días sin draft: **#7 Minimercado La Esquina** (Lynch 445, martes = reposición midweek + cambio de stock de temporada) y **#11 Veterinaria Huellitas** (Av. Álvarez 3200, martes = peak consultas post-fin de semana + primavera = temporada peak parasitarios/vacunas); (2) **presentaciones** para 2 nuevos prospectos encontrados hoy: **Destiladero Botillería & Delivery (#173)** — botillería con canal delivery propio activo en Instagram/Facebook, sin grandes plataformas — y **Club del Gohan - Quilpué (#174)** — comida japonesa en Uber Eats Quilpué, Rappi Turbo urgencia directa. Pipeline total: **174 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **61 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (3) **Ventana SSW cerrada** desde el 20/08 — argumento FNE/TDLC estable para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102). **Actualizado:** 2026-08-25.
+
+---
+
+**[7] Minimercado La Esquina — Seguimiento "Martes 25 de agosto / Primavera en 7 días":**
+"Hola! Les escribe RepartoJusto. Martes, día ideal para reponer lo que se agotó el fin de semana — y con primavera en 7 días, el cambio de temporada ya se siente: bebidas frías, snacks de verano, más familias queriendo recibir pedidos en casa sin salir.
+
+Con RepartoJusto el costo es $500 fijo por pedido entregado — sin porcentaje sobre la venta, sin contrato, sin algoritmo de plataforma que los esconda si no pagan publicidad extra. Rappi ya opera con su formato Turbo en Quilpué (8 km de Villa Alemana), así que el corredor de delivery local está acelerando.
+
+Si les interesa sumar un canal local con tarifa fija antes del peak de temporada, estamos a un mensaje. El registro es gratis. repartojusto-production.up.railway.app"
+
+---
+
+**[11] Veterinaria Huellitas — Seguimiento "Martes 25 de agosto / Primavera en 7 días":**
+"Hola! Saludos desde RepartoJusto. El martes es el día peak de urgencias veterinarias — los dueños de mascotas que no pudieron venir el fin de semana necesitan medicamentos, alimentos o productos hoy. Y con primavera en 7 días, ya arranca la temporada fuerte: antipulgas, desparasitación externa, vacunas preventivas de temporada.
+
+RepartoJusto puede llevar los pedidos de medicamentos, alimentos y accesorios directamente a los dueños de mascotas en Villa Alemana, a $500 fijo por entrega — sin porcentaje sobre la venta y sin que el algoritmo de Rappi los esconda cuando no están pagando publicidad dentro de la app.
+
+¿Han pensado en ofrecer delivery de productos veterinarios? Es un canal que crece especialmente en primavera. Sin contrato, sin costo de registro. repartojusto-production.up.railway.app"
+
+---
+
+**[173] Destiladero Botillería & Delivery — Presentación:**
+"Hola! Los encontramos a través de Instagram (@destiladero) — vemos que tienen delivery propio activo en Villa Alemana. ¡Muy bien!
+
+Les escribimos de RepartoJusto, plataforma de delivery local sin comisiones por venta. La propuesta es concreta: $500 fijo por pedido entregado, sin porcentaje sobre lo que vendan, sin contrato.
+
+Para una botillería, el delivery en horario nocturno y fin de semana es clave. Y con primavera en 7 días, se acerca la temporada de aperitivos en jardín, asados al aire libre y reuniones de temporada — es el momento ideal para reforzar el canal de delivery con una tarifa fija que no escale con el ticket.
+
+El registro es gratis. Si les interesa conversarlo, estamos a un WhatsApp. repartojusto-production.up.railway.app"
+
+---
+
+**[174] Club del Gohan - Quilpué — Presentación:**
+"Hola! Los encontramos en Uber Eats en Quilpué — les escribe RepartoJusto, plataforma de delivery local sin comisiones por venta.
+
+Uber Eats cobra el 30% de cada pedido. Con un ticket de comida japonesa de $12.000, son $3.600 por pedido que se van a la plataforma. Con RepartoJusto son $500 fijos, punto.
+
+Además, Rappi acaba de activar su formato Turbo directamente en Quilpué — más presión de plataformas en su zona, más comisiones y más competencia en el feed. Tener un canal propio con tarifa fija ahora es la ventaja antes de que el corredor se sature.
+
+Con primavera en 7 días, es el momento ideal para configurar el canal antes del peak de pedidos de temporada. Sin contrato, sin costo de registro. repartojusto-production.up.railway.app ¿Les contamos más?"
 
 ---
 
@@ -3045,3 +3095,7 @@
 **Burgermania Valparaíso (#167, agregado 22/08):** Hamburguesería en Valparaíso activa en Uber Eats con cobertura y entrega a Villa Alemana (tiempo estimado ~14 min). Fuente: ubereats.com/cl/store/burgermania-valparaiso (aparece con promoción 2x1 y listada en Uber Eats Villa Alemana). Ticket promedio estimado: $8.000-$12.000 (hamburguesas). Uber Eats cobra 30% de comisión — con 10 entregas diarias a Villa Alemana, el ahorro vs. Uber Eats puede superar $600.000/mes vs. RepartoJusto ($500 fijos). Argumento adicional: Rappi Turbo ya opera en Quilpué (8 km de VA) — la competencia de plataformas en el corredor VA/Quilpué se intensifica; establecer canal propio con tarifa fija es ventaja competitiva antes de que llegue. Primavera en 10 días = momento ideal para configurar antes del peak de temporada. Fuente: ubereats.com/cl/store/burgermania-valparaiso + búsqueda Uber Eats Villa Alemana hamburguesas agosto 2026.
 
 **Ñamburger (#168, agregado 22/08):** Hamburguesería en Valparaíso activa en Uber Eats con entrega en zona Valparaíso. Fuente: ubereats.com/cl-en/store/namburger (aparece en búsqueda Uber Eats Valparaíso hamburguesas). Ticket promedio estimado: $8.000-$11.000 (hamburguesas). Uber Eats cobra 30% de comisión — con 10 entregas diarias, el ahorro vs. Uber Eats supera $540.000/mes vs. RepartoJusto ($500 fijos). Argumento principal: septiembre en 10 días = primavera, prime time para configurar canal de tarifa fija antes del peak de temporada caliente. Dirección exacta y teléfono por confirmar al contactar. Fuente: ubereats.com/cl-en/store/namburger + búsqueda Uber Eats hamburguesas Valparaíso agosto 2026.
+
+**Destiladero Botillería & Delivery (#173, agregado 25/08):** Botillería con canal delivery propio en Villa Alemana. Instagram: @destiladero. Facebook: @destiladero. Canal propio activo, sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Ticket promedio estimado: $8.000-$15.000 (botellón de vino/cerveza + snacks). Argumento principal: canal directo ya activo + logística local RepartoJusto por $500 fijo sin porcentaje de venta. Para una venta de $12.000, ahorro vs. app de porcentaje (28-30%): hasta $3.100 por entrega. Agosto/primavera = temporada de aperitivos al aire libre, asados, reuniones de jardín — peak de botillerías con delivery. Fuente: instagram.com/destiladero + facebook.com/destiladero + búsqueda delivery Villa Alemana agosto 2026.
+
+**Club del Gohan - Quilpué (#174, agregado 25/08):** Restaurante de comida japonesa / anime culture activo en Uber Eats en Quilpué. Nombre con identidad cultural (Gohan = personaje Dragon Ball + término japonés para "arroz/comida"). Rubro: comida japonesa con ángulo pop. Ticket promedio estimado: $10.000-$15.000 (comida japonesa, rolls, ramen). Uber Eats cobra 30% de comisión — con 10 entregas diarias, el ahorro vs. Uber Eats puede superar $600.000/mes vs. RepartoJusto ($500 fijos). Argumento de urgencia directa: Rappi Turbo ya opera en Quilpué — competencia de plataformas en su zona es real e inmediata. Establecer canal propio con tarifa fija ahora es ventaja competitiva antes de que el corredor se sature. Primavera en 7 días = peak de pedidos de temporada. Fuente: ubereats.com/cl/category/quilpué-vs/asian + búsqueda comida japonesa Quilpué 2026.

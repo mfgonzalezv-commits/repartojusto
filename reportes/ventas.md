@@ -1,46 +1,48 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-08-24 (Lunes)
-**Pipeline total:** 172 prospectos
-**Por estado:** Nuevos: 158 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-08-25 (Martes)
+**Pipeline total:** 174 prospectos
+**Por estado:** Nuevos: 160 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-**Argumento activo hoy:** "Septiembre = primavera en 8 días — el momento de configurar el canal delivery antes del peak de temporada." Activado desde hoy (24/08) per instrucción del Gerente (cola.md). Se combina con: Rappi Turbo Quilpué urgencia ALTA, algoritmo social Rappi entierra sin publicidad, FNE/TDLC estable para prospectos PedidosYa.
-
-**Contactados con seguimiento hoy (7 días sin draft):**
-- **#8 Pastelería Dulce Hogar** (Av. Álvarez 1890): seguimiento "Lunes 24 de agosto / Primavera en 8 días" — encargos de tortas para celebraciones de primavera (bodas, quinceañeros). Borrador listo.
-- **#10 Café El Árbol** (Freire 890): seguimiento "Lunes 24 de agosto / Primavera en 8 días" — peak café delivery home office + terrazas de primavera. Borrador listo.
-
-**Nuevos prospectos encontrados:**
-- **#171 Puerto Rolls Valparaíso** (@puertorollsvalpo, puertorolls.cl) — sushi delivery Valparaíso, 18K seguidores Instagram, 2 locales (Victoria 2778 y Cochrane 558), opciones veganas, tel. +56 32 259 1509. Canal propio activo, sin grandes plataformas detectadas. Borrador de presentación listo.
-- **#172 Sushired** (@sushired.valpo) — sushi delivery todo Valparaíso, 13K seguidores Instagram, Huito 580 Local 20, Lun-Sáb 9:00-24:00 Dom 12:00-23:00, tel. +56982638261. Canal propio activo. Borrador de presentación listo.
-
-**Argumentos incorporados hoy:**
-- "Primavera en 8 días" (septiembre 1 = inicio de la semana de primavera): peak bodas/quinceañeros/fiestas para pastelería, terrazas al aire libre para cafés
+**Argumentos activos hoy:**
+- "Primavera en 7 días" (septiembre 1 = inicio primavera): peak bodas/quinceañeros/fiestas para pastelerías, terrazas al aire libre para cafés y botillerías, temporada antipulgas/vacunas para veterinarias
 - Algoritmo social Rappi: negocios sin pauta publicitaria quedan invisibles en el feed
 - Rappi Turbo urgencia ALTA: ya operativo en Quilpué (8 km de VA)
 - FNE/TDLC: argumento estable para los 7 prospectos PedidosYa (ventana SSW cerrada desde 20/08)
 
+**Instrucciones de cola.md incorporadas:**
+- Argumentos del Investigador (09/07 y 13/08) incorporados: Rappi nueva app entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA, FNE/TDLC estable para PedidosYa
+- "Septiembre = primavera en 7 días" activo desde hoy según instrucción del Gerente
+
+**Contactados con seguimiento hoy (7 días sin draft):**
+- **#7 Minimercado La Esquina** (Lynch 445): seguimiento "Martes 25 de agosto / Primavera en 7 días" — reposición midweek + cambio stock de temporada (productos frescos/verano), Rappi Turbo urgencia. Borrador listo.
+- **#11 Veterinaria Huellitas** (Av. Álvarez 3200): seguimiento "Martes 25 de agosto / Primavera en 7 días" — peak consultas post-fin de semana + temporada antipulgas/vacunas preventivas primavera, Rappi Turbo urgencia. Borrador listo.
+
+**Nuevos prospectos encontrados hoy:**
+- **#173 Destiladero Botillería & Delivery** (@destiladero Instagram + Facebook) — botillería con canal delivery propio en Villa Alemana, sin grandes plataformas detectadas. Primavera = peak aperitivos/asados al aire libre. Borrador de presentación listo.
+- **#174 Club del Gohan - Quilpué** (comida japonesa en Uber Eats Quilpué) — ticket promedio alto ~$12.000, ahorro ~$3.100/pedido vs. Uber Eats 30%, Rappi Turbo urgencia directa en su zona. Borrador de presentación listo.
+
 ## Borradores listos para Matías
 
-4 mensajes redactados hoy, todos en prospectos.md sección "MENSAJES DEL DÍA (2026-08-24)":
+4 mensajes redactados hoy, todos en prospectos.md sección "MENSAJES DEL DÍA (2026-08-25)":
 
-1. **[8] Pastelería Dulce Hogar — Seguimiento "Lunes 24 de agosto / Primavera en 8 días"** → argumento peak encargos tortas lunes + bodas/quinceañeros/fiestas de primavera en 8 días + Rappi entierra sin publicidad + Rappi Turbo Quilpué
-2. **[10] Café El Árbol — Seguimiento "Lunes 24 de agosto / Primavera en 8 días"** → lunes home office peak café delivery + primavera en 8 días = terrazas + Rappi entierra sin publicidad + Rappi Turbo
-3. **[171] Puerto Rolls Valparaíso — Presentación** → sushi delivery Valparaíso, 18K seguidores, 2 locales, canal propio, primavera en 8 días
-4. **[172] Sushired — Presentación** → sushi delivery todo Valparaíso, 13K seguidores, canal propio Instagram, primavera en 8 días
+1. **[7] Minimercado La Esquina — Seguimiento "Martes 25 de agosto / Primavera en 7 días"** → reposición midweek + cambio de stock de temporada + Rappi entierra sin publicidad + Rappi Turbo Quilpué
+2. **[11] Veterinaria Huellitas — Seguimiento "Martes 25 de agosto / Primavera en 7 días"** → peak consultas martes + primavera = temporada peak parasitarios/vacunas + Rappi entierra sin publicidad + Rappi Turbo Quilpué
+3. **[173] Destiladero Botillería & Delivery — Presentación** → botillería con canal propio activo, primavera = aperitivos/asados, canal local tarifa fija $500 sin porcentaje
+4. **[174] Club del Gohan - Quilpué — Presentación** → comida japonesa Uber Eats Quilpué, Rappi Turbo urgencia directa, ahorro ~$3.100/pedido, primavera en 7 días
 
-**PRIORIDAD ABSOLUTA (60 días sin confirmación):**
-- **#22 Sushi Point Delivery** (tel. (32) 324 0504) — borradores activos 60 días consecutivos
-- **#15 Melt Pizzas** — borradores activos 60 días consecutivos
+**PRIORIDAD ABSOLUTA (61 días sin confirmación):**
+- **#22 Sushi Point Delivery** (tel. (32) 324 0504) — borradores activos 61 días consecutivos
+- **#15 Melt Pizzas** — borradores activos 61 días consecutivos
 
 ## Nuevos prospectos agregados
 
 | # | Negocio | Rubro | Dirección | Por qué |
 |---|---|---|---|---|
-| 171 | Puerto Rolls Valparaíso | Sushi delivery | Victoria 2778 y Cochrane 558, Valparaíso | 18K seguidores, canal propio, 2 locales, opciones veganas, Valparaíso zona de cobertura |
-| 172 | Sushired | Sushi delivery | Huito 580 L20, Valparaíso | 13K seguidores, delivery todo Valparaíso, canal propio activo, horario extendido |
+| 173 | Destiladero Botillería & Delivery | Botillería / delivery | Villa Alemana (@destiladero) | Canal delivery propio activo en Instagram+Facebook, sin grandes plataformas, primavera = peak aperitivos/asados al aire libre |
+| 174 | Club del Gohan - Quilpué | Comida japonesa | Quilpué (Uber Eats) | Ticket alto ~$12.000, Uber Eats 30%, Rappi Turbo urgencia directa en Quilpué, identidad cultural distintiva |
 
 ## Para el Gerente
 
-Pipeline en 172 prospectos (158 Nuevos, 14 Contactados, 0 Registrados); argumento "primavera en 8 días" activado hoy según instrucción de cola.md; 4 borradores redactados: seguimientos lunes para #8 Pastelería Dulce Hogar y #10 Café El Árbol + presentaciones para 2 nuevos sushierías en Valparaíso (Puerto Rolls 18K seg. y Sushired 13K seg.); cuello de botella crítico: #22 Sushi Point Delivery y #15 Melt Pizzas llevan **60 días consecutivos** con borradores activos sin confirmación de envío — confirmación de Matías sobre mensajes enviados sigue siendo la acción más urgente para desbloquear el pipeline.
+Pipeline en 174 prospectos (160 Nuevos, 14 Contactados, 0 Registrados); argumento "primavera en 7 días" activo y aplicado; 4 borradores redactados: seguimientos martes para #7 Minimercado La Esquina (reposición midweek + temporada) y #11 Veterinaria Huellitas (martes peak consultas + temporada antipulgas primavera) + presentaciones para 2 nuevos: Destiladero Botillería (#173, canal propio, sin grandes plataformas) y Club del Gohan Quilpué (#174, japonesa Uber Eats, Rappi Turbo directo); cuello de botella crítico: **#22 Sushi Point Delivery** y **#15 Melt Pizzas** llevan **61 días consecutivos** con borradores activos sin confirmación de envío de Matías — confirmación de mensajes enviados sigue siendo la acción más urgente para desbloquear el pipeline.
