@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-25T00:00:00Z
-**Estado:** ⚠️ SIN VERIFICAR — PROXY BLOQUEÓ CONEXIÓN
-**Detalle:** El entorno de ejecución remota bloqueó la solicitud con HTTP 403 al intentar conectar a repartojusto-production.up.railway.app:443 a través del proxy saliente. No fue posible determinar el estado real del servidor. Se requiere revisar la política de red del entorno (outbound HTTPS proxy) o ejecutar el monitor desde un entorno con acceso directo a Railway.
+**Última verificación:** 2026-08-25T11:32:25 UTC
+**Estado:** ❌ CAÍDO
+**Detalle:** curl exit code 56 (error de red / sin respuesta) — HTTP 000, sin body. El servidor no responde en https://repartojusto-production.up.railway.app/health
