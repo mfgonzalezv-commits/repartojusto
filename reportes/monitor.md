@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-26T00:00:00Z
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** El proxy del entorno bloqueó la conexión a `repartojusto-production.up.railway.app:443` (HTTP 403 en túnel CONNECT). No fue posible verificar el estado real del servicio desde este entorno.
+**Última verificación:** 2026-08-26T21:31:34Z
+**Estado:** ❌ CAÍDO
+**Detalle:** curl error 56 (CURLE_RECV_ERROR) — HTTP 000, sin respuesta del servidor. El endpoint https://repartojusto-production.up.railway.app/health no respondió.
