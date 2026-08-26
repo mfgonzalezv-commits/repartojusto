@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-26T00:00:00Z
+**Última verificación:** 2026-08-26T23:32:03Z
 **Estado:** ❌ CAÍDO
-**Detalle:** curl exit code 56 — sin respuesta del servidor (HTTP 000). La URL https://repartojusto-production.up.railway.app/health no es alcanzable desde el entorno de monitoreo.
+**Detalle:** No se pudo conectar al servidor. El proxy del entorno de ejecución bloqueó la conexión a `repartojusto-production.up.railway.app` con HTTP 403 Forbidden. No se obtuvo respuesta del servidor de producción.
