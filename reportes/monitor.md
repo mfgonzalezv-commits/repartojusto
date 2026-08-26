@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-26T17:31:44Z
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** El entorno de ejecución remoto bloqueó la conexión saliente a repartojusto-production.up.railway.app (proxy devolvió 403 Forbidden). No fue posible determinar si el servidor está operativo. Verificar manualmente o ejecutar desde un entorno con acceso irrestricto a internet.
+**Última verificación:** 2026-08-26T00:00:00Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El host `repartojusto-production.up.railway.app` está bloqueado por la política de egreso del entorno de ejecución (proxy devuelve 403 Forbidden). No se pudo completar la verificación HTTP. Acción requerida: habilitar el host en la política de red del entorno, o ejecutar el monitor desde un entorno sin restricciones de egreso.
