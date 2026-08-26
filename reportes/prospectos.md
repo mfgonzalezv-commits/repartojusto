@@ -1,13 +1,13 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-25
+**Actualizado:** 2026-08-26
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Sábado 22 de agosto" redactado 22/08 — ÚLTIMO sábado del invierno 2026, completos/sándwiches peak familiar, primavera en 10 días = configurar canal antes del rush, Rappi Turbo Quilpué urgencia ALTA |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 19 de agosto" redactado 19/08 — miércoles quiebre de semana, familias prefieren encargar pollo tras 2 días cocinando, ahorro ~$600K/mes vs. Rappi, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA, post-Premios UE contraste |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 26 de agosto / Primavera en 6 días" redactado 26/08 — miércoles peak pollo cena familiar, agosto frío máximo del año, ahorro ~$600K/mes vs. Rappi, Rappi Turbo Quilpué urgencia ALTA, primavera en 6 días = configurar canal antes del peak de temporada |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 22 de agosto" redactado 22/08 — ÚLTIMO sábado del invierno: antibióticos/jarabes/medicamentos urgentes sin salir al frío, delivery local $500 fijo, argumento autonomía sucursal + Rappi Turbo Quilpué urgencia ALTA |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 19 de agosto" redactado 19/08 — miércoles peak pizza cena familiar mitad de semana, ahorro ~$990K/mes vs. Rappi (~$2.860/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA, post-Premios UE contraste |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 26 de agosto / Primavera en 6 días" redactado 26/08 — miércoles peak pizza cena familiar, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA, Fiestas Patrias en 26 días |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, peak sushi familiar noche dominical, algoritmo social Rappi entierra sin publicidad, primavera en 9 días = configurar canal antes del rush de temporada, Rappi Turbo Quilpué urgencia ALTA |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, domingo tarde-noche = peak máximo botillería (asados, onces familiares, reuniones), primavera en 9 días = peak cerveza/vino en jardín se acerca, Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = reposición midweek + cambio de stock de temporada (primavera en 7 días), algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
@@ -178,10 +178,76 @@
 | 172 | Sushired | Sushi delivery | Huito 580 Local 20, Valparaíso (@sushired.valpo) | Nuevo | — | Presentación redactada 24/08 — sushi delivery a todo Valparaíso, 13K seguidores Instagram, Lun-Sáb 9:00-24:00 Dom 12:00-23:00, canal propio Instagram+Facebook (/sushired), tel. +56982638261, tabla 30 pzs $8.490 vía WhatsApp, primavera en 8 días = momento ideal para canal $500 fijo |
 | 173 | Destiladero Botillería & Delivery | Botillería / delivery | Villa Alemana (@destiladero Instagram + Facebook) | Nuevo | — | Presentación redactada 25/08 — botillería con canal delivery propio activo en Instagram y Facebook, sin grandes plataformas detectadas, primavera en 7 días = temporada aperitivos/reuniones al aire libre, argumento canal directo tarifa fija $500 sin porcentaje sobre la venta |
 | 174 | Club del Gohan - Quilpué | Comida japonesa | Quilpué (en Uber Eats) | Nuevo | — | Presentación redactada 25/08 — comida japonesa en Uber Eats Quilpué, ticket promedio alto ~$12.000, ahorro ~$3.100/pedido vs. Uber Eats 30%, Rappi Turbo urgencia DIRECTA (ya operativo en Quilpué), primavera en 7 días = peak pedidos de temporada próximo |
+| 175 | Empanadas Empanallá | Empanadas artesanales | Villa Alemana (@empanadas_empanalla Instagram) | Nuevo | — | Presentación redactada 26/08 — empanadas al horno caseras, delivery fines de semana por WhatsApp, canal propio sin grandes plataformas, primavera en 6 días + Fiestas Patrias en 26 días = peak absoluto del rubro, argumento $500 fijo sin porcentaje vs. canal propio logística RJ |
+| 176 | Tanizaki Valparaíso | Sushi delivery | Valparaíso (tanizakivalparaiso.cl, tel. +56 921942289) | Nuevo | — | Presentación redactada 26/08 — sushi delivery con web propia, tel. disponible, sin grandes plataformas detectadas, Rappi Turbo en Quilpué urgencia ALTA, primavera en 6 días = peak de sushi de temporada, ahorro ~$3.100/pedido vs. plataformas 28-30% |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-26)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 26 de agosto — Primavera en 6 días** (septiembre 1). El miércoles es el peak de pizza y pollo cena familiar — los Contactados más desactualizados son #2 y #4 (7 días sin draft). **ARGUMENTO ACTIVO:** "primavera en 6 días = el mejor momento para configurar el canal delivery antes del peak de temporada" + "Rappi Turbo ya en Quilpué" + "algoritmo social Rappi entierra negocios sin publicidad" + "Fiestas Patrias en 26 días = peak empanadas". Se redactan **4 mensajes**: (1) seguimientos **"Miércoles 26 de agosto"** para #2 Pollería Don Pollo y #4 Pizza House; (2) presentaciones para 2 nuevos: **#175 Empanadas Empanallá** y **#176 Tanizaki Valparaíso**. Pipeline total: **176 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **62 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (3) **FNE/TDLC argumento estable** para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102). **Actualizado:** 2026-08-26.
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento "Miércoles 26 de agosto / Primavera en 6 días":**
+"Hola equipo de Don Pollo, les escribe Matías de RepartoJusto, la plataforma de delivery de Villa Alemana con tarifa fija de $500 por entrega, sin porcentaje sobre sus ventas.
+
+El miércoles es el peak de las familias que piden pollo para la cena — y este agosto con el frío máximo del año, los pedidos a domicilio están en su mejor momento. Con Rappi, por cada pollo asado de $8.000 están pagando ~$2.240 de comisión a la plataforma. Con nosotros son $500 fijos, siempre.
+
+Dato de esta semana: la primavera llega en 6 días (septiembre 1). Las pollerías que configuran su canal delivery propio antes del peak de temporada capturan a los clientes que vuelven a comer afuera. Rappi ya tiene Turbo operativo en Quilpué — el algoritmo de la nueva app entierra a los negocios que no pagan publicidad dentro de la plataforma. Nosotros no tenemos algoritmo.
+
+Con el volumen de Don Pollo, estimamos un ahorro de ~$600.000/mes vs. lo que pagan hoy en comisiones. ¿Conversamos esta semana?
+
+Matías — RepartoJusto Villa Alemana"
+
+---
+
+**[4] Pizza House — Seguimiento "Miércoles 26 de agosto / Primavera en 6 días":**
+"Hola equipo de Pizza House, les escribe Matías de RepartoJusto.
+
+Miércoles de agosto = peak de pizza a domicilio. Por cada pizza de $10.000 que entregan con Rappi, pagan ~$2.800 de comisión. Con RepartoJusto son $500 fijos por entrega — ese es el único cargo.
+
+Tres noticias de esta semana que les importan: (1) la primavera llega en 6 días (septiembre 1) — el mejor momento para configurar el canal antes del peak de temporada; (2) Rappi Turbo ya opera en Quilpué (8 km) — cuando llegue a Villa Alemana, su visibilidad en la plataforma dependerá de cuánto paguen en publicidad interna; (3) Fiestas Patrias en 26 días — las pizzerías que tienen canal propio estable capturan el peak sin pagar comisiones extra.
+
+Estimamos que Pizza House paga ~$990.000/mes en comisiones. Con nosotros ese ahorro queda en su negocio.
+
+¿Les hacemos una demo rápida sin compromiso?
+
+Matías — RepartoJusto"
+
+---
+
+**[175] Empanadas Empanallá — Presentación:**
+"Hola equipo de Empanadas Empanallá (@empanadas_empanalla), les escribe Matías de RepartoJusto, la plataforma de delivery de Villa Alemana que cobra $500 fijo por entrega, sin porcentaje sobre sus ventas.
+
+Vieron que tienen delivery los fines de semana por WhatsApp — ese canal propio es exactamente lo que valoramos. Las empanadas al horno caseras tienen demanda creciente, y septiembre (Fiestas Patrias) es el peak del año para el rubro.
+
+Con RepartoJusto pueden mantener el canal directo con sus clientes y solo pagar $500 por cada entrega que realizamos nosotros — sin comisión sobre el precio de la empanada. Para una docena de $8.000, ahorro vs. plataforma de porcentaje: hasta $1.900 por entrega.
+
+Primavera en 6 días, Fiestas Patrias en 26 — ¿les interesa conocer cómo funcionamos antes del peak?
+
+Matías — RepartoJusto
+repartojusto-production.up.railway.app"
+
+---
+
+**[176] Tanizaki Valparaíso — Presentación:**
+"Hola equipo de Tanizaki (tanizakivalparaiso.cl, +56 921942289), les escribe Matías de RepartoJusto.
+
+Vimos su web de delivery propio — bien hecho. Si también trabajan con plataformas como Rappi o Uber Eats que cobran 28-30% por entrega, por un roll de $12.000 están pagando ~$3.100-$3.600 de comisión. Con RepartoJusto son $500 fijos, siempre.
+
+Rappi Turbo ya opera en Quilpué (8 km) y el algoritmo de la nueva app penaliza a los locales que no pagan publicidad interna — con nosotros no hay algoritmo que los esconda. Primavera en 6 días = peak de sushi de temporada.
+
+¿Les interesa una demo sin compromiso?
+
+Matías — RepartoJusto
+repartojusto-production.up.railway.app"
 
 ---
 
@@ -3099,3 +3165,7 @@ Con primavera en 7 días, es el momento ideal para configurar el canal antes del
 **Destiladero Botillería & Delivery (#173, agregado 25/08):** Botillería con canal delivery propio en Villa Alemana. Instagram: @destiladero. Facebook: @destiladero. Canal propio activo, sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Ticket promedio estimado: $8.000-$15.000 (botellón de vino/cerveza + snacks). Argumento principal: canal directo ya activo + logística local RepartoJusto por $500 fijo sin porcentaje de venta. Para una venta de $12.000, ahorro vs. app de porcentaje (28-30%): hasta $3.100 por entrega. Agosto/primavera = temporada de aperitivos al aire libre, asados, reuniones de jardín — peak de botillerías con delivery. Fuente: instagram.com/destiladero + facebook.com/destiladero + búsqueda delivery Villa Alemana agosto 2026.
 
 **Club del Gohan - Quilpué (#174, agregado 25/08):** Restaurante de comida japonesa / anime culture activo en Uber Eats en Quilpué. Nombre con identidad cultural (Gohan = personaje Dragon Ball + término japonés para "arroz/comida"). Rubro: comida japonesa con ángulo pop. Ticket promedio estimado: $10.000-$15.000 (comida japonesa, rolls, ramen). Uber Eats cobra 30% de comisión — con 10 entregas diarias, el ahorro vs. Uber Eats puede superar $600.000/mes vs. RepartoJusto ($500 fijos). Argumento de urgencia directa: Rappi Turbo ya opera en Quilpué — competencia de plataformas en su zona es real e inmediata. Establecer canal propio con tarifa fija ahora es ventaja competitiva antes de que el corredor se sature. Primavera en 7 días = peak de pedidos de temporada. Fuente: ubereats.com/cl/category/quilpué-vs/asian + búsqueda comida japonesa Quilpué 2026.
+
+**Empanadas Empanallá (#175, agregado 26/08):** Empanaderías artesanales con delivery propio en Villa Alemana. Instagram: @empanadas_empanalla. Canal propio Instagram activo, delivery fines de semana por WhatsApp. Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Rubro: empanadas al horno caseras artesanales. Ticket promedio estimado: $5.000-$10.000 (venta por unidad o media docena/docena). Argumento principal: canal propio ya activo vía WhatsApp — RepartoJusto complementa la logística del último kilómetro a $500 fijo sin porcentaje de venta, sin que la comisión escale con el ticket. Para una docena de $8.000, ahorro vs. plataforma de porcentaje (28%): hasta $1.740 por entrega. Argumentos estacionales de máxima potencia: primavera en 6 días (septiembre 1) + Fiestas Patrias en 26 días (18 de septiembre) = peak absoluto del rubro empanadas en Chile — el mejor momento del año para escalar el canal. Fuente: instagram.com/empanadas_empanalla + búsqueda delivery empanadas Villa Alemana agosto 2026.
+
+**Tanizaki Valparaíso (#176, agregado 26/08):** Sushi delivery con web y canal propio en Valparaíso. Sitio web: tanizakivalparaiso.cl. Teléfono: +56 921942289. Canal propio web activo. Sin grandes plataformas detectadas. Rubro: sushi delivery. Ticket promedio estimado: $10.000-$15.000 (rolls, tablas, combos). Argumento principal: canal propio web ya activo — si trabajan adicionalmente con plataformas de porcentaje, por un roll de $12.000 pagan ~$3.100-$3.600 de comisión; con RepartoJusto son $500 fijos. Argumento de urgencia: Rappi Turbo ya opera en Quilpué (8 km de VA) y el algoritmo de la nueva app de Rappi penaliza negocios que no pagan publicidad interna — con RepartoJusto no hay algoritmo que los esconda. Primavera en 6 días = peak de sushi de temporada. Fuente: tanizakivalparaiso.cl + búsqueda sushi delivery Valparaíso agosto 2026.
