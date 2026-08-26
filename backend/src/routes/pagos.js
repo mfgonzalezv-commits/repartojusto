@@ -102,7 +102,7 @@ function confirmarRateLimit(req, res, next) {
 
 // ── GET /api/pagos/confirmar ──────────────────────────────────────────────────
 // Flow llama a este endpoint cuando el pago se completa (return URL)
-router.get('/confirmar', confirmarRateLimit, async (req, res, next) => {
+router.get('/confirmar', confirmarRateLimit, auth, async (req, res, next) => {
   const { token } = req.query;
   if (!token) return res.status(400).json({ error: 'Token requerido' });
 

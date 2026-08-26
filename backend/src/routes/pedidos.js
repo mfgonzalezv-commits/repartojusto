@@ -40,11 +40,26 @@ router.post('/',
     try {
       const { rows: [negocio] } = await db(
         `SELECT id, tarjeta_customer_id, tarjeta_token, modo,
-                estrategia_cobro, pct_negocio, mostrar_costo_seguimiento
+                estrategia_cobro, pct_negocio, mostrar_costo_seguimiento, lat, lng
          FROM negocios WHERE usuario_id = $1 AND activo = true`,
         [req.usuario.id]
       );
       if (!negocio) return res.status(404).json({ error: 'Negocio no encontrado' });
+
+      // Validar que la distancia declarada sea coherente con coordenadas reales.
+      // Previene que un negocio declare 0.1 km para pagar menos al rider.
+      if (lat_entrega != null && lng_entrega != null && negocio.lat != null && negocio.lng != null) {
+        const distanciaReal = haversineKm(
+          parseFloat(negocio.lat), parseFloat(negocio.lng),
+          parseFloat(lat_entrega), parseFloat(lng_entrega)
+        );
+        if (parseFloat(distancia_km) < distanciaReal * 0.7) {
+          return res.status(400).json({
+            error: 'Distancia inválida',
+            detalle: `La distancia declarada (${distancia_km} km) es menor a la calculada por coordenadas (~${distanciaReal.toFixed(1)} km). Ajusta la distancia o las coordenadas.`
+          });
+        }
+      }
 
       const enPrueba = negocio.modo === 'prueba';
 
