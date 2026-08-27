@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-27T10:31:00Z
-**Estado:** ⚠️ NO VERIFICADO
-**Detalle:** El agente monitor no pudo alcanzar `repartojusto-production.up.railway.app` — el proxy de red del entorno de ejecución remoto bloqueó la conexión (403 policy denial). El servidor puede estar operativo, pero la verificación externa no es posible desde este entorno sin habilitar el dominio en la política del proxy.
+**Última verificación:** 2026-08-27T11:31:38Z
+**Estado:** ❌ CAÍDO
+**Detalle:** curl exit code 56 — fallo de red al conectar con https://repartojusto-production.up.railway.app/health (HTTP 000, sin respuesta del servidor)
