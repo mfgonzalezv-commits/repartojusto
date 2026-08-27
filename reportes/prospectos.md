@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-26
+**Actualizado:** 2026-08-27
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -12,12 +12,12 @@
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, domingo tarde-noche = peak máximo botillería (asados, onces familiares, reuniones), primavera en 9 días = peak cerveza/vino en jardín se acerca, Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = reposición midweek + cambio de stock de temporada (primavera en 7 días), algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — primer lunes de la última semana del invierno, peak encargos tortas para celebraciones semana, primavera en 8 días = bodas/quinceañeros/fiestas de primavera = configurar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — el jueves inicia el peak del fin de semana: primeros encargos de asado/costillar para el sábado, agosto último mes frío, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — jueves = peak encargos del asado del fin de semana, primavera en 5 días (1 sept) = configurar canal antes del rush de temporada, Fiestas Patrias en 25 días = peak asados, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — lunes home office = peak café delivery inicio de semana, primavera en 8 días = terrazas al aire libre / café primaveral = planificar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = peak consultas mascotas post-fin de semana + primavera en 7 días = temporada antipulgas/desparasitación/vacunas preventivas, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — tercer viernes de back-to-school, viernes = compras escolares urgentes del fin de semana (cuadernos, calculadoras para el lunes), agosto cierra antes de la primavera, diferenciador único en VA |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — último viernes de agosto = materiales para reparaciones del fin de semana + preparación proyectos primavera (septiembre en 10 días), Rappi Turbo Quilpué urgencia |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 13 de agosto" redactado 13/08 — preparación temporada verano: agosto es el momento ideal para dejar el canal delivery activo antes del rush octubre-diciembre, sin comisión que devore el margen en el peak de calor |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — primavera en 5 días (1 sept) + Fiestas Patrias en 25 días = canal delivery listo antes del rush de calor oct-dic, $500 fijo vs. 28-30% Rappi devora el margen en el peak de helados, registro gratis sin contrato |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -180,10 +180,40 @@
 | 174 | Club del Gohan - Quilpué | Comida japonesa | Quilpué (en Uber Eats) | Nuevo | — | Presentación redactada 25/08 — comida japonesa en Uber Eats Quilpué, ticket promedio alto ~$12.000, ahorro ~$3.100/pedido vs. Uber Eats 30%, Rappi Turbo urgencia DIRECTA (ya operativo en Quilpué), primavera en 7 días = peak pedidos de temporada próximo |
 | 175 | Empanadas Empanallá | Empanadas artesanales | Villa Alemana (@empanadas_empanalla Instagram) | Nuevo | — | Presentación redactada 26/08 — empanadas al horno caseras, delivery fines de semana por WhatsApp, canal propio sin grandes plataformas, primavera en 6 días + Fiestas Patrias en 26 días = peak absoluto del rubro, argumento $500 fijo sin porcentaje vs. canal propio logística RJ |
 | 176 | Tanizaki Valparaíso | Sushi delivery | Valparaíso (tanizakivalparaiso.cl, tel. +56 921942289) | Nuevo | — | Presentación redactada 26/08 — sushi delivery con web propia, tel. disponible, sin grandes plataformas detectadas, Rappi Turbo en Quilpué urgencia ALTA, primavera en 6 días = peak de sushi de temporada, ahorro ~$3.100/pedido vs. plataformas 28-30% |
+| 177 | XL Sandwich Valparaíso | Sandwichería / comida rápida | Barrio Placeres, Valparaíso (@xlsandwich, tel. +56 986851413) | Nuevo | — | Presentación redactada 27/08 — sandwichería en Uber Eats, canal propio Instagram 4.452 seguidores, Lu-Sá disponible, primer contacto, primavera en 5 días + Fiestas Patrias en 25 días = peak sandwicherías, argumento $500 fijo vs. 27-30% Uber Eats |
+| 178 | Hojarasca | Dulcería / pastelería | Viña del Mar (Borgoño 14191 / 5 Pte. 421, en Rappi + Uber Eats) | Nuevo | — | Presentación redactada 27/08 — dulcería/pastelería en DOBLE plataforma (Rappi + Uber Eats), argumento doble comisión, primavera en 5 días + Fiestas Patrias en 25 días = peak máximo pastelería, $500 fijo libera margen por pedido |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-27)
+
+> **NOTA PARA MATÍAS:** Hoy es **jueves 27 de agosto — Primavera en 5 días** (septiembre 1). El jueves inicia el peak del fin de semana: primeros encargos de asado/costillar. Los Contactados más desactualizados son **#9 Rotisería El Gaucho y #14 Heladería Glacial** (ambos 14 días sin draft desde el 13/08). **ARGUMENTOS ACTIVOS:** "primavera en 5 días = configurar el canal delivery antes del rush de temporada" + "Fiestas Patrias en 25 días = peak absoluto asados/helados/empanadas" + "Rappi Turbo ya en Quilpué" + "algoritmo social Rappi entierra negocios sin publicidad". Se redactan **4 mensajes**: seguimientos **"Jueves 27 de agosto"** para #9 El Gaucho y #14 Heladería Glacial; presentaciones para **#177 XL Sandwich Valparaíso** y **#178 Hojarasca (Viña del Mar)**. Pipeline total: **178 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **63 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (3) **FNE/TDLC argumento estable** para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102). **Actualizado:** 2026-08-27.
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento "Jueves 27 de agosto / Primavera en 5 días":**
+"Hola! Les escribe RepartoJusto, plataforma de delivery local de Villa Alemana. Jueves por la tarde — justo cuando empiezan los encargos del asado del fin de semana 🔥 Están a 5 días de que empiece la primavera (1 de septiembre) y a 25 días de las Fiestas Patrias — el peak máximo del año para rotiserías y parrillas. Si trabajan con Rappi o alguna app de delivery, están pagando entre 27-30% de cada asado o costillar vendido, más ahora con el nuevo algoritmo social que prioriza a los que pagan publicidad extra dentro de la app. Con RepartoJusto el costo del delivery es $500 fijo por pedido entregado, sin porcentaje sobre la venta. Rider local, tarifa plana, canal propio. ¿Les interesa saber más? repartojusto-production.up.railway.app"
+
+---
+
+**[14] Heladería Glacial — Seguimiento "Jueves 27 de agosto / Primavera en 5 días":**
+"Hola! Les escribe RepartoJusto. Primavera en 5 días (septiembre 1) y Fiestas Patrias en 25 días 🍦 Agosto es el mejor momento para dejar el canal delivery listo antes del rush de calor que empieza en octubre. Con nosotros el delivery les cuesta $500 fijo por pedido entregado, sin porcentaje sobre la venta. Si están en Rappi o Uber Eats, están pagando entre 27-30% de cada helado que venden — esa comisión devora el margen exactamente en el peak de mayor volumen. Con RepartoJusto ese margen se queda en el negocio. Registro gratis, sin contrato de permanencia. ¿Se preparan para la temporada? repartojusto-production.up.railway.app"
+
+---
+
+**[177] XL Sandwich Valparaíso — Presentación:**
+"Hola! Les escribe RepartoJusto, plataforma de delivery local en Valparaíso y Villa Alemana sin comisiones por venta. Veo que tienen delivery a domicilio — si están usando Uber Eats, están pagando entre 27-30% de cada sándwich vendido. Con nosotros el costo del delivery es $500 fijo por pedido entregado, sin importar el valor del pedido. Primavera en 5 días (1 de septiembre) y Fiestas Patrias en 25 días — el peak máximo del año para sandwicherías. Es el mejor momento para sumar un canal con tarifa fija, sin algoritmo que los esconda en el feed. Registro gratis, sin contrato. ¿Les interesa? repartojusto-production.up.railway.app"
+
+---
+
+**[178] Hojarasca Viña del Mar — Presentación:**
+"Hola! Les escribe RepartoJusto, plataforma de delivery local sin comisiones por venta. Veo que tienen delivery tanto en Rappi como en Uber Eats — están pagando doble comisión (entre 27-30%) sobre cada producto que venden. Con nosotros el costo del delivery es $500 fijo por pedido entregado, sin porcentaje. Con primavera en 5 días y Fiestas Patrias en 25 días el delivery de dulcería y pastelería está en su peak máximo — es el mejor momento para sumar un canal con tarifa fija donde el margen se queda en el negocio. Registro gratis, sin contrato. ¿Conversamos? repartojusto-production.up.railway.app"
 
 ---
 
