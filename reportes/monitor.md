@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-27T00:00:00Z
+**Última verificación:** 2026-08-27T19:32:01Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar al endpoint. El proxy del entorno de ejecución devolvió 403 Forbidden al intentar CONNECT tunnel hacia repartojusto-production.up.railway.app:443 — el dominio railway.app no está permitido por la política de red del contenedor. No se pudo verificar el estado real del servidor.
+**Detalle:** curl exit 56 (fallo de red), HTTP 000 — sin respuesta del servidor en https://repartojusto-production.up.railway.app/health
