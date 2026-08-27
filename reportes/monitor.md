@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-27T06:32:43Z
+**Última verificación:** 2026-08-27 07:32:25 UTC
 **Estado:** ❌ CAÍDO
-**Detalle:** curl exit code 56 — sin respuesta del servidor (HTTP 000). El endpoint https://repartojusto-production.up.railway.app/health no respondió. Posible falla de red en el ambiente de ejecución o servicio caído en Railway.
+**Detalle:** curl exit 56 — Connection reset by peer. HTTP 000 (sin respuesta). El servidor no respondió al endpoint /health.
