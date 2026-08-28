@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-28T06:32:06Z
+**Última verificación:** 2026-08-28T07:31:43Z
 **Estado:** ❌ CAÍDO
-**Detalle:** curl exit code 56 (recv failure / connection reset) — HTTP 000, sin respuesta del servidor en https://repartojusto-production.up.railway.app/health
+**Detalle:** No se pudo conectar al servidor. El proxy del entorno de ejecución remoto bloqueó la solicitud con HTTP 403 al intentar conectar con `repartojusto-production.up.railway.app:443` (curl error 56: CONNECT tunnel failed). No es posible confirmar el estado real del servicio desde este entorno.
