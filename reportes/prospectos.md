@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-27
+**Actualizado:** 2026-08-28
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -15,8 +15,8 @@
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — jueves = peak encargos del asado del fin de semana, primavera en 5 días (1 sept) = configurar canal antes del rush de temporada, Fiestas Patrias en 25 días = peak asados, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — lunes home office = peak café delivery inicio de semana, primavera en 8 días = terrazas al aire libre / café primaveral = planificar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = peak consultas mascotas post-fin de semana + primavera en 7 días = temporada antipulgas/desparasitación/vacunas preventivas, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — tercer viernes de back-to-school, viernes = compras escolares urgentes del fin de semana (cuadernos, calculadoras para el lunes), agosto cierra antes de la primavera, diferenciador único en VA |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 21 de agosto" redactado 21/08 — último viernes de agosto = materiales para reparaciones del fin de semana + preparación proyectos primavera (septiembre en 10 días), Rappi Turbo Quilpué urgencia |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 28 de agosto / ÚLTIMO viernes de agosto" redactado 28/08 — back-to-school semana final, viernes = compras escolares urgentes del fin de semana (cuadernos, colores, material escolar del lunes), primavera en 4 días = útiles de temporada nueva, diferenciador único en VA sin Rappi ni Uber Eats |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 28 de agosto / ÚLTIMO viernes de agosto" redactado 28/08 — ÚLTIMO viernes del invierno 2026: encargos materiales proyectos del fin de semana, primavera en 4 días = rush preparación jardín/exterior, Fiestas Patrias en 21 días = instalaciones/reparaciones decoración, Rappi Turbo Quilpué urgencia ALTA |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — primavera en 5 días (1 sept) + Fiestas Patrias en 25 días = canal delivery listo antes del rush de calor oct-dic, $500 fijo vs. 28-30% Rappi devora el margen en el peak de helados, registro gratis sin contrato |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -182,10 +182,79 @@
 | 176 | Tanizaki Valparaíso | Sushi delivery | Valparaíso (tanizakivalparaiso.cl, tel. +56 921942289) | Nuevo | — | Presentación redactada 26/08 — sushi delivery con web propia, tel. disponible, sin grandes plataformas detectadas, Rappi Turbo en Quilpué urgencia ALTA, primavera en 6 días = peak de sushi de temporada, ahorro ~$3.100/pedido vs. plataformas 28-30% |
 | 177 | XL Sandwich Valparaíso | Sandwichería / comida rápida | Barrio Placeres, Valparaíso (@xlsandwich, tel. +56 986851413) | Nuevo | — | Presentación redactada 27/08 — sandwichería en Uber Eats, canal propio Instagram 4.452 seguidores, Lu-Sá disponible, primer contacto, primavera en 5 días + Fiestas Patrias en 25 días = peak sandwicherías, argumento $500 fijo vs. 27-30% Uber Eats |
 | 178 | Hojarasca | Dulcería / pastelería | Viña del Mar (Borgoño 14191 / 5 Pte. 421, en Rappi + Uber Eats) | Nuevo | — | Presentación redactada 27/08 — dulcería/pastelería en DOBLE plataforma (Rappi + Uber Eats), argumento doble comisión, primavera en 5 días + Fiestas Patrias en 25 días = peak máximo pastelería, $500 fijo libera margen por pedido |
+| 179 | Pastelería y Panadería Olfos | Pastelería / panadería | Villa Alemana (@pasteleriaolfos Instagram) | Nuevo | — | Presentación redactada 28/08 — establecida desde 1983, pastelería y panadería tradicional familiar en Villa Alemana, delivery activo, opciones con y sin azúcar, primavera en 4 días + Fiestas Patrias en 21 días = peak máximo encargos tortas/pasteles celebración, argumento $500 fijo vs. 28-30% plataformas grandes devora el margen en el peak |
+| 180 | La Mela Cafetería y Pastelería | Cafetería / pastelería / gelatería | Villa Alemana (pastelerialamela.cl) | Nuevo | — | Presentación redactada 28/08 — tradición italiana desde 1970, tortas/café/gelatería/cocktails, distribución toda la V Región, canal propio web, primavera en 4 días = gelatería en su peak de temporada oct-dic, Fiestas Patrias en 21 días = encargos tortas familiares masivos, argumento $500 fijo libera margen en temporada alta |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-28)
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 28 de agosto — ÚLTIMO viernes del invierno 2026** (primavera en 4 días, septiembre 1). Los Contactados más desactualizados son **#12 Librería El Saber y #13 Ferretería Los Maestros** (7 días sin draft desde el 21/08). **ARGUMENTOS ACTIVOS:** "último viernes del invierno / primavera en 4 días = configurar el canal ahora antes del rush de temporada" + "Fiestas Patrias en 21 días = peak empanadas/asados/bebidas" + "Rappi Turbo ya en Quilpué (8 km)" + "algoritmo social Rappi entierra negocios sin publicidad pagada". Se redactan **4 mensajes**: seguimientos **"Viernes 28 de agosto"** para #12 Librería El Saber y #13 Ferretería Los Maestros; presentaciones para **#179 Pastelería Olfos** y **#180 La Mela Cafetería y Pastelería**. Pipeline total: **180 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **64 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (3) **FNE/TDLC argumento estable** para 11 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102 y otros). **Actualizado:** 2026-08-28.
+
+---
+
+**[12] Librería El Saber — Seguimiento "Viernes 28 de agosto / ÚLTIMO viernes del invierno":**
+"Hola equipo de Librería El Saber, les escribe Matías de RepartoJusto, la plataforma de delivery local de Villa Alemana.
+
+Viernes = el día más fuerte de la semana en útiles escolares — familias que recuerdan lo que falta para el lunes. Y este viernes es especial: es el ÚLTIMO viernes del invierno 2026. El lunes empieza la primavera (septiembre 1).
+
+Con RepartoJusto pueden ofrecer delivery de útiles y materiales escolares en Villa Alemana a $500 fijo por entrega, sin porcentaje sobre la venta. Cuadernos, lápices, colores, calculadoras urgentes entregados el mismo día — sin que el cliente tenga que salir al frío.
+
+Fiestas Patrias en 21 días trae pedidos de material para fiestas y decoración. Y la primavera viene con proyectos escolares nuevos. Es el momento justo para tener el canal listo.
+
+Registro gratis, sin contrato. ¿Conversamos esta semana?
+
+Matías — RepartoJusto Villa Alemana
+repartojusto-production.up.railway.app"
+
+---
+
+**[13] Ferretería Los Maestros — Seguimiento "Viernes 28 de agosto / ÚLTIMO viernes del invierno":**
+"Hola equipo de Ferretería Los Maestros, les escribe Matías de RepartoJusto.
+
+Viernes tarde — el momento exacto en que los clientes piden los materiales que necesitan para el proyecto del fin de semana: pintura, selladores, herramientas, accesorios. Y este viernes es el ÚLTIMO del invierno 2026: primavera en 4 días (septiembre 1).
+
+Con la primavera llega el rush de proyectos al aire libre: pintura exterior, instalaciones en jardín, reparaciones de cierre de temporada. Con Fiestas Patrias en 21 días vienen los pedidos de materiales para la decoración de la ramada y el patio.
+
+Con RepartoJusto pueden entregar herramientas y materiales a $500 fijo por envío, sin porcentaje sobre la venta. Rappi Turbo ya opera en Quilpué (8 km) — cuando llegue a Villa Alemana, el algoritmo va a priorizar a los que pagan publicidad dentro de la app. Nosotros no tenemos algoritmo.
+
+¿Les interesa tener el canal delivery propio listo antes del peak de primavera?
+
+Matías — RepartoJusto Villa Alemana
+repartojusto-production.up.railway.app"
+
+---
+
+**[179] Pastelería y Panadería Olfos — Presentación:**
+"Hola equipo de Pastelería Olfos (@pasteleriaolfos), les escribe Matías de RepartoJusto, la plataforma de delivery de Villa Alemana que cobra $500 fijo por entrega, sin porcentaje sobre sus ventas.
+
+Desde 1983 en Villa Alemana — un negocio de trayectoria como Olfos merece que cada torta o pastel que entregan les deje el margen completo. Si están usando alguna plataforma de delivery que cobra porcentaje, están perdiendo entre 27-30% de cada pedido.
+
+Con nosotros son $500 fijos por entrega, siempre. Con primavera en 4 días y Fiestas Patrias en 21 días, los encargos de tortas para celebraciones (bodas, quinceañeros, fiestas de primavera, eventos de septiembre) van a explotar. Es el mejor momento para tener el canal delivery listo.
+
+Registro gratis, sin contrato de permanencia. ¿Les interesa conocer cómo funciona?
+
+repartojusto-production.up.railway.app"
+
+---
+
+**[180] La Mela Cafetería y Pastelería — Presentación:**
+"Hola equipo de La Mela (@la.pasteleria / pastelerialamela.cl), les escribe Matías de RepartoJusto, plataforma de delivery local en la V Región.
+
+Tradición italiana desde 1970 — tortas, café, gelatería y cocktails con distribución a toda la V Región. Un negocio así con volumen de distribución regional merece que cada pedido entregado les cueste $500 fijo, sin porcentaje sobre la venta.
+
+Con la primavera que llega en 4 días (septiembre 1), la gelatería entra en su peak de temporada — y dura hasta diciembre. Con Fiestas Patrias en 21 días vienen los pedidos masivos de tortas familiares y postres para celebraciones. Es el mejor momento para sumar un canal con tarifa plana donde el margen del helado o la torta se queda en el negocio.
+
+¿Conversamos sobre cómo podemos complementar su distribución actual?
+
+Matías — RepartoJusto
+repartojusto-production.up.railway.app"
 
 ---
 
