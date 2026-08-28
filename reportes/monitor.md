@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-28T09:31:29Z
+**Última verificación:** 2026-08-28T10:31:34Z
 **Estado:** ❌ CAÍDO
-**Detalle:** curl error 56 (CURLE_RECV_ERROR) — sin respuesta del servidor. HTTP status: 000 (sin conexión). El endpoint https://repartojusto-production.up.railway.app/health no respondió.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del entorno de ejecución bloqueó la conexión saliente (HTTP 403 CONNECT tunnel failed). No se pudo determinar el estado real del servidor.
