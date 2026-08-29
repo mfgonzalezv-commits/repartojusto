@@ -1,12 +1,12 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-28
+**Actualizado:** 2026-08-29
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Sábado 22 de agosto" redactado 22/08 — ÚLTIMO sábado del invierno 2026, completos/sándwiches peak familiar, primavera en 10 días = configurar canal antes del rush, Rappi Turbo Quilpué urgencia ALTA |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Sábado 29 de agosto" redactado 29/08 — ÚLTIMO SÁBADO DEL INVIERNO 2026 (hoy es el último), completos/sándwiches peak almuerzo familiar + onces, primavera en 3 días = configurar canal antes del rush de temporada, Fiestas Patrias en 20 días = peak comida rápida, Rappi Turbo Quilpué urgencia ALTA |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 26 de agosto / Primavera en 6 días" redactado 26/08 — miércoles peak pollo cena familiar, agosto frío máximo del año, ahorro ~$600K/mes vs. Rappi, Rappi Turbo Quilpué urgencia ALTA, primavera en 6 días = configurar canal antes del peak de temporada |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 22 de agosto" redactado 22/08 — ÚLTIMO sábado del invierno: antibióticos/jarabes/medicamentos urgentes sin salir al frío, delivery local $500 fijo, argumento autonomía sucursal + Rappi Turbo Quilpué urgencia ALTA |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 29 de agosto" redactado 29/08 — ÚLTIMO SÁBADO DEL INVIERNO 2026, medicamentos para el fin de semana sin salir al frío, primavera en 3 días = temporada alergias/antihistamínicos comienza, delivery local $500 fijo, argumento autonomía sucursal + Rappi Turbo Quilpué urgencia ALTA |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 26 de agosto / Primavera en 6 días" redactado 26/08 — miércoles peak pizza cena familiar, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA, Fiestas Patrias en 26 días |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, peak sushi familiar noche dominical, algoritmo social Rappi entierra sin publicidad, primavera en 9 días = configurar canal antes del rush de temporada, Rappi Turbo Quilpué urgencia ALTA |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 23 de agosto" redactado 23/08 — ÚLTIMO DOMINGO DEL INVIERNO 2026, domingo tarde-noche = peak máximo botillería (asados, onces familiares, reuniones), primavera en 9 días = peak cerveza/vino en jardín se acerca, Rappi Turbo Quilpué urgencia ALTA |
@@ -184,6 +184,8 @@
 | 178 | Hojarasca | Dulcería / pastelería | Viña del Mar (Borgoño 14191 / 5 Pte. 421, en Rappi + Uber Eats) | Nuevo | — | Presentación redactada 27/08 — dulcería/pastelería en DOBLE plataforma (Rappi + Uber Eats), argumento doble comisión, primavera en 5 días + Fiestas Patrias en 25 días = peak máximo pastelería, $500 fijo libera margen por pedido |
 | 179 | Pastelería y Panadería Olfos | Pastelería / panadería | Villa Alemana (@pasteleriaolfos Instagram) | Nuevo | — | Presentación redactada 28/08 — establecida desde 1983, pastelería y panadería tradicional familiar en Villa Alemana, delivery activo, opciones con y sin azúcar, primavera en 4 días + Fiestas Patrias en 21 días = peak máximo encargos tortas/pasteles celebración, argumento $500 fijo vs. 28-30% plataformas grandes devora el margen en el peak |
 | 180 | La Mela Cafetería y Pastelería | Cafetería / pastelería / gelatería | Villa Alemana (pastelerialamela.cl) | Nuevo | — | Presentación redactada 28/08 — tradición italiana desde 1970, tortas/café/gelatería/cocktails, distribución toda la V Región, canal propio web, primavera en 4 días = gelatería en su peak de temporada oct-dic, Fiestas Patrias en 21 días = encargos tortas familiares masivos, argumento $500 fijo libera margen en temporada alta |
+| 181 | KOMO Sushi-Pizza Delivery | Sushi / pizza | Av. Curauma Sur, Placilla, Valparaíso (en Uber Eats, tel. (32) 312 2489, @KomoSushiPizza) | Nuevo | — | Presentación redactada 29/08 — sushi y pizza con masa casera activos en Uber Eats Valparaíso, tel. disponible, Facebook @KomoSushiPizza, primavera en 3 días + Fiestas Patrias en 20 días = peak pedidos celebración, argumento $500 fijo vs. 30% Uber Eats (ticket sushi $12K-$18K → ahorro $3K-$4.900/pedido) |
+| 182 | Chave's Pizza Delivery | Pizzería | Villa Alemana (Instagram @chavespizza) | Nuevo | — | Presentación redactada 29/08 — pizzería con canal delivery propio vía Instagram, Mar-Dom 18:00-23:00, sin grandes plataformas detectadas, argumento canal directo + logística RepartoJusto $500 fijo vs. 28-30% plataformas, primavera en 3 días + Fiestas Patrias en 20 días = peak pizzas familiares |
 
 ---
 
@@ -191,11 +193,85 @@
 
 ---
 
+### MENSAJES DEL DÍA (2026-08-29)
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 29 de agosto — ÚLTIMO SÁBADO DEL INVIERNO 2026** (primavera en 3 días, septiembre 1; Fiestas Patrias en 20 días). Los Contactados más desactualizados son **#1 Fuente de Soda El Rápido y #3 Farmacia Cruz Verde** (7 días sin draft desde el 22/08). **ARGUMENTOS ACTIVOS:** "ÚLTIMO SÁBADO DEL INVIERNO / primavera en 3 días = configurar el canal ahora antes del rush de temporada" + "Fiestas Patrias en 20 días = peak empanadas/asados/comida rápida" + "Rappi Turbo ya en Quilpué (8 km) = urgencia ALTA" + "FNE/TDLC estable para 11 prospectos PedidosYa". Se redactan **4 mensajes**: seguimientos **"Sábado 29 de agosto"** para #1 Fuente de Soda El Rápido y #3 Farmacia Cruz Verde; presentaciones para **#181 KOMO Sushi-Pizza Delivery** y **#182 Chave's Pizza Delivery**. Pipeline total: **182 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **65 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería** — argumento FNE/TDLC estable activo; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA. **Actualizado:** 2026-08-29.
+
+---
+
+**[1] Fuente de Soda El Rápido — Seguimiento "Sábado 29 de agosto — ÚLTIMO sábado del invierno 2026":**
+"Hola equipo de Fuente de Soda El Rápido, les escribe Matías de RepartoJusto.
+
+Hoy es el ÚLTIMO sábado del invierno 2026. En 3 días llega la primavera — y con ella el peak de pedidos de temporada.
+
+Un sábado como hoy es el momento más fuerte de la semana en completos, sándwiches y algo caliente para el almuerzo familiar. Con RepartoJusto pueden atender esos pedidos del barrio a $500 fijo por entrega, sin que Rappi se lleve el 28% de cada venta.
+
+Fiestas Patrias es en 20 días: el mayor peak de completos y comida rápida del año. Tener el canal listo antes del 18 de septiembre es la diferencia entre aprovechar el peak o regalarle el margen a la plataforma.
+
+Rappi Turbo ya opera en Quilpué (8 km). Cuando llegue a Villa Alemana va a priorizar a quienes pagan publicidad en la app. Nosotros cobramos $500 fijo, sin porcentaje ni publicidad obligada.
+
+¿Los llamo esta semana para mostrarles cómo funciona?
+
+Matías — RepartoJusto Villa Alemana
+repartojusto-production.up.railway.app"
+
+---
+
+**[3] Farmacia Cruz Verde — Seguimiento "Sábado 29 de agosto — ÚLTIMO sábado del invierno 2026":**
+"Hola equipo de Farmacia Cruz Verde Av. Álvarez, les escribe Matías de RepartoJusto, la plataforma de delivery local de Villa Alemana.
+
+Hoy es el ÚLTIMO sábado del invierno. El lunes 1 de septiembre empieza la primavera — y con ella la temporada de alergias: antihistamínicos, descongestionantes y medicamentos de temporada van a aumentar en demanda.
+
+Con RepartoJusto pueden ofrecer medicamentos y productos farmacéuticos a domicilio en Villa Alemana a $500 fijo por entrega, sin porcentaje sobre la venta. El cliente recibe lo que necesita sin salir de casa — y la sucursal no depende de que Rappi decida si cubre la zona o no.
+
+Registro gratis, sin contrato mínimo, sin cambio de equipo.
+
+¿Tienen 10 minutos esta semana para ver cómo funciona?
+
+Matías — RepartoJusto Villa Alemana
+repartojusto-production.up.railway.app"
+
+---
+
+**[181] KOMO Sushi-Pizza Delivery — Presentación (Uber Eats Valparaíso, tel. (32) 312 2489):**
+"Hola equipo de KOMO Sushi-Pizza, les escribe Matías de RepartoJusto.
+
+Vi que tienen delivery en Uber Eats en Valparaíso. Con un ticket de sushi de $12.000-$18.000, Uber Eats se lleva $3.600-$5.400 en comisión por cada pedido (30%). Con RepartoJusto pagan $500 fijo, sin porcentaje sobre la venta.
+
+Con la primavera llegando en 3 días (1 de septiembre) y Fiestas Patrias en 20 días, es el momento ideal para activar un canal propio con tarifa fija y llegar al peak de temporada con el margen protegido.
+
+La plataforma cubre Valparaíso y alrededores. Registro gratis, sin contrato.
+
+¿Conversamos esta semana?
+
+Matías — RepartoJusto
+repartojusto-production.up.railway.app"
+
+---
+
+**[182] Chave's Pizza Delivery — Presentación (Instagram @chavespizza, Villa Alemana):**
+"Hola equipo de Chave's Pizza (@chavespizza), les escribe Matías de RepartoJusto, la plataforma de delivery local de Villa Alemana.
+
+Vi que tienen delivery propio por Instagram — la decisión correcta. Con RepartoJusto pueden potenciar ese canal con logística local a $500 fijo por entrega, sin porcentaje sobre la venta. Una pizza de $10.000 con Rappi les cuesta $2.800 en comisión. Con nosotros, siempre $500.
+
+Primavera en 3 días y Fiestas Patrias en 20 días: el peak de pizzas familiares para celebrar es ahora. Tener el canal listo antes del 18 de septiembre es aprovechar la temporada entera.
+
+Registro gratis, sin contrato mínimo.
+
+¿Los contacto esta semana?
+
+Matías — RepartoJusto Villa Alemana
+repartojusto-production.up.railway.app"
+
+---
+
 ### MENSAJES DEL DÍA (2026-08-28)
 
 > **NOTA PARA MATÍAS:** Hoy es **viernes 28 de agosto — ÚLTIMO viernes del invierno 2026** (primavera en 4 días, septiembre 1). Los Contactados más desactualizados son **#12 Librería El Saber y #13 Ferretería Los Maestros** (7 días sin draft desde el 21/08). **ARGUMENTOS ACTIVOS:** "último viernes del invierno / primavera en 4 días = configurar el canal ahora antes del rush de temporada" + "Fiestas Patrias en 21 días = peak empanadas/asados/bebidas" + "Rappi Turbo ya en Quilpué (8 km)" + "algoritmo social Rappi entierra negocios sin publicidad pagada". Se redactan **4 mensajes**: seguimientos **"Viernes 28 de agosto"** para #12 Librería El Saber y #13 Ferretería Los Maestros; presentaciones para **#179 Pastelería Olfos** y **#180 La Mela Cafetería y Pastelería**. Pipeline total: **180 prospectos**.
 >
-> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **64 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (3) **FNE/TDLC argumento estable** para 11 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102 y otros). **Actualizado:** 2026-08-28.
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **64 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (3) **FNE/TDLC argumento estable** para 11 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102 y otros). **Actualizado:** 2026-08-29.
 
 ---
 
@@ -3268,3 +3344,7 @@ Con primavera en 7 días, es el momento ideal para configurar el canal antes del
 **Empanadas Empanallá (#175, agregado 26/08):** Empanaderías artesanales con delivery propio en Villa Alemana. Instagram: @empanadas_empanalla. Canal propio Instagram activo, delivery fines de semana por WhatsApp. Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Rubro: empanadas al horno caseras artesanales. Ticket promedio estimado: $5.000-$10.000 (venta por unidad o media docena/docena). Argumento principal: canal propio ya activo vía WhatsApp — RepartoJusto complementa la logística del último kilómetro a $500 fijo sin porcentaje de venta, sin que la comisión escale con el ticket. Para una docena de $8.000, ahorro vs. plataforma de porcentaje (28%): hasta $1.740 por entrega. Argumentos estacionales de máxima potencia: primavera en 6 días (septiembre 1) + Fiestas Patrias en 26 días (18 de septiembre) = peak absoluto del rubro empanadas en Chile — el mejor momento del año para escalar el canal. Fuente: instagram.com/empanadas_empanalla + búsqueda delivery empanadas Villa Alemana agosto 2026.
 
 **Tanizaki Valparaíso (#176, agregado 26/08):** Sushi delivery con web y canal propio en Valparaíso. Sitio web: tanizakivalparaiso.cl. Teléfono: +56 921942289. Canal propio web activo. Sin grandes plataformas detectadas. Rubro: sushi delivery. Ticket promedio estimado: $10.000-$15.000 (rolls, tablas, combos). Argumento principal: canal propio web ya activo — si trabajan adicionalmente con plataformas de porcentaje, por un roll de $12.000 pagan ~$3.100-$3.600 de comisión; con RepartoJusto son $500 fijos. Argumento de urgencia: Rappi Turbo ya opera en Quilpué (8 km de VA) y el algoritmo de la nueva app de Rappi penaliza negocios que no pagan publicidad interna — con RepartoJusto no hay algoritmo que los esconda. Primavera en 6 días = peak de sushi de temporada. Fuente: tanizakivalparaiso.cl + búsqueda sushi delivery Valparaíso agosto 2026.
+
+**KOMO Sushi-Pizza Delivery (#181, agregado 29/08):** Restaurante de sushi y pizza con masa casera en Av. Curauma Sur, Placilla, Valparaíso. Teléfono: (32) 312 2489. Facebook: @KomoSushiPizza. Confirmado en Uber Eats (ubereats.com/cl/store/komo-sushi-pizza-delivery). Combinación sushi + pizza = ticket promedio variado: sushi $12.000-$18.000, pizza $8.000-$12.000. Uber Eats cobra 30% de comisión — con 12 entregas diarias de sushi, el ahorro vs. Uber Eats puede superar $750.000/mes vs. RepartoJusto ($500 fijos). Primavera en 3 días (septiembre 1) + Fiestas Patrias en 20 días = peak de pedidos de celebración en temporada alta. Canal Uber Eats ya activo — argumento tarifa fija para reducir costo por pedido en el peak de temporada. Teléfono disponible para contacto directo. Fuente: ubereats.com/cl/store/komo-sushi-pizza-delivery + cl.latinoplaces.com/valparaiso/komo-sushi-pizza-delivery + cl.polomap.com.
+
+**Chave's Pizza Delivery (#182, agregado 29/08):** Pizzería con canal delivery propio en Villa Alemana. Instagram: @chavespizza. Horario: Martes a Domingo 18:00-23:00. Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Canal propio Instagram activo. Ticket promedio estimado: $8.000-$12.000 (pizza delivery). Argumento principal: canal propio ya activo por Instagram — RepartoJusto complementa la logística local del último kilómetro a $500 fijo sin porcentaje de venta. Para una pizza de $10.000, ahorro vs. plataforma de porcentaje (28%): $2.300 por entrega. Con 15 entregas diarias, ahorro mensual estimado: $690.000+ vs. usar Rappi/Uber Eats. Primavera en 3 días + Fiestas Patrias en 20 días = peak máximo de pizza delivery para celebraciones familiares. Fuente: instagram.com/chavespizza + búsqueda delivery Villa Alemana sábado agosto 2026.
