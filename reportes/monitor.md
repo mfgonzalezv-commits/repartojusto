@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-08-29T07:31:30Z
+**Última verificación:** 2026-08-29T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por política de red del entorno (egress proxy denegó CONNECT). HTTP 000 (sin respuesta del servidor).
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del entorno de ejecución bloqueó la conexión saliente (connect_rejected: política de la organización o destino inalcanzable). No se recibió respuesta HTTP.
