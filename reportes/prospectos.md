@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-30
+**Actualizado:** 2026-08-31
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -11,9 +11,9 @@
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 30 de agosto / MAÑANA EMPIEZA LA PRIMAVERA" redactado 30/08 — ÚLTIMO domingo del invierno 2026, mañana 1 sept = primavera, peak sushi familiar noche dominical, Fiestas Patrias en 19 días = canal delivery listo antes del peak, Rappi Turbo Quilpué urgencia ALTA, algoritmo social Rappi entierra sin publicidad paga |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 30 de agosto / MAÑANA EMPIEZA LA PRIMAVERA" redactado 30/08 — ÚLTIMO domingo del invierno 2026, mañana 1 sept = primavera, tarde-noche domingo = peak MÁXIMO botillería (asados, onces, reuniones), Fiestas Patrias en 19 días = mayor peak bebidas del año, Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = reposición midweek + cambio de stock de temporada (primavera en 7 días), algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — primer lunes de la última semana del invierno, peak encargos tortas para celebraciones semana, primavera en 8 días = bodas/quinceañeros/fiestas de primavera = configurar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026" redactado 31/08 — ÚLTIMO DÍA DEL INVIERNO 2026, mañana 1 de septiembre = primavera = peak bodas/quinceañeros/fiestas de primavera = encargos, Fiestas Patrias en 18 días = mayor peak de encargos del año, lunes = inicio de semana encargos, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — jueves = peak encargos del asado del fin de semana, primavera en 5 días (1 sept) = configurar canal antes del rush de temporada, Fiestas Patrias en 25 días = peak asados, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 24 de agosto" redactado 24/08 — lunes home office = peak café delivery inicio de semana, primavera en 8 días = terrazas al aire libre / café primaveral = planificar canal delivery ahora, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026" redactado 31/08 — lunes home office ÚLTIMO DÍA DEL INVIERNO, mañana 1 sept = primavera = terrazas abiertas, café de temporada, Fiestas Patrias en 18 días, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = peak consultas mascotas post-fin de semana + primavera en 7 días = temporada antipulgas/desparasitación/vacunas preventivas, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 28 de agosto / ÚLTIMO viernes de agosto" redactado 28/08 — back-to-school semana final, viernes = compras escolares urgentes del fin de semana (cuadernos, colores, material escolar del lunes), primavera en 4 días = útiles de temporada nueva, diferenciador único en VA sin Rappi ni Uber Eats |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 28 de agosto / ÚLTIMO viernes de agosto" redactado 28/08 — ÚLTIMO viernes del invierno 2026: encargos materiales proyectos del fin de semana, primavera en 4 días = rush preparación jardín/exterior, Fiestas Patrias en 21 días = instalaciones/reparaciones decoración, Rappi Turbo Quilpué urgencia ALTA |
@@ -188,10 +188,82 @@
 | 182 | Chave's Pizza Delivery | Pizzería | Villa Alemana (Instagram @chavespizza) | Nuevo | — | Presentación redactada 29/08 — pizzería con canal delivery propio vía Instagram, Mar-Dom 18:00-23:00, sin grandes plataformas detectadas, argumento canal directo + logística RepartoJusto $500 fijo vs. 28-30% plataformas, primavera en 3 días + Fiestas Patrias en 20 días = peak pizzas familiares |
 | 183 | Punto Asador Quilpué | Parrilla / carnes a las brasas | Blanco Encalada 977, Quilpué | Nuevo | — | Presentación redactada 30/08 — parrilla/carnes a las brasas/ahumados en Quilpué (encontrado TikTok, sin grandes plataformas detectadas), Fiestas Patrias en 19 días = peak MÁXIMO asados del año, Rappi Turbo urgencia directa (Quilpué ya operativo), argumento $500 fijo vs. ~$7K-$8K comisión Rappi por pedido de asado |
 | 184 | Las Brasas del Gaucho Quilpué | Parrilla / asado | Quilpué (canal propio, mundochileno.com/quilpue/parrillas) | Nuevo | — | Presentación redactada 30/08 — parrillada local Quilpué sin grandes plataformas detectadas, Fiestas Patrias en 19 días = peak asados/costillares, Rappi Turbo urgencia directa, argumento canal propio $500 fijo vs. comisión porcentual plataformas |
+| 185 | Sushi Boat Valparaíso | Sushi delivery | Valparaíso (en Uber Eats, @sushiboatvlp Instagram) | Nuevo | — | Presentación redactada 31/08 — sushi delivery activo en Uber Eats Valparaíso, ticket promedio alto $14K-$18K (ahorro $4.200-$5.400/pedido vs. 30% UE), primavera = activación peak sushi delivery, Fiestas Patrias en 18 días = pedidos celebración |
+| 186 | El Parrillazo Quilpué | Parrilla / comida chilena | Quilpué (en Rappi, @elparrillazo_quilpue Instagram) | Nuevo | — | Presentación redactada 31/08 — parrilla/costillares/carnes en Rappi Quilpué, Rappi Turbo urgencia DIRECTA (ya operativo en Quilpué), Fiestas Patrias en 18 días = peak MÁXIMO del año para parrilladas, argumento $500 fijo vs. ~$5K-$8K comisión Rappi por pedido de asado |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-08-31)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026** (mañana 1 de septiembre = PRIMAVERA; Fiestas Patrias en 18 días). Los Contactados que cumplen 7 días sin draft hoy son **#8 Pastelería Dulce Hogar y #10 Café El Árbol** (último draft 24/08). **ARGUMENTOS ACTIVOS:** "HOY ES EL ÚLTIMO DÍA DEL INVIERNO / MAÑANA EMPIEZA LA PRIMAVERA = configurar canal AHORA antes del peak de temporada" + "Fiestas Patrias en 18 días = peak encargos/asados/bebidas" + "Lunes = encargos inicio de semana" + "Rappi Turbo ya en Quilpué (8 km) = urgencia ALTA" + "Algoritmo social Rappi entierra sin publicidad". Se redactan **4 mensajes**: seguimientos **"Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026"** para #8 Pastelería Dulce Hogar y #10 Café El Árbol; presentaciones para **#185 Sushi Boat Valparaíso** y **#186 El Parrillazo Quilpué**. Pipeline total: **186 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **67 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — argumento FNE/TDLC estable vigente todo H2 2026; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA. **Actualizado:** 2026-08-31.
+
+---
+
+**[8] Pastelería Dulce Hogar — Seguimiento "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026":**
+"Hola equipo de Pastelería Dulce Hogar, les escribe Matías de RepartoJusto.
+
+Hoy lunes es el ÚLTIMO DÍA DEL INVIERNO 2026 — mañana 1 de septiembre llega la primavera.
+
+Para una pastelería, la primavera significa una cosa: se viene el peak de encargos para fiestas, bodas, quinceañeros y reuniones de temporada. El momento de tener el canal de delivery listo es HOY, antes del rush.
+
+Con RepartoJusto el delivery cuesta $500 fijo por entrega — sin porcentaje sobre la venta. Una torta de $25.000 en Rappi pierde ~$7.000 en comisión. Con nosotros son $500, punto.
+
+Fiestas Patrias es en 18 días: el mayor peak de encargos del año. ¿Tienen el canal listo para atender esa demanda?
+
+Sin contrato, registro gratis: repartojusto-production.up.railway.app
+
+¿Conversamos esta semana?"
+
+---
+
+**[10] Café El Árbol — Seguimiento "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026":**
+"Hola equipo de Café El Árbol, les escribe Matías de RepartoJusto.
+
+Hoy lunes es el ÚLTIMO DÍA DEL INVIERNO 2026. Mañana 1 de septiembre empieza la primavera — y con ella las terrazas al aire libre, el café de temporada y los pedidos de desayuno que se multiplican con el buen tiempo.
+
+El momento de tener el canal de delivery configurado es AHORA, antes del rush de septiembre.
+
+Con RepartoJusto el delivery cuesta $500 fijo por pedido — sin comisión sobre la venta. Un café $3.500 + torta $6.000 en Rappi pierde ~$2.700 en comisión. Con nosotros son $500.
+
+Fiestas Patrias en 18 días + Rappi Turbo ya en Quilpué (8 km): posiciónense antes de que el algoritmo los esconda detrás de quienes pagan publicidad.
+
+Sin contrato, registro gratis: repartojusto-production.up.railway.app"
+
+---
+
+**[185] Sushi Boat Valparaíso — Presentación:**
+"Hola equipo de Sushi Boat, les escribe Matías de RepartoJusto.
+
+Los encontramos en Uber Eats Valparaíso — su sushi delivery tiene exactamente el ticket y el rubro que más crece con la primavera (mañana 1 de septiembre).
+
+Con RepartoJusto el delivery cuesta $500 fijo por pedido entregado, sin porcentaje sobre la venta. Una tabla sushi de $16.000 en Uber Eats pierde ~$4.800 en comisión (30%) — con nosotros son $500, punto.
+
+Fiestas Patrias en 18 días: el peak de pedidos de celebración del año. Tener un canal de delivery con tarifa fija antes del 18 de septiembre es la diferencia entre aprovechar el peak o ceder el margen a la plataforma.
+
+Sin contrato, registro gratis: repartojusto-production.up.railway.app
+
+¿Conversamos?"
+
+---
+
+**[186] El Parrillazo Quilpué — Presentación:**
+"Hola equipo de El Parrillazo, les escribe Matías de RepartoJusto.
+
+Los encontramos en Rappi Quilpué — su parrilla y costillares son exactamente lo que la gente busca para Fiestas Patrias (18 días).
+
+Con RepartoJusto el delivery cuesta $500 fijo por pedido entregado, sin comisión porcentual. Un asado de $25.000 en Rappi pierde ~$7.000 en comisión — con nosotros son $500, punto.
+
+Y ojo: Rappi Turbo ya opera en Quilpué. Cuando expanda en modo full, va a priorizar a quienes paguen publicidad en la app — los que no pagan, quedan invisibles en el feed. Con RepartoJusto no hay algoritmo que los esconda.
+
+Sin contrato, registro gratis: repartojusto-production.up.railway.app
+
+¿Les interesa conversar antes del 18 de septiembre?"
 
 ---
 
