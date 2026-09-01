@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-08-31
+**Actualizado:** 2026-09-01
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -10,11 +10,11 @@
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 26 de agosto / Primavera en 6 días" redactado 26/08 — miércoles peak pizza cena familiar, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA, Fiestas Patrias en 26 días |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 30 de agosto / MAÑANA EMPIEZA LA PRIMAVERA" redactado 30/08 — ÚLTIMO domingo del invierno 2026, mañana 1 sept = primavera, peak sushi familiar noche dominical, Fiestas Patrias en 19 días = canal delivery listo antes del peak, Rappi Turbo Quilpué urgencia ALTA, algoritmo social Rappi entierra sin publicidad paga |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 30 de agosto / MAÑANA EMPIEZA LA PRIMAVERA" redactado 30/08 — ÚLTIMO domingo del invierno 2026, mañana 1 sept = primavera, tarde-noche domingo = peak MÁXIMO botillería (asados, onces, reuniones), Fiestas Patrias en 19 días = mayor peak bebidas del año, Rappi Turbo Quilpué urgencia ALTA |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = reposición midweek + cambio de stock de temporada (primavera en 7 días), algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 1 de septiembre / PRIMER DÍA DE PRIMAVERA" redactado 01/09 — primavera HOY = reposición stock bebidas frías/snacks de temporada, Fiestas Patrias en 17 días = peak bebidas/snacks, delivery minimarket en auge, Rappi Turbo Quilpué urgencia ALTA |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026" redactado 31/08 — ÚLTIMO DÍA DEL INVIERNO 2026, mañana 1 de septiembre = primavera = peak bodas/quinceañeros/fiestas de primavera = encargos, Fiestas Patrias en 18 días = mayor peak de encargos del año, lunes = inicio de semana encargos, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — jueves = peak encargos del asado del fin de semana, primavera en 5 días (1 sept) = configurar canal antes del rush de temporada, Fiestas Patrias en 25 días = peak asados, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026" redactado 31/08 — lunes home office ÚLTIMO DÍA DEL INVIERNO, mañana 1 sept = primavera = terrazas abiertas, café de temporada, Fiestas Patrias en 18 días, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 25 de agosto" redactado 25/08 — martes = peak consultas mascotas post-fin de semana + primavera en 7 días = temporada antipulgas/desparasitación/vacunas preventivas, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 1 de septiembre / PRIMER DÍA DE PRIMAVERA" redactado 01/09 — primavera HOY = peak temporada antipulgas/garrapatas/desparasitación/vacunas preventivas, dueños de mascotas prefieren pedir insumos desde casa, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 28 de agosto / ÚLTIMO viernes de agosto" redactado 28/08 — back-to-school semana final, viernes = compras escolares urgentes del fin de semana (cuadernos, colores, material escolar del lunes), primavera en 4 días = útiles de temporada nueva, diferenciador único en VA sin Rappi ni Uber Eats |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 28 de agosto / ÚLTIMO viernes de agosto" redactado 28/08 — ÚLTIMO viernes del invierno 2026: encargos materiales proyectos del fin de semana, primavera en 4 días = rush preparación jardín/exterior, Fiestas Patrias en 21 días = instalaciones/reparaciones decoración, Rappi Turbo Quilpué urgencia ALTA |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — primavera en 5 días (1 sept) + Fiestas Patrias en 25 días = canal delivery listo antes del rush de calor oct-dic, $500 fijo vs. 28-30% Rappi devora el margen en el peak de helados, registro gratis sin contrato |
@@ -190,10 +190,68 @@
 | 184 | Las Brasas del Gaucho Quilpué | Parrilla / asado | Quilpué (canal propio, mundochileno.com/quilpue/parrillas) | Nuevo | — | Presentación redactada 30/08 — parrillada local Quilpué sin grandes plataformas detectadas, Fiestas Patrias en 19 días = peak asados/costillares, Rappi Turbo urgencia directa, argumento canal propio $500 fijo vs. comisión porcentual plataformas |
 | 185 | Sushi Boat Valparaíso | Sushi delivery | Valparaíso (en Uber Eats, @sushiboatvlp Instagram) | Nuevo | — | Presentación redactada 31/08 — sushi delivery activo en Uber Eats Valparaíso, ticket promedio alto $14K-$18K (ahorro $4.200-$5.400/pedido vs. 30% UE), primavera = activación peak sushi delivery, Fiestas Patrias en 18 días = pedidos celebración |
 | 186 | El Parrillazo Quilpué | Parrilla / comida chilena | Quilpué (en Rappi, @elparrillazo_quilpue Instagram) | Nuevo | — | Presentación redactada 31/08 — parrilla/costillares/carnes en Rappi Quilpué, Rappi Turbo urgencia DIRECTA (ya operativo en Quilpué), Fiestas Patrias en 18 días = peak MÁXIMO del año para parrilladas, argumento $500 fijo vs. ~$5K-$8K comisión Rappi por pedido de asado |
+| 187 | La Fuente del Barrio | Comida rápida / completos | Villa Alemana (canal propio Instagram @lafuentedelbarrio) | Nuevo | — | Presentación redactada 01/09 — fuente de soda con delivery propio canal Instagram, sin grandes plataformas detectadas, completos/churrascos/sándwiches, HOY PRIMER DÍA DE PRIMAVERA + Fiestas Patrias en 17 días = peak MÁXIMO del año para completos y sándwiches, argumento canal propio + logística $500 fijo sin porcentaje |
+| 188 | Bodega Tierra Buena | Botillería / vinos artesanales | Villa Alemana (canal propio Instagram @bodegatierra) | Nuevo | — | Presentación redactada 01/09 — botillería/vinoteca con canal delivery propio, sin grandes plataformas detectadas, vinos nacionales artesanales + cervezas craft, HOY PRIMER DÍA DE PRIMAVERA + Fiestas Patrias en 17 días = peak MÁXIMO de botillerías del año (chicha, vino, cerveza para el 18), aperitivos al aire libre primavera |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-09-01)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 1 de septiembre — PRIMER DÍA DE LA PRIMAVERA 2026** (Fiestas Patrias en 17 días). Los Contactados que cumplen 7 días sin draft hoy son **#7 Minimercado La Esquina y #11 Veterinaria Huellitas** (último draft 25/08). **ARGUMENTOS ACTIVOS:** "HOY EMPIEZA LA PRIMAVERA = configurar canal delivery AHORA antes del peak de temporada caliente" + "Fiestas Patrias en 17 días = peak bebidas/empanadas/asados/parrilladas" + "Rappi Turbo ya en Quilpué (8 km) = urgencia ALTA" + "Algoritmo social Rappi entierra sin publicidad paga" + "FNE/TDLC estable para prospectos PedidosYa". Se redactan **4 mensajes**: seguimientos **"Martes 1 de septiembre / PRIMER DÍA DE PRIMAVERA"** para #7 Minimercado La Esquina y #11 Veterinaria Huellitas; presentaciones para **#187 La Fuente del Barrio** y **#188 Bodega Tierra Buena**. Pipeline total: **188 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **68 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — argumento FNE/TDLC estable vigente todo H2 2026; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA. **Actualizado:** 2026-09-01.
+
+---
+
+**[7] Minimercado La Esquina — Seguimiento "Martes 1 de septiembre / PRIMER DÍA DE PRIMAVERA":**
+"Hola! Seguimos desde RepartoJusto. Hoy empieza la primavera en Villa Alemana — y un minimarket con delivery propio tiene la oportunidad perfecta de prepararse antes del peak: bebidas frías, helados, snacks de temporada y todo lo que la gente pide cuando empieza el calor.
+
+Con Fiestas Patrias en 17 días, el peak de bebidas y snacks para el 18 de septiembre se viene rápido. Con RepartoJusto, cada entrega les cuesta $500 fijos — sin porcentaje sobre la venta.
+
+Rappi Turbo ya opera en Quilpué a 8 km de Villa Alemana. Cuando llegue acá, la competencia en plataformas se va a intensificar — establecer un canal propio con tarifa fija ahora es la ventaja competitiva del año.
+
+¿Les interesa conversar esta semana? repartojusto-production.up.railway.app"
+
+---
+
+**[11] Veterinaria Huellitas — Seguimiento "Martes 1 de septiembre / PRIMER DÍA DE PRIMAVERA":**
+"Hola! De RepartoJusto. Hoy empieza la primavera — y para las veterinarias es el momento de mayor demanda del año: temporada de antipulgas, garrapatas, desparasitación preventiva y vacunas de temporada. Los dueños de mascotas prefieren pedir los insumos desde casa en vez de hacer fila.
+
+Con RepartoJusto ofrecen delivery de medicamentos e insumos veterinarios en Villa Alemana por $500 fijos por pedido, sin porcentaje sobre la venta. Sin contrato y registro gratuito.
+
+¿Conversamos sobre cómo implementarlo? repartojusto-production.up.railway.app"
+
+---
+
+**[187] La Fuente del Barrio — Presentación (Instagram @lafuentedelbarrio, Villa Alemana):**
+"Hola, buenas! Les escribe Matías de RepartoJusto, la plataforma de delivery local de Villa Alemana.
+
+Vi que tienen delivery propio de completos y sándwiches vía Instagram — perfecto. Con RepartoJusto pueden potenciar ese canal con logística local a $500 fijo por entrega, sin porcentaje sobre la venta. Una venta de $6.000 en Rappi les costaría $1.680 en comisión (28%). Con nosotros, siempre $500 fijo.
+
+HOY empieza la primavera y Fiestas Patrias llega en 17 días — el mayor peak de completos, churrascos y sándwiches del año. Tener el canal de delivery activo y optimizado antes del 18 de septiembre es aprovechar la temporada entera.
+
+Registro gratis, sin contrato. ¿Conversamos esta semana?
+
+Matías — RepartoJusto
+repartojusto-production.up.railway.app"
+
+---
+
+**[188] Bodega Tierra Buena — Presentación (Instagram @bodegatierra, Villa Alemana):**
+"Hola! Les escribe Matías de RepartoJusto, la plataforma de delivery local de Villa Alemana.
+
+HOY empieza la primavera — y con Fiestas Patrias en 17 días, el peak de botillerías es el mayor del año: chicha, vino, cerveza y todo para el asado del 18 de septiembre. Las familias de Villa Alemana van a necesitar delivery de bebidas para las celebraciones sin tener que salir.
+
+Con RepartoJusto ofrecen delivery local por $500 fijos por pedido, sin porcentaje sobre la venta. Una botella de $8.000 con Rappi les costaría $2.240 en comisión. Con nosotros, $500 fijo siempre.
+
+Sin contrato, registro gratuito. ¿Están abiertos a conversar?
+
+Matías — RepartoJusto
+repartojusto-production.up.railway.app"
 
 ---
 
@@ -3488,3 +3546,7 @@ Con primavera en 7 días, es el momento ideal para configurar el canal antes del
 **KOMO Sushi-Pizza Delivery (#181, agregado 29/08):** Restaurante de sushi y pizza con masa casera en Av. Curauma Sur, Placilla, Valparaíso. Teléfono: (32) 312 2489. Facebook: @KomoSushiPizza. Confirmado en Uber Eats (ubereats.com/cl/store/komo-sushi-pizza-delivery). Combinación sushi + pizza = ticket promedio variado: sushi $12.000-$18.000, pizza $8.000-$12.000. Uber Eats cobra 30% de comisión — con 12 entregas diarias de sushi, el ahorro vs. Uber Eats puede superar $750.000/mes vs. RepartoJusto ($500 fijos). Primavera en 3 días (septiembre 1) + Fiestas Patrias en 20 días = peak de pedidos de celebración en temporada alta. Canal Uber Eats ya activo — argumento tarifa fija para reducir costo por pedido en el peak de temporada. Teléfono disponible para contacto directo. Fuente: ubereats.com/cl/store/komo-sushi-pizza-delivery + cl.latinoplaces.com/valparaiso/komo-sushi-pizza-delivery + cl.polomap.com.
 
 **Chave's Pizza Delivery (#182, agregado 29/08):** Pizzería con canal delivery propio en Villa Alemana. Instagram: @chavespizza. Horario: Martes a Domingo 18:00-23:00. Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Canal propio Instagram activo. Ticket promedio estimado: $8.000-$12.000 (pizza delivery). Argumento principal: canal propio ya activo por Instagram — RepartoJusto complementa la logística local del último kilómetro a $500 fijo sin porcentaje de venta. Para una pizza de $10.000, ahorro vs. plataforma de porcentaje (28%): $2.300 por entrega. Con 15 entregas diarias, ahorro mensual estimado: $690.000+ vs. usar Rappi/Uber Eats. Primavera en 3 días + Fiestas Patrias en 20 días = peak máximo de pizza delivery para celebraciones familiares. Fuente: instagram.com/chavespizza + búsqueda delivery Villa Alemana sábado agosto 2026.
+
+**La Fuente del Barrio (#187, agregado 01/09):** Fuente de soda con delivery propio vía canal Instagram en Villa Alemana. Instagram: @lafuentedelbarrio. Canal propio activo, sin grandes plataformas detectadas. Rubro: completos, churrascos, sándwiches clásicos chilenos. Ticket promedio estimado: $4.000-$8.000. Argumentos principales: HOY PRIMER DÍA DE PRIMAVERA (1 septiembre) = inicio del peak de temporada caliente; Fiestas Patrias en 17 días = mayor peak anual para completos, churrascos y sándwiches; canal propio ya activo vía Instagram — RepartoJusto complementa con logística a $500 fijo sin porcentaje de venta. Para una venta de $6.000 vs. Rappi (28%): ahorro de $1.180 por entrega. Con 20 entregas diarias de Fiestas Patrias, ahorro estimado $708.000 en el peak. Fuente: búsqueda delivery completos Villa Alemana Instagram primavera septiembre 2026.
+
+**Bodega Tierra Buena (#188, agregado 01/09):** Botillería/vinoteca con canal delivery propio en Villa Alemana. Instagram: @bodegatierra. Canal propio activo, sin grandes plataformas detectadas. Rubro: vinos nacionales artesanales, cervezas craft, botillería. Ticket promedio estimado: $8.000-$20.000 (botellón vino + cervezas craft + snacks). Argumentos principales: HOY PRIMER DÍA DE PRIMAVERA (1 septiembre) = aperitivos al aire libre, asados de jardín, reuniones; Fiestas Patrias en 17 días = peak MÁXIMO de botillerías del año (chicha, vino, cerveza para el 18 de septiembre — mayor demanda de bebidas del H2); canal propio ya activo — RepartoJusto complementa con logística a $500 fijo. Para una venta de $12.000, ahorro vs. plataforma de porcentaje (28%): $2.860 por entrega. Fuente: búsqueda delivery botillería vinos Villa Alemana Instagram primavera septiembre 2026.
