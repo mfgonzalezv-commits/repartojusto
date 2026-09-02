@@ -1,23 +1,23 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-01
+**Actualizado:** 2026-09-02
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Sábado 29 de agosto" redactado 29/08 — ÚLTIMO SÁBADO DEL INVIERNO 2026 (hoy es el último), completos/sándwiches peak almuerzo familiar + onces, primavera en 3 días = configurar canal antes del rush de temporada, Fiestas Patrias en 20 días = peak comida rápida, Rappi Turbo Quilpué urgencia ALTA |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 26 de agosto / Primavera en 6 días" redactado 26/08 — miércoles peak pollo cena familiar, agosto frío máximo del año, ahorro ~$600K/mes vs. Rappi, Rappi Turbo Quilpué urgencia ALTA, primavera en 6 días = configurar canal antes del peak de temporada |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 2 de septiembre / 2do día de primavera" redactado 02/09 — miércoles peak pollo cena familiar, primavera ya empezó, Fiestas Patrias en 16 días = peak MÁXIMO pollerías del año, ahorro ~$600K/mes vs. Rappi, Rappi Turbo Quilpué urgencia ALTA |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 29 de agosto" redactado 29/08 — ÚLTIMO SÁBADO DEL INVIERNO 2026, medicamentos para el fin de semana sin salir al frío, primavera en 3 días = temporada alergias/antihistamínicos comienza, delivery local $500 fijo, argumento autonomía sucursal + Rappi Turbo Quilpué urgencia ALTA |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 26 de agosto / Primavera en 6 días" redactado 26/08 — miércoles peak pizza cena familiar, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA, Fiestas Patrias en 26 días |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 2 de septiembre / 2do día de primavera" redactado 02/09 — miércoles peak pizza cena familiar, primavera ya empezó, Fiestas Patrias en 16 días, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 30 de agosto / MAÑANA EMPIEZA LA PRIMAVERA" redactado 30/08 — ÚLTIMO domingo del invierno 2026, mañana 1 sept = primavera, peak sushi familiar noche dominical, Fiestas Patrias en 19 días = canal delivery listo antes del peak, Rappi Turbo Quilpué urgencia ALTA, algoritmo social Rappi entierra sin publicidad paga |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 30 de agosto / MAÑANA EMPIEZA LA PRIMAVERA" redactado 30/08 — ÚLTIMO domingo del invierno 2026, mañana 1 sept = primavera, tarde-noche domingo = peak MÁXIMO botillería (asados, onces, reuniones), Fiestas Patrias en 19 días = mayor peak bebidas del año, Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 1 de septiembre / PRIMER DÍA DE PRIMAVERA" redactado 01/09 — primavera HOY = reposición stock bebidas frías/snacks de temporada, Fiestas Patrias en 17 días = peak bebidas/snacks, delivery minimarket en auge, Rappi Turbo Quilpué urgencia ALTA |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026" redactado 31/08 — ÚLTIMO DÍA DEL INVIERNO 2026, mañana 1 de septiembre = primavera = peak bodas/quinceañeros/fiestas de primavera = encargos, Fiestas Patrias en 18 días = mayor peak de encargos del año, lunes = inicio de semana encargos, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — jueves = peak encargos del asado del fin de semana, primavera en 5 días (1 sept) = configurar canal antes del rush de temporada, Fiestas Patrias en 25 días = peak asados, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 2 de septiembre / 2do día de primavera" redactado 02/09 — primavera comenzó = encargos de asado se disparan, Fiestas Patrias en 16 días = peak MÁXIMO asados del año, configurar canal delivery AHORA captura el rush completo, tarifa fija $500 vs. porcentual en asados de Fiestas Patrias |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026" redactado 31/08 — lunes home office ÚLTIMO DÍA DEL INVIERNO, mañana 1 sept = primavera = terrazas abiertas, café de temporada, Fiestas Patrias en 18 días, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 1 de septiembre / PRIMER DÍA DE PRIMAVERA" redactado 01/09 — primavera HOY = peak temporada antipulgas/garrapatas/desparasitación/vacunas preventivas, dueños de mascotas prefieren pedir insumos desde casa, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 28 de agosto / ÚLTIMO viernes de agosto" redactado 28/08 — back-to-school semana final, viernes = compras escolares urgentes del fin de semana (cuadernos, colores, material escolar del lunes), primavera en 4 días = útiles de temporada nueva, diferenciador único en VA sin Rappi ni Uber Eats |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Viernes 28 de agosto / ÚLTIMO viernes de agosto" redactado 28/08 — ÚLTIMO viernes del invierno 2026: encargos materiales proyectos del fin de semana, primavera en 4 días = rush preparación jardín/exterior, Fiestas Patrias en 21 días = instalaciones/reparaciones decoración, Rappi Turbo Quilpué urgencia ALTA |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Jueves 27 de agosto / Primavera en 5 días" redactado 27/08 — primavera en 5 días (1 sept) + Fiestas Patrias en 25 días = canal delivery listo antes del rush de calor oct-dic, $500 fijo vs. 28-30% Rappi devora el margen en el peak de helados, registro gratis sin contrato |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 2 de septiembre / 2do día de primavera" redactado 02/09 — PRIMAVERA EMPEZÓ = temporada helados comienza ahora, oct-dic = rush de calor, configurar canal hoy llega listo al peak, Fiestas Patrias en 16 días = helados en reuniones y asados, $500 fijo vs. 28-30% Rappi devora el margen en el peak |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -192,10 +192,50 @@
 | 186 | El Parrillazo Quilpué | Parrilla / comida chilena | Quilpué (en Rappi, @elparrillazo_quilpue Instagram) | Nuevo | — | Presentación redactada 31/08 — parrilla/costillares/carnes en Rappi Quilpué, Rappi Turbo urgencia DIRECTA (ya operativo en Quilpué), Fiestas Patrias en 18 días = peak MÁXIMO del año para parrilladas, argumento $500 fijo vs. ~$5K-$8K comisión Rappi por pedido de asado |
 | 187 | La Fuente del Barrio | Comida rápida / completos | Villa Alemana (canal propio Instagram @lafuentedelbarrio) | Nuevo | — | Presentación redactada 01/09 — fuente de soda con delivery propio canal Instagram, sin grandes plataformas detectadas, completos/churrascos/sándwiches, HOY PRIMER DÍA DE PRIMAVERA + Fiestas Patrias en 17 días = peak MÁXIMO del año para completos y sándwiches, argumento canal propio + logística $500 fijo sin porcentaje |
 | 188 | Bodega Tierra Buena | Botillería / vinos artesanales | Villa Alemana (canal propio Instagram @bodegatierra) | Nuevo | — | Presentación redactada 01/09 — botillería/vinoteca con canal delivery propio, sin grandes plataformas detectadas, vinos nacionales artesanales + cervezas craft, HOY PRIMER DÍA DE PRIMAVERA + Fiestas Patrias en 17 días = peak MÁXIMO de botillerías del año (chicha, vino, cerveza para el 18), aperitivos al aire libre primavera |
+| 189 | Empanadas La Rica Esquina | Empanadas | Villa Alemana (Facebook @empanadas.laricaesquina) | Nuevo | — | Presentación redactada 02/09 — empanadas delivery canal propio Facebook, sin grandes plataformas detectadas, Fiestas Patrias en 16 días = peak MÁXIMO empanadas del año, argumento logística local $500 fijo vs. porcentual en el rubro de mayor demanda del 18 de septiembre |
+| 190 | Asado a Domicilio Villa Alemana | Asados / parrillada | Villa Alemana (Instagram, tel. +56998756194) | Nuevo | — | Presentación redactada 02/09 — servicio de asado a domicilio con agenda abierta Fiestas Patrias 2026, canal propio Instagram, tel. +56998756194, peak MÁXIMO del año en 16 días, argumento $500 fijo por entrega vs. comisión porcentual sobre parrillada completa |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-09-02)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 2 de septiembre — 2DO DÍA DE LA PRIMAVERA 2026** (Fiestas Patrias en 16 días). Los Contactados con más de 6 días sin draft hoy son **#2 Don Pollo, #4 Pizza House, #9 El Gaucho, #14 Heladería Glacial**. **ARGUMENTOS ACTIVOS:** "Primavera ya empezó = configurar canal delivery AHORA antes del peak caliente" + "Fiestas Patrias en 16 días = peak empanadas/asados/helados/pollos" + "Rappi Turbo ya en Quilpué (8 km) = urgencia ALTA" + "Algoritmo social Rappi entierra sin publicidad paga" + "FNE/TDLC para PedidosYa". Se redactan **6 mensajes**: seguimientos para #2 Don Pollo, #4 Pizza House, #9 El Gaucho y #14 Heladería Glacial; presentaciones para **#189 Empanadas La Rica Esquina** y **#190 Asado a Domicilio Villa Alemana**. Pipeline total: **190 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **69 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) Confirmación de qué mensajes Matías envió sigue siendo el cuello de botella crítico desde hace 119 días. **Actualizado:** 2026-09-02.
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento (02/09 / Primavera + Fiestas Patrias en 16 días):**
+"Hola! Les escribe RepartoJusto, la plataforma de delivery local de Villa Alemana. La primavera empezó ayer y el 18 de septiembre — Fiestas Patrias — llega en solo 16 días: el peak más grande del año para pollerías. Quien tiene su canal de delivery listo antes del 18 captura todos esos pedidos. Con nosotros el costo es $500 fijo por entrega, sin comisión sobre la venta. En Rappi, por cada pollo de $7.500, pagan ~$2.100 de comisión; con RepartoJusto son $500 plano. Registro gratis y sin contrato. ¿Les interesa configurar su canal antes del 18 de septiembre? repartojusto-production.up.railway.app"
+
+---
+
+**[4] Pizza House — Seguimiento (02/09 / Primavera + Fiestas Patrias en 16 días):**
+"Hola! RepartoJusto nuevamente. La primavera empezó ayer y quedan solo 16 días para Fiestas Patrias — una pizzería con delivery listo antes del 18 captura el peak completo. En Rappi pagan ~$2.800 de comisión por cada pizza de $10.000; con RepartoJusto son $500 planos, sin importar el tamaño del pedido. Además, el algoritmo de la nueva Rappi prioriza influencers y entierra los negocios que no pagan publicidad dentro de la app — con nosotros no hay algoritmo que los esconda. Sin contrato y registro gratis. ¿Configuramos el canal para Fiestas Patrias? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento (02/09 / Primavera + Fiestas Patrias en 16 días):**
+"Hola! De RepartoJusto nuevamente. La primavera empezó ayer y Fiestas Patrias llega en 16 días — el peak más alto del año para asados y rotiserías. Los encargos de costillar y pollo para el 18 se empiezan a concretar esta semana. Quien tiene su canal de delivery listo hoy captura esos pedidos; quien lo configura después del 18 llega tarde. Con nosotros el costo es $500 fijo por entrega, sin comisión sobre la venta. Registro gratis y sin contrato. ¿Empezamos esta semana? repartojusto-production.up.railway.app"
+
+---
+
+**[14] Heladería Glacial — Seguimiento (02/09 / Primavera ya empezó):**
+"Hola! RepartoJusto nuevamente. La primavera empezó ayer — y para una heladería esto significa que la temporada alta se acerca. Octubre y noviembre son los meses de mayor demanda de helados; quien configura su canal de delivery ahora llega al rush sin apuro. Con RepartoJusto el costo es $500 fijo por entrega, sin comisión sobre la venta — una bola de $3.000 en una app con 28-30% de comisión paga ~$840 por entrega; con nosotros son $500 plano. Registro gratis y sin contrato. ¿Empezamos a preparar la temporada hoy? repartojusto-production.up.railway.app"
+
+---
+
+**[189] Empanadas La Rica Esquina — Presentación (Facebook @empanadas.laricaesquina, Villa Alemana):**
+"Hola! Les escribimos desde RepartoJusto, la plataforma de delivery local de Villa Alemana sin comisión sobre la venta. Vimos que tienen delivery de empanadas activo por Facebook — y con Fiestas Patrias en solo 16 días, es el mejor momento del año para una empanadaría. Con RepartoJusto el costo es $500 fijo por entrega, sin porcentaje sobre la venta. Para empanadas de $1.500-$2.000, una app con 28% de comisión cobra $420-$560 por pedido; con nosotros son $500 planos siempre. Riders locales de Villa Alemana, registro gratis y sin contrato. ¿Hablamos antes del 18 de septiembre? repartojusto-production.up.railway.app"
+
+---
+
+**[190] Asado a Domicilio Villa Alemana — Presentación (Instagram, +56998756194):**
+"Hola! Les escribe RepartoJusto, la plataforma de delivery local en Villa Alemana. Vimos que tienen servicio de asado a domicilio con agenda abierta para el 18 de septiembre — justamente el mayor peak de delivery del año. Con RepartoJusto el costo de entrega es $500 fijo por pedido, sin comisión sobre la venta. Para un asado completo de $25.000, una plataforma con 28% de comisión cobra $7.000 de comisión; con nosotros son $500 planos. Riders locales de Villa Alemana, registro gratis. ¿Los ayudamos a llegar al 18 de septiembre con más pedidos y mejor margen? repartojusto-production.up.railway.app"
 
 ---
 
