@@ -91,6 +91,7 @@ router.post('/', auth, soporteRateLimit, async (req, res, next) => {
     const { mensaje, historial = [] } = req.body;
     if (!mensaje?.trim()) return res.status(400).json({ error: 'Mensaje requerido' });
     if (mensaje.length > 1000) return res.status(400).json({ error: 'Mensaje demasiado largo (máx 1000 caracteres)' });
+    if (!Array.isArray(historial)) return res.status(400).json({ error: 'Formato de historial inválido' });
 
     const rol = req.usuario.rol;
     const sistema = rol === 'rider' ? SISTEMA_RIDER : SISTEMA_NEGOCIO;

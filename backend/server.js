@@ -102,6 +102,7 @@ app.use('/api/email',   emailRoutes);
 app.use('/api/rutas',   rutaRoutes);
 
 // ── Endpoint público de seguimiento (sin auth) ────────────────────────────
+const crypto = require('crypto');
 const { query: dbQuery } = require('./src/config/database');
 
 // Rate limiter anti-scraping para endpoint público (60 req/min por IP)
@@ -148,6 +149,13 @@ app.get('/api/seguimiento/:id', seguimientoRateLimit, async (req, res) => {
       delete data.rider_lat;
       delete data.rider_lng;
     }
+    // Token de un solo uso por pedido: permite calificaciones anónimas de clientes sin abrir el sistema
+    // al spam desde cualquier IP. Solo quien tiene el tracking link puede calificar.
+    data.calificacion_token = crypto
+      .createHmac('sha256', config.JWT_SECRET)
+      .update(data.id)
+      .digest('hex')
+      .slice(0, 24);
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: 'Error del servidor' });

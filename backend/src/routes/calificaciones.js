@@ -1,7 +1,9 @@
+const crypto = require('crypto');
 const router = require('express').Router();
 const { body, validationResult } = require('express-validator');
 const { query: db } = require('../config/database');
 const { auth, solo } = require('../middleware/auth');
+const config = require('../config');
 
 // Máximo 5 calificaciones por IP cada 15 minutos (previene spam de ratings)
 const califRateLimitStore = new Map();
@@ -43,6 +45,7 @@ router.post('/',
   [
     body('pedido_id').isUUID(),
     body('tipo').isIn(['negocio','cliente']),
+    body('calificacion_token').if(body('tipo').equals('cliente')).notEmpty().withMessage('Token de calificación requerido'),
     // negocio
     body('llego_tiempo').optional().isBoolean(),
     body('fue_amable').optional().isBoolean(),
@@ -57,7 +60,7 @@ router.post('/',
     const errores = validationResult(req);
     if (!errores.isEmpty()) return res.status(400).json({ error: 'Datos inválidos', detalles: errores.array() });
 
-    const { pedido_id, tipo, llego_tiempo, fue_amable, bien_presentado,
+    const { pedido_id, tipo, calificacion_token, llego_tiempo, fue_amable, bien_presentado,
             verifico_pedido, pedido_buen_estado, lo_recomendaria, comentario } = req.body;
     try {
       // Verificar que el pedido existe y está entregado
@@ -79,6 +82,19 @@ router.post('/',
         }
       }
 
+      // Calificaciones tipo 'cliente': validar HMAC token derivado del pedido (enviado en el tracking link).
+      // Previene que terceros sin acceso al link de seguimiento manipulen ratings de riders.
+      if (tipo === 'cliente') {
+        const expected = crypto
+          .createHmac('sha256', config.JWT_SECRET)
+          .update(pedido_id)
+          .digest('hex')
+          .slice(0, 24);
+        if (calificacion_token !== expected) {
+          return res.status(403).json({ error: 'Token de calificación inválido' });
+        }
+      }
+
       // Calificaciones tipo 'negocio' requieren autenticación y ownership
       if (tipo === 'negocio') {
         if (!req.headers.authorization) {
@@ -86,7 +102,6 @@ router.post('/',
         }
         try {
           const jwt = require('jsonwebtoken');
-          const config = require('../config');
           const token = req.headers.authorization.replace('Bearer ', '');
           const decoded = jwt.verify(token, config.JWT_SECRET);
           if (decoded.rol !== 'negocio') {
