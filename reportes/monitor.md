@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-03T05:32:11Z
+**Última verificación:** 2026-09-03T06:31:52Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada (curl exit 56, HTTP 000). El servidor no responde o el endpoint no es alcanzable desde este entorno.
+**Detalle:** Error de red — la política de egress del entorno de ejecución bloqueó la conexión a repartojusto-production.up.railway.app:443 (connect_rejected). No fue posible verificar el endpoint /health.
