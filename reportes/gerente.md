@@ -1,25 +1,25 @@
 # Informe Ejecutivo RepartoJusto
-**Semana del:** 25 al 28 de agosto de 2026
+**Semana del:** 29 de agosto al 4 de septiembre de 2026
 
 ---
 
-## Estado General: ❌ CRÍTICO — Servidor de producción caído
+## Estado General: ⚠️ ALERTA COMERCIAL — Plataforma operativa, oportunidad urgente
 
-El servidor lleva al menos el día de hoy sin responder. Ningún cliente puede usar la plataforma en este momento.
+La plataforma funciona. El cuello de botella es comercial: 192 prospectos, 0 registrados, y Fiestas Patrias en **14 días**.
 
 ---
 
 ## Lo que pasó esta semana
 
-- **Dos fallas de seguridad importantes fueron corregidas (miércoles 26).** Un negocio podía declarar una distancia falsa (ej. 0,1 km en vez de 10 km) para pagar menos al rider. También era posible confirmar un pago sin haberlo realizado realmente. Ambos huecos están cerrados.
+- **Se cerró un hueco de fraude en las calificaciones (martes 2).** Cualquiera podía bombardear con calificaciones negativas a un rider usando solo el link de seguimiento público. Ahora solo quien accedió al pedido puede calificar. Riesgo eliminado.
 
-- **Se identificaron 5 mejoras adicionales (lunes 24), pendientes de aplicar.** Incluyen reducir el tráfico a la base de datos un 90% en el tracking GPS, y aislar correctamente los eventos de pedido entre roles.
+- **Se reforzó el chat de soporte contra caídas del servidor (martes 2).** Un mensaje malformado podía tumbar el proceso de Node.js. Corregido con una validación de formato.
 
-- **El pipeline de ventas creció a 178 prospectos** (164 nuevos, 14 contactados). Siguen en 0 negocios registrados. Hay 4 mensajes listos para enviar hoy mismo en `reportes/prospectos.md`.
+- **El agente de ventas preparó 6 mensajes listos para enviar (jueves 3).** Seguimientos para #12 Librería El Saber, #13 Ferretería Los Maestros, #27 Tribeca Sushi, #60 Master Sándwich, y presentaciones para dos empanaderías nuevas en Quilpué (#191 y #192). **Ninguno puede salir sin confirmación de Matías.**
 
-- **La ventana de Fiestas Patrias se abre ahora.** Faltan 25 días para el peak de asados, empanadas y heladería. Es el mejor argumento de venta del año para captar los primeros negocios reales.
+- **Pipeline crece pero no avanza: 192 prospectos, 0 registrados.** La razón es documentada: el pipeline lleva más de 112 días sin que Matías confirme si los mensajes preparados se enviaron. Los agentes redactan, pero solo Matías puede presionar "enviar".
 
-- **Rappi Turbo llegó a Quilpué (8 km).** Aún no está en Villa Alemana, pero la expansión es activa. Cada semana que pasa sin un negocio registrado es una oportunidad que se cierra.
+- **Rappi Turbo ya está en Quilpué (8 km) sin llegada confirmada a Villa Alemana.** La ventana de posicionamiento como operador local sigue abierta — pero se acorta.
 
 ---
 
@@ -27,38 +27,47 @@ El servidor lleva al menos el día de hoy sin responder. Ningún cliente puede u
 
 | Problema | Estado |
 |---|---|
-| Service Worker en rider PWA (cache agresivo) | ✅ Resuelto (SW v6) |
-| Notificaciones Xiaomi (permiso manual del sistema) | ⚠️ No solucionable por código — instrucción documentada para riders |
-| AudioContext Chrome móvil (solo con gesto del usuario) | ✅ Resuelto (toggle Online unificado) |
+| Service Worker rider PWA (cache agresivo) | ✅ Resuelto (SW v6) |
+| Notificaciones Xiaomi (permiso manual) | ⚠️ No solucionable por código — documentado para riders |
+| AudioContext Chrome móvil | ✅ Resuelto (toggle Online unificado) |
 | Zona horaria UTC vs. Chile en Railway | ✅ Resuelto (AT TIME ZONE en queries) |
-| Rate limiters crecen sin limpiar (riesgo DoS) | ⚠️ Pendiente de aplicar |
+| Fraude en calificaciones de clientes | ✅ Resuelto esta semana (HMAC token) |
+| DoS en chat de soporte (historial malformado) | ✅ Resuelto esta semana |
+| Rate limiters en memoria crecen sin limpiar | ⚠️ Pendiente de aplicar |
 | JWT_SECRET débil fuera de producción | ⚠️ Pendiente de aplicar |
-| Calificaciones de clientes sin autenticación | ⚠️ Pendiente decisión de producto |
+| Verificación JWT manual en calificaciones (drift) | ⚠️ Pendiente — requiere refactor |
+| Socket tracking sin control de acceso por rol | ⚠️ Pendiente — mejora identificada |
+| Race condition en aceptación de ofertas | ⚠️ Pendiente — mejora identificada |
+| Escritura GPS en BD por cada ping (10× exceso) | ⚠️ Pendiente — throttle diseñado, no aplicado |
 
 ---
 
 ## Alertas
 
-**🔴 SERVIDOR CAÍDO.** El monitor reporta `HTTP 000` (sin conexión) desde esta mañana. Railway puede haber pausado el servicio por inactividad o falla de deploy. Acciones inmediatas: revisar el dashboard de Railway, verificar logs del último deploy, y comprobar si el plan tiene horas de inactividad activas.
+**🟡 Servidor no verificable desde este entorno.** El proxy de red del agente bloquea el acceso a Railway. La semana pasada el servidor estaba caído; no se puede confirmar el estado actual. **Matías debe verificar el dashboard de Railway directamente.**
+
+**🔴 FIESTAS PATRIAS EN 14 DÍAS — ventana crítica de ventas.** El 18 de septiembre es el peak de delivery más alto del año (empanadas, asados, bebidas). Hay 6 mensajes listos y 192 prospectos esperando. La decisión que bloquea todo es simple: confirmar qué mensajes se enviaron la semana pasada y aprobar los 6 nuevos.
+
+**🟡 #22 Sushi Point Delivery y #15 Melt Pizzas llevan 70 días consecutivos con borradores activos** sin confirmación de envío. Son dos prospectos de alta prioridad que pueden haberse enfriado.
 
 ---
 
 ## Decisiones tomadas
 
-- Agente de Seguridad aplicó directamente los 2 fixes críticos de esta semana (distancia haversine + auth en confirmación de pagos).
-- Agente de Ventas mantiene el argumento FNE/TDLC activo para los 11 prospectos PedidosYa del pipeline (el juicio de US$3,8M sigue abierto).
-- El argumento "SSW Partners compró PedidosYa" perdió vigencia (~20 agosto); el argumento de inestabilidad contractual lo reemplaza.
+- Agente de Seguridad corrigió directamente la vulnerabilidad de calificaciones fraudulentas y el crash en soporte (2 de septiembre).
+- Agente de Ventas agregó 2 nuevas empanaderías de Quilpué al pipeline (#191 Empanadas Doña María, #192 Empanadas RoySar) — rubro con mayor demanda en Fiestas Patrias.
+- Argumento FNE/TDLC sigue activo para prospectos PedidosYa: SSW lleva 7 semanas sin comunicar planes + $35M USD en multas expuestas.
 
 ---
 
 ## Prioridades próxima semana
 
-1. **Restaurar el servidor de producción** — sin esto nada funciona. Revisar Railway ahora.
-2. **Enviar los 4 mensajes listos** en `reportes/prospectos.md` — hay urgencia real con Fiestas Patrias en 25 días.
-3. **Aplicar las 5 mejoras pendientes** del agente de mejoras (GPS throttle, socket privacy, broadcast por room, etc.).
-4. **Convertir el primer negocio** — con 178 prospectos y 0 registrados, el cuello de botella es comercial, no técnico.
-5. **Cerrar los 3 issues de seguridad pendientes** (rate limiter cleanup, JWT_SECRET, calificaciones).
+1. **Verificar servidor en Railway (Matías)** — revisar el dashboard y confirmar que el deploy está activo.
+2. **Enviar los 6 mensajes listos hoy mismo** — cada día que pasa antes del 18/09 reduce la ventana de Fiestas Patrias.
+3. **Confirmar estado de #22 y #15** — 70 días sin respuesta puede significar que se enfriaron o que nunca recibieron el mensaje.
+4. **Contactar @darkkitchenspa en Instagram** — alianza potencial en Viña del Mar que puede traer varios negocios de una vez.
+5. **Aplicar las 5 mejoras técnicas pendientes** del agente de mejoras (throttle GPS, seguridad sockets, race condition en asignación).
 
 ---
 
-*Generado por el Agente Gerente — viernes 28 de agosto de 2026.*
+*Generado por el Agente Gerente — viernes 4 de septiembre de 2026.*
