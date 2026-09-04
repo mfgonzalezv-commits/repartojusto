@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-03
+**Actualizado:** 2026-09-04
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -196,10 +196,60 @@
 | 190 | Asado a Domicilio Villa Alemana | Asados / parrillada | Villa Alemana (Instagram, tel. +56998756194) | Nuevo | — | Presentación redactada 02/09 — servicio de asado a domicilio con agenda abierta Fiestas Patrias 2026, canal propio Instagram, tel. +56998756194, peak MÁXIMO del año en 16 días, argumento $500 fijo por entrega vs. comisión porcentual sobre parrillada completa |
 | 191 | Empanadas Doña María | Empanaderías / pastelería | Quilpué (en PedidosYa) | Nuevo | — | Presentación redactada 03/09 — empanadaría en PedidosYa Quilpué, Fiestas Patrias en 15 días = peak MÁXIMO del año para empanadas, argumento FNE/TDLC PedidosYa (US$35M multas 2026) + tarifa fija vs. porcentual, ahorro ~$700K+/mes con 20 entregas en peak Fiestas Patrias |
 | 192 | Empanadas RoySar | Empanaderías | Quilpué (en PedidosYa) | Nuevo | — | Presentación redactada 03/09 — empanadaría en PedidosYa Quilpué, Fiestas Patrias en 15 días = rubro con mayor demanda del año, argumento tarifa fija $500 vs. 28% PedidosYa, configurar canal ahora = llegar al 18 de septiembre listo |
+| 193 | La Pica de David | Empanadas / comida chilena | José Fuentes 204, Quilpué | Nuevo | — | Presentación redactada 04/09 — en Rappi + Uber Eats simultáneamente (doble comisión), empanadas peak Fiestas Patrias en 14 días, Rappi Turbo Quilpué urgencia directa, argumento $500 fijo vs. doble comisión porcentual |
+| 194 | Empanadas Los Roldán | Empanaderías | Quilpué (en Rappi) | Nuevo | — | Presentación redactada 04/09 — empanadaría en Rappi Quilpué, Fiestas Patrias en 14 días = peak MÁXIMO del año para empanadas, Rappi Turbo urgencia directa (ya en Quilpué), argumento tarifa fija $500 vs. 28% Rappi |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-09-04)
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 4 de septiembre — 4TO DÍA DE LA PRIMAVERA 2026** (Fiestas Patrias en 14 días). Los Contactados con 6+ días sin draft hoy son **#1 Fuente de Soda El Rápido y #3 Farmacia Cruz Verde** (último draft 29/08). **ARGUMENTOS ACTIVOS:** "Primavera en curso = canal delivery listo AHORA antes del peak caliente" + "Fiestas Patrias en 14 días = peak completos/asados/empanadas/medicamentos" + "Rappi Turbo ya en Quilpué (8 km) = urgencia ALTA" + "FNE/TDLC para PedidosYa (US$35M multas 2026) + SSW Partners 50 días sin comunicar cambios". Se redactan **4 mensajes**: seguimientos para #1 Fuente de Soda El Rápido y #3 Farmacia Cruz Verde; presentaciones para **#193 La Pica de David** y **#194 Empanadas Los Roldán** (empanaderías en Quilpué, Rappi + Uber Eats, peak máximo Fiestas Patrias 14 días). Pipeline total: **194 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **71 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — FNE/TDLC vigente todo H2 2026; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA. **Actualizado:** 2026-09-04.
+
+---
+
+**[1] Fuente de Soda El Rápido — Seguimiento "Viernes 4 de septiembre — 4to día de primavera + Fiestas Patrias en 14 días":**
+"Hola! De RepartoJusto nuevamente. Estamos en el 4to día de primavera y Fiestas Patrias llega en solo 14 días — el mayor peak del año para fuentes de soda. Los completos, churrascos y sándwiches son los platos estrella del 18 de septiembre. Quien tiene el canal de delivery listo antes del rush captura todos esos pedidos.
+
+Con RepartoJusto el costo es $500 fijo por entrega, sin porcentaje sobre la venta. En Rappi, por cada completo de $4.000, pagan ~$1.120 de comisión; con nosotros son $500 plano siempre. Rappi Turbo ya opera en Quilpué a 8 km de Villa Alemana — cuando llegue acá, la competencia se intensifica.
+
+Sin contrato y registro gratis. ¿Configuramos el canal antes del 18 de septiembre? repartojusto-production.up.railway.app"
+
+---
+
+**[3] Farmacia Cruz Verde — Seguimiento "Viernes 4 de septiembre — 4to día de primavera + Temporada alergias + Fiestas Patrias en 14 días":**
+"Hola! RepartoJusto acá. Ya llevamos 4 días de primavera — y con ella arranca la temporada de alergias, antihistamínicos y medicamentos de temporada. Fiestas Patrias llega en solo 14 días: fin de semana largo donde la gente prefiere no salir a buscar medicamentos, sino pedirlos a domicilio.
+
+Con RepartoJusto ofrecen delivery de farmacia en Villa Alemana a $500 fijo por pedido, sin porcentaje sobre el ticket. Para una compra de $15.000 en medicamentos, una plataforma con 28% de comisión cobra $4.200 al negocio; con nosotros son $500 planos siempre. Riders locales, sin contrato, registro gratuito.
+
+¿Lo conversamos esta semana? repartojusto-production.up.railway.app"
+
+---
+
+**[193] La Pica de David — Presentación (Rappi + Uber Eats, José Fuentes 204, Quilpué):**
+"Hola, buenas! Les escribe Matías de RepartoJusto, la plataforma de delivery local de Quilpué y Villa Alemana sin comisión sobre la venta.
+
+Vi que están activos en Rappi y Uber Eats simultáneamente — lo que significa que pagan comisión en ambas plataformas por sus pedidos. Para un plato de $6.000, eso son $1.680-$1.800 de comisión por entrega. Con RepartoJusto son $500 fijos siempre, sin porcentaje.
+
+Fiestas Patrias llega en 14 días — el peak máximo del año para empanadas y comida chilena. Con Rappi Turbo ya operativo en Quilpué, establecer un canal con tarifa fija ahora es la decisión que protege el margen en el rush de septiembre y durante todo el año.
+
+Registro gratis y sin contrato. ¿Conversamos esta semana? repartojusto-production.up.railway.app"
+
+---
+
+**[194] Empanadas Los Roldán — Presentación (Rappi Quilpué):**
+"Hola! Les escribimos desde RepartoJusto, la plataforma de delivery de Quilpué y Villa Alemana sin comisión sobre la venta.
+
+Fiestas Patrias llega en 14 días — el peak MÁXIMO del año para una empanadaría. Si están en Rappi pagando 28% de comisión, para una docena de empanadas de $9.000, eso es $2.520 por entrega. Con RepartoJusto el costo es $500 fijo por pedido entregado, sin importar el valor del pedido.
+
+Rappi Turbo ya está operativo en Quilpué — la competencia entre plataformas en su zona es real hoy. Tener un canal de entrega a tarifa fija antes del 18 de septiembre significa llegar al mayor peak del año con mejor margen.
+
+Sin contrato, riders locales de Quilpué, registro gratis. ¿Hablamos esta semana? repartojusto-production.up.railway.app"
 
 ---
 
