@@ -1,42 +1,47 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-09-03
-**Pipeline total:** 192 prospectos
-**Por estado:** Nuevos: 178 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-09-07 (domingo)
+**Pipeline total:** 194 prospectos
+**Por estado:** Nuevos: 180 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-- Leído cola.md (instrucciones semana 28/07–01/08 vigentes): argumentos activos FNE/TDLC estable PedidosYa, primavera + Fiestas Patrias en 15 días, Rappi Turbo Quilpué urgencia ALTA. Incorporado argumento Investigador 27/08: "Configura tu canal antes del 1 de septiembre y llega al 18 con todo listo — empanadas, asados y bebidas a $500 fijo."
-- Identificados Contactados con más de 6 días sin draft: **#12 Librería El Saber** (6 días, último 28/08) y **#13 Ferretería Los Maestros** (6 días, último 28/08).
-- Redactados **6 mensajes** hoy jueves 3 de septiembre:
-  - Seguimiento para **#12 Librería El Saber**: útiles de temporada + Fiestas Patrias en 15 días + canal único sin competencia en VA.
-  - Seguimiento para **#13 Ferretería Los Maestros**: proyectos de jardín/patio primavera + instalaciones Fiestas Patrias + $500 fijo por entrega.
-  - Seguimiento FNE/TDLC refrescado para **#27 Tribeca Sushi** (PedidosYa urgente per cola.md): US$35M multas, SSW 49 días sin comunicar, peak sushi temporada + Fiestas Patrias en 15 días.
-  - Seguimiento FNE/TDLC refrescado para **#60 Master Sándwich** (PedidosYa urgente per cola.md, tel. (32) 311 9036 / WhatsApp +56 958528950): ahorro $456K/mes con 30 pedidos/día + incertidumbre PedidosYa + Fiestas Patrias en 15 días.
-  - Presentación para **#191 Empanadas Doña María** (Quilpué, PedidosYa): peak empanadas 15 días + argumento FNE directo + ahorro $700K+/mes.
-  - Presentación para **#192 Empanadas RoySar** (Quilpué, PedidosYa): peak empanadas 15 días + $500 fijo vs. 28% porcentual.
-- **2 nuevos prospectos** agregados al pipeline: #191 y #192 (empanaderías en Quilpué, rubro con mayor peak anual en 15 días).
-- **#22 Sushi Point Delivery y #15 Melt Pizzas**: llevan **70 días consecutivos** con borradores activos — PRIORIDAD ABSOLUTA para envío esta semana.
+**Argumentos activos incorporados:**
+- Del Investigador (03/09): Fiestas Patrias en 15 días (hoy en 11) → activo en todos los mensajes; SSW Partners 53 días sin comunicar cambios → argumento FNE/TDLC para prospectos PedidosYa; Rappi clasifica Barrio Chino bajo "Quilpué" (URL confirmada) → argumento concreto para #31
+- Del Investigador (27/08): Argumento FNE/TDLC estable para 7 prospectos PedidosYa; Rappi entierra negocios sin publicidad (algoritmo social nuevo)
+
+**Seguimientos redactados (Contactados con 7-9 días sin draft):**
+- #1 Fuente de Soda El Rápido — "Domingo 7 sept / Fiestas Patrias en 11 días": completos/sándwiches peak domingo + mayor peak del año en 11 días
+- #3 Farmacia Cruz Verde — "Domingo 7 sept / Fiestas Patrias en 11 días": medicamentos domingo + alergias primavera + urgencias patrias
+- #5 Sushi Zen — "Domingo 7 sept / Fiestas Patrias en 11 días": sushi familiar domingo peak + celebraciones primavera
+- #6 Botillería El Copihue — "Domingo 7 sept / FIESTAS PATRIAS EN 11 DÍAS": peak máximo botillería domingo + mayor peak bebidas del año
+
+**Nuevos prospectos encontrados:**
+- #193 La Gran Mechada (Uber Eats VA, mechada chilena clásica, 4.0/5, ticket ~$7.000)
+- #194 Fábrica de Empanadas y Pollos Asados Panchita (Latorre 196 VA, tel. (32) 2954929, sin grandes plataformas — PEAK MÁXIMO Fiestas Patrias)
 
 ## Borradores listos para Matías
 
-| Mensaje | Tipo | Canal sugerido |
-|---|---|---|
-| **#12 Librería El Saber** — "Jueves 3 sept / Primavera + Útiles" | Seguimiento | WhatsApp / DM |
-| **#13 Ferretería Los Maestros** — "Jueves 3 sept / Primavera + FP en 15 días" | Seguimiento | WhatsApp / DM |
-| **#27 Tribeca Sushi** — FNE/TDLC refrescado + Fiestas Patrias | Seguimiento | WhatsApp |
-| **#60 Master Sándwich** — FNE/TDLC refrescado + Fiestas Patrias (URGENTE) | Seguimiento | Tel. (32) 311 9036 / WA +56 958528950 |
-| **#191 Empanadas Doña María** — Presentación nueva (PedidosYa Quilpué) | Presentación | WhatsApp / Instagram |
-| **#192 Empanadas RoySar** — Presentación nueva (PedidosYa Quilpué) | Presentación | WhatsApp / Instagram |
+6 mensajes listos en prospectos.md sección "MENSAJES DEL DÍA (2026-09-07)":
+1. **[#1] Fuente de Soda El Rápido** — seguimiento domingo/Fiestas Patrias 11 días
+2. **[#3] Farmacia Cruz Verde** — seguimiento domingo/Fiestas Patrias 11 días
+3. **[#5] Sushi Zen** — seguimiento domingo peak sushi familiar + Fiestas Patrias
+4. **[#6] Botillería El Copihue** — seguimiento PEAK MÁXIMO domingo + Fiestas Patrias 11 días (PRIORIDAD HOY)
+5. **[#193] La Gran Mechada** — presentación nueva (Uber Eats VA)
+6. **[#194] Fábrica Panchita Empanadas y Pollos** — presentación nueva (Latorre 196, tel. (32) 2954929, sin plataformas = oportunidad Fiestas Patrias)
 
-**Prioridades absolutas (llevan 70 días sin confirmación de envío):**
-- **#22 Sushi Point Delivery** — tel. (32) 324 0504 — último borrador activo disponible en prospectos.md
-- **#15 Melt Pizzas** — en Rappi Av. Valparaíso 1057 — último borrador activo disponible en prospectos.md
+**PRIORIDADES CRÍTICAS para Matías esta semana (Fiestas Patrias en 11 días):**
+- #6 Botillería El Copihue (HOY domingo = peak máximo + Fiestas Patrias = MOMENTO ÚNICO del año)
+- #22 Sushi Point Delivery (tel. (32) 324 0504) — 73 días consecutivos con borradores activos
+- #15 Melt Pizzas — 73 días consecutivos con borradores activos
+- Los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102) — FNE/TDLC + SSW 53 días silencio
 
 ## Nuevos prospectos agregados
 
-- **#191 Empanadas Doña María** — Empanaderías/pastelería — Quilpué — PedidosYa — Fiestas Patrias en 15 días = peak MÁXIMO del rubro + argumento FNE directo
-- **#192 Empanadas RoySar** — Empanaderías — Quilpué — PedidosYa — Fiestas Patrias en 15 días = mayor demanda del año
+| # | Negocio | Rubro | Dirección | Plataforma | Argumento Fiestas Patrias |
+|---|---|---|---|---|---|
+| 193 | La Gran Mechada | Comida chilena / mechada | Villa Alemana | Uber Eats | Platos chilenos en peak — ahorro $1.600/pedido vs. UE 30% |
+| 194 | Fábrica Empanadas y Pollos Panchita | Empanadas / pollos asados | Latorre 196, VA | Sin plataformas | Peak MÁXIMO del año — canal local $500 fijo |
 
 ## Para el Gerente
 
-Pipeline en 192 prospectos (178 Nuevos, 14 Contactados, 0 Registrados); 6 borradores redactados hoy jueves 3 de septiembre — seguimientos "Primavera ya empezó + Fiestas Patrias en 15 días" para #12 Librería El Saber y #13 Ferretería Los Maestros (ambos 6 días sin draft), FNE/TDLC refreshes para #27 Tribeca Sushi y #60 Master Sándwich (prospectos PedidosYa urgentes per cola.md), más presentaciones para 2 nuevas empanaderías en Quilpué (#191 Empanadas Doña María y #192 Empanadas RoySar — rubro con peak MÁXIMO en 15 días); #22 Sushi Point Delivery y #15 Melt Pizzas llevan 70 días consecutivos con borradores activos sin confirmación de envío — cuello de botella crítico: 120 días sin confirmación de Matías bloquea actualización de todos los estados del pipeline.
+Pipeline en 194 prospectos (14 Contactados activos, 180 Nuevos, 0 Registrados); 6 borradores listos hoy domingo 7/09 — 4 seguimientos Contactados y 2 presentaciones nuevas, todos con eje "Fiestas Patrias en 11 días"; cuello de botella crítico: 122 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline — #22 Sushi Point Delivery y #15 Melt Pizzas llevan 73 días consecutivos con borradores activos sin confirmación de envío.
