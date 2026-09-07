@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-07 07:32:14 UTC
-**Estado:** ❌ NO VERIFICABLE
-**Detalle:** La conexión a repartojusto-production.up.railway.app fue bloqueada por la política de red del entorno de ejecución (egress proxy denegó la conexión). No fue posible determinar el estado real del servicio.
+**Última verificación:** 2026-09-07T00:00:00Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por el proxy de egress del entorno de ejecución (política de red). No se obtuvo respuesta HTTP.
