@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-08T00:00:00Z
-**Estado:** ❌ ERROR DE RED (no verificable)
-**Detalle:** La conexión saliente a `repartojusto-production.up.railway.app:443` fue rechazada por la política de red del entorno de ejecución remoto (egress proxy). No fue posible determinar si el servidor está operativo. Se requiere cambiar la política de red del environment o ejecutar el monitor desde un entorno con acceso irrestricto a Internet.
+**Última verificación:** 2026-09-08T07:31:43Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por política de red del entorno de ejecución (egress proxy denegó el acceso). HTTP 000 (sin respuesta del servidor).
