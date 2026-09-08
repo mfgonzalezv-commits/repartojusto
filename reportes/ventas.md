@@ -1,47 +1,53 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-09-07 (domingo)
-**Pipeline total:** 194 prospectos
-**Por estado:** Nuevos: 180 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-09-08
+**Pipeline total:** 196 prospectos
+**Por estado:** Nuevos: 182 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-**Argumentos activos incorporados:**
-- Del Investigador (03/09): Fiestas Patrias en 15 días (hoy en 11) → activo en todos los mensajes; SSW Partners 53 días sin comunicar cambios → argumento FNE/TDLC para prospectos PedidosYa; Rappi clasifica Barrio Chino bajo "Quilpué" (URL confirmada) → argumento concreto para #31
-- Del Investigador (27/08): Argumento FNE/TDLC estable para 7 prospectos PedidosYa; Rappi entierra negocios sin publicidad (algoritmo social nuevo)
+**Argumentos del Investigador incorporados (entrada 03/09):**
+- Fiestas Patrias en 10 días (hoy 08/09): argumento de mayor potencia del H2 2026
+- SSW Partners en silencio 7+ semanas: refuerza FNE para los 7 prospectos PedidosYa
+- URL confirmada Rappi clasifica Barrio Chino VA bajo "Quilpué": argumento concreto vigente
 
-**Seguimientos redactados (Contactados con 7-9 días sin draft):**
-- #1 Fuente de Soda El Rápido — "Domingo 7 sept / Fiestas Patrias en 11 días": completos/sándwiches peak domingo + mayor peak del año en 11 días
-- #3 Farmacia Cruz Verde — "Domingo 7 sept / Fiestas Patrias en 11 días": medicamentos domingo + alergias primavera + urgencias patrias
-- #5 Sushi Zen — "Domingo 7 sept / Fiestas Patrias en 11 días": sushi familiar domingo peak + celebraciones primavera
-- #6 Botillería El Copihue — "Domingo 7 sept / FIESTAS PATRIAS EN 11 DÍAS": peak máximo botillería domingo + mayor peak bebidas del año
+**Seguimientos Contactados del día (7 días sin draft):**
+- **#7 Minimercado La Esquina** — seguimiento "Fiestas Patrias en 10 días / minimarket peak snacks y bebestibles semana patria", $500 fijo vs. $1.400 en compra de $5.000
+- **#11 Veterinaria Huellitas** — seguimiento "Primavera instalada + Fiestas Patrias en 10 días / peak antipulgas/vacunas en curso", $500 fijo vs. $4.200 en pedido de $15.000
 
-**Nuevos prospectos encontrados:**
-- #193 La Gran Mechada (Uber Eats VA, mechada chilena clásica, 4.0/5, ticket ~$7.000)
-- #194 Fábrica de Empanadas y Pollos Asados Panchita (Latorre 196 VA, tel. (32) 2954929, sin grandes plataformas — PEAK MÁXIMO Fiestas Patrias)
+**Nuevos prospectos buscados y agregados al pipeline:**
+- **#195 DIROLA Fábrica de Empanadas** — Calle Victoria 0544 A esq. Troncal VA, 10 años de trayectoria, tel. 98839743, contacto Roberto Ramírez S., web dirola.webnode.es, venta por mayor y menor para eventos; sin grandes plataformas; Fiestas Patrias en 10 días = peak máximo del año
+- **#196 Carnicería a Domicilio** — Instagram @carniceriadomicilio, cobertura VA/Valparaíso/Quilpué, canal propio activo; sin grandes plataformas; Fiestas Patrias en 10 días = asado del 18 septiembre es el mayor pedido de carnes del año
+
+**Total de borradores redactados hoy:** 4 mensajes
 
 ## Borradores listos para Matías
 
-6 mensajes listos en prospectos.md sección "MENSAJES DEL DÍA (2026-09-07)":
-1. **[#1] Fuente de Soda El Rápido** — seguimiento domingo/Fiestas Patrias 11 días
-2. **[#3] Farmacia Cruz Verde** — seguimiento domingo/Fiestas Patrias 11 días
-3. **[#5] Sushi Zen** — seguimiento domingo peak sushi familiar + Fiestas Patrias
-4. **[#6] Botillería El Copihue** — seguimiento PEAK MÁXIMO domingo + Fiestas Patrias 11 días (PRIORIDAD HOY)
-5. **[#193] La Gran Mechada** — presentación nueva (Uber Eats VA)
-6. **[#194] Fábrica Panchita Empanadas y Pollos** — presentación nueva (Latorre 196, tel. (32) 2954929, sin plataformas = oportunidad Fiestas Patrias)
+| # | Negocio | Tipo de mensaje | Argumento clave |
+|---|---|---|---|
+| 7 | Minimercado La Esquina | Seguimiento (7 días) | Fiestas Patrias en 10 días = peak snacks/bebestibles minimarket; $500 fijo vs. $1.400 en compra $5.000 |
+| 11 | Veterinaria Huellitas | Seguimiento (7 días) | Primavera instalada = peak antipulgas activo; Fiestas Patrias = reuniones familiares mascotas; $500 fijo vs. $4.200 en pedido $15.000 |
+| 195 | DIROLA Fábrica de Empanadas | Presentación | 10 años VA, Fiestas Patrias en 10 días = peak empanadas; $500 fijo vs. $2.800 en docena $10.000; dirigido a Roberto Ramírez tel. 98839743 |
+| 196 | Carnicería a Domicilio | Presentación | Fiestas Patrias = asado del 18 = mayor pedido carnicería del año; $500 fijo vs. $7.000 en pedido $25.000 carnes |
 
-**PRIORIDADES CRÍTICAS para Matías esta semana (Fiestas Patrias en 11 días):**
-- #6 Botillería El Copihue (HOY domingo = peak máximo + Fiestas Patrias = MOMENTO ÚNICO del año)
-- #22 Sushi Point Delivery (tel. (32) 324 0504) — 73 días consecutivos con borradores activos
-- #15 Melt Pizzas — 73 días consecutivos con borradores activos
-- Los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102) — FNE/TDLC + SSW 53 días silencio
+**ALERTAS URGENTES (vigentes):**
+- **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **75 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA
+- **7 prospectos PedidosYa** (#27, #28, #30, #33, #60, #90, #102): FNE/TDLC vigente + SSW silencio 7+ semanas — ventana aún activa
+- Cuello de botella crítico: **123 días** sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados
 
 ## Nuevos prospectos agregados
 
-| # | Negocio | Rubro | Dirección | Plataforma | Argumento Fiestas Patrias |
-|---|---|---|---|---|---|
-| 193 | La Gran Mechada | Comida chilena / mechada | Villa Alemana | Uber Eats | Platos chilenos en peak — ahorro $1.600/pedido vs. UE 30% |
-| 194 | Fábrica Empanadas y Pollos Panchita | Empanadas / pollos asados | Latorre 196, VA | Sin plataformas | Peak MÁXIMO del año — canal local $500 fijo |
+**#195 — DIROLA Fábrica de Empanadas**
+- Dirección: Calle Victoria 0544 A esq. Troncal, Villa Alemana (límite Peñablanca)
+- Contacto: Roberto Ramírez S. | Tel: 98839743 | Email: roberto.ramirezsch@gmail.com
+- Web: dirola.webnode.es
+- Rubro: empanadas artesanales, venta por mayor/menor, especial eventos
+- Relevancia: 10 años de trayectoria + sin plataformas grandes + Fiestas Patrias en 10 días
+
+**#196 — Carnicería a Domicilio**
+- Instagram: @carniceriadomicilio
+- Cobertura: Villa Alemana / Valparaíso / Quilpué
+- Rubro: carnes a domicilio, canal propio Instagram
+- Relevancia: sin plataformas grandes + Fiestas Patrias en 10 días = mayor peak del año para carnicerías
 
 ## Para el Gerente
-
-Pipeline en 194 prospectos (14 Contactados activos, 180 Nuevos, 0 Registrados); 6 borradores listos hoy domingo 7/09 — 4 seguimientos Contactados y 2 presentaciones nuevas, todos con eje "Fiestas Patrias en 11 días"; cuello de botella crítico: 122 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline — #22 Sushi Point Delivery y #15 Melt Pizzas llevan 73 días consecutivos con borradores activos sin confirmación de envío.
+Pipeline en 196 prospectos (182 Nuevos, 14 Contactados, 0 Registrados); 4 borradores redactados con eje "Fiestas Patrias en 10 días" para #7 Minimercado La Esquina y #11 Veterinaria Huellitas (seguimientos 7 días) + presentaciones para 2 nuevos prospectos sin plataformas grandes: DIROLA Fábrica de Empanadas (10 años VA, tel. disponible, gran capacidad para pedidos por mayor) y Carnicería a Domicilio (Instagram @carniceriadomicilio, cobertura VA/Quilpué/Valparaíso); cuello de botella crítico: 123 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline — #22 Sushi Point Delivery y #15 Melt Pizzas llevan 75 días consecutivos con borradores activos sin confirmación de envío.
