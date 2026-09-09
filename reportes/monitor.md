@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-09T14:32:17Z
+**Última verificación:** 2026-09-09T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — conexión rechazada por política de egreso del entorno de ejecución. No fue posible alcanzar https://repartojusto-production.up.railway.app/health (connect_rejected). El servidor puede estar operativo pero el entorno de monitoreo no tiene acceso de red saliente al destino.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por el proxy de red del entorno de ejecución (egress policy). HTTP code: 000. No se recibió respuesta del servidor.
