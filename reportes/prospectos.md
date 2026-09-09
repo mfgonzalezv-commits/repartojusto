@@ -1,23 +1,23 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-08
+**Actualizado:** 2026-09-09
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Domingo 7 de septiembre / Fiestas Patrias en 11 días" redactado 07/09 — domingo almuerzo familiar PEAK completos, Fiestas Patrias en 11 días = mayor peak del año para fuente de soda, Rappi Turbo Quilpué urgencia ALTA |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 2 de septiembre / 2do día de primavera" redactado 02/09 — miércoles peak pollo cena familiar, primavera ya empezó, Fiestas Patrias en 16 días = peak MÁXIMO pollerías del año, ahorro ~$600K/mes vs. Rappi, Rappi Turbo Quilpué urgencia ALTA |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — martes peak pollo almuerzo familiar, Fiestas Patrias en 9 días = peak MÁXIMO pollerías (pollo asado = EL plato del 18), ahorro ~$600K/mes vs. Rappi, Rappi Turbo Quilpué urgencia ALTA |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 7 de septiembre / Fiestas Patrias en 11 días" redactado 07/09 — domingo medicamentos urgencia + temporada alergias primavera + Fiestas Patrias en 11 días = reuniones familiares/urgencias fin de semana patrio, delivery local $500 fijo, Rappi Turbo Quilpué urgencia ALTA |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 2 de septiembre / 2do día de primavera" redactado 02/09 — miércoles peak pizza cena familiar, primavera ya empezó, Fiestas Patrias en 16 días, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social Rappi entierra sin publicidad paga, Rappi Turbo Quilpué urgencia ALTA |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — Fiestas Patrias en 9 días = peak pizza familiar semana del 18-22 septiembre, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 7 de septiembre / Fiestas Patrias en 11 días" redactado 07/09 — domingo PEAK sushi familiar noche dominical, Fiestas Patrias en 11 días = celebraciones/reuniones primavera sushi, Rappi Turbo Quilpué urgencia ALTA, algoritmo social Rappi entierra sin publicidad paga, ahorro ~$2.240/pedido vs. Rappi 28% |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 7 de septiembre / FIESTAS PATRIAS EN 11 DÍAS" redactado 07/09 — domingo tarde-noche PEAK MÁXIMO botillería + Fiestas Patrias en 11 días = MAYOR PEAK BEBIDAS DEL AÑO (chicha/vino/cerveza para el 18), Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 8 de septiembre / Fiestas Patrias en 10 días" redactado 08/09 — minimarket peak snacks/bebestibles semana patria, Fiestas Patrias en 10 días = MAYOR PEAK VENTAS DEL AÑO para minimarket, delivery local $500 fijo, Rappi Turbo Quilpué urgencia ALTA |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026" redactado 31/08 — ÚLTIMO DÍA DEL INVIERNO 2026, mañana 1 de septiembre = primavera = peak bodas/quinceañeros/fiestas de primavera = encargos, Fiestas Patrias en 18 días = mayor peak de encargos del año, lunes = inicio de semana encargos, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 2 de septiembre / 2do día de primavera" redactado 02/09 — primavera comenzó = encargos de asado se disparan, Fiestas Patrias en 16 días = peak MÁXIMO asados del año, configurar canal delivery AHORA captura el rush completo, tarifa fija $500 vs. porcentual en asados de Fiestas Patrias |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 31 de agosto — ÚLTIMO DÍA DEL INVIERNO 2026" redactado 31/08 — lunes home office ÚLTIMO DÍA DEL INVIERNO, mañana 1 sept = primavera = terrazas abiertas, café de temporada, Fiestas Patrias en 18 días, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — Fiestas Patrias en 9 días = peak MÁXIMO encargos del año (tortas para asados/ramadas del 18), primavera instalada = bodas/quinceañeros primavera, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — Fiestas Patrias en 9 días = peak MÁXIMO rotisería (costillar/vacío/pollo/chorizo), canal activo AHORA captura el rush del 18, $500 fijo vs. porcentual en asados de alto ticket |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — primavera instalada = terrazas + once del 18 de septiembre (peak MÁXIMO café familiar del año), algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA, $500 fijo vs. porcentual |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 8 de septiembre / Fiestas Patrias en 10 días" redactado 08/09 — primavera ya instalada = peak antipulgas/vacunas/desparasitación en curso, dueños mascotas buscan insumos delivery en semana del 18, argumento canal veterinaria $500 fijo, Rappi Turbo Quilpué urgencia ALTA |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 3 de septiembre / Primavera + Útiles temporada" redactado 03/09 — primavera ya comenzó + Fiestas Patrias en 15 días = escolares necesitan útiles para decoraciones/disfraces/trabajos del 18-9; diferenciador único en VA sin Rappi ni Uber Eats para librería; delivery local $500 fijo, canal de venta directa sin plataforma dominante |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Jueves 3 de septiembre / Primavera + Fiestas Patrias 15 días" redactado 03/09 — primavera ya empezó = proyectos jardín/exterior en marcha; Fiestas Patrias en 15 días = rush instalaciones/reparaciones/decoración ramada; clientes piden materiales sin perder tiempo; $500 fijo por entrega ideal para ferreterías, Rappi Turbo Quilpué urgencia ALTA |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 2 de septiembre / 2do día de primavera" redactado 02/09 — PRIMAVERA EMPEZÓ = temporada helados comienza ahora, oct-dic = rush de calor, configurar canal hoy llega listo al peak, Fiestas Patrias en 16 días = helados en reuniones y asados, $500 fijo vs. 28-30% Rappi devora el margen en el peak |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — Fiestas Patrias en 9 días = primer gran peak helados del año (reuniones y asados al aire libre), primavera instalada = temporada helados en curso, canal activo AHORA llega listo al rush oct-dic, $500 fijo vs. 28-30% Rappi |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -200,10 +200,60 @@
 | 194 | Fábrica de Empanadas y Pollos Asados Panchita | Empanadas / pollos asados | Latorre 196, Villa Alemana | Nuevo | — | Presentación redactada 07/09 — empanadaría y pollería con punto de venta propio, tel. (32) 2954929, sin grandes plataformas detectadas, Fiestas Patrias en 11 días = PEAK MÁXIMO del año para empanadas y pollos asados, argumento canal local $500 fijo |
 | 195 | DIROLA Fábrica de Empanadas | Empanadas | Calle Victoria 0544 A esq. Troncal, Villa Alemana | Nuevo | — | Presentación redactada 08/09 — fábrica artesanal 10 años en VA, tel. 98839743, contacto: Roberto Ramírez S., email roberto.ramirezsch@gmail.com, web dirola.webnode.es, venta por mayor y menor especial eventos, sin grandes plataformas detectadas, Fiestas Patrias en 10 días = peak MÁXIMO año para empanadas, argumento $500 fijo vs. porcentual en pedidos de alto volumen |
 | 196 | Carnicería a Domicilio | Carnicería / delivery carnes | Villa Alemana / Valparaíso / Quilpué (Instagram @carniceriadomicilio) | Nuevo | — | Presentación redactada 08/09 — canal delivery propio Instagram activo, sin grandes plataformas detectadas, cobertura VA/Valparaíso/Quilpué, Fiestas Patrias en 10 días = peak MÁXIMO carnicerías del año (asado del 18 de septiembre), argumento $500 fijo vs. comisión porcentual en carnes de alto ticket |
+| 197 | Empanadas Royal Quilpué | Empanaderías | Av. Freire 904, Quilpué (@empanadasroyalquilpue, Instagram) | Nuevo | — | Presentación redactada 09/09 — empanadaría familiar desde 1958 (68 años de tradición), canal Instagram propio, sin grandes plataformas detectadas, Fiestas Patrias en 9 días = peak MÁXIMO empanaderías del año, Rappi Turbo urgencia directa Quilpué, argumento $500 fijo sin porcentaje |
+| 198 | Empanadas La Cabaña | Empanaderías | Quilpué (@empanadalacabana, Instagram) | Nuevo | — | Presentación redactada 09/09 — empanadaría en Quilpué canal Instagram propio, sin grandes plataformas detectadas, Fiestas Patrias en 9 días = peak MÁXIMO empanaderías del año, Rappi Turbo urgencia directa Quilpué, argumento $500 fijo sin porcentaje |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-09-09)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 9 de septiembre — FIESTAS PATRIAS EN 9 DÍAS** (18 de septiembre). Los Contactados con más de 6 días sin draft hoy son **#2 Don Pollo, #4 Pizza House, #8 Dulce Hogar, #9 El Gaucho, #10 Café El Árbol y #14 Heladería Glacial** (último draft 02/09 y 31/08). **ARGUMENTOS ACTIVOS DEL DÍA:** "Fiestas Patrias en 9 días = peak MÁXIMO según rubro" + "Primavera instalada = demanda estacional activa" + "Rappi Turbo ya en Quilpué (8 km) = urgencia ALTA" + "$500 fijo vs. porcentual = máximo ahorro en semana de mayor volumen". Se redactan **8 mensajes**: seguimientos para #2 Don Pollo, #4 Pizza House, #8 Dulce Hogar, #9 El Gaucho, #10 Café El Árbol y #14 Heladería Glacial; presentaciones para **#197 Empanadas Royal Quilpué** (Av. Freire 904, Quilpué, @empanadasroyalquilpue, desde 1958) y **#198 Empanadas La Cabaña** (Quilpué, @empanadalacabana). Pipeline total: **198 prospectos**.
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **76 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — FNE/TDLC vigente todo H2 2026 + SSW Partners; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (4) **VENTANA CRÍTICA:** Fiestas Patrias en 9 días — todos los borradores deben salir ESTA SEMANA para capturar el peak del 18 de septiembre. **Actualizado:** 2026-09-09.
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento "Martes 9 de septiembre / Fiestas Patrias en 9 días":**
+"Hola! Seguimos desde RepartoJusto. En 9 días son las Fiestas Patrias — y el pollo asado es el plato más pedido del 18 de septiembre. Cada familia que hace asado quiere pollo; cada reunión del fin de semana patrio tiene pollo. Con un canal de delivery activo ESTA semana capturan todos esos pedidos. En Rappi pagan ~$2.240 de comisión por cada pollo de $8.000; con RepartoJusto son $500 planos siempre. Ahorro estimado ~$600K/mes con volumen de Fiestas Patrias. Riders locales de Villa Alemana, registro gratis y sin contrato. ¿Llegamos juntos al 18 de septiembre? repartojusto-production.up.railway.app"
+
+---
+
+**[4] Pizza House — Seguimiento "Martes 9 de septiembre / Fiestas Patrias en 9 días":**
+"Hola! Les escribe RepartoJusto. En 9 días son las Fiestas Patrias — y las reuniones del 18-19-22 de septiembre son el peak de la pizza familiar. La semana del dieciocho es cuando más se pide pizza para grupos, reuniones de amigos y celebraciones de primavera. Con Rappi pagan ~$2.800 de comisión por cada pizza de $10.000; con RepartoJusto son $500 planos siempre. El algoritmo de la nueva Rappi prioriza quienes pagan publicidad extra — con nosotros no hay algoritmo que los esconda. Registro gratis, sin contrato. ¿Configuramos el canal antes del 18? repartojusto-production.up.railway.app"
+
+---
+
+**[8] Pastelería Dulce Hogar — Seguimiento "Martes 9 de septiembre / Fiestas Patrias en 9 días":**
+"Hola! De RepartoJusto nuevamente. En solo 9 días son las Fiestas Patrias — y para una pastelería, la semana del 18 de septiembre es el peak de encargos del año. Tortas para el asado familiar, pasteles para la ramada, encargos de cumpleaños de primavera: todo llega junto en septiembre. Con RepartoJusto el costo de delivery es $500 fijo por entrega — sin porcentaje sobre el valor del encargo. Para una torta de $20.000, una app con 28% cobra $5.600 de comisión; con nosotros son $500 planos. ¿Activamos el canal antes del 18? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento "Martes 9 de septiembre / Fiestas Patrias en 9 días":**
+"Hola! Seguimos desde RepartoJusto. En 9 días son las Fiestas Patrias — el peak MÁXIMO del año para una rotisería. Costillar, vacío, pollo, chorizo asado: las familias piden la parrilla completa a domicilio para el 18. Con un canal de delivery activo ESTA semana, capturan todos los pedidos del fin de semana patrio. Con RepartoJusto el costo es $500 fijo por entrega — para un pedido de $30.000 en carnes asadas, Rappi cobra $8.400; con nosotros son $500 planos. Registro gratis, sin contrato. ¿Llegamos juntos al 18? repartojusto-production.up.railway.app"
+
+---
+
+**[10] Café El Árbol — Seguimiento "Martes 9 de septiembre / Fiestas Patrias en 9 días":**
+"Hola! De RepartoJusto nuevamente. La primavera está instalada — terrazas abiertas, onces familiares, reuniones al aire libre. Y en 9 días son las Fiestas Patrias: el café y la once del 18 de septiembre es un momento especial para cada familia. Con RepartoJusto el costo de delivery es $500 fijo por entrega — sin porcentaje sobre el pedido. El algoritmo de la nueva Rappi entierra los negocios que no pagan publicidad extra — con nosotros no hay algoritmo que los esconda. ¿Empezamos antes del 18? repartojusto-production.up.railway.app"
+
+---
+
+**[14] Heladería Glacial — Seguimiento "Martes 9 de septiembre / Fiestas Patrias en 9 días":**
+"Hola! Seguimos desde RepartoJusto. La primavera llegó hace 9 días — y la temporada de helados ya empezó. Pero el evento más importante de los próximos días es la Fiestas Patrias (9 días): las reuniones familiares del 18 de septiembre son el primer gran peak del año para los helados — asados, ramadas, celebraciones al aire libre en primavera. Quien configura su canal de delivery AHORA llega listo al rush de calor oct-dic con el sistema ya rodando. Con Rappi pagan 28-30% de cada pedido; con RepartoJusto son $500 planos. Registro gratis, sin contrato. ¿Empezamos? repartojusto-production.up.railway.app"
+
+---
+
+**[197] Empanadas Royal Quilpué — Presentación (Av. Freire 904, Quilpué, @empanadasroyalquilpue):**
+"Hola! Somos RepartoJusto, la plataforma de delivery local de Quilpué y Villa Alemana sin comisión sobre la venta. Vi que Empanadas Royal tiene una trayectoria increíble — desde 1958, más de 68 años haciendo empanadas en Quilpué. Con Fiestas Patrias en solo 9 días, no hay rubro con mayor peak en Chile que las empanaderías: docenas para el asado del 18, pedidos por mayor para ramadas, encargos familiares que llegan de golpe. Con RepartoJusto el costo de cada despacho es $500 fijo, sin porcentaje sobre la venta. Para un pedido de docena a $10.000, una app con 28% cobra $2.800 de comisión; con nosotros son $500 planos. Rappi Turbo ya opera en Quilpué — tener un canal local con tarifa fija es la ventaja para el 18. Riders locales de Quilpué, registro gratis y sin contrato. ¿Conversamos antes del 18? repartojusto-production.up.railway.app"
+
+---
+
+**[198] Empanadas La Cabaña — Presentación (Quilpué, @empanadalacabana):**
+"Hola! Les escribe RepartoJusto, la plataforma de delivery local de Quilpué y Villa Alemana sin comisión sobre la venta. Vi Empanadas La Cabaña en Instagram — y con Fiestas Patrias en solo 9 días, las empanaderías están en el mayor peak del año. Docenas para el asado del 18, pedidos para ramadas y fondas, encargos de empresas: todo concentrado en la semana del 18 de septiembre. Con RepartoJusto el costo de cada entrega es $500 fijo, sin porcentaje sobre la venta. Rappi Turbo ya opera en Quilpué — cuando capture más del mercado local, tener un canal con tarifa fija ya activo es ventaja directa. Riders locales de Quilpué, registro gratis y sin contrato. ¿Lo conversamos esta semana? repartojusto-production.up.railway.app"
 
 ---
 
