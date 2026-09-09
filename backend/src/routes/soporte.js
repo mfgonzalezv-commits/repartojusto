@@ -6,6 +6,10 @@ const { auth } = require('../middleware/auth');
 const _soporteStore = new Map();
 const SOPORTE_MAX = 20;
 const SOPORTE_WINDOW_MS = 60 * 60 * 1000;
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of _soporteStore) if (now - e.firstAttempt >= SOPORTE_WINDOW_MS) _soporteStore.delete(k);
+}, 30 * 60 * 1000).unref();
 
 function soporteRateLimit(req, res, next) {
   const userId = req.usuario?.id;

@@ -12,6 +12,10 @@ const validar = (req, res, next) => {
 
 // Rate limiter admin: máx 60 req/min por IP (protege queries pesadas de DoS)
 const _adminRlStore = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of _adminRlStore) if (now - e.t >= 60000) _adminRlStore.delete(k);
+}, 5 * 60 * 1000).unref();
 function adminRateLimit(req, res, next) {
   const ip = req.ip || req.connection.remoteAddress;
   const now = Date.now();

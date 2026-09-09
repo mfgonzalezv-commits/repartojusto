@@ -107,6 +107,10 @@ const { query: dbQuery } = require('./src/config/database');
 
 // Rate limiter anti-scraping para endpoint público (60 req/min por IP)
 const _seguimientoStore = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of _seguimientoStore) if (now - e.t >= 60000) _seguimientoStore.delete(k);
+}, 5 * 60 * 1000).unref();
 function seguimientoRateLimit(req, res, next) {
   const ip = req.ip || req.connection.remoteAddress;
   const now = Date.now();

@@ -25,6 +25,12 @@ function crearRateLimiter({ windowMs, max, mensaje, nombre }) {
   _memStores[nombre] = new Map();
   const store = _memStores[nombre];
 
+  // Evitar memory leak en el fallback de memoria: limpiar entradas expiradas
+  setInterval(() => {
+    const now = Date.now();
+    for (const [k, e] of store) if (now - e.firstAttempt >= windowMs) store.delete(k);
+  }, Math.min(windowMs, 5 * 60 * 1000)).unref();
+
   return async (req, res, next) => {
     const ip = req.ip || req.connection.remoteAddress;
     const now = Date.now();

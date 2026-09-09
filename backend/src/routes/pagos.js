@@ -87,6 +87,10 @@ router.post('/crear', auth, solo('negocio'), async (req, res, next) => {
 
 // Rate limiter para confirmar: máx 20 req/min por IP (endpoint público)
 const _confirmarStore = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of _confirmarStore) if (now - e.t >= 60000) _confirmarStore.delete(k);
+}, 5 * 60 * 1000).unref();
 function confirmarRateLimit(req, res, next) {
   const ip = req.ip || req.connection.remoteAddress;
   const now = Date.now();

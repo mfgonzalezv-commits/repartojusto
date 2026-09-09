@@ -61,6 +61,10 @@ router.put('/disponibilidad',
 
 // Rate limiter para ubicación: max 60 actualizaciones/min por rider
 const _ubicacionStore = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of _ubicacionStore) if (now - e.first >= 60000) _ubicacionStore.delete(k);
+}, 5 * 60 * 1000).unref();
 function ubicacionRateLimit(req, res, next) {
   const userId = req.usuario?.id;
   const now = Date.now();

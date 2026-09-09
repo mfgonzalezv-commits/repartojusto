@@ -7,6 +7,10 @@ const config = require('../config');
 
 // Máximo 5 calificaciones por IP cada 15 minutos (previene spam de ratings)
 const califRateLimitStore = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of califRateLimitStore) if (now - e.first >= 15 * 60 * 1000) califRateLimitStore.delete(k);
+}, 15 * 60 * 1000).unref();
 const califRateLimit = (req, res, next) => {
   const ip = req.ip || req.connection.remoteAddress;
   const now = Date.now();
