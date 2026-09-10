@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-09
+**Actualizado:** 2026-09-10
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -202,10 +202,50 @@
 | 196 | Carnicería a Domicilio | Carnicería / delivery carnes | Villa Alemana / Valparaíso / Quilpué (Instagram @carniceriadomicilio) | Nuevo | — | Presentación redactada 08/09 — canal delivery propio Instagram activo, sin grandes plataformas detectadas, cobertura VA/Valparaíso/Quilpué, Fiestas Patrias en 10 días = peak MÁXIMO carnicerías del año (asado del 18 de septiembre), argumento $500 fijo vs. comisión porcentual en carnes de alto ticket |
 | 197 | Empanadas Royal Quilpué | Empanaderías | Av. Freire 904, Quilpué (@empanadasroyalquilpue, Instagram) | Nuevo | — | Presentación redactada 09/09 — empanadaría familiar desde 1958 (68 años de tradición), canal Instagram propio, sin grandes plataformas detectadas, Fiestas Patrias en 9 días = peak MÁXIMO empanaderías del año, Rappi Turbo urgencia directa Quilpué, argumento $500 fijo sin porcentaje |
 | 198 | Empanadas La Cabaña | Empanaderías | Quilpué (@empanadalacabana, Instagram) | Nuevo | — | Presentación redactada 09/09 — empanadaría en Quilpué canal Instagram propio, sin grandes plataformas detectadas, Fiestas Patrias en 9 días = peak MÁXIMO empanaderías del año, Rappi Turbo urgencia directa Quilpué, argumento $500 fijo sin porcentaje |
+| 199 | Q' Buen Patacón | Comida venezolana / colombiana | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 10/09 — en Uber Eats VA, comida venezolana y colombiana, Fiestas Patrias en 8 días = peak reuniones y asados latinoamericanos, argumento $500 fijo vs. 30% Uber Eats |
+| 200 | Sabor Caribeño | Comida caribeña / tropical | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 10/09 — en Uber Eats VA, comida caribeña/tropical, Fiestas Patrias en 8 días = reuniones multiculturales, argumento $500 fijo vs. 30% Uber Eats |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-09-10)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 10 de septiembre — FIESTAS PATRIAS EN 8 DÍAS** (18 de septiembre). ⚠️ VENTANA CRÍTICA MÁXIMA: con solo 8 días al mayor peak del año, estos mensajes deben salir HOY o mañana sin falta. Los Contactados con más de 7 días sin draft son **#12 Librería El Saber** y **#13 Ferretería Los Maestros** (último draft 03/09). Se envían también mensajes FNE/SSW urgentes a **#27 Tribeca Sushi** y **#102 La Joya** (prospectos PedidosYa — ventana SSW cierra pronto, 56 días sin comunicar). **ARGUMENTOS ACTIVOS DEL DÍA:** "Fiestas Patrias en 8 días = ÚLTIMO MOMENTO para configurar delivery antes del peak" + "Primavera primera semana" + "FNE/TDLC + SSW Partners 56 días en silencio = inestabilidad PedidosYa" + "$500 fijo vs. porcentual". Se redactan **6 mensajes**: seguimientos para #12 y #13, FNE/SSW para #27 y #102, presentaciones para #199 y #200. Pipeline total: **200 prospectos** (hito: se supera el umbral de 200).
+>
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **77 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — FNE/TDLC vigente todo H2 2026 + SSW Partners silencio 56 días — URGENTE; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (4) **VENTANA CRÍTICA MÁXIMA: Fiestas Patrias en 8 días** — todos los mensajes deben salir HOY. **Actualizado:** 2026-09-10.
+
+---
+
+**[12] Librería El Saber — Seguimiento "Miércoles 10 de septiembre / Fiestas Patrias en 8 días":**
+"Hola! Seguimos de RepartoJusto. Fiestas Patrias es en 8 días y la semana del 18 hay un rush enorme de útiles para disfraces, manualidades, decoraciones y trabajos escolares — cuadernos, cartulinas, lápices, cotillón. Los pedidos llegan a domicilio en minutos sin que el cliente cruce la ciudad. Con nosotros el costo es $500 fijo por entrega, sin porcentaje sobre la venta. ¿Les gustaría tener delivery listo para la semana del 18? Registro gratuito: repartojusto-production.up.railway.app"
+
+---
+
+**[13] Ferretería Los Maestros — Seguimiento "Miércoles 10 de septiembre / Fiestas Patrias en 8 días":**
+"Hola! RepartoJusto nuevamente. Fiestas Patrias es en 8 días — el rush de instalación de ramadas, decoraciones y reparaciones previas al 18 ya está en marcha. Los maestros y dueños de casa quieren los materiales sin perder tiempo en desplazarse. Con nosotros ofrecen delivery local en Villa Alemana por $500 fijo por pedido, sin porcentaje sobre la venta. 10 entregas de materiales en la semana del 18 = solo $5.000 en logística. ¿Lo configuramos hoy? repartojusto-production.up.railway.app"
+
+---
+
+**[27] Tribeca Sushi — Seguimiento FNE/SSW + "Fiestas Patrias en 8 días":**
+"Hola! Volvemos desde RepartoJusto. PedidosYa fue multada dos veces en 2026 por USD $35 millones por controlarte los precios, sigue en juicio negando los cargos, y SSW Partners — la empresa neoyorquina que los compró — lleva 56 días sin comunicarte qué cambia en tu contrato. Fiestas Patrias son en 8 días: es el peak máximo de sushi para reuniones y celebraciones del año. ¿Lo quieres pasar dependiendo de una plataforma en plena incertidumbre? Con nosotros son $500 fijos por pedido entregado, sin porcentaje sobre el ticket de sushi. Registro gratuito: repartojusto-production.up.railway.app"
+
+---
+
+**[102] La Joya Villa Alemana — Seguimiento FNE/SSW + "Fiestas Patrias en 8 días":**
+"Hola! De RepartoJusto. PedidosYa fue multada dos veces en 2026 por controlarte los precios — USD $35 millones — y SSW Partners (la empresa que los compró) lleva 56 días sin decirte qué cambia en tu contrato. Fiestas Patrias son en 8 días: completos y churrascos son EL plato de la semana del 18. Con nosotros el costo es $500 fijo por pedido entregado, sin porcentaje sobre la venta. Trabaja el peak más grande del año con certeza de costos. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[199] Q' Buen Patacón — Presentación (nuevo prospecto):**
+"Hola! Somos RepartoJusto, la plataforma de delivery local de Villa Alemana sin comisiones por venta. Los negocios pagan solo $500 fijo por pedido entregado — sin porcentaje sobre el valor del plato. Fiestas Patrias son en 8 días y la comida venezolana y colombiana tiene un peak enorme en las reuniones y asados del 18. ¿Les gustaría contar con un canal de delivery propio justo antes del peak más grande del año? Registro gratuito: repartojusto-production.up.railway.app"
+
+---
+
+**[200] Sabor Caribeño — Presentación (nuevo prospecto):**
+"Hola! Somos RepartoJusto, la plataforma de delivery de Villa Alemana con tarifa fija: $500 por pedido entregado, sin comisión sobre la venta. Uber Eats cobra 30% de cada pedido — con nosotros eso se acaba. Fiestas Patrias son en 8 días, el mayor peak de pedidos del año. ¿Cuentan con canal de delivery propio para la semana del 18? Con nosotros el registro es gratuito y empiezan hoy mismo. repartojusto-production.up.railway.app"
 
 ---
 
