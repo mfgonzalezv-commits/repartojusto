@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
 **Última verificación:** 2026-09-11T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — la conexión a repartojusto-production.up.railway.app fue rechazada por el proxy de egreso del entorno de ejecución (connect_rejected). No fue posible obtener respuesta del servidor.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por política de red del entorno de ejecución (egress proxy bloqueó la conexión saliente). No se pudo verificar si el servidor responde HTTP 200 con `{ status: 'ok' }`.
