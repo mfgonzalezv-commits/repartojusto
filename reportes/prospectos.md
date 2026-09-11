@@ -1,15 +1,15 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-10
+**Actualizado:** 2026-09-11
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Domingo 7 de septiembre / Fiestas Patrias en 11 días" redactado 07/09 — domingo almuerzo familiar PEAK completos, Fiestas Patrias en 11 días = mayor peak del año para fuente de soda, Rappi Turbo Quilpué urgencia ALTA |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Viernes 11 de septiembre / Fiestas Patrias en 7 días" redactado 11/09 — ventas de completos y churrascos se TRIPLICAN el fin de semana del 18, gente pide desde casa para almuerzo familiar, $500 fijo vs. porcentual, Rappi Turbo Quilpué urgencia ALTA |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — martes peak pollo almuerzo familiar, Fiestas Patrias en 9 días = peak MÁXIMO pollerías (pollo asado = EL plato del 18), ahorro ~$600K/mes vs. Rappi, Rappi Turbo Quilpué urgencia ALTA |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 7 de septiembre / Fiestas Patrias en 11 días" redactado 07/09 — domingo medicamentos urgencia + temporada alergias primavera + Fiestas Patrias en 11 días = reuniones familiares/urgencias fin de semana patrio, delivery local $500 fijo, Rappi Turbo Quilpué urgencia ALTA |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 11 de septiembre / Fiestas Patrias en 7 días" redactado 11/09 — reuniones familiares del 18 + consumo de alcohol dispara pedidos de paracetamol/omeprazol/ibuprofeno urgentes a domicilio, $500 fijo sin porcentaje, Rappi Turbo Quilpué urgencia ALTA |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — Fiestas Patrias en 9 días = peak pizza familiar semana del 18-22 septiembre, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Domingo 7 de septiembre / Fiestas Patrias en 11 días" redactado 07/09 — domingo PEAK sushi familiar noche dominical, Fiestas Patrias en 11 días = celebraciones/reuniones primavera sushi, Rappi Turbo Quilpué urgencia ALTA, algoritmo social Rappi entierra sin publicidad paga, ahorro ~$2.240/pedido vs. Rappi 28% |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Domingo 7 de septiembre / FIESTAS PATRIAS EN 11 DÍAS" redactado 07/09 — domingo tarde-noche PEAK MÁXIMO botillería + Fiestas Patrias en 11 días = MAYOR PEAK BEBIDAS DEL AÑO (chicha/vino/cerveza para el 18), Rappi Turbo Quilpué urgencia ALTA |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Viernes 11 de septiembre / Fiestas Patrias en 7 días" redactado 11/09 — semana del 18-21 es peak sushi para reuniones grupales, pedidos de tablas $15K-$20K = $4.200-$5.600 de comisión en Rappi vs. $500 fijo con nosotros, Rappi Turbo Quilpué urgencia ALTA |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Viernes 11 de septiembre / FIESTAS PATRIAS EN 7 DÍAS — PEAK MÁXIMO BEBIDAS" redactado 11/09 — chicha/vino/cerveza para asados del 18 = mayor peak del año para botillerías, caja vino $15K → con Rappi $4.500 comisión vs. $500 fijo con nosotros, Rappi Turbo Quilpué urgencia ALTA |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 8 de septiembre / Fiestas Patrias en 10 días" redactado 08/09 — minimarket peak snacks/bebestibles semana patria, Fiestas Patrias en 10 días = MAYOR PEAK VENTAS DEL AÑO para minimarket, delivery local $500 fijo, Rappi Turbo Quilpué urgencia ALTA |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — Fiestas Patrias en 9 días = peak MÁXIMO encargos del año (tortas para asados/ramadas del 18), primavera instalada = bodas/quinceañeros primavera, algoritmo social Rappi entierra sin publicidad, Rappi Turbo Quilpué urgencia ALTA |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Martes 9 de septiembre / Fiestas Patrias en 9 días" redactado 09/09 — Fiestas Patrias en 9 días = peak MÁXIMO rotisería (costillar/vacío/pollo/chorizo), canal activo AHORA captura el rush del 18, $500 fijo vs. porcentual en asados de alto ticket |
@@ -31,12 +31,12 @@
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/TDLC estable redactado 03/09 — argumento actualizado: "PedidosYa multada US$35M en 2026, en juicio negando cargos, SSW 49 días sin comunicar cambios + Fiestas Patrias en 15 días = momento de cambiar antes del peak de sushi de temporada" |
-| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07), usar mensaje exacto del Investigador — supera versión 03/07 |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW + FP urgente redactado 11/09 — PedidosYa US$35M multas 2026, juicio TDLC activo, SSW 57 días sin comunicar condiciones 2027, Fiestas Patrias en 7 días = activar canal propio AHORA vs. depender de plataforma inestable |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
 | 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07), en Uber Eats + PedidosYa = argumento doble inestabilidad — supera versión 03/07 |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
-| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | ARGUMENTO SSW listo 17/07 — PedidosYa vendida a SSW Partners NY (16/07); 20 años trayectoria merecen certeza — "en 18 meses no sabes quién te cobra ni cuánto" |
+| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Seguimiento FNE/SSW + FP urgente redactado 11/09 — 20 años de trayectoria merecen partner con certeza real; PedidosYa US$35M multas, SSW 57 días en silencio; FP en 7 días = tortas+pizzas+empanadas para asados = peak MÁXIMO del año — $500 fijo vs. porcentual |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
 | 35 | Buena Onda Sushi | Sushi | Huanhuali 997, Villa Alemana | Nuevo | — | Presentación redactada 15/06 — en Uber Eats + Rappi, argumento doble comisión |
 | 36 | Miel Delivery | Repostería / cocktails | Villa Alemana (Peña Blanca, Belloto) | Nuevo | — | Presentación redactada 15/06 — delivery-first por WhatsApp, argumento canal propio sin comisión |
@@ -204,6 +204,8 @@
 | 198 | Empanadas La Cabaña | Empanaderías | Quilpué (@empanadalacabana, Instagram) | Nuevo | — | Presentación redactada 09/09 — empanadaría en Quilpué canal Instagram propio, sin grandes plataformas detectadas, Fiestas Patrias en 9 días = peak MÁXIMO empanaderías del año, Rappi Turbo urgencia directa Quilpué, argumento $500 fijo sin porcentaje |
 | 199 | Q' Buen Patacón | Comida venezolana / colombiana | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 10/09 — en Uber Eats VA, comida venezolana y colombiana, Fiestas Patrias en 8 días = peak reuniones y asados latinoamericanos, argumento $500 fijo vs. 30% Uber Eats |
 | 200 | Sabor Caribeño | Comida caribeña / tropical | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 10/09 — en Uber Eats VA, comida caribeña/tropical, Fiestas Patrias en 8 días = reuniones multiculturales, argumento $500 fijo vs. 30% Uber Eats |
+| 201 | Oh My Pizza Quilpué | Pizzería artesanal | Quilpué (canal propio ohmypizzaquilpue.cl + WhatsApp) | Nuevo | — | Presentación redactada 11/09 — canal delivery propio con web y WhatsApp, pizzas familiares desde $6.990, Rappi Turbo YA activo en Quilpué (urgencia real), Fiestas Patrias en 7 días = pizza familiar peak del fin de semana largo 18-21 sept, argumento canal directo + rider local vs. depender de plataforma con Turbo en su zona |
+| 202 | Donde Papi Pig | Comida a domicilio / chicharrón | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 11/09 — detectado en Uber Eats VA, Fiestas Patrias en 7 días = peak máximo comida del 18, argumento $500 fijo vs. 30% Uber Eats (~$2.400-$2.800 por pedido de $8K), activar canal directo AHORA para llegar listo al rush del 18 |
 
 ---
 
@@ -211,11 +213,51 @@
 
 ---
 
-### MENSAJES DEL DÍA (2026-09-10)
+### MENSAJES DEL DÍA (2026-09-11)
 
-> **NOTA PARA MATÍAS:** Hoy es **miércoles 10 de septiembre — FIESTAS PATRIAS EN 8 DÍAS** (18 de septiembre). ⚠️ VENTANA CRÍTICA MÁXIMA: con solo 8 días al mayor peak del año, estos mensajes deben salir HOY o mañana sin falta. Los Contactados con más de 7 días sin draft son **#12 Librería El Saber** y **#13 Ferretería Los Maestros** (último draft 03/09). Se envían también mensajes FNE/SSW urgentes a **#27 Tribeca Sushi** y **#102 La Joya** (prospectos PedidosYa — ventana SSW cierra pronto, 56 días sin comunicar). **ARGUMENTOS ACTIVOS DEL DÍA:** "Fiestas Patrias en 8 días = ÚLTIMO MOMENTO para configurar delivery antes del peak" + "Primavera primera semana" + "FNE/TDLC + SSW Partners 56 días en silencio = inestabilidad PedidosYa" + "$500 fijo vs. porcentual". Se redactan **6 mensajes**: seguimientos para #12 y #13, FNE/SSW para #27 y #102, presentaciones para #199 y #200. Pipeline total: **200 prospectos** (hito: se supera el umbral de 200).
+> **NOTA PARA MATÍAS:** Hoy es **viernes 11 de septiembre — FIESTAS PATRIAS EN 7 DÍAS** (18 de septiembre). ⚠️ VENTANA CRÍTICA MÁXIMA — ÚLTIMA SEMANA COMPLETA ANTES DEL MAYOR PEAK DEL AÑO. Los mensajes de hoy se dirigen a los 4 Contactados más desactualizados (drafts del 07/09 = 4 días): **#1 Fuente de Soda El Rápido**, **#3 Farmacia Cruz Verde**, **#5 Sushi Zen** y **#6 Botillería El Copihue** (botillería es el peak más alto de todo el año para bebidas el 18). Además, mensajes FNE/SSW urgentes para **#28 La Esquina Con Sabor** y **#33 Casa Festa** (57 días sin comunicados de SSW). Presentaciones para **#201 Oh My Pizza Quilpué** (Rappi Turbo ya en Quilpué) y **#202 Donde Papi Pig** (Uber Eats VA). Pipeline total: **202 prospectos**. **ARGUMENTOS ACTIVOS:** "Fiestas Patrias en 7 días = ÚLTIMA SEMANA para activar canal delivery antes del peak" + "SSW Partners 57 días en silencio" + "FNE/TDLC vigente H2 2026" + "$500 fijo vs. porcentual".
 >
-> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **77 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — FNE/TDLC vigente todo H2 2026 + SSW Partners silencio 56 días — URGENTE; (3) **Rappi Turbo en Quilpué** (8 km de VA) — urgencia ALTA; (4) **VENTANA CRÍTICA MÁXIMA: Fiestas Patrias en 8 días** — todos los mensajes deben salir HOY. **Actualizado:** 2026-09-10.
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **78 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #90 Buenaventura Pizzería** — sin mensajes FNE/SSW recientes (últimos borradores julio 2026) — URGENTE HOY; (3) **Rappi Turbo en Quilpué** sin expansión confirmada a VA — ventana de captación AHORA; (4) HOY Y MAÑANA son los últimos días hábiles antes del fin de semana previo al 18/09 — todos los mensajes deben salir HOY. **Actualizado:** 2026-09-11.
+
+---
+
+**[1] Fuente de Soda El Rápido — Seguimiento "Viernes 11 de septiembre / Fiestas Patrias en 7 días":**
+"Hola! Seguimos de RepartoJusto — el 18 de septiembre está en 7 días. Una fuente de soda como la de ustedes en Fiestas Patrias puede vender el triple de completos y churrascos de lo normal, y mucha gente los pide desde la casa para el almuerzo familiar del 18. Con nosotros el costo es $500 fijo por entrega, sin porcentaje sobre la venta. Si empezamos esta semana, llegan al 18 con el canal activo. ¿Los llamamos hoy? repartojusto-production.up.railway.app"
+
+---
+
+**[3] Farmacia Cruz Verde — Seguimiento "Viernes 11 de septiembre / Fiestas Patrias en 7 días":**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias está en 7 días y con las reuniones familiares y el consumo del fin de semana del 18, siempre suben los pedidos de medicamentos urgentes a domicilio: paracetamol, omeprazol, ibuprofeno, antiácidos. La gente prefiere no salir a buscarlos. Con nosotros el costo es $500 fijo por entrega, sin porcentaje sobre la venta. ¿Tienen canal de delivery activo para la semana del 18? repartojusto-production.up.railway.app"
+
+---
+
+**[5] Sushi Zen — Seguimiento "Viernes 11 de septiembre / Fiestas Patrias en 7 días":**
+"Hola! Seguimos de RepartoJusto. Fiestas Patrias es en 7 días y la semana del 18 al 21 es uno de los peaks más grandes para sushi — las reuniones son grandes y los pedidos de tablas para grupos se multiplican. Para una tabla de $15.000, en Rappi les cobran $4.200 de comisión; con nosotros son $500 planos. ¿Hablamos esta semana para configurar el canal antes del rush? repartojusto-production.up.railway.app"
+
+---
+
+**[6] Botillería El Copihue — Seguimiento "Viernes 11 de septiembre / FIESTAS PATRIAS EN 7 DÍAS — PEAK MÁXIMO BEBIDAS":**
+"Hola! De RepartoJusto de nuevo — el 18 de septiembre está en 7 días. Para una botillería, Fiestas Patrias es el pico más grande del año: chicha, vino, cerveza y todo lo que va con el asado. Con nosotros el costo es $500 fijo por entrega, sin porcentaje sobre la venta de bebidas. Una caja de vino de $15.000 entregada a domicilio: con otras plataformas pagan $4.000-$4.500 de comisión; con nosotros son $500. ¿Activamos el canal antes del 18? repartojusto-production.up.railway.app"
+
+---
+
+**[28] La Esquina Con Sabor — Urgente FNE/SSW + Fiestas Patrias en 7 días:**
+"Hola! De RepartoJusto. PedidosYa fue multada dos veces en 2026 por controlarte los precios — primero US$31,5M en febrero, después US$3,8M en marzo — y hoy sigue en juicio negando los cargos. SSW Partners, la firma de Nueva York que compró PedidosYa, lleva 57 días sin decirles a los negocios afiliados qué va a pasar con los contratos en 2027. El 18 de septiembre está en 7 días. Con nosotros son siempre $500 por pedido entregado, sin porcentaje, sin cambio de dueños. ¿Conversamos esta semana antes del peak? repartojusto-production.up.railway.app"
+
+---
+
+**[33] Casa Festa Cocina y Repostería — Urgente FNE/SSW + Fiestas Patrias en 7 días:**
+"Hola! De RepartoJusto. Casa Festa lleva 20 años en Villa Alemana — ese historial merece un partner con certeza real. PedidosYa acumula US$35 millones en multas en 2026 por controlar los precios de sus negocios, sigue en juicio negando los cargos, y SSW Partners lleva 57 días sin comunicar qué pasa con los contratos para 2027. Fiestas Patrias está en 7 días: tortas, pizzas y empanadas para asados y reuniones son exactamente lo que más se pide esa semana. Con nosotros son $500 por pedido entregado, sin porcentaje sobre la venta. ¿Hablamos antes del 18? repartojusto-production.up.railway.app"
+
+---
+
+**[201] Oh My Pizza Quilpué — Presentación (nuevo prospecto):**
+"Hola! Somos RepartoJusto, plataforma de delivery local para Villa Alemana, Quilpué y alrededores. Vemos que tienen canal de pedidos propio (ohmypizzaquilpue.cl + WhatsApp) y pizzas familiares desde $6.990 — exactamente el modelo que más se beneficia de un rider local sin porcentaje. Nosotros cobramos $500 fijo por entrega, sin comisión sobre la venta. Rappi Turbo ya está operando en Quilpué — una pizzería con canal directo y rider local puede diferenciarse antes de que los presionen con su propio delivery. Fiestas Patrias está en 7 días: pizza familiar es uno de los platos favoritos del fin de semana largo del 18 al 21. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[202] Donde Papi Pig — Presentación (nuevo prospecto):**
+"Hola! De RepartoJusto. Los vemos en Uber Eats en Villa Alemana — hoy Uber Eats cobra ~30% más IVA por cada pedido, lo que en un pedido de $8.000 son $2.800 de comisión. Con nosotros son $500 fijos sin porcentaje sobre la venta. Fiestas Patrias está en 7 días — es el mayor peak del año. Es el mejor momento para activar un canal con tarifa fija y llegar al 18 con el delivery listo. Registro gratuito: repartojusto-production.up.railway.app"
 
 ---
 
