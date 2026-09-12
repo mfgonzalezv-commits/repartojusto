@@ -1,77 +1,38 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-09-11 (viernes)
-**Pipeline total:** 202 prospectos
-**Por estado:** Nuevos: 188 | Contactados: 14 | Interesados: 0 | Registrados: 0
-
----
+**Fecha:** 2026-09-12 (Sábado — Fiestas Patrias en 6 días)
+**Pipeline total:** 204 prospectos
+**Por estado:** Nuevos: 190 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-**Contexto:** VENTANA CRÍTICA MÁXIMA — Fiestas Patrias en 7 días (18/09). La Cámara Nacional de Comercio proyecta +25% en ventas de retail para la semana patria. Todos los mensajes de hoy usan el argumento "Fiestas Patrias en 7 días = ÚLTIMA SEMANA para activar canal delivery antes del peak del año".
-
-**Argumentos activos:**
-- Fiestas Patrias en 7 días = peak MÁXIMO del año para empanadas, pollos asados, botillerías, churrascos, sushi de reunión, pastelerías
-- SSW Partners 57 días en silencio sin comunicar condiciones PedidosYa 2027
-- FNE/TDLC: PedidosYa US$35M en multas 2026, juicio activo H2 2026
-- $500 fijo vs. 28-30% + IVA = ~34-36% efectivo en Rappi/Uber Eats/PedidosYa
-- Rappi Turbo en Quilpué (8 km de VA) sin expansión confirmada a Villa Alemana — ventana de posicionamiento local aún abierta
-
-**4 seguimientos a Contactados (drafts del 07/09 = 4 días desactualizados):**
-- #1 Fuente de Soda El Rápido — triple de completos y churrascos el 18, almuerzo familiar a domicilio, $500 fijo
-- #3 Farmacia Cruz Verde — pedidos de medicamentos urgentes disparan el fin de semana patrio (paracetamol/omeprazol), $500 fijo
-- #5 Sushi Zen — tablas grupales para reuniones del 18-21 sept, $4.200 comisión Rappi vs. $500 nuestro, peak sushi reunion
-- #6 Botillería El Copihue — PEAK MÁXIMO bebidas del año (chicha/vino/cerveza para asados), caja vino $15K → $4.000-$4.500 comisión plataformas vs. $500 fijo
-
-**2 mensajes FNE/SSW urgentes para prospectos PedidosYa:**
-- #28 La Esquina Con Sabor — PedidosYa US$35M multas, SSW 57 días en silencio, FP 7 días = activar canal propio AHORA
-- #33 Casa Festa Cocina y Repostería — 20 años de trayectoria merecen partner con certeza; tortas/pizzas/empanadas FP peak máximo
-
-**2 nuevos prospectos agregados al pipeline:**
-- #201 Oh My Pizza Quilpué — pizzería artesanal con canal propio (ohmypizzaquilpue.cl + WhatsApp), Rappi Turbo ya en Quilpué = urgencia real, FP 7 días
-- #202 Donde Papi Pig — comida a domicilio en Uber Eats Villa Alemana, FP peak del año, $500 vs. $2.800 por pedido $8K
-
-**Total borradores del día:** 8 mensajes listos para Matías
-
----
+- Leído cola.md: se incorporaron argumentos del Investigador (FNE/TDLC estable H2 2026, SSW Partners 59 días en silencio sin comunicar condiciones 2027, Fiestas Patrias = peak máximo del año por rubro, Rappi Turbo activo en Quilpué sin expansión confirmada a VA).
+- Redactados 6 borradores con eje "FIESTAS PATRIAS EN 6 DÍAS":
+  - Seguimientos para #7 Minimercado La Esquina y #11 Veterinaria Huellitas (4 días sin draft desde 08/09).
+  - Seguimientos urgentes FNE/SSW + Fiestas Patrias 6 días para #30 Poh Che Empanadas (en PedidosYa + Uber Eats, 9 días sin draft desde 03/09) y #60 Master Sándwich (en PedidosYa, 9 días sin draft desde 03/09) — ambos con SSW Partners 59 días en silencio.
+  - Presentaciones para 2 nuevos prospectos (#203 y #204).
+- Pipeline actualizado: tabla de prospectos, filas #7, #11, #30 y #60 actualizadas con fecha y acción del día.
 
 ## Borradores listos para Matías
 
-| Prospecto | Tipo | Argumento clave |
-|---|---|---|
-| #1 Fuente de Soda El Rápido | Seguimiento | Completos/churrascos x3 el 18, almuerzo familiar a domicilio |
-| #3 Farmacia Cruz Verde | Seguimiento | Medicamentos urgentes disparan FP, $500 fijo |
-| #5 Sushi Zen | Seguimiento | Tablas reuniones $15K-$20K → $500 vs. $4.200 Rappi |
-| #6 Botillería El Copihue | Seguimiento | PEAK MÁXIMO bebidas del año, caja vino $500 vs. $4.500 |
-| #28 La Esquina Con Sabor | FNE/SSW + FP urgente | PedidosYa US$35M multas, SSW 57 días silencio |
-| #33 Casa Festa | FNE/SSW + FP urgente | 20 años trayectoria + certeza $500 fijo + peak tortas/empanadas FP |
-| #201 Oh My Pizza Quilpué | Presentación nuevo | Canal propio + Rappi Turbo Quilpué = urgencia real |
-| #202 Donde Papi Pig | Presentación nuevo | Uber Eats 30% vs. $500 fijo, FP peak |
+6 mensajes listos en prospectos.md (sección MENSAJES DEL DÍA 2026-09-12):
 
-**⚠️ ALERTAS CRÍTICAS PARA MATÍAS:**
-1. **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** — 78 días consecutivos con borradores activos sin confirmación de envío. HOY es la ÚLTIMA oportunidad antes del 18/09 para usar el argumento estacional peak.
-2. **#28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #90 Buenaventura Pizzería** — últimos borradores de julio 2026 (50+ días). Mensajes FNE/SSW+FP de HOY son los más potentes del año para estos prospectos.
-3. Todos los borradores acumulados desde el 07/09 en adelante deben salir HOY Y MAÑANA — el lunes 14/09 empieza la semana del 18 y el argumento "aún están a tiempo" pierde fuerza rápidamente.
+1. **#7 Minimercado La Esquina** — Seguimiento "Fiestas Patrias en 6 días": snacks/bebidas/insumos para asados del 18, peak MÁXIMO minimarket del año, lunes 14 y martes 15 son los últimos días hábiles antes del feriado.
+2. **#11 Veterinaria Huellitas** — Seguimiento "Fiestas Patrias en 6 días": primavera instalada + insumos para mascotas en semana del 18, dueños prefieren no salir, $500 fijo.
+3. **#30 Poh Che Empanadas & Sandwichs** — Urgente FNE/SSW + FP 6 días: en PedidosYa + Uber Eats doble comisión, PedidosYa US$35M multas, SSW 59 días en silencio, empanadas = peak MÁXIMO del 18 sept.
+4. **#60 Master Sándwich Villa Alemana** — Urgente FNE/SSW + FP 6 días: en PedidosYa, sándwich = plato favorito del 18, PedidosYa US$35M multas, SSW 59 días sin comunicar cambios, WhatsApp +56 958528950.
+5. **#203 La Tradición Empanadas** — Presentación: Quilpué, en PedidosYa + Uber Eats doble comisión, FNE directo (plataforma multada), SSW 59 días en silencio, Fiestas Patrias = peak máximo empanaderías.
+6. **#204 Zulema Cafetería** — Presentación: Villa Alemana, Quinta 027, tel. +56 9 6116 8659, zulema.cafe + Uber Eats, once del 18 sept = peak cafeterías del año, $2.200 ahorro por almuerzo vs. Uber Eats 30%.
 
----
+⚠️ **PRIORIDAD ABSOLUTA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **79 días consecutivos** con borradores activos sin confirmación de envío.
+
+⚠️ **VENTANA CIERRA PRONTO:** #30 Poh Che y #60 Master Sándwich sin seguimiento FNE desde 03/09 (9 días). Fiestas Patrias en 6 días — lunes 14 y martes 15 son los ÚLTIMOS días hábiles antes del feriado.
 
 ## Nuevos prospectos agregados
 
-### #201 — Oh My Pizza Quilpué
-- **Rubro:** Pizzería artesanal
-- **Dirección:** Quilpué (web ohmypizzaquilpue.cl, canal WhatsApp propio)
-- **Plataformas:** Canal propio (web + WhatsApp), sin Rappi/Uber Eats detectados
-- **Por qué hoy:** Rappi Turbo YA está en Quilpué → urgencia real de posicionarse con canal local antes de que Rappi les meta presión. FP en 7 días = pizza familiar peak del fin de semana largo. Ahorro estimado: sin comisión sobre venta.
-- **Argumento fuerte:** Ya tienen canal propio → agregar rider local RepartoJusto potencia el canal sin ceder porcentaje.
+1. **La Tradición Empanadas (#203)** — Quilpué, Av. Los Carrera 1673 — en PedidosYa + Uber Eats (doble comisión + argumento FNE directo) — 10+ años de tradición familiar — Fiestas Patrias peak MÁXIMO empanaderías en 6 días. Fuente: Uber Eats + PedidosYa Quilpué.
 
-### #202 — Donde Papi Pig
-- **Rubro:** Comida a domicilio / chicharrón / comida chilena
-- **Dirección:** Villa Alemana (en Uber Eats)
-- **Plataformas:** Uber Eats VA
-- **Por qué hoy:** Detectado en búsqueda Uber Eats Villa Alemana. FP en 7 días = peak comida delivery del año. Uber Eats cobra ~30%+IVA → $2.800 por pedido de $8K vs. $500 con RepartoJusto.
-- **Argumento fuerte:** Ahorro concreto por pedido + canal local sin incertidumbre de plataformas externas.
-
----
+2. **Zulema Cafetería (#204)** — Villa Alemana, Quinta 027, tel. +56 9 6116 8659, zulema.cafe — en Uber Eats + web delivery propia — café de especialidad + pastelerías belgas + sándwiches + almuerzos caseros — primera cafetería premium/especialidad del pipeline — once del 18 septiembre = peak del año. Fuente: zulema.cafe + Instagram @zulemacafeteria + Uber Eats.
 
 ## Para el Gerente
 
-Pipeline en 202 prospectos; Fiestas Patrias en 7 días = ÚLTIMA SEMANA de la ventana de captación más potente del año; 8 borradores redactados hoy (4 seguimientos contactados, 2 FNE/SSW urgentes PedidosYa, 2 presentaciones nuevos); cuello de botella crítico: 125 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline — #22 Sushi Point Delivery y #15 Melt Pizzas llevan 78 días consecutivos con borradores activos; esta semana es la última oportunidad de captar negocios antes del mayor peak del año.
+Pipeline en 204 prospectos (190 Nuevos, 14 Contactados, 0 Registrados); FIESTAS PATRIAS EN 6 DÍAS — lunes 14 y martes 15 son los ÚLTIMOS días hábiles antes del feriado largo del 18; 6 borradores redactados hoy sábado con eje estacional peak máximo del año; cuello de botella crítico: 126 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
