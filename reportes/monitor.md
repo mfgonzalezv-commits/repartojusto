@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-12T00:00:00Z
+**Última verificación:** 2026-09-12T05:31:47Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por política de red del entorno de ejecución (proxy egress denegó la conexión a repartojusto-production.up.railway.app:443). No se obtuvo respuesta HTTP.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por política de red del entorno (egress proxy denegó la solicitud). No se obtuvo respuesta HTTP del servidor.
