@@ -1,38 +1,34 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-09-12 (Sábado — Fiestas Patrias en 6 días)
-**Pipeline total:** 204 prospectos
-**Por estado:** Nuevos: 190 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-09-13
+**Pipeline total:** 206 prospectos
+**Por estado:** Nuevos: 192 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
-
-- Leído cola.md: se incorporaron argumentos del Investigador (FNE/TDLC estable H2 2026, SSW Partners 59 días en silencio sin comunicar condiciones 2027, Fiestas Patrias = peak máximo del año por rubro, Rappi Turbo activo en Quilpué sin expansión confirmada a VA).
-- Redactados 6 borradores con eje "FIESTAS PATRIAS EN 6 DÍAS":
-  - Seguimientos para #7 Minimercado La Esquina y #11 Veterinaria Huellitas (4 días sin draft desde 08/09).
-  - Seguimientos urgentes FNE/SSW + Fiestas Patrias 6 días para #30 Poh Che Empanadas (en PedidosYa + Uber Eats, 9 días sin draft desde 03/09) y #60 Master Sándwich (en PedidosYa, 9 días sin draft desde 03/09) — ambos con SSW Partners 59 días en silencio.
-  - Presentaciones para 2 nuevos prospectos (#203 y #204).
-- Pipeline actualizado: tabla de prospectos, filas #7, #11, #30 y #60 actualizadas con fecha y acción del día.
+- Se redactaron **7 seguimientos** para Contactados con 4-10 días sin borrador, eje "Fiestas Patrias en 5 días / ventana final":
+  - **#12 Librería El Saber** y **#13 Ferretería Los Maestros** (10 días sin draft desde 03/09 — más desactualizados del pipeline)
+  - **#2 Pollería Don Pollo, #4 Pizza House, #8 Pastelería Dulce Hogar, #9 Rotisería El Gaucho, #10 Café El Árbol** (4 días sin draft desde 09/09)
+- Se buscaron y agregaron **2 nuevos prospectos** en Uber Eats Quilpué: Roof Burger (#205) y Gorilas (#206) — ambos bajo Rappi Turbo urgencia directa
+- Argumentos del Investigador aplicados: FNE/TDLC estable para PedidosYa, SSW Partners 60 días en silencio, Rappi Turbo activo en Quilpué, Fiestas Patrias peak máximo H2 2026
+- Argumento central del día: "5 días para el 18 de septiembre — lunes 14 y martes 15 son los últimos días hábiles, activar canal HOY o llegar sin delivery al peak más grande del año"
 
 ## Borradores listos para Matías
+**9 borradores nuevos** en prospectos.md sección "MENSAJES DEL DÍA (2026-09-13)":
+- [12] Librería El Saber — Seguimiento FP 5 días
+- [13] Ferretería Los Maestros — Seguimiento FP 5 días
+- [2] Pollería Don Pollo — Seguimiento FP 5 días
+- [4] Pizza House — Seguimiento FP 5 días
+- [8] Pastelería Dulce Hogar — Seguimiento FP 5 días
+- [9] Rotisería El Gaucho — Seguimiento FP 5 días
+- [10] Café El Árbol — Seguimiento FP 5 días
+- [205] Roof Burger — Presentación (nuevo)
+- [206] Gorilas — Presentación (nuevo)
 
-6 mensajes listos en prospectos.md (sección MENSAJES DEL DÍA 2026-09-12):
-
-1. **#7 Minimercado La Esquina** — Seguimiento "Fiestas Patrias en 6 días": snacks/bebidas/insumos para asados del 18, peak MÁXIMO minimarket del año, lunes 14 y martes 15 son los últimos días hábiles antes del feriado.
-2. **#11 Veterinaria Huellitas** — Seguimiento "Fiestas Patrias en 6 días": primavera instalada + insumos para mascotas en semana del 18, dueños prefieren no salir, $500 fijo.
-3. **#30 Poh Che Empanadas & Sandwichs** — Urgente FNE/SSW + FP 6 días: en PedidosYa + Uber Eats doble comisión, PedidosYa US$35M multas, SSW 59 días en silencio, empanadas = peak MÁXIMO del 18 sept.
-4. **#60 Master Sándwich Villa Alemana** — Urgente FNE/SSW + FP 6 días: en PedidosYa, sándwich = plato favorito del 18, PedidosYa US$35M multas, SSW 59 días sin comunicar cambios, WhatsApp +56 958528950.
-5. **#203 La Tradición Empanadas** — Presentación: Quilpué, en PedidosYa + Uber Eats doble comisión, FNE directo (plataforma multada), SSW 59 días en silencio, Fiestas Patrias = peak máximo empanaderías.
-6. **#204 Zulema Cafetería** — Presentación: Villa Alemana, Quinta 027, tel. +56 9 6116 8659, zulema.cafe + Uber Eats, once del 18 sept = peak cafeterías del año, $2.200 ahorro por almuerzo vs. Uber Eats 30%.
-
-⚠️ **PRIORIDAD ABSOLUTA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **79 días consecutivos** con borradores activos sin confirmación de envío.
-
-⚠️ **VENTANA CIERRA PRONTO:** #30 Poh Che y #60 Master Sándwich sin seguimiento FNE desde 03/09 (9 días). Fiestas Patrias en 6 días — lunes 14 y martes 15 son los ÚLTIMOS días hábiles antes del feriado.
+**PRIORIDAD ABSOLUTA esta semana:** enviar TODOS los borradores el lunes 14 o martes 15 — son los únicos días hábiles antes del 18. El peak de Fiestas Patrias es irrecuperable.
+**PRIORIDAD HISTÓRICA #1:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas — 80 días consecutivos con borradores activos sin confirmación de envío.
 
 ## Nuevos prospectos agregados
-
-1. **La Tradición Empanadas (#203)** — Quilpué, Av. Los Carrera 1673 — en PedidosYa + Uber Eats (doble comisión + argumento FNE directo) — 10+ años de tradición familiar — Fiestas Patrias peak MÁXIMO empanaderías en 6 días. Fuente: Uber Eats + PedidosYa Quilpué.
-
-2. **Zulema Cafetería (#204)** — Villa Alemana, Quinta 027, tel. +56 9 6116 8659, zulema.cafe — en Uber Eats + web delivery propia — café de especialidad + pastelerías belgas + sándwiches + almuerzos caseros — primera cafetería premium/especialidad del pipeline — once del 18 septiembre = peak del año. Fuente: zulema.cafe + Instagram @zulemacafeteria + Uber Eats.
+- **#205 Roof Burger** — hamburguesas — Quilpué (en Uber Eats) — Rappi Turbo urgencia directa, Fiestas Patrias peak hamburguesería
+- **#206 Gorilas** — comida rápida — Quilpué (en Uber Eats) — Rappi Turbo urgencia directa, Fiestas Patrias peak comida rápida
 
 ## Para el Gerente
-
-Pipeline en 204 prospectos (190 Nuevos, 14 Contactados, 0 Registrados); FIESTAS PATRIAS EN 6 DÍAS — lunes 14 y martes 15 son los ÚLTIMOS días hábiles antes del feriado largo del 18; 6 borradores redactados hoy sábado con eje estacional peak máximo del año; cuello de botella crítico: 126 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
+Pipeline en 206 prospectos (192 Nuevos, 14 Contactados, 0 Registrados) — FIESTAS PATRIAS EN 5 DÍAS — ventana final: lunes 14 y martes 15 son los últimos días hábiles, TODOS los borradores acumulados deben salir esta semana antes del mayor peak del año.
