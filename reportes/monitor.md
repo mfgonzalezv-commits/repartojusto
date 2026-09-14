@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-14T01:32:02Z
-**Estado:** ❌ CAÍDO
-**Detalle:** curl exit 56 — connect_rejected: el proxy de egress del entorno de ejecución bloqueó la conexión a repartojusto-production.up.railway.app:443 (política de red de la organización). No se pudo verificar el endpoint /health.
+**Última verificación:** 2026-09-14T00:00:00Z
+**Estado:** ❌ NO VERIFICADO
+**Detalle:** La verificación no pudo completarse. El entorno de ejecución remota (Claude Code on the web) bloqueó la conexión saliente a repartojusto-production.up.railway.app por política de red (egress proxy denegó el CONNECT). No es posible confirmar si el servidor está operativo o caído desde este entorno.
