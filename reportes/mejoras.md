@@ -1,10 +1,10 @@
 # Mejoras RepartoJusto
-**Fecha:** 2026-09-07
-**Estado:** 5 mejoras identificadas — 3 de seguridad críticas sin corregir desde semana anterior, 1 de confiabilidad financiera (nueva), 1 de rendimiento
+**Fecha:** 2026-09-14
+**Estado:** 5 mejoras pendientes — 4 sin corregir por 3ª semana consecutiva, 1 por 2ª semana; todas verificadas en código actual
 
 ---
 
-## 1. Seguridad: `pedido:seguir` sin verificación de acceso ⚠️ Sin corregir desde 2026-08-31
+## 1. Seguridad: `pedido:seguir` sin verificación de acceso ⚠️ Sin corregir desde 2026-08-31 (3ª semana)
 
 **Archivo:** `backend/src/sockets/index.js:101`
 
@@ -42,24 +42,23 @@ socket.on('pedido:seguir', async ({ pedido_id }) => {
 
 ---
 
-## 2. Confiabilidad: Race condition en `aceptarOferta` borra cascada antes de confirmar asignación ⚠️ Sin corregir desde 2026-08-31
+## 2. Confiabilidad: Race condition en `aceptarOferta` borra cascada antes de confirmar asignación ⚠️ Sin corregir desde 2026-08-31 (3ª semana)
 
-**Archivo:** `backend/src/sockets/asignacion.js:162`
+**Archivo:** `backend/src/sockets/asignacion.js:159`
 
 **Beneficio:** Evita que un pedido quede huérfano en estado `pendiente` sin cascada activa cuando la asignación en BD falla tras borrar el estado de cascada en memoria.
 
-**Código actual:**
+**Código actual (líneas 159–163):**
 ```js
 async function aceptarOferta(pedido_id, rider_id, io) {
   const cascada = cascadas.get(pedido_id);
   if (cascada) {
     clearTimeout(cascada.timer);
-    cascadas.delete(pedido_id); // ← se borra antes de confirmar en BD
+    cascadas.delete(pedido_id); // ← se borra antes de confirmar en BD (línea 183)
   }
-  // ...si el UPDATE falla, el pedido queda sin cascada y sin rider
 ```
 
-**Código propuesto:**
+**Código propuesto:** mover `cascadas.delete` a después del UPDATE exitoso:
 ```js
 async function aceptarOferta(pedido_id, rider_id, io) {
   const cascada = cascadas.get(pedido_id);
@@ -96,7 +95,7 @@ async function aceptarOferta(pedido_id, rider_id, io) {
 
 ---
 
-## 3. Confiabilidad financiera: Cobro al negocio antes de confirmar el pedido en BD (nueva)
+## 3. Confiabilidad financiera: Cobro al negocio antes de confirmar el pedido en BD ⚠️ Sin corregir desde 2026-09-07 (2ª semana)
 
 **Archivo:** `backend/src/routes/pedidos.js:74`
 
@@ -119,7 +118,7 @@ const { rows: [pedido] } = await db(
 );
 ```
 
-**Código propuesto:** Crear el pedido en BD primero con estado `pendiente_pago`, luego cobrar, luego actualizar a `pendiente`:
+**Código propuesto:** crear el pedido en BD primero con estado `pendiente_pago`, luego cobrar, luego activar:
 ```js
 // 1. Crear pedido en BD con estado pendiente_pago
 const { rows: [pedido] } = await db(
@@ -128,7 +127,7 @@ const { rows: [pedido] } = await db(
   [...]
 );
 
-// 2. Intentar cobro (ahora con pedido_id real para trazabilidad)
+// 2. Intentar cobro (con pedido_id real para trazabilidad)
 const cobro = await cobros.cobrar({
   customerId: negocio.tarjeta_customer_id,
   monto: config.APP_FEE + tarifa_entrega,
@@ -145,7 +144,7 @@ await db(`UPDATE pedidos SET estado = $1 WHERE id = $2`, [estadoInicial, pedido.
 
 ---
 
-## 4. Rendimiento: Escritura en BD en cada ping GPS del rider ⚠️ Sin corregir desde 2026-08-31
+## 4. Rendimiento: Escritura en BD en cada ping GPS del rider ⚠️ Sin corregir desde 2026-08-31 (3ª semana)
 
 **Archivo:** `backend/src/sockets/index.js:72`
 
@@ -164,9 +163,9 @@ socket.on('rider:ubicacion', async ({ lat, lng }) => {
     // ... luego broadcast
 ```
 
-**Código propuesto:** Agregar throttle en memoria para la escritura en BD (el broadcast a clientes sigue sin cambio):
+**Código propuesto:** throttle de escritura en BD a 1 vez cada 5 s (el broadcast a clientes sigue sin cambio):
 ```js
-const _ultimaEscrituraUbicacion = new Map(); // fuera del handler de connection
+const _ultimaEscrituraUbicacion = new Map(); // declarar fuera del handler io.on('connection')
 
 socket.on('rider:ubicacion', async ({ lat, lng }) => {
   if (rol !== 'rider' || !socket.rider_id) return;
@@ -203,7 +202,7 @@ socket.on('rider:ubicacion', async ({ lat, lng }) => {
 
 ---
 
-## 5. Seguridad: Chat sin límite de tamaño de mensaje (DoS) ⚠️ Sin corregir desde 2026-08-31
+## 5. Seguridad: Chat sin límite de tamaño de mensaje (DoS) ⚠️ Sin corregir desde 2026-08-31 (3ª semana)
 
 **Archivo:** `backend/src/sockets/index.js:161`
 
@@ -235,8 +234,8 @@ socket.on('chat:enviar', ({ pedido_id, texto }) => {
 
 | # | Mejora | Prioridad | Estado |
 |---|--------|-----------|--------|
-| 1 | `pedido:seguir` sin auth | 🔴 Alta | Pendiente (2ª semana) |
-| 2 | Race condition `aceptarOferta` | 🔴 Alta | Pendiente (2ª semana) |
-| 3 | Cobro antes de INSERT en BD | 🟠 Media | **Nueva** |
-| 4 | GPS throttle | 🟡 Media | Pendiente (2ª semana) |
-| 5 | Chat sin límite de tamaño | 🟡 Media | Pendiente (2ª semana) |
+| 1 | `pedido:seguir` sin auth | 🔴 Alta | Pendiente (3ª semana) |
+| 2 | Race condition `aceptarOferta` | 🔴 Alta | Pendiente (3ª semana) |
+| 3 | Cobro antes de INSERT en BD | 🟠 Media | Pendiente (2ª semana) |
+| 4 | GPS throttle | 🟡 Media | Pendiente (3ª semana) |
+| 5 | Chat sin límite de tamaño | 🟡 Media | Pendiente (3ª semana) |
