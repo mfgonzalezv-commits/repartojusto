@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-14T00:00:00Z
+**Última verificación:** 2026-09-14T06:31:54Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — la solicitud a https://repartojusto-production.up.railway.app/health fue rechazada por la política de egreso del entorno de ejecución (connect_rejected). No se pudo establecer conexión con el servidor.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — curl exit 56, HTTP 000. La política de red del entorno de ejecución bloqueó la conexión (proxy devolvió 403 connect_rejected). El servidor puede estar caído o inaccesible desde este entorno.
