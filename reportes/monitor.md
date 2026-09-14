@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-14T00:00:00Z
-**Estado:** ❌ NO VERIFICADO
-**Detalle:** La verificación no pudo completarse. El entorno de ejecución remota (Claude Code on the web) bloqueó la conexión saliente a repartojusto-production.up.railway.app por política de red (egress proxy denegó el CONNECT). No es posible confirmar si el servidor está operativo o caído desde este entorno.
+**Última verificación:** 2026-09-14T03:31:25Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No fue posible conectar a https://repartojusto-production.up.railway.app/health — la política de red del entorno de ejecución bloqueó la conexión saliente (connect_rejected por el proxy de egress). No se obtuvo respuesta HTTP del servidor.
