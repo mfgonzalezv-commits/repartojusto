@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-15T04:31:42Z
+**Última verificación:** 2026-09-15T05:31:31Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de conexión — el proxy de red bloqueó el acceso a repartojusto-production.up.railway.app:443 (connect_rejected por política de egress del entorno). No se pudo verificar el endpoint /health.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por política de red del entorno de ejecución (egress proxy denegó la conexión). HTTP status: 000.
