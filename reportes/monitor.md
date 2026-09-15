@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-09-14T00:00:00Z
+**Última verificación:** 2026-09-15T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — la política de red del entorno de ejecución bloqueó la conexión saliente a repartojusto-production.up.railway.app:443 (connect_rejected). No fue posible obtener respuesta del servidor.
+**Detalle:** No fue posible conectar con https://repartojusto-production.up.railway.app/health — la política de red del entorno de ejecución bloqueó la conexión saliente (connect_rejected). No se pudo verificar el estado real del servidor.
