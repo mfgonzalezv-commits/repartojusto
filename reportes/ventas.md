@@ -1,88 +1,63 @@
-# Reporte Diario de Ventas — RepartoJusto
+# Ventas RepartoJusto
+**Fecha:** 2026-09-15
 
 ---
 
-## 2026-09-14 (Lunes — ÚLTIMO DÍA HÁBIL antes de Fiestas Patrias)
+## Resumen del pipeline
 
-### Resumen ejecutivo
-**Pipeline total: 208 prospectos** (194 Nuevos, 14 Contactados, 0 Registrados)
-- +2 nuevos vs. ayer (207 Sushi Como En Casa, 208 Sanguchería Madrid — detectados en Uber Eats VA)
-- **12 mensajes redactados** para envío de Matías: 7 seguimientos Contactados, 3 FNE/SSW urgentes (PedidosYa), 2 presentaciones nuevos
+**Pipeline total:** 210 prospectos
+**Por estado:** Nuevos: 196 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
-### Estado del pipeline
-| Estado | Cantidad |
-|---|---|
-| Nuevos | 194 |
-| Contactados | 14 |
-| Interesados | 0 |
-| Registrados | 0 |
-| **Total** | **208** |
+---
 
-### Acciones del día
+## Acciones del día (2026-09-15)
 
-**Seguimientos a Contactados (Fiestas Patrias 4 días):**
-- **#1 Fuente de Soda El Rápido** — completo/churrasco = platos del 18, $500 vs. $2.240+ Rappi
-- **#3 Farmacia Cruz Verde** — peak paracetamol/omeprazol post-asado, $500 fijo
-- **#5 Sushi Zen** — tabla $18K-$20K = ahorro $23K-$26K en 4 días vs. comisión Rappi
-- **#6 Botillería El Copihue** — PEAK MÁXIMO botillerías, caja vino $15K = $4.500 Rappi vs. $500 fijo
-- **#7 Minimercado La Esquina** — carritos asado bebidas/carbón/condimentos, $500 fijo
-- **#11 Veterinaria Huellitas** — peak calmantes mascotas por fuegos artificiales del 18-21
-- **#14 Heladería Glacial** — primavera activa, canal hoy = listo para verano/oct-dic
+### Actualizaciones en pipeline
+- Fecha del CRM actualizada a 2026-09-15
+- Rows actualizados con próxima acción "Lunes 15 / FP EN 3 DÍAS redactado 15/09": #2 Don Pollo, #4 Pizza House, #8 Dulce Hogar, #9 El Gaucho, #10 Café El Árbol, #12 Librería El Saber, #13 Ferretería Los Maestros
+- Rows actualizados con próxima acción "SSW 61 días silencio + FP EN 3 DÍAS redactado 15/09": #28 La Esquina Con Sabor, #33 Casa Festa
+- Agregados 2 nuevos prospectos al pipeline: #209 Puerto Ensenada, #210 Pescadería M&M
 
-**Seguimientos FNE/SSW urgentes (prospectos PedidosYa, 60 días silencio SSW):**
-- **#27 Tribeca Sushi** — PedidosYa US$35M multas + SSW 60 días silencio + peak sushi del 18
-- **#60 Master Sándwich** — SSW 60 días silencio + sándwich = EL plato del 18 (72 reseñas)
-- **#90 Buenaventura Pizzería** — en Uber Eats + PedidosYa, 30%+IVA vs. $500 fijo
+### Borradores redactados hoy
+Total: **11 mensajes** listos para revisión y envío por Matías
+
+**Seguimientos Fiestas Patrias en 3 días (lunes 15/09):**
+- [2] Pollería Don Pollo — seguimiento "FP en 3 días, rider propio a $500 fijo"
+- [4] Pizza House — seguimiento con argumento entrega rápida peak 18/09
+- [8] Pastelería Dulce Hogar — seguimiento peak pastelería Fiestas Patrias
+- [9] Rotisería El Gaucho — seguimiento asados y comida chilena tradicional FP
+- [10] Café El Árbol — seguimiento once y té del 18/09
+- [12] Librería El Saber — seguimiento oferta estacional especial
+- [13] Ferretería Los Maestros — seguimiento necesidades del 18/09
+
+**Seguimientos FNE/SSW + Fiestas Patrias (PedidosYa):**
+- [28] La Esquina Con Sabor — SSW Partners 61 días en silencio + FP en 3 días, argumento doble potente
+- [33] Casa Festa — SSW Partners 61 días en silencio + FP en 3 días
 
 **Presentaciones a nuevos prospectos:**
-- **#207 Sushi Como En Casa** (Uber Eats VA) — $3.100+ ahorro por pedido $12K+ vs. 30% Uber Eats
-- **#208 Sanguchería Madrid** (Uber Eats VA) — sándwich = EL plato del 18, $500 fijo sin porcentaje
-
-### Argumentos activos hoy
-1. **FIESTAS PATRIAS EN 4 DÍAS** — VENTANA CIERRA HOY (lunes 14 es el último día hábil real)
-2. **SSW Partners 60 días de silencio** — para 9 prospectos PedidosYa del pipeline
-3. **FNE US$35M multas 2026** — juicio TDLC activo; "en juicio negando los cargos"
-4. **Rappi Turbo Quilpué** (8 km de VA) — ventana de posicionamiento local aún abierta
-
-### Cuello de botella crítico
-**131 días** sin confirmación de Matías sobre qué mensajes fueron enviados. Los 14 Contactados del pipeline llevan "Último contacto: 2026-05-08" porque no hay feedback de envío. El pipeline de 208 prospectos asume que ninguno fue contactado efectivamente — sin esa confirmación, no es posible hacer seguimiento real.
-
-### Alertas
-- **#22 Sushi Point Delivery** y **#15 Melt Pizzas**: 81 días consecutivos con borradores sin confirmación de envío — PRIORIDAD ABSOLUTA
-- Fiestas Patrias en 4 días: ventana más importante del año para los rubros de comida/bebida/veterinaria
+- [209] Puerto Ensenada — mariscos gourmet en Uber Eats VA; ahorro $3.100/pedido vs. 30% UE; FP = peak mariscos
+- [210] Pescadería M&M — pescadería con delivery propio Quilpué; Rappi Turbo urgencia directa; FP = peak mariscos
 
 ---
 
-## 2026-09-13 (Domingo)
+## Nuevos prospectos agregados
 
-### Resumen ejecutivo
-**Pipeline total: 206 prospectos** (193 Nuevos, 13 Contactados, 0 Registrados)
-- +2 nuevos vs. ayer (205 Roof Burger, 206 Gorilas — detectados en Uber Eats Quilpué)
-- **9 mensajes redactados**: 7 seguimientos Contactados (Fiestas Patrias 5 días), 2 presentaciones nuevos
-
----
-
-## 2026-09-12 (Sábado)
-
-### Resumen ejecutivo
-**Pipeline total: 204 prospectos** (192 Nuevos, 12 Contactados, 0 Registrados)
-- +2 nuevos vs. ayer (203 La Tradición Empanadas, 204 Zulema Cafetería)
-- **6 mensajes redactados**: 2 seguimientos Contactados, 2 urgentes FNE/SSW PedidosYa, 2 presentaciones
+| # | Nombre | Rubro | Plataforma / Canal | Argumento principal |
+|---|--------|-------|-------------------|---------------------|
+| 209 | Puerto Ensenada | Mariscos gourmet | Villa Alemana (Uber Eats) | FP = peak mariscos; ahorro $3.100/pedido vs. 30% Uber Eats |
+| 210 | Pescadería M&M | Pescadería / mariscos frescos | Quilpué (Facebook) | FP = peak mariscos; Rappi Turbo urgencia directa en Quilpué |
 
 ---
 
-## 2026-09-11 (Viernes)
+## Contexto operativo
 
-### Resumen ejecutivo
-**Pipeline total: 202 prospectos** (191 Nuevos, 11 Contactados, 0 Registrados)
-- +2 nuevos vs. ayer (201 Empanadas La Chilena, 202 Cabritas Don Pedro)
-- **8 mensajes redactados**: 5 seguimientos Contactados, 1 FNE/SSW urgente, 2 presentaciones
+- **SSW Partners:** 61 días sin comunicados a afiliados PedidosYa — argumento FNE más potente de H2 2026 para #27, #28, #30, #33, #60, #90, #102
+- **Fiestas Patrias:** EN 3 DÍAS (18/09) — la ventana de venta estacional más potente del año se cierra esta semana
+- **Rappi Turbo:** confirmado en Quilpué, sin confirmación en Villa Alemana — ventana de posicionamiento local abierta pero acortándose
+- **Cuello de botella crítico:** 132 días sin confirmación de Matías sobre qué mensajes se enviaron — el pipeline no puede avanzar estados sin ese feedback
 
 ---
 
-## 2026-09-10 (Jueves — Investigador actualizó argumentos)
+## Para el Gerente
 
-### Resumen ejecutivo
-**Pipeline total: 200 prospectos** (189 Nuevos, 11 Contactados, 0 Registrados)
-- Fecha de actualización del Investigador: SSW Partners 56+ días silencio confirmado al 10/09
-- Rappi Turbo Quilpué confirmado; expansión a VA aún no confirmada
+**Estado:** 210 prospectos (196 Nuevos, 14 Contactados, 0 Registrados). Semana decisiva: Fiestas Patrias en 3 días. Borradores listos para 11 negocios — prioridad máxima en los PedidosYa (#28 y #33) con argumento SSW 61 días + peak Fiestas Patrias. Los 2 nuevos prospectos (Puerto Ensenada y Pescadería M&M) son los más relevantes del año para cierre rápido dado el peak de mariscos del 18/09. Se recomienda a Matías revisar y enviar TODOS los borradores hoy lunes 15/09 como última ventana real antes del feriado.

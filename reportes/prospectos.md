@@ -1,22 +1,22 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-14
+**Actualizado:** 2026-09-15
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — completo y churrasco = platos del 18, gente pide desde casa para almuerzo familiar, $500 fijo vs. $2.240+ con Rappi, VENTANA CIERRA HOY |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Domingo 13 de septiembre / Fiestas Patrias en 5 días" redactado 13/09 — pollo asado = EL plato de Fiestas Patrias, 5 días para el peak MÁXIMO del año, ahorro ~$600K/mes vs. Rappi, lunes 14 y martes 15 últimos días hábiles — VENTANA CIERRA |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — pollo asado = EL plato del 18, peak MÁXIMO del año a 3 días, ahorro ~$600K/mes vs. Rappi ($2.700 por pollo $9K vs. $500 fijo), ACTIVAR HOY |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — asados del 18 + consumo alcohol = peak anual paracetamol/omeprazol/ibuprofeno a domicilio, $500 fijo sin porcentaje, VENTANA CIERRA HOY |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Domingo 13 de septiembre / Fiestas Patrias en 5 días" redactado 13/09 — peak pizza familiar semana del 18-22 septiembre, ahorro ~$990K/mes vs. Rappi (~$2.800/pedido), algoritmo social entierra sin publicidad, lunes 14 y martes 15 últimos días hábiles — VENTANA CIERRA |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — peak pizza familiar semana 18-22 sept, ahorro ~$990K/mes vs. Rappi ($2.800/pedido), algoritmo entierra sin publicidad paga, 3 días al peak MÁXIMO |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — tabla sushi reunión 4 personas $18K-$20K = $5.040-$5.600 comisión Rappi vs. $500 fijo, 5-6 tablas fin de semana del 18 = ahorro $23K-$26K solo esos 4 días, VENTANA CIERRA HOY |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — PEAK MÁXIMO BEBIDAS en 4 días" redactado 14/09 — chicha/vino/cerveza asados del 18 = mayor peak del año para botillerías, caja vino $15K = $4.500 Rappi vs. $500 fijo, VENTANA CIERRA HOY |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — snacks/bebidas/insumos para asados del 18 = peak MÁXIMO minimarket del año, VENTANA CIERRA HOY, $500 fijo vs. porcentual |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 13 de septiembre / Fiestas Patrias en 5 días" redactado 13/09 — tortas para asados/ramadas = peak MÁXIMO encargos del año, Rappi Turbo Quilpué urgencia directa, lunes 14 y martes 15 últimos días hábiles — VENTANA CIERRA |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Domingo 13 de septiembre / Fiestas Patrias en 5 días" redactado 13/09 — peak MÁXIMO rotisería (costillar/vacío/pollo/chorizo del 18), lunes 14 y martes 15 últimos días hábiles — activar HOY para llegar listo al rush |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Domingo 13 de septiembre / Fiestas Patrias en 5 días" redactado 13/09 — once del 18 = peak MÁXIMO café familiar del año, lunes 14 y martes 15 últimos días hábiles — activar canal AHORA para capturar el rush |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — tortas para asados/ramadas del 18 = peak MÁXIMO encargos del año, Rappi Turbo Quilpué urgencia directa, 3 días al rush MÁXIMO |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — peak MÁXIMO rotisería (costillar/vacío/pollo/chorizo del 18), 3 días al rush más grande del año, activar HOY |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — once del 18 = peak MÁXIMO café familiar del año, 3 días, activar HOY para capturar el rush |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — ruidos artificiales y ramadas del 18-21 = peak anual calmantes mascotas, canal $500 fijo, VENTANA CIERRA HOY |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Domingo 13 de septiembre / Fiestas Patrias en 5 días" redactado 13/09 — útiles para decoraciones/disfraces/trabajos del 18 pedidos con urgencia esta semana; diferenciador único en VA sin Rappi ni Uber Eats para librería; lunes 14 y martes 15 últimos días hábiles — VENTANA CIERRA |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Domingo 13 de septiembre / Fiestas Patrias en 5 días" redactado 13/09 — rush materiales ramada (clavos/pintura/luminarias del 18), clientes piden sin salir, $500 fijo ideal para ferreterías; lunes 14 y martes 15 últimos días hábiles — VENTANA CIERRA |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — útiles decoraciones/disfraces urgentes del 18, diferenciador único: ninguna librería en Rappi/Uber Eats VA, 3 días al peak |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — rush materiales ramada (clavos/pintura/luminarias del 18), clientes piden sin salir, $500 fijo ideal ferreterías, 3 días al peak |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / primavera activa — temporada helados en marcha" redactado 14/09 — primavera = temporada inicio, canal configurado hoy llega listo al rush oct-dic + verano, $500 fijo vs. 28-30% Rappi/Uber Eats |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -31,12 +31,12 @@
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (60 días silencio) + Fiestas Patrias 4 días redactado 14/09 — PedidosYa multada US$35M 2026, SSW 60 días sin comunicar contrato 2027, tablas sushi $18K-$20K = $4.500-$5.600 comisión vs. $500 fijo, VENTANA CIERRA HOY |
-| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW + FP urgente redactado 11/09 — PedidosYa US$35M multas 2026, juicio TDLC activo, SSW 57 días sin comunicar condiciones 2027, Fiestas Patrias en 7 días = activar canal propio AHORA vs. depender de plataforma inestable |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — PedidosYa US$35M multas 2026, SSW 61 días en silencio sin comunicar contrato 2027, FP en 3 días = AHORA O NUNCA este año |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
 | 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Seguimiento urgente FNE/SSW + Fiestas Patrias 6 días redactado 12/09 — en PedidosYa + Uber Eats doble comisión; PedidosYa US$35M multas 2026, SSW 59 días en silencio; empanadas = peak MÁXIMO del 18 sept; tel. +56 32 324 2360 |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
-| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Seguimiento FNE/SSW + FP urgente redactado 11/09 — 20 años de trayectoria merecen partner con certeza real; PedidosYa US$35M multas, SSW 57 días en silencio; FP en 7 días = tortas+pizzas+empanadas para asados = peak MÁXIMO del año — $500 fijo vs. porcentual |
+| 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — 20 años de trayectoria merecen partner con certeza real; PedidosYa US$35M multas, SSW 61 días en silencio; FP en 3 días = tortas+pizzas+empanadas = PEAK MÁXIMO del año |
 | 34 | Petit Bak Comidas A Domicilio | Comida a domicilio | Av. Valparaíso 1202 Of. 9, Villa Alemana | Nuevo | — | Presentación redactada 14/06 — negocio delivery-first, plataformas por confirmar |
 | 35 | Buena Onda Sushi | Sushi | Huanhuali 997, Villa Alemana | Nuevo | — | Presentación redactada 15/06 — en Uber Eats + Rappi, argumento doble comisión |
 | 36 | Miel Delivery | Repostería / cocktails | Villa Alemana (Peña Blanca, Belloto) | Nuevo | — | Presentación redactada 15/06 — delivery-first por WhatsApp, argumento canal propio sin comisión |
@@ -212,6 +212,8 @@
 | 206 | Gorilas | Comida rápida | Quilpué (en Uber Eats) | Nuevo | — | Presentación redactada 13/09 — detectado en Uber Eats Quilpué, Rappi Turbo urgencia directa (ya activo en Quilpué), Fiestas Patrias en 5 días = peak comida rápida del año, argumento tarifa fija $500 vs. 30-35% Uber Eats |
 | 207 | Sushi Como En Casa | Sushi | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 14/09 — detectado en Uber Eats VA, sushi delivery con Fiestas Patrias en 4 días = rolls y tablas para reuniones, ahorro ~$3.100+ por pedido de $12K vs. 30% Uber Eats, argumento tarifa fija $500 |
 | 208 | Sanguchería Madrid | Sandwichería | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 14/09 — detectado en Uber Eats VA, sándwich = EL plato del 18 de septiembre, Fiestas Patrias en 4 días = peak máximo del rubro, argumento tarifa fija $500 vs. 30% Uber Eats |
+| 209 | Puerto Ensenada | Mariscos / productos del mar gourmet | Villa Alemana (Uber Eats, @puertoensenada.cl) | Nuevo | — | Presentación redactada 15/09 — mariscos gourmet delivery activo Uber Eats VA, caldillos+ceviches FP en 3 días = peak MÁXIMO mariscos del año, ahorro ~$3.100/pedido vs. 30% Uber Eats |
+| 210 | Pescadería M&M | Pescadería / mariscos frescos | Quilpué (Facebook @Pescaderia-MM) | Nuevo | — | Presentación redactada 15/09 — pescadería con delivery propio en Quilpué, FP en 3 días = peak MÁXIMO mariscos del año, Rappi Turbo urgencia directa en Quilpué, argumento $500 fijo vs. porcentual |
 
 ---
 
@@ -219,11 +221,74 @@
 
 ---
 
+### MENSAJES DEL DÍA (2026-09-15)
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 15 de septiembre — FIESTAS PATRIAS EN 3 DÍAS** (18 de septiembre). ⚠️ CUENTA REGRESIVA FINAL — este lunes 15 es el último día hábil real para contactar antes del feriado largo. **Todos los mensajes de hoy deben salir HOY.** 9 borradores: 7 seguimientos a Contactados con drafts de hace 2 días (#2, #4, #8, #9, #10, #12, #13), 2 seguimientos FNE/SSW urgentes para PedidosYa (#28 La Esquina, #33 Casa Festa — 4 días sin draft), y 2 presentaciones para nuevos prospectos de mariscos (#209 Puerto Ensenada y #210 Pescadería M&M — Fiestas Patrias en 3 días = peak MÁXIMO mariscos). Pipeline total: **210 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **82 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) SSW Partners **61 días en silencio** sin comunicar cambios a afiliados PedidosYa — el argumento más potente del H2; (3) **VENTANA CIERRA HOY** — el 18 de septiembre en 3 días es el peak MÁXIMO del año. **Actualizado:** 2026-09-15.
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento Lunes 15 / Fiestas Patrias en 3 días:**
+"Hola! Soy Matías de RepartoJusto. Fiestas Patrias es en 3 días — el pollo asado es EL plato del 18 de septiembre. Un pollo de $9.000 genera $2.700 de comisión en Rappi; con nosotros son $500 fijos por pedido, sin importar el valor. Este lunes 15 es el último día hábil real antes del feriado largo — activar el canal hoy significa llegar listo al peak más grande del año. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[4] Pizza House — Seguimiento Lunes 15 / Fiestas Patrias en 3 días:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias es en 3 días — las familias piden pizza en las reuniones del 18, 19 y 20 de septiembre. Con Rappi están pagando ~$2.800 de comisión por pizza de $9.000 + el algoritmo los entierra si no pagan publicidad adicional. Con nosotros son $500 fijos. Este lunes es el último día hábil real — ¿activamos el canal antes del peak? repartojusto-production.up.railway.app"
+
+---
+
+**[8] Pastelería Dulce Hogar — Seguimiento Lunes 15 / Fiestas Patrias en 3 días:**
+"Hola! Soy Matías de RepartoJusto. En 3 días llega el 18 de septiembre — el mayor peak del año para pastelerías: tortas para asados, brazo de reina y postres familiares. Una torta de $20.000 genera $6.000 de comisión en Rappi; con nosotros son $500 por entrega. Rappi Turbo ya opera en Quilpué — la ventana para establecer canal propio a tarifa fija es hoy. ¿Lo activamos? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento Lunes 15 / Fiestas Patrias en 3 días:**
+"Hola! De RepartoJusto nuevamente. Faltan 3 días para el 18 de septiembre — el peak MÁXIMO del año para una rotisería. Costillar, vacío, pollo y chorizos para el asado del 18: todo lo que la gente encarga con anticipación. Con nosotros son $500 fijos por pedido entregado, sin porcentaje. Este lunes es el último día hábil real antes del feriado — activar el canal HOY significa llegar listo al rush. ¿Trabajamos juntos? repartojusto-production.up.railway.app"
+
+---
+
+**[10] Café El Árbol — Seguimiento Lunes 15 / Fiestas Patrias en 3 días:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias en 3 días — la once del 18 de septiembre es el peak MÁXIMO del año para los cafés: kuchen, scones, empanadas y todo lo que la familia pide para celebrar. Con nosotros son $500 fijos por entrega, sin porcentaje. Este lunes 15 es el último día hábil real — ¿activamos el canal antes del rush? repartojusto-production.up.railway.app"
+
+---
+
+**[12] Librería El Saber — Seguimiento Lunes 15 / Fiestas Patrias en 3 días:**
+"Hola! Seguimos de RepartoJusto. En 3 días llega el 18 de septiembre — y esta semana escolares y familias buscan útiles urgentes para decoraciones, disfraces y trabajos del 18. Para una librería, el delivery local capta esos pedidos de último momento. Con nosotros son $500 fijos, sin porcentaje. Diferenciador único en Villa Alemana: ninguna otra librería está en Rappi ni Uber Eats. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[13] Ferretería Los Maestros — Seguimiento Lunes 15 / Fiestas Patrias en 3 días:**
+"Hola! De RepartoJusto nuevamente. En 3 días es el 18 de septiembre — los clientes están en modo ramada: clavos, pintura, luminarias y materiales de decoración. El delivery de ferretería para el rush del 18 tiene alta demanda urgente. Con nosotros son $500 fijos por pedido, sin porcentaje. Este lunes es el último día hábil — ¿activamos el canal? repartojusto-production.up.railway.app"
+
+---
+
+**[28] La Esquina Con Sabor — Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias en 3 días:**
+"Hola! Soy Matías de RepartoJusto. PedidosYa fue multada dos veces en 2026 ($35M USD), sigue en juicio negando los cargos, y SSW Partners — quienes compraron PedidosYa en julio — llevan 61 días en silencio sin decirles qué pasa con su contrato en 2027. Con Fiestas Patrias en 3 días — el peak más grande del año para completos y comida rápida — tiene sentido tener un canal adicional donde la tarifa es siempre $500 por pedido, sin sorpresas. Registro gratuito, sin contrato. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[33] Casa Festa Cocina y Repostería — Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias en 3 días:**
+"Hola! Soy Matías de RepartoJusto. Con 20 años de trayectoria, sus tortas, pizzas y empanadas son de lo más pedido para el 18 de septiembre — en 3 días. PedidosYa fue multada $35M USD en 2026 y SSW Partners llevan 61 días en silencio sin comunicar las condiciones para 2027. Para el 18, un pedido de torta a $25.000 genera $7.000 de comisión con ellos; con nosotros son $500 fijos. ¿Complementamos los canales para el peak? repartojusto-production.up.railway.app"
+
+---
+
+**[209] Puerto Ensenada — Presentación (nuevo prospecto, mariscos gourmet Uber Eats VA):**
+"Hola! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Encontré su negocio de mariscos en Uber Eats. Con Fiestas Patrias en 3 días — caldillos y ceviches son de lo más pedido para el 18 — ¿han pensado en tener un canal de delivery propio además de la plataforma? Con nosotros el costo es $500 fijo por pedido entregado, sin porcentaje sobre la venta. Para un pedido de mariscos de $12.000, el ahorro contra el 30% de Uber Eats es de $3.100 por entrega. Sin contrato, registro gratuito. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[210] Pescadería M&M — Presentación (nuevo prospecto, mariscos Quilpué):**
+"Hola! Somos RepartoJusto, plataforma de delivery sin comisiones por venta, operando en Quilpué y Villa Alemana. Con Fiestas Patrias en 3 días — el asado del 18 lleva mariscos y pescados frescos = el peak del año para pescaderías. ¿Han considerado sumar un canal de delivery con tarifa fija? Con nosotros son $500 fijos por pedido, sin porcentaje sobre la venta. Con Rappi Turbo ya activo en Quilpué, establecer un canal propio a tarifa fija es la mejor respuesta ante la presión de las plataformas. Registro gratuito, sin contrato. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
 ### MENSAJES DEL DÍA (2026-09-14)
 
 > **NOTA PARA MATÍAS:** Hoy es **lunes 14 de septiembre — ÚLTIMO DÍA HÁBIL ANTES DE FIESTAS PATRIAS** (18 de septiembre en 4 días). ⚠️ VENTANA CIERRA HOY — mañana martes 15 es el último día, pero los negocios ya estarán cerrando temprano para fiestas. **Esta es la última oportunidad real para activar canales antes del peak del año.** 12 mensajes en total: 7 seguimientos a Contactados (#1, #3, #5, #6, #7, #11, #14), 3 seguimientos urgentes FNE/SSW para prospectos PedidosYa (#27, #60, #90), y 2 presentaciones a nuevos prospectos encontrados en Uber Eats VA (#207, #208). Pipeline total: **208 prospectos**.
 
-> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **81 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — FNE/SSW 60 días silencio = argumento más potente del año + Fiestas Patrias en 4 días; (3) VENTANA CRÍTICA: todos los mensajes deben salir HOY — mañana martes 15 los negocios ya están en modo fiestas. **Actualizado:** 2026-09-14.
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **81 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) **#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya** — FNE/SSW 60 días silencio = argumento más potente del año + Fiestas Patrias en 4 días; (3) VENTANA CRÍTICA: todos los mensajes deben salir HOY — mañana martes 15 los negocios ya están en modo fiestas. **Actualizado:** 2026-09-15.
 
 ---
 
@@ -3995,3 +4060,7 @@ Con primavera en 7 días, es el momento ideal para configurar el canal antes del
 **La Tradición Empanadas (#203, agregado 12/09):** Empanadaría con más de 10 años de tradición familiar en Quilpué. Dirección: Av. Los Carrera 1673, Quilpué. Confirmada en PedidosYa Y Uber Eats simultáneamente — doble comisión. Menú: empanadas de pino, mechada queso, jamón y queso y variedades. Ticket promedio estimado: $5.000-$12.000 (por unidad o docena). ARGUMENTOS MÚLTIPLES: (1) doble comisión — PedidosYa 28% + Uber Eats 30% por cada pedido de empanadas; (2) FNE directo — están en PedidosYa, la plataforma multada US$35M en 2026 por controlar precios de sus afiliados; (3) SSW Partners 59 días sin comunicar cambios en contratos; (4) Fiestas Patrias en 6 días (al momento de agregar) = peak MÁXIMO del año para empanaderías — el 18 de septiembre es el día de mayor demanda de empanadas en Chile. Fuente: ubereats.com/cl/store/la-tradicion-empanadas + pedidosya.cl/restaurantes/quilpue/empanadas-la-tradicion-quilpue-menu + búsqueda empanadas Quilpué septiembre 2026.
 
 **Zulema Cafetería (#204, agregado 12/09):** Cafetería especializada en Villa Alemana. Dirección: Quinta 027, Villa Alemana. Teléfono: +56 9 6116 8659. Web: zulema.cafe. Instagram: @zulemacafeteria. Facebook: @zulema.cafe.cl. Confirmada en Uber Eats y con canal de pedidos propio en su sitio web. Oferta: café de especialidad, jugos 100% fruta, pastelerías belgas finas, sándwiches y ensaladas, almuerzos caseros lunes a viernes 12:00-15:00. Ofrece delivery gratuito a residentes locales. Ticket promedio estimado: $5.000-$12.000 (café + sándwich/almuerzo). Primera cafetería premium / especialidad del pipeline — diferenciada de Café El Árbol (#10) por el componente de pastelería belga y especialización. ARGUMENTO PRINCIPAL: Uber Eats cobra 30% de comisión; para un almuerzo de $9.000, el ahorro es $2.200 por pedido que se queda en el negocio; con canal delivery propio en zulema.cafe ya activo, RepartoJusto complementa con logística local a $500 fijo. Argumento estacional: Fiestas Patrias en 6 días (al momento de agregar) = once del 18 de septiembre y café/té con pasteles = uno de los momentos más demandados del feriado largo 18-22 septiembre. Fuente: zulema.cafe + instagram.com/zulemacafeteria + ubereats.com/cl/store/zulema-cafeteria + búsqueda cafeterías delivery Villa Alemana septiembre 2026.
+
+**Puerto Ensenada (#209, agregado 15/09):** Mariscos y productos del mar gourmet activo en Uber Eats en Villa Alemana. Instagram/web: @puertoensenada.cl. Delivery activo confirmado en Uber Eats VA. Rubro: mariscos gourmet (caldillos, ceviches, productos del mar). Ticket promedio estimado: $8.000-$18.000 (plato de mariscos + bebida). Uber Eats cobra 30% de comisión — para un plato de $12.000, el ahorro con RepartoJusto es $3.100 por pedido. ARGUMENTO CLAVE: Fiestas Patrias = peak MÁXIMO del año para mariscos en Chile (caldillo de congrio, ceviche, machas a la parmesana son platos típicos del 18 de septiembre); en los días 17-19 de septiembre la demanda de mariscos se multiplica — el primer contacto llega en el momento exacto del peak del año para su rubro. SSW Partners 61 días en silencio no aplica directamente (están en Uber Eats), pero el argumento de comisión fija vs. 30% Uber Eats es directo. Fuente: búsqueda delivery mariscos Villa Alemana Uber Eats septiembre 2026.
+
+**Pescadería M&M (#210, agregado 15/09):** Pescadería con delivery propio en Quilpué. Facebook: @Pescaderia-MM. Canal propio activo en Facebook, sin grandes plataformas detectadas. Producto: pescados y mariscos frescos a domicilio. Ticket promedio estimado: $6.000-$15.000 (compra de pescados/mariscos). ARGUMENTO CLAVE: Fiestas Patrias = mayor peak del año para pescaderías con delivery — la demanda de mariscos y pescados frescos para el 18 de septiembre es la más alta del año; canal propio Facebook ya activo — RepartoJusto complementa con logística local a $500 fijo sin porcentaje de venta. RAPPI TURBO URGENCIA DIRECTA: Rappi Turbo ya activo en Quilpué — cuando los riders de Rappi migren a Turbo, los negocios sin plataforma propia perderán cobertura; RepartoJusto es el canal local que no depende de plataformas externas. Para una venta de $10.000, el ahorro vs. plataforma de porcentaje (28%): $2.300 por entrega. Fuente: búsqueda delivery pescadería Quilpué Facebook septiembre 2026.
