@@ -1,23 +1,23 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-15
+**Actualizado:** 2026-09-16
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — completo y churrasco = platos del 18, gente pide desde casa para almuerzo familiar, $500 fijo vs. $2.240+ con Rappi, VENTANA CIERRA HOY |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — completo y churrasco = platos del 18, almuerzo familiar desde casa, $500 fijo vs. $2.240+ con Rappi, ÚLTIMO DÍA HÁBIL REAL |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — pollo asado = EL plato del 18, peak MÁXIMO del año a 3 días, ahorro ~$600K/mes vs. Rappi ($2.700 por pollo $9K vs. $500 fijo), ACTIVAR HOY |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — asados del 18 + consumo alcohol = peak anual paracetamol/omeprazol/ibuprofeno a domicilio, $500 fijo sin porcentaje, VENTANA CIERRA HOY |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — asados del 18 = peak anual paracetamol/omeprazol/ibuprofeno a domicilio, $500 fijo sin porcentaje, ÚLTIMO DÍA HÁBIL REAL |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — peak pizza familiar semana 18-22 sept, ahorro ~$990K/mes vs. Rappi ($2.800/pedido), algoritmo entierra sin publicidad paga, 3 días al peak MÁXIMO |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — tabla sushi reunión 4 personas $18K-$20K = $5.040-$5.600 comisión Rappi vs. $500 fijo, 5-6 tablas fin de semana del 18 = ahorro $23K-$26K solo esos 4 días, VENTANA CIERRA HOY |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — PEAK MÁXIMO BEBIDAS en 4 días" redactado 14/09 — chicha/vino/cerveza asados del 18 = mayor peak del año para botillerías, caja vino $15K = $4.500 Rappi vs. $500 fijo, VENTANA CIERRA HOY |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — snacks/bebidas/insumos para asados del 18 = peak MÁXIMO minimarket del año, VENTANA CIERRA HOY, $500 fijo vs. porcentual |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — tabla sushi reunión $18K-$20K = $5.040-$5.600 comisión Rappi vs. $500 fijo, fin de semana 18-21 = ahorro $23K-$28K, ÚLTIMO DÍA HÁBIL REAL |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS — PEAK MÁXIMO BEBIDAS" redactado 16/09 — chicha/vino/cerveza asados del 18 = MAYOR PEAK del año botillerías, caja vino $15K = $4.500 Rappi vs. $500 fijo, ÚLTIMO DÍA HÁBIL REAL |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — snacks/bebidas/insumos asados del 18 = peak MÁXIMO minimarket del año, $500 fijo vs. porcentual, ÚLTIMO DÍA HÁBIL REAL |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — tortas para asados/ramadas del 18 = peak MÁXIMO encargos del año, Rappi Turbo Quilpué urgencia directa, 3 días al rush MÁXIMO |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — peak MÁXIMO rotisería (costillar/vacío/pollo/chorizo del 18), 3 días al rush más grande del año, activar HOY |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — once del 18 = peak MÁXIMO café familiar del año, 3 días, activar HOY para capturar el rush |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / ÚLTIMO DÍA HÁBIL — Fiestas Patrias en 4 días" redactado 14/09 — ruidos artificiales y ramadas del 18-21 = peak anual calmantes mascotas, canal $500 fijo, VENTANA CIERRA HOY |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — fuegos artificiales/ramadas del 18-21 = peak anual calmantes mascotas, $500 fijo, ÚLTIMO DÍA HÁBIL REAL |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — útiles decoraciones/disfraces urgentes del 18, diferenciador único: ninguna librería en Rappi/Uber Eats VA, 3 días al peak |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — rush materiales ramada (clavos/pintura/luminarias del 18), clientes piden sin salir, $500 fijo ideal ferreterías, 3 días al peak |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Lunes 14 de septiembre / primavera activa — temporada helados en marcha" redactado 14/09 — primavera = temporada inicio, canal configurado hoy llega listo al rush oct-dic + verano, $500 fijo vs. 28-30% Rappi/Uber Eats |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS + inicio temporada helados" redactado 16/09 — helados reuniones del 18-21 + primavera activa = doble peak, canal listo hoy garantiza rush oct-dic, $500 fijo vs. 28-30% Rappi |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -30,7 +30,7 @@
 | 24 | Buena Onda Sandwich | Sandwich / comida rápida | Villa Alemana | Nuevo | — | Versión junio + arg. Rappi Turbo redactada 19/06 |
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
-| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (60 días silencio) + Fiestas Patrias 4 días redactado 14/09 — PedidosYa multada US$35M 2026, SSW 60 días sin comunicar contrato 2027, tablas sushi $18K-$20K = $4.500-$5.600 comisión vs. $500 fijo, VENTANA CIERRA HOY |
+| 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (62 días silencio) + FP EN 2 DÍAS redactado 16/09 — PedidosYa multada US$35M 2026 + Uber compra empresa madre, SSW 62 días sin comunicar contrato 2027, tablas sushi reunión del 18 = $5.000+ comisión vs. $500 fijo |
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — PedidosYa US$35M multas 2026, SSW 61 días en silencio sin comunicar contrato 2027, FP en 3 días = AHORA O NUNCA este año |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
 | 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Seguimiento urgente FNE/SSW + Fiestas Patrias 6 días redactado 12/09 — en PedidosYa + Uber Eats doble comisión; PedidosYa US$35M multas 2026, SSW 59 días en silencio; empanadas = peak MÁXIMO del 18 sept; tel. +56 32 324 2360 |
@@ -214,10 +214,70 @@
 | 208 | Sanguchería Madrid | Sandwichería | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 14/09 — detectado en Uber Eats VA, sándwich = EL plato del 18 de septiembre, Fiestas Patrias en 4 días = peak máximo del rubro, argumento tarifa fija $500 vs. 30% Uber Eats |
 | 209 | Puerto Ensenada | Mariscos / productos del mar gourmet | Villa Alemana (Uber Eats, @puertoensenada.cl) | Nuevo | — | Presentación redactada 15/09 — mariscos gourmet delivery activo Uber Eats VA, caldillos+ceviches FP en 3 días = peak MÁXIMO mariscos del año, ahorro ~$3.100/pedido vs. 30% Uber Eats |
 | 210 | Pescadería M&M | Pescadería / mariscos frescos | Quilpué (Facebook @Pescaderia-MM) | Nuevo | — | Presentación redactada 15/09 — pescadería con delivery propio en Quilpué, FP en 3 días = peak MÁXIMO mariscos del año, Rappi Turbo urgencia directa en Quilpué, argumento $500 fijo vs. porcentual |
+| 211 | Almuerzos Villa Alemana | Comida casera / almuerzos delivery | Villa Alemana (Instagram @almuerzosv.a) | Nuevo | — | Presentación redactada 16/09 — canal propio por Instagram sin grandes plataformas, comida casera = EL plato del 18 sept, FP en 2 días = peak almuerzos familiares, $500 fijo sin comisión sobre venta |
+| 212 | Momento Con Amor | Desayunos a domicilio | Quilpué / Villa Alemana / Peñablanca (momentoconamor.cl, WhatsApp +56 9 87745980) | Nuevo | — | Presentación redactada 16/09 — canal propio sin grandes plataformas, onces y desayunos del 18 = peak máximo del rubro, FP en 2 días = ventana de captación, $500 fijo por entrega |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-09-16)
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 16 de septiembre — FIESTAS PATRIAS EN 2 DÍAS** (18 de septiembre). ⚠️ ÚLTIMO DÍA HÁBIL REAL antes del feriado. **10 mensajes:** 7 seguimientos a Contactados con borradores de hace 2 días (#1, #3, #5, #6, #7, #11, #14), 1 refresh FNE/SSW para #27 Tribeca Sushi (6 días sin draft), y 2 presentaciones para 2 nuevos prospectos de canal propio (#211 Almuerzos Villa Alemana y #212 Momento Con Amor). Pipeline total: **212 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **83 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) SSW Partners **62 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **VENTANA CIERRA HOY** — mañana 17 es prácticamente inhábil y el 18 de septiembre es el peak MÁXIMO del año. **Actualizado:** 2026-09-16.
+
+---
+
+**[1] Fuente de Soda El Rápido — Seguimiento Martes 16 / FP EN 2 DÍAS:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias es en 2 días — el completo y el churrasco son los platos del 18, y la gente los pide desde casa para el almuerzo familiar. Un completo de $4.000 genera $900 de comisión en Rappi; con nosotros son $500 fijos por entrega, sin importar el ticket. Hoy martes 16 es el último día hábil real — configurar el canal hoy significa llegar listo al mayor peak del año. ¿Lo activamos? repartojusto-production.up.railway.app"
+
+---
+
+**[3] Farmacia Cruz Verde — Seguimiento Martes 16 / FP EN 2 DÍAS:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias es en 2 días — los asados del 18 generan el peak anual de paracetamol, omeprazol e ibuprofeno a domicilio. Canal de delivery propio a $500 fijo por pedido, sin porcentaje sobre el valor del ticket. Hoy martes 16 es el último día hábil — activar el canal hoy llega listo al mayor pico de demanda del año. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[5] Sushi Zen — Seguimiento Martes 16 / FP EN 2 DÍAS:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias es en 2 días — las tablas de sushi para reunión familiar del 18 son el pedido estrella del fin de semana. Una tabla de $18.000-$20.000 genera $5.040-$5.600 de comisión en Rappi; con nosotros son $500 fijos. 5-6 tablas en el fin de semana 18-21 = ahorro $23.000-$28.000 solo esos 4 días. Hoy martes 16 es el último día hábil — ¿activamos? repartojusto-production.up.railway.app"
+
+---
+
+**[6] Botillería El Copihue — Seguimiento Martes 16 / FP EN 2 DÍAS — PEAK MÁXIMO BEBIDAS:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias es en 2 días — chicha, vino y cerveza para los asados del 18 es el MAYOR PEAK del año para una botillería. Una caja de vino de $15.000 genera $4.500 de comisión en Rappi; con nosotros son $500 fijos por entrega, sin importar el ticket. El que llega listo hoy captura el rush del 17 y el 18. ¿Activamos el canal? repartojusto-production.up.railway.app"
+
+---
+
+**[7] Minimercado La Esquina — Seguimiento Martes 16 / FP EN 2 DÍAS:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias es en 2 días — snacks, bebidas e insumos para asados del 18 generan el peak MÁXIMO del año para los minimarkets. Canal de delivery con $500 fijo por pedido, sin porcentaje. La gente compra sin salir de casa en plena preparación del asado. Hoy martes 16 es el último día hábil — ¿activamos el canal antes del rush? repartojusto-production.up.railway.app"
+
+---
+
+**[11] Veterinaria Huellitas — Seguimiento Martes 16 / FP EN 2 DÍAS:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias es en 2 días — los fuegos artificiales y las ramadas del 18 al 21 generan el peak anual de calmantes para mascotas. Los dueños que no quieren salir con sus perros asustados piden todo a domicilio. Canal de delivery a $500 fijo por pedido, sin porcentaje. Hoy martes 16 es el último día hábil — ¿conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[14] Heladería Glacial — Seguimiento Martes 16 / FP EN 2 DÍAS + inicio temporada:**
+"Hola! De RepartoJusto nuevamente. Fiestas Patrias es en 2 días y la primavera ya está activa — helados para las reuniones del 18-21 más el arranque de temporada es el doble peak para una heladería. Canal listo hoy llega al rush de septiembre con ventaja en el peak de octubre-diciembre. Con nosotros son $500 fijos por entrega, sin porcentaje. ¿Lo activamos hoy? repartojusto-production.up.railway.app"
+
+---
+
+**[27] Tribeca Sushi — Seguimiento FNE/SSW (62 días silencio) + FP EN 2 DÍAS:**
+"Hola! Soy Matías de RepartoJusto. PedidosYa fue multada dos veces en 2026 por $35 millones USD, sigue en juicio negando los cargos, y SSW Partners — quienes compraron PedidosYa — llevan 62 días en silencio sin comunicarles qué pasa con su contrato en 2027. Encima, Uber ofreció comprar su empresa madre por US$11.600M: en un año pueden cambiar de dueño, de nombre y de comisiones. Con Fiestas Patrias en 2 días — las tablas sushi para reuniones del 18 generan $5.000+ de comisión en esas plataformas, con nosotros son $500 fijos, sin sorpresas ni contratos. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[211] Almuerzos Villa Alemana — Presentación (nuevo prospecto):**
+"Hola! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Vi que tienen su canal de almuerzos y comida casera por Instagram (@almuerzosv.a) — exactamente el tipo de negocio que más se beneficia de RepartoJusto: sin pagar comisión sobre la venta, solo $500 fijos por pedido entregado al cliente. Fiestas Patrias es en 2 días y los almuerzos y comida casera son los favoritos del 18. Activar el canal hoy significa llegar listo al mayor peak del año. Registro gratuito, sin contrato. ¿Les cuento más? repartojusto-production.up.railway.app"
+
+---
+
+**[212] Momento Con Amor — Presentación (nuevo prospecto):**
+"Hola! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana y Quilpué. Vi su servicio de desayunos y onces a domicilio en momentoconamor.cl — Fiestas Patrias es en 2 días: los desayunos y onces del 18 son el peak más grande del año para este rubro. Con RepartoJusto la entrega cuesta $500 fijo por pedido, sin comisión sobre el precio de la venta. Canal adicional sin dejar su WhatsApp propio. Registro gratuito, sin contrato. ¿Conversamos? repartojusto-production.up.railway.app"
 
 ---
 
