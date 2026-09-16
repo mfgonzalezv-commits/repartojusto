@@ -34,6 +34,10 @@ const setupSockets = require('./src/sockets');
 const app = express();
 const server = http.createServer(app);
 
+// Railway y otros PaaS usan un reverse proxy: sin esto req.ip devuelve la IP del proxy
+// (ej. 127.0.0.1), haciendo que TODOS los usuarios compartan el mismo bucket de rate limiting.
+app.set('trust proxy', 1);
+
 // Socket.io
 const io = new Server(server, {
   cors: {

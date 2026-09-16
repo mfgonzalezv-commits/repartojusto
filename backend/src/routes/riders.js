@@ -136,9 +136,28 @@ router.get('/pedidos', auth, solo('rider'), async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+// Rate limiter para /pedidos/disponibles: 30 req/min por rider (consulta costosa)
+const _disponiblesStore = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of _disponiblesStore) if (now - e.t >= 60000) _disponiblesStore.delete(k);
+}, 5 * 60 * 1000).unref();
+function disponiblesRateLimit(req, res, next) {
+  const key = req.usuario?.id;
+  const now = Date.now();
+  const entry = _disponiblesStore.get(key);
+  if (entry && now - entry.t < 60000) {
+    if (entry.n >= 30) return res.status(429).json({ error: 'Demasiadas solicitudes. Intenta en un momento.' });
+    entry.n++;
+  } else {
+    _disponiblesStore.set(key, { n: 1, t: now });
+  }
+  next();
+}
+
 // ── GET /api/riders/pedidos/disponibles ───────────────────────────────────
 // Pedidos pendientes con indicador de compatibilidad multi-pedido
-router.get('/pedidos/disponibles', auth, solo('rider'), async (req, res, next) => {
+router.get('/pedidos/disponibles', auth, solo('rider'), disponiblesRateLimit, async (req, res, next) => {
   try {
     const { rows: [rider] } = await db(
       'SELECT id FROM riders WHERE usuario_id = $1', [req.usuario.id]

@@ -68,7 +68,7 @@ router.put('/perfil',
   auth, solo('negocio'),
   [
     body('nombre_comercial').optional().trim().notEmpty(),
-    body('descripcion').optional().trim(),
+    body('descripcion').optional().trim().isLength({ max: 1000 }),
     body('direccion').optional().trim().notEmpty(),
     body('lat').optional().isFloat({ min: -90, max: 90 }),
     body('lng').optional().isFloat({ min: -180, max: 180 }),
@@ -251,8 +251,27 @@ router.get('/clientes', auth, solo('negocio'), async (req, res, next) => {
   } catch (err) { next(err); }
 });
 
+// Rate limiter para endpoints GET con queries costosas (30 req/min por usuario)
+const _negocioGetStore = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of _negocioGetStore) if (now - e.t >= 60000) _negocioGetStore.delete(k);
+}, 5 * 60 * 1000).unref();
+function negocioGetRateLimit(req, res, next) {
+  const key = req.usuario?.id;
+  const now = Date.now();
+  const entry = _negocioGetStore.get(key);
+  if (entry && now - entry.t < 60000) {
+    if (entry.n >= 30) return res.status(429).json({ error: 'Demasiadas solicitudes. Intenta en un momento.' });
+    entry.n++;
+  } else {
+    _negocioGetStore.set(key, { n: 1, t: now });
+  }
+  next();
+}
+
 // ── GET /api/negocios/resumen?periodo=hoy|semana|mes|todo ─────────────────
-router.get('/resumen', auth, solo('negocio'), async (req, res, next) => {
+router.get('/resumen', auth, solo('negocio'), negocioGetRateLimit, async (req, res, next) => {
   try {
     const { rows: [neg] } = await db(`SELECT id FROM negocios WHERE usuario_id = $1`, [req.usuario.id]);
     if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });

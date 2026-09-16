@@ -31,7 +31,7 @@ router.post('/',
     body('lng_entrega').optional().isFloat({ min: -180, max: 180 }),
     body('distancia_km').isFloat({ min: 0.1, max: 500 }),
     body('valor_producto').optional().isInt({ min: 0 }),
-    body('notas').optional().trim(),
+    body('notas').optional().trim().isLength({ max: 500 }),
     body('hora_retiro').optional().matches(/^\d{2}:\d{2}$/),
   ],
   validar,
@@ -332,7 +332,7 @@ router.put('/:id/liberar', auth, solo('rider', 'admin'), async (req, res, next) 
 // ── PUT /api/pedidos/:id/cancelar ─────────────────────────────────────────
 router.put('/:id/cancelar',
   auth, solo('negocio', 'admin'),
-  [body('motivo').optional().trim()],
+  [body('motivo').optional().trim().isLength({ max: 300 })],
   validar,
   async (req, res, next) => {
     const { motivo } = req.body;
