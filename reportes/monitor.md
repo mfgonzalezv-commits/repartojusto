@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
 **Última verificación:** 2026-09-16T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de conexión — la política de red del entorno de ejecución remoto bloqueó el acceso saliente a repartojusto-production.up.railway.app:443 (connect_rejected por el proxy de egreso). No fue posible obtener respuesta del servidor.
+**Detalle:** Error de conexión — proxy de red del entorno rechazó la conexión a repartojusto-production.up.railway.app:443 (connect_rejected, política de egress). No fue posible verificar el endpoint /health.
