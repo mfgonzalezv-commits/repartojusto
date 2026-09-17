@@ -1,47 +1,48 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-09-16
+**Fecha:** 2026-09-17
 
 ---
 
 ## Resumen del pipeline
 
-**Pipeline total:** 212 prospectos
-**Por estado:** Nuevos: 198 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Pipeline total:** 214 prospectos
+**Por estado:** Nuevos: 200 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ---
 
-## Acciones del día (2026-09-16)
+## Acciones del día (2026-09-17)
 
 ### Argumentos activos (de cola.md / Investigador)
-- **SSW Partners: 62 días en silencio** sin comunicar condiciones a afiliados PedidosYa — argumento FNE más potente del H2 2026
-- **Uber compra Delivery Hero (dueña PedidosYa) por US$11.600M** — en 12-18 meses pueden cambiar dueño, nombre y comisiones
-- **FIESTAS PATRIAS EN 2 DÍAS (18/09)** — peak máximo del año; hoy martes 16 es el ÚLTIMO DÍA HÁBIL real antes del feriado
-- **Rappi Turbo en Quilpué** — urgencia directa para prospectos de esa zona; sin expansión confirmada a Villa Alemana
+- **HOY ES EL 17 DE SEPTIEMBRE — LAS FONDAS YA ARRANCARON** — peak de demanda activo desde hoy; mañana 18 es el día mayor del año
+- **SSW Partners: 63 días en silencio** sin comunicar condiciones a afiliados PedidosYa — argumento FNE más potente del H2 2026
+- **Uber compra Delivery Hero (dueña PedidosYa) por US$11.600M** — incertidumbre total sobre contratos 2027
+- **Rappi Turbo en Quilpué** — urgencia directa para prospectos de esa zona; sin confirmación en Villa Alemana
+- **Dato Uber Eats:** empanadas aumentaron +229% demanda durante Fiestas Patrias 2026 (confirmado por búsqueda)
 
 ### Actualizaciones en pipeline
-- Fecha del CRM actualizada a 2026-09-16
-- Próxima acción actualizada con "FP EN 2 DÍAS redactado 16/09" para: #1 Fuente de Soda El Rápido, #3 Farmacia Cruz Verde, #5 Sushi Zen, #6 Botillería El Copihue, #7 Minimercado La Esquina, #11 Veterinaria Huellitas, #14 Heladería Glacial
-- Próxima acción actualizada con "FNE/SSW 62 días + FP EN 2 DÍAS redactado 16/09" para: #27 Tribeca Sushi
-- Agregados 2 nuevos prospectos al pipeline: #211 Almuerzos Villa Alemana, #212 Momento Con Amor
+- Fecha actualizada a 2026-09-17
+- Próxima acción actualizada con "FONDAS ARRANCARON / MAÑANA EL 18 redactado 17/09" para: #2 Don Pollo, #4 Pizza House, #8 Dulce Hogar, #9 El Gaucho, #10 Café El Árbol, #12 Librería El Saber, #13 Ferretería Los Maestros
+- Próxima acción actualizada con "FNE/SSW 63 días + FONDAS HOY / MAÑANA EL 18 redactado 17/09" para: #30 Poh Che Empanadas
+- Agregados 2 nuevos prospectos al pipeline: #213 Parrillada El Alemán, #214 Patria Parrilla
 
 ### Borradores redactados hoy
 Total: **10 mensajes** listos para revisión y envío por Matías
 
-**Seguimientos FP EN 2 DÍAS (martes 16/09) — Contactados con borradores de 2 días:**
-- [1] Fuente de Soda El Rápido — completos/churrascos = plato del 18, almuerzo familiar, $500 vs. $2.240+ Rappi
-- [3] Farmacia Cruz Verde — asados del 18 = peak anual paracetamol/omeprazol/ibuprofeno a domicilio
-- [5] Sushi Zen — tablas sushi reunión familiar del 18 = $5.040-$5.600 comisión Rappi vs. $500 fijo
-- [6] Botillería El Copihue — chicha/vino/cerveza = PEAK MÁXIMO botillerías del año, caja vino $15K = $4.500 Rappi vs. $500
-- [7] Minimercado La Esquina — snacks/insumos asado del 18 = peak MÁXIMO minimarket del año
-- [11] Veterinaria Huellitas — calmantes mascotas por fuegos artificiales/ramadas del 18-21 = peak anual
-- [14] Heladería Glacial — helados reuniones del 18-21 + primavera = doble peak, canal listo para rush oct-dic
+**Seguimientos 17/09 — LAS FONDAS ARRANCARON / MAÑANA EL 18:**
+- [2] Pollería Don Pollo — fondas activas HOY + mañana el 18 = EL plato del día, ahorro ~$600K/mes vs. Rappi
+- [4] Pizza House — semana patria 17-20 = peak pizza familiar, $2.800 Rappi vs. $500 fijo
+- [8] Pastelería Dulce Hogar — fondas HOY = tortas para el asado, mayor peak año pastelerías, Rappi Turbo urgencia
+- [9] Rotisería El Gaucho — fondas del 17 activas + mañana el 18 = peak máximo rotisería (costillar/vacío/chorizo)
+- [10] Café El Árbol — once del 17 + desayuno del 18 = doble peak café familiar
+- [12] Librería El Saber — útiles urgentes decoraciones/disfraces semana patria, único en Rappi/Uber Eats VA
+- [13] Ferretería Los Maestros — clavos/pintura/luminarias para ramadas del 17 = rush HOY
 
-**Seguimientos FNE/SSW + Fiestas Patrias (PedidosYa):**
-- [27] Tribeca Sushi — SSW 62 días silencio + Uber comprando Delivery Hero + tablas sushi reunión del 18
+**Seguimiento FNE/SSW + Fiestas Patrias (PedidosYa):**
+- [30] Poh Che Empanadas — doble comisión PedidosYa+Uber Eats, SSW 63 días silencio, empanadas peak MÁXIMO del 18
 
 **Presentaciones a nuevos prospectos:**
-- [211] Almuerzos Villa Alemana (@almuerzosv.a) — comida casera canal propio, FP en 2 días = peak almuerzos familiares
-- [212] Momento Con Amor (momentoconamor.cl, WhatsApp +56 9 87745980) — desayunos/onces a domicilio, FP = peak onces del 18
+- [213] Parrillada El Alemán (@parrillada.elaleman) — parrillada restaurante VA, fondas HOY + mañana 18 = peak máximo asados
+- [214] Patria Parrilla (@patriaparrilla) — parrilla canal propio Instagram, fondas HOY + mañana 18 = peak MÁXIMO del año
 
 ---
 
@@ -49,21 +50,21 @@ Total: **10 mensajes** listos para revisión y envío por Matías
 
 | # | Nombre | Rubro | Plataforma / Canal | Argumento principal |
 |---|--------|-------|-------------------|---------------------|
-| 211 | Almuerzos Villa Alemana | Comida casera / almuerzos delivery | Instagram @almuerzosv.a (canal propio, sin grandes plataformas) | FP en 2 días = peak almuerzos familiares; $500 fijo vs. comisión porcentual; canal propio ideal para RepartoJusto |
-| 212 | Momento Con Amor | Desayunos y onces a domicilio | momentoconamor.cl / WhatsApp +56 9 87745980 (Quilpué, VA, Peñablanca) | Onces del 18 = peak máximo del rubro; canal propio sin grandes plataformas; Rappi Turbo urgencia en Quilpué |
+| 213 | Parrillada El Alemán | Parrillada / restaurante | Instagram @parrillada.elaleman, tel. 094501767 (canal propio, sin grandes plataformas detectadas) | HOY fondas + mañana el 18 = peak MÁXIMO parrilladas del año; $500 fijo vs. ~$8.400 comisión Rappi en parrillada $30K |
+| 214 | Patria Parrilla | Parrillada / asados | Instagram @patriaparrilla (canal propio, sin grandes plataformas detectadas) | HOY fondas activas + mañana 18 = peak MÁXIMO del año para parrillas; $500 fijo vs. comisión porcentual |
 
 ---
 
 ## Contexto operativo
 
-- **SSW Partners:** 62 días sin comunicados a afiliados PedidosYa — argumento FNE más potente de todo H2 2026 para #27, #28, #30, #33, #60, #90, #102
-- **Fiestas Patrias:** EN 2 DÍAS (18/09) — hoy martes 16 es el ÚLTIMO DÍA HÁBIL real antes del feriado
+- **SSW Partners:** 63 días sin comunicados a afiliados PedidosYa — argumento FNE más potente de todo H2 2026 para #27, #28, #30, #33, #60, #90, #102
+- **17 de septiembre:** fondas activas HOY; mañana 18 es el mayor peak del año para todos los rubros del pipeline
 - **Rappi Turbo:** confirmado en Quilpué, sin confirmación en Villa Alemana — ventana de posicionamiento local abierta
-- **Cuello de botella crítico:** 133 días sin confirmación de Matías sobre qué mensajes se enviaron — el pipeline no puede avanzar estados sin ese feedback
-- **#22 Sushi Point Delivery y #15 Melt Pizzas:** 83 días consecutivos con borradores activos sin confirmación de envío
+- **Cuello de botella crítico:** 134 días sin confirmación de Matías sobre qué mensajes se enviaron — el pipeline no puede avanzar estados sin ese feedback
+- **#22 Sushi Point Delivery y #15 Melt Pizzas:** 84 días consecutivos con borradores activos sin confirmación de envío
 
 ---
 
 ## Para el Gerente
 
-**Estado:** 212 prospectos (198 Nuevos, 14 Contactados, 0 Registrados). HOY MARTES 16 ES EL ÚLTIMO DÍA HÁBIL REAL ANTES DE FIESTAS PATRIAS. 10 borradores listos: 7 seguimientos urgentes "FP en 2 días" para los Contactados con borradores de 2 días (#1 #3 #5 #6 #7 #11 #14), 1 refresh FNE/SSW para #27 Tribeca Sushi (SSW 62 días en silencio + argumento fusión Uber), y 2 presentaciones para los nuevos prospectos de canal propio (@almuerzosv.a y momentoconamor.cl). Matías debe enviar TODOS los borradores HOY — mañana 17 los negocios ya estarán en preparación del 18 y la ventana de contacto se cierra.
+**Estado:** 214 prospectos (200 Nuevos, 14 Contactados, 0 Registrados). HOY ES EL 17 DE SEPTIEMBRE — LAS FONDAS YA ARRANCARON Y MAÑANA ES EL 18. 10 borradores listos: 7 seguimientos urgentes para los Contactados del grupo B (#2 #4 #8 #9 #10 #12 #13 con fondas activas + mañana el 18), 1 refresh FNE/SSW para #30 Poh Che Empanadas (63 días silencio SSW, doble comisión, empanadas peak MÁXIMO del 18), y 2 presentaciones para parrilladas nuevas encontradas hoy (#213 Parrillada El Alemán y #214 Patria Parrilla). Dato validado: empanadas +229% demanda en Fiestas Patrias según Uber Eats. Matías debe enviar TODOS los borradores HOY — la semana patria ya empezó.

@@ -1,22 +1,22 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-16
+**Actualizado:** 2026-09-17
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — completo y churrasco = platos del 18, almuerzo familiar desde casa, $500 fijo vs. $2.240+ con Rappi, ÚLTIMO DÍA HÁBIL REAL |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — pollo asado = EL plato del 18, peak MÁXIMO del año a 3 días, ahorro ~$600K/mes vs. Rappi ($2.700 por pollo $9K vs. $500 fijo), ACTIVAR HOY |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / LAS FONDAS ARRANCARON / MAÑANA EL 18" redactado 17/09 — pollo asado = EL plato del 18, fondas ya activas HOY, ahorro ~$600K/mes vs. Rappi ($2.700 por pollo $9K vs. $500 fijo), ACTIVAR HOY |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — asados del 18 = peak anual paracetamol/omeprazol/ibuprofeno a domicilio, $500 fijo sin porcentaje, ÚLTIMO DÍA HÁBIL REAL |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — peak pizza familiar semana 18-22 sept, ahorro ~$990K/mes vs. Rappi ($2.800/pedido), algoritmo entierra sin publicidad paga, 3 días al peak MÁXIMO |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / LAS FONDAS ARRANCARON / MAÑANA EL 18" redactado 17/09 — peak pizza familiar semana 17-20 sept, ahorro ~$990K/mes vs. Rappi ($2.800/pedido), fondas activas HOY |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — tabla sushi reunión $18K-$20K = $5.040-$5.600 comisión Rappi vs. $500 fijo, fin de semana 18-21 = ahorro $23K-$28K, ÚLTIMO DÍA HÁBIL REAL |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS — PEAK MÁXIMO BEBIDAS" redactado 16/09 — chicha/vino/cerveza asados del 18 = MAYOR PEAK del año botillerías, caja vino $15K = $4.500 Rappi vs. $500 fijo, ÚLTIMO DÍA HÁBIL REAL |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — snacks/bebidas/insumos asados del 18 = peak MÁXIMO minimarket del año, $500 fijo vs. porcentual, ÚLTIMO DÍA HÁBIL REAL |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — tortas para asados/ramadas del 18 = peak MÁXIMO encargos del año, Rappi Turbo Quilpué urgencia directa, 3 días al rush MÁXIMO |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — peak MÁXIMO rotisería (costillar/vacío/pollo/chorizo del 18), 3 días al rush más grande del año, activar HOY |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — once del 18 = peak MÁXIMO café familiar del año, 3 días, activar HOY para capturar el rush |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / MAÑANA EL 18" redactado 17/09 — tortas para el asado del 18 = peak MÁXIMO encargos del año, fondas arrancaron HOY, Rappi Turbo Quilpué urgencia |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / LAS FONDAS YA ARRANCARON / MAÑANA EL 18" redactado 17/09 — costillar/vacío/pollo/chorizo = peak MÁXIMO rotisería del año, rush HOY y mañana 18 |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / ONCE DEL 17 Y 18" redactado 17/09 — onces y scones del 17 + once del 18 = peak MÁXIMO café familiar del año, activar HOY |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — fuegos artificiales/ramadas del 18-21 = peak anual calmantes mascotas, $500 fijo, ÚLTIMO DÍA HÁBIL REAL |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — útiles decoraciones/disfraces urgentes del 18, diferenciador único: ninguna librería en Rappi/Uber Eats VA, 3 días al peak |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Lunes 15 de septiembre / Fiestas Patrias EN 3 DÍAS" redactado 15/09 — rush materiales ramada (clavos/pintura/luminarias del 18), clientes piden sin salir, $500 fijo ideal ferreterías, 3 días al peak |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / SEMANA PATRIA" redactado 17/09 — útiles urgentes decoraciones/disfraces semana patria, piden HOY, diferenciador único ninguna librería en Rappi/Uber Eats VA |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / RUSH RAMADAS HOY" redactado 17/09 — clavos/pintura/luminarias para ramadas del 17, clientes piden HOY sin salir, $500 fijo ideal ferreterías |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS + inicio temporada helados" redactado 16/09 — helados reuniones del 18-21 + primavera activa = doble peak, canal listo hoy garantiza rush oct-dic, $500 fijo vs. 28-30% Rappi |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -33,7 +33,7 @@
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (62 días silencio) + FP EN 2 DÍAS redactado 16/09 — PedidosYa multada US$35M 2026 + Uber compra empresa madre, SSW 62 días sin comunicar contrato 2027, tablas sushi reunión del 18 = $5.000+ comisión vs. $500 fijo |
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — PedidosYa US$35M multas 2026, SSW 61 días en silencio sin comunicar contrato 2027, FP en 3 días = AHORA O NUNCA este año |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
-| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | Seguimiento urgente FNE/SSW + Fiestas Patrias 6 días redactado 12/09 — en PedidosYa + Uber Eats doble comisión; PedidosYa US$35M multas 2026, SSW 59 días en silencio; empanadas = peak MÁXIMO del 18 sept; tel. +56 32 324 2360 |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | "Seguimiento FNE/SSW (63 días silencio) + FONDAS HOY / MAÑANA EL 18" redactado 17/09 — en PedidosYa + Uber Eats doble comisión; empanadas = PEAK MÁXIMO del 18; SSW 63 días silencio + Uber compra Delivery Hero; tel. +56 32 324 2360 |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — 20 años de trayectoria merecen partner con certeza real; PedidosYa US$35M multas, SSW 61 días en silencio; FP en 3 días = tortas+pizzas+empanadas = PEAK MÁXIMO del año |
@@ -216,10 +216,70 @@
 | 210 | Pescadería M&M | Pescadería / mariscos frescos | Quilpué (Facebook @Pescaderia-MM) | Nuevo | — | Presentación redactada 15/09 — pescadería con delivery propio en Quilpué, FP en 3 días = peak MÁXIMO mariscos del año, Rappi Turbo urgencia directa en Quilpué, argumento $500 fijo vs. porcentual |
 | 211 | Almuerzos Villa Alemana | Comida casera / almuerzos delivery | Villa Alemana (Instagram @almuerzosv.a) | Nuevo | — | Presentación redactada 16/09 — canal propio por Instagram sin grandes plataformas, comida casera = EL plato del 18 sept, FP en 2 días = peak almuerzos familiares, $500 fijo sin comisión sobre venta |
 | 212 | Momento Con Amor | Desayunos a domicilio | Quilpué / Villa Alemana / Peñablanca (momentoconamor.cl, WhatsApp +56 9 87745980) | Nuevo | — | Presentación redactada 16/09 — canal propio sin grandes plataformas, onces y desayunos del 18 = peak máximo del rubro, FP en 2 días = ventana de captación, $500 fijo por entrega |
+| 213 | Parrillada El Alemán | Parrillada / restaurante | Villa Alemana (@parrillada.elaleman, Instagram, tel. 094501767) | Nuevo | — | Presentación redactada 17/09 — parrillada y restaurante Mar-Dom, canal propio Instagram, FONDAS HOY + MAÑANA EL 18 = peak MÁXIMO asados del año, sin grandes plataformas detectadas, $500 fijo vs. ~$8.400/pedido parrillada $30K en Rappi |
+| 214 | Patria Parrilla | Parrillada / asados | Villa Alemana / zona (@patriaparrilla, Instagram) | Nuevo | — | Presentación redactada 17/09 — parrilla canal propio Instagram, sin grandes plataformas detectadas, HOY FONDAS + MAÑANA 18 = peak MÁXIMO parrilladas del año, argumento $500 fijo vs. comisión porcentual |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-09-17)
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 17 de septiembre — LAS FONDAS YA ARRANCARON** y mañana es el **18 de septiembre**, el mayor peak del año. **10 mensajes:** 7 seguimientos a Contactados con borradores de 2 días (#2, #4, #8, #9, #10, #12, #13), 1 FNE/SSW urgente para #30 Poh Che Empanadas (63 días silencio SSW + empanadas peak MÁXIMO), y 2 presentaciones para nuevos prospectos de parrillada (#213 Parrillada El Alemán, #214 Patria Parrilla). Pipeline total: **214 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **84 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) SSW Partners **63 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **HOY ES EL 17 / FONDAS ACTIVAS / MAÑANA EL 18** — la mayor ventana del año ya está aquí. **Actualizado:** 2026-09-17.
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento 17/09 / Las Fondas Arrancaron / MAÑANA EL 18:**
+"Hola! De RepartoJusto nuevamente. Hoy 17 de septiembre las fondas ya arrancaron — y mañana es el 18. El pollo asado ES el plato del día. Un pollo de $9.000 genera $2.700 de comisión en Rappi; con nosotros son $500 fijos por pedido. El rush de hoy y mañana es el mayor del año para una pollería. ¿Activamos el canal? repartojusto-production.up.railway.app"
+
+---
+
+**[4] Pizza House — Seguimiento 17/09 / Las Fondas Arrancaron / MAÑANA EL 18:**
+"Hola! De RepartoJusto nuevamente. Las fondas arrancaron hoy y mañana es el 18 — las familias piden pizza durante toda la semana patria (17, 18, 19, 20). Con Rappi pagan ~$2.800 de comisión por pizza de $9.000, más el algoritmo entierra sin publicidad paga. Con nosotros son $500 fijos. El mayor peak del año ya está aquí. ¿Lo activamos? repartojusto-production.up.railway.app"
+
+---
+
+**[8] Pastelería Dulce Hogar — Seguimiento 17/09 / Fondas Activas / MAÑANA EL 18:**
+"Hola! Soy Matías de RepartoJusto. Las fondas arrancaron hoy — tortas para el asado del 18, brazo de reina y postres familiares: el mayor peak del año para pastelerías ya empezó. Con Rappi, una torta de $20.000 genera $6.000 de comisión; con nosotros son $500 fijos. Rappi Turbo ya en Quilpué — canal propio a tarifa fija es la respuesta. ¿Lo activamos? repartojusto-production.up.railway.app"
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento 17/09 / Fondas Arrancaron:**
+"Hola! De RepartoJusto nuevamente. Las fondas del 17 ya están activas y mañana es el 18 — el peak MÁXIMO del año para una rotisería: costillar, vacío, pollo y chorizos para el asado. La gente los encarga hoy y mañana. Con nosotros son $500 fijos por entrega, sin porcentaje. ¿Trabajamos juntos esta semana patria? repartojusto-production.up.railway.app"
+
+---
+
+**[10] Café El Árbol — Seguimiento 17/09 / Once del 17 y del 18:**
+"Hola! De RepartoJusto nuevamente. Hoy 17 las familias ya están reunidas — onces, scones, kuchen y empanadas para la tarde del 17 y el desayuno del 18 son el peak MÁXIMO del año para los cafés. Con nosotros son $500 fijos por entrega, sin porcentaje. ¿Activamos el canal para la semana patria? repartojusto-production.up.railway.app"
+
+---
+
+**[12] Librería El Saber — Seguimiento 17/09 / Semana Patria:**
+"Hola! Seguimos de RepartoJusto. Las fondas del 17 ya están activas — escolares y familias buscan útiles urgentes para decoraciones y disfraces del 18. El delivery de librería captura esos pedidos de último momento. Con nosotros son $500 fijos, sin porcentaje. Diferenciador único en Villa Alemana: ninguna otra librería está en Rappi ni Uber Eats. ¿Activamos? repartojusto-production.up.railway.app"
+
+---
+
+**[13] Ferretería Los Maestros — Seguimiento 17/09 / Rush Ramadas HOY:**
+"Hola! De RepartoJusto nuevamente. Las fondas del 17 ya arrancaron — clavos, pintura, luminarias y materiales de ramada: la gente los necesita HOY. El delivery de ferretería para el rush del 17-18 tiene alta demanda urgente. Con nosotros son $500 fijos por pedido, sin porcentaje. ¿Activamos el canal hoy? repartojusto-production.up.railway.app"
+
+---
+
+**[30] Poh Che Empanadas — FNE/SSW 63 días + FONDAS HOY / MAÑANA EL 18:**
+"Hola! Soy Matías de RepartoJusto. PedidosYa fue multada dos veces en 2026 ($35M USD), sigue en juicio negando los cargos, y SSW Partners llevan 63 días en silencio sin decirles qué pasa con su contrato en 2027. Además están en Uber Eats Y PedidosYa pagando comisión doble. Con las empanadas como el plato número 1 del 18 — y las fondas activas HOY — con nosotros son $500 fijos por entrega, sin porcentaje. ¿Sumamos el canal para el rush? repartojusto-production.up.railway.app"
+
+---
+
+**[213] Parrillada El Alemán — Presentación (nuevo prospecto, parrillada VA):**
+"Hola! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Vi que hacen parrillada y restaurante con delivery (@parrillada.elaleman) — hoy 17 de septiembre las fondas ya arrancaron y mañana es el 18: el asado y la parrillada son el pedido número 1 del año en estas fechas. Con RepartoJusto la entrega cuesta $500 fijo por pedido, sin comisión sobre la venta. Para una parrillada de $30.000, el ahorro contra el 28% de Rappi es de $7.900 por entrega. Registro gratuito, sin contrato. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[214] Patria Parrilla — Presentación (nuevo prospecto, parrilla VA):**
+"Hola! Somos RepartoJusto, plataforma de delivery sin comisiones por venta en Villa Alemana. Encontramos su parrilla (@patriaparrilla) — hoy 17 las fondas ya están activas y mañana es el 18 de septiembre: el peak MÁXIMO del año para parrilladas y asados. Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre la venta. Sin contrato, registro gratuito. ¿Lo activamos para el rush de esta semana? repartojusto-production.up.railway.app"
 
 ---
 
