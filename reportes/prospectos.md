@@ -1,18 +1,18 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-17
+**Actualizado:** 2026-09-18
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — completo y churrasco = platos del 18, almuerzo familiar desde casa, $500 fijo vs. $2.240+ con Rappi, ÚLTIMO DÍA HÁBIL REAL |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / LAS FONDAS ARRANCARON / MAÑANA EL 18" redactado 17/09 — pollo asado = EL plato del 18, fondas ya activas HOY, ahorro ~$600K/mes vs. Rappi ($2.700 por pollo $9K vs. $500 fijo), ACTIVAR HOY |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / ¿Cuánto quedó después de comisiones?" redactado 18/09 — pollo asado EL plato del 18 = mayor peak del año; con 30 pollos a $9K por Rappi, la diferencia vs. $500 fijo es $60.000 en un solo día (~$600K/mes); activar para octubre |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — asados del 18 = peak anual paracetamol/omeprazol/ibuprofeno a domicilio, $500 fijo sin porcentaje, ÚLTIMO DÍA HÁBIL REAL |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / LAS FONDAS ARRANCARON / MAÑANA EL 18" redactado 17/09 — peak pizza familiar semana 17-20 sept, ahorro ~$990K/mes vs. Rappi ($2.800/pedido), fondas activas HOY |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — tabla sushi reunión $18K-$20K = $5.040-$5.600 comisión Rappi vs. $500 fijo, fin de semana 18-21 = ahorro $23K-$28K, ÚLTIMO DÍA HÁBIL REAL |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS — PEAK MÁXIMO BEBIDAS" redactado 16/09 — chicha/vino/cerveza asados del 18 = MAYOR PEAK del año botillerías, caja vino $15K = $4.500 Rappi vs. $500 fijo, ÚLTIMO DÍA HÁBIL REAL |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / ¿Cuánto quedó de las bebidas del 18?" redactado 18/09 — el 18 es EL día de las botillerías; cada caja de vino $15K por Rappi = $10.500 para el negocio, con RepartoJusto = $14.500; suma para el verano |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — snacks/bebidas/insumos asados del 18 = peak MÁXIMO minimarket del año, $500 fijo vs. porcentual, ÚLTIMO DÍA HÁBIL REAL |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / MAÑANA EL 18" redactado 17/09 — tortas para el asado del 18 = peak MÁXIMO encargos del año, fondas arrancaron HOY, Rappi Turbo Quilpué urgencia |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / LAS FONDAS YA ARRANCARON / MAÑANA EL 18" redactado 17/09 — costillar/vacío/pollo/chorizo = peak MÁXIMO rotisería del año, rush HOY y mañana 18 |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / El 18 ya pasó — ¿cuánto quedó?" redactado 18/09 — costillar/vacío/pollo del 18 = mayor peak del año; con 20 pedidos a $8K en Rappi: $44K de comisión vs. $10K con RepartoJusto; $34K diferencia EN UN DÍA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / ONCE DEL 17 Y 18" redactado 17/09 — onces y scones del 17 + once del 18 = peak MÁXIMO café familiar del año, activar HOY |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — fuegos artificiales/ramadas del 18-21 = peak anual calmantes mascotas, $500 fijo, ÚLTIMO DÍA HÁBIL REAL |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / SEMANA PATRIA" redactado 17/09 — útiles urgentes decoraciones/disfraces semana patria, piden HOY, diferenciador único ninguna librería en Rappi/Uber Eats VA |
@@ -33,7 +33,7 @@
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (62 días silencio) + FP EN 2 DÍAS redactado 16/09 — PedidosYa multada US$35M 2026 + Uber compra empresa madre, SSW 62 días sin comunicar contrato 2027, tablas sushi reunión del 18 = $5.000+ comisión vs. $500 fijo |
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — PedidosYa US$35M multas 2026, SSW 61 días en silencio sin comunicar contrato 2027, FP en 3 días = AHORA O NUNCA este año |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
-| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | "Seguimiento FNE/SSW (63 días silencio) + FONDAS HOY / MAÑANA EL 18" redactado 17/09 — en PedidosYa + Uber Eats doble comisión; empanadas = PEAK MÁXIMO del 18; SSW 63 días silencio + Uber compra Delivery Hero; tel. +56 32 324 2360 |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | "Post-18 + FNE/SSW (64 días silencio) / El 18 ya pasó — ¿cuánto quedó de las empanadas?" redactado 18/09 — en PedidosYa + Uber Eats doble comisión; empanadas = PEAK MÁXIMO del 18; PedidosYa US$35M multas; SSW 64 días sin comunicar contrato 2027; tel. +56 32 324 2360 |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — 20 años de trayectoria merecen partner con certeza real; PedidosYa US$35M multas, SSW 61 días en silencio; FP en 3 días = tortas+pizzas+empanadas = PEAK MÁXIMO del año |
@@ -63,7 +63,7 @@
 | 57 | Empanadas Belle | Empanadas | Londres 930, Villa Alemana | Nuevo | — | Presentación redactada 28/06 — en Rappi, peak julio empanadas, argumento tarifa fija vs. 28% |
 | 58 | Mevas Raíces | Empanadas | Villa Alemana (en Rappi) | Nuevo | — | Presentación redactada 28/06 — en Rappi, empanadas de especialidad, peak invernal julio |
 | 59 | Sandwichería Ñam Fuente de Soda | Sandwichería / fuente de soda | Av. Valparaíso 584, Villa Alemana | Nuevo | — | Presentación redactada 29/06 — local clásico VA, tel. (32) 2470466, peak completos en julio |
-| 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | Seguimiento FNE/SSW (60 días silencio) + Fiestas Patrias 4 días redactado 14/09 — sándwich = EL plato del 18, VENTANA CIERRA HOY, 72 reseñas, tel. (32) 311 9036 / WhatsApp +56 958528950 |
+| 60 | Master Sándwich Villa Alemana | Sandwichería / comida rápida | Av. Valparaíso 1112, Villa Alemana | Nuevo | — | "Post-18 + FNE/SSW (64 días silencio) / ¿Cuánto quedó de los sándwiches del 18?" redactado 18/09 — en PedidosYa; US$35M multas FNE; SSW 64 días sin comunicar contrato 2027; 72 reseñas; tel. (32) 311 9036 / WhatsApp +56 958528950 |
 | 61 | Pollo Campo Villa Alemana | Pollos a la parrilla | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, pollos asados peak julio invierno, ahorro ~$460K/mes |
 | 62 | El Señor De Los Completos | Comida chilena / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Presentación redactada 30/06 — en PedidosYa, argumento FNE/TDLC, completos peak julio, ahorro ~$580K/mes |
 | 63 | R Chengdu | Comida china | Villa Alemana (canal propio Instagram @rchengdu) | Nuevo | — | Presentación redactada 01/07 — sin grandes plataformas detectadas, canal directo propio, argumento logística local sin comisión |
@@ -218,6 +218,8 @@
 | 212 | Momento Con Amor | Desayunos a domicilio | Quilpué / Villa Alemana / Peñablanca (momentoconamor.cl, WhatsApp +56 9 87745980) | Nuevo | — | Presentación redactada 16/09 — canal propio sin grandes plataformas, onces y desayunos del 18 = peak máximo del rubro, FP en 2 días = ventana de captación, $500 fijo por entrega |
 | 213 | Parrillada El Alemán | Parrillada / restaurante | Villa Alemana (@parrillada.elaleman, Instagram, tel. 094501767) | Nuevo | — | Presentación redactada 17/09 — parrillada y restaurante Mar-Dom, canal propio Instagram, FONDAS HOY + MAÑANA EL 18 = peak MÁXIMO asados del año, sin grandes plataformas detectadas, $500 fijo vs. ~$8.400/pedido parrillada $30K en Rappi |
 | 214 | Patria Parrilla | Parrillada / asados | Villa Alemana / zona (@patriaparrilla, Instagram) | Nuevo | — | Presentación redactada 17/09 — parrilla canal propio Instagram, sin grandes plataformas detectadas, HOY FONDAS + MAÑANA 18 = peak MÁXIMO parrilladas del año, argumento $500 fijo vs. comisión porcentual |
+| 215 | Rincón De Las Masas Villa Alemana | Masas frescas / empanadas | San Enrique 1250 Local 1, Villa Alemana (@rinconvillaalemana) | Nuevo | — | Presentación redactada 18/09 — fábrica artesanal masas y empanadas, canal propio Instagram, sin grandes plataformas detectadas, post-18 = "¿cuánto quedaría de cada docena sin comisión?", $500 fijo por despacho |
+| 216 | Empanadas Empanallá | Empanadas caseras al horno | Villa Alemana (@empanadas_empanalla, Instagram) | Nuevo | — | Presentación redactada 18/09 — empanadas caseras delivery sábados y domingos por canal propio Instagram, sin grandes plataformas detectadas, post-18 = mejor momento del año para hablar de comisiones, $500 fijo por entrega |
 
 ---
 
@@ -225,11 +227,54 @@
 
 ---
 
+### MENSAJES DEL DÍA (2026-09-18) — FIESTAS PATRIAS / VENTANA POST-18
+
+> **NOTA PARA MATÍAS:** Hoy es el **18 de septiembre — Fiestas Patrias**. Los negocios están en su peak máximo y NO es momento de contactar. Estos borradores están listos para enviar el **lunes 22 de septiembre**, cuando los dueños hagan el balance del 18 y sientan el impacto de las comisiones. **6 mensajes:** 3 seguimientos post-18 "¿Cuánto quedó después de comisiones?" para Contactados de alto impacto (#2 Don Pollo, #6 Botillería El Copihue, #9 El Gaucho), 2 seguimientos post-18 + FNE/SSW para prospectos PedidosYa (#30 Poh Che Empanadas, #60 Master Sándwich — SSW Partners 64 días en silencio), y 2 presentaciones para nuevos prospectos de empanadas sin plataformas grandes (#215 Rincón De Las Masas, #216 Empanadas Empanallá). Pipeline total: **216 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **85 días consecutivos** con borradores activos sin confirmación de envío; (2) SSW Partners **64 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **LA SEMANA DEL 22-26/09 ES LA MAYOR VENTANA DE CONVERSIÓN DEL AÑO** — los negocios que acaban de pagar 34-36% de comisión en su día más grande van a querer escuchar. **Actualizado:** 2026-09-18.
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento Post-18 "¿Cuánto quedó?":**
+"Hola! Espero que el 18 haya sido un exitazo para la pollería 🥩 El pollo del 18 de septiembre es el plato más pedido del año en Chile. ¿Cuántos salieron por delivery? Les cuento lo que pasa con los números: con 30 pollos a $9.000 por Rappi, la plataforma se queda con ~$75.600 de comisión. Con RepartoJusto habrían sido 30 × $500 = $15.000. La diferencia en un solo día: $60.600 que se quedan en el negocio. En un mes con el ritmo normal, el ahorro es ~$600.000. Todavía están a tiempo de arrancar para el verano, la próxima temporada alta. Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[6] Botillería El Copihue — Seguimiento Post-18 "¿Cuánto quedó de las bebidas?":**
+"Hola! El 18 de septiembre es EL día de las botillerías — asados, fondas, ramadas... ¿Cuánto salió por delivery? Aquí va el número que duele: cada caja de vino a $15.000 que salió por Rappi les dejó $10.500 a ustedes. Con RepartoJusto les habría dejado $14.500. La diferencia por caja: $4.000. Si salieron 30 cajas en el feriado largo del 18: $120.000 de diferencia. Y eso se repite cada fin de semana de verano. Para el rush de diciembre/enero, el canal listo hoy marca la diferencia. Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento Post-18 "El 18 ya pasó — ¿cuánto quedó?":**
+"Hola! El costillar del 18 es el rey del delivery en Chile 🔥 ¿Cómo les fue? Ahora que el rush pasó, viene el momento de hacer el balance. Con 20 pedidos de $8.000 promedio en un día de feriado por Rappi (28%): $44.800 de comisión. Con RepartoJusto: 20 × $500 = $10.000. Diferencia: $34.800 en UN DÍA. En un mes normal (15 pedidos/día): la diferencia es ~$520.000. Todavía están a tiempo de arrancar para la temporada verano. Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[30] Poh Che Empanadas — Seguimiento Post-18 + FNE/SSW (64 días silencio):**
+"Hola! Fiestas Patrias + empanadas = el día más grande del año 🫓 Espero que hayan vendido MUCHÍSIMO hoy. Ahora la pregunta importante: ¿cuánto quedó después de las comisiones de PedidosYa y Uber Eats? Con 50 empanadas a $2.500 en PedidosYa — la plataforma que pagó $35 millones de dólares en multas en 2026 por controlarte los precios — se quedan con ~$35.000. Con RepartoJusto: $500 fijos. Mientras tanto SSW Partners (dueños de PedidosYa) llevan 64 días sin comunicarte qué pasa con tu contrato para 2027. Con nosotros son siempre $500 por pedido entregado, sin sorpresas, sin letra chica. Registro gratuito: repartojusto-production.up.railway.app / tel. +56 32 324 2360 — Equipo RepartoJusto"
+
+---
+
+**[60] Master Sándwich — Seguimiento Post-18 + FNE/SSW (64 días silencio):**
+"Hola Master Sándwich! El sándwich del 18 de septiembre es uno de los más pedidos del año en Chile 🥪 ¿Cómo les fue el feriado? Ahora que el rush pasó, hagan el balance: cada sándwich de $6.000 en PedidosYa les deja $4.320 a ustedes. Con RepartoJusto: $5.500. La plataforma que les cobra esa diferencia tiene US$35 millones en multas en 2026 por controlar los precios de sus afiliados, está en juicio ante el TDLC negando los cargos, y SSW Partners (su nueva dueña) lleva 64 días sin comunicarles qué pasa con el contrato para 2027. Con nosotros son $500 fijos, sin sorpresas. ¿Hablamos? repartojusto-production.up.railway.app / WhatsApp +56 958528950 — Equipo RepartoJusto"
+
+---
+
+**[215] Rincón De Las Masas Villa Alemana — Presentación:**
+"Hola @rinconvillaalemana! Somos RepartoJusto, plataforma de delivery local de Villa Alemana sin comisiones por venta. Vimos que fabrican masas frescas y empanadas artesanales — el 18 de septiembre debe haber sido el día más intenso del año para ustedes. Ahora la pregunta: ¿cuánto se quedan las plataformas de porcentaje (Rappi, PedidosYa) de cada docena de empanadas? Con nosotros pagan solo $500 fijo por pedido entregado, sin importar el monto. Con 20 despachos diarios, el ahorro puede superar $400.000 al mes. Somos locales en Villa Alemana y trabajamos en la zona — sus clientes quedan cubiertos. ¿Les interesa ver cómo funciona? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[216] Empanadas Empanallá — Presentación:**
+"Hola @empanadas_empanalla! Somos RepartoJusto, plataforma de delivery en Villa Alemana que cobra solo $500 fijo por pedido entregado — sin porcentaje sobre el precio de venta. Para empanadas caseras al horno, el modelo es ideal: el precio que pongas es tuyo completo, salvo $500 por la logística. Las plataformas grandes como Rappi o PedidosYa cobran 28-30% de cada venta — con 30 empanadas a $2.000, eso son $16.800 de comisión vs. $500 con nosotros. El 18 de septiembre ya pasó y es el mejor momento del año para hacer ese cálculo. ¿Les interesa conocer más? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
 ### MENSAJES DEL DÍA (2026-09-17)
 
 > **NOTA PARA MATÍAS:** Hoy es **miércoles 17 de septiembre — LAS FONDAS YA ARRANCARON** y mañana es el **18 de septiembre**, el mayor peak del año. **10 mensajes:** 7 seguimientos a Contactados con borradores de 2 días (#2, #4, #8, #9, #10, #12, #13), 1 FNE/SSW urgente para #30 Poh Che Empanadas (63 días silencio SSW + empanadas peak MÁXIMO), y 2 presentaciones para nuevos prospectos de parrillada (#213 Parrillada El Alemán, #214 Patria Parrilla). Pipeline total: **214 prospectos**.
 
-> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **84 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) SSW Partners **63 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **HOY ES EL 17 / FONDAS ACTIVAS / MAÑANA EL 18** — la mayor ventana del año ya está aquí. **Actualizado:** 2026-09-17.
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **84 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) SSW Partners **63 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **HOY ES EL 17 / FONDAS ACTIVAS / MAÑANA EL 18** — la mayor ventana del año ya está aquí. **Actualizado:** 2026-09-18.
 
 ---
 
@@ -4184,3 +4229,7 @@ Con primavera en 7 días, es el momento ideal para configurar el canal antes del
 **Puerto Ensenada (#209, agregado 15/09):** Mariscos y productos del mar gourmet activo en Uber Eats en Villa Alemana. Instagram/web: @puertoensenada.cl. Delivery activo confirmado en Uber Eats VA. Rubro: mariscos gourmet (caldillos, ceviches, productos del mar). Ticket promedio estimado: $8.000-$18.000 (plato de mariscos + bebida). Uber Eats cobra 30% de comisión — para un plato de $12.000, el ahorro con RepartoJusto es $3.100 por pedido. ARGUMENTO CLAVE: Fiestas Patrias = peak MÁXIMO del año para mariscos en Chile (caldillo de congrio, ceviche, machas a la parmesana son platos típicos del 18 de septiembre); en los días 17-19 de septiembre la demanda de mariscos se multiplica — el primer contacto llega en el momento exacto del peak del año para su rubro. SSW Partners 61 días en silencio no aplica directamente (están en Uber Eats), pero el argumento de comisión fija vs. 30% Uber Eats es directo. Fuente: búsqueda delivery mariscos Villa Alemana Uber Eats septiembre 2026.
 
 **Pescadería M&M (#210, agregado 15/09):** Pescadería con delivery propio en Quilpué. Facebook: @Pescaderia-MM. Canal propio activo en Facebook, sin grandes plataformas detectadas. Producto: pescados y mariscos frescos a domicilio. Ticket promedio estimado: $6.000-$15.000 (compra de pescados/mariscos). ARGUMENTO CLAVE: Fiestas Patrias = mayor peak del año para pescaderías con delivery — la demanda de mariscos y pescados frescos para el 18 de septiembre es la más alta del año; canal propio Facebook ya activo — RepartoJusto complementa con logística local a $500 fijo sin porcentaje de venta. RAPPI TURBO URGENCIA DIRECTA: Rappi Turbo ya activo en Quilpué — cuando los riders de Rappi migren a Turbo, los negocios sin plataforma propia perderán cobertura; RepartoJusto es el canal local que no depende de plataformas externas. Para una venta de $10.000, el ahorro vs. plataforma de porcentaje (28%): $2.300 por entrega. Fuente: búsqueda delivery pescadería Quilpué Facebook septiembre 2026.
+
+**Rincón De Las Masas Villa Alemana (#215, agregado 18/09):** Fábrica artesanal de masas frescas y empanadas en Villa Alemana. Dirección: Calle San Enrique #1250 Local 1, Villa Alemana. Canal propio en Instagram (@rinconvillaalemana). Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Producto: masas frescas, empanadas artesanales, posible venta al detalle y por mayor para eventos. Ticket promedio estimado: $4.000-$15.000 (por unidad o docena). Argumento principal: Fiestas Patrias ya pasó — el 18 de septiembre es el peak MÁXIMO de empanadas del año; los fabricantes artesanales sin plataformas que entregaron hoy manualmente tienen en RepartoJusto la solución de logística a $500 fijo, sin porcentaje sobre el precio de venta. Ventana post-18 = el mejor momento del año para el argumento "¿cuánto quedaría de cada docena si el delivery costara $500 en vez de un porcentaje?". Fuente: instagram.com/rinconvillaalemana + búsqueda masas empanadas delivery Villa Alemana septiembre 2026.
+
+**Empanadas Empanallá (#216, agregado 18/09):** Empanadaría casera con empanadas al horno, delivery los sábados y domingos. Canal propio en Instagram (@empanadas_empanalla). Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Modelo de negocio: delivery directa por canal propio los fines de semana. Producto: empanadas caseras al horno, posiblemente de pino, queso, pino-queso y variedades. Ticket promedio estimado: $2.000-$4.000 por empanada (o docena $15.000-$25.000). Argumento principal: al no estar en plataformas grandes, RepartoJusto complementa su canal propio con logística profesional a $500 fijo — más cobertura, misma independencia de comisiones por venta. Post-18 = mayor peak del año para empanadas caseras recién pasó, es el momento exacto para que el negocio considere escalar con logística local fija. Fuente: instagram.com/empanadas_empanalla + búsqueda empanadas delivery Instagram Villa Alemana septiembre 2026.
