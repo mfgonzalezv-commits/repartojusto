@@ -1,40 +1,57 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-09-18 (Fiestas Patrias)
-**Pipeline total:** 216 prospectos
-**Por estado:** Nuevos: 202 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-09-19 (sábado — día después de Fiestas Patrias)
+**Pipeline total:** 218 prospectos
+**Por estado:** Nuevos: 204 | Contactados: 14 | Interesados: 0 | Registrados: 0
+
+---
 
 ## Acciones del día
 
-Hoy es el 18 de septiembre — Fiestas Patrias. Los negocios están en su peak máximo del año y NO es el momento de contactarlos. La acción de hoy fue preparar los borradores de la ventana más poderosa del año: **post-Fiestas Patrias (22-26/09)**, cuando los dueños hagan el balance del 18 y sientan el impacto real de las comisiones.
+### Argumentos activos (de cola.md e investigador.md)
+- **POST-FIESTAS PATRIAS (22-26/09) = MAYOR VENTANA DE CONVERSIÓN DEL AÑO**: los negocios acaban de pagar 34-36% de comisión en su día pico — el argumento "¿cuánto quedó?" jamás será más potente que esta semana
+- **SSW Partners 65 días en silencio**: para los 9 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102, #203, #54) — "Multas US$35M 2026, en juicio negando los cargos, SSW 65 días sin decirte qué pasa con tu contrato — con nosotros $500 fijo siempre"
+- **Primavera activa**: temporada alta octubre-diciembre arranca — heladerías, suhi y canal propio son los rubros más sensibles
+- **URL Rappi/Quilpué**: `rappi.cl/quilpue/.../65850-barrio-chino-villa-alemana` — demostración en 10 segundos para cualquier negocio VA en Rappi
 
-**Argumento central incorporado** (del Investigador 17/09): "¿cuánto quedó después de comisiones el 18?" — los negocios que acaban de vivir su día más grande del año pagando 34-36% de comisión están en el momento más receptivo del año para escuchar la propuesta de $500 fijo.
+### Contactados actualizados (follow-up post-18 para 6 prospectos con drafts del 16/09)
+- **#1 Fuente de Soda El Rápido** — "Post-18 / ¿Cuánto quedó de los completos?" — $31K diferencia en un solo día
+- **#3 Farmacia Cruz Verde** — "Post-18 / Peak medicamentos del día después" — sucursal local, autonomía para delivery
+- **#5 Sushi Zen** — "Post-18 / Fin de semana largo + primavera" — $5.100 ahorro por mesa; temporada oct-dic activa
+- **#7 Minimercado La Esquina** — "Post-18 / Fin de semana largo sigue el consumo" — $675K diferencia mensual
+- **#11 Veterinaria Huellitas** — "Post-18 / Peak estrés mascotas fuegos artificiales" — demanda activa HOY sábado 19
+- **#14 Heladería Glacial** — "Post-18 / Temporada alta helados empieza HOY" — ventaja para diciembre
 
-**Argumentos FNE/SSW actualizados:** SSW Partners ahora lleva **64 días en silencio** sin comunicar cambios a afiliados PedidosYa. Incorporado en mensajes para los prospectos en PedidosYa (#30, #60).
+### Nuevos prospectos agregados (2)
+- **#217 Leóne Trattoria** (@leonetrattoriaoficial, Instagram) — Trattoria italiana, Villa Alemana, sin grandes plataformas detectadas, ticket $15K-$25K, ahorro $4.200-$7.000 por pedido vs. Rappi
+- **#218 Bien Taypa Restaurant** (@bientayparestaurant, Facebook) — Restaurante en Villa Alemana, sin grandes plataformas detectadas, argumento post-18 "¿cuánto quedó?"
 
-**6 borradores redactados para envío el lunes 22/09:**
-- Seguimientos post-18 "¿Cuánto quedó?" para #2 Don Pollo, #6 Botillería El Copihue, #9 El Gaucho (Contactados — día más grande del año para sus rubros)
-- Seguimientos post-18 + FNE/SSW para #30 Poh Che Empanadas y #60 Master Sándwich (prospectos PedidosYa — argumento triple: comisión peak + multas FNE + silencio SSW 64 días)
-- Presentaciones para 2 nuevos prospectos sin plataformas grandes: #215 Rincón De Las Masas y #216 Empanadas Empanallá
+---
 
 ## Borradores listos para Matías
+**8 mensajes redactados hoy en prospectos.md sección "MENSAJES DEL DÍA (2026-09-19)":**
 
-**PRIORIDAD: ENVIAR EL LUNES 22/09** — Es la ventana de conversión más potente del año. Los negocios acaban de vivir el 18 de septiembre y están contando lo que quedó después de las comisiones.
+| # | Negocio | Tipo de mensaje | Canal |
+|---|---|---|---|
+| 1 | Fuente de Soda El Rápido | Seguimiento post-18 — cálculo completos $31K diferencia | WhatsApp/DM |
+| 3 | Farmacia Cruz Verde | Seguimiento post-18 — peak medicamentos día después | WhatsApp/DM |
+| 5 | Sushi Zen | Seguimiento post-18 — fin de semana largo + temporada primavera | WhatsApp/DM |
+| 7 | Minimercado La Esquina | Seguimiento post-18 — fin de semana patrio aún activo | WhatsApp/DM |
+| 11 | Veterinaria Huellitas | Seguimiento post-18 — peak estrés mascotas fuegos artificiales | WhatsApp/DM |
+| 14 | Heladería Glacial | Seguimiento post-18 — temporada alta helados empieza HOY | WhatsApp/DM |
+| 217 | Leóne Trattoria | Presentación — trattoria italiana sin plataformas, ahorro alto | Instagram DM |
+| 218 | Bien Taypa Restaurant | Presentación — restaurante VA, argumento post-18 | Facebook Messenger |
 
-1. **#2 Pollería Don Pollo** — "Post-18 / ¿Cuánto quedó?" — cálculo concreto: 30 pollos a $9K = $60.600 diferencia en UN DÍA
-2. **#6 Botillería El Copihue** — "Post-18 / ¿Cuánto quedó de las bebidas?" — cálculo: 30 cajas vino = $120.000 diferencia en feriado largo
-3. **#9 Rotisería El Gaucho** — "Post-18 / El 18 ya pasó — ¿cuánto quedó?" — cálculo: 20 pedidos = $34.800 diferencia en UN DÍA
-4. **#30 Poh Che Empanadas** — Post-18 + FNE/SSW 64 días silencio (en PedidosYa + Uber Eats, tel. +56 32 324 2360)
-5. **#60 Master Sándwich** — Post-18 + FNE/SSW 64 días silencio (en PedidosYa, WhatsApp +56 958528950)
-6. **#215 Rincón De Las Masas** — Presentación (@rinconvillaalemana, empanadas artesanales sin plataformas)
-7. **#216 Empanadas Empanallá** — Presentación (@empanadas_empanalla, delivery fin de semana sin plataformas)
+> **PRIORIDAD DE ENVÍO:** Lunes 22/09 cuando los dueños hagan el balance de ventas del 18. Es la ventana más poderosa del año.
 
-**PENDIENTE CRÍTICO:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **85 días consecutivos** con borradores activos sin confirmación de envío de Matías.
+---
 
-## Nuevos prospectos agregados
+## Alertas críticas pendientes
+1. **#22 Sushi Point Delivery** (tel. (32) 324 0504) — **86 días** consecutivos con borradores activos sin confirmación de envío
+2. **#15 Melt Pizzas** — **86 días** consecutivos con borradores activos sin confirmación de envío
+3. **SSW Partners 65 días en silencio** — ventana de argumento PedidosYa sigue siendo la más potente del H2
+4. **136 días sin confirmación** de qué mensajes envió Matías — sin este feedback no se pueden actualizar estados del pipeline
 
-1. **#215 Rincón De Las Masas Villa Alemana** | Masas frescas / empanadas | San Enrique 1250 Local 1, VA | Instagram: @rinconvillaalemana | Sin grandes plataformas | Argumento: post-18 + $500 fijo por despacho vs. porcentual
-2. **#216 Empanadas Empanallá** | Empanadas caseras al horno | Villa Alemana | Instagram: @empanadas_empanalla | Delivery sáb/dom canal propio | Argumento: post-18 + logística local $500 fijo sin comisión
+---
 
 ## Para el Gerente
-
-Pipeline en 216 prospectos (202 Nuevos, 14 Contactados, 0 Registrados); hoy es Fiestas Patrias — no se contactó a nadie; se redactaron 7 borradores listos para el lunes 22/09 con el argumento post-18 "¿cuánto quedó de comisiones?", la mayor ventana de conversión del año; se sumaron 2 nuevos prospectos de empanadas sin plataformas (#215 y #216); SSW Partners lleva 64 días en silencio; el cuello de botella crítico sigue siendo la confirmación de Matías sobre mensajes enviados (135 días sin actualización de estados del pipeline).
+Pipeline en 218 prospectos (204 Nuevos, 14 Contactados, 0 Registrados); 8 borradores post-18 redactados — 6 seguimientos "¿cuánto quedó después de comisiones?" para Contactados más la semana del 22-26/09 es la mayor ventana de conversión del año; 2 nuevos prospectos encontrados (#217 Leóne Trattoria italiana y #218 Bien Taypa Restaurant, ambos en VA sin grandes plataformas); borradores del lunes 22/09 listos; cuello de botella crítico: 136 días sin confirmación de Matías bloquea actualización de todos los estados del pipeline.

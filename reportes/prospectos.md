@@ -1,23 +1,23 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-18
+**Actualizado:** 2026-09-19
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — completo y churrasco = platos del 18, almuerzo familiar desde casa, $500 fijo vs. $2.240+ con Rappi, ÚLTIMO DÍA HÁBIL REAL |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / El 18 ya pasó — ¿cuánto quedó de los completos?" redactado 19/09 — completos y churrascos del 18 = el día más grande del año; 50 completos a $4K en Rappi = $56K comisión vs. $25K con RJ = $31K diferencia en un solo día; enviar lunes 22/09 |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / ¿Cuánto quedó después de comisiones?" redactado 18/09 — pollo asado EL plato del 18 = mayor peak del año; con 30 pollos a $9K por Rappi, la diferencia vs. $500 fijo es $60.000 en un solo día (~$600K/mes); activar para octubre |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — asados del 18 = peak anual paracetamol/omeprazol/ibuprofeno a domicilio, $500 fijo sin porcentaje, ÚLTIMO DÍA HÁBIL REAL |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Peak medicamentos del día después" redactado 19/09 — excesos del 18 = peak paracetamol/ibuprofeno/omeprazol a domicilio; sucursal local con autonomía para delivery $500 fijo vs. porcentaje; enviar lunes 22/09 |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / LAS FONDAS ARRANCARON / MAÑANA EL 18" redactado 17/09 — peak pizza familiar semana 17-20 sept, ahorro ~$990K/mes vs. Rappi ($2.800/pedido), fondas activas HOY |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — tabla sushi reunión $18K-$20K = $5.040-$5.600 comisión Rappi vs. $500 fijo, fin de semana 18-21 = ahorro $23K-$28K, ÚLTIMO DÍA HÁBIL REAL |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Fin de semana largo + primavera = sushi de celebración" redactado 19/09 — reuniones familiares extendidas 19-21 = sushi de celebración; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo = $5.100 ahorro por mesa; temporada alta oct-dic empieza; enviar lunes 22/09 |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / ¿Cuánto quedó de las bebidas del 18?" redactado 18/09 — el 18 es EL día de las botillerías; cada caja de vino $15K por Rappi = $10.500 para el negocio, con RepartoJusto = $14.500; suma para el verano |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — snacks/bebidas/insumos asados del 18 = peak MÁXIMO minimarket del año, $500 fijo vs. porcentual, ÚLTIMO DÍA HÁBIL REAL |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Fin de semana largo — sigue el consumo" redactado 19/09 — sábado 19-21 = fin de semana patrio aún activo; snacks/bebidas/reposición stock sigue; 25 pedidos/día $5K en Rappi = $35K comisión vs. $12.500 con RJ; enviar lunes 22/09 |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / MAÑANA EL 18" redactado 17/09 — tortas para el asado del 18 = peak MÁXIMO encargos del año, fondas arrancaron HOY, Rappi Turbo Quilpué urgencia |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / El 18 ya pasó — ¿cuánto quedó?" redactado 18/09 — costillar/vacío/pollo del 18 = mayor peak del año; con 20 pedidos a $8K en Rappi: $44K de comisión vs. $10K con RepartoJusto; $34K diferencia EN UN DÍA |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / ONCE DEL 17 Y 18" redactado 17/09 — onces y scones del 17 + once del 18 = peak MÁXIMO café familiar del año, activar HOY |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS" redactado 16/09 — fuegos artificiales/ramadas del 18-21 = peak anual calmantes mascotas, $500 fijo, ÚLTIMO DÍA HÁBIL REAL |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Peak estrés mascotas por fuegos artificiales" redactado 19/09 — fuegos artificiales 18-19-20 = peak MÁXIMO calmantes/ansiolíticos mascotas; sábado 19 demanda activa HOY; delivery veterinaria = servicio urgencia alto valor; $500 fijo vs. porcentual; enviar lunes 22/09 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / SEMANA PATRIA" redactado 17/09 — útiles urgentes decoraciones/disfraces semana patria, piden HOY, diferenciador único ninguna librería en Rappi/Uber Eats VA |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / RUSH RAMADAS HOY" redactado 17/09 — clavos/pintura/luminarias para ramadas del 17, clientes piden HOY sin salir, $500 fijo ideal ferreterías |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Martes 16 de septiembre / FP EN 2 DÍAS + inicio temporada helados" redactado 16/09 — helados reuniones del 18-21 + primavera activa = doble peak, canal listo hoy garantiza rush oct-dic, $500 fijo vs. 28-30% Rappi |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Temporada alta de helados empieza HOY" redactado 19/09 — primavera activa + fin de semana largo patrio = doble arranque temporada; oct-dic = peak helados; cada helado $3K en Rappi = $840 comisión vs. $500 RJ; canal listo hoy = ventaja diciembre; enviar lunes 22/09 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -220,6 +220,8 @@
 | 214 | Patria Parrilla | Parrillada / asados | Villa Alemana / zona (@patriaparrilla, Instagram) | Nuevo | — | Presentación redactada 17/09 — parrilla canal propio Instagram, sin grandes plataformas detectadas, HOY FONDAS + MAÑANA 18 = peak MÁXIMO parrilladas del año, argumento $500 fijo vs. comisión porcentual |
 | 215 | Rincón De Las Masas Villa Alemana | Masas frescas / empanadas | San Enrique 1250 Local 1, Villa Alemana (@rinconvillaalemana) | Nuevo | — | Presentación redactada 18/09 — fábrica artesanal masas y empanadas, canal propio Instagram, sin grandes plataformas detectadas, post-18 = "¿cuánto quedaría de cada docena sin comisión?", $500 fijo por despacho |
 | 216 | Empanadas Empanallá | Empanadas caseras al horno | Villa Alemana (@empanadas_empanalla, Instagram) | Nuevo | — | Presentación redactada 18/09 — empanadas caseras delivery sábados y domingos por canal propio Instagram, sin grandes plataformas detectadas, post-18 = mejor momento del año para hablar de comisiones, $500 fijo por entrega |
+| 217 | Leóne Trattoria | Restaurante italiano | Villa Alemana (@leonetrattoriaoficial, Instagram) | Nuevo | — | Presentación redactada 19/09 — trattoria italiana con canal propio Instagram, sin grandes plataformas detectadas, pasta artesanal ticket $15K-$25K = $4.200-$7.000 comisión Rappi vs. $500 fijo, post-18 = momento ideal para hacer el cálculo de lo que se va en comisiones |
+| 218 | Bien Taypa Restaurant | Restaurante / comida | Villa Alemana (Facebook @bientayparestaurant) | Nuevo | — | Presentación redactada 19/09 — restaurante en VA con canal Facebook, sin grandes plataformas detectadas, argumento post-18 "¿cuánto quedó después de comisiones?", $500 fijo por entrega vs. porcentual |
 
 ---
 
@@ -227,11 +229,59 @@
 
 ---
 
+### MENSAJES DEL DÍA (2026-09-19) — DÍA DESPUÉS DEL 18 / MAYOR VENTANA DE CONVERSIÓN DEL AÑO
+
+> **NOTA PARA MATÍAS:** Hoy es sábado **19 de septiembre** — el día después de Fiestas Patrias. Los dueños están haciendo el balance de su mayor día de ventas del año pagando 34-36% de comisión. Esta es la **mayor ventana de conversión del año**: activar el argumento "¿cuánto quedó después de comisiones?" el **lunes 22/09** cuando hagan el balance oficial. **8 mensajes:** 6 seguimientos post-18 para Contactados que tenían drafts del 16/09 (#1, #3, #5, #7, #11, #14), más presentaciones para 2 nuevos prospectos encontrados hoy (#217 Leóne Trattoria y #218 Bien Taypa Restaurant). Pipeline total: **218 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **86 días consecutivos** con borradores activos sin confirmación de envío — crítico; (2) SSW Partners **65 días en silencio** sin comunicar a afiliados PedidosYa qué pasa con contratos 2027; (3) **SEMANA DEL 22-26/09 = MAYOR VENTANA DE CONVERSIÓN DEL AÑO** — los negocios acaban de pagar comisiones en su día pico. **Actualizado:** 2026-09-19.
+
+---
+
+**[1] Fuente de Soda El Rápido — Seguimiento Post-18 "El 18 ya pasó — ¿cuánto quedó de los completos?":**
+"Hola! Espero que el 18 haya sido un éxito para la fuente de soda 🥩🌭 El completo y el churrasco son los platos más pedidos a domicilio el 18 de septiembre. Ahora que pasó el rush, viene el cálculo que duele: con 50 completos a $4.000 por Rappi (28% comisión), la plataforma se queda con ~$56.000. Con RepartoJusto: 50 × $500 = $25.000. La diferencia en un solo día: $31.000 que se quedan en el negocio. En un mes normal a ese ritmo, el ahorro supera $300.000. Todavía están a tiempo para el verano, la próxima temporada alta. Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[3] Farmacia Cruz Verde — Seguimiento Post-18 "Peak medicamentos del día después":**
+"Hola! El 19 de septiembre es el gran día de las farmacias de delivery: paracetamol, ibuprofeno y omeprazol para los excesos del 18 🩺 Es el peak anual de medicamentos a domicilio — y los clientes no quieren salir. ¿La sucursal de Villa Alemana tiene autonomía para ofrecer delivery? Con RepartoJusto son $500 fijos por pedido entregado, sin porcentaje sobre el precio del medicamento — ideal para farmacias donde el valor del ticket varía mucho. 10 pedidos/día a $8.000 promedio en Rappi: $22.400 de comisión. Con nosotros: $5.000. La diferencia mensual supera $500.000. ¿Conversamos? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[5] Sushi Zen — Seguimiento Post-18 "Fin de semana largo + temporada primavera":**
+"Hola! El fin de semana largo patrio (19-21 sept) es el mejor momento del sushi de celebración 🍣 Las familias que no salieron el 18 piden sushi el sábado y domingo. Aquí va el número concreto: una tabla para 4 a $20.000 en Rappi les deja $5.600 de comisión (28%) vs. $500 fijos con RepartoJusto = $5.100 de diferencia por mesa. Con 10 tablas en un fin de semana largo: $51.000 que se quedan en el negocio. Y esto se va a repetir cada fin de semana de primavera y verano — octubre a diciembre es la temporada alta del sushi familiar. Todavía están a tiempo para arrancar el canal antes del rush. Registro gratuito: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[7] Minimercado La Esquina — Seguimiento Post-18 "Fin de semana largo — sigue el consumo":**
+"Hola! El fin de semana patrio largo no termina el 18 — el 19, 20 y 21 siguen los asados, la familia en casa y la demanda de bebidas, snacks e insumos 🥤🛒 Para el minimercado, este es el peak del año. ¿Cómo están manejando los pedidos a domicilio? Con 25 pedidos/día a $5.000 promedio en Rappi (28%): $35.000 de comisión diaria. Con RepartoJusto: 25 × $500 = $12.500. La diferencia mensual supera $675.000. Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[11] Veterinaria Huellitas — Seguimiento Post-18 "Peak estrés mascotas por fuegos artificiales":**
+"Hola! Los fuegos artificiales del 18 son el mayor momento de estrés del año para las mascotas — y el sábado 19 siguen 🐕🎆 El peak de consultas por ansiedad, calmantes y sedantes a domicilio es HOY y este fin de semana. Los dueños no quieren salir a buscar el medicamento. ¿Están ofreciendo delivery de productos veterinarios? Con RepartoJusto son $500 fijos por pedido entregado — ideal para medicamentos y accesorios donde el dueño no puede esperar. Sin porcentaje sobre la venta, sin contrato. Registro gratuito: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[14] Heladería Glacial — Seguimiento Post-18 "Temporada alta de helados empieza HOY":**
+"Hola! La primavera empezó el 1 de septiembre y el fin de semana largo patrio le da el empujón final a la temporada de helados 🍦 Octubre, noviembre y diciembre son los meses de mayor demanda — y la heladería que tenga el canal de delivery listo hoy llega al rush de diciembre con ventaja. Acá el cálculo: helado de $3.000 en Rappi (28%) = $840 de comisión. Con RepartoJusto = $500 fijos. Parece poco, pero con 50 pedidos diarios en diciembre la diferencia mensual supera $500.000. Es el momento exacto para configurar el canal antes de que empiece el verano de verdad. Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[217] Leóne Trattoria — Presentación:**
+"Hola @leonetrattoriaoficial! Somos RepartoJusto, la plataforma de delivery local de Villa Alemana que cobra solo $500 fijos por pedido entregado — sin porcentaje sobre la venta. Para una trattoria italiana con platos de $15.000-$25.000, la diferencia es enorme: un pastel de pasta a $18.000 en Rappi (28% comisión) = $5.040 que se queda la plataforma. Con nosotros = $500. El 18 de septiembre ya pasó y es el mejor momento del año para hacer ese cálculo: ¿cuánto quedó de las ventas del feriado después de las comisiones? Somos locales en Villa Alemana, sus clientes quedan cubiertos sin salir del barrio. ¿Les interesa conocer cómo funciona? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[218] Bien Taypa Restaurant — Presentación:**
+"Hola Bien Taypa! Somos RepartoJusto, plataforma de delivery en Villa Alemana con tarifa fija de $500 por pedido entregado — sin porcentaje sobre el precio de la venta. Para restaurantes, esa diferencia es enorme: cada pedido de $10.000 en Rappi o PedidosYa cuesta $2.800-$3.000 de comisión. Con nosotros: $500. El 18 de septiembre ya pasó — es el mejor momento del año para hacer el balance de cuánto se fue en comisiones en el día más grande. Somos locales en Villa Alemana y trabajamos en la zona. ¿Les interesa ver cómo funciona? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
 ### MENSAJES DEL DÍA (2026-09-18) — FIESTAS PATRIAS / VENTANA POST-18
 
 > **NOTA PARA MATÍAS:** Hoy es el **18 de septiembre — Fiestas Patrias**. Los negocios están en su peak máximo y NO es momento de contactar. Estos borradores están listos para enviar el **lunes 22 de septiembre**, cuando los dueños hagan el balance del 18 y sientan el impacto de las comisiones. **6 mensajes:** 3 seguimientos post-18 "¿Cuánto quedó después de comisiones?" para Contactados de alto impacto (#2 Don Pollo, #6 Botillería El Copihue, #9 El Gaucho), 2 seguimientos post-18 + FNE/SSW para prospectos PedidosYa (#30 Poh Che Empanadas, #60 Master Sándwich — SSW Partners 64 días en silencio), y 2 presentaciones para nuevos prospectos de empanadas sin plataformas grandes (#215 Rincón De Las Masas, #216 Empanadas Empanallá). Pipeline total: **216 prospectos**.
 
-> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **85 días consecutivos** con borradores activos sin confirmación de envío; (2) SSW Partners **64 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **LA SEMANA DEL 22-26/09 ES LA MAYOR VENTANA DE CONVERSIÓN DEL AÑO** — los negocios que acaban de pagar 34-36% de comisión en su día más grande van a querer escuchar. **Actualizado:** 2026-09-18.
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **85 días consecutivos** con borradores activos sin confirmación de envío; (2) SSW Partners **64 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **LA SEMANA DEL 22-26/09 ES LA MAYOR VENTANA DE CONVERSIÓN DEL AÑO** — los negocios que acaban de pagar 34-36% de comisión en su día más grande van a querer escuchar. **Actualizado:** 2026-09-19.
 
 ---
 
@@ -274,7 +324,7 @@
 
 > **NOTA PARA MATÍAS:** Hoy es **miércoles 17 de septiembre — LAS FONDAS YA ARRANCARON** y mañana es el **18 de septiembre**, el mayor peak del año. **10 mensajes:** 7 seguimientos a Contactados con borradores de 2 días (#2, #4, #8, #9, #10, #12, #13), 1 FNE/SSW urgente para #30 Poh Che Empanadas (63 días silencio SSW + empanadas peak MÁXIMO), y 2 presentaciones para nuevos prospectos de parrillada (#213 Parrillada El Alemán, #214 Patria Parrilla). Pipeline total: **214 prospectos**.
 
-> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **84 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) SSW Partners **63 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **HOY ES EL 17 / FONDAS ACTIVAS / MAÑANA EL 18** — la mayor ventana del año ya está aquí. **Actualizado:** 2026-09-18.
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **84 días consecutivos** con borradores activos sin confirmación de envío — PRIORIDAD ABSOLUTA; (2) SSW Partners **63 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **HOY ES EL 17 / FONDAS ACTIVAS / MAÑANA EL 18** — la mayor ventana del año ya está aquí. **Actualizado:** 2026-09-19.
 
 ---
 
