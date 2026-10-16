@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
 **Última verificación:** 2026-10-16T00:00:00Z
-**Estado:** ❌ CAÍDO
-**Detalle:** Error de conexión — el proxy de egress rechazó la conexión a repartojusto-production.up.railway.app:443 (connect_rejected). El host puede no estar permitido en esta sesión o el servicio no responde.
+**Estado:** ❌ NO VERIFICADO
+**Detalle:** Error de red — el proxy de egress del entorno de ejecución rechazó la conexión a repartojusto-production.up.railway.app:443 (connect_rejected). El servicio puede estar operativo, pero no fue posible alcanzarlo desde este entorno.
