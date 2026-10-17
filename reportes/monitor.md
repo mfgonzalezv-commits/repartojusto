@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-10-17T00:00:00Z
+**Última verificación:** 2026-10-17T10:31:39Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — el proxy de salida rechazó la conexión a repartojusto-production.up.railway.app:443 (connect_rejected). HTTP 000. No fue posible alcanzar el endpoint /health.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por el proxy de egreso (host no alcanzable desde el entorno de ejecución). HTTP 000, exit code 56.
