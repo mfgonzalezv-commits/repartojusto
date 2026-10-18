@@ -1,23 +1,23 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-09-19
+**Actualizado:** 2026-10-18
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
-| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / El 18 ya pasó — ¿cuánto quedó de los completos?" redactado 19/09 — completos y churrascos del 18 = el día más grande del año; 50 completos a $4K en Rappi = $56K comisión vs. $25K con RJ = $31K diferencia en un solo día; enviar lunes 22/09 |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / ¿Cuánto quedó después de comisiones?" redactado 18/09 — pollo asado EL plato del 18 = mayor peak del año; con 30 pollos a $9K por Rappi, la diferencia vs. $500 fijo es $60.000 en un solo día (~$600K/mes); activar para octubre |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Peak medicamentos del día después" redactado 19/09 — excesos del 18 = peak paracetamol/ibuprofeno/omeprazol a domicilio; sucursal local con autonomía para delivery $500 fijo vs. porcentaje; enviar lunes 22/09 |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / LAS FONDAS ARRANCARON / MAÑANA EL 18" redactado 17/09 — peak pizza familiar semana 17-20 sept, ahorro ~$990K/mes vs. Rappi ($2.800/pedido), fondas activas HOY |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Fin de semana largo + primavera = sushi de celebración" redactado 19/09 — reuniones familiares extendidas 19-21 = sushi de celebración; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo = $5.100 ahorro por mesa; temporada alta oct-dic empieza; enviar lunes 22/09 |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / ¿Cuánto quedó de las bebidas del 18?" redactado 18/09 — el 18 es EL día de las botillerías; cada caja de vino $15K por Rappi = $10.500 para el negocio, con RepartoJusto = $14.500; suma para el verano |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Fin de semana largo — sigue el consumo" redactado 19/09 — sábado 19-21 = fin de semana patrio aún activo; snacks/bebidas/reposición stock sigue; 25 pedidos/día $5K en Rappi = $35K comisión vs. $12.500 con RJ; enviar lunes 22/09 |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / MAÑANA EL 18" redactado 17/09 — tortas para el asado del 18 = peak MÁXIMO encargos del año, fondas arrancaron HOY, Rappi Turbo Quilpué urgencia |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / El 18 ya pasó — ¿cuánto quedó?" redactado 18/09 — costillar/vacío/pollo del 18 = mayor peak del año; con 20 pedidos a $8K en Rappi: $44K de comisión vs. $10K con RepartoJusto; $34K diferencia EN UN DÍA |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / ONCE DEL 17 Y 18" redactado 17/09 — onces y scones del 17 + once del 18 = peak MÁXIMO café familiar del año, activar HOY |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Peak estrés mascotas por fuegos artificiales" redactado 19/09 — fuegos artificiales 18-19-20 = peak MÁXIMO calmantes/ansiolíticos mascotas; sábado 19 demanda activa HOY; delivery veterinaria = servicio urgencia alto valor; $500 fijo vs. porcentual; enviar lunes 22/09 |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / SEMANA PATRIA" redactado 17/09 — útiles urgentes decoraciones/disfraces semana patria, piden HOY, diferenciador único ninguna librería en Rappi/Uber Eats VA |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 17 de septiembre / FONDAS ACTIVAS / RUSH RAMADAS HOY" redactado 17/09 — clavos/pintura/luminarias para ramadas del 17, clientes piden HOY sin salir, $500 fijo ideal ferreterías |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Post-18 / Temporada alta de helados empieza HOY" redactado 19/09 — primavera activa + fin de semana largo patrio = doble arranque temporada; oct-dic = peak helados; cada helado $3K en Rappi = $840 comisión vs. $500 RJ; canal listo hoy = ventaja diciembre; enviar lunes 22/09 |
+| 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Verano se acerca — configura tu canal" redactado 18/10 — completos y churrascos peak diciembre = prepararse ahora; 29 días después del 18 = ya tienen los números reales de comisiones; ahorro $300K+/mes vs. Rappi |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Un mes del 18 — el verano trae más pollos" redactado 18/10 — pollo asado = demanda constante + pico diciembre; un mes de comisiones post-18 ya pesa; 30 pollos/día a $9K en Rappi = $756K/mes comisión vs. $135K con RJ; diferencia $621K/mes |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alergia primavera" redactado 18/10 — octubre = peak antihistamínicos/nasales + temporada alta delivery salud; sucursal local autonomía delivery $500 fijo vs. porcentual |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Verano = más pizas delivery" redactado 18/10 — pizza sube en temporada alta; preparar canal ahora antes de noviembre; ahorro ~$990K/mes vs. Rappi ($2.800/pedido) |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alta sushi empieza" redactado 18/10 — oct-dic = peak sushi celebraciones; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo = $5.100 ahorro por mesa; configurar canal antes de noviembre |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Se viene el verano y la sidra" redactado 18/10 — noviembre-diciembre = peak MÁXIMO botillerías (asados, Navidad, Año Nuevo); hoy octubre = momento de configurar canal propio; cada caja vino $15K Rappi = $10.500 neto vs. $14.500 con RJ |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Snacks y bebidas de verano" redactado 18/10 — temporada alta almacenes empieza; reposición bebidas/hielos/snacks = mayor volumen; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Tortas de aniversario primaveral + Navidad en 2 meses" redactado 18/10 — tortas = peak Navidad/Año Nuevo en 2 meses; octubre = configurar canal delivery antes del rush; Rappi Turbo Quilpué urgencia |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Rotisería y verano" redactado 18/10 — asados y pollo delivery crecen en primavera; 20 pedidos/día $8K en Rappi: $44K/día comisión vs. $10K RJ = diferencia $34K/día |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Café de verano al aire libre" redactado 18/10 — primavera activa = terrazas y café delivery al aire libre; onces delivery + despacho $500 fijo para el café vecinal |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alta vacunas y antipulgas primavera" redactado 18/10 — octubre = peak vacunas anuales + antipulgas primavera = mayor volumen medicamentos mascotas del año; delivery $500 fijo vs. porcentual |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Útiles escolares y actividades verano" redactado 18/10 — octubre = back-to-school segundo semestre + proyectos fin de año; único canal delivery librería en Villa Alemana |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Proyectos de primavera y reparaciones" redactado 18/10 — primavera = peak reparaciones casa + proyectos jardín; materiales delivery $500 fijo = diferenciador único en VA |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alta helados — ¡ya empezó!" redactado 18/10 — primavera activa = temporada alta helados oct-dic; cada helado $3K en Rappi = $840 comisión vs. $500 RJ; diciembre = peak MÁXIMO; canal listo hoy = ventaja diciembre |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -222,10 +222,60 @@
 | 216 | Empanadas Empanallá | Empanadas caseras al horno | Villa Alemana (@empanadas_empanalla, Instagram) | Nuevo | — | Presentación redactada 18/09 — empanadas caseras delivery sábados y domingos por canal propio Instagram, sin grandes plataformas detectadas, post-18 = mejor momento del año para hablar de comisiones, $500 fijo por entrega |
 | 217 | Leóne Trattoria | Restaurante italiano | Villa Alemana (@leonetrattoriaoficial, Instagram) | Nuevo | — | Presentación redactada 19/09 — trattoria italiana con canal propio Instagram, sin grandes plataformas detectadas, pasta artesanal ticket $15K-$25K = $4.200-$7.000 comisión Rappi vs. $500 fijo, post-18 = momento ideal para hacer el cálculo de lo que se va en comisiones |
 | 218 | Bien Taypa Restaurant | Restaurante / comida | Villa Alemana (Facebook @bientayparestaurant) | Nuevo | — | Presentación redactada 19/09 — restaurante en VA con canal Facebook, sin grandes plataformas detectadas, argumento post-18 "¿cuánto quedó después de comisiones?", $500 fijo por entrega vs. porcentual |
+| 219 | Friendship Burgers | Hamburguesas | Villa Alemana (Uber Eats) | Nuevo | — | Presentación redactada 18/10 — hamburguesería activa en Uber Eats VA, argumento temporada alta verano + ahorro comisiones; cada hamburguesa $9K en Uber Eats = $2.700 comisión vs. $500 fijo RJ |
+| 220 | Restaurante Fusión Peruana | Comida peruana | Villa Alemana (@fusionperuanaoficial, Instagram) | Nuevo | — | Presentación redactada 18/10 — cocina peruana con canal propio Instagram y enlace de pedidos, sin grandes plataformas confirmadas; ticket alto (ceviche/lomo saltado $12K-$18K) = ahorro $3.000-$4.600/pedido vs. Rappi/Uber Eats; 3.300+ seguidores Instagram |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-10-18) — OCTUBRE / VERANO SE ACERCA / FNE+SSW 94 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es domingo **18 de octubre**. Han pasado exactamente **30 días desde las Fiestas Patrias** — el momento ideal para preguntar: "¿Cuánto le quedó al negocio después de comisiones el 18?" El argumento de temporada también cambia: **el verano empieza en noviembre** y los rubros de delivery (heladerías, botillerías, comida rápida, sushi) llegan a su peak de diciembre — quien configura su canal hoy llega con ventaja. SSW Partners lleva **94 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 4 seguimientos octubre para Contactados prioritarios (#2 Don Pollo, #5 Sushi Zen, #14 Heladería Glacial, #9 El Gaucho), 2 seguimientos FNE/SSW para prospectos PedidosYa (#27 Tribeca Sushi, #60 Master Sándwich), y 2 presentaciones para nuevos prospectos (#219 Friendship Burgers, #220 Restaurante Fusión Peruana). Pipeline total: **220 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** siguen con borradores activos sin confirmación de envío; (2) SSW Partners **94 días en silencio** — ventana FNE más potente del año para los 9+ prospectos PedidosYa; (3) **Verano empieza en noviembre** — heladerías, botillerías y comida rápida necesitan canal delivery configurado ANTES del rush.
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento Octubre "Un mes del 18 — el verano trae más pollos":**
+"Hola Don Pollo! De RepartoJusto. Exactamente un mes después del 18 de septiembre — el día de los pollos al horno 🍗 Ahora que ya tienen los números reales: con 30 pollos a $9.000 promedio por Rappi (28% comisión), le entregan a la app $75.600 al día. Con RepartoJusto son $15.000. La diferencia en un solo día del 18: $60.600. Y eso se repite todos los meses. El verano trae más eventos, más pedidos, más comisiones. Quien configura su canal de delivery propio hoy llega a diciembre con ventaja. Registro gratuito, sin contrato, sin costo de alta: repartojusto-production.up.railway.app ¿Le damos antes del verano? — Equipo RepartoJusto"
+
+---
+
+**[5] Sushi Zen — Seguimiento Octubre "Temporada alta sushi empieza":**
+"Hola Sushi Zen! De RepartoJusto. Octubre marca el inicio de la temporada alta para el sushi 🍣 Los pedidos de celebración para cumpleaños, reuniones y juntas de fin de año crecen fuerte de noviembre a enero. Una tabla de $20.000 en Rappi (28%) le deja $14.400 al negocio. Con RepartoJusto le deja $19.500 — una diferencia de $5.100 por mesa. Con 10 pedidos semanales son más de $200.000 al mes que se quedan en el local en vez de irse a la app. ¿Configuramos el canal antes que empiece el rush de noviembre? Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[14] Heladería Glacial — Seguimiento Octubre "La temporada alta ya empezó":**
+"Hola Heladería Glacial! De RepartoJusto. Octubre es el mes donde las heladerías despegan 🍦 Primavera activa + calor creciente = primeros pedidos de temporada alta ya llevan 2-3 semanas. Y diciembre es el peak máximo. Cada helado de $3.000 pedido por Rappi (28%) deja $2.160 al negocio. Con RepartoJusto deja $2.500 — $340 más por cada helado. Con 50 pedidos de helados al día en diciembre, eso son $17.000 extra por día. Canal configurado hoy = canal rodado en diciembre cuando más se necesita. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Empezamos? — Equipo RepartoJusto"
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento Octubre "Rotisería y verano":**
+"Hola Rotisería El Gaucho! De RepartoJusto. La primavera ya está activa y los asados familiares al aire libre vuelven — el negocio de ustedes tiene una ventana enorme de noviembre a febrero 🥩 Con 20 pedidos de costillar/vacío/pollo a $8.000 promedio por Rappi (28%): $44.800 de comisión al día. Con RepartoJusto: $10.000. Diferencia diaria: $34.800 que se quedan en el negocio. Un mes de peak estival = más de $1.000.000 de diferencia. Sin contrato, sin cuota de alta, registro en 10 minutos: repartojusto-production.up.railway.app ¿Esta semana? — Equipo RepartoJusto"
+
+---
+
+**[27] Tribeca Sushi — Seguimiento FNE/SSW 94 días "¿Qué pasa con PedidosYa en 2027?":**
+"Hola Tribeca Sushi! De RepartoJusto. Dato urgente para los que están en PedidosYa: la empresa que compró PedidosYa Chile (SSW Partners) lleva **94 días sin comunicarles qué pasa con sus contratos en 2027**. Desde julio 16 que se cerró la venta, ningún restaurante afiliado ha recibido información sobre comisiones, plazos o condiciones. Y la FNE los multó dos veces en 2026 ($35M USD) por controlarles los precios. RepartoJusto no tiene fusiones, no cambia de dueños y cobra $500 fijo por pedido — siempre. Para un sushi de $18.000 en PedidosYa (34% comisión), la diferencia es de $5.620 por pedido. ¿Conversamos antes de que SSW defina nuevas condiciones? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[60] Master Sándwich Villa Alemana — Seguimiento FNE/SSW 94 días "PedidosYa sin respuestas en 2027":**
+"Hola Master Sándwich! De RepartoJusto. Para los negocios en PedidosYa: la nueva empresa dueña (SSW Partners) lleva **94 días sin comunicarles qué pasa con sus contratos en 2027** — ningún restaurante ha recibido información sobre comisiones ni condiciones futuras. Además, la FNE los multó dos veces en 2026 por $35M USD y hoy siguen en juicio negando los cargos. Con RepartoJusto: $500 fijo por pedido, sin porcentaje, sin cambio de dueños, sin sorpresas. Para un sándwich de $6.000 en PedidosYa (34% comisión), la diferencia es de $1.540 por pedido. Con 20 pedidos diarios son $924.000 al mes que se quedan en el local. ¿Lo revisamos? repartojusto-production.up.railway.app WhatsApp: +56 958528950 — Equipo RepartoJusto"
+
+---
+
+**[219] Friendship Burgers — Presentación "Hamburguesas en Uber Eats — el cálculo es simple":**
+"Hola Friendship Burgers! Los encontramos activos en Uber Eats — excelente presencia digital. Una pregunta directa: ¿saben cuánto le están pagando a Uber Eats por mes? Para una hamburguesa de $9.000 en Uber Eats (30% comisión), la plataforma se lleva $2.700. Con RepartoJusto pagan $500 fijos por pedido — siempre, sin porcentaje. Con 15 hamburguesas por día, la diferencia mensual supera $700.000 que se quedan en el negocio. Registro gratuito, sin contrato, pueden mantener Uber Eats como canal paralelo. Somos 100% locales en Villa Alemana: repartojusto-production.up.railway.app ¿Conversamos? — Equipo RepartoJusto"
+
+---
+
+**[220] Restaurante Fusión Peruana — Presentación "Canal propio en Instagram + rider local":**
+"Hola Fusión Peruana! Los vemos con canal propio activo en Instagram — excelente estrategia. La pregunta es si tienen rider para los pedidos que llegan por ahí, o si dependen de las plataformas grandes. Con RepartoJusto pueden atender pedidos de su Instagram/WhatsApp con rider local en Villa Alemana por $500 fijos por entrega — sin porcentaje sobre la venta. Un ceviche de $15.000 pedido por WhatsApp con delivery propio: $14.500 para el negocio. El mismo plato por Uber Eats o Rappi (30-34% comisión): $9.900-$10.500. La diferencia es de $4.000-$4.600 por pedido. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Hablamos? — Equipo RepartoJusto"
 
 ---
 
