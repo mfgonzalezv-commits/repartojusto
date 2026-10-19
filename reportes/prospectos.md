@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-10-18
+**Actualizado:** 2026-10-19
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -224,6 +224,8 @@
 | 218 | Bien Taypa Restaurant | Restaurante / comida | Villa Alemana (Facebook @bientayparestaurant) | Nuevo | — | Presentación redactada 19/09 — restaurante en VA con canal Facebook, sin grandes plataformas detectadas, argumento post-18 "¿cuánto quedó después de comisiones?", $500 fijo por entrega vs. porcentual |
 | 219 | Friendship Burgers | Hamburguesas | Villa Alemana (Uber Eats) | Nuevo | — | Presentación redactada 18/10 — hamburguesería activa en Uber Eats VA, argumento temporada alta verano + ahorro comisiones; cada hamburguesa $9K en Uber Eats = $2.700 comisión vs. $500 fijo RJ |
 | 220 | Restaurante Fusión Peruana | Comida peruana | Villa Alemana (@fusionperuanaoficial, Instagram) | Nuevo | — | Presentación redactada 18/10 — cocina peruana con canal propio Instagram y enlace de pedidos, sin grandes plataformas confirmadas; ticket alto (ceviche/lomo saltado $12K-$18K) = ahorro $3.000-$4.600/pedido vs. Rappi/Uber Eats; 3.300+ seguidores Instagram |
+| 221 | Wok & Sushi Express | Comida asiática / wok | Villa Alemana (Rappi) | Nuevo | — | Presentación redactada 19/10 — restaurante asiático fusion activo en Rappi VA, comida fresca ideal para temporada verano (noviembre-enero), ticket promedio $8.000-$12.000 = comisión Rappi $2.240-$3.360 vs. $500 fijo RepartoJusto; argumento: "comida fresca y liviana en verano = más pedidos, sin que te suba la comisión" |
+| 222 | Dulce Tentación Repostería | Repostería / tortas | Villa Alemana (Instagram + WhatsApp canal propio) | Nuevo | — | Presentación redactada 19/10 — repostería artesanal con canal propio (Instagram + pedidos WhatsApp), sin grandes plataformas; tortas personalizadas ticket $15.000-$40.000; peak noviembre-diciembre (cumpleaños, Navidad, fiestas fin de año); argumento: potenciar canal directo con rider local $500 fijo, sin comisión porcentual |
 
 ---
 
@@ -276,6 +278,44 @@
 
 **[220] Restaurante Fusión Peruana — Presentación "Canal propio en Instagram + rider local":**
 "Hola Fusión Peruana! Los vemos con canal propio activo en Instagram — excelente estrategia. La pregunta es si tienen rider para los pedidos que llegan por ahí, o si dependen de las plataformas grandes. Con RepartoJusto pueden atender pedidos de su Instagram/WhatsApp con rider local en Villa Alemana por $500 fijos por entrega — sin porcentaje sobre la venta. Un ceviche de $15.000 pedido por WhatsApp con delivery propio: $14.500 para el negocio. El mismo plato por Uber Eats o Rappi (30-34% comisión): $9.900-$10.500. La diferencia es de $4.000-$4.600 por pedido. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Hablamos? — Equipo RepartoJusto"
+
+---
+
+### MENSAJES DEL DÍA (2026-10-19) — LUNES / NOVIEMBRE EN 12 DÍAS / FNE+SSW 95 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es lunes **19 de octubre**. Noviembre está en **12 días** — el verano arranca y los negocios de helados, bebidas, comida rápida y repostería entran a su peak de diciembre. Quien configura su canal de delivery HOY llega rodado al rush de fin de año. SSW Partners lleva **95 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 2 seguimientos octubre para Contactados (#4 Pizza House y #8 Pastelería Dulce Hogar), 2 seguimientos FNE/SSW para prospectos PedidosYa (#28 La Esquina Con Sabor y #33 Casa Festa), y 2 presentaciones para nuevos prospectos (#221 Wok & Sushi Express y #222 Dulce Tentación Repostería). Pipeline total: **222 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **87 días consecutivos** con borradores activos sin confirmación de envío — crítico; (2) SSW Partners **95 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **Noviembre en 12 días** — heladerías, botillerías y repostería entran a temporada alta, hay que configurar el canal AHORA.
+
+---
+
+**[4] Pizza House — Seguimiento Octubre "Pizza en noviembre: el verano sube los pedidos":**
+"Hola Pizza House! De RepartoJusto. Con noviembre en pocos días llega el peak de pizza delivery: reuniones de trabajo, cumpleaños, eventos de fin de año. Una pizza de $12.000 en Rappi (28% comisión) le deja a la app $3.360 — por cada pizza. Con RepartoJusto son $500 fijos sin importar el precio. Con 25 pizzas al día durante el peak de diciembre, la diferencia supera $2.200.000 al mes que se quedan en el local. El canal configurado hoy es el canal listo para el rush de fin de año. Sin contrato, sin cuota de alta, registro en 10 minutos: repartojusto-production.up.railway.app ¿Arrancamos? — Equipo RepartoJusto"
+
+---
+
+**[8] Pastelería Dulce Hogar — Seguimiento Octubre "Noviembre = tortas de cumpleaños y Navidad":**
+"Hola Pastelería Dulce Hogar! De RepartoJusto. Noviembre arranca en 12 días y con él empieza el peak de pastelería: cumpleaños de fin de año, Navidad, fiestas de empresa 🎂 Una torta de $25.000 pedida por Rappi (28% comisión) le deja a la app $7.000. Con RepartoJusto son $500 fijos por entrega — toda la torta se queda en el negocio. Con 5 tortas delivery al día en diciembre, la diferencia mensual supera $1.900.000. Canal configurado en octubre = canal rodado para Navidad. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Esta semana? — Equipo RepartoJusto"
+
+---
+
+**[28] La Esquina Con Sabor — Seguimiento FNE/SSW 95 días "PedidosYa: 95 días sin respuesta sobre 2027":**
+"Hola La Esquina Con Sabor! De RepartoJusto. Para los negocios en PedidosYa: la empresa que compró PedidosYa Chile (SSW Partners) lleva **95 días sin comunicarles qué pasa con sus contratos en 2027**. Desde julio 16 que se cerró la venta, ningún restaurante ha recibido información sobre comisiones ni condiciones futuras. Sumado a las 2 multas FNE por $35M USD en 2026 y el juicio TDLC activo, la incertidumbre es máxima. RepartoJusto no cambia de dueños y cobra $500 fijo por pedido — siempre, en papel. ¿Tienen pensado diversificar canales antes de que SSW defina nuevas condiciones para 2027? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[33] Casa Festa Cocina y Repostería — Seguimiento FNE/SSW 95 días "95 días de silencio = señal de alerta":**
+"Hola Casa Festa! De RepartoJusto. Un dato urgente para los que tienen su negocio en PedidosYa: SSW Partners, la empresa que compró PedidosYa Chile en julio, lleva **95 días sin comunicar qué pasa con los contratos de los restaurantes en 2027**. La FNE los multó dos veces en 2026 ($35M USD total) y hoy siguen en juicio negando los cargos. Ese historial + 95 días de silencio = señal de alerta real. Con RepartoJusto: tarifa fija de $500 por pedido, sin porcentajes, sin cambio de dueños, sin incertidumbre. Para una repostería con tortas de ticket $20.000-$35.000, la diferencia por pedido es de $5.300-$9.450 vs. PedidosYa. ¿Conversamos esta semana? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[221] Wok & Sushi Express — Presentación "Comida asiática en Rappi: el verano sube los pedidos de rolls":**
+"Hola Wok & Sushi Express! De RepartoJusto. Los encontramos activos en Rappi — excellent. El verano es el peak de la comida asiática fresca: rolls, wok frío, combos de sushi ligero. El problema con Rappi es que cada combo de $10.000 que venden (28% comisión) deja $2.800 para la app. Con RepartoJusto son $500 fijos por pedido — sin importar el precio. Con 20 combos al día en el peak de diciembre, la diferencia mensual supera $1.380.000. Somos 100% locales en Villa Alemana, riders de la zona. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo revisamos? — Equipo RepartoJusto"
+
+---
+
+**[222] Dulce Tentación Repostería — Presentación "Tortas y canal propio: el rider que les falta":**
+"Hola Dulce Tentación! De RepartoJusto. Los vemos con pedidos activos por Instagram y WhatsApp — muy buena estrategia de canal directo. La pregunta es: ¿tienen rider confiable para entregar las tortas y postres, o dependen de que el cliente las retire? Con RepartoJusto pueden activar delivery propio en Villa Alemana por $500 fijos por entrega — sin porcentaje de la venta. Una torta de $30.000 pedida por WhatsApp con delivery propio: $29.500 para el negocio. La misma torta por Rappi (28%): $21.600. Diferencia: $7.900 por torta. Con noviembre en 12 días y el peak de Navidad llegando, el timing es perfecto. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Esta semana? — Equipo RepartoJusto"
 
 ---
 
