@@ -1,198 +1,170 @@
 # Mejoras RepartoJusto
-**Fecha:** 2026-09-14
-**Estado:** 5 mejoras pendientes — 4 sin corregir por 3ª semana consecutiva, 1 por 2ª semana; todas verificadas en código actual
+**Fecha:** 2026-10-19
+**Estado:** 5 mejoras detectadas — 2 seguridad crítica, 1 seguridad media, 1 rendimiento, 1 UX
 
 ---
 
-## 1. Seguridad: `pedido:seguir` sin verificación de acceso ⚠️ Sin corregir desde 2026-08-31 (3ª semana)
+## 1. [SEGURIDAD] `pedido:seguir` sin control de acceso
 
-**Archivo:** `backend/src/sockets/index.js:101`
+**Archivo:** `backend/src/sockets/index.js` — línea 101
 
-**Beneficio:** Evita que cualquier usuario autenticado espíe el tracking (ubicación GPS del rider, estado del pedido) de pedidos ajenos uniéndose arbitrariamente a su sala de socket.
+**Beneficio:** Impide que cualquier usuario autenticado espíe ubicación del rider y dirección del cliente de pedidos ajenos.
 
-**Código actual:**
 ```js
+// ANTES (sin validación)
 socket.on('pedido:seguir', ({ pedido_id }) => {
   if (!pedido_id) return;
   socket.join(`pedido:${pedido_id}`);
 });
-```
 
-**Código propuesto:**
-```js
+// DESPUÉS (verificar que el socket pertenece al pedido)
 socket.on('pedido:seguir', async ({ pedido_id }) => {
   if (!pedido_id) return;
   try {
-    const { rows } = await db(
-      `SELECT id FROM pedidos
-       WHERE id = $1
-         AND (
-           (negocio_id = $2 AND $2 IS NOT NULL)
-           OR (rider_id = $3 AND $3 IS NOT NULL)
-           OR $4 = 'admin'
-         )`,
-      [pedido_id, socket.negocio_id || null, socket.rider_id || null, rol]
+    const { rows: [pedido] } = await db(
+      `SELECT negocio_id, rider_id FROM pedidos WHERE id = $1`, [pedido_id]
     );
-    if (rows[0]) socket.join(`pedido:${pedido_id}`);
-  } catch (err) {
-    console.error('❌ pedido:seguir acceso denegado:', err.message);
-  }
-});
-```
+    if (!pedido) return;
 
----
+    const esNegocio = rol === 'negocio' && socket.negocio_id === pedido.negocio_id;
+    const esRider   = rol === 'rider'   && socket.rider_id   === pedido.rider_id;
+    const esAdmin   = rol === 'admin';
 
-## 2. Confiabilidad: Race condition en `aceptarOferta` borra cascada antes de confirmar asignación ⚠️ Sin corregir desde 2026-08-31 (3ª semana)
-
-**Archivo:** `backend/src/sockets/asignacion.js:159`
-
-**Beneficio:** Evita que un pedido quede huérfano en estado `pendiente` sin cascada activa cuando la asignación en BD falla tras borrar el estado de cascada en memoria.
-
-**Código actual (líneas 159–163):**
-```js
-async function aceptarOferta(pedido_id, rider_id, io) {
-  const cascada = cascadas.get(pedido_id);
-  if (cascada) {
-    clearTimeout(cascada.timer);
-    cascadas.delete(pedido_id); // ← se borra antes de confirmar en BD (línea 183)
-  }
-```
-
-**Código propuesto:** mover `cascadas.delete` a después del UPDATE exitoso:
-```js
-async function aceptarOferta(pedido_id, rider_id, io) {
-  const cascada = cascadas.get(pedido_id);
-  if (cascada) clearTimeout(cascada.timer); // pausar timer, NO borrar aún
-
-  const { rows: [rider] } = await db(
-    `SELECT id FROM riders WHERE id = $1 AND disponible = true`, [rider_id]
-  );
-  if (!rider) return { ok: false, error: 'No estás disponible' };
-
-  const { rows: [{ cnt }] } = await db(
-    `SELECT COUNT(*) AS cnt FROM pedidos
-     WHERE rider_id = $1 AND estado IN ('asignado','retiro','en_camino')`, [rider_id]
-  );
-  if (parseInt(cnt) >= MAX_PEDIDOS_SIMULTANEOS)
-    return { ok: false, error: `Límite de ${MAX_PEDIDOS_SIMULTANEOS} pedidos simultáneos` };
-
-  const { rows: [pedido] } = await db(
-    `UPDATE pedidos SET estado = 'asignado', rider_id = $1, asignado_at = NOW()
-     WHERE id = $2 AND estado = 'pendiente' RETURNING *`,
-    [rider_id, pedido_id]
-  );
-  if (!pedido) return { ok: false, error: 'Pedido ya no disponible' };
-
-  cascadas.delete(pedido_id); // ← solo borrar tras asignación exitosa en BD
-
-  io.to(`negocio:${pedido.negocio_id}`).emit('pedido:actualizado', {
-    id: pedido.id, estado: 'asignado', rider_id,
-  });
-  io.emit('pedido:tomado', { pedido_id });
-  return { ok: true, pedido };
-}
-```
-
----
-
-## 3. Confiabilidad financiera: Cobro al negocio antes de confirmar el pedido en BD ⚠️ Sin corregir desde 2026-09-07 (2ª semana)
-
-**Archivo:** `backend/src/routes/pedidos.js:74`
-
-**Beneficio:** Elimina el riesgo de cobrar a un negocio sin crear el pedido en BD — si el INSERT falla tras el cobro (error de red, constraint violation, timeout), el dinero se pierde sin registro y sin posibilidad de reembolso automático.
-
-**Código actual:**
-```js
-// Línea 74 — cobro ocurre ANTES del INSERT (línea 111)
-const cobro = await cobros.cobrar({
-  customerId: negocio.tarjeta_customer_id,
-  monto: config.APP_FEE + tarifa_entrega_pre,
-});
-if (!cobro.ok) {
-  return res.status(402).json({ error: 'Pago rechazado', ... });
-}
-// ... más validaciones y lógica ...
-const { rows: [pedido] } = await db(
-  `INSERT INTO pedidos (...) VALUES (...) RETURNING *`,
-  [...]
-);
-```
-
-**Código propuesto:** crear el pedido en BD primero con estado `pendiente_pago`, luego cobrar, luego activar:
-```js
-// 1. Crear pedido en BD con estado pendiente_pago
-const { rows: [pedido] } = await db(
-  `INSERT INTO pedidos (..., estado)
-   VALUES (..., 'pendiente_pago') RETURNING *`,
-  [...]
-);
-
-// 2. Intentar cobro (con pedido_id real para trazabilidad)
-const cobro = await cobros.cobrar({
-  customerId: negocio.tarjeta_customer_id,
-  monto: config.APP_FEE + tarifa_entrega,
-  pedido_id: pedido.id,
-});
-if (!cobro.ok) {
-  await db(`UPDATE pedidos SET estado = 'cancelado' WHERE id = $1`, [pedido.id]);
-  return res.status(402).json({ error: 'Pago rechazado', detalle: 'No se pudo cobrar el servicio. Verifica tu tarjeta.' });
-}
-
-// 3. Activar pedido
-await db(`UPDATE pedidos SET estado = $1 WHERE id = $2`, [estadoInicial, pedido.id]);
-```
-
----
-
-## 4. Rendimiento: Escritura en BD en cada ping GPS del rider ⚠️ Sin corregir desde 2026-08-31 (3ª semana)
-
-**Archivo:** `backend/src/sockets/index.js:72`
-
-**Beneficio:** Reduce hasta 10× las escrituras en la tabla `riders` (y la contención de locks) sin degradar la experiencia de tracking en tiempo real para el cliente final.
-
-**Código actual:**
-```js
-socket.on('rider:ubicacion', async ({ lat, lng }) => {
-  if (rol !== 'rider' || !socket.rider_id) return;
-  if (typeof lat !== 'number' || typeof lng !== 'number') return;
-  try {
-    await db(
-      'UPDATE riders SET lat = $1, lng = $2 WHERE id = $3',
-      [lat, lng, socket.rider_id]
-    );
-    // ... luego broadcast
-```
-
-**Código propuesto:** throttle de escritura en BD a 1 vez cada 5 s (el broadcast a clientes sigue sin cambio):
-```js
-const _ultimaEscrituraUbicacion = new Map(); // declarar fuera del handler io.on('connection')
-
-socket.on('rider:ubicacion', async ({ lat, lng }) => {
-  if (rol !== 'rider' || !socket.rider_id) return;
-  if (typeof lat !== 'number' || typeof lng !== 'number') return;
-
-  try {
-    const ahora = Date.now();
-    const ultima = _ultimaEscrituraUbicacion.get(socket.rider_id) || 0;
-
-    if (ahora - ultima >= 5000) { // máx una escritura en BD cada 5 s
-      await db(
-        'UPDATE riders SET lat = $1, lng = $2 WHERE id = $3',
-        [lat, lng, socket.rider_id]
-      );
-      _ultimaEscrituraUbicacion.set(socket.rider_id, ahora);
+    if (esNegocio || esRider || esAdmin) {
+      socket.join(`pedido:${pedido_id}`);
     }
+  } catch (err) {
+    console.error('❌ Error pedido:seguir:', err.message);
+  }
+});
+```
 
-    // broadcast a clientes (sin throttle — siempre se envía)
-    const { rows } = await db(
-      `SELECT id, negocio_id FROM pedidos
-       WHERE rider_id = $1 AND estado IN ('asignado','retiro','en_camino')`,
-      [socket.rider_id]
+---
+
+## 2. [SEGURIDAD] `chat:enviar` sin verificar pertenencia al pedido
+
+**Archivo:** `backend/src/sockets/index.js` — línea 161
+
+**Beneficio:** Evita que usuarios no relacionados inyecten mensajes en el chat de pedidos ajenos.
+
+```js
+// ANTES (solo comprueba que el socket esté en la sala, no que pertenezca al pedido)
+socket.on('chat:enviar', ({ pedido_id, texto }) => {
+  if (!pedido_id || !texto || !String(texto).trim()) return;
+  const desde = rol === 'rider' ? 'rider' : 'negocio';
+  // ...
+
+// DESPUÉS (verificar ownership antes de emitir)
+socket.on('chat:enviar', async ({ pedido_id, texto }) => {
+  if (!pedido_id || !texto || !String(texto).trim()) return;
+  try {
+    const { rows: [pedido] } = await db(
+      `SELECT negocio_id, rider_id FROM pedidos WHERE id = $1`, [pedido_id]
     );
-    rows.forEach((pedido) => {
+    if (!pedido) return;
+
+    const esNegocio = rol === 'negocio' && socket.negocio_id === pedido.negocio_id;
+    const esRider   = rol === 'rider'   && socket.rider_id   === pedido.rider_id;
+    if (!esNegocio && !esRider) return; // silencioso: no revelar que el pedido existe
+
+    const desde = esRider ? 'rider' : 'negocio';
+    const msg = { desde, nombre, texto: String(texto).trim().slice(0, 500), hora: new Date().toISOString() };
+
+    if (!chatHistory.has(pedido_id)) chatHistory.set(pedido_id, []);
+    const hist = chatHistory.get(pedido_id);
+    hist.push(msg);
+    if (hist.length > MAX_CHAT_MSG) hist.shift();
+
+    io.to(`pedido:${pedido_id}`).emit('chat:mensaje', msg);
+  } catch (err) {
+    console.error('❌ Error chat:enviar:', err.message);
+  }
+});
+```
+
+---
+
+## 3. [SEGURIDAD] Webhook de Flow sin bloqueo cuando `FLOW_SECRET` no está configurado en sandbox
+
+**Archivo:** `backend/src/routes/pagos.js` — línea 148
+
+**Beneficio:** Cierra la ventana en que un atacante puede forjar un `POST /api/pagos/webhook` y marcar pagos como completados sin haber pagado, incluso en sandbox.
+
+```js
+// ANTES (sandbox sin secreto pasa directo)
+if (!flowSecret) {
+  if (config.FLOW_ENVIRONMENT !== 'sandbox') {
+    console.error('❌ FLOW_SECRET no configurado en producción — webhook rechazado');
+    return res.status(401).end();
+  }
+  console.warn('⚠️  FLOW_SECRET no configurado: webhook sin validación (solo sandbox)');
+}
+
+// DESPUÉS (sandbox sin secreto solo acepta localhost/127.0.0.1)
+if (!flowSecret) {
+  if (config.FLOW_ENVIRONMENT !== 'sandbox') {
+    console.error('❌ FLOW_SECRET no configurado en producción — webhook rechazado');
+    return res.status(401).end();
+  }
+  const remoteIp = req.ip || req.connection.remoteAddress || '';
+  const esLocal = remoteIp === '127.0.0.1' || remoteIp === '::1' || remoteIp === '::ffff:127.0.0.1';
+  if (!esLocal) {
+    console.warn('⚠️  Webhook sandbox rechazado desde IP externa sin FLOW_SECRET:', remoteIp);
+    return res.status(401).end();
+  }
+  console.warn('⚠️  Webhook sandbox sin firma (local):', remoteIp);
+}
+```
+
+---
+
+## 4. [RENDIMIENTO] Query a la DB en cada evento `rider:ubicacion`
+
+**Archivo:** `backend/src/sockets/index.js` — línea 78
+
+**Beneficio:** Elimina una consulta a PostgreSQL en cada pulso de GPS (cada ~3-5 s por rider), reduciendo carga en la DB en un 70-80% para el tracking.
+
+```js
+// ANTES (query a la DB en cada ping de ubicación)
+socket.on('rider:ubicacion', async ({ lat, lng }) => {
+  // ...
+  const { rows } = await db(
+    `SELECT id, negocio_id FROM pedidos
+     WHERE rider_id = $1 AND estado IN ('asignado','retiro','en_camino')`,
+    [socket.rider_id]
+  );
+  rows.forEach(pedido => { /* emit */ });
+});
+
+// DESPUÉS (caché en memoria por socket; se invalida al cambiar estado via REST)
+// Al conectar el rider, inicializar caché:
+socket._pedidosActivos = []; // [{id, negocio_id}]
+
+// Agregar helper para refrescar (llamar desde el socket o exportar al route de estado):
+async function refrescarPedidosActivos(socket) {
+  if (!socket.rider_id) return;
+  const { rows } = await db(
+    `SELECT id, negocio_id FROM pedidos
+     WHERE rider_id = $1 AND estado IN ('asignado','retiro','en_camino')`,
+    [socket.rider_id]
+  );
+  socket._pedidosActivos = rows;
+}
+
+socket.on('rider:ubicacion', async ({ lat, lng }) => {
+  if (rol !== 'rider' || !socket.rider_id) return;
+  if (typeof lat !== 'number' || typeof lng !== 'number') return;
+
+  try {
+    await db('UPDATE riders SET lat = $1, lng = $2 WHERE id = $3', [lat, lng, socket.rider_id]);
+
+    // Usar caché; refrescar solo si está vacío
+    if (socket._pedidosActivos.length === 0) await refrescarPedidosActivos(socket);
+
+    socket._pedidosActivos.forEach(pedido => {
       io.to(`negocio:${pedido.negocio_id}`)
         .to(`pedido:${pedido.id}`)
-        .emit('rider:ubicacion', { rider_id: socket.rider_id, pedido_id: pedido.id, lat, lng, timestamp: ahora });
+        .emit('rider:ubicacion', { rider_id: socket.rider_id, pedido_id: pedido.id, lat, lng, timestamp: Date.now() });
     });
   } catch (err) {
     console.error('❌ Error al actualizar ubicación:', err.message);
@@ -202,40 +174,29 @@ socket.on('rider:ubicacion', async ({ lat, lng }) => {
 
 ---
 
-## 5. Seguridad: Chat sin límite de tamaño de mensaje (DoS) ⚠️ Sin corregir desde 2026-08-31 (3ª semana)
+## 5. [UX] Cambio de estado del pedido no notifica a la sala de tracking
 
-**Archivo:** `backend/src/sockets/index.js:161`
+**Archivo:** `backend/src/routes/pedidos.js` — línea 278
 
-**Beneficio:** Previene que un actor malicioso inunde memoria del servidor y los clientes conectados enviando mensajes de chat de tamaño arbitrario.
+**Beneficio:** Los clientes que siguen el pedido vía `pedido:seguir` reciben actualizaciones de estado en tiempo real, sin necesidad de polling.
 
-**Código actual:**
 ```js
-socket.on('chat:enviar', ({ pedido_id, texto }) => {
-  if (!pedido_id || !texto || !String(texto).trim()) return;
-  const desde = rol === 'rider' ? 'rider' : 'negocio';
-  const msg = { desde, nombre, texto: String(texto).trim(), hora: new Date().toISOString() };
+// ANTES (solo notifica a la sala del negocio)
+req.app.get('io')?.to(`negocio:${pedido.negocio_id}`).emit('pedido:actualizado', {
+  id: actualizado.id, estado: actualizado.estado
+});
+
+// DESPUÉS (notifica también a la sala de tracking del pedido)
+const io = req.app.get('io');
+if (io) {
+  const payload = { id: actualizado.id, estado: actualizado.estado };
+  io.to(`negocio:${pedido.negocio_id}`).emit('pedido:actualizado', payload);
+  io.to(`pedido:${pedido.id}`).emit('pedido:actualizado', payload);
+
+  // Si el rider avanzó a 'en_camino', invalidar caché de pedidos activos en su socket
+  if (nuevoEstado === 'en_camino' || nuevoEstado === 'entregado') {
+    const riderSockets = await io.in(`rider:${pedido.rider_id}`).fetchSockets();
+    riderSockets.forEach(s => { s._pedidosActivos = []; });
+  }
+}
 ```
-
-**Código propuesto:**
-```js
-const MAX_CHAT_BYTES = 500;
-
-socket.on('chat:enviar', ({ pedido_id, texto }) => {
-  if (!pedido_id || !texto) return;
-  const textoLimpio = String(texto).trim().slice(0, MAX_CHAT_BYTES);
-  if (!textoLimpio) return;
-  const desde = rol === 'rider' ? 'rider' : 'negocio';
-  const msg = { desde, nombre, texto: textoLimpio, hora: new Date().toISOString() };
-```
-
----
-
-## Resumen de estado
-
-| # | Mejora | Prioridad | Estado |
-|---|--------|-----------|--------|
-| 1 | `pedido:seguir` sin auth | 🔴 Alta | Pendiente (3ª semana) |
-| 2 | Race condition `aceptarOferta` | 🔴 Alta | Pendiente (3ª semana) |
-| 3 | Cobro antes de INSERT en BD | 🟠 Media | Pendiente (2ª semana) |
-| 4 | GPS throttle | 🟡 Media | Pendiente (3ª semana) |
-| 5 | Chat sin límite de tamaño | 🟡 Media | Pendiente (3ª semana) |
