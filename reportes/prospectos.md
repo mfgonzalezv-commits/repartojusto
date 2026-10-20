@@ -1,18 +1,18 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-10-19
+**Actualizado:** 2026-10-20
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Verano se acerca — configura tu canal" redactado 18/10 — completos y churrascos peak diciembre = prepararse ahora; 29 días después del 18 = ya tienen los números reales de comisiones; ahorro $300K+/mes vs. Rappi |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Un mes del 18 — el verano trae más pollos" redactado 18/10 — pollo asado = demanda constante + pico diciembre; un mes de comisiones post-18 ya pesa; 30 pollos/día a $9K en Rappi = $756K/mes comisión vs. $135K con RJ; diferencia $621K/mes |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Noviembre en 11 días — el verano trae más pollos" redactado 20/10 — pollo asado = peak diciembre; 30 pollos/día $9K Rappi = $756K/mes comisión vs. $135K con RJ; diferencia $621K/mes |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alergia primavera" redactado 18/10 — octubre = peak antihistamínicos/nasales + temporada alta delivery salud; sucursal local autonomía delivery $500 fijo vs. porcentual |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Verano = más pizas delivery" redactado 18/10 — pizza sube en temporada alta; preparar canal ahora antes de noviembre; ahorro ~$990K/mes vs. Rappi ($2.800/pedido) |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alta sushi empieza" redactado 18/10 — oct-dic = peak sushi celebraciones; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo = $5.100 ahorro por mesa; configurar canal antes de noviembre |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Se viene el verano y la sidra" redactado 18/10 — noviembre-diciembre = peak MÁXIMO botillerías (asados, Navidad, Año Nuevo); hoy octubre = momento de configurar canal propio; cada caja vino $15K Rappi = $10.500 neto vs. $14.500 con RJ |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Snacks y bebidas de verano" redactado 18/10 — temporada alta almacenes empieza; reposición bebidas/hielos/snacks = mayor volumen; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Tortas de aniversario primaveral + Navidad en 2 meses" redactado 18/10 — tortas = peak Navidad/Año Nuevo en 2 meses; octubre = configurar canal delivery antes del rush; Rappi Turbo Quilpué urgencia |
-| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Rotisería y verano" redactado 18/10 — asados y pollo delivery crecen en primavera; 20 pedidos/día $8K en Rappi: $44K/día comisión vs. $10K RJ = diferencia $34K/día |
+| 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Noviembre en 11 días — rotisería y verano" redactado 20/10 — asados y pollo delivery peak temporada alta; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = diferencia $34K/día |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Café de verano al aire libre" redactado 18/10 — primavera activa = terrazas y café delivery al aire libre; onces delivery + despacho $500 fijo para el café vecinal |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alta vacunas y antipulgas primavera" redactado 18/10 — octubre = peak vacunas anuales + antipulgas primavera = mayor volumen medicamentos mascotas del año; delivery $500 fijo vs. porcentual |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Útiles escolares y actividades verano" redactado 18/10 — octubre = back-to-school segundo semestre + proyectos fin de año; único canal delivery librería en Villa Alemana |
@@ -33,7 +33,7 @@
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (62 días silencio) + FP EN 2 DÍAS redactado 16/09 — PedidosYa multada US$35M 2026 + Uber compra empresa madre, SSW 62 días sin comunicar contrato 2027, tablas sushi reunión del 18 = $5.000+ comisión vs. $500 fijo |
 | 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — PedidosYa US$35M multas 2026, SSW 61 días en silencio sin comunicar contrato 2027, FP en 3 días = AHORA O NUNCA este año |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
-| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | "Post-18 + FNE/SSW (64 días silencio) / El 18 ya pasó — ¿cuánto quedó de las empanadas?" redactado 18/09 — en PedidosYa + Uber Eats doble comisión; empanadas = PEAK MÁXIMO del 18; PedidosYa US$35M multas; SSW 64 días sin comunicar contrato 2027; tel. +56 32 324 2360 |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | "Seguimiento FNE/SSW (96 días silencio) / ¿Siguen en PedidosYa sin saber qué pasa en 2027?" redactado 20/10 — en PedidosYa + Uber Eats doble comisión; PedidosYa US$35M multas 2026; SSW 96 días sin comunicar contrato 2027; tel. +56 32 324 2360 |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | Seguimiento FNE/SSW (61 días silencio) + Fiestas Patrias EN 3 DÍAS redactado 15/09 — 20 años de trayectoria merecen partner con certeza real; PedidosYa US$35M multas, SSW 61 días en silencio; FP en 3 días = tortas+pizzas+empanadas = PEAK MÁXIMO del año |
@@ -93,7 +93,7 @@
 | 87 | Yuki Sushi Delivery | Sushi | Ramón Reyes Arancibia 2196, Villa Alemana (@deliveryyukisushi) | Nuevo | — | Presentación redactada 13/07 — 10K seguidores Instagram, op. Dom-Sáb hasta 23:45, tel. +56 32 322 5149 |
 | 88 | La Choza | Comida venezolana / peruana / ecuatoriana / colombiana | Villa Alemana | Nuevo | — | Presentación redactada 13/07 — especialidad en cocina latinoamericana, único del rubro en el pipeline |
 | 89 | Fajitas Tex Mex Delivery | Comida tex-mex | Villa Alemana (@fajitastexmex_villa_alemana, Facebook) | Nuevo | — | Presentación redactada 14/07 — canal propio Instagram+Facebook, WhatsApp +56 9 57609318, primer tex-mex del pipeline, Ma-Sá 17:30-23:30 |
-| 90 | Buenaventura Pizzería & Sandwiches | Pizzería / sandwichería | Freire 498, Villa Alemana | Nuevo | — | Seguimiento FNE/SSW (60 días silencio) + Fiestas Patrias 4 días redactado 14/09 — en Uber Eats + PedidosYa, PedidosYa US$35M multas 2026, SSW 60 días en silencio, pizza/sándwich peak del 18, tel. +56 9 4113 4197 |
+| 90 | Buenaventura Pizzería & Sandwiches | Pizzería / sandwichería | Freire 498, Villa Alemana | Nuevo | — | "Seguimiento FNE/SSW (96 días silencio) + verano en 11 días" redactado 20/10 — en Uber Eats + PedidosYa doble comisión; PedidosYa US$35M multas 2026; SSW 96 días sin comunicar contrato 2027; peak pizza verano diciembre; tel. +56 9 4113 4197 |
 | 91 | RetroSushi Delivery | Sushi | El Peuco 494, Villa Alemana | Nuevo | — | Presentación redactada 15/07 — 29K seguidores Instagram @retrosushidelivery, delivery todos los días, tel. +56977103910 / +56 32 324 5209 |
 | 92 | Restobar Hay Don Carlos | Comida casera / restobar | Baquedano 784, Villa Alemana | Nuevo | — | Presentación redactada 15/07 — comida casera porciones abundantes, Facebook @restobarhaydoncarlos, tel. +56 9 6878 1775 |
 | 93 | Yo Invito Local | Hamburguesas / comida rápida | Porvenir Sur, Villa Alemana | Nuevo | — | Presentación redactada 16/07 — canal propio WhatsApp +56933462954, @yoinvitolocal, Lun-Dom 12:00-23:45 |
@@ -226,6 +226,8 @@
 | 220 | Restaurante Fusión Peruana | Comida peruana | Villa Alemana (@fusionperuanaoficial, Instagram) | Nuevo | — | Presentación redactada 18/10 — cocina peruana con canal propio Instagram y enlace de pedidos, sin grandes plataformas confirmadas; ticket alto (ceviche/lomo saltado $12K-$18K) = ahorro $3.000-$4.600/pedido vs. Rappi/Uber Eats; 3.300+ seguidores Instagram |
 | 221 | Wok & Sushi Express | Comida asiática / wok | Villa Alemana (Rappi) | Nuevo | — | Presentación redactada 19/10 — restaurante asiático fusion activo en Rappi VA, comida fresca ideal para temporada verano (noviembre-enero), ticket promedio $8.000-$12.000 = comisión Rappi $2.240-$3.360 vs. $500 fijo RepartoJusto; argumento: "comida fresca y liviana en verano = más pedidos, sin que te suba la comisión" |
 | 222 | Dulce Tentación Repostería | Repostería / tortas | Villa Alemana (Instagram + WhatsApp canal propio) | Nuevo | — | Presentación redactada 19/10 — repostería artesanal con canal propio (Instagram + pedidos WhatsApp), sin grandes plataformas; tortas personalizadas ticket $15.000-$40.000; peak noviembre-diciembre (cumpleaños, Navidad, fiestas fin de año); argumento: potenciar canal directo con rider local $500 fijo, sin comisión porcentual |
+| 223 | Pastelería La Mela Villa Alemana | Pastelería / repostería | Villa Alemana (Uber Eats) | Nuevo | — | Presentación redactada 20/10 — pastelería activa en Uber Eats VA, tortas y postres ticket $8.000-$20.000; peak noviembre-diciembre (Navidad, cumpleaños fin de año); torta $15.000 en Uber Eats = $5.250 comisión vs. $500 fijo RJ; configurar canal antes del rush de Navidad |
+| 224 | Lomitería El Alemán Villa Alemana | Comida chilena / lomitos | Villa Alemana (canal propio Instagram) | Nuevo | — | Presentación redactada 20/10 — lomitería clásica con canal propio Instagram, sin grandes plataformas detectadas; lomitos y completos ticket $4.000-$7.000; verano = peak estudiantes de vacaciones noviembre-enero; 25 pedidos/día plataforma = comisión $1.000-$1.500/pedido vs. $500 fijo RJ; argumento canal directo + rider local |
 
 ---
 
@@ -316,6 +318,44 @@
 
 **[222] Dulce Tentación Repostería — Presentación "Tortas y canal propio: el rider que les falta":**
 "Hola Dulce Tentación! De RepartoJusto. Los vemos con pedidos activos por Instagram y WhatsApp — muy buena estrategia de canal directo. La pregunta es: ¿tienen rider confiable para entregar las tortas y postres, o dependen de que el cliente las retire? Con RepartoJusto pueden activar delivery propio en Villa Alemana por $500 fijos por entrega — sin porcentaje de la venta. Una torta de $30.000 pedida por WhatsApp con delivery propio: $29.500 para el negocio. La misma torta por Rappi (28%): $21.600. Diferencia: $7.900 por torta. Con noviembre en 12 días y el peak de Navidad llegando, el timing es perfecto. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Esta semana? — Equipo RepartoJusto"
+
+---
+
+### MENSAJES DEL DÍA (2026-10-20) — MARTES / NOVIEMBRE EN 11 DÍAS / FNE+SSW 96 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es martes **20 de octubre**. Noviembre está en **11 días** — el verano ya se siente y los negocios de comida, helados y repostería entran a la temporada alta de diciembre. Quien configura su canal de delivery HOY llega rodado al rush de fin de año. SSW Partners lleva **96 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 2 seguimientos octubre para Contactados (#2 Pollería Don Pollo y #9 Rotisería El Gaucho), 2 seguimientos FNE/SSW para prospectos PedidosYa urgentes (#30 Poh Che Empanadas y #90 Buenaventura Pizzería), y 2 presentaciones para nuevos prospectos (#223 Pastelería La Mela y #224 Lomitería El Alemán). Pipeline total: **224 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **88 días consecutivos** con borradores activos sin confirmación de envío — crítico; (2) SSW Partners **96 días en silencio** sin comunicar cambios a afiliados PedidosYa; (3) **Noviembre en 11 días** — repostería, heladerías, botillerías y comida rápida entran a temporada alta; (4) Los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102) necesitan mensajes urgentes — la ventana SSW cierra cuando comuniquen nuevas condiciones para 2027.
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento Octubre "Noviembre en 11 días: el verano trae más pollos":**
+"Hola Don Pollo! De RepartoJusto. Noviembre arranca en 11 días y con él comienza el peak del pollo asado — fiestas de empresa, cumpleaños de fin de año, barbacoas de diciembre. Si vendes 30 pollos al día a $9.000 en Rappi (28% comisión), la plataforma se lleva $2.268.000 al mes. Con RepartoJusto: 30 × $500 = $450.000 al mes. **Diferencia mensual: más de $1.800.000 que se quedan en el local.** Canal configurado en octubre = canal listo para el peak de diciembre. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Conversamos esta semana? — Equipo RepartoJusto"
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento Octubre "Noviembre en 11 días: asados y verano":**
+"Hola El Gaucho! De RepartoJusto. En 11 días arranca noviembre y el delivery de rotisería se dispara — asado al palo, pollo al carbón, carnes a la parrilla tienen su peak en verano. Si tienes 20 pedidos diarios a $8.000 en Rappi (28% comisión), la plataforma se lleva $1.344.000 al mes. Con RepartoJusto: 20 × $500 = $300.000 al mes. **La diferencia: más de $1.000.000 por mes que se quedan en el negocio.** El canal configurado hoy está listo para el peak de diciembre. Registro sin costo: repartojusto-production.up.railway.app ¿Le damos? — Equipo RepartoJusto"
+
+---
+
+**[30] Poh Che Empanadas & Sandwichs — Seguimiento FNE/SSW 96 días "¿Siguen en PedidosYa sin saber qué pasa en 2027?":**
+"Hola Poh Che! De RepartoJusto — plataforma de delivery local con tarifa fija. Un dato urgente: SSW Partners, la empresa que compró PedidosYa Chile en julio, lleva **96 días sin comunicarles qué condiciones tendrán sus contratos en 2027**. La FNE multó a PedidosYa dos veces en 2026 (US$35 millones total) y siguen en juicio negando los cargos. Ustedes están en PedidosYa Y Uber Eats — pagando comisión doble. Con RepartoJusto: $500 fijo por cada pedido entregado, sin porcentaje, sin cambio de condiciones. ¿Conversamos antes de noviembre? Tel. +56 32 324 2360 o repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[90] Buenaventura Pizzería & Sandwiches — Seguimiento FNE/SSW 96 días + verano "El verano sube los pedidos — ¿a cuánto asciende la comisión?":**
+"Hola Buenaventura Pizzería! De RepartoJusto. El verano arranca en 11 días y con él sube la demanda de pizza delivery y sándwiches. El problema: en PedidosYa y Uber Eats simultáneamente cada pedido paga comisión en ambas plataformas. Sumado a que SSW Partners — la empresa que compró PedidosYa Chile en julio — lleva **96 días sin comunicar condiciones para 2027**. Con una pizza de $12.000 en PedidosYa (34% comisión = $4.080) vs. $500 con RepartoJusto, la diferencia es de $3.580 por pizza. Con 20 pizzas al día en el peak de diciembre, el ahorro mensual supera $2.000.000. ¿Lo conversamos? Tel. +56 9 4113 4197 o repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[223] Pastelería La Mela Villa Alemana — Presentación "Peak de Navidad en 2 meses: el canal de delivery correcto":**
+"Hola La Mela! De RepartoJusto, plataforma de delivery local de Villa Alemana. Los encontramos activos en Uber Eats — muy bien. El peak de pastelerías ya se acerca: noviembre-diciembre es la temporada de tortas de cumpleaños, Navidad y fiestas de empresa. Una torta de $15.000 pedida por Uber Eats (35% comisión = $5.250) vs. $500 con RepartoJusto: diferencia de $4.750 por torta. Con 10 tortas delivery al día en diciembre, el ahorro mensual supera $1.400.000. Canal configurado hoy = canal rodado para Navidad. Somos 100% locales en Villa Alemana, riders del barrio. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo revisamos? — Equipo RepartoJusto"
+
+---
+
+**[224] Lomitería El Alemán Villa Alemana — Presentación "Canal propio + rider: el mejor combo para el verano":**
+"Hola! De RepartoJusto, plataforma de delivery local de Villa Alemana con tarifa fija. Estamos sumando los negocios de comida chilena clásica de la zona antes del verano — los lomitos, completos y sándwiches tienen su peak en noviembre-enero, cuando los estudiantes están de vacaciones. Con RepartoJusto: $500 fijo por entrega, sin comisión porcentual. Con 25 pedidos al día a $5.000 promedio en plataforma (28-30% comisión = $1.250-$1.500/pedido), la diferencia mensual supera $570.000. Sin contrato, sin cuota de alta, riders locales del barrio. ¿Se interesan? repartojusto-production.up.railway.app — Equipo RepartoJusto"
 
 ---
 
