@@ -144,12 +144,9 @@ router.post('/webhook', async (req, res, next) => {
   // Validar firma HMAC — siempre que FLOW_SECRET esté configurado (sandbox o producción)
   const flowSecret = config.FLOW_SECRET;
   if (!flowSecret) {
-    // Sin secreto configurado: bloquear en producción, advertir en sandbox
-    if (config.FLOW_ENVIRONMENT !== 'sandbox') {
-      console.error('❌ FLOW_SECRET no configurado en producción — webhook rechazado');
-      return res.status(401).end();
-    }
-    console.warn('⚠️  FLOW_SECRET no configurado: webhook sin validación (solo sandbox)');
+    // FLOW_SECRET siempre requerido — sin él cualquier atacante puede forjar webhooks
+    console.error('❌ FLOW_SECRET no configurado — webhook rechazado (fix: configurar FLOW_SECRET)');
+    return res.status(401).end();
   } else {
     const receivedSig = req.headers['x-flow-signature'];
     if (!receivedSig) {

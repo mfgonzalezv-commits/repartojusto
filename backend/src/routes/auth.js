@@ -200,7 +200,10 @@ router.post('/login',
       );
 
       const usuario = rows[0];
-      if (!usuario || !(await bcrypt.compare(password, usuario.password))) {
+      // Siempre correr bcrypt para prevenir timing attack / enumeración de emails
+      const hashRef = usuario?.password ?? '$2a$10$repartojusto.dummy.hash.timing.protection.xxxxxxxxxxx';
+      const senhaOk = await bcrypt.compare(password, hashRef);
+      if (!usuario || !senhaOk) {
         return res.status(401).json({ error: 'Credenciales incorrectas' });
       }
       if (!usuario.activo) {

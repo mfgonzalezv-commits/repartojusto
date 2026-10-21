@@ -305,7 +305,7 @@ router.put('/negocios/:id/activo',
 // Agrega un bono manual al saldo del rider
 router.post('/riders/:id/incentivo',
   [
-    body('monto').isInt({ min: 1 }),
+    body('monto').isInt({ min: 1, max: 500000 }),
     body('motivo').trim().notEmpty()
   ],
   validar,
