@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
 **Última verificación:** 2026-10-21T00:00:00Z
-**Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por el proxy de egreso del entorno de ejecución (connect_rejected). El endpoint no respondió (HTTP 000, curl exit 56).
+**Estado:** ❌ NO VERIFICADO
+**Detalle:** La verificación no pudo completarse. El proxy de egress del entorno de ejecución bloqueó la conexión saliente a `repartojusto-production.up.railway.app:443` (connect_rejected). El estado real del servidor es desconocido. Se requiere permitir el host en la política de red del entorno o ejecutar la verificación desde un entorno con acceso a internet irrestricto.
