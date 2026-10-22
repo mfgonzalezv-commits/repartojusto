@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-10-22T00:00:00Z
-**Estado:** ❌ NO VERIFICADO
-**Detalle:** Error de red — la conexión a repartojusto-production.up.railway.app:443 fue rechazada por el proxy de egreso del entorno de ejecución remoto (connect_rejected). No fue posible determinar si el servidor está operativo o caído. Se requiere verificación desde red sin restricciones.
+**Última verificación:** 2026-10-22T15:31:46Z
+**Estado:** ❌ CAÍDO
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por el proxy de red del entorno de ejecución (connect_rejected: el host no está permitido en la política de red de esta sesión). No se obtuvo respuesta HTTP.
