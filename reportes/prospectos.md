@@ -1,21 +1,21 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-10-21
+**Actualizado:** 2026-10-22
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Noviembre en 10 días: completos y churrascos de verano" redactado 21/10 |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Noviembre en 11 días — el verano trae más pollos" redactado 20/10 — pollo asado = peak diciembre; 30 pollos/día $9K Rappi = $756K/mes comisión vs. $135K con RJ; diferencia $621K/mes |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alergia primavera" redactado 18/10 — octubre = peak antihistamínicos/nasales + temporada alta delivery salud; sucursal local autonomía delivery $500 fijo vs. porcentual |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Jueves 22/10 / Noviembre en 10 días / Primavera peak alergias" redactado 22/10 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Verano = más pizas delivery" redactado 18/10 — pizza sube en temporada alta; preparar canal ahora antes de noviembre; ahorro ~$990K/mes vs. Rappi ($2.800/pedido) |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alta sushi empieza" redactado 18/10 — oct-dic = peak sushi celebraciones; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo = $5.100 ahorro por mesa; configurar canal antes de noviembre |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Jueves 22/10 / Noviembre en 10 días / Temporada alta sushi" redactado 22/10 — nov-dic = celebraciones fin de año + cenas empresa; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Noviembre en 10 días: el verano es el peak de las botillerías" redactado 21/10 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Snacks y bebidas de verano" redactado 18/10 — temporada alta almacenes empieza; reposición bebidas/hielos/snacks = mayor volumen; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Tortas de aniversario primaveral + Navidad en 2 meses" redactado 18/10 — tortas = peak Navidad/Año Nuevo en 2 meses; octubre = configurar canal delivery antes del rush; Rappi Turbo Quilpué urgencia |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Noviembre en 11 días — rotisería y verano" redactado 20/10 — asados y pollo delivery peak temporada alta; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = diferencia $34K/día |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Noviembre en 10 días: terrazas, café frío y delivery de verano" redactado 21/10 |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Temporada alta vacunas y antipulgas primavera" redactado 18/10 — octubre = peak vacunas anuales + antipulgas primavera = mayor volumen medicamentos mascotas del año; delivery $500 fijo vs. porcentual |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Útiles escolares y actividades verano" redactado 18/10 — octubre = back-to-school segundo semestre + proyectos fin de año; único canal delivery librería en Villa Alemana |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Jueves 22/10 / Primavera peak veterinario / Noviembre en 10 días" redactado 22/10 — peak vacunas anuales + antipulgas primavera; pack antipulgas $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; delivery urgente medicamentos = mayor impacto tarifa fija |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 22/10 / Último trimestre escolar / Noviembre en 10 días" redactado 22/10 — útiles fin de año + proyectos; único canal delivery librería en VA; $500 fijo especialmente diferenciador en tickets bajos ($3.000-$5.000 resmas/materiales) |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Proyectos de primavera y reparaciones" redactado 18/10 — primavera = peak reparaciones casa + proyectos jardín; materiales delivery $500 fijo = diferenciador único en VA |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "La temporada alta ya llegó — noviembre en 10 días" redactado 21/10 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
@@ -230,10 +230,50 @@
 | 224 | Lomitería El Alemán Villa Alemana | Comida chilena / lomitos | Villa Alemana (canal propio Instagram) | Nuevo | — | Presentación redactada 20/10 — lomitería clásica con canal propio Instagram, sin grandes plataformas detectadas; lomitos y completos ticket $4.000-$7.000; verano = peak estudiantes de vacaciones noviembre-enero; 25 pedidos/día plataforma = comisión $1.000-$1.500/pedido vs. $500 fijo RJ; argumento canal directo + rider local |
 | 225 | Fajitas Tex Mex Delivery VA | Comida tex-mex | Villa Alemana (Facebook canal propio, WhatsApp) | Nuevo | — | Presentación redactada 21/10 — canal propio WhatsApp activo, sin grandes plataformas detectadas; fajitas ticket $10.000-$14.000; noviembre en 10 días = verano activa comida tex-mex; ahorro $2.860/pedido vs. Rappi |
 | 226 | Sushiweb Delivery Villa Alemana | Sushi | Villa Alemana (308+ reseñas Chilopina) | Nuevo | — | Presentación redactada 21/10 — sushi delivery activo con buena reputación local; ticket promedio $12.000-$18.000; noviembre-diciembre peak sushi celebraciones; roll $14.000 Rappi (28%) = $3.920 comisión vs. $500 fijo RJ; ahorro $1.500.000+/mes en diciembre |
+| 227 | Arepas Don Tito Villa Alemana | Comida venezolana / arepas | Villa Alemana (Instagram canal propio) | Nuevo | — | Presentación redactada 22/10 — comida venezolana con canal propio Instagram, sin grandes plataformas; arepas $8.000 en plataforma = $2.400 comisión vs. $500 fijo RJ; noviembre en 10 días = verano activa comida venezolana; diferencia $1.900 por pedido |
+| 228 | Kuchen y Strudel Villa Alemana | Pastelería alemana / repostería | Villa Alemana (canal propio Instagram) | Nuevo | — | Presentación redactada 22/10 — repostería con identidad local (nombre ciudad = herencia alemana), sin grandes plataformas; kuchen/tortas ticket $4.000-$15.000; Navidad en 9 semanas = peak pastelería del año; canal propio + rider local $500 fijo |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-10-22) — JUEVES / NOVIEMBRE EN 10 DÍAS / FNE+SSW 98 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es jueves **22 de octubre**. Noviembre en **10 días** — ya estamos en la cuenta regresiva. SSW Partners lleva **98 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 4 seguimientos para los Contactados con borradores de 4 días (#3 Farmacia Cruz Verde, #5 Sushi Zen, #11 Veterinaria Huellitas, #12 Librería El Saber — todos desde 18/10) con argumentos de peak primaveral y temporada alta, y 2 presentaciones para nuevos prospectos de canal propio (#227 Arepas Don Tito y #228 Kuchen y Strudel VA). Pipeline total: **228 prospectos**.
+
+> **ALERTAS URGENTES:** (1) **#22 Sushi Point Delivery** (tel. (32) 324 0504) y **#15 Melt Pizzas** llevan **90 días consecutivos** con borradores activos sin confirmación de envío; (2) SSW Partners **98 días en silencio** para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102); (3) **Noviembre en 10 días** — heladerías, botillerías, cafés y farmacias entran a temporada alta.
+
+---
+
+**[3] Farmacia Cruz Verde — Seguimiento "Jueves 22/10 / Noviembre en 10 días / Primavera = peak alergias":**
+"Hola Farmacia Cruz Verde! De RepartoJusto. Hoy jueves 22 de octubre — noviembre está en 10 días y con él llega el peak de las alergias primaverales 🌸 Antihistamínicos, gotas nasales, medicamentos urgentes — los clientes quieren que lleguen rápido sin salir de casa. Con RepartoJusto: $500 fijo por pedido entregado, sin porcentaje sobre la venta. Una caja de antihistamínicos de $8.000 entregada por Rappi (28% comisión = $2.240) vs. $500 con nosotros: $1.740 de diferencia por entrega que se queda en el negocio. El delivery urgente de medicamentos es donde más impacta la tarifa fija — el cliente está dispuesto a pagar por rapidez, y toda esa disposición se la lleva la plataforma en porcentaje. Canal configurado hoy = servicio listo para el rush de primavera. Registro sin costo, sin contrato: repartojusto-production.up.railway.app ¿Lo activamos esta semana? — Equipo RepartoJusto"
+
+---
+
+**[5] Sushi Zen — Seguimiento "Jueves 22/10 / Noviembre en 10 días / Temporada alta sushi":**
+"Hola Sushi Zen! De RepartoJusto. Noviembre en 10 días — y el sushi entra a su mejor temporada del año 🍣 Nov-dic son las semanas de cenas de empresa, regalos corporativos y celebraciones de fin de año. El ticket promedio sube y también las comisiones. Una tabla de $20.000 en Rappi (28% = $5.600 que se va a la app) vs. $500 con RepartoJusto: $5.100 de diferencia por cada orden. En diciembre con 20 tablas al día, eso supera $3.000.000 al mes que se quedan en el negocio. Quien tiene su canal de delivery listo en octubre llega con ventaja a diciembre. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Esta semana lo activamos? — Equipo RepartoJusto"
+
+---
+
+**[11] Veterinaria Huellitas — Seguimiento "Jueves 22/10 / Primavera peak veterinario":**
+"Hola Veterinaria Huellitas! De RepartoJusto. Jueves 22 de octubre — la primavera está en su punto más activo y las veterinarias viven su mayor temporada del año 🐾 Vacunas anuales, antipulgas de primavera, medicamentos urgentes — el delivery evita que el dueño maneje hasta la veterinaria con el animal. Con RepartoJusto: $500 fijo por pedido entregado, sin porcentaje. Un pack antipulgas de $12.000 entregado por Rappi (28% = $3.360) vs. $500 fijo: $2.860 de diferencia por pedido que se queda en el negocio. Noviembre = el mes de mayor volumen de vacunas del año — tener el canal listo HOY es la diferencia. Registro sin costo, sin contrato: repartojusto-production.up.railway.app ¿Lo conversamos? — Equipo RepartoJusto"
+
+---
+
+**[12] Librería El Saber — Seguimiento "Jueves 22/10 / Último trimestre escolar / Noviembre en 10 días":**
+"Hola Librería El Saber! De RepartoJusto. Jueves 22 de octubre — noviembre en 10 días y arranca el último trimestre escolar 📚 Útiles de fin de año, proyectos de ciencias, láminas — las familias buscan que lleguen rápido sin ir hasta la librería. Librería El Saber sería el único canal de delivery de librería en Villa Alemana — ninguna plataforma grande cubre ese nicho. Con RepartoJusto: $500 fijo por pedido, sin porcentaje. Una resma de hojas de $4.500 entregada por canal propio: $4.000 para el negocio. Diciembre = los proyectos finales más importantes del año. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Hablamos? — Equipo RepartoJusto"
+
+---
+
+**[227] Arepas Don Tito Villa Alemana — Presentación "Canal propio + rider: el combo del verano":**
+"Hola! Somos RepartoJusto, plataforma de delivery local de Villa Alemana 🏡 Vimos que hacen delivery de arepas y comida venezolana con canal propio — muy bien. La pregunta es si tienen rider confiable para los pedidos de WhatsApp o Instagram. Con RepartoJusto pueden activar delivery por rider local a $500 fijo por entrega, sin porcentaje sobre la venta. Para unas arepas de $8.000 entregadas con rider propio: $7.500 para el negocio. La misma orden por Uber Eats (30%): $5.600. Diferencia: $1.900 por pedido. Noviembre arranca en 10 días y la comida venezolana tiene su peak en verano — el timing es perfecto para activar el canal. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Conversamos? — Equipo RepartoJusto"
+
+---
+
+**[228] Kuchen y Strudel Villa Alemana — Presentación "Pastelería con identidad + tarifa fija para Navidad":**
+"Hola! Somos RepartoJusto, plataforma de delivery local de Villa Alemana 🏡 Kuchen y strudel en Villa Alemana — qué combinación tan perfecta con el nombre de la ciudad. Si hacen delivery o quieren activarlo, con RepartoJusto: $500 fijo por pedido entregado, sin porcentaje sobre la venta. Un kuchen de $6.000 entregado por Rappi (28%) = $1.680 de comisión; con nosotros: $500. Navidad está en 9 semanas y la repostería es el rubro de mayor peak en diciembre — quien tiene el canal listo en octubre llega rodado. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Hablamos? — Equipo RepartoJusto"
 
 ---
 

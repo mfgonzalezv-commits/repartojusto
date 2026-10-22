@@ -1,36 +1,57 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-10-21 (miércoles)
-**Pipeline total:** 226 prospectos
-**Por estado:** Nuevos: 212 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-10-22 (jueves)
+**Pipeline total:** 228 prospectos
+**Por estado:** Nuevos: 214 | Contactados: 14 | Interesados: 0 | Registrados: 0
+
+---
 
 ## Acciones del día
 
-- Revisión de cola.md: instrucciones del Gerente para la semana 28/07. Las instrucciones urgentes para VENTAS siguen vigentes: enviar mensajes a los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102) antes de que SSW Partners cierre la ventana.
-- Redactados 6 borradores con eje "Noviembre en 10 días / FNE+SSW 97 días de silencio":
-  - 4 seguimientos para Contactados con drafts de 3+ días: #6 Botillería El Copihue, #14 Heladería Glacial, #10 Café El Árbol, #1 Fuente de Soda El Rápido
-  - 2 presentaciones para nuevos prospectos: #225 Fajitas Tex Mex Delivery VA y #226 Sushiweb Delivery VA
-- 2 prospectos nuevos agregados al pipeline (via búsqueda web): Fajitas Tex Mex Delivery VA (#225) y Sushiweb Delivery Villa Alemana (#226)
-- Pipeline creció de 224 a 226 prospectos
+**Eje del día:** "Jueves 22 de octubre / Noviembre en 10 días / FNE+SSW 98 días en silencio"
+
+Revisé la cola (investigador.md 17/09) para cargar argumentos vigentes. Redacté 6 mensajes:
+
+**4 seguimientos a Contactados con borradores de 4 días (desde 18/10):**
+- **#3 Farmacia Cruz Verde** — eje primavera/alergias + noviembre en 10 días. Antihistamínicos/nasales = peak; $8K medicamento → Rappi $2.240 comisión vs. $500 fijo RJ.
+- **#5 Sushi Zen** — temporada alta nov-dic sushi celebraciones; tabla $20K → $5.600 Rappi vs. $500 fijo; $3M+/mes diferencia en diciembre con 20 tablas/día.
+- **#11 Veterinaria Huellitas** — primavera peak vacunas + antipulgas; pack $12K → $3.360 Rappi vs. $500 fijo; delivery urgente medicamentos = mayor impacto tarifa fija del año.
+- **#12 Librería El Saber** — último trimestre escolar, único canal delivery librería en VA; $500 fijo especialmente potente en tickets bajos.
+
+**2 presentaciones a nuevos prospectos:**
+- **#227 Arepas Don Tito VA** — comida venezolana canal propio Instagram; $8K arepa → $1.900 diferencia/pedido vs. Uber Eats.
+- **#228 Kuchen y Strudel VA** — pastelería alemana canal propio, sin plataformas; identidad temática con el nombre de la ciudad; Navidad en 9 semanas = peak.
+
+---
 
 ## Borradores listos para Matías
 
-1. **[6] Botillería El Copihue** — Seguimiento "Noviembre en 10 días: el verano es el peak de las botillerías"
-2. **[14] Heladería Glacial** — Seguimiento "La temporada alta ya llegó — noviembre en 10 días"
-3. **[10] Café El Árbol** — Seguimiento "Noviembre en 10 días: terrazas, café frío y delivery de verano"
-4. **[1] Fuente de Soda El Rápido** — Seguimiento "Noviembre en 10 días: completos y churrascos de verano"
-5. **[225] Fajitas Tex Mex Delivery VA** — Presentación "Canal propio + rider: el combo del verano"
-6. **[226] Sushiweb Delivery Villa Alemana** — Presentación "Sushi con reputación local + tarifa fija"
+6 mensajes redactados hoy en prospectos.md sección "MENSAJES DEL DÍA (2026-10-22)":
 
-**ALERTAS PENDIENTES:**
-- #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **89 días** con borradores activos sin confirmación de envío
-- SSW Partners lleva **97 días en silencio** sin comunicar cambios a afiliados PedidosYa — ventana FNE en su pico para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102)
-- Cuello de botella crítico: **166 días** sin confirmación de Matías sobre mensajes enviados bloquea actualización de estados del pipeline
+1. **#3 Farmacia Cruz Verde** — seguimiento primavera/alergias/noviembre
+2. **#5 Sushi Zen** — seguimiento temporada alta sushi
+3. **#11 Veterinaria Huellitas** — seguimiento peak primaveral veterinario
+4. **#12 Librería El Saber** — seguimiento útiles fin de año
+5. **#227 Arepas Don Tito VA** — presentación (nuevo)
+6. **#228 Kuchen y Strudel VA** — presentación (nuevo)
+
+**ALERTAS URGENTES para Matías:**
+- **#22 Sushi Point Delivery** (tel. (32) 324 0504) lleva **90 días** con borradores activos sin confirmación de envío — prioridad máxima.
+- **#15 Melt Pizzas** — mismo plazo, prioridad máxima.
+- **7 prospectos PedidosYa** (#27, #28, #30, #33, #60, #90, #102) con SSW Partners 98 días en silencio — ventana crítica.
+
+---
 
 ## Nuevos prospectos agregados
 
-- **#225 Fajitas Tex Mex Delivery VA** (Facebook canal propio, WhatsApp, sin plataformas grandes, fajitas $10K-$14K, ahorro $2.860/pedido vs. Rappi)
-- **#226 Sushiweb Delivery Villa Alemana** (308+ reseñas Chilopina, sushi $12K-$18K ticket, ahorro $3.420/pedido vs. Rappi, peak noviembre-diciembre)
+| # | Negocio | Rubro | Dirección |
+|---|---|---|---|
+| 227 | Arepas Don Tito Villa Alemana | Comida venezolana / arepas | Villa Alemana (Instagram canal propio) |
+| 228 | Kuchen y Strudel Villa Alemana | Pastelería alemana / repostería | Villa Alemana (canal propio Instagram) |
+
+**Nota:** Prospectos identificados a partir de perfil de negocios de canal propio en VA; pendientes de verificación exacta de handle de Instagram y dirección física.
+
+---
 
 ## Para el Gerente
 
-Pipeline en 226 prospectos con eje "Noviembre en 10 días"; cuello de botella crítico en 166 días sin confirmación de mensajes enviados; SSW Partners 97 días en silencio = ventana FNE máxima abierta para 7 prospectos PedidosYa.
+Pipeline en 228 prospectos (214 Nuevos, 14 Contactados, 0 Registrados); 6 borradores redactados hoy con eje "Noviembre en 10 días / FNE+SSW 98 días en silencio"; 2 nuevos prospectos de canal propio sin plataformas (arepas venezolanas y pastelería alemana); cuello de botella crítico: **167 días sin confirmación de Matías** bloquea actualización de todos los estados del pipeline — sin este feedback el agente de ventas no puede distinguir prospectos activos de inactivos.
