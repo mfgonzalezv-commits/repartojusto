@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-10-23
+**Actualizado:** 2026-10-24
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -234,10 +234,50 @@
 | 228 | Kuchen y Strudel Villa Alemana | Pastelería alemana / repostería | Villa Alemana (canal propio Instagram) | Nuevo | — | Presentación redactada 22/10 — repostería con identidad local (nombre ciudad = herencia alemana), sin grandes plataformas; kuchen/tortas ticket $4.000-$15.000; Navidad en 9 semanas = peak pastelería del año; canal propio + rider local $500 fijo |
 | 229 | Mazorcas de la Abuela VA | Comida colombiana / venezolana | Villa Alemana (canal propio Instagram, por verificar) | Nuevo | — | Presentación redactada 23/10 — comida latinoamericana delivery canal propio; sin grandes plataformas; peak verano 2026-27; ticket promedio $7.000-$10.000; $500 fijo vs. Uber Eats 30% = diferencia $1.600-$2.500/pedido |
 | 230 | Pizzería Il Forno Villa Alemana | Pizzería artesanal | Villa Alemana (canal propio, por verificar) | Nuevo | — | Presentación redactada 23/10 — pizzería artesanal sin grandes plataformas; viernes+sábado = peak pizza; ticket promedio $12.000-$18.000; vs. Rappi 28% = $3.360-$5.040 comisión vs. $500 fijo; Noviembre en 9 días = peak fin de año |
+| 231 | La Mano Burger Villa Alemana | Hamburguesería artesanal | Villa Alemana (Facebook @lamanoburger, canal propio) | Nuevo | — | Presentación redactada 24/10 — hamburguesería delivery canal propio ma-sá 19-23h; sin plataformas grandes; ticket $10.000-$15.000; $500 fijo vs. Rappi 28% = $2.800-$4.200 ahorro; sábado noche = peak máximo; Noviembre en 8 días |
+| 232 | Burger y Sandwich Take Away Peñablanca | Hamburguesería / sandwichería | Peñablanca zona VA (WhatsApp + retiro, canal propio) | Nuevo | — | Presentación redactada 24/10 — delivery-first canal propio WhatsApp sin plataformas; ticket $8.000-$13.000; rider local $500 fijo complementa canal; cobertura Peñablanca/VA/Quilpué; noviembre en 8 días = verano temporada alta |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-10-24) — SÁBADO / NOVIEMBRE EN 8 DÍAS / FNE+SSW 100 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 24 de octubre**. Noviembre en **8 días** y SSW Partners lleva **100 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 2 seguimientos para Contactados con borradores de 4 días (#6 Botillería El Copihue y #2 Pollería Don Pollo — sábado es el peak absoluto de botillerías y almuerzo familiar), 2 seguimientos FNE/SSW hito 100 días para prospectos PedidosYa (#90 Buenaventura Pizzería y #102 La Joya), y 2 presentaciones para nuevas hamburgueserías (#231 La Mano Burger y #232 Burger y Sandwich Take Away). Pipeline: **232 prospectos**.
+
+> **ALERTAS:** #22 Sushi Point (tel. (32) 324 0504) y #15 Melt Pizzas llevan **92 días** con borradores activos. SSW Partners **100 días en silencio** — ventana límite para los 7 prospectos PedidosYa.
+
+---
+
+**[6] Botillería El Copihue — Seguimiento "Sábado 24/10 / Peak fin de semana / Noviembre en 8 días":**
+"Hola! Te escribimos de RepartoJusto. ¡Hoy sábado es el día más alto de la semana para botillerías! La gente en casa pide directo al WhatsApp en vez de salir. Con RepartoJusto el delivery es $500 fijo por despacho — te quedas con el 100% del precio de venta, sin comisión porcentual. Y con noviembre en solo 8 días, el verano ya arrancó: las botillerías con delivery confirmado llegan a diciembre con ventaja. ¿Lo conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento "Sábado 24/10 / Almuerzo familiar / Noviembre en 8 días":**
+"Hola! De nuevo RepartoJusto. Sábado al mediodía = el momento más alto del pollo delivery en Chile. Cada pollo de $9.000 en Rappi te cobra $2.520 de comisión; con nosotros son $500 fijos y el resto es tuyo. Con noviembre en 8 días, diciembre (peak pollos asados, cenas de fin de año) ya está a la vuelta de la esquina — el canal configurado hoy llega rodado al rush. ¿Te cuento en 5 minutos cómo funciona? repartojusto-production.up.railway.app"
+
+---
+
+**[90] Buenaventura Pizzería — FNE/SSW "100 días en silencio / Certeza 2027":**
+"Hola! Te escribimos de RepartoJusto. Hoy se cumplen exactamente 100 días desde que SSW Partners (dueña de PedidosYa) lleva sin comunicar a sus afiliados qué condiciones tendrán en 2027 — multas US$35M, en juicio negando los cargos, y silencio total sobre el contrato del año que viene. Con nosotros son siempre $500 fijos por pedido entregado, en papel, sin sorpresas. Para una pizza de $12.000 en Rappi pagas $3.360 de comisión; con RepartoJusto $500 fijos. La diferencia mensual puede superar $800.000. ¿Conversamos? repartojusto-production.up.railway.app"
+
+---
+
+**[102] La Joya — FNE/SSW "100 días en silencio / Certeza 2027":**
+"Hola! Te escribimos de RepartoJusto. SSW Partners (dueña de PedidosYa) lleva 100 días sin comunicar a sus afiliados qué van a pagar en 2027 — mientras tanto la FNE ya los multó dos veces en 2026 por controlarte los precios, y en juicio niegan los cargos. ¿Seguirás esperando que te aclaren las condiciones? Con RepartoJusto son $500 fijos por pedido, siempre, sin porcentaje ni sorpresas. Para entrar: repartojusto-production.up.railway.app"
+
+---
+
+**[231] La Mano Burger Villa Alemana — Presentación "Canal propio / Peak sábado / Noviembre en 8 días":**
+"Hola! Soy Matías de RepartoJusto, plataforma de delivery de Villa Alemana. Vi que tienen delivery propio los martes a sábados por las noches — sábado es el peak más alto del año para hamburguesas. ¿Sabían que con plataformas como Rappi pagan $2.800-$4.200 de comisión por hamburguesa? Con nosotros son $500 fijos por pedido entregado, sin porcentaje sobre la venta. Noviembre en 8 días = temporada alta, el canal configurado hoy llega rodado al rush de diciembre. ¿Les cuento cómo funciona? repartojusto-production.up.railway.app"
+
+---
+
+**[232] Burger y Sandwich Take Away Peñablanca — Presentación "Canal propio WhatsApp / Rider local":**
+"Hola! Soy Matías de RepartoJusto. Vi que trabajan con delivery por WhatsApp y retiro — eso es exactamente para lo que estamos hechos. Con RepartoJusto complementan el canal propio con un rider local confiable a solo $500 fijos por entrega, sin cobrar porcentaje de la venta. Para un sándwich de $10.000, una plataforma de porcentaje (28%) cobra $2.800; nosotros $500. Cobertura Peñablanca, Villa Alemana y Quilpué. ¿Les interesa? repartojusto-production.up.railway.app"
 
 ---
 
@@ -4537,3 +4577,7 @@ Con primavera en 7 días, es el momento ideal para configurar el canal antes del
 **Fajitas Tex Mex Delivery VA (#225, agregado 21/10):** Delivery de comida tex-mex en Villa Alemana con canal propio. Facebook: @FajilasTex Mex Delivery. Canal delivery activo por WhatsApp, sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Producto: fajitas, quesadillas y comida tex-mex a domicilio. Ticket promedio estimado: $10.000-$14.000. Argumento principal: canal propio activo pero sin rider local confiable — RepartoJusto ofrece logística a $500 fijo, sin porcentaje; para una fajita de $12.000, el ahorro vs. Rappi (28%) es de $2.860 por pedido. Argumento estacional: noviembre en 10 días = verano activa la demanda de comida tex-mex y platos frescos; timing perfecto para configurar el canal antes del rush de diciembre. Fuente: Facebook Fajitas Tex Mex Delivery Villa Alemana + búsqueda delivery comida Villa Alemana WhatsApp octubre 2026.
 
 **Sushiweb Delivery Villa Alemana (#226, agregado 21/10):** Sushi delivery activo en Villa Alemana con buena reputación local (308+ reseñas en Chilopina). Chilopina: chilopina.com/restaurante/villa-alemana/sushiweb-villa-alemana/. Sin plataforma principal confirmada al momento de agregar. Producto: sushi y rolls delivery. Ticket promedio estimado: $12.000-$18.000 (tablas y combos). Argumento principal: sushi local con reputación — el tipo de negocio que más pierde con comisiones porcentuales en tickets altos; roll de $14.000 en Rappi (28%) = $3.920 comisión vs. $500 fijo RJ; diferencia $3.420 por pedido. Con 15 rolls/día en diciembre: diferencia mensual supera $1.500.000. Argumento estacional: noviembre-diciembre peak sushi celebraciones (reuniones de empresa, Navidad, cumpleaños fin de año). Canal configurado hoy = canal rodado para el rush. Fuente: chilopina.com/restaurante/villa-alemana/sushiweb-villa-alemana + búsqueda delivery sushi Villa Alemana octubre 2026.
+
+**La Mano Burger Villa Alemana (#231, agregado 24/10):** Hamburguesería artesanal con delivery canal propio en Villa Alemana. Facebook: @lamanoburger. Horario: martes a sábado 19:00-23:00 hrs. Sin grandes plataformas detectadas (Rappi/Uber Eats/PedidosYa). Producto: hamburguesas artesanales y papas fritas. Ticket promedio estimado: $10.000-$15.000 (burger + papas + bebida). Argumento principal: sábado noche = peak máximo de hamburguesería delivery — canal propio activo complementado con logística profesional a $500 fijo sin porcentaje; para una burger de $12.000 en Rappi (28%) el costo sería $3.360 vs. $500 fijo con RJ. Argumento estacional: Noviembre en 8 días al agregar = temporada alta hamburguesas (verano y reuniones fin de año). Fuente: Facebook @lamanoburger + búsqueda hamburguesería delivery Villa Alemana octubre 2026.
+
+**Burger y Sandwich Take Away Peñablanca (#232, agregado 24/10):** Hamburguesería y sandwichería delivery-first con canal propio (WhatsApp + retiro) en Peñablanca, zona VA/Quilpué. Sin grandes plataformas detectadas. Producto: hamburguesas artesanales y sándwiches a domicilio. Ticket promedio estimado: $8.000-$13.000. Argumento principal: delivery ya activo por canal propio sin logística externa — RepartoJusto complementa con rider local a $500 fijo; para un sándwich de $10.000, plataforma de porcentaje (28%) cobraría $2.800 vs. $500 fijo; diferencia $2.300 por pedido al bolsillo del negocio. Cobertura: Peñablanca, Villa Alemana, Quilpué. Argumento verano: noviembre en 8 días = sándwiches frescos y burgers = peak temporada cálida. Fuente: búsqueda hamburguesería delivery Peñablanca WhatsApp octubre 2026.
