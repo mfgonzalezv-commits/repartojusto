@@ -1,34 +1,47 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-10-24 (Sábado)
-**Pipeline total:** 232 prospectos
-**Por estado:** Nuevos: 218 | Contactados: 14 | Interesados: 0 | Registrados: 0
+**Fecha:** 2026-10-25 (domingo)
+**Pipeline total:** 234 prospectos
+**Por estado:** Nuevos: 220 | Contactados: 14 | Interesados: 0 | Registrados: 0
+
+---
 
 ## Acciones del día
 
-- Leí cola.md e incorporé argumentos vigentes: SSW Partners **100 días en silencio** (hito redondo hoy), Noviembre en 8 días, argumento "certeza 2027" para prospectos PedidosYa (de investigador.md 22/10).
-- Redacté **6 borradores** con ejes sábado peak, FNE/SSW 100 días y presentaciones nuevos.
-- Agregué **2 nuevos prospectos** al pipeline: #231 La Mano Burger VA y #232 Burger y Sandwich Take Away Peñablanca, ambas hamburgueserías con canal propio sin grandes plataformas.
+- Leído cola.md e investigador.md: argumentos SSW 101 días en silencio, certeza 2027, noviembre en 7 días y peak verano nov-dic activados en todos los mensajes.
+- Redactados 6 borradores para Matías:
+  - Seguimientos para los 2 Contactados con borradores más desactualizados (7 días sin draft): #7 Minimercado La Esquina y #13 Ferretería Los Maestros — eje domingo almuerzo familiar + proyectos verano.
+  - Seguimientos FNE/SSW 101 días para 2 prospectos urgentes en PedidosYa: #30 Poh Che Empanadas y #60 Master Sándwich — argumento certeza 2027 + cálculo ahorro concreto.
+  - Presentaciones para 2 nuevos prospectos: #233 Alma Verde Delivery (comida saludable canal propio, peak verano) y #234 Helados Artesanales Don Coco (heladería artesanal canal propio, noviembre = inicio peak helados).
+- Actualizado pipeline table en prospectos.md con 2 nuevas filas (#233 y #234).
+- Actualizadas próximas acciones de #7 y #13 en pipeline table.
+
+---
 
 ## Borradores listos para Matías
 
-1. **[6] Botillería El Copihue** — "Sábado 24/10 / Peak fin de semana / Noviembre en 8 días": sábado = peak botillería, $500 fijo, ventaja llegada a diciembre con canal rodado.
-2. **[2] Pollería Don Pollo** — "Sábado 24/10 / Almuerzo familiar / Noviembre en 8 días": sábado mediodía = peak pollos, ahorro $2.020 por pollo vs. Rappi, diciembre = cenas de fin de año.
-3. **[90] Buenaventura Pizzería** — FNE/SSW "100 días en silencio / Certeza 2027": hito 100 días SSW, argumento PedidosYa multas+juicio+silencio contrato 2027, pizza $12.000 → $3.360 Rappi vs. $500 fijo.
-4. **[102] La Joya** — FNE/SSW "100 días en silencio / Certeza 2027": mismo argumento hito 100 días SSW.
-5. **[231] La Mano Burger VA** — Presentación canal propio: sábado noche = peak hamburguesería, $500 fijo vs. $3.360 Rappi, temporada alta noviembre.
-6. **[232] Burger y Sandwich Take Away Peñablanca** — Presentación canal propio WhatsApp: rider local $500 fijo complementa canal existente, cobertura VA/Peñablanca/Quilpué.
+| # | Negocio | Tipo | Canal sugerido |
+|---|---|---|---|
+| 7 | Minimercado La Esquina | Seguimiento "Domingo 25/10 / Noviembre en 7 días" | WhatsApp / visita |
+| 13 | Ferretería Los Maestros | Seguimiento "Domingo 25/10 / Proyectos verano" | WhatsApp / visita |
+| 30 | Poh Che Empanadas | FNE/SSW 101 días + doble comisión | WhatsApp / tel. +56 32 324 2360 |
+| 60 | Master Sándwich | FNE/SSW 101 días + certeza 2027 | WhatsApp +56 958528950 / tel. (32) 311 9036 |
+| 233 | Alma Verde Delivery | Presentación canal propio + peak verano | Instagram DM |
+| 234 | Helados Artesanales Don Coco | Presentación inicio peak helados | Instagram DM |
 
-### Prioridades críticas (recordatorio para Matías):
-- **#22 Sushi Point Delivery** (tel. (32) 324 0504) — 92 días con borradores activos sin confirmar envío
-- **#15 Melt Pizzas** — 92 días con borradores activos sin confirmar envío
-- **7 prospectos PedidosYa** (#27, #28, #30, #33, #60, #90, #102) — SSW 100 días en silencio es argumento de máxima potencia
+**ALERTA PERMANENTE:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **93 días** con borradores activos sin confirmación de envío. Son las 2 prioridades del Gerente.
 
-## Nuevos prospectos agregados
+**ALERTA SSW:** Los 7 prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya) llevan 101 días sin que SSW comunique condiciones 2027 — ventana de argumento con límite.
 
-| # | Negocio | Rubro | Canal | Argumento clave |
-|---|---|---|---|---|
-| 231 | La Mano Burger Villa Alemana | Hamburguesería artesanal | Facebook @lamanoburger, ma-sá 19-23h | Sábado peak; $10.000-$15.000 ticket; $500 fijo vs. $3.360 Rappi; noviembre en 8 días |
-| 232 | Burger y Sandwich Take Away Peñablanca | Hamburguesería / sandwichería | WhatsApp + retiro canal propio | Rider local $500 fijo complementa canal; cobertura Peñablanca/VA/Quilpué |
+---
+
+## Nuevos prospectos agregados hoy
+
+1. **#233 Alma Verde Delivery** — Comida saludable, canal propio Instagram, Villa Alemana. Peak máximo verano noviembre-enero. Bowls/wraps ticket $8.000-$14.000. Sin grandes plataformas detectadas. Argumento: $500 fijo vs. $2.240-$3.920 comisión porcentual + noviembre en 7 días.
+
+2. **#234 Helados Artesanales Don Coco** — Heladería artesanal, canal propio Instagram + WhatsApp, Villa Alemana / Quilpué. Inicio peak helados con noviembre — 3 meses de temporada alta (nov-ene). Ticket $4.000-$8.000. Sin grandes plataformas. Argumento: $500 fijo vs. $1.680 Rappi por bola + configurar antes del 1 de noviembre.
+
+---
 
 ## Para el Gerente
-Pipeline en 232 prospectos (218 Nuevos, 14 Contactados, 0 Registrados); SSW Partners cumple **100 días en silencio** hoy — argumento certeza-2027 en su punto más alto para los 7 prospectos PedidosYa del pipeline; 6 borradores redactados hoy sábado con ejes peak fin de semana + hito FNE/SSW; cuello de botella: 169 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
+
+Pipeline en 234 prospectos (220 Nuevos, 14 Contactados, 0 Registrados); SSW Partners cumple 101 días en silencio — argumento certeza 2027 activo para los 7 prospectos PedidosYa; 6 borradores redactados hoy domingo con eje "Noviembre en 7 días / verano arranca"; cuello de botella crítico: 170 días sin confirmación de Matías bloquea actualización de todos los estados del pipeline.

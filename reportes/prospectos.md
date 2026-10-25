@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-10-24
+**Actualizado:** 2026-10-25
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -10,13 +10,13 @@
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 23/10 / Noviembre en 9 días / Pizza = peak fin de semana + fin de año" redactado 23/10 — viernes es el día más alto de pizza delivery; nov-dic = peak absoluto; ahorro ~$990K/mes vs. Rappi |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Jueves 22/10 / Noviembre en 10 días / Temporada alta sushi" redactado 22/10 — nov-dic = celebraciones fin de año + cenas empresa; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Noviembre en 10 días: el verano es el peak de las botillerías" redactado 21/10 |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Snacks y bebidas de verano" redactado 18/10 — temporada alta almacenes empieza; reposición bebidas/hielos/snacks = mayor volumen; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Domingo 25/10 / Noviembre en 7 días / Almuerzo dominical + verano bebidas" redactado 25/10 — domingo = peak compras snacks/bebidas para almuerzo en casa; noviembre en 7 días = temporada alta almacenes; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 23/10 / Fin de semana = tortas cumpleaños / Navidad en 9 semanas" redactado 23/10 — viernes es el día con más encargos de tortas; Navidad en 9 semanas = peak absoluto pastelería; configurar canal HOY para llegar rodada a diciembre |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Noviembre en 11 días — rotisería y verano" redactado 20/10 — asados y pollo delivery peak temporada alta; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = diferencia $34K/día |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Noviembre en 10 días: terrazas, café frío y delivery de verano" redactado 21/10 |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Jueves 22/10 / Primavera peak veterinario / Noviembre en 10 días" redactado 22/10 — peak vacunas anuales + antipulgas primavera; pack antipulgas $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; delivery urgente medicamentos = mayor impacto tarifa fija |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 22/10 / Último trimestre escolar / Noviembre en 10 días" redactado 22/10 — útiles fin de año + proyectos; único canal delivery librería en VA; $500 fijo especialmente diferenciador en tickets bajos ($3.000-$5.000 resmas/materiales) |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Octubre / Proyectos de primavera y reparaciones" redactado 18/10 — primavera = peak reparaciones casa + proyectos jardín; materiales delivery $500 fijo = diferenciador único en VA |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Domingo 25/10 / Noviembre en 7 días / Proyectos casa verano" redactado 25/10 — domingo = planificación proyectos casa/jardín semana siguiente; noviembre en 7 días = temporada alta pintura/jardín/piscinas; materiales delivery $500 fijo = diferenciador único en VA |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "La temporada alta ya llegó — noviembre en 10 días" redactado 21/10 |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -236,10 +236,50 @@
 | 230 | Pizzería Il Forno Villa Alemana | Pizzería artesanal | Villa Alemana (canal propio, por verificar) | Nuevo | — | Presentación redactada 23/10 — pizzería artesanal sin grandes plataformas; viernes+sábado = peak pizza; ticket promedio $12.000-$18.000; vs. Rappi 28% = $3.360-$5.040 comisión vs. $500 fijo; Noviembre en 9 días = peak fin de año |
 | 231 | La Mano Burger Villa Alemana | Hamburguesería artesanal | Villa Alemana (Facebook @lamanoburger, canal propio) | Nuevo | — | Presentación redactada 24/10 — hamburguesería delivery canal propio ma-sá 19-23h; sin plataformas grandes; ticket $10.000-$15.000; $500 fijo vs. Rappi 28% = $2.800-$4.200 ahorro; sábado noche = peak máximo; Noviembre en 8 días |
 | 232 | Burger y Sandwich Take Away Peñablanca | Hamburguesería / sandwichería | Peñablanca zona VA (WhatsApp + retiro, canal propio) | Nuevo | — | Presentación redactada 24/10 — delivery-first canal propio WhatsApp sin plataformas; ticket $8.000-$13.000; rider local $500 fijo complementa canal; cobertura Peñablanca/VA/Quilpué; noviembre en 8 días = verano temporada alta |
+| 233 | Alma Verde Delivery | Comida saludable / bowls / wraps | Villa Alemana (Instagram canal propio) | Nuevo | — | Presentación redactada 25/10 — comida saludable delivery canal propio Instagram, sin grandes plataformas; bowls, wraps, jugos; ticket $8.000-$14.000; verano = peak máximo comida saludable (nov-ene); diferencia $2.240-$3.920 por pedido vs. Rappi/Uber Eats vs. $500 fijo RJ |
+| 234 | Helados Artesanales Don Coco | Heladería artesanal | Villa Alemana / Quilpué (canal propio Instagram + WhatsApp) | Nuevo | — | Presentación redactada 25/10 — heladería artesanal canal propio sin grandes plataformas; helados artesanales ticket $4.000-$8.000; noviembre = inicio peak helados (3 meses de temporada máxima nov-ene); configurar delivery antes del 1 de noviembre = ventaja sobre competidores; $500 fijo = único costo por entrega, sin comisión porcentual |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-10-25) — DOMINGO / NOVIEMBRE EN 7 DÍAS / FNE+SSW 101 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es **domingo 25 de octubre**. Noviembre en **7 días** — el peak de fin de año se viene encima. SSW Partners lleva **101 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 2 seguimientos para los Contactados con borradores más desactualizados (#7 Minimercado La Esquina y #13 Ferretería Los Maestros — domingo = planificación semana + almuerzo familiar en casa), 2 seguimientos FNE/SSW urgentes para prospectos PedidosYa (#30 Poh Che Empanadas y #60 Master Sándwich), y 2 presentaciones para nuevos prospectos (#233 Alma Verde Delivery y #234 Helados Artesanales Don Coco). Pipeline: **234 prospectos**.
+
+> **ALERTAS:** #22 Sushi Point (tel. (32) 324 0504) y #15 Melt Pizzas llevan **93 días** con borradores activos. SSW Partners **101 días en silencio** — ventana crítica para los 7 prospectos PedidosYa.
+
+---
+
+**[7] Minimercado La Esquina — Seguimiento "Domingo 25/10 / Noviembre en 7 días / Almuerzo familiar + verano":**
+"Hola Minimercado La Esquina! De RepartoJusto. ¡Hoy domingo — el mejor día para el almacén, con la gente en casa pidiendo para el almuerzo familiar! Con RepartoJusto el delivery es $500 fijo por despacho — te quedas con el 100% del precio de venta, sin comisión porcentual. Y noviembre arranca en solo 7 días: el verano trae más pedidos de bebidas, hielos, snacks para la terraza. Los almacenes con delivery confirmado antes de noviembre llegan con ventaja real al peak. ¿Hablamos esta semana? repartojusto-production.up.railway.app — Equipo RepartoJusto"
+
+---
+
+**[13] Ferretería Los Maestros — Seguimiento "Domingo 25/10 / Noviembre en 7 días / Proyectos casa verano":**
+"Hola Ferretería Los Maestros! De RepartoJusto. Domingo por la tarde — el momento en que los clientes planifican los proyectos de la semana: pintura, jardín, piscinas, reparaciones antes del verano. Con RepartoJusto son $500 fijos por entrega de materiales — sin comisión sobre el valor del pedido. Y noviembre arranca en 7 días: primavera/verano = peak absoluto para ferreterías con delivery (quienes piden sin salir de la casa son quienes tienen presupuesto para el proyecto, no los que van a comparar precios). Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Esta semana lo vemos? — Equipo RepartoJusto"
+
+---
+
+**[30] Poh Che Empanadas & Sandwichs — FNE/SSW "101 días en silencio / Certeza 2027 / Doble comisión PedidosYa+Uber Eats":**
+"Hola Poh Che! De RepartoJusto. Una pregunta directa: ¿SSW Partners ya les comunicó cuánto van a pagar en PedidosYa en 2027? Llevan 101 días en silencio total — mientras tanto los multaron US$35M en 2026 por controlarles los precios, siguen en juicio negando los cargos, y Uber está comprando la empresa dueña. Ustedes pagan doble comisión (PedidosYa + Uber Eats) sin saber qué les espera el año que viene. Con RepartoJusto son siempre $500 fijos por pedido, en papel, sin sorpresas. Una empanada docena $8.000 en PedidosYa (28% = $2.240 comisión) vs. $500 con nosotros: $1.740 por docena que se queda en Poh Che. Con 20 docenas diarias: diferencia $34.800/día, $1.000.000+/mes. Conversemos: repartojusto-production.up.railway.app"
+
+---
+
+**[60] Master Sándwich Villa Alemana — FNE/SSW "101 días en silencio / Certeza 2027 / Sándwiches domingo peak":**
+"Hola Master Sándwich! De RepartoJusto. Domingo — el día alto del sándwich 🌭 Pero antes del rush, una pregunta: ¿SSW Partners ya les confirmó las condiciones de PedidosYa para 2027? Llevan 101 días en silencio sin decirles nada — mientras los multaron US$35M en 2026 por controlarte los precios, siguen en juicio negando los cargos. Con RepartoJusto son siempre $500 fijos por pedido, en papel, sin sorpresas de año en año. Un sándwich de $5.500 en PedidosYa (28% = $1.540 comisión) vs. $500 con nosotros: $1.040 por sándwich que se queda en Master. Con 40 pedidos domingo: $41.600 diferencia ese día. Noviembre en 7 días = verano arranca. ¿Hablamos? repartojusto-production.up.railway.app — WhatsApp +56 958528950"
+
+---
+
+**[233] Alma Verde Delivery — Presentación "Canal propio + rider local / Peak verano / Comida saludable":**
+"Hola Alma Verde! Soy Matías de RepartoJusto, plataforma de delivery local de Villa Alemana. Vi que hacen delivery de comida saludable por Instagram — excelente para la temporada de verano que arranca en 7 días. ¿Sabían que con Uber Eats o Rappi pagarían $2.240-$3.920 de comisión por bowl de $8.000-$14.000? Con nosotros son $500 fijos por entrega, sin porcentaje sobre la venta — el 100% del precio es para Alma Verde. Noviembre-enero es el peak máximo de la comida saludable en delivery. El canal configurado antes del 1 de noviembre llega rodado al rush. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Les cuento cómo funciona? — Equipo RepartoJusto"
+
+---
+
+**[234] Helados Artesanales Don Coco — Presentación "Inicio peak helados / Noviembre en 7 días / Canal propio":**
+"Hola Helados Don Coco! Soy Matías de RepartoJusto, plataforma de delivery local de Villa Alemana y Quilpué. Noviembre arranca en 7 días — y los próximos 3 meses (noviembre-enero) son el peak absoluto para la heladería. ¿Tienen rider confiable para cubrir los pedidos de WhatsApp e Instagram durante el rush del verano? Con RepartoJusto son $500 fijos por entrega, sin porcentaje sobre la venta. Un helado de $6.000 por Rappi (28% = $1.680 comisión) vs. $500 con nosotros: $1.180 por bola que se queda en el local. Con 30 pedidos diarios en enero: diferencia $35.400/día. Quien activa el canal ANTES del 1 de noviembre llega sin improvisar al peak. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Hablamos? — Equipo RepartoJusto"
 
 ---
 
