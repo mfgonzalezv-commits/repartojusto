@@ -1,47 +1,51 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-10-25 (domingo)
-**Pipeline total:** 234 prospectos
-**Por estado:** Nuevos: 220 | Contactados: 14 | Interesados: 0 | Registrados: 0
-
----
+**Fecha:** 2026-10-26 (lunes)
+**Pipeline total:** 236 prospectos
+**Por estado:** Nuevos: 222 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-- Leído cola.md e investigador.md: argumentos SSW 101 días en silencio, certeza 2027, noviembre en 7 días y peak verano nov-dic activados en todos los mensajes.
-- Redactados 6 borradores para Matías:
-  - Seguimientos para los 2 Contactados con borradores más desactualizados (7 días sin draft): #7 Minimercado La Esquina y #13 Ferretería Los Maestros — eje domingo almuerzo familiar + proyectos verano.
-  - Seguimientos FNE/SSW 101 días para 2 prospectos urgentes en PedidosYa: #30 Poh Che Empanadas y #60 Master Sándwich — argumento certeza 2027 + cálculo ahorro concreto.
-  - Presentaciones para 2 nuevos prospectos: #233 Alma Verde Delivery (comida saludable canal propio, peak verano) y #234 Helados Artesanales Don Coco (heladería artesanal canal propio, noviembre = inicio peak helados).
-- Actualizado pipeline table en prospectos.md con 2 nuevas filas (#233 y #234).
-- Actualizadas próximas acciones de #7 y #13 en pipeline table.
+**Argumentos activos:**
+- SSW Partners: **102 días en silencio** sin comunicar condiciones 2027 a afiliados PedidosYa — argumento certeza-2027 al máximo potencial
+- Noviembre en **6 días** — segundo peak más alto del año; sushi, farmacias, pastelerías en temporada alta
+- Eje verano (nov-dic): peak helados, comida saludable, hamburguesas, sushi de celebraciones
 
----
+**Mensajes redactados hoy (6 en total):**
+
+1. **#3 Farmacia Cruz Verde** — Seguimiento "Lunes 26/10 / Noviembre en 6 días / Peak alergias primaverales": antihistamínicos, vitaminas, urgentes = peak temporada; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ.
+
+2. **#5 Sushi Zen** — Seguimiento "Lunes 26/10 / Noviembre en 6 días / Peak sushi celebraciones": nov-dic = reuniones empresa + Navidad; tabla $20K en Rappi $5.600 comisión vs. $500; diferencia $3M+/mes en diciembre.
+
+3. **#27 Tribeca Sushi** — FNE/SSW "102 días en silencio / Certeza 2027 / Peak nov-dic": PedidosYa US$35M multas, SSW 102 días sin comunicar 2027, Uber comprando dueña; tabla $20K = diferencia $5.100/pedido.
+
+4. **#33 Casa Festa Cocina y Repostería** — FNE/SSW "102 días en silencio / Certeza 2027 / Navidad en 8 semanas": PedidosYa multas, SSW 102 días silencio, Navidad peak tortas+pizzas gourmet; tel. (32) 2950116.
+
+5. **#235 Sushi Gold Quilpué** *(nuevo)* — Presentación: canal propio WhatsApp, Caupolicán 894 Quilpué, WhatsApp +56 9 9738 8841; Rappi Turbo ya en Quilpué = urgencia tarifa fija; $3.420 ahorro por combo $14K.
+
+6. **#236 Tres Efes Sushi VA** *(nuevo)* — Presentación: en Uber Eats VA, tabla $16K Uber Eats $4.800 comisión vs. $500 fijo; noviembre peak sushi celebraciones.
+
+**Prospectos con borradores pendientes más urgentes:**
+- #22 Sushi Point Delivery (tel. (32) 324 0504) — **94 días** con borradores activos sin confirmación de envío
+- #15 Melt Pizzas — **94 días** con borradores activos sin confirmación de envío
+- Los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102) — SSW 102 días en silencio, certeza 2027
 
 ## Borradores listos para Matías
 
-| # | Negocio | Tipo | Canal sugerido |
-|---|---|---|---|
-| 7 | Minimercado La Esquina | Seguimiento "Domingo 25/10 / Noviembre en 7 días" | WhatsApp / visita |
-| 13 | Ferretería Los Maestros | Seguimiento "Domingo 25/10 / Proyectos verano" | WhatsApp / visita |
-| 30 | Poh Che Empanadas | FNE/SSW 101 días + doble comisión | WhatsApp / tel. +56 32 324 2360 |
-| 60 | Master Sándwich | FNE/SSW 101 días + certeza 2027 | WhatsApp +56 958528950 / tel. (32) 311 9036 |
-| 233 | Alma Verde Delivery | Presentación canal propio + peak verano | Instagram DM |
-| 234 | Helados Artesanales Don Coco | Presentación inicio peak helados | Instagram DM |
+6 mensajes redactados hoy en reportes/prospectos.md sección "MENSAJES DEL DÍA (2026-10-26)":
 
-**ALERTA PERMANENTE:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **93 días** con borradores activos sin confirmación de envío. Son las 2 prioridades del Gerente.
+- **[3] Farmacia Cruz Verde** — seguimiento lunes + peak alergias
+- **[5] Sushi Zen** — seguimiento lunes + peak sushi nov-dic
+- **[27] Tribeca Sushi** — FNE/SSW 102 días + certeza 2027 + peak nov-dic
+- **[33] Casa Festa** — FNE/SSW 102 días + certeza 2027 + Navidad 8 semanas
+- **[235] Sushi Gold Quilpué** — presentación (nuevo)
+- **[236] Tres Efes Sushi VA** — presentación (nuevo)
 
-**ALERTA SSW:** Los 7 prospectos PedidosYa (#27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura Pizzería, #102 La Joya) llevan 101 días sin que SSW comunique condiciones 2027 — ventana de argumento con límite.
+## Nuevos prospectos agregados
 
----
+1. **#235 Sushi Gold Quilpué** — Sushi delivery canal propio, Caupolicán 894 Quilpué, WhatsApp +56 9 9738 8841, tel. 32-2917928. Sin grandes plataformas. Rappi Turbo ya en Quilpué = argumento urgencia directo. Ticket $10K-$16K.
 
-## Nuevos prospectos agregados hoy
-
-1. **#233 Alma Verde Delivery** — Comida saludable, canal propio Instagram, Villa Alemana. Peak máximo verano noviembre-enero. Bowls/wraps ticket $8.000-$14.000. Sin grandes plataformas detectadas. Argumento: $500 fijo vs. $2.240-$3.920 comisión porcentual + noviembre en 7 días.
-
-2. **#234 Helados Artesanales Don Coco** — Heladería artesanal, canal propio Instagram + WhatsApp, Villa Alemana / Quilpué. Inicio peak helados con noviembre — 3 meses de temporada alta (nov-ene). Ticket $4.000-$8.000. Sin grandes plataformas. Argumento: $500 fijo vs. $1.680 Rappi por bola + configurar antes del 1 de noviembre.
-
----
+2. **#236 Tres Efes Sushi Villa Alemana** — Sushi delivery en Uber Eats VA. Ticket $12K-$18K. Dirección por confirmar. Noviembre = peak sushi celebraciones.
 
 ## Para el Gerente
 
-Pipeline en 234 prospectos (220 Nuevos, 14 Contactados, 0 Registrados); SSW Partners cumple 101 días en silencio — argumento certeza 2027 activo para los 7 prospectos PedidosYa; 6 borradores redactados hoy domingo con eje "Noviembre en 7 días / verano arranca"; cuello de botella crítico: 170 días sin confirmación de Matías bloquea actualización de todos los estados del pipeline.
+Pipeline en 236 prospectos (222 Nuevos, 14 Contactados, 0 Registrados); SSW Partners en 102 días de silencio — argumento certeza-2027 al máximo para los 7 prospectos PedidosYa; Noviembre en 6 días = segunda ventana de conversión más alta del año activa; cuello de botella crítico: 171 días sin confirmación de Matías sobre mensajes enviados bloquea actualización de todos los estados del pipeline.
