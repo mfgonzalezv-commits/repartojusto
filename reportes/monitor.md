@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-10-27T00:00:00Z
-**Estado:** ⚠️ NO VERIFICADO
-**Detalle:** El entorno de ejecución bloqueó la conexión saliente a repartojusto-production.up.railway.app:443 (connect_rejected — host no permitido por el proxy de red de esta sesión). No fue posible determinar el estado real del servidor.
+**Última verificación:** 2026-10-27T05:31:52Z
+**Estado:** ⚠️ NO VERIFICABLE
+**Detalle:** El proxy de egress del entorno de ejecución rechazó la conexión a repartojusto-production.up.railway.app:443 (connect_rejected). No se pudo completar GET /health. El servicio puede estar operativo pero no es accesible desde este entorno.
