@@ -1,114 +1,83 @@
 # Análisis Interno RepartoJusto
-**Fecha:** 2026-10-20 (martes — semana 20/10–24/10)
-**Analista:** Agente Aprendiz
+**Fecha:** 2026-10-27 (Agente Aprendiz — ejecución semanal)
 
 ---
 
 ## Métricas del sistema
-**Sin acceso** — el proxy del entorno remoto bloquea la URL de producción con 403 Forbidden. Patrón persistente sin cambios desde mayo. Métricas reales solo accesibles desde Railway CLI o entorno sin proxy restrictivo.
+**Sin acceso** — el proxy de este entorno rechazó la conexión a `repartojusto-production.up.railway.app:443`. No fue posible obtener datos reales de la API (pedidos, riders activos, ingresos). El monitor sí tiene acceso; ver `reportes/monitor.md` para estado del servidor.
 
 ---
 
-## Actividad de agentes (semana 15/09–20/10)
+## Cambios esta semana (git log últimos 7 días, excluyendo monitor)
+- `2026-10-27` — ventas: actualización pipeline
+- `2026-10-26` — ventas: actualización pipeline
+- `2026-10-26` — mejoras: reporte semanal
 
-**Agente Mejoras — commits `57ba446` y `d9c0bc9` del 2026-10-19 — ❌ SOLO REPORTE:**
-- Ambos commits solo modificaron `reportes/mejoras.md`. Ningún archivo `.js` fue tocado (verificado con `git show`).
-- Esto marca la **17ª semana consecutiva** en que el Agente Mejoras genera código correcto en su reporte pero no lo aplica al código fuente.
-- El reporte del 19/10 documenta correctamente 5 mejoras con código de fix listo para copiar/pegar — pero sigue sin aplicarse.
-
-**Agente Ventas — commits `ba6544d` y `040f5da`:**
-- Activo, actualizando pipeline.
-
-**Agente Monitor — múltiples commits diarios:**
-- Activo con verificaciones horarias.
+**Patrón crítico confirmado:** El commit de Mejoras del 26/10 sigue siendo solo en `reportes/mejoras.md`. Cero cambios en archivos `.js`. El patrón de documentar sin aplicar lleva activo desde julio.
 
 ---
 
-## Estado de bugs documentados (verificación en código fuente actual)
+## Estado de bugs documentados previamente
 
-| Fix | Archivo:línea | Estado |
-|-----|--------------|--------|
-| `pedido:seguir` sin auth de acceso | `sockets/index.js:101-103` | ❌ SIN CORREGIR |
-| `chat:enviar` sin verificación de pedido propio | `sockets/index.js:161` | ❌ SIN CORREGIR |
-| `rider:ubicacion` sin throttle (2 queries DB/GPS) | `sockets/index.js:67` | ❌ SIN CORREGIR |
-| `rider:fuera_linea` broadcast global (`io.emit`) | `sockets/index.js:187` | ❌ SIN CORREGIR |
-| INSERT pagos con columna `metadata` inexistente | `pagos.js:79` | ❌ SIN CORREGIR |
-| INSERT audit trail bono con columnas inexistentes | `admin.js:324` | ❌ SIN CORREGIR |
-| `LIMIT 100` hardcodeado en liquidaciones | `admin.js:231` | ❌ SIN CORREGIR |
-| Guard clause `neg` nulo antes de `neg.id` | `pedidos.js:348` | ❌ SIN CORREGIR |
-| 4 índices faltantes | `migrate.js` (tras línea 203) | ❌ SIN CORREGIR |
-| Race condition en `aceptarOferta` | `sockets/asignacion.js:159` | ⚠️ RIESGO BAJO (ver análisis) |
+### ✅ CORREGIDOS (verificado en código fuente)
+1. **`req.user.id` → `req.usuario.id` en riders.js**: CORREGIDO. Todo `riders.js` usa `req.usuario.id` consistentemente (líneas 28, 55, 69, 96, 112, 224). Push notifications a riders deberían funcionar.
+2. **HMAC webhook Flow**: IMPLEMENTADO. `pagos.js:144-165` tiene validación HMAC completa con `timingSafeEqual`. Rechaza sin `FLOW_SECRET` configurado o sin `x-flow-signature`.
+3. **`mostrar_costo_seguimiento`**: IMPLEMENTADO. `server.js:140,153-154` lee la columna del negocio y oculta `tarifa_entrega` si el negocio no la activa.
 
-**Total: 9 bugs/vulnerabilidades activos confirmados. Race condition rebajada a riesgo bajo (análisis abajo).**
+### ❌ PENDIENTES (sin cambio en código)
+1. **`pedido:seguir` sin verificación de acceso** (`sockets/index.js:101`): Cualquier socket puede hacer `socket.join('pedido:<uuid>')` con cualquier `pedido_id`. No hay verificación de que el cliente, rider o negocio tenga relación con ese pedido. Riesgo: tracking de pedidos ajenos.
+2. **Bono audit trail silenciado** (`admin.js:321`): `INSERT INTO pagos (pedido_id, rider_id, tipo, monto, estado, metadata)` usa columnas `rider_id`, `tipo`, `metadata` que NO existen en la tabla `pagos` (schema en migrate.js). El `.catch(() => {})` silencia el error. Cada bono manual falla en registrar el audit trail sin que nadie lo sepa.
+3. **`GET /api/admin/liquidaciones` LIMIT 100 hardcodeado** (`admin.js:231`): Sin paginación. Con muchas liquidaciones, la respuesta crece ilimitada.
+4. **Índices faltantes en migrate.js**: Los siguientes índices fueron pedidos desde mayo y siguen sin estar en el script:
+   - `CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token)` — usado en cada confirmación de pago
+   - `CREATE INDEX IF NOT EXISTS idx_pedidos_created_at ON pedidos(created_at)` — usado en métricas de ingresos
+   - `CREATE INDEX IF NOT EXISTS idx_pedidos_entregado_at ON pedidos(entregado_at)` — usado en reportes de entregas
+   - `CREATE INDEX IF NOT EXISTS idx_pedidos_hora_retiro ON pedidos(hora_retiro)` — usado por el scheduler de pedidos agendados (setInterval en asignacion.js)
 
 ---
 
-## Patrones detectados
+## Patrones detectados en el código
 
-### 1. Espionaje GPS entre usuarios (CRÍTICO — 17 semanas sin fix)
-`sockets/index.js:101-103` — `pedido:seguir` hace `socket.join(`pedido:${pedido_id}`)` sin ninguna comprobación de relación con el pedido. Cualquier cliente autenticado que sepa un `pedido_id` recibe actualizaciones GPS en tiempo real, incluyendo dirección del cliente y posición del rider.
+### Query sin índice en endpoint de métricas
+`admin.js` — `GET /api/admin/metricas/ingresos` hace `GROUP BY DATE(created_at)` filtrando `created_at > NOW() - INTERVAL '30 days'`. Sin `idx_pedidos_created_at`, esto es full table scan en `pedidos` cada vez que el dashboard carga. Impacto crece con volumen.
 
-**Código del fix disponible en `reportes/mejoras.md` sección 1 — 12 líneas, no aplicadas.**
+### chat:enviar usa rol del socket padre sin verificar pedido
+`sockets/index.js:161`: El handler `chat:enviar` usa `rol` y `nombre` del socket autenticado para marcar mensajes, lo que está bien. Pero NO verifica que el socket tenga relación con `pedido_id` antes de emitir. Un rider o negocio puede inyectar mensajes en chats de pedidos que no le pertenecen.
 
-### 2. Inyección de mensajes en chats ajenos (CRÍTICO — 17 semanas sin fix)
-`sockets/index.js:161-172` — `chat:enviar` no verifica que `pedido_id` corresponda al negocio o rider del socket autenticado. Sin límite de longitud en `texto`.
+### RESIDUAL_PCT deuda técnica confirmada
+`config/index.js:52` define `RESIDUAL_PCT: 8`. Búsqueda exhaustiva en todos los archivos `.js` del backend: **cero referencias** a esta variable fuera de su definición. El 8% residual no se aplica en ningún cálculo de tarifas, pagos ni liquidaciones. Requiere decisión de Matías: implementar o eliminar.
 
-**Código del fix disponible en `reportes/mejoras.md` sección 2 — no aplicado.**
-
-### 3. Tormenta de escrituras DB por GPS (ALTO — 17 semanas sin fix)
-`sockets/index.js:67-98` — cada evento `rider:ubicacion` ejecuta 2 queries (UPDATE + SELECT) sin throttle. Con 10 riders a 1 ping/2s → 20+ queries/s solo por GPS. El SELECT recupera TODOS los pedidos activos del rider, no solo el más reciente.
-
-### 4. `pagos` table sin columna `metadata` (CRÍTICO — persistente)
-`migrate.js:105-116` — la tabla `pagos` no tiene columna `metadata`. Sin embargo `pagos.js:79` hace `INSERT INTO pagos (..., metadata) VALUES (...)` y `admin.js:324` hace `INSERT INTO pagos (..., rider_id, tipo, metadata)`. Ambos fallan silenciosamente o con error en producción.
-
-**Nota importante:** el admin.js bono INSERT usa `.catch(() => {})` silenciando el error, por lo que el saldo sí se actualiza pero el registro contable nunca se crea. En pagos.js el error NO está silenciado — el flujo de pago completo falla.
-
-### 5. Race condition en `aceptarOferta` — rebajado a RIESGO BAJO
-`sockets/asignacion.js:159-166` — la cascada se elimina de memoria ANTES de confirmar la asignación en DB. Análisis:
-- El loop de Node.js es single-threaded, por lo que dos aceptaciones simultáneas se procesan secuencialmente en el event loop.
-- El `UPDATE pedidos SET estado = 'asignado' WHERE estado = 'pendiente'` es atómico en PostgreSQL.
-- Riesgo real solo en escenario de múltiples procesos Node.js (escala horizontal en Railway). En instancia única, el riesgo es muy bajo.
-- **Si Railway escala a múltiples instancias, este se convierte en CRÍTICO** — pedidos quedarían sin cascada activa y sin asignar.
-
-### 6. `RESIDUAL_PCT: 8` — variable huérfana (BAJO — persistente)
-`config/index.js:52` define `RESIDUAL_PCT` pero ninguna ruta la usa en ningún cálculo. Solo existe en config. Deuda técnica desde mayo — requiere decisión de Matías.
+### Scheduler de pedidos agendados: ya implementado vía setInterval
+Confirmado en análisis anterior — `asignacion.js` usa `setInterval`. No requiere `node-cron`. Sí requiere `idx_pedidos_hora_retiro` para eficiencia.
 
 ---
 
 ## Ineficiencias concretas
 
-| Archivo:línea | Problema | Impacto estimado |
-|---|---|---|
-| `sockets/index.js:101` | Sin auth: espionaje GPS pedidos ajenos | Vulnerabilidad privacidad crítica en producción |
-| `sockets/index.js:161` | Sin auth en chat + sin límite chars | Inyección mensajes en cualquier pedido |
-| `sockets/index.js:67` | Sin throttle GPS: 2 queries DB por evento | 20+ queries/s con 10 riders activos |
-| `sockets/index.js:187` | `io.emit` global al desconectar rider | Exposición datos riders a todos los clientes |
-| `pagos.js:79` | INSERT con columna `metadata` inexistente | `POST /api/pagos/crear` rompe en producción real |
-| `admin.js:231` | `LIMIT 100` hardcodeado en liquidaciones | Sin paginación; falla en volumen real |
-| `admin.js:324` | INSERT pagos con columnas inexistentes, silenciado | Audit trail bonos nunca grabado |
-| `pedidos.js:348` | `neg.id` sin guard → TypeError | HTTP 500 en cancelación de negocio sin perfil |
-| `migrate.js` (tras línea 203) | Faltan 4 índices | Queries lentas en tablas en crecimiento |
+| Archivo | Línea | Problema | Impacto estimado |
+|---|---|---|---|
+| `admin.js` | 321 | INSERT audit trail bono usa columnas inexistentes, silenciado | Cada bono manual sin registro (dato perdido para siempre) |
+| `admin.js` | 231 | LIMIT 100 hardcodeado en liquidaciones | Falla cuando hay >100 liquidaciones |
+| `sockets/index.js` | 101 | `pedido:seguir` sin auth check | Cualquiera puede trackear cualquier pedido |
+| `sockets/index.js` | 161 | `chat:enviar` sin verificar propiedad del pedido | Mensajes falsos en chats ajenos |
+| `scripts/migrate.js` | — | 4 índices críticos faltantes | Full table scans en confirmar pagos y métricas |
+| `config/index.js` | 52 | `RESIDUAL_PCT: 8` nunca usado | Tarifa fantasma en config |
 
 ---
 
 ## Oportunidades de mejora basadas en datos
 
-1. **`ALTER TABLE pagos ADD COLUMN IF NOT EXISTS metadata JSONB`** + agregar `rider_id UUID` y `tipo VARCHAR(30)` — desbloquea flujo de cobro y audit trail. Agregar a migrate.js y ejecutar. **MÁXIMA PRIORIDAD.**
-2. **Guard clause en `pedidos.js:348`** — `if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });` — 1 línea, previene HTTP 500 en cancelación.
-3. **Throttle GPS en `sockets/index.js:67`** — buffer de 5s reduce ~80% carga DB; código completo en `mejoras.md` sección 4.
-4. **Auth en `pedido:seguir` y `chat:enviar`** — código en `mejoras.md` secciones 1 y 2. Elimina 2 vulnerabilidades críticas.
-5. **4 índices en `migrate.js`** — `idx_pagos_flow_token`, `idx_pedidos_created_at`, `idx_pedidos_entregado_at`, `idx_pedidos_hora_retiro` — urgente para scheduler que corre cada 60s.
+1. **Agregar 4 índices faltantes** — Evidencia: definidos en cola.md desde mayo/2026, el scheduler y el endpoint de métricas los usan pero no existen. Son 4 líneas en `migrate.js` + una ejecución contra producción. Impacto inmediato en performance.
+
+2. **Fix audit trail de bonos riders** — Evidencia: columnas `rider_id`, `tipo`, `metadata` no existen en tabla `pagos`. El INSERT falla silenciosamente cada vez. Solución: o eliminar el `.catch(() => {})` para que el error sea visible, o crear una tabla `logs_incentivos` separada. Un negocio que crece necesita trazabilidad de pagos.
+
+3. **Paginación en GET /api/admin/liquidaciones** — Evidencia: hardcodeado `LIMIT 100`. Si hay más de 100 liquidaciones el admin no las ve. Agregar `page`/`limit` en query params.
+
+4. **Verificación de acceso en `pedido:seguir`** — Evidencia: handler en sockets/index.js:101 sin auth. El código del fix fue documentado en mejoras.md hace meses. Una query simple verifica si `pedido_id` pertenece al negocio/rider del socket.
 
 ---
 
 ## Mensajes para otros agentes
 
-- **PARA MEJORAS:** CRÍTICO — 17ª semana consecutiva sin ningún fix en archivos `.js`. Esta semana el código para todos los fixes YA está documentado en tu propio reporte (`mejoras.md`). Solo falta copiar/pegar en los archivos fuente:
-  1. `pagos.js:79` y `migrate.js` — agregar columna `metadata JSONB`, `rider_id UUID`, `tipo VARCHAR(30)` a pagos (desbloquea flujo de pago en producción)
-  2. `pedidos.js:348` — `if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });` antes de `params.push(neg.id)`
-  3. `sockets/index.js:101` — reemplazar con código de `mejoras.md` sección 1 (auth `pedido:seguir`)
-  4. `sockets/index.js:161` — reemplazar con código de `mejoras.md` sección 2 (auth `chat:enviar`)
-  5. `migrate.js` tras línea 203 — agregar: `CREATE INDEX IF NOT EXISTS idx_pagos_flow_token ON pagos(flow_token)`, `idx_pedidos_created_at ON pedidos(created_at)`, `idx_pedidos_entregado_at ON pedidos(entregado_at)`, `idx_pedidos_hora_retiro ON pedidos(hora_retiro)`
-  **VERIFICAR con `git diff --name-only` antes del commit que se incluyen archivos `.js` y no solo `.md`.**
-
-- **PARA GERENTE:** Agente Mejoras lleva **17 semanas consecutivas** sin aplicar ningún fix al código fuente — patrón confirmado en git. 9 vulnerabilidades/bugs activos en producción. Los 3 críticos: (A) flujo de pagos Flow completamente roto en producción (`metadata` ausente en tabla `pagos`), (B) espionaje GPS entre usuarios vía socket, (C) inyección de mensajes en chats ajenos. La situación no se resolverá sola — se necesita intervención directa de Matías para que el Agente Mejoras edite archivos `.js`. El código de los fixes YA existe en `mejoras.md` — solo falta ejecutar la edición de archivos.
+- **PARA MEJORAS:** Los 4 bugs pendientes desde julio siguen sin corrección en código fuente (confirmado por git log — commit del 26/10 solo tocó `reportes/mejoras.md`). PRIORIDAD 1: `sockets/index.js:101` — agregar verificación de acceso en `pedido:seguir`. PRIORIDAD 2: `admin.js:321` — eliminar `.catch(() => {})` en INSERT del bono para hacer visible el error (o crear tabla logs). PRIORIDAD 3: agregar en `migrate.js` los 4 índices: `idx_pagos_flow_token`, `idx_pedidos_created_at`, `idx_pedidos_entregado_at`, `idx_pedidos_hora_retiro`. Son cambios de 1-5 líneas cada uno. Verificar con `git diff` que los archivos `.js` cambian.
+- **PARA GERENTE:** req.user/riders.js CORREGIDO y HMAC webhook CORREGIDO — dos riesgos históricos ya cerrados. Quedan 4 issues técnicos activos: tracking sin auth (ALTO), audit trail de bonos silenciado (MEDIO), liquidaciones sin paginación (BAJO), e índices DB faltantes (BAJO-MEDIO). `RESIDUAL_PCT: 8` sigue sin implementarse en ningún cálculo — requiere decisión de Matías (activar lógica de residual o eliminar la variable).
