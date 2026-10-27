@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-10-26
+**Actualizado:** 2026-10-27
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -240,10 +240,50 @@
 | 234 | Helados Artesanales Don Coco | Heladería artesanal | Villa Alemana / Quilpué (canal propio Instagram + WhatsApp) | Nuevo | — | Presentación redactada 25/10 — heladería artesanal canal propio sin grandes plataformas; helados artesanales ticket $4.000-$8.000; noviembre = inicio peak helados (3 meses de temporada máxima nov-ene); configurar delivery antes del 1 de noviembre = ventaja sobre competidores; $500 fijo = único costo por entrega, sin comisión porcentual |
 | 235 | Sushi Gold Quilpué | Sushi delivery | Caupolicán 894, Quilpué (canal propio WhatsApp) | Nuevo | — | Presentación redactada 26/10 — sushi delivery canal propio sin grandes plataformas; WhatsApp +56 9 9738 8841, tel. 32-2917928; cobertura Canal Chacao-Paradero 12; Rappi Turbo ya en Quilpué = urgencia tarifa fija; ticket $10.000-$16.000; nov-dic = peak sushi celebraciones |
 | 236 | Tres Efes Sushi Villa Alemana | Sushi delivery | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 26/10 — sushi delivery en Uber Eats VA; ticket promedio $12.000-$18.000; Uber Eats cobra 30% = $3.600-$5.400 comisión; Noviembre en 6 días = peak sushi celebraciones fin de año; dirección y teléfono por confirmar |
+| 237 | Senseisushi Delivery | Sushi | Villa Alemana (canal propio, Lu-Ju 17:00-23:00, V-S hasta medianoche) | Nuevo | — | Presentación redactada 27/10 — sushi delivery canal propio sin grandes plataformas confirmadas; horario Lu-Ju 17:00-23:00, V-S hasta medianoche; ticket $12.000-$16.000; nov-dic = peak sushi celebraciones; $500 fijo vs. Rappi 28% = $3.360-$4.480 ahorro por pedido |
+| 238 | Niyei Sushi | Sushi | María Mercedes 1097, Villa Alemana | Nuevo | — | Presentación redactada 27/10 — sushi delivery VA; dirección en Exposushi; ticket $12.000-$18.000; plataforma activa por confirmar; nov-dic = peak sushi celebraciones fin de año; tabla $16.000 vs. 28% = $4.480 comisión vs. $500 fijo RJ |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-10-27) — MARTES / NOVIEMBRE EN 5 DÍAS / FNE+SSW 103 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es **martes 27 de octubre**. Noviembre en **5 días** — el peak de fin de año a la vuelta de la esquina. SSW Partners lleva **103 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 2 seguimientos para Contactados con borradores más antiguos (#2 Pollería Don Pollo y #9 Rotisería El Gaucho, 7 días sin draft), 2 seguimientos Contactados con 6 días sin draft (#1 Fuente de Soda El Rápido y #6 Botillería El Copihue), y 2 presentaciones para nuevos prospectos (#237 Senseisushi Delivery y #238 Niyei Sushi). Pipeline: **238 prospectos**.
+
+> **ALERTAS:** #22 Sushi Point (tel. (32) 324 0504) y #15 Melt Pizzas llevan **95 días** con borradores activos sin confirmación de envío. SSW Partners **103 días en silencio** — ventana crítica para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102).
+
+---
+
+**[2] Pollería Don Pollo — Seguimiento "Martes 27/10 / Noviembre en 5 días / Verano trae más pollos":**
+"Hola, Don Pollo! De RepartoJusto, los contactamos hace unas semanas. Martes 27 de octubre — noviembre arranca en 5 días. El verano en Chile es el peak de pollos asados para almuerzos familiares de fin de semana, y diciembre llega con fiestas y reuniones que duplican la demanda. La cuenta es clara: con 30 pollos al día a $9.000 c/u en Rappi (28%), pagan $756.000 al mes en comisiones. Con RepartoJusto: $135.000 al mes. Diferencia: $621.000 en el bolsillo del negocio — todos los meses, desde el primero. Sin contrato, registro gratuito: repartojusto-production.up.railway.app ¿Lo registramos antes del rush de noviembre? — Equipo RepartoJusto"
+
+---
+
+**[9] Rotisería El Gaucho — Seguimiento "Martes 27/10 / Noviembre en 5 días / Rotisería peak verano":**
+"Hola, El Gaucho! De RepartoJusto. Noviembre en 5 días y el verano ya llegó. Rotisería y asados son de los rubros que más crecen con el calor: almuerzos de domingo, reuniones al aire libre, celebraciones de fin de año. Los números para hoy: 20 pedidos al día de $8.000 en Rappi (28%) = $44.000 de comisión al día, $1.320.000 al mes. Con RepartoJusto: $300.000 al mes. Más de $1.000.000 extra en diciembre que se quedan en El Gaucho. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Arrancamos el verano con tarifa fija? — Equipo RepartoJusto"
+
+---
+
+**[1] Fuente de Soda El Rápido — Seguimiento "Martes 27/10 / Noviembre en 5 días / Completos y verano":**
+"Hola, Fuente de Soda El Rápido! De RepartoJusto. Noviembre en 5 días — el verano trae más pedidos de completos y sándwiches a domicilio para almuerzos de semana y fines de semana en familia. Con una plataforma de porcentaje (28%), un completo de $4.500 genera $1.260 de comisión. Con RepartoJusto: $500 planos por entrega, siempre, sin importar el precio del plato. En diciembre, con los eventos de fin de año, es cuando más se nota la diferencia. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo activamos antes del peak? — Equipo RepartoJusto"
+
+---
+
+**[6] Botillería El Copihue — Seguimiento "Martes 27/10 / Noviembre en 5 días / Verano = peak botillería":**
+"Hola, Botillería El Copihue! De RepartoJusto. El verano ya está acá y noviembre arranca en 5 días. Botillerías son de los negocios que más crecen en temporada caliente: asados, terrazas, reuniones de jardín y fiestas de fin de año empujan la demanda de delivery de bebidas. Con una plataforma de porcentaje, un pedido de $12.000 = $3.360 de comisión. Con RepartoJusto: $500 fijos. Con 20 pedidos al día en diciembre: más de $560.000 extra al mes que quedan en el negocio. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo configuramos antes del peak de fin de año? — Equipo RepartoJusto"
+
+---
+
+**[237] Senseisushi Delivery — Presentación "Canal propio / Noviembre en 5 días / Peak sushi fin de año":**
+"Hola, Senseisushi! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Vi que tienen delivery de sushi propio — exactamente el tipo de negocio para el que trabajamos. Con RepartoJusto: $500 fijos por pedido entregado, sin porcentaje sobre la venta. Para un roll de $14.000, la diferencia vs. Rappi (28%) es $3.420 que se queda en Senseisushi por cada entrega. Con 15 pedidos al día en noviembre-diciembre, eso supera $1.500.000 al mes que quedan en el negocio. Noviembre arranca en 5 días — inicio del peak de sushi del año: cenas de empresa, reuniones familiares, Navidad. El momento de configurar el canal es ahora para llegar rodado al rush. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Les cuento cómo funciona? — Equipo RepartoJusto"
+
+---
+
+**[238] Niyei Sushi — Presentación "Sushi delivery VA / Noviembre en 5 días / Tarifa fija vs. 30% comisión":**
+"Hola, Niyei Sushi! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Si trabajan con Rappi o Uber Eats, el 28-30% de cada pedido se lo queda la plataforma — con nosotros son $500 fijos por entrega. Para una tabla de $16.000 en Uber Eats (30% = $4.800 comisión) vs. $500 con RepartoJusto: diferencia de $4.300 por pedido que se queda en el negocio. Noviembre en 5 días = inicio del peak de sushi de fin de año: cenas de empresa, celebraciones, Navidad. Los sushi de ticket alto son los que más pierden con comisiones porcentuales — y los que más ganan con tarifa fija. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Conversamos? — Equipo RepartoJusto"
 
 ---
 
@@ -4665,3 +4705,7 @@ Con primavera en 7 días, es el momento ideal para configurar el canal antes del
 **Tres Efes Sushi Villa Alemana (#236, agregado 26/10):** Sushi delivery activo en Uber Eats en Villa Alemana. Rubro: sushi. Ticket promedio estimado: $12.000-$18.000 (rolls, tablas, combos). Uber Eats cobra 30% de comisión — para una tabla de $16.000, la comisión es $4.800; con RepartoJusto son $500 fijos. Con 15 pedidos diarios en diciembre, la diferencia supera $1.900.000 al mes. Argumento estacional: noviembre en 6 días al agregar = inicio del peak de sushi de fin de año (reuniones de empresa, Navidad, cumpleaños de diciembre). Dirección exacta y teléfono por confirmar al contactar. Fuente: Uber Eats Villa Alemana búsqueda sushi octubre 2026.
 
 **Burger y Sandwich Take Away Peñablanca (#232, agregado 24/10):** Hamburguesería y sandwichería delivery-first con canal propio (WhatsApp + retiro) en Peñablanca, zona VA/Quilpué. Sin grandes plataformas detectadas. Producto: hamburguesas artesanales y sándwiches a domicilio. Ticket promedio estimado: $8.000-$13.000. Argumento principal: delivery ya activo por canal propio sin logística externa — RepartoJusto complementa con rider local a $500 fijo; para un sándwich de $10.000, plataforma de porcentaje (28%) cobraría $2.800 vs. $500 fijo; diferencia $2.300 por pedido al bolsillo del negocio. Cobertura: Peñablanca, Villa Alemana, Quilpué. Argumento verano: noviembre en 8 días = sándwiches frescos y burgers = peak temporada cálida. Fuente: búsqueda hamburguesería delivery Peñablanca WhatsApp octubre 2026.
+
+**Senseisushi Delivery (#237, agregado 27/10):** Restaurante de sushi con delivery propio en Villa Alemana. Horario: lunes a jueves 17:00-23:00, viernes a sábado hasta medianoche. Canal propio activo. Sin grandes plataformas confirmadas (Rappi/Uber Eats/PedidosYa por confirmar al contactar). Ticket promedio estimado: $12.000-$16.000 (sushi delivery). Argumento principal: canal de delivery propio ya activo — RepartoJusto complementa la logística local a $500 fijo sin porcentaje de venta; para un roll de $14.000, ahorro vs. Rappi (28%): $3.420 por pedido. Con 15 pedidos al día en noviembre-diciembre, la diferencia supera $1.500.000 al mes que quedan en el negocio. Argumento estacional: noviembre en 5 días al agregar = inicio del peak de sushi del año (cenas empresa, Navidad). Fuente: mundochileno.com/senseisushi-delivery-F1A08C10E19D7 + búsqueda sushi delivery Villa Alemana octubre 2026.
+
+**Niyei Sushi (#238, agregado 27/10):** Restaurante de sushi con delivery en María Mercedes 1097, Villa Alemana. Dirección confirmada en listado Exposushi (exposushi.cl/region-de-valparaiso/villa-alemana). Plataformas activas por confirmar al contactar (Rappi/Uber Eats/canal propio). Ticket promedio estimado: $12.000-$18.000 (tablas, rolls, combos). Argumento principal: sushi de ticket alto = mayor ahorro con tarifa fija; para una tabla de $16.000 en Uber Eats (30%), la comisión es $4.800; con RepartoJusto son $500 fijos. Con 15 pedidos diarios en diciembre, la diferencia supera $1.900.000 al mes. Argumento estacional: noviembre en 5 días al agregar = inicio del peak de sushi de fin de año. Fuente: exposushi.cl/region-de-valparaiso/villa-alemana + búsqueda sushi Villa Alemana octubre 2026.
