@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-10-28T00:00:00Z
+**Última verificación:** 2026-10-28T05:31:50Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — el proxy de red del entorno rechazó la conexión (403 CONNECT tunnel failed). El host no está permitido en la política de egreso de esta sesión. No se obtuvo respuesta HTTP del servidor.
+**Detalle:** Error de conexión — el proxy de red del entorno rechazó la conexión saliente a repartojusto-production.up.railway.app:443 (connect_rejected). No se pudo verificar el endpoint /health. Posible causa: restricción de red del entorno de ejecución o el host no está en la lista de permitidos.
