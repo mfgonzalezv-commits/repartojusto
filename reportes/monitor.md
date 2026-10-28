@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-10-28T22:31:38Z
+**Última verificación:** 2026-10-28T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por el proxy de red del agente (host no permitido en esta sesión). HTTP 000 / exit code 56.
+**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por el proxy de egreso del entorno de ejecución (connect_rejected). El host puede estar caído o inaccesible desde este entorno.
