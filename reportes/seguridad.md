@@ -1,62 +1,71 @@
 # Seguridad RepartoJusto
-**Fecha:** 2026-10-21
-**Nivel general:** CRÍTICO
+**Fecha:** 2026-10-28
+**Nivel general:** ALTO
 **Agente:** Claude Code (Sonnet 4.6) — sesión automatizada
 
 ---
 
-## Vulnerabilidades
+## Vulnerabilidades (revisión semana 43)
 
-### 1. [CRÍTICO] Webhook de pagos acepta solicitudes sin firma en modo sandbox
-**Archivo:** `backend/src/routes/pagos.js` — línea 147  
-**Qué podría pasar:** En entornos con `FLOW_ENVIRONMENT=sandbox` y sin `FLOW_SECRET` configurado, cualquier persona que conozca un `flow_token` (visible en las URLs de pago y en la respuesta de `/api/pagos/crear`) puede hacer un POST a `/api/pagos/webhook` y marcar ese pago como completado **sin haber pagado nada**. El helper `consultarPago` en sandbox siempre retorna `status: 2` (pagado), por lo que la forja funciona el 100% de las veces.  
-**Fix aplicado:** ✅ Se eliminó la rama que permitía procesar webhooks sin `FLOW_SECRET`. Ahora se rechaza con HTTP 401 siempre que el secreto no esté configurado, independiente del entorno.
+### 1. [ALTO] Sin rate limiting en creación de pedidos
+**Archivo:** `backend/src/routes/pedidos.js` — línea 22 (antes del fix)  
+**Qué podría pasar:** Un negocio autenticado podía crear miles de pedidos por minuto sin ningún límite. Esto habilitaba:  
+- Ataque DoS al motor de asignación de riders (cada pedido lanza una cascada de notificaciones en Redis/Socket.io)  
+- Spam de pedidos en sandbox sin costo alguno  
+- Agotamiento de conexiones PostgreSQL  
 
----
-
-### 2. [ALTO] Timing attack en login permite enumerar emails registrados
-**Archivo:** `backend/src/routes/auth.js` — línea 202  
-**Qué podría pasar:** El operador `||` hacía cortocircuito: si el usuario no existía, `bcrypt.compare` nunca se ejecutaba. Eso hace que la respuesta a un email inexistente llegue ~100 ms más rápido que para uno existente. Un atacante puede medir estos tiempos para saber qué emails están registrados en la plataforma y luego enfocar ataques de fuerza bruta o phishing.  
-**Fix aplicado:** ✅ Se refactorizó para que `bcrypt.compare` siempre corra, usando un hash dummy cuando el usuario no existe. La respuesta es ahora de tiempo constante.
+**Fix aplicado:** ✅ Rate limiter por `usuario.id`: máximo 20 pedidos por hora. Si se excede, responde HTTP 429.
 
 ---
 
-### 3. [ALTO] Sin límite máximo en monto de incentivo para riders
-**Archivo:** `backend/src/routes/admin.js` — línea 308  
-**Qué podría pasar:** El campo `monto` solo validaba `min: 1`. Una cuenta admin comprometida (o un admin malicioso) podía invocar `POST /api/admin/riders/:id/incentivo` con un monto de, por ejemplo, 9.999.999.999 CLP, acreditando ese saldo al rider sin ninguna restricción del sistema. Esto podría vaciar fondos o generar deuda operativa.  
-**Fix aplicado:** ✅ Se agregó `max: 500_000` CLP al validador (equivale a ~500 USD, razonable como bono máximo manual).
+### 2. [ALTO] Null dereference en `GET /api/negocios/pedidos/:id`
+**Archivo:** `backend/src/routes/negocios.js` — línea 148  
+**Qué podría pasar:** Si un usuario con `rol=negocio` no tiene registro en la tabla `negocios` (inconsistencia de datos, cuenta parcialmente creada), acceder a `GET /api/negocios/pedidos/:id` lanzaba `TypeError: Cannot read properties of undefined (reading 'id')`. Esto resultaba en HTTP 500. En entornos sin `NODE_ENV=production`, el mensaje de error detallado se exponía en la respuesta JSON, filtrando información interna.  
+**Fix aplicado:** ✅ Se agregó `if (!negocio) return res.status(404).json({ error: 'Negocio no encontrado' })` antes de usar `negocio.id`.
 
 ---
 
-### 4. [MEDIO] Política de contraseña débil (mínimo 6 caracteres)
-**Archivo:** `backend/src/routes/auth.js` — líneas 110 y 150  
-**Qué podría pasar:** Las rutas de registro de negocio y rider permiten contraseñas de 6 caracteres. Combinado con el rate limiting solo por IP (no por cuenta), desde múltiples IPs se puede hacer fuerza bruta sobre cuentas con contraseñas cortas.  
-**Fix pendiente:** Subir el mínimo a 8 caracteres y agregar al menos un dígito o símbolo (`body('password').isStrongPassword({ minLength: 8, minNumbers: 1 })`). No aplicado automáticamente para evitar romper cuentas existentes — requiere decisión del equipo sobre migración.
+### 3. [ALTO] Null dereference en `PUT /api/pedidos/:id/cancelar`
+**Archivo:** `backend/src/routes/pedidos.js` — línea 344  
+**Qué podría pasar:** El mismo patrón que la vulnerabilidad anterior: si el negocio autenticado no tiene registro en `negocios`, `neg.id` lanzaba TypeError → HTTP 500 con posible fuga de detalles internos.  
+**Fix aplicado:** ✅ Se agregó `if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' })` antes de usar `neg.id`.
 
 ---
 
-### 5. [BAJO] VAPID_PUBLIC_KEY expuesta sin autenticación
-**Archivo:** `backend/src/routes/riders.js` — línea 231  
-**Qué podría pasar:** El endpoint `GET /api/riders/vapid-public-key` devuelve la clave pública VAPID sin requerir token. Aunque la clave pública está diseñada para ser compartida, su exposición sin ningún control facilita que atacantes intenten suscribir dispositivos fantasma a notificaciones push.  
-**Fix recomendado:** Proteger el endpoint con `auth` (o al menos limitar con rate limiting por IP). Bajo impacto porque la clave es de naturaleza pública, pero el acceso irrestricto no aporta valor.
+### 4. [MEDIO] Sin validación UUID en `pedido_id` en `POST /api/pagos/crear`
+**Archivo:** `backend/src/routes/pagos.js` — línea 44  
+**Qué podría pasar:** El campo `pedido_id` solo verifica si es truthy. Un valor como `"'; DROP TABLE pagos; --"` no causa SQL injection (queries parametrizadas lo evitan), pero sí causa un error de tipo PostgreSQL (`invalid input syntax for type uuid`). En non-production, ese mensaje de error se retorna en la respuesta JSON, exponiendo que el backend usa PostgreSQL con tipo UUID.  
+**Fix recomendado:** Agregar `body('pedido_id').isUUID()` con express-validator (ya disponible en el proyecto) y la función `validar` al inicio del handler. No aplicado automáticamente para no cambiar la API pública sin revisión.
 
 ---
 
-## Resumen de estado
+### 5. [MEDIO] JWT `NotBeforeError` no manejado en error handler
+**Archivo:** `backend/src/middleware/errorHandler.js` — línea 10  
+**Qué podría pasar:** El handler solo captura `JsonWebTokenError` y `TokenExpiredError`. Si se envía un JWT con un claim `nbf` (not before) en el futuro, `jsonwebtoken` lanza `NotBeforeError` que cae al handler genérico → HTTP 500 en lugar de 401. Impacto bajo, pero expone comportamiento inesperado.  
+**Fix recomendado:** Agregar `err.name === 'NotBeforeError'` a la condición de la línea 10. Cambio de una línea, no aplicado para mantener batch mínimo de fixes.
 
-| # | Nivel | Archivo | Estado |
-|---|-------|---------|--------|
-| 1 | CRÍTICO | pagos.js:147 | ✅ Corregido |
-| 2 | ALTO | auth.js:202 | ✅ Corregido |
-| 3 | ALTO | admin.js:308 | ✅ Corregido |
-| 4 | MEDIO | auth.js:110,150 | ⚠️ Pendiente (decisión equipo) |
-| 5 | BAJO | riders.js:231 | ⚠️ Pendiente |
+---
 
-## Fixes aplicados
-- `backend/src/routes/pagos.js` — Webhook ahora requiere FLOW_SECRET siempre
-- `backend/src/routes/auth.js` — Login usa bcrypt de tiempo constante
-- `backend/src/routes/admin.js` — Incentivo limitado a 500.000 CLP máximo
+## Resumen de estado (acumulado)
+
+| # | Fecha | Nivel | Archivo | Estado |
+|---|-------|-------|---------|--------|
+| 1 | 2026-10-21 | CRÍTICO | pagos.js:147 | ✅ Corregido |
+| 2 | 2026-10-21 | ALTO | auth.js:202 | ✅ Corregido |
+| 3 | 2026-10-21 | ALTO | admin.js:308 | ✅ Corregido |
+| 4 | 2026-10-21 | MEDIO | auth.js:110,150 | ⚠️ Pendiente |
+| 5 | 2026-10-21 | BAJO | riders.js:231 | ⚠️ Pendiente |
+| 6 | 2026-10-28 | ALTO | pedidos.js:22 | ✅ Corregido |
+| 7 | 2026-10-28 | ALTO | negocios.js:148 | ✅ Corregido |
+| 8 | 2026-10-28 | ALTO | pedidos.js:344 | ✅ Corregido |
+| 9 | 2026-10-28 | MEDIO | pagos.js:44 | ⚠️ Pendiente |
+| 10 | 2026-10-28 | MEDIO | errorHandler.js:10 | ⚠️ Pendiente |
+
+## Fixes aplicados esta sesión
+- `backend/src/routes/pedidos.js` — Rate limiter en creación de pedidos (max 20/hora por negocio)
+- `backend/src/routes/negocios.js` — Null guard en `GET /pedidos/:id`
+- `backend/src/routes/pedidos.js` — Null guard en `PUT /:id/cancelar`
 
 ## Estado del servidor de producción
 - URL: `https://repartojusto-production.up.railway.app/health`
-- Resultado: **No alcanzable** (DNS ENOTFOUND). El servidor de producción no está levantado o el dominio no está configurado aún.
+- Resultado: **No alcanzable** (403 desde el proxy del entorno de ejecución). El dominio no resuelve o el servidor sigue sin deployarse.

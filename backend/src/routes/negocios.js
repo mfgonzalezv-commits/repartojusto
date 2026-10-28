@@ -146,6 +146,7 @@ router.get('/pedidos/:id', auth, solo('negocio'), async (req, res, next) => {
     const { rows: [negocio] } = await db(
       'SELECT id FROM negocios WHERE usuario_id = $1', [req.usuario.id]
     );
+    if (!negocio) return res.status(404).json({ error: 'Negocio no encontrado' });
     const { rows } = await db(
       `SELECT p.*,
               r_u.nombre AS rider_nombre, r_u.telefono AS rider_telefono,

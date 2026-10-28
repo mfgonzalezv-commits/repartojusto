@@ -19,10 +19,30 @@ const calcularTarifa = (distancia_km) => {
   return Math.round(config.TARIFA_FIJA_CLP + config.TARIFA_KM_CLP * distancia_km);
 };
 
+// Rate limiter para creación de pedidos: max 20 por usuario por hora
+const _pedidoCreateStore = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [k, e] of _pedidoCreateStore) if (now - e.first >= 3600000) _pedidoCreateStore.delete(k);
+}, 10 * 60 * 1000).unref();
+function pedidoCreateRateLimit(req, res, next) {
+  const key = req.usuario?.id;
+  const now = Date.now();
+  const entry = _pedidoCreateStore.get(key);
+  if (entry && now - entry.first < 3600000) {
+    if (entry.count >= 20) return res.status(429).json({ error: 'Límite de pedidos alcanzado. Intenta en una hora.' });
+    entry.count++;
+  } else {
+    _pedidoCreateStore.set(key, { count: 1, first: now });
+  }
+  next();
+}
+
 // ── POST /api/pedidos ─────────────────────────────────────────────────────
 // El negocio crea un pedido
 router.post('/',
   auth, solo('negocio'),
+  pedidoCreateRateLimit,
   [
     body('cliente_nombre').trim().notEmpty(),
     body('cliente_telefono').trim().notEmpty().isLength({ min: 8, max: 20 }),
@@ -345,6 +365,7 @@ router.put('/:id/cancelar',
         const { rows: [neg] } = await db(
           'SELECT id FROM negocios WHERE usuario_id = $1', [req.usuario.id]
         );
+        if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' });
         params.push(neg.id);
         filtro += ` AND negocio_id = $${params.length}`;
       }
