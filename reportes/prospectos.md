@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-10-28
+**Actualizado:** 2026-10-29
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -7,11 +7,11 @@
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 28/10 / Noviembre en 4 días / Completos verano" redactado 28/10 — completos peak verano; $4.500 completo Rappi = $1.260 comisión vs. $500 fijo RJ; seguimiento 7 días |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 28/10 / Noviembre en 4 días / Pollos verano" redactado 28/10 — pollo asado = peak verano/diciembre; 30 pollos/día $9K Rappi = $756K/mes comisión vs. $135K RJ; diferencia $621K/mes |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 26/10 / Noviembre en 6 días / Peak alergias primaverales" redactado 26/10 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 23/10 / Noviembre en 9 días / Pizza = peak fin de semana + fin de año" redactado 23/10 — viernes es el día más alto de pizza delivery; nov-dic = peak absoluto; ahorro ~$990K/mes vs. Rappi |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 29/10 / Noviembre en 3 días / Pizza = peak fin de semana + Navidad en 8 semanas" redactado 29/10 — nov-dic = peak absoluto; pizza $12.000 Rappi 28% = $3.360 comisión vs. $500 fijo; ahorro ~$990K/mes; activar antes del 1/11 |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 26/10 / Noviembre en 6 días / Peak sushi celebraciones fin de año" redactado 26/10 — nov-dic = celebraciones empresa + cenas Navidad; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Noviembre en 10 días: el verano es el peak de las botillerías" redactado 21/10 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Domingo 25/10 / Noviembre en 7 días / Almuerzo dominical + verano bebidas" redactado 25/10 — domingo = peak compras snacks/bebidas para almuerzo en casa; noviembre en 7 días = temporada alta almacenes; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 23/10 / Fin de semana = tortas cumpleaños / Navidad en 9 semanas" redactado 23/10 — viernes es el día con más encargos de tortas; Navidad en 9 semanas = peak absoluto pastelería; configurar canal HOY para llegar rodada a diciembre |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Jueves 29/10 / Noviembre en 3 días / Tortas Navidad en 8 semanas" redactado 29/10 — torta $18.000 plataforma 30% = $5.400 comisión vs. $500 fijo; 10 tortas/día diciembre = diferencia $1.5M/mes; activar antes del rush |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 28/10 / Noviembre en 4 días / Rotisería peak verano" redactado 28/10 — asados y pollo = peak verano/diciembre; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = diferencia $1M+/mes |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 28/10 / Noviembre en 4 días / Terrazas y café verano" redactado 28/10 — café frío + terrazas = peak verano; activar canal antes del rush de noviembre |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Jueves 22/10 / Primavera peak veterinario / Noviembre en 10 días" redactado 22/10 — peak vacunas anuales + antipulgas primavera; pack antipulgas $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; delivery urgente medicamentos = mayor impacto tarifa fija |
@@ -31,9 +31,9 @@
 | 25 | Sin Miedo Burgers | Hamburguesas | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 26 | El Clandestino-Gastronomía Peruana | Comida peruana | Villa Alemana | Nuevo | — | Arranque julio redactado 27/06 |
 | 27 | Tribeca Sushi | Sushi | Villa Alemana (en PedidosYa) | Nuevo | — | "Lunes 26/10 / SSW 102 días / Certeza 2027 — sushi peak nov-dic" redactado 26/10 — PedidosYa US$35M multas 2026, SSW 102 días sin comunicar contrato 2027, nov-dic = peak sushi; tabla $20K = $5.600 comisión vs. $500 fijo |
-| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | "Viernes 23/10 / SSW 99 días / Certeza 2027 — completos fin de semana" redactado 23/10 — PedidosYa US$35M multas, SSW 99 días sin comunicar 2027, viernes = peak completos/sándwich; $4.500 completo = $1.260 comisión vs. $500 fijo |
+| 28 | La Esquina Con Sabor | Comida rápida / completos | Villa Alemana (en PedidosYa) | Nuevo | — | "Jueves 29/10 / SSW 105 días / Certeza 2027 — completos noviembre" redactado 29/10 — SSW 105 días sin comunicar condiciones 2027; noviembre en 3 días = peak completos/sándwich; $500 fijo vs. incertidumbre total de PedidosYa para 2027 |
 | 29 | Diroom Burger Lounge | Hamburguesas artesanales | Av. Valparaíso 199, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — hamburguesería artesanal 10 años, ángulo Quilpué, tel. (32) 295 0030 |
-| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | "Seguimiento FNE/SSW (96 días silencio) / ¿Siguen en PedidosYa sin saber qué pasa en 2027?" redactado 20/10 — en PedidosYa + Uber Eats doble comisión; PedidosYa US$35M multas 2026; SSW 96 días sin comunicar contrato 2027; tel. +56 32 324 2360 |
+| 30 | Poh Che Empanadas & Sandwichs | Empanadas / comida chilena | Salvador Reyes 1162, Villa Alemana | Nuevo | — | "Jueves 29/10 / SSW 105 días / Certeza 2027 — doble comisión" redactado 29/10 — en PedidosYa + Uber Eats doble comisión; SSW 105 días sin comunicar 2027; $700K-$1M/mes comisiones combinadas vs. $500 fijo RJ; tel. +56 32 324 2360 |
 | 31 | Barrio Chino Villa Alemana | Comida china | Madrid 300, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — listado bajo Quilpué en Rappi, tel. +56 997902765, ahorro ~$1M/mes |
 | 32 | Tempura Sushi & Sándwich Delivery | Sushi / sándwich | Av. Valparaíso 102 Local 3, Villa Alemana | Nuevo | — | Arranque julio redactado 28/06 — delivery-first, ticket alto sushi |
 | 33 | Casa Festa Cocina y Repostería | Tortas / pizzas / empanadas | Madrid 1090, Villa Alemana | Nuevo | — | "Lunes 26/10 / SSW 102 días / Certeza 2027 — Navidad en 8 semanas" redactado 26/10 — PedidosYa US$35M multas, SSW 102 días sin comunicar 2027, Navidad en 8 semanas = peak tortas+pizzas gourmet; 20 años merecen certeza de costos, tel. (32) 2950116 |
@@ -244,10 +244,50 @@
 | 238 | Niyei Sushi | Sushi | María Mercedes 1097, Villa Alemana | Nuevo | — | Presentación redactada 27/10 — sushi delivery VA; dirección en Exposushi; ticket $12.000-$18.000; plataforma activa por confirmar; nov-dic = peak sushi celebraciones fin de año; tabla $16.000 vs. 28% = $4.480 comisión vs. $500 fijo RJ |
 | 239 | Ali Ali Delivery | Comida (por confirmar rubro) | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 28/10 — detectado en Uber Eats VA; argumento $500 fijo vs. 30% Uber Eats; noviembre en 4 días = inicio peak fin de año; tarifa fija diferenciador clave |
 | 240 | Vika PokeWraps | Comida saludable / poké / wraps | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 28/10 — poké y wraps en Uber Eats VA; PRIMER poke del pipeline; comida saludable = categoría de mayor crecimiento en verano (nov-ene); bowl $9.000 Uber Eats 30% = $2.700 comisión vs. $500 fijo RJ |
+| 241 | Fresh Bowls Villa Alemana | Comida saludable / bowls / ensaladas | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 29/10 — bowls y ensaladas en Uber Eats VA; comida saludable = peak máximo verano nov-ene; bowl $8.000 Uber Eats 30% = $2.400 comisión vs. $500 fijo RJ; diferencia $1.900 por pedido en plena temporada |
+| 242 | Modo Pizza a la Leña | Pizzería artesanal | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 29/10 — pizzería artesanal en Uber Eats VA; pizza $14.000 Uber Eats 30% = $4.200 comisión vs. $500 fijo RJ; noviembre en 3 días = peak pizzas fin de año (fiestas empresa, Navidad); diferencia $3.700 por pedido |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-10-29) — JUEVES / NOVIEMBRE EN 3 DÍAS / SSW 105 DÍAS / VERANO A LA VUELTA
+
+> **NOTA PARA MATÍAS:** Hoy es **jueves 29 de octubre**. Noviembre arranca en **3 días** — el peak de fin de año está encima. SSW Partners lleva **105 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 2 seguimientos para Contactados con borradores de 6 días (#4 Pizza House y #8 Pastelería Dulce Hogar — últimos desde 23/10), 2 seguimientos para Nuevos PedidosYa urgentes (#28 La Esquina Con Sabor 6 días y #30 Poh Che 9 días — SSW 105 días sin comunicar 2027), y 2 presentaciones para nuevos prospectos de Uber Eats (#241 Fresh Bowls y #242 Modo Pizza a la Leña). Pipeline: **242 prospectos**.
+
+> **ALERTAS:** #22 Sushi Point (tel. (32) 324 0504) y #15 Melt Pizzas llevan **97 días** consecutivos con borradores activos sin confirmación de envío. SSW Partners **105 días en silencio** — ventana crítica para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102).
+
+---
+
+**[4] Pizza House — Seguimiento "Jueves 29/10 / Noviembre en 3 días / Pizza = peak fin de semana + Navidad en 8 semanas":**
+"Hola Pizza House! De RepartoJusto, delivery local Villa Alemana. Jueves 29 de octubre — noviembre arranca en 3 días, y el fin de semana es el día de mayor demanda de pizza del año. Después viene noviembre-diciembre: fiestas de empresa, cumpleaños de fin de año, Navidad — el peak absoluto de pizzas. Una pizza de $12.000 en Rappi (28%) = $3.360 de comisión por pedido. Con RepartoJusto: $500 fijos siempre. Con 20 pedidos al día en noviembre-diciembre, la diferencia son $990.000 al mes que se quedan en el negocio. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo activamos antes del 1 de noviembre? — Equipo RepartoJusto"
+
+---
+
+**[8] Pastelería Dulce Hogar — Seguimiento "Jueves 29/10 / Noviembre en 3 días / Tortas Navidad en 8 semanas":**
+"Hola Dulce Hogar! De RepartoJusto. Jueves 29 de octubre — noviembre en 3 días, inicio del peak más largo del año para pastelerías: cumpleaños de fin de año, fiestas de empresa, Navidad en 8 semanas con tortas encargadas al por mayor. Una torta de $18.000 en plataformas (30%) = $5.400 de comisión. Con RepartoJusto: $500 fijos por entrega. En diciembre con 10 tortas encargadas al día, la diferencia es $1.500.000 al mes que se queda en la pastelería. El momento de activar el canal es ahora, antes del rush. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Esta semana lo ven? — Equipo RepartoJusto"
+
+---
+
+**[28] La Esquina Con Sabor — Seguimiento SSW "Jueves 29/10 / SSW 105 días / Certeza 2027 — completos noviembre":**
+"Hola La Esquina Con Sabor! De RepartoJusto. Dato concreto: SSW Partners compró PedidosYa Chile hace 105 días y hasta hoy no ha comunicado nada a los negocios afiliados sobre las condiciones de 2027. No saben ni ustedes ni nadie cuánto van a cobrar de comisión el próximo año. RepartoJusto tiene una respuesta clara: $500 fijos por pedido entregado, hoy y en 2027. Noviembre arranca en 3 días — el peak de completos y sándwiches de fin de año está encima. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Conversamos? — Matías, RepartoJusto"
+
+---
+
+**[30] Poh Che Empanadas & Sandwichs — Seguimiento SSW "Jueves 29/10 / SSW 105 días / Certeza 2027 — doble comisión":**
+"Hola Poh Che! De RepartoJusto, plataforma local Villa Alemana. Están en PedidosYa y Uber Eats pagando comisión en las dos — eso es entre $700.000 y $1.000.000 al mes aproximado en comisiones combinadas. Encima: SSW Partners, el fondo de NY que compró PedidosYa Chile hace 105 días, no ha dicho nada sobre qué cambia en 2027. La única certeza disponible hoy es la nuestra: $500 fijos por pedido, sin comisión, sin sorpresas. Noviembre en 3 días = peak empanadas y sándwiches de fin de año. Tel. +56 32 324 2360. Registro gratuito: repartojusto-production.up.railway.app ¿Les contamos cómo funciona? — Matías, RepartoJusto"
+
+---
+
+**[241] Fresh Bowls Villa Alemana — Presentación "Uber Eats VA / Noviembre en 3 días / Peak verano saludable":**
+"Hola Fresh Bowls! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Los vi activos en Uber Eats — quisiera compartirles un dato: la comida saludable (bowls, ensaladas) es la categoría que más crece en temporada de verano, y noviembre arranca en 3 días. Con Uber Eats el costo por pedido es 30% de la venta; con RepartoJusto son $500 fijos por entrega. Para un bowl de $8.000: $2.400 de comisión vs. $500 — diferencia de $1.900 por pedido que se queda en el negocio durante todo el peak de verano noviembre-enero. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Conversamos? — Matías, RepartoJusto"
+
+---
+
+**[242] Modo Pizza a la Leña — Presentación "Uber Eats VA / Noviembre en 3 días / Peak pizzas fin de año":**
+"Hola Modo Pizza! Soy Matías de RepartoJusto, delivery local Villa Alemana. Los vi en Uber Eats — pizza a la leña es un producto de ticket alto que paga mucho en comisiones. Con Uber Eats el costo es 30% de la venta; con RepartoJusto son $500 fijos por pedido, sin importar el precio. Noviembre en 3 días = inicio del peak de pizzas más largo del año (fiestas de empresa, cumpleaños, Navidad). Para una pizza de $14.000: $4.200 de comisión en Uber Eats vs. $500 — diferencia de $3.700 por pedido en plena temporada alta. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Les cuento más? — Matías, RepartoJusto"
 
 ---
 
