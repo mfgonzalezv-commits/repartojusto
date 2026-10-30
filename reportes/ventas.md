@@ -1,53 +1,36 @@
 # Ventas RepartoJusto
-**Fecha:** 2026-10-29 (Jueves)
-**Pipeline total:** 242 prospectos
-**Por estado:** Nuevos: 228 | Contactados: 14 | Interesados: 0 | Registrados: 0
-
----
+**Fecha:** 2026-10-30 (viernes)
+**Pipeline total:** 244 prospectos
+**Por estado:** Nuevos: 230 | Contactados: 14 | Interesados: 0 | Registrados: 0
 
 ## Acciones del día
 
-### Argumentos del Investigador incorporados
-- **Certeza 2027 / SSW Partners 105 días en silencio** — argumento central para los 9 prospectos PedidosYa del pipeline. SSW compró PedidosYa Chile el 16/07, hoy lleva 105 días sin comunicar condiciones contractuales 2027 a los afiliados. Mensaje exacto: "PedidosYa no puede decirte cuánto pagarás en 2027 — nosotros sí: $500 fijos, en papel."
-- **Eje noviembre-diciembre (rush de fin de año)** — noviembre arranca en 3 días; es el segundo peak más alto del año. Rubros prioritarios: pastelerías, pizzerías, pollerías, sushi (celebraciones). Argumento: "configúrate en noviembre, no en diciembre".
-- **URL Rappi/Quilpué** para demostración presencial: negocios de VA clasificados bajo "Quilpué" en Rappi.
-
-### Seguimientos redactados para Contactados
-1. **#4 Pizza House** — Seguimiento "Jueves 29/10 / Noviembre en 3 días / Pizza = peak fin de semana + Navidad en 8 semanas". Ahorro ~$990K/mes, activar antes del 1/11.
-2. **#8 Pastelería Dulce Hogar** — Seguimiento "Jueves 29/10 / Noviembre en 3 días / Tortas Navidad en 8 semanas". Torta $18K con plataforma = $5.400 comisión vs. $500 fijo; diferencia $1.5M/mes en diciembre.
-
-### Seguimientos PedidosYa urgentes (SSW 105 días)
-3. **#28 La Esquina Con Sabor** — Seguimiento "SSW 105 días / Certeza 2027 — completos noviembre". 6 días sin borrador actualizado.
-4. **#30 Poh Che** — Seguimiento "SSW 105 días / Certeza 2027 — doble comisión". 9 días sin borrador actualizado; en PedidosYa + Uber Eats (doble comisión combinada $700K-$1M/mes).
-
-### Nuevos prospectos agregados (2)
-5. **#241 Fresh Bowls Villa Alemana** — Uber Eats VA, comida saludable (bowls/ensaladas), peak verano nov-ene, bowl $8.000 → $2.400 comisión vs. $500 fijo, diferencia $1.900/pedido.
-6. **#242 Modo Pizza a la Leña** — Uber Eats VA, pizzería artesanal, noviembre en 3 días = peak pizzas fin de año, pizza $14.000 → $4.200 comisión vs. $500 fijo, diferencia $3.700/pedido.
-
----
+- Leído cola.md: argumentos del Investigador (29/10) incorporados — SSW Partners 106 días sin comunicar condiciones 2027 a afiliados PedidosYa; noviembre en 2 días; frecuencia de pedidos Chile sube de 1,5 a 2,7/mes; Rappi Turbo sin confirmación en Villa Alemana.
+- 4 seguimientos redactados para Contactados más desactualizados (8-9 días sin draft): #6 Botillería El Copihue, #14 Heladería Glacial, #11 Veterinaria Huellitas, #12 Librería El Saber.
+- 2 seguimientos FNE/SSW urgentes redactados para Nuevos PedidosYa: #90 Buenaventura Pizzería (doble comisión Uber Eats + PedidosYa) y #102 La Joya (SSW 106 días, completos fin de semana).
+- 2 presentaciones redactadas para nuevos prospectos de canal propio: #243 Jugoteca Natural VA (jugotería, peak verano) y #244 La Leñera Asados VA (parrilla a domicilio, peak fin de año).
+- Pipeline creció de 242 a 244 prospectos (+2).
 
 ## Borradores listos para Matías
-6 mensajes redactados hoy — listos para copiar/pegar en WhatsApp o enviar por el canal correspondiente:
-- **[4] Pizza House** — seguimiento "Noviembre en 3 días / Pizza peak fin de año"
-- **[8] Pastelería Dulce Hogar** — seguimiento "Noviembre en 3 días / Tortas Navidad en 8 semanas"
-- **[28] La Esquina Con Sabor** — SSW 105 días / Certeza 2027
-- **[30] Poh Che** — SSW 105 días / Certeza 2027 / doble comisión
-- **[241] Fresh Bowls** — presentación Uber Eats / peak verano saludable
-- **[242] Modo Pizza a la Leña** — presentación Uber Eats / peak pizzas fin de año
 
-**ALERTA CRÍTICA:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan **97 días** consecutivos con borradores activos sin confirmación de envío. Prioridad máxima de la semana.
+8 mensajes redactados hoy (viernes 30/10, noviembre en 2 días, SSW 106 días):
 
-**7 prospectos PedidosYa con ventana SSW activa:** #27 Tribeca Sushi, #28 La Esquina Con Sabor, #30 Poh Che, #33 Casa Festa, #60 Master Sándwich, #90 Buenaventura, #102 La Joya — SSW 105 días en silencio.
+1. **#6 Botillería El Copihue** — Seguimiento "Fin de semana peak botillería + noviembre en 2 días"
+2. **#14 Heladería Glacial** — Seguimiento "Temporada alta helados AHORA — noviembre en 2 días, peak hasta marzo"
+3. **#11 Veterinaria Huellitas** — Seguimiento "Antipulgas primavera peak máximo / noviembre en 2 días"
+4. **#12 Librería El Saber** — Seguimiento "Cierre año escolar + exámenes / noviembre en 2 días"
+5. **#90 Buenaventura Pizzería** — SSW 106 días / doble comisión / pizza fin de semana (tel. +56 9 4113 4197)
+6. **#102 La Joya VA** — SSW 106 días / PedidosYa / completos fin de semana (@lajoya.va, tel. +56 9 27179828)
+7. **#243 Jugoteca Natural VA** — Presentación canal propio / peak verano bebidas saludables
+8. **#244 La Leñera Asados VA** — Presentación canal propio / peak asados noviembre-diciembre
 
----
+**ALERTA PERSISTENTE:** #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas llevan 98 días consecutivos con borradores activos sin confirmación de envío.
 
-## Nuevos prospectos agregados hoy
-| # | Negocio | Rubro | Plataforma | Argumento clave |
-|---|---|---|---|---|
-| 241 | Fresh Bowls Villa Alemana | Comida saludable / bowls | Uber Eats VA | Peak verano nov-ene, $1.900/pedido vs. Uber Eats 30% |
-| 242 | Modo Pizza a la Leña | Pizzería artesanal | Uber Eats VA | Peak pizzas fin de año, $3.700/pedido vs. Uber Eats 30% |
+## Nuevos prospectos agregados
 
----
+1. **#243 Jugoteca Natural VA** — Jugotería/smoothies/bebidas frías, canal propio Instagram, sin grandes plataformas. Peak verano nov-ene. Argumento: canal propio + logística RepartoJusto a $500 fijo sin ceder comisión.
+2. **#244 La Leñera Asados VA** — Parrilla/asado a domicilio, canal propio WhatsApp, sin grandes plataformas. Peak asados noviembre-diciembre (fiestas empresa, Navidad). Argumento: canal propio + rider local $500 fijo vs. arrancar con plataformas 28-30%.
 
 ## Para el Gerente
-Pipeline en 242 prospectos (228 nuevos, 14 contactados, 0 registrados); 6 borradores redactados hoy — 2 seguimientos para Contactados (#4 Pizza House y #8 Pastelería Dulce Hogar, 6 días sin draft), 2 seguimientos PedidosYa urgentes (#28 y #30, SSW 105 días sin comunicar contratos 2027) con argumento certeza 2027, y 2 presentaciones para nuevos en Uber Eats VA (#241 Fresh Bowls y #242 Modo Pizza a la Leña); noviembre arranca en 3 días — ventana crítica para activar los 14 Contactados antes del rush de fin de año; cuello de botella sigue siendo confirmación de Matías sobre mensajes enviados.
+
+Pipeline en 244 prospectos (230 Nuevos, 14 Contactados, 0 Registrados) — SSW Partners cumple 106 días sin comunicar condiciones 2027 a afiliados PedidosYa, ventana de argumento al máximo; noviembre arranca el lunes y con él el peak de fin de año.
