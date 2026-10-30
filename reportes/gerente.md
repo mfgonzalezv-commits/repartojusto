@@ -1,25 +1,25 @@
 # Informe Ejecutivo RepartoJusto
-**Semana del:** 20 al 23 de octubre de 2026
+**Semana del:** 24 al 30 de octubre de 2026
 
 ---
 
-## Estado General: ⚠️ Plataforma operativa — producción no confirmable desde agentes
+## Estado General: ⚠️ Plataforma estable — producción no confirmable desde entorno de agentes
 
-El servidor de producción no pudo verificarse directamente (restricción de red del entorno de agentes, no necesariamente caída). El código sigue mejorando; el cuello de botella de crecimiento sigue siendo la falta de feedback de Matías sobre los mensajes enviados.
+El servidor de producción no pudo verificarse directamente (restricción de red del entorno de ejecución, no necesariamente caída real). El código sigue madurando en seguridad; el cuello de botella de crecimiento sigue siendo la falta de respuesta de Matías sobre los mensajes enviados.
 
 ---
 
 ## Lo que pasó esta semana
 
-1. **Se taparon tres huecos de seguridad reales.** El martes el agente de seguridad corrigió una falla donde alguien podía marcar un pago como completado sin haber pagado, un ataque de tiempo que permitía adivinar qué emails están registrados, y una brecha donde un administrador comprometido podía transferir montos ilimitados a riders. Las tres correcciones ya están en el código.
+1. **Se taparon tres fallas de seguridad reales.** El agente de seguridad corrigió el miércoles: (a) un negocio podía crear miles de pedidos por minuto sin límite — ahora hay un tope de 20 por hora; (b) si un negocio tenía la cuenta incompleta en la base de datos, el sistema se caía al ver un pedido propio — ahora responde correctamente; (c) lo mismo al cancelar un pedido. Las tres correcciones ya están en el código.
 
-2. **Pipeline de ventas subió a 228 prospectos — sin avanzar un estado.** Se sumaron dos nuevos negocios de canal propio (Arepas Don Tito y Kuchen y Strudel). El agente redactó 6 mensajes listos para enviar. Sin embargo, sin confirmación de Matías sobre qué se envió, el pipeline lleva **167 días sin actualizar estados** — no sabemos cuántos de los 228 están activos.
+2. **El pipeline de ventas subió a 242 prospectos — pero sigue sin un solo cliente registrado.** El agente de ventas agregó 2 nuevos negocios (Fresh Bowls y Modo Pizza a la Leña, ambos en Uber Eats VA) y redactó 6 mensajes listos para enviar. El estado del pipeline: 228 nuevos, 14 contactados, **0 registrados**.
 
-3. **La ventana de noviembre se abre en 10 días.** El investigador confirma que noviembre-diciembre es la segunda ventana de conversión más larga del año (60+ días). Los negocios entran en peak de fin de año: pastelerías, pollerías, pizzerías. El argumento urgente: "configúrate antes del rush, no durante."
+3. **El momento más potente de ventas del año está activo hoy y tiene fecha de vencimiento.** PedidosYa lleva **105 días sin comunicarles a sus restaurantes afiliados qué pagarán en 2027** (tras la compra por SSW Partners en julio). Hay 7 prospectos en el pipeline que están en PedidosYa ahora mismo. El argumento de cierre es concreto: *"Con nosotros son $500 fijos — PedidosYa no puede decirte lo mismo."* Esta ventana cierra cuando SSW finalmente anuncie condiciones.
 
-4. **PedidosYa sigue sin hablarle a sus afiliados (98 días).** SSW Partners compró PedidosYa Chile en julio y no ha comunicado condiciones 2027 a ningún restaurante. Es el argumento de cierre más potente disponible: "nosotros te garantizamos $500 fijo por pedido en 2027 — PedidosYa no puede decirte lo mismo."
+4. **Noviembre = segundo peak más alto del año; empieza mañana.** El argumento "configúrate antes del rush de fin de año" es máximamente relevante esta semana. Hay 14 negocios contactados que podrían activarse si Matías confirma qué mensajes se enviaron.
 
-5. **Rappi Turbo todavía no llega a Villa Alemana.** Quilpué ya lo tiene. La ventana local de RepartoJusto sigue abierta pero el riesgo de entrada es inminente (6-12 meses según planes publicados). Demostración de cierre disponible: la URL de Rappi clasifica negocios de VA bajo "Quilpué" — invisible para búsquedas locales.
+5. **El agente investigador identificó la siguiente feature de mayor impacto comercial.** Más de 30 prospectos en el pipeline ya venden por canal propio (WhatsApp, Instagram, web) y no tienen logística de entrega. Flama Hub está haciendo exactamente eso en Chile con 90 clientes y ya se expande a México — valida que hay mercado. RepartoJusto tiene la pieza que les falta: el rider a tarifa fija.
 
 ---
 
@@ -30,37 +30,35 @@ El servidor de producción no pudo verificarse directamente (restricción de red
 | Service Worker cachea rider.html agresivamente | ✅ Resuelto (SW v6) |
 | Notificaciones Xiaomi requieren permiso manual | ✅ Documentado — comunicado a riders |
 | AudioContext Chrome móvil | ✅ Resuelto — toggle Online activa audio+push |
-| Webhook pagos aceptaba solicitudes sin firma | ✅ Corregido esta semana |
-| Login con timing attack (enumeración de emails) | ✅ Corregido esta semana |
-| Cualquiera puede espiar GPS de pedidos ajenos (socket) | 🔴 Pendiente — 4ª semana — FIX documentado, no aplicado |
-| Pedido puede cobrarse sin guardarse en BD (bug financiero) | 🔴 Pendiente — 3ª semana |
-| GPS del rider escribe en BD en cada ping | 🟡 Pendiente — FIX documentado, no aplicado |
-| Contraseña mínima de 6 caracteres (débil) | 🟠 Pendiente — requiere decisión |
-| 167 días sin confirmación de Matías sobre mensajes enviados | 🔴 CUELLO DE BOTELLA CRÍTICO |
+| Rate limit en creación de pedidos | ✅ Corregido esta semana |
+| Errores de sistema al ver/cancelar pedidos con cuenta incompleta | ✅ Corregido esta semana |
+| Cualquiera puede espiar ubicación GPS de riders ajenos (socket) | 🔴 Pendiente — **5ª semana** — código exacto listo, no aplicado |
+| Pedido puede cobrarse sin guardarse en base de datos | 🔴 Pendiente — 4ª semana |
+| Validación de formato en campo pedido_id de pagos | 🟡 Pendiente — bajo riesgo, requiere decisión |
+| JWT con campo "nbf" genera error 500 en lugar de 401 | 🟡 Pendiente — es un cambio de una línea |
 
 ---
 
 ## Alertas
 
-- 🔴 **PRIVACIDAD NO RESUELTA:** Cualquier usuario autenticado puede ver en tiempo real la ubicación GPS de riders en pedidos que no son suyos. Esto debe corregirse antes de tener usuarios reales. El código exacto está documentado (`reportes/mejoras.md` ítem #1).
-- 🔴 **VENTAS BLOQUEADA:** Sin saber qué mensajes se enviaron (167 días), el agente de ventas no puede distinguir prospectos activos de inactivos. Hay 228 prospectos, 14 contactados, y **0 registrados**. La plataforma puede estar perfecta técnicamente y no crecer.
-- ⚠️ **VENTANA LIMITADA — PEDIDOSYA:** Los 7 prospectos PedidosYa del pipeline (#27, #28, #30, #33, #60, #90, #102) están en su momento de mayor receptividad. Cuando SSW finalmente anuncie condiciones 2027, el argumento de incertidumbre se cierra.
-- ⚠️ **ALIANZA SIN ACCIÓN:** Dark Kitchen SpA (WhatsApp +569 88993941, Roma 131 Viña del Mar) puede traer múltiples negocios de golpe sin prospectar uno a uno. No hay reportes de acción ni de competencia en esa alianza.
+- 🔴 **PRIVACIDAD NO RESUELTA (5ª semana):** Cualquier usuario autenticado puede ver en tiempo real la ubicación GPS del rider de un pedido ajeno. El código de la corrección está listo en `reportes/mejoras.md`. No deben existir clientes reales antes de resolver esto.
+- 🔴 **VENTAS BLOQUEADA — CUELLO DE BOTELLA CRÍTICO:** Sin saber qué mensajes se enviaron, el agente no puede distinguir prospectos activos de inactivos. El pipeline tiene 242 prospectos y **0 registrados**. Los borradores de esta semana son los más urgentes del año — la ventana PedidosYa/SSW y el peak de noviembre coinciden por primera vez.
+- ⚠️ **OPORTUNIDAD DE ALIANZA SIN ACCIÓN:** Dark Kitchen SpA (WhatsApp +569 88993941, Roma 131 Viña del Mar) puede incorporar múltiples negocios de golpe sin prospectar uno a uno. Lleva semanas identificada sin ninguna acción reportada.
 
 ---
 
 ## Decisiones tomadas
 
-- El agente de seguridad aplicó directamente 3 correcciones críticas (webhook, login, incentivos) sin esperar aprobación; 2 pendientes requieren decisión de negocio (contraseña mínima) o impactan arquitectura (socket GPS).
-- El agente de ventas redactó 6 borradores con eje "Noviembre en 10 días / SSW 98 días en silencio" — listos para que Matías los revise y envíe.
-- El agente investigador marcó noviembre-diciembre como eje central para los próximos 60 días.
+- El agente de seguridad aplicó directamente 3 correcciones de alto riesgo sin esperar aprobación. Dos vulnerabilidades menores se dejaron pendientes para revisión de Matías (impactan la API pública o requieren un cambio mínimo).
+- El agente de ventas actualizó los argumentos de todos los borradores activos con el eje SSW/certeza-2027 + noviembre como eje temporal.
+- El agente investigador identificó "canal propio + rider" como la feature de mayor impacto comercial para los próximos 60 días.
 
 ---
 
 ## Prioridades próxima semana
 
-1. **Matías debe revisar y enviar los 6 borradores de esta semana.** Son los más calientes del pipeline. El silencio de SSW no dura para siempre — cuando anuncien condiciones 2027, la ventana de cierre se cierra.
+1. **Matías: revisar y enviar los 6 borradores redactados esta semana.** Especialmente los 4 con eje PedidosYa/SSW. Esta ventana es la más valiosa del segundo semestre y tiene fecha de vencimiento incierta. Ver `reportes/ventas.md` para los textos listos.
 
-2. **Corregir la vulnerabilidad de privacidad GPS** (`pedido:seguir` en sockets). El código exacto está en `reportes/mejoras.md` ítem #1. Son 15 líneas. No debe haber usuarios reales antes de esto.
+2. **Corregir la vulnerabilidad de privacidad GPS** (`pedido:seguir` sin autorización). El código exacto está en `reportes/mejoras.md` ítem #2. Son ~12 líneas. No puede haber usuarios reales antes de esto.
 
-3. **Contactar Dark Kitchen SpA** (WhatsApp +569 88993941). Una alianza con ellos puede traer 5-10 negocios sin prospectar uno a uno. Sigue sin competencia en esa oportunidad.
+3. **Contactar Dark Kitchen SpA** — WhatsApp +569 88993941. Una sola conversación puede traer 5-10 negocios. Es la oportunidad de menor esfuerzo / mayor retorno disponible hoy.
