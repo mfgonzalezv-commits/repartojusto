@@ -1,22 +1,22 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-10-30
+**Actualizado:** 2026-10-31
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 28/10 / Noviembre en 4 días / Completos verano" redactado 28/10 — completos peak verano; $4.500 completo Rappi = $1.260 comisión vs. $500 fijo RJ; seguimiento 7 días |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 28/10 / Noviembre en 4 días / Pollos verano" redactado 28/10 — pollo asado = peak verano/diciembre; 30 pollos/día $9K Rappi = $756K/mes comisión vs. $135K RJ; diferencia $621K/mes |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 26/10 / Noviembre en 6 días / Peak alergias primaverales" redactado 26/10 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Alergias primaverales peak máximo" redactado 31/10 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 29/10 / Noviembre en 3 días / Pizza = peak fin de semana + Navidad en 8 semanas" redactado 29/10 — nov-dic = peak absoluto; pizza $12.000 Rappi 28% = $3.360 comisión vs. $500 fijo; ahorro ~$990K/mes; activar antes del 1/11 |
-| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Lunes 26/10 / Noviembre en 6 días / Peak sushi celebraciones fin de año" redactado 26/10 — nov-dic = celebraciones empresa + cenas Navidad; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
+| 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Sushi peak celebraciones empresa" redactado 31/10 — nov-dic = celebraciones empresa + cenas Navidad; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Viernes 30/10 / Noviembre en 2 días / Fin de semana peak botillería + verano" redactado 30/10 — viernes = mayor demanda botillería de la semana; noviembre lunes = inicio peak total verano bebidas; $500 fijo vs. 30% plataforma; seguimiento 6-7 días |
-| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Domingo 25/10 / Noviembre en 7 días / Almuerzo dominical + verano bebidas" redactado 25/10 — domingo = peak compras snacks/bebidas para almuerzo en casa; noviembre en 7 días = temporada alta almacenes; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ |
+| 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Halloween / Mañana ARRANCA NOVIEMBRE / Almacén peak verano" redactado 31/10 — sábado+halloween = peak snacks/bebidas; noviembre mañana = inicio temporada alta almacenes; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ; diferencia $22.500/día |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Jueves 29/10 / Noviembre en 3 días / Tortas Navidad en 8 semanas" redactado 29/10 — torta $18.000 plataforma 30% = $5.400 comisión vs. $500 fijo; 10 tortas/día diciembre = diferencia $1.5M/mes; activar antes del rush |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 28/10 / Noviembre en 4 días / Rotisería peak verano" redactado 28/10 — asados y pollo = peak verano/diciembre; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = diferencia $1M+/mes |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 28/10 / Noviembre en 4 días / Terrazas y café verano" redactado 28/10 — café frío + terrazas = peak verano; activar canal antes del rush de noviembre |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Viernes 30/10 / Noviembre en 2 días / Antipulgas primavera en su peak máximo" redactado 30/10 — noviembre es el mes de mayor demanda antipulgas/vacunas del año; pack $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; delivery urgente medicamentos = diferenciador crítico |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 30/10 / Noviembre en 2 días / Cierre año escolar + exámenes" redactado 30/10 — noviembre = últimas semanas de clases, exámenes, proyectos de fin de año; resmas/materiales delivery urgente; $500 fijo diferenciador en tickets bajos; único canal delivery librería en VA |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Domingo 25/10 / Noviembre en 7 días / Proyectos casa verano" redactado 25/10 — domingo = planificación proyectos casa/jardín semana siguiente; noviembre en 7 días = temporada alta pintura/jardín/piscinas; materiales delivery $500 fijo = diferenciador único en VA |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Temporada alta pintura, jardín y piscinas" redactado 31/10 — noviembre = inicio peak ferretería; balde pintura $15K Rappi 28% = $4.200 comisión vs. $500 fijo RJ; únicos con delivery ferretería en VA |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Viernes 30/10 / Noviembre arranca en 2 días / Temporada alta de helados AHORA" redactado 30/10 — noviembre = inicio del peak que dura hasta marzo; 30+ pedidos/día $6.000 Rappi 30% = $54.000 comisión diaria vs. $15.000 RJ; $1.170.000/mes de diferencia en plena temporada |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
@@ -248,10 +248,50 @@
 | 242 | Modo Pizza a la Leña | Pizzería artesanal | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 29/10 — pizzería artesanal en Uber Eats VA; pizza $14.000 Uber Eats 30% = $4.200 comisión vs. $500 fijo RJ; noviembre en 3 días = peak pizzas fin de año (fiestas empresa, Navidad); diferencia $3.700 por pedido |
 | 243 | Jugoteca Natural VA | Jugotería / smoothies / bebidas frías | Villa Alemana (canal propio Instagram, sin grandes plataformas) | Nuevo | — | Presentación redactada 30/10 — jugotería natural canal propio sin Rappi/Uber Eats; bebidas saludables y frías = categoría de MAYOR crecimiento en verano nov-ene; argumento canal propio: $500 fijo vs. 30% plataforma si se suman; sin comisión por hoy = ventaja acumulada durante todo el peak de verano |
 | 244 | La Leñera Asados VA | Parrilla / asado a domicilio | Villa Alemana (canal propio WhatsApp, sin grandes plataformas) | Nuevo | — | Presentación redactada 30/10 — asado a domicilio canal propio WhatsApp, sin grandes plataformas; asados y parrillada = rubro de PEAK MÁXIMO en noviembre-diciembre (fiestas empresa, reuniones verano, Navidad); argumento canal propio: $500 fijo por entrega rider vs. arrancar con plataformas que cobran 28-30%; momento ideal para posicionarse antes del rush |
+| 245 | Gran Shawarma Delivery | Comida árabe / shawarma | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 31/10 — shawarma y comida árabe en Uber Eats VA; primer shawarma con volumen en el pipeline; ticket $9.000 en Uber Eats 30% = $2.700 comisión vs. $500 fijo RJ; diferencia $2.200/pedido; nov-dic = peak cenas empresa y reuniones donde shawarma crece; argumento económico directo + noviembre mañana |
+| 246 | Restaurante La Casona Nueva | Restaurante / cocina chilena | Villa Alemana (sin plataformas confirmadas) | Nuevo | — | Presentación redactada 31/10 — restaurante chileno encontrado en directorio Villa Alemana; sin plataformas grandes confirmadas = primer contacto frío; cocina chilena = peak noviembre-diciembre fiestas empresa y Navidad; $500 fijo vs. arrancar con Rappi/Uber Eats 28-30%; oportunidad de posicionarse canal propio antes del rush de fin de año |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-10-31) — SÁBADO / HALLOWEEN / MAÑANA ARRANCA NOVIEMBRE / SSW 107 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 31 de octubre — Halloween** y fin de mes. **MAÑANA ARRANCA NOVIEMBRE** — el inicio del segundo peak del año (noviembre-diciembre-enero = rush de fin de año). SSW Partners lleva **107 días en silencio** sin comunicar a los afiliados PedidosYa qué pasa con sus contratos 2027. **6 mensajes hoy:** 4 seguimientos para los Contactados más desactualizados (#7 Minimercado La Esquina y #13 Ferretería Los Maestros — 6 días sin draft desde 25/10; #3 Farmacia Cruz Verde y #5 Sushi Zen — 5 días sin draft desde 26/10), y 2 presentaciones para nuevos prospectos encontrados hoy (#245 Gran Shawarma Delivery en Uber Eats VA y #246 Restaurante La Casona Nueva en directorio VA). Pipeline: **246 prospectos**.
+
+> **ALERTAS:** #22 Sushi Point (tel. (32) 324 0504) y #15 Melt Pizzas llevan **99 días** consecutivos con borradores activos sin confirmación de envío. SSW Partners **107 días en silencio** — ventana crítica para los 7 prospectos PedidosYa (#27, #28, #30, #33, #60, #90, #102). **MAÑANA LUNES 1/11 = PRIMER DÍA HÁBIL DE NOVIEMBRE** — todos los borradores acumulados deben enviarse el lunes.
+
+---
+
+**[7] Minimercado La Esquina — Seguimiento "Sábado 31/10 / Halloween / Mañana ARRANCA NOVIEMBRE / Almacén peak de verano":**
+"Hola Minimercado La Esquina! De RepartoJusto, delivery local Villa Alemana. Hoy es Halloween y el sábado — el día de mayor demanda de almacén de la semana: bebidas, snacks, todo lo que se necesita en casa. Y mañana ARRANCA NOVIEMBRE — el inicio del peak de verano que dura hasta marzo, cuando los almacenes viven su mejor época del año: reuniones, jardines, celebraciones. Con RepartoJusto: $500 fijos por pedido entregado, sin importar el monto. 25 pedidos/día a $5.000 en Rappi (28%) = $35.000 de comisión diaria vs. $12.500 con RepartoJusto. Diferencia de $22.500 al día, todos los días de verano. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo activamos antes del verano? — Equipo RepartoJusto"
+
+---
+
+**[13] Ferretería Los Maestros — Seguimiento "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Temporada alta pintura, jardín y piscinas":**
+"Hola Ferretería Los Maestros! De RepartoJusto, delivery local Villa Alemana. Mañana arranca noviembre — inicio de la temporada alta de ferretería: pintura para el verano, materiales de jardín, piscinas inflables, ventiladores, todo lo que la gente necesita para preparar la casa para el calor. El delivery de ferretería es ideal para objetos pesados o urgentes: un balde de pintura de $15.000 en Rappi (28%) = $4.200 de comisión vs. $500 fijos con RepartoJusto. Son los únicos con delivery de ferretería en Villa Alemana — diferenciador único en la zona. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo activamos este noviembre? — Equipo RepartoJusto"
+
+---
+
+**[3] Farmacia Cruz Verde — Seguimiento "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Alergias primaverales en peak máximo":**
+"Hola Cruz Verde Villa Alemana! De RepartoJusto. Noviembre arranca mañana — y con él llega el peak máximo de antihistamínicos, descongestionantes nasales y medicamentos para alergias primaverales. El delivery farmacéutico en noviembre es de alta urgencia: no es capricho, es necesidad inmediata. Una caja de $8.000 en Rappi (28%) = $2.240 de comisión vs. $500 fijos con RepartoJusto. Con una sucursal con autonomía para activar el canal, el beneficio es claro: más pedidos entregados, tarifa fija. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo conversamos? — Equipo RepartoJusto"
+
+---
+
+**[5] Sushi Zen — Seguimiento "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Sushi = peak celebraciones empresa":**
+"Hola Sushi Zen! De RepartoJusto, delivery local Villa Alemana. Hoy es sábado — el día de mayor demanda de sushi de la semana. Y mañana arranca noviembre: celebraciones de empresa, cenas de fin de año, Navidad — el sushi es el rubro con MAYOR crecimiento en noviembre-diciembre. Una tabla de $20.000 en Rappi (28%) = $5.600 de comisión por pedido. Con 20 tablas al día en diciembre, Rappi cobra $3.360.000 al mes. Con RepartoJusto: $600.000. Diferencia de $2.760.000 que queda en el negocio en plena temporada. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo activamos antes del rush? — Equipo RepartoJusto"
+
+---
+
+**[245] Gran Shawarma Delivery — Presentación "Uber Eats VA / Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Primer shawarma delivery":**
+"Hola Gran Shawarma! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Los vemos en Uber Eats — el shawarma es uno de los rubros con mayor fidelidad de cliente en delivery. Si están pagando 30% de comisión por cada pedido, y mañana arranca noviembre (el peak de reuniones y cenas de fin de año), el momento para revisar los costos es ahora. Un shawarma de $9.000 en Uber Eats (30%) = $2.700 de comisión vs. $500 fijos con RepartoJusto. Diferencia de $2.200 por pedido. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Conversamos? — Matías, RepartoJusto"
+
+---
+
+**[246] Restaurante La Casona Nueva — Presentación "Directorio Villa Alemana / Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Fiestas empresa":**
+"Hola Restaurante La Casona Nueva! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontré en el directorio de negocios del sector. Si aún no tienen un canal de delivery consolidado, noviembre es exactamente el momento para activarlo: fiestas de empresa, celebraciones de fin de año, Navidad — la cocina chilena tiene su peak más alto del año en estas semanas. Con RepartoJusto pagan $500 fijos por cada pedido entregado, sin ceder porcentaje de la venta. Sin contrato, registro completamente gratuito: repartojusto-production.up.railway.app ¿Les cuento cómo funciona? — Matías, RepartoJusto"
 
 ---
 
