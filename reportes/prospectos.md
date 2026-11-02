@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-11-01
+**Actualizado:** 2026-11-02
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -7,11 +7,11 @@
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Completos temporada alta" redactado 01/11 — noviembre ARRANCA HOY, mayor ventana del año; $4.500 completo Rappi = $1.260 comisión vs. $500 fijo RJ; enviar HOY |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Pollo asado = temporada alta empieza hoy" redactado 01/11 — noviembre ARRANCA; 30 pollos/día $9K Rappi = $756K/mes comisión vs. $135K RJ; diferencia $621K/mes; enviar HOY |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Alergias primaverales peak máximo" redactado 31/10 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Jueves 29/10 / Noviembre en 3 días / Pizza = peak fin de semana + Navidad en 8 semanas" redactado 29/10 — nov-dic = peak absoluto; pizza $12.000 Rappi 28% = $3.360 comisión vs. $500 fijo; ahorro ~$990K/mes; activar antes del 1/11 |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 2/11 / Segundo día de noviembre / Pizza = peak navideño arrancó" redactado 02/11 — pizza $12.000 Rappi 28% = $3.360 comisión; 10 pizzas/día diciembre = $858K/mes diferencia vs. $500 fijo; Navidad en 7 semanas — activar ahora |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Sushi peak celebraciones empresa" redactado 31/10 — nov-dic = celebraciones empresa + cenas Navidad; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Viernes 30/10 / Noviembre en 2 días / Fin de semana peak botillería + verano" redactado 30/10 — viernes = mayor demanda botillería de la semana; noviembre lunes = inicio peak total verano bebidas; $500 fijo vs. 30% plataforma; seguimiento 6-7 días |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Halloween / Mañana ARRANCA NOVIEMBRE / Almacén peak verano" redactado 31/10 — sábado+halloween = peak snacks/bebidas; noviembre mañana = inicio temporada alta almacenes; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ; diferencia $22.500/día |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Jueves 29/10 / Noviembre en 3 días / Tortas Navidad en 8 semanas" redactado 29/10 — torta $18.000 plataforma 30% = $5.400 comisión vs. $500 fijo; 10 tortas/día diciembre = diferencia $1.5M/mes; activar antes del rush |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 2/11 / Segundo día de noviembre / Tortas Navidad en 7 semanas" redactado 02/11 — torta $18.000 plataforma 30% = $5.400 comisión; 15 tortas/día diciembre = $1.485K/mes diferencia vs. $500 fijo; activar antes del rush |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Rotisería = temporada más alta del año" redactado 01/11 — noviembre arranca HOY; asados y pollo = peak verano/diciembre; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = $1M+/mes diferencia; enviar HOY |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Terrazas y café frío, el verano empieza" redactado 01/11 — noviembre ARRANCA; terrazas, café frío, temporada alta verano = HOY; activar canal antes del rush de fin de año |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Viernes 30/10 / Noviembre en 2 días / Antipulgas primavera en su peak máximo" redactado 30/10 — noviembre es el mes de mayor demanda antipulgas/vacunas del año; pack $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; delivery urgente medicamentos = diferenciador crítico |
@@ -252,10 +252,38 @@
 | 246 | Restaurante La Casona Nueva | Restaurante / cocina chilena | Villa Alemana (sin plataformas confirmadas) | Nuevo | — | Presentación redactada 31/10 — restaurante chileno encontrado en directorio Villa Alemana; sin plataformas grandes confirmadas = primer contacto frío; cocina chilena = peak noviembre-diciembre fiestas empresa y Navidad; $500 fijo vs. arrancar con Rappi/Uber Eats 28-30%; oportunidad de posicionarse canal propio antes del rush de fin de año |
 | 247 | Q' Buen Patacón | Comida colombiana / patacones | Villa Alemana (en Uber Eats) | Nuevo | — | Presentación redactada 01/11 — comida colombiana en Uber Eats VA; primer patacón/bandeja paisa explícito del pipeline; ticket $8.000-$10.000; Uber Eats 30% = $2.400-$3.000 comisión vs. $500 fijo RJ; nov-dic = peak cenas empresa y celebraciones; argumento económico directo + noviembre arranca HOY |
 | 248 | Verde Wrap & Bowl VA | Comida saludable / wraps / bowls | Villa Alemana (canal propio WhatsApp) | Nuevo | — | Presentación redactada 01/11 — comida saludable canal propio WhatsApp, sin grandes plataformas detectadas; bowls y wraps = rubro en alza en Chile 2026 (frecuencia pedidos subió 1,5 → 2,7/mes); verano nov-ene = peak comida saludable (dietas enero, reuniones empresa con opciones healthy); argumento canal propio: $500 fijo rider + tracking en tiempo real sin ceder porcentaje |
+| 249 | Tequeños Villa Alemana | Comida venezolana / tequeños | Villa Alemana (canal propio Instagram/WhatsApp) | Nuevo | — | Presentación redactada 02/11 — tequeños delivery canal propio sin grandes plataformas; primer tequeños del pipeline; snack peak reuniones empresa y Navidad; tequeños $6.000-$8.000 = $1.680-$2.240 comisión plataforma vs. $500 fijo RJ; noviembre = inicio peak snacks de reuniones de fin de año |
+| 250 | Mariscos El Pacífico VA | Mariscos / ceviche | Villa Alemana (canal propio) | Nuevo | — | Presentación redactada 02/11 — mariscos a domicilio canal propio; noviembre = inicio temporada alta mariscos en Chile; pedido $25.000 en Uber Eats (30%) = $7.500 comisión vs. $500 fijo RJ; diferencia $7.000 por pedido en plena temporada; rubro con peak noviembre-marzo |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-11-02) — LUNES / SEGUNDO DÍA DE NOVIEMBRE / SSW 109 DÍAS / NAVIDAD EN 7 SEMANAS
+
+> **NOTA PARA MATÍAS:** Hoy es **lunes 2 de noviembre — segundo día del peak de fin de año**. Noviembre ya arrancó y Navidad queda en 7 semanas. SSW Partners lleva **109 días en silencio** sin comunicar a afiliados PedidosYa qué pasa con sus contratos 2027. **4 mensajes hoy:** 2 seguimientos para los Contactados con borradores de 4 días (#4 Pizza House y #8 Pastelería Dulce Hogar — ambos con drafts del 29/10), y 2 presentaciones para 2 nuevos prospectos (#249 Tequeños Villa Alemana y #250 Mariscos El Pacífico VA). Pipeline: **250 prospectos**. ACCIÓN URGENTE: enviar HOY los borradores de #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas — llevan **101 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+**#4 Pizza House — Seguimiento "Lunes 2/11 / Pizza = peak navideño arrancó":**
+"Hola Pizza House! De RepartoJusto, delivery local Villa Alemana. Ayer arrancó noviembre — el peak navideño ya está aquí. Las pizzas son el plato favorito en cenas de empresa y reuniones de fin de año. Con Rappi, una pizza de $12.000 (28%) = $3.360 de comisión por pedido. Con 10 pizzas diarias en diciembre: $1.008.000/mes solo en comisiones. Con RepartoJusto: $500 fijo = $150.000/mes. Diferencia de $858.000 que queda en el negocio en plena temporada. Navidad en 7 semanas — activarse ahora es clave. Registro gratuito, sin contrato: repartojusto-production.up.railway.app ¿Lo conversamos? — Equipo RepartoJusto"
+
+---
+
+**#8 Pastelería Dulce Hogar — Seguimiento "Lunes 2/11 / Tortas Navidad en 7 semanas":**
+"Hola Pastelería Dulce Hogar! De RepartoJusto, delivery local Villa Alemana. Noviembre ya arrancó — en 7 semanas es Navidad y el rush de tortas de empresa ya comenzó. Una torta de $18.000 en plataforma (30%) = $5.400 de comisión por pedido. Con 15 tortas/día en diciembre: diferencia de $1.485.000/mes que se queda en el negocio. Con RepartoJusto: $500 fijo, sin importar el valor del pedido, sin contrato. Registro gratuito: repartojusto-production.up.railway.app ¿Los activamos antes del rush de diciembre? — Equipo RepartoJusto"
+
+---
+
+**#249 Tequeños Villa Alemana — Presentación (canal propio, primer tequeños del pipeline):**
+"Hola! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontré con su canal de tequeños a domicilio. Los tequeños son el snack más pedido en reuniones de fin de año y cenas de empresa — y noviembre es exactamente cuando eso arranca. RepartoJusto puede sumarles logística de rider a $500 fijo por entrega, sin comisión sobre sus ventas, nunca. Canal propio potenciado con riders confiables y tracking en tiempo real. Navidad en 7 semanas — el momento ideal para activarse antes del rush. ¿Coordinamos? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#250 Mariscos El Pacífico VA — Presentación (canal propio, mariscos temporada alta):**
+"Hola! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontré ofreciendo mariscos a domicilio en la zona. Noviembre es el inicio de la temporada alta de mariscos en Chile — el calor activa la demanda de ceviche, chupe y mariscal. Un pedido de mariscos de $25.000 en Uber Eats (30%) = $7.500 de comisión; con nosotros son $500 fijos. Diferencia de $7.000 por pedido en plena temporada. Sin contrato, registro gratuito: repartojusto-production.up.railway.app ¿Les interesa? — Matías, RepartoJusto"
 
 ---
 
