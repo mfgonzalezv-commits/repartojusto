@@ -1,183 +1,167 @@
 # Mejoras RepartoJusto
-**Fecha:** 2026-10-26
-**Estado:** 5 mejoras identificadas — 2 de seguridad críticas, 2 de rendimiento, 1 de UX
+**Fecha:** 2026-11-02
+**Estado:** 5 mejoras identificadas — 2 de seguridad crítica, 2 de rendimiento, 1 de UX
 
 ---
 
-## 1. Chat sin control de acceso — cualquier usuario puede escribir a cualquier pedido
-
-**Archivo:** `backend/src/sockets/index.js:161`
-**Beneficio:** Evita que un negocio o rider espíe o interfiera el chat de pedidos ajenos.
-
-```js
-// ANTES (línea 161):
-socket.on('chat:enviar', ({ pedido_id, texto }) => {
-  if (!pedido_id || !texto || !String(texto).trim()) return;
-  const desde = rol === 'rider' ? 'rider' : 'negocio';
-  // ... no verifica que este usuario tenga acceso al pedido
-  io.to(`pedido:${pedido_id}`).emit('chat:mensaje', msg);
-});
-
-// DESPUÉS — agregar verificación en BD antes de difundir:
-socket.on('chat:enviar', async ({ pedido_id, texto }) => {
-  if (!pedido_id || !texto || !String(texto).trim()) return;
-
-  // Verificar acceso: el usuario debe ser el negocio dueño o el rider asignado
-  const { rows: [acceso] } = await db(
-    `SELECT 1 FROM pedidos p
-     LEFT JOIN negocios n ON n.id = p.negocio_id
-     LEFT JOIN riders   r ON r.id = p.rider_id
-     WHERE p.id = $1
-       AND (n.usuario_id = $2 OR r.usuario_id = $2)`,
-    [pedido_id, socket.usuario.id]
-  ).catch(() => ({ rows: [] }));
-
-  if (!acceso) return; // silenciosamente ignorar
-
-  const desde = rol === 'rider' ? 'rider' : 'negocio';
-  const msg = { desde, nombre, texto: String(texto).trim(), hora: new Date().toISOString() };
-
-  if (!chatHistory.has(pedido_id)) chatHistory.set(pedido_id, []);
-  const hist = chatHistory.get(pedido_id);
-  hist.push(msg);
-  if (hist.length > MAX_CHAT_MSG) hist.shift();
-
-  io.to(`pedido:${pedido_id}`).emit('chat:mensaje', msg);
-});
-```
-
----
-
-## 2. `pedido:seguir` sin autorización — cualquier usuario puede rastrear cualquier pedido
-
-**Archivo:** `backend/src/sockets/index.js:101`
-**Beneficio:** Impide que usuarios ajenos vean la ubicación en tiempo real del rider de un pedido que no les corresponde.
+## 1. Seguimiento de pedido sin validación de acceso
+**Archivo:** `backend/src/sockets/index.js:101-104`  
+**Beneficio:** Evita que cualquier usuario autenticado espíe el tracking en tiempo real de pedidos ajenos.
 
 ```js
-// ANTES (línea 101):
+// Antes (sin validación):
 socket.on('pedido:seguir', ({ pedido_id }) => {
   if (!pedido_id) return;
-  socket.join(`pedido:${pedido_id}`); // sin ninguna verificación
+  socket.join(`pedido:${pedido_id}`);
 });
 
-// DESPUÉS — verificar acceso en BD antes de unirse al room:
+// Después (validar que el usuario pertenece al pedido):
 socket.on('pedido:seguir', async ({ pedido_id }) => {
   if (!pedido_id) return;
-
-  const { rows: [acceso] } = await db(
-    `SELECT 1 FROM pedidos p
-     LEFT JOIN negocios n ON n.id = p.negocio_id
-     LEFT JOIN riders   r ON r.id = p.rider_id
-     WHERE p.id = $1
-       AND (n.usuario_id = $2 OR r.usuario_id = $2)`,
-    [pedido_id, socket.usuario.id]
-  ).catch(() => ({ rows: [] }));
-
-  if (acceso) socket.join(`pedido:${pedido_id}`);
+  try {
+    const { rows } = await db(
+      `SELECT 1 FROM pedidos p
+       WHERE p.id = $1
+         AND (
+           (SELECT id FROM negocios WHERE usuario_id = $2) = p.negocio_id
+           OR p.rider_id = (SELECT id FROM riders WHERE usuario_id = $2)
+         )`,
+      [pedido_id, usuarioId]
+    );
+    if (rows.length) socket.join(`pedido:${pedido_id}`);
+  } catch (err) {
+    console.error('❌ Error al validar seguimiento:', err.message);
+  }
 });
 ```
 
 ---
 
-## 3. Race condition en `aceptarOferta` — rider puede ser desmarcado entre verificación y UPDATE
-
-**Archivo:** `backend/src/sockets/asignacion.js:167`
-**Beneficio:** Garantiza que la verificación de disponibilidad del rider y la asignación del pedido sean atómicas, evitando doble asignación o asignación a rider no disponible.
+## 2. Chat sin límite de longitud de mensaje
+**Archivo:** `backend/src/sockets/index.js:161-163`  
+**Beneficio:** Previene que mensajes gigantes saturen la memoria del servidor y el historial en Map.
 
 ```js
-// ANTES — dos queries separadas (líneas 167-190):
-const { rows: [rider] } = await db(
-  `SELECT id FROM riders WHERE id = $1 AND disponible = true`, [rider_id]
-);
-if (!rider) return { ok: false, error: 'No estás disponible' };
-// ... más validaciones ...
+// Antes:
+socket.on('chat:enviar', ({ pedido_id, texto }) => {
+  if (!pedido_id || !texto || !String(texto).trim()) return;
+
+// Después (agregar límite de 500 caracteres):
+socket.on('chat:enviar', ({ pedido_id, texto }) => {
+  if (!pedido_id || !texto || !String(texto).trim()) return;
+  const textoLimpio = String(texto).trim().slice(0, 500);
+  if (!textoLimpio) return;
+  // ... reemplazar `texto` por `textoLimpio` en el resto del handler
+```
+
+---
+
+## 3. Condición de carrera: cobro antes de persistir el pedido
+**Archivo:** `backend/src/routes/pedidos.js:87-103`  
+**Beneficio:** Evita cobrar al negocio sin crear el pedido cuando la DB falla después del cargo.
+
+```js
+// Antes: cobro fuera de la transacción de BD, antes del INSERT
+if (!enPrueba) {
+  // ...cobro aquí...
+}
+const { rows: [pedido] } = await db(`INSERT INTO pedidos ...`);
+
+// Después: primero insertar en BD (puede rollback), luego cobrar
+const tarifa_entrega = calcularTarifa(distancia_km);
+const { cargo_negocio, cargo_cliente } = calcularCargos(...);
+
+// INSERT primero, estado='pendiente_pago' hasta confirmar cobro
 const { rows: [pedido] } = await db(
-  `UPDATE pedidos SET estado = 'asignado', rider_id = $1 ... WHERE id = $2 AND estado = 'pendiente'`,
-  [rider_id, pedido_id]
+  `INSERT INTO pedidos (..., estado)
+   VALUES (..., $15)
+   RETURNING *`,
+  [...params, enPrueba ? estadoInicial : 'pendiente_pago']
 );
 
-// DESPUÉS — todo dentro de una transacción:
-const { query: db, transaction } = require('../config/database');
-
-async function aceptarOferta(pedido_id, rider_id, io) {
-  const cascada = cascadas.get(pedido_id);
-  if (cascada) { clearTimeout(cascada.timer); cascadas.delete(pedido_id); }
-
-  return transaction(async (client) => {
-    // Lock del rider para serializar intentos concurrentes
-    const { rows: [rider] } = await client.query(
-      `SELECT id FROM riders WHERE id = $1 AND disponible = true FOR UPDATE`,
-      [rider_id]
-    );
-    if (!rider) return { ok: false, error: 'No estás disponible' };
-
-    const { rows: [{ cnt }] } = await client.query(
-      `SELECT COUNT(*) AS cnt FROM pedidos
-       WHERE rider_id = $1 AND estado IN ('asignado','retiro','en_camino')`,
-      [rider_id]
-    );
-    if (parseInt(cnt) >= MAX_PEDIDOS_SIMULTANEOS) {
-      return { ok: false, error: `Límite de ${MAX_PEDIDOS_SIMULTANEOS} pedidos simultáneos` };
-    }
-
-    const { rows: [pedido] } = await client.query(
-      `UPDATE pedidos SET estado = 'asignado', rider_id = $1, asignado_at = NOW()
-       WHERE id = $2 AND estado = 'pendiente'
-       RETURNING *`,
-      [rider_id, pedido_id]
-    );
-    if (!pedido) return { ok: false, error: 'Pedido ya no disponible' };
-
-    io.to(`negocio:${pedido.negocio_id}`).emit('pedido:actualizado', {
-      id: pedido.id, estado: 'asignado', rider_id,
-    });
-    io.emit('pedido:tomado', { pedido_id });
-    return { ok: true, pedido };
-  }).catch(err => ({ ok: false, error: err.message }));
+if (!enPrueba) {
+  const cobro = await cobros.cobrar({ customerId: negocio.tarjeta_customer_id, monto: config.APP_FEE + tarifa_entrega });
+  if (!cobro.ok) {
+    await db(`UPDATE pedidos SET estado = 'cancelado', cancelado_motivo = 'Pago rechazado' WHERE id = $1`, [pedido.id]);
+    return res.status(402).json({ error: 'Pago rechazado', detalle: 'No se pudo cobrar el servicio. Verifica tu tarjeta.' });
+  }
+  await db(`UPDATE pedidos SET estado = $1 WHERE id = $2`, [estadoInicial, pedido.id]);
 }
 ```
 
 ---
 
-## 4. Doble roundtrip en `PUT /pedidos/:id/estado` — SELECT innecesario post-UPDATE
-
-**Archivo:** `backend/src/routes/pedidos.js:246`
-**Beneficio:** Elimina un SELECT extra a la BD en cada avance de estado, reduciendo latencia en el endpoint más frecuente del ciclo de vida del pedido.
+## 4. Escritura a Postgres en cada actualización GPS del rider
+**Archivo:** `backend/src/sockets/index.js:67-98`  
+**Beneficio:** Reduce carga en Postgres: con 10 riders activos actualizando cada 2s son 300 writes/min; con throttle por rider bajan a ~30.
 
 ```js
-// ANTES (líneas 246-265): UPDATE sin RETURNING, luego SELECT complejo por separado
-await db(`UPDATE pedidos SET estado = $1 ${extras} WHERE id = $2`, [nuevoEstado, pedido.id]);
-const { rows: [actualizado] } = await db(`SELECT p.*, n.*, ... FROM pedidos p JOIN negocios n ...`, [pedido.id]);
+// Antes: DB write en cada evento rider:ubicacion
 
-// DESPUÉS — un solo UPDATE con RETURNING y JOIN usando CTE:
-const { rows: [actualizado] } = await db(
-  `WITH upd AS (
-     UPDATE pedidos SET estado = $1 ${extras} WHERE id = $2 RETURNING *
-   )
-   SELECT upd.*,
-          n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
-          n.mostrar_costo_seguimiento,
-          u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
-          ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
-   FROM upd
-   JOIN negocios n ON n.id = upd.negocio_id
-   LEFT JOIN riders ri ON ri.id = upd.rider_id
-   LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id`,
-  [nuevoEstado, pedido.id]
-);
+// Después: throttle a 1 write por rider cada 5 segundos
+const _lastUbicacionFlush = new Map(); // rider_id → timestamp
+
+socket.on('rider:ubicacion', async ({ lat, lng }) => {
+  if (rol !== 'rider' || !socket.rider_id) return;
+  if (typeof lat !== 'number' || typeof lng !== 'number') return;
+
+  const ahora = Date.now();
+  const ultimo = _lastUbicacionFlush.get(socket.rider_id) || 0;
+  const debePersistir = ahora - ultimo >= 5000;
+
+  try {
+    if (debePersistir) {
+      _lastUbicacionFlush.set(socket.rider_id, ahora);
+      await db('UPDATE riders SET lat = $1, lng = $2 WHERE id = $3', [lat, lng, socket.rider_id]);
+    }
+
+    // Broadcast en tiempo real (siempre, sin throttle)
+    const { rows } = await db(
+      `SELECT id, negocio_id FROM pedidos WHERE rider_id = $1 AND estado IN ('asignado','retiro','en_camino')`,
+      [socket.rider_id]
+    );
+    rows.forEach((pedido) => {
+      io.to(`negocio:${pedido.negocio_id}`).to(`pedido:${pedido.id}`)
+        .emit('rider:ubicacion', { rider_id: socket.rider_id, pedido_id: pedido.id, lat, lng, timestamp: ahora });
+    });
+  } catch (err) {
+    console.error('❌ Error al actualizar ubicación:', err.message);
+  }
+});
 ```
 
 ---
 
-## 5. `io.emit('rider:fuera_linea')` — broadcast global innecesario al desconectar rider
-
-**Archivo:** `backend/src/sockets/index.js:187`
-**Beneficio:** Reduce tráfico WebSocket innecesario hacia negocios y clientes que no necesitan saber qué riders están offline; solo el panel admin lo requiere.
+## 5. Consultas de autorización redundantes en GET /pedidos/:id
+**Archivo:** `backend/src/routes/pedidos.js:426-459`  
+**Beneficio:** Elimina 1-2 queries extra por request de detalle de pedido, integrando la verificación de acceso en la query principal.
 
 ```js
-// ANTES (línea 187) — emite a TODOS los sockets conectados:
-io.emit('rider:fuera_linea', { rider_id: socket.rider_id });
+// Antes: fetcha el pedido completo, luego hace SELECT adicionales para negocios/riders
 
-// DESPUÉS — emitir solo al room 'admin':
-io.to('admin').emit('rider:fuera_linea', { rider_id: socket.rider_id });
+// Después: incorporar la autorización en la misma query con un filtro condicional
+router.get('/:id', auth, async (req, res, next) => {
+  try {
+    const { rows } = await db(
+      `SELECT p.*,
+              n.nombre_comercial, n.direccion AS direccion_retiro, n.lat AS neg_lat, n.lng AS neg_lng,
+              n.mostrar_costo_seguimiento,
+              u_r.nombre AS rider_nombre, u_r.telefono AS rider_telefono,
+              ri.vehiculo_tipo, ri.lat AS rider_lat, ri.lng AS rider_lng
+       FROM pedidos p
+       JOIN negocios n ON n.id = p.negocio_id
+       LEFT JOIN riders ri ON ri.id = p.rider_id
+       LEFT JOIN usuarios u_r ON u_r.id = ri.usuario_id
+       WHERE p.id = $1
+         AND (
+           $2 = 'admin'
+           OR ($2 = 'negocio' AND n.usuario_id = $3)
+           OR ($2 = 'rider'   AND ri.usuario_id = $3)
+         )`,
+      [req.params.id, req.usuario.rol, req.usuario.id]
+    );
+    if (!rows[0]) return res.status(404).json({ error: 'Pedido no encontrado o sin acceso' });
+    res.json(rows[0]);
+  } catch (err) { next(err); }
+});
 ```
