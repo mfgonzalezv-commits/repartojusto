@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
 **Última verificación:** 2026-11-03T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Error de red — el proxy de salida rechazó la conexión a repartojusto-production.up.railway.app:443 (connect_rejected). No se pudo verificar el endpoint /health.
+**Detalle:** Error de red — el proxy de salida rechazó la conexión a repartojusto-production.up.railway.app:443 (connect_rejected). No se pudo obtener respuesta HTTP del servidor. El endpoint de producción no es alcanzable desde este entorno de ejecución remoto.
