@@ -40,9 +40,16 @@ const flow = {
 
 // ── POST /api/pagos/crear ─────────────────────────────────────────────────────
 // El negocio inicia el pago de un pedido
-router.post('/crear', auth, solo('negocio'), async (req, res, next) => {
+const { body: bodyValidator, validationResult } = require('express-validator');
+router.post('/crear', auth, solo('negocio'),
+  [bodyValidator('pedido_id').isUUID().withMessage('pedido_id inválido')],
+  (req, res, next) => {
+    const errores = validationResult(req);
+    if (!errores.isEmpty()) return res.status(400).json({ error: 'Datos inválidos', detalles: errores.array() });
+    next();
+  },
+  async (req, res, next) => {
   const { pedido_id } = req.body;
-  if (!pedido_id) return res.status(400).json({ error: 'pedido_id requerido' });
 
   try {
     // Verificar que el pedido pertenece al negocio
@@ -111,8 +118,13 @@ router.get('/confirmar', confirmarRateLimit, auth, async (req, res, next) => {
   if (!token) return res.status(400).json({ error: 'Token requerido' });
 
   try {
+    // Cargar el pago y verificar que pertenece al negocio autenticado
     const { rows: [pago] } = await db(
-      'SELECT * FROM pagos WHERE flow_token = $1', [token]
+      `SELECT pa.* FROM pagos pa
+       JOIN pedidos pe ON pe.id = pa.pedido_id
+       JOIN negocios n ON n.id = pe.negocio_id
+       WHERE pa.flow_token = $1 AND n.usuario_id = $2`,
+      [token, req.usuario.id]
     );
     if (!pago) return res.status(404).json({ error: 'Pago no encontrado' });
     if (pago.estado === 'pagado') return res.json({ ok: true, estado: 'pagado' });

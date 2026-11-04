@@ -13,7 +13,9 @@ const validar = (req, res, next) => {
 router.get('/perfil', auth, solo('rider'), async (req, res, next) => {
   try {
     const { rows } = await db(
-      `SELECT r.*, u.email, u.nombre, u.telefono,
+      `SELECT r.id, r.usuario_id, r.vehiculo_tipo, r.disponible, r.lat, r.lng,
+              r.rating, r.total_entregas, r.saldo_pendiente, r.created_at,
+              u.email, u.nombre, u.telefono,
               (SELECT COUNT(*) FROM pedidos
                WHERE rider_id = r.id
                  AND estado = 'entregado'

@@ -32,7 +32,12 @@ const validar = (req, res, next) => {
 router.get('/perfil', auth, solo('negocio'), async (req, res, next) => {
   try {
     const { rows } = await db(
-      `SELECT n.*, u.email, u.telefono
+      `SELECT n.id, n.usuario_id, n.nombre_comercial, n.descripcion, n.direccion,
+              n.lat, n.lng, n.categoria, n.activo, n.modo,
+              n.estrategia_cobro, n.pct_negocio, n.mostrar_costo_seguimiento,
+              n.tarjeta_ultimos4, n.tarjeta_marca, n.tarjeta_exp, n.tarjeta_registrada_at,
+              n.created_at,
+              u.email, u.telefono
        FROM negocios n
        JOIN usuarios u ON u.id = n.usuario_id
        WHERE n.usuario_id = $1`,
@@ -94,7 +99,9 @@ router.put('/perfil',
              pct_negocio                = COALESCE($9,  pct_negocio),
              mostrar_costo_seguimiento  = COALESCE($10, mostrar_costo_seguimiento)
          WHERE usuario_id = $7
-         RETURNING *`,
+         RETURNING id, nombre_comercial, descripcion, direccion, lat, lng, categoria,
+                   activo, modo, estrategia_cobro, pct_negocio, mostrar_costo_seguimiento,
+                   tarjeta_ultimos4, tarjeta_marca, tarjeta_exp, tarjeta_registrada_at, created_at`,
         [nombre_comercial, descripcion, direccion, lat, lng, categoria,
          req.usuario.id, estrategia_cobro, pct_negocio,
          mostrar_costo_seguimiento === undefined ? null : mostrar_costo_seguimiento]

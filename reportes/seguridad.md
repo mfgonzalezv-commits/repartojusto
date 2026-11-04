@@ -1,71 +1,77 @@
 # Seguridad RepartoJusto
-**Fecha:** 2026-10-28
+**Fecha:** 2026-11-04
 **Nivel general:** ALTO
-**Agente:** Claude Code (Sonnet 4.6) — sesión automatizada
 
 ---
 
-## Vulnerabilidades (revisión semana 43)
+## Vulnerabilidades
 
-### 1. [ALTO] Sin rate limiting en creación de pedidos
-**Archivo:** `backend/src/routes/pedidos.js` — línea 22 (antes del fix)  
-**Qué podría pasar:** Un negocio autenticado podía crear miles de pedidos por minuto sin ningún límite. Esto habilitaba:  
-- Ataque DoS al motor de asignación de riders (cada pedido lanza una cascada de notificaciones en Redis/Socket.io)  
-- Spam de pedidos en sandbox sin costo alguno  
-- Agotamiento de conexiones PostgreSQL  
+### 1. ALTO — Credenciales de pago expuestas en perfil del negocio
+**Archivo:** `backend/src/routes/negocios.js` líneas 34 y 97
+**¿Qué podía pasar?**
+Los endpoints `GET /api/negocios/perfil` y `PUT /api/negocios/perfil` usaban `SELECT n.*` / `RETURNING *`, devolviendo al cliente los campos `tarjeta_token` y `tarjeta_customer_id` almacenados en la base de datos. Si un atacante interceptaba la respuesta (XSS, red insegura, logs mal configurados), podía usar esos tokens para realizar cobros fraudulentos a la tarjeta del negocio.
 
-**Fix aplicado:** ✅ Rate limiter por `usuario.id`: máximo 20 pedidos por hora. Si se excede, responde HTTP 429.
+**Fix aplicado:** Se reemplazó `SELECT n.*` y `RETURNING *` por una lista explícita de campos que excluye `tarjeta_token` y `tarjeta_customer_id`.
 
 ---
 
-### 2. [ALTO] Null dereference en `GET /api/negocios/pedidos/:id`
-**Archivo:** `backend/src/routes/negocios.js` — línea 148  
-**Qué podría pasar:** Si un usuario con `rol=negocio` no tiene registro en la tabla `negocios` (inconsistencia de datos, cuenta parcialmente creada), acceder a `GET /api/negocios/pedidos/:id` lanzaba `TypeError: Cannot read properties of undefined (reading 'id')`. Esto resultaba en HTTP 500. En entornos sin `NODE_ENV=production`, el mensaje de error detallado se exponía en la respuesta JSON, filtrando información interna.  
-**Fix aplicado:** ✅ Se agregó `if (!negocio) return res.status(404).json({ error: 'Negocio no encontrado' })` antes de usar `negocio.id`.
+### 2. ALTO — Claves de push notification expuestas en perfil del rider
+**Archivo:** `backend/src/routes/riders.js` línea 15
+**¿Qué podía pasar?**
+`GET /api/riders/perfil` usaba `SELECT r.*`, retornando el campo `push_subscription` que contiene la URL de endpoint y las llaves de cifrado del Web Push del rider. Con esos datos, un atacante con el JWT del rider podía enviar notificaciones push falsas (p.ej., "nuevo pedido urgente en dirección X") para manipular al rider.
+
+**Fix aplicado:** Se reemplazó `SELECT r.*` por una lista explícita de campos que excluye `push_subscription`.
 
 ---
 
-### 3. [ALTO] Null dereference en `PUT /api/pedidos/:id/cancelar`
-**Archivo:** `backend/src/routes/pedidos.js` — línea 344  
-**Qué podría pasar:** El mismo patrón que la vulnerabilidad anterior: si el negocio autenticado no tiene registro en `negocios`, `neg.id` lanzaba TypeError → HTTP 500 con posible fuga de detalles internos.  
-**Fix aplicado:** ✅ Se agregó `if (!neg) return res.status(404).json({ error: 'Negocio no encontrado' })` antes de usar `neg.id`.
+### 3. MEDIO — Sin validación de ownership en `GET /api/pagos/confirmar`
+**Archivo:** `backend/src/routes/pagos.js` línea 116 (anterior)
+**¿Qué podía pasar?**
+El endpoint `GET /api/pagos/confirmar?token=...` aceptaba cualquier `flow_token` sin verificar que el pago perteneciera al negocio autenticado. Un negocio autenticado que obtuviera el `flow_token` de otro negocio (por ejemplo, desde logs o tráfico interceptado en sandbox) podía confirmar pagos ajenos y potencialmente desencadenar activación de pedidos que no le pertenecían.
+
+**Fix aplicado:** Se modificó la consulta SQL para hacer un JOIN con `pedidos` y `negocios`, validando que `negocios.usuario_id = req.usuario.id` antes de retornar el pago.
 
 ---
 
-### 4. [MEDIO] Sin validación UUID en `pedido_id` en `POST /api/pagos/crear`
-**Archivo:** `backend/src/routes/pagos.js` — línea 44  
-**Qué podría pasar:** El campo `pedido_id` solo verifica si es truthy. Un valor como `"'; DROP TABLE pagos; --"` no causa SQL injection (queries parametrizadas lo evitan), pero sí causa un error de tipo PostgreSQL (`invalid input syntax for type uuid`). En non-production, ese mensaje de error se retorna en la respuesta JSON, exponiendo que el backend usa PostgreSQL con tipo UUID.  
-**Fix recomendado:** Agregar `body('pedido_id').isUUID()` con express-validator (ya disponible en el proyecto) y la función `validar` al inicio del handler. No aplicado automáticamente para no cambiar la API pública sin revisión.
+### 4. MEDIO — Falta validación UUID en `POST /api/pagos/crear`
+**Archivo:** `backend/src/routes/pagos.js` línea 44 (anterior)
+**¿Qué podía pasar?**
+`POST /api/pagos/crear` solo verificaba `if (!pedido_id)` sin validar el formato UUID. Enviar strings malformados o extremadamente largos provocaba errores inesperados en PostgreSQL, generando respuestas 500 que en modo desarrollo exponían el mensaje de error interno del servidor (stack trace, nombre de tabla, etc.).
+
+**Fix aplicado:** Se agregó `body('pedido_id').isUUID()` con `express-validator` antes del handler principal.
 
 ---
 
-### 5. [MEDIO] JWT `NotBeforeError` no manejado en error handler
-**Archivo:** `backend/src/middleware/errorHandler.js` — línea 10  
-**Qué podría pasar:** El handler solo captura `JsonWebTokenError` y `TokenExpiredError`. Si se envía un JWT con un claim `nbf` (not before) en el futuro, `jsonwebtoken` lanza `NotBeforeError` que cae al handler genérico → HTTP 500 en lugar de 401. Impacto bajo, pero expone comportamiento inesperado.  
-**Fix recomendado:** Agregar `err.name === 'NotBeforeError'` a la condición de la línea 10. Cambio de una línea, no aplicado para mantener batch mínimo de fixes.
+### 5. BAJO — Endpoint VAPID sin autenticación expone variable de entorno
+**Archivo:** `backend/src/routes/riders.js` línea 231
+**¿Qué podía pasar?**
+`GET /api/riders/vapid-public-key` retorna `process.env.VAPID_PUBLIC_KEY` sin requerir autenticación. Si bien las llaves VAPID públicas son diseñadas para ser distribuidas, dejarlas sin auth permite que cualquier persona (sin cuenta) consulte si VAPID está configurado y obtenga la llave para registrar push subscriptions fuera de la app.
+
+**Recomendación (no aplicado):** Añadir el middleware `auth` al endpoint, ya que solo los riders autenticados necesitan la llave VAPID.
 
 ---
 
-## Resumen de estado (acumulado)
+## Aspectos positivos encontrados
+- Todas las queries usan parámetros (`$1`, `$2`) — sin riesgo de SQL injection.
+- Login protegido contra timing attacks y enumeración de emails (bcrypt dummy hash).
+- Rate limiting implementado en auth, pedidos, admin y pagos.
+- Webhook de Flow valida firma HMAC con `crypto.timingSafeEqual` y rechaza si falta `FLOW_SECRET`.
+- Error handler en producción oculta mensajes internos (devuelve solo "Error interno del servidor").
+- Middleware `auth` verifica activo=true en DB en cada request (previene uso de tokens de cuentas baneadas).
 
-| # | Fecha | Nivel | Archivo | Estado |
-|---|-------|-------|---------|--------|
-| 1 | 2026-10-21 | CRÍTICO | pagos.js:147 | ✅ Corregido |
-| 2 | 2026-10-21 | ALTO | auth.js:202 | ✅ Corregido |
-| 3 | 2026-10-21 | ALTO | admin.js:308 | ✅ Corregido |
-| 4 | 2026-10-21 | MEDIO | auth.js:110,150 | ⚠️ Pendiente |
-| 5 | 2026-10-21 | BAJO | riders.js:231 | ⚠️ Pendiente |
-| 6 | 2026-10-28 | ALTO | pedidos.js:22 | ✅ Corregido |
-| 7 | 2026-10-28 | ALTO | negocios.js:148 | ✅ Corregido |
-| 8 | 2026-10-28 | ALTO | pedidos.js:344 | ✅ Corregido |
-| 9 | 2026-10-28 | MEDIO | pagos.js:44 | ⚠️ Pendiente |
-| 10 | 2026-10-28 | MEDIO | errorHandler.js:10 | ⚠️ Pendiente |
+---
 
-## Fixes aplicados esta sesión
-- `backend/src/routes/pedidos.js` — Rate limiter en creación de pedidos (max 20/hora por negocio)
-- `backend/src/routes/negocios.js` — Null guard en `GET /pedidos/:id`
-- `backend/src/routes/pedidos.js` — Null guard en `PUT /:id/cancelar`
+## Fixes aplicados
 
-## Estado del servidor de producción
-- URL: `https://repartojusto-production.up.railway.app/health`
-- Resultado: **No alcanzable** (403 desde el proxy del entorno de ejecución). El dominio no resuelve o el servidor sigue sin deployarse.
+| Archivo | Cambio |
+|---|---|
+| `backend/src/routes/negocios.js:34` | `SELECT n.*` → campos explícitos sin `tarjeta_token`, `tarjeta_customer_id` |
+| `backend/src/routes/negocios.js:97` | `RETURNING *` → campos explícitos sin credenciales de pago |
+| `backend/src/routes/riders.js:15` | `SELECT r.*` → campos explícitos sin `push_subscription` |
+| `backend/src/routes/pagos.js:116` | Añadido JOIN de ownership en `GET /confirmar` |
+| `backend/src/routes/pagos.js:44` | Añadida validación UUID para `pedido_id` |
+
+---
+
+## Estado producción
+Endpoint `https://repartojusto-production.up.railway.app/health` no fue accesible desde el entorno de revisión (proxy bloqueó la conexión saliente). Verificar manualmente.
