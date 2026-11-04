@@ -1,12 +1,12 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-11-03
+**Actualizado:** 2026-11-04
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Completos temporada alta" redactado 01/11 — noviembre ARRANCA HOY, mayor ventana del año; $4.500 completo Rappi = $1.260 comisión vs. $500 fijo RJ; enviar HOY |
 | 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Pollo asado = temporada alta empieza hoy" redactado 01/11 — noviembre ARRANCA; 30 pollos/día $9K Rappi = $756K/mes comisión vs. $135K RJ; diferencia $621K/mes; enviar HOY |
-| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Alergias primaverales peak máximo" redactado 31/10 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ |
+| 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Noviembre peak alergias primaverales / Urgentes nocturnos peak" redactado 04/11 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ; 20 pedidos urgentes/día = diferencia $650K/mes |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 2/11 / Segundo día de noviembre / Pizza = peak navideño arrancó" redactado 02/11 — pizza $12.000 Rappi 28% = $3.360 comisión; 10 pizzas/día diciembre = $858K/mes diferencia vs. $500 fijo; Navidad en 7 semanas — activar ahora |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Sushi peak celebraciones empresa" redactado 31/10 — nov-dic = celebraciones empresa + cenas Navidad; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 3/11 / Navidad en 7 semanas / Botillería = peak verano total" redactado 03/11 — noviembre = inicio peak total verano bebidas; $500 fijo vs. 30% plataforma; seguimiento 4 días desde 30/10 |
@@ -15,9 +15,9 @@
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Rotisería = temporada más alta del año" redactado 01/11 — noviembre arranca HOY; asados y pollo = peak verano/diciembre; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = $1M+/mes diferencia; enviar HOY |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Terrazas y café frío, el verano empieza" redactado 01/11 — noviembre ARRANCA; terrazas, café frío, temporada alta verano = HOY; activar canal antes del rush de fin de año |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 3/11 / Noviembre = peak antipulgas + vacunas primavera" redactado 03/11 — pack medicamentos $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; delivery urgente medicamentos = diferenciador crítico; seguimiento 4 días desde 30/10 |
-| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 30/10 / Noviembre en 2 días / Cierre año escolar + exámenes" redactado 30/10 — noviembre = últimas semanas de clases, exámenes, proyectos de fin de año; resmas/materiales delivery urgente; $500 fijo diferenciador en tickets bajos; único canal delivery librería en VA |
-| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Sábado 31/10 / Mañana ARRANCA NOVIEMBRE / Temporada alta pintura, jardín y piscinas" redactado 31/10 — noviembre = inicio peak ferretería; balde pintura $15K Rappi 28% = $4.200 comisión vs. $500 fijo RJ; únicos con delivery ferretería en VA |
-| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Viernes 30/10 / Noviembre arranca en 2 días / Temporada alta de helados AHORA" redactado 30/10 — noviembre = inicio del peak que dura hasta marzo; 30+ pedidos/día $6.000 Rappi 30% = $54.000 comisión diaria vs. $15.000 RJ; $1.170.000/mes de diferencia en plena temporada |
+| 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Última recta año escolar + exámenes finales / Canal delivery tickets bajos" redactado 04/11 — exámenes y proyectos finales urgentes; $500 fijo funciona para tickets bajos donde % no funciona; único delivery librería en VA |
+| 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Temporada alta pintura + jardín + piscinas / Ferretería delivery exclusivo VA" redactado 04/11 — peak ferretería noviembre; balde $15K Rappi 28% = $4.200 comisión vs. $500 fijo RJ; únicos con delivery ferretería en VA |
+| 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Noviembre = temporada helados arrancó / Navidad en 7 semanas" redactado 04/11 — peak helados noviembre-marzo; 30 pedidos/día $6.000 Rappi 30% = $54.000 comisión vs. $15.000 RJ; $1.170.000/mes diferencia en plena temporada |
 | 15 | Melt Pizzas | Pizzería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | "Último día de julio" redactado 31/07 — PRIORIDAD GERENTE (36 días borradores activos), en Rappi, post-Premios Uber Eats contraste, cierre del mes más frío |
 | 16 | Maranatha Café | Café | Santiago 906, Villa Alemana | Nuevo | — | Arranque julio redactado 29/06 |
 | 17 | Locos X Food | Comida rápida | Av. Valparaíso 1380, Villa Alemana | Nuevo | — | Seguimiento julio redactado 02/07 — PRIORIDAD (~$575K-$775K/mes) |
@@ -256,10 +256,48 @@
 | 250 | Mariscos El Pacífico VA | Mariscos / ceviche | Villa Alemana (canal propio) | Nuevo | — | Presentación redactada 02/11 — mariscos a domicilio canal propio; noviembre = inicio temporada alta mariscos en Chile; pedido $25.000 en Uber Eats (30%) = $7.500 comisión vs. $500 fijo RJ; diferencia $7.000 por pedido en plena temporada; rubro con peak noviembre-marzo |
 | 251 | Buscando Sushi | Sushi | Lautaro 403, Villa Alemana | Nuevo | — | Presentación redactada 03/11 — en Rappi; sushi delivery, ticket $12.000-$18.000; ahorro $2.860-$4.540 por pedido vs. Rappi 28%; noviembre = peak sushi temporada alta |
 | 252 | Bronx Burger | Hamburguesería | Av. Valparaíso 1057, Villa Alemana | Nuevo | — | Presentación redactada 03/11 — en Rappi, hamburguesas smash; combos $10.000-$20.000; ahorro $2.300-$5.100 por pedido vs. Rappi 28%; mismo eje avenida principal que Sin Miedo Burgers y Just Burger |
+| 253 | PaComeralgo | Comida saludable/vegana | Cumming 24, Villa Alemana | Nuevo | — | Presentación redactada 04/11 — encontrado en Spinach Guide/HappyCow; sin grandes plataformas visibles; comida saludable con opciones veganas; peak diciembre cenas empresa opciones frescas; $500 fijo sin comisión sobre cada plato |
+| 254 | La Panadería del Barrio | Panadería artesanal | Villa Alemana | Nuevo | — | Presentación redactada 04/11 — panadería artesanal canal propio; peak Navidad: panetones, hallullas empresa, marraquetas; $500 fijo funciona hasta para tickets de $3.000; noviembre-diciembre = máximo peak del año |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-11-04) — MIÉRCOLES / NOVIEMBRE PEAK / NAVIDAD EN 7 SEMANAS / SSW 111 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es **miércoles 4 de noviembre — Noviembre peak, Navidad en 7 semanas**. SSW Partners lleva **111 días en silencio** sin comunicar condiciones 2027 a afiliados PedidosYa. **6 mensajes hoy:** 4 seguimientos para Contactados con borradores de 4-5 días (#3 Farmacia Cruz Verde, #12 Librería El Saber, #13 Ferretería Los Maestros, #14 Heladería Glacial) + 2 presentaciones para 2 nuevos prospectos (#253 PaComeralgo y #254 La Panadería del Barrio). Pipeline: **254 prospectos**. ACCIÓN URGENTE: enviar HOY los borradores de #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas — llevan **103 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+**#3 Farmacia Cruz Verde — Seguimiento "Miércoles 4/11 / Peak alergias primaverales / Urgentes nocturnos":**
+"Hola Cruz Verde Villa Alemana! Matías de RepartoJusto aquí. Miércoles 4 de noviembre — la temporada de alergias primaverales está en su peak: antihistamínicos, nasales, urgentes nocturnos. Delivery de farmacia en 20-30 min es lo que hace la diferencia para los clientes. Con Rappi, una caja de $8.000 genera $2.240 de comisión; con nosotros son $500 fijos, sin importar el valor del pedido. Para 20 pedidos urgentes al día: diferencia de más de $650.000 al mes. ¿Lo activamos? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#12 Librería El Saber — Seguimiento "Miércoles 4/11 / Última recta año escolar / Exámenes finales":**
+"Hola Librería El Saber! Matías de RepartoJusto, delivery local Villa Alemana. Estamos en la última recta del año escolar — exámenes, proyectos finales, compras de útiles de última hora. Es cuando los estudiantes y papás necesitan delivery urgente de materiales. Con $500 fijo por entrega, independiente del valor del pedido, somos la única opción que funciona para tickets bajos sin que la comisión los devore. ¿Los activo antes del cierre del año? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#13 Ferretería Los Maestros — Seguimiento "Miércoles 4/11 / Peak ferretería: pintura, jardín y piscinas":**
+"Hola Los Maestros! De RepartoJusto, delivery local Villa Alemana. Miércoles 4 de noviembre — la temporada de pintura, jardín y preparación de piscinas ya arrancó. Las ferreterías tienen un problema único con las plataformas grandes: cobran 28-30% sobre productos de alto valor. Un balde de pintura de $15.000 en Rappi = $4.200 de comisión; con nosotros: $500 fijo, siempre. Son los únicos con delivery de ferretería en Villa Alemana — eso merece una tarifa justa. ¿Lo conversamos? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#14 Heladería Glacial — Seguimiento "Miércoles 4/11 / Temporada helados arrancó / Navidad en 7 semanas":**
+"Hola Heladería Glacial! De RepartoJusto. Miércoles 4 de noviembre — la temporada de helados está arrancando. Con Rappi, 30 pedidos a $6.000 = $54.000/día en comisiones; con nosotros son $15.000/día. Diferencia en un mes de temporada alta: $1.170.000. Navidad queda en 7 semanas — es el momento de configurar el canal antes del peak de diciembre. ¿Los activo esta semana? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#253 PaComeralgo — Presentación (comida saludable/vegana, Cumming 24, Villa Alemana, sin plataformas grandes):**
+"Hola PaComeralgo! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Los encontré en directorios de comida saludable — tienen exactamente el perfil que se demanda más en noviembre-diciembre: opciones frescas para cenas de empresa y celebraciones de fin de año. Con nosotros la tarifa es $500 fijo por entrega, sin comisión sobre el valor de cada plato. No los vemos en Rappi ni Uber Eats — eso puede ser una ventaja o una oportunidad. ¿Conversamos? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#254 La Panadería del Barrio — Presentación (panadería artesanal, Villa Alemana, canal propio, peak Navidad):**
+"Hola! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana. Las panaderías artesanales tienen el peak más grande del año en noviembre-diciembre: hallullas para reuniones de empresa, panetones artesanales, marraquetas de desayuno de fin de año. Con $500 fijo por entrega, el canal de delivery tiene sentido hasta para tickets de $3.000 — algo que Rappi o Uber Eats (28-30%) hacen imposible. ¿Lo activamos antes de Navidad? repartojusto-production.up.railway.app — Matías, RepartoJusto"
 
 ---
 
