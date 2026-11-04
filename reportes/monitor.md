@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-11-04T00:00:00Z
+**Última verificación:** 2026-11-04 16:31:38 UTC
 **Estado:** ❌ CAÍDO
-**Detalle:** No se pudo conectar a https://repartojusto-production.up.railway.app/health — conexión rechazada por el proxy de salida del entorno de ejecución (connect_rejected). El host puede estar caído o inaccesible desde este entorno.
+**Detalle:** No se pudo conectar a repartojusto-production.up.railway.app — conexión rechazada por el proxy de red del entorno (connect_rejected). HTTP 000.
