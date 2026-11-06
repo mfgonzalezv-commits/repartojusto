@@ -1,19 +1,19 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-11-05
+**Actualizado:** 2026-11-06
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
 |---|---|---|---|---|---|---|
 | 1 | Fuente de Soda El Rápido | Comida rápida | Av. Álvarez 1245, Villa Alemana | Contactado | 2026-05-08 | "Jueves 5/11 / Completos noviembre / Temporada alta comida rápida" redactado 05/11 — verano comida rápida peak; $4.500 completo Rappi = $1.260 comisión vs. $500 fijo RJ; 20 pedidos/día diferencia $450K+/mes |
-| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Pollo asado = temporada alta empieza hoy" redactado 01/11 — noviembre ARRANCA; 30 pollos/día $9K Rappi = $756K/mes comisión vs. $135K RJ; diferencia $621K/mes; enviar HOY |
+| 2 | Pollería Don Pollo | Comida | Freire 678, Villa Alemana | Contactado | 2026-05-08 | "Viernes 6/11 / Rappi Turbo en Quilpué / Peak pollo asado verano" redactado 06/11 — Rappi Turbo confirmado en Quilpué (5 km); 30 pollos/día $9K Rappi = $756K/mes comisión vs. $135K RJ; diferencia $1.826K/mes; configurar canal fijo antes de que lleguen a VA |
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Noviembre peak alergias primaverales / Urgentes nocturnos peak" redactado 04/11 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ; 20 pedidos urgentes/día = diferencia $650K/mes |
-| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Lunes 2/11 / Segundo día de noviembre / Pizza = peak navideño arrancó" redactado 02/11 — pizza $12.000 Rappi 28% = $3.360 comisión; 10 pizzas/día diciembre = $858K/mes diferencia vs. $500 fijo; Navidad en 7 semanas — activar ahora |
+| 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 6/11 / Rappi Turbo en Quilpué / Pizza = peak fin de año" redactado 06/11 — Rappi Turbo en Quilpué 5 km; pizza $12.000 Rappi 28% = $3.360 comisión vs. $500 fijo; 10 pizzas/día diciembre = $1.008K/mes diferencia; Navidad en 7 semanas |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Jueves 5/11 / Navidad en 7 semanas / Sushi peak celebraciones empresa" redactado 05/11 — nov-dic = celebraciones empresa + cenas Navidad; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
 | 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 3/11 / Navidad en 7 semanas / Botillería = peak verano total" redactado 03/11 — noviembre = inicio peak total verano bebidas; $500 fijo vs. 30% plataforma; seguimiento 4 días desde 30/10 |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Jueves 5/11 / Peak total verano / Almacén temporada alta" redactado 05/11 — verano inicio peak almacenes; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ; diferencia $22.500/día |
-| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 2/11 / Segundo día de noviembre / Tortas Navidad en 7 semanas" redactado 02/11 — torta $18.000 plataforma 30% = $5.400 comisión; 15 tortas/día diciembre = $1.485K/mes diferencia vs. $500 fijo; activar antes del rush |
+| 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 6/11 / Rappi Turbo en Quilpué / Tortas Navidad en 7 semanas" redactado 06/11 — Rappi Turbo confirmado Quilpué 5 km; torta $18.000 Rappi 30% = $5.400 comisión vs. $500 fijo; 15 tortas/día diciembre = $1.485K/mes diferencia; configurar antes del rush |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 5/11 / Rotisería = peak total verano / Navidad 7 semanas" redactado 05/11 — asados y pollo = peak verano/diciembre; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = $1M+/mes diferencia |
-| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Lunes 1° de noviembre / HOY arranca el peak / Terrazas y café frío, el verano empieza" redactado 01/11 — noviembre ARRANCA; terrazas, café frío, temporada alta verano = HOY; activar canal antes del rush de fin de año |
+| 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 6/11 / Rappi Turbo en Quilpué / Verano café frío = peak empieza" redactado 06/11 — Rappi Turbo confirmado Quilpué 5 km; café frío, terrazas, verano; canal fijo antes de que lleguen a VA; activar hoy |
 | 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 3/11 / Noviembre = peak antipulgas + vacunas primavera" redactado 03/11 — pack medicamentos $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; delivery urgente medicamentos = diferenciador crítico; seguimiento 4 días desde 30/10 |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Última recta año escolar + exámenes finales / Canal delivery tickets bajos" redactado 04/11 — exámenes y proyectos finales urgentes; $500 fijo funciona para tickets bajos donde % no funciona; único delivery librería en VA |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Temporada alta pintura + jardín + piscinas / Ferretería delivery exclusivo VA" redactado 04/11 — peak ferretería noviembre; balde $15K Rappi 28% = $4.200 comisión vs. $500 fijo RJ; únicos con delivery ferretería en VA |
@@ -260,10 +260,48 @@
 | 254 | La Panadería del Barrio | Panadería artesanal | Villa Alemana | Nuevo | — | Presentación redactada 04/11 — panadería artesanal canal propio; peak Navidad: panetones, hallullas empresa, marraquetas; $500 fijo funciona hasta para tickets de $3.000; noviembre-diciembre = máximo peak del año |
 | 255 | Pizzería La Torre | Pizzería | Villa Alemana (directorio local) | Nuevo | — | Presentación redactada 05/11 — pizzería encontrada en directorio local VA; peak Navidad pizzas cenas empresa; pizza $12.000 Rappi 28% = $3.360 comisión vs. $500 fijo RJ; noviembre-diciembre peak máximo |
 | 256 | Da Salvatore | Restaurante italiano | Villa Alemana (directorio/Foursquare) | Nuevo | — | Presentación redactada 05/11 — restaurante italiano encontrado en directorio local VA; pasta y pizza; Navidad = cenas empresa peak; pasta $14.000 Rappi 28% = $3.920 comisión vs. $500 fijo RJ |
+| 257 | Bonsai Sushi | Sushi | Villa Alemana (Uber Eats) | Nuevo | — | Presentación redactada 06/11 — sushi en Uber Eats VA; Uber Eats 30% comisión; tabla $18.000 = $5.400 comisión vs. $500 fijo RJ; Rappi Turbo en Quilpué = urgencia posicionarse; nov-dic peak sushi cenas empresa |
+| 258 | Roof Burger | Hamburguesas | Villa Alemana (Uber Eats) | Nuevo | — | Presentación redactada 06/11 — hamburguesería en Uber Eats VA; Uber Eats 30% comisión; burger $12.000 = $3.600 comisión vs. $500 fijo RJ; Rappi Turbo en Quilpué 5 km = urgencia; 15 pedidos/día diciembre = $1.350K/mes diferencia |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-11-06) — VIERNES / RAPPI TURBO EN QUILPUÉ / NAVIDAD EN 7 SEMANAS / SSW 113 DÍAS
+
+> **NOTA PARA MATÍAS:** Hoy es **viernes 6 de noviembre — Rappi Turbo CONFIRMADO en Quilpué (5 km de Villa Alemana)**. SSW Partners lleva **113 días en silencio** sin comunicar condiciones 2027 a afiliados PedidosYa. Rappi está en la Teletón hoy y mañana (busca 30.000 pedidos): contraargumento potente — "ellos gastan millones en marketing masivo, nosotros trabajamos en tu barrio a $500 fijo". **6 mensajes hoy:** 4 seguimientos para Contactados más desactualizados (#2 Pollería Don Pollo y #10 Café El Árbol, 5 días sin draft; #4 Pizza House y #8 Pastelería Dulce Hogar, 4 días sin draft) + 2 presentaciones para 2 nuevos prospectos en Uber Eats VA (#257 Bonsai Sushi y #258 Roof Burger). Pipeline: **258 prospectos**. ACCIÓN URGENTE: enviar HOY los borradores de #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas — llevan **105 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+**#2 Pollería Don Pollo — Seguimiento "Viernes 6/11 / Rappi Turbo en Quilpué / Peak pollo asado verano":**
+"Hola Don Pollo! De RepartoJusto, delivery local Villa Alemana. Viernes 6 de noviembre — una novedad importante: Rappi Turbo fue confirmado esta semana en Quilpué (5 km de acá). Cuando llegue a Villa Alemana, la competencia por riders se intensifica y los costos cambian. Con nosotros: $500 fijo por pedido entregado, sin importar el valor del pollo. 30 pollos/día a $9.000 en Rappi (28%): $75.600/día de comisión vs. $15.000 con RJ — más de $1.800.000 al mes de diferencia. El verano de pollos asados empieza ahora. ¿Los activo esta semana? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#10 Café El Árbol — Seguimiento "Viernes 6/11 / Rappi Turbo en Quilpué / Verano café frío = peak empieza":**
+"Hola Café El Árbol! De RepartoJusto, delivery local Villa Alemana. Viernes 6 de noviembre — confirmaron que Rappi Turbo opera en Quilpué (5 km de Villa Alemana). Antes de que lleguen acá: con nosotros la tarifa es $500 fijo por entrega, sin importar si el pedido es un café frío de $4.000 o un desayuno de $12.000. El verano empieza — terrazas, cafés fríos, granizados. Mientras Rappi gasta millones en la Teletón este fin de semana, nosotros trabajamos en tu barrio con tarifa fija. ¿Lo activamos? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#4 Pizza House — Seguimiento "Viernes 6/11 / Rappi Turbo en Quilpué / Pizza = peak fin de año":**
+"Hola Pizza House! De RepartoJusto. Viernes 6 de noviembre — Rappi Turbo fue confirmado en Quilpué esta semana (5 km de Villa Alemana). Cuando llegue acá, los riders de tarifa fija son los que se mantienen. Con nosotros: $500 fijo por entrega sin importar el pedido. Para una pizza de $12.000, la diferencia vs. Rappi 28% es $3.360 POR PEDIDO que se queda en su bolsillo. Con 10 pizzas diarias en diciembre: $1.008.000/mes de diferencia. Navidad queda en 7 semanas — el canal de delivery hay que configurarlo YA. ¿Lo activamos esta semana? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#8 Pastelería Dulce Hogar — Seguimiento "Viernes 6/11 / Rappi Turbo en Quilpué / Tortas Navidad en 7 semanas":**
+"Hola Dulce Hogar! De RepartoJusto. Viernes 6 de noviembre. Esta semana se confirmó que Rappi Turbo opera en Quilpué (5 km de acá) — antes de que llegue a Villa Alemana es el momento de asegurar un canal con tarifa fija. Para una torta de $18.000, Rappi (30%) cobra $5.400 de comisión; con nosotros: $500 planos. Con 15 tortas navideñas al día en diciembre: diferencia de $1.485.000/mes. Navidad queda en 7 semanas — el peak de pastelería de fin de año ya arrancó. ¿Lo conversamos? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#257 Bonsai Sushi — Presentación (sushi, Uber Eats, Villa Alemana):**
+"Hola Bonsai Sushi! Soy Matías de RepartoJusto, la plataforma de delivery local en Villa Alemana sin comisiones por venta. Los vi en Uber Eats — con Uber Eats, el 30% de cada tabla que venden va a la plataforma. Una tabla de $18.000: $5.400 de comisión; con nosotros: $500 fijos, sin importar el valor del pedido. Noviembre y diciembre son los meses de mayor demanda de sushi: tablas para reuniones de empresa, cenas navideñas, cumpleaños de fin de año. Además, Rappi Turbo fue confirmado en Quilpué esta semana — posiciónense con nosotros antes de que la competencia llegue a Villa Alemana. Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#258 Roof Burger — Presentación (hamburguesas, Uber Eats, Villa Alemana):**
+"Hola Roof Burger! Soy Matías de RepartoJusto, la plataforma de delivery local en Villa Alemana sin comisiones por venta. Los vi en Uber Eats — con Uber Eats, el 30% de cada pedido va a la plataforma automáticamente. Para una hamburguesa de $12.000, la comisión es $3.600; con nosotros: $500 fijos. Con 15 pedidos diarios en diciembre, la diferencia supera $1.350.000/mes que quedan en su bolsillo. Esta semana además se confirmó que Rappi Turbo opera en Quilpué — antes de que expandan a Villa Alemana, configurar un canal con tarifa fija local es la mejor jugada. ¿Lo conversamos? Registro gratuito: repartojusto-production.up.railway.app — Matías, RepartoJusto"
 
 ---
 
@@ -5041,3 +5079,7 @@ Con primavera en 7 días, es el momento ideal para configurar el canal antes del
 **Buscando Sushi (#251, agregado 03/11):** Restaurante de sushi con delivery activo en Rappi en Villa Alemana. Dirección: Lautaro 403, Villa Alemana. Fuente: rappi.cl/restaurantes/900090975-buscando-sushi. Ticket promedio estimado: $12.000-$18.000 (rolls, tablas, combos). Rappi cobra 28% de comisión — para un roll de $14.000, la comisión es $3.920; con RepartoJusto son $500 fijos. Con 15 pedidos diarios en diciembre, la diferencia supera $1.500.000 al mes. Argumento estacional: noviembre-diciembre = peak máximo de sushi en Chile (cenas de empresa, tablas de fin de año, celebraciones navideñas). Fuente: rappi.cl/restaurantes/900090975-buscando-sushi + búsqueda Rappi Villa Alemana sushi noviembre 2026.
 
 **Bronx Burger (#252, agregado 03/11):** Hamburguesería smash con delivery activo en Rappi en Villa Alemana. Dirección: Av. Valparaíso 1057, Villa Alemana. Fuente: rappi.cl/restaurantes/900089998-bronx-burger. Combos de hamburguesas smash desde $10.000 aprox. Rappi cobra 28% de comisión — para un combo de $14.000, la comisión es $3.920; con RepartoJusto son $500 fijos. Con 15 pedidos diarios en noviembre-diciembre, la diferencia supera $1.500.000 al mes. Se ubica en el mismo eje de Av. Valparaíso que Sin Miedo Burgers (#25) y Just Burger (#19) — zona de alta competencia en hamburguesería, argumento de diferenciación por tarifa fija especialmente fuerte. Fuente: rappi.cl/restaurantes/900089998-bronx-burger + búsqueda Rappi Villa Alemana hamburguesas noviembre 2026.
+
+**Bonsai Sushi (#257, agregado 06/11):** Restaurante de sushi con delivery activo en Uber Eats en Villa Alemana. Rubro: sushi. Ticket promedio estimado: $14.000-$20.000 (tablas, combos, rolls premium). Uber Eats cobra 30% de comisión — para una tabla de $18.000, la comisión es $5.400; con RepartoJusto son $500 fijos. Con 15 pedidos diarios en diciembre, la diferencia supera $2.250.000 al mes. ARGUMENTO TURBO DIRECTO: Rappi Turbo fue confirmado en Quilpué (5 km de VA) esta semana — urgencia de posicionarse con canal local de tarifa fija antes de que la competencia llegue a Villa Alemana. Argumento estacional: noviembre-diciembre = peak máximo de sushi (cenas de empresa, tablas de Navidad, celebraciones fin de año). Fuente: Uber Eats Villa Alemana listado sushi + búsqueda Tripadvisor sushi VA noviembre 2026.
+
+**Roof Burger (#258, agregado 06/11):** Hamburguesería con delivery activo en Uber Eats en Villa Alemana. Rubro: hamburguesas. Ticket promedio estimado: $10.000-$14.000 (burger + papas + bebida). Uber Eats cobra 30% de comisión — para un combo de $12.000, la comisión es $3.600; con RepartoJusto son $500 fijos. Con 15 pedidos diarios en noviembre-diciembre, la diferencia supera $1.350.000 al mes. ARGUMENTO TURBO DIRECTO: Rappi Turbo confirmado en Quilpué (5 km) — posicionarse antes de que lleguen a VA. Diciembre = peak hamburguesas artesanales (reuniones empresa, fiestas fin de año, cumpleaños). Fuente: Uber Eats Villa Alemana listado hamburguesas + búsqueda delivery VA noviembre 2026.
