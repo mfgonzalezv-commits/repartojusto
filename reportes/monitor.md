@@ -1,4 +1,4 @@
 # Monitor RepartoJusto
-**Última verificación:** 2026-11-07T13:31:39Z
+**Última verificación:** 2026-11-07T00:00:00Z
 **Estado:** ❌ CAÍDO
-**Detalle:** Conexión rechazada al intentar GET https://repartojusto-production.up.railway.app/health — curl exit 56, connect_rejected (el proxy de egress rechazó la conexión o no pudo alcanzar el host)
+**Detalle:** Error de conexión — el proxy de red rechazó el acceso al host `repartojusto-production.up.railway.app:443` (connect_rejected). No se pudo completar el GET /health. Posible causa: host no permitido en la política de egreso del entorno, o servicio caído.
