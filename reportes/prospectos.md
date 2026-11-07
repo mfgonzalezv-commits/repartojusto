@@ -1,5 +1,5 @@
 # Prospectos RepartoJusto
-**Actualizado:** 2026-11-06
+**Actualizado:** 2026-11-07
 
 ## Pipeline
 | # | Negocio | Rubro | Dirección | Estado | Último contacto | Próxima acción |
@@ -9,12 +9,12 @@
 | 3 | Farmacia Cruz Verde | Farmacia | Av. Álvarez 890, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Noviembre peak alergias primaverales / Urgentes nocturnos peak" redactado 04/11 — antihistamínicos/nasales/urgentes = peak noviembre; caja $8.000 Rappi $2.240 comisión vs. $500 fijo RJ; 20 pedidos urgentes/día = diferencia $650K/mes |
 | 4 | Pizza House | Comida | Portales 234, Villa Alemana | Contactado | 2026-05-08 | "Viernes 6/11 / Rappi Turbo en Quilpué / Pizza = peak fin de año" redactado 06/11 — Rappi Turbo en Quilpué 5 km; pizza $12.000 Rappi 28% = $3.360 comisión vs. $500 fijo; 10 pizzas/día diciembre = $1.008K/mes diferencia; Navidad en 7 semanas |
 | 5 | Sushi Zen | Comida | Freire 1100, Villa Alemana | Contactado | 2026-05-08 | "Jueves 5/11 / Navidad en 7 semanas / Sushi peak celebraciones empresa" redactado 05/11 — nov-dic = celebraciones empresa + cenas Navidad; tabla $20K en Rappi = $5.600 comisión vs. $500 fijo; $3M+/mes diferencia en diciembre 20 tablas/día |
-| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Martes 3/11 / Navidad en 7 semanas / Botillería = peak verano total" redactado 03/11 — noviembre = inicio peak total verano bebidas; $500 fijo vs. 30% plataforma; seguimiento 4 días desde 30/10 |
+| 6 | Botillería El Copihue | Botillería | Av. Álvarez 2310, Villa Alemana | Contactado | 2026-05-08 | "Sábado 7/11 / Post-Teletón Rappi / Navidad en 7 semanas / Botillería peak verano" redactado 07/11 — sábado noche = peak bebidas; Rappi gastó millones en la Teletón este fin de semana, nosotros trabajamos en tu barrio a $500 fijo; cerveza $3.000 en Rappi (30%) = $900 comisión vs. $500 fijo RJ; Navidad en 7 semanas = máximo peak bebidas del año |
 | 7 | Minimercado La Esquina | Almacén | Lynch 445, Villa Alemana | Contactado | 2026-05-08 | "Jueves 5/11 / Peak total verano / Almacén temporada alta" redactado 05/11 — verano inicio peak almacenes; 25 pedidos/día $5K en Rappi = $35K/día comisión vs. $12.500 con RJ; diferencia $22.500/día |
 | 8 | Pastelería Dulce Hogar | Pastelería | Av. Álvarez 1890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 6/11 / Rappi Turbo en Quilpué / Tortas Navidad en 7 semanas" redactado 06/11 — Rappi Turbo confirmado Quilpué 5 km; torta $18.000 Rappi 30% = $5.400 comisión vs. $500 fijo; 15 tortas/día diciembre = $1.485K/mes diferencia; configurar antes del rush |
 | 9 | Rotisería El Gaucho | Comida | Portales 567, Villa Alemana | Contactado | 2026-05-08 | "Jueves 5/11 / Rotisería = peak total verano / Navidad 7 semanas" redactado 05/11 — asados y pollo = peak verano/diciembre; 20 pedidos/día $8K Rappi: $44K/día comisión vs. $10K RJ = $1M+/mes diferencia |
 | 10 | Café El Árbol | Café | Freire 890, Villa Alemana | Contactado | 2026-05-08 | "Viernes 6/11 / Rappi Turbo en Quilpué / Verano café frío = peak empieza" redactado 06/11 — Rappi Turbo confirmado Quilpué 5 km; café frío, terrazas, verano; canal fijo antes de que lleguen a VA; activar hoy |
-| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Martes 3/11 / Noviembre = peak antipulgas + vacunas primavera" redactado 03/11 — pack medicamentos $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; delivery urgente medicamentos = diferenciador crítico; seguimiento 4 días desde 30/10 |
+| 11 | Veterinaria Huellitas | Veterinaria | Av. Álvarez 3200, Villa Alemana | Contactado | 2026-05-08 | "Sábado 7/11 / Noviembre peak antipulgas + vacunas primavera / Rappi Turbo Quilpué" redactado 07/11 — sábado = peak urgencias veterinarias domicilio; noviembre = inicio temporada alta antipulgas + vacunas primavera; pack medicamentos $12.000 Rappi = $3.360 comisión vs. $500 fijo RJ; Rappi Turbo en Quilpué 5 km = urgencia de asegurar tarifa fija local |
 | 12 | Librería El Saber | Librería | Lynch 234, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Última recta año escolar + exámenes finales / Canal delivery tickets bajos" redactado 04/11 — exámenes y proyectos finales urgentes; $500 fijo funciona para tickets bajos donde % no funciona; único delivery librería en VA |
 | 13 | Ferretería Los Maestros | Ferretería | Portales 123, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Temporada alta pintura + jardín + piscinas / Ferretería delivery exclusivo VA" redactado 04/11 — peak ferretería noviembre; balde $15K Rappi 28% = $4.200 comisión vs. $500 fijo RJ; únicos con delivery ferretería en VA |
 | 14 | Heladería Glacial | Heladería | Freire 1340, Villa Alemana | Contactado | 2026-05-08 | "Miércoles 4/11 / Noviembre = temporada helados arrancó / Navidad en 7 semanas" redactado 04/11 — peak helados noviembre-marzo; 30 pedidos/día $6.000 Rappi 30% = $54.000 comisión vs. $15.000 RJ; $1.170.000/mes diferencia en plena temporada |
@@ -262,10 +262,38 @@
 | 256 | Da Salvatore | Restaurante italiano | Villa Alemana (directorio/Foursquare) | Nuevo | — | Presentación redactada 05/11 — restaurante italiano encontrado en directorio local VA; pasta y pizza; Navidad = cenas empresa peak; pasta $14.000 Rappi 28% = $3.920 comisión vs. $500 fijo RJ |
 | 257 | Bonsai Sushi | Sushi | Villa Alemana (Uber Eats) | Nuevo | — | Presentación redactada 06/11 — sushi en Uber Eats VA; Uber Eats 30% comisión; tabla $18.000 = $5.400 comisión vs. $500 fijo RJ; Rappi Turbo en Quilpué = urgencia posicionarse; nov-dic peak sushi cenas empresa |
 | 258 | Roof Burger | Hamburguesas | Villa Alemana (Uber Eats) | Nuevo | — | Presentación redactada 06/11 — hamburguesería en Uber Eats VA; Uber Eats 30% comisión; burger $12.000 = $3.600 comisión vs. $500 fijo RJ; Rappi Turbo en Quilpué 5 km = urgencia; 15 pedidos/día diciembre = $1.350K/mes diferencia |
+| 259 | Alikebab | Kebab / comida árabe | Villa Alemana (delivery-first, canal propio TikTok) | Nuevo | — | Presentación redactada 07/11 — reciente apertura con delivery propio y 20% descuento en carta; sin grandes plataformas confirmadas; sábado noche = peak kebab cenas; argumento canal local $500 fijo para posicionarse desde el inicio sin ceder comisión porcentual |
+| 260 | Entre Churrascos | Comida chilena / churrascos | Villa Alemana (canal propio Instagram) | Nuevo | — | Presentación redactada 07/11 — churrascos clásicos delivery canal propio Instagram, sin grandes plataformas detectadas; churrasco $7.000 Rappi (28%) = $1.960 comisión vs. $500 fijo RJ; verano = peak churrascos; argumento potenciar canal directo + rider local sin comisión |
 
 ---
 
 ## Borradores de mensajes pendientes de envío por Matías
+
+---
+
+### MENSAJES DEL DÍA (2026-11-07) — SÁBADO / POST-TELETÓN RAPPI / RAPPI TURBO QUILPUÉ / SSW 114 DÍAS / NAVIDAD EN 7 SEMANAS
+
+> **NOTA PARA MATÍAS:** Hoy es **sábado 7 de noviembre — Rappi estuvo en la Teletón ayer y hoy gastando millones en marketing masivo**. Rappi Turbo CONFIRMADO en Quilpué (5 km de Villa Alemana). SSW Partners lleva **114 días en silencio** sin comunicar condiciones 2027 a afiliados PedidosYa. Navidad en 7 semanas. **4 mensajes hoy:** 2 seguimientos para los Contactados más desactualizados (#6 Botillería El Copihue y #11 Veterinaria Huellitas, 4 días sin draft desde 03/11) + 2 presentaciones para 2 nuevos prospectos en Villa Alemana (#259 Alikebab y #260 Entre Churrascos). Pipeline: **260 prospectos**. ACCIÓN URGENTE: enviar HOY los borradores de #22 Sushi Point Delivery (tel. (32) 324 0504) y #15 Melt Pizzas — llevan **106 días consecutivos** con borradores activos sin confirmación de envío.
+
+---
+
+**#6 Botillería El Copihue — Seguimiento "Sábado 7/11 / Post-Teletón Rappi / Navidad en 7 semanas":**
+"Hola Botillería El Copihue! Matías de RepartoJusto, delivery local Villa Alemana. Sábado 7 de noviembre — es el fin de semana de la Teletón y Rappi gastó millones buscando 30.000 pedidos en todo Chile. Mientras tanto, nosotros cobramos $500 fijo por cada entrega en tu barrio. Para una bebida de $3.000, Rappi (30%) cobra $900 de comisión; con nosotros: $500 siempre. Navidad queda en 7 semanas — temporada alta de bebidas, aperitivos, reuniones de fin de año. ¿Activamos el canal esta semana? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#11 Veterinaria Huellitas — Seguimiento "Sábado 7/11 / Noviembre = peak antipulgas + vacunas primavera / Rappi Turbo en Quilpué":**
+"Hola Veterinaria Huellitas! Matías de RepartoJusto, delivery local Villa Alemana. Sábado 7 de noviembre — noviembre es el inicio del peak de antipulgas y vacunas de primavera, y la urgencia veterinaria no tiene horario. Rappi Turbo fue confirmado en Quilpué (5 km) — antes de que lleguen a Villa Alemana, asegurar una tarifa fija local es la mejor jugada. Con Rappi (28%), un pack de medicamentos de $12.000 = $3.360 de comisión; con nosotros: $500 fijos siempre. Delivery urgente de medicamentos con rider local — ¿lo conversamos? repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#259 Alikebab — Presentación (kebab / comida árabe, Villa Alemana, delivery-first):**
+"Hola Alikebab! Soy Matías de RepartoJusto, plataforma de delivery local en Villa Alemana sin comisiones por venta. Los encontré con canal de delivery propio — están en el momento perfecto para posicionarse: recién abriendo con delivery sin ceder porcentaje a ninguna plataforma grande. Con RepartoJusto la tarifa es $500 fija por entrega, sin importar el valor del pedido. No pagamos comisión sobre sus ventas. Sábado noche es el peak de kebab y cenas — nosotros ponemos el rider, ustedes se quedan con todo el margen. Registro gratuito, sin contrato: repartojusto-production.up.railway.app — Matías, RepartoJusto"
+
+---
+
+**#260 Entre Churrascos — Presentación (comida chilena / churrascos, Villa Alemana, canal propio Instagram):**
+"Hola Entre Churrascos! Soy Matías de RepartoJusto, la plataforma de delivery local en Villa Alemana. Los vi con delivery propio en Instagram — el churrasco es el plato favorito del verano y noviembre arrancó la temporada. Con nosotros la tarifa es $500 fija por entrega, sin comisión sobre la venta. Para un churrasco de $7.000, Rappi (28%) cobra $1.960 de comisión; con RepartoJusto: $500 siempre. Sin plataformas grandes de por medio, ustedes se quedan con todo el margen. Rider local, tracking en tiempo real, registro gratuito: repartojusto-production.up.railway.app — Matías, RepartoJusto"
 
 ---
 
